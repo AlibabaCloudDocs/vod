@@ -19,9 +19,6 @@
 |AccessKeyId|String|否|your\_accesskey\_id|您的AccessKey ID。
 
  |
-|ResourceRealOwnerId|Long|否|4526|资源所有者ID。
-
- |
 
 ## 返回数据 {#resultMapping .section}
 
