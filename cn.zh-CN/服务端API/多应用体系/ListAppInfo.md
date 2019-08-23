@@ -22,9 +22,6 @@
 |PageSize|Integer|否|10|每页返回条数。默认值为**10**，最大值为**100**。
 
  |
-|ResourceRealOwnerId|Long|否|346|资源所有者ID。
-
- |
 |Status|String|否|Normal|应用状态。取值范围：**Normal**（正常），**Disable**（停用）。应用创建后默认为Normal。
 
  |
