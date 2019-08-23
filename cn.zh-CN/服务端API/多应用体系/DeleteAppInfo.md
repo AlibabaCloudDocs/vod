@@ -21,9 +21,6 @@
 |AppId|String|否|app-xxxxx|应用ID。
 
  |
-|ResourceRealOwnerId|Long|否|634|资源所有者ID。
-
- |
 
 ## 返回数据 {#resultMapping .section}
 
