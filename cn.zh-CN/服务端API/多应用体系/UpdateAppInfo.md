@@ -25,9 +25,6 @@
 |Description|String|否|my first app.|应用描述，最多支持512个字符或汉字，UTF-8编码。
 
  |
-|ResourceRealOwnerId|Long|否|577|资源所有者ID。
-
- |
 |Status|String|否|Disable|应用状态，可选值：**Normal**\(正常启用\)，**Disable**\(停用\)。
 
  |
