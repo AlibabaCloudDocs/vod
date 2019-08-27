@@ -19,7 +19,7 @@
 |AuthInfoTimeout|Long|否|3600|播放凭证过期时间，默认为**100**秒，取值范围`[100,3600]`。
 
  |
-|PlayConfig|String|否|\{"PlayDomain":"vod.test\_domain","XForwardedFor":"yqCD7Fp1uqChoVj/sl/p5Q==","PreviewTime":"20","MtsHlsUriToken":"yqCD7Fp1uqChoVjslp5Q"\}|媒体播放时的自定义设置字段，为JSON字符串，目前支持指定域名播放的设置。
+|PlayConfig|String|否|\{"PlayDomain":"vod.test\_domain"\}|媒体播放时的自定义设置字段，为JSON字符串，目前该接口仅支持指定域名播放的设置。
 
  |
 
