@@ -21,9 +21,8 @@
     ```
     //先获取配置
     AVPConfig *config = [self.player getConfig];
-    //设置最大延迟为0，延迟控制交由RTS控制config.maxDelayTime = 0;
-    //设置播放器最大缓存为150ms，PS：RTS内部有500ms左右缓存。
-    config.maxBufferDuration = 150;
+    //设置最大延迟为1000，延迟控制交由RTS控制
+    config.maxDelayTime = 1000;
     //设置播放器启播缓存为10ms，数据控制由RTS控制。
     config.highBufferDuration = 10;
     config.startBufferDuration = 10;
