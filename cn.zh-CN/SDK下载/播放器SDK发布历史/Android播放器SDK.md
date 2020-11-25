@@ -88,11 +88,11 @@
 
 |[Android播放器SDK 4.7.3](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/4.7.3/ApsaraVideo_videoPlay_v4.7.3_Android_20191211.zip)|
 
-## 2019-11-1
+## 2019-11-01
 
 |日期|版本|修改内容|历史版本|
 |--|--|----|----|
-|2019-11-1|V4.7.2|-   增加了点播切换清晰度时的精准Seek。
+|2019-11-01|V4.7.2|-   增加了点播切换清晰度时的精准Seek。
 -   支持直播追帧。
 -   提升了SDK稳定性。
 
