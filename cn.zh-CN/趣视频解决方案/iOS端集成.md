@@ -11,7 +11,9 @@
 |CPU架构支持|真机支持ARM64、ARMV7 、ARMV7s。暂不支持模拟器。|
 |Xcode版本|支持Xcode9.0及以上，下载[Xcode](https://apps.apple.com/cn/app/xcode/id497799835?mt=12)。|
 
-您需要先集成并启动服务端，具体操作，请参见[服务端集成](/cn.zh-CN/趣视频解决方案/AppServer后台源码集成说明.md)。
+您需要先集成并启动服务端，具体操作，请参见[服务端集成](/cn.zh-CN/趣视频解决方案/服务端集成.md)。
+
+## 操作步骤
 
 1.  下载趣视频Demo并解压。趣视频iOS端下载，请参见[SDK下载](/cn.zh-CN/SDK下载/SDK下载.md)。
 
@@ -53,7 +55,7 @@
 
     Bundle Identifier改成为`com.<公司名>.<项目名>`，避免由于Bundle已被注册从而运行失败。
 
-    Bundle Identifier需定义在服务端配置文件的package\_name中。若没有在服务端配置Bundle Identifier，会导致iOS端App运行时被服务端包名拦截器拦截，导致请求出现403错误报错（Request failed:forbidden） 。服务端配置Bundle Identifier，具体操作，请参见[服务端集成](/cn.zh-CN/趣视频解决方案/AppServer后台源码集成说明.md)。
+    Bundle Identifier需定义在服务端配置文件的package\_name中。若没有在服务端配置Bundle Identifier，会导致iOS端App运行时被服务端包名拦截器拦截，导致请求出现403错误报错（Request failed:forbidden） 。服务端配置Bundle Identifier，具体操作，请参见[服务端集成](/cn.zh-CN/趣视频解决方案/服务端集成.md)。
 
     **General**选项卡中修改。
 
