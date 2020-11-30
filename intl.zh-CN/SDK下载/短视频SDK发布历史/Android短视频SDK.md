@@ -6,7 +6,7 @@
 
 |**日期**|**版本**|**修改内容**|
 |------|------|--------|
-|2020-10-30|V3.17.0|-   Android SDK 包名重构优化，降低接入理解成本，更加友好，新包名统一以com.aliyun.svideosdk.\*命名。最新接口请参见[t1959870.md\#](/intl.zh-CN/短视频SDK/Android短视频SDK/工程配置.md)。
+|2020-10-30|V3.17.0|-   Android SDK 包名重构优化，降低接入理解成本，更加友好，新包名统一以com.aliyun.svideosdk.\*命名。最新接口请参见[工程配置](/intl.zh-CN/短视频SDK/Android短视频SDK/工程配置.md)。
 
 转换工具请下载[辅助转换工具](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/shortVideo/tool/interface_upgrade.py)。
 
@@ -121,7 +121,7 @@
 
 |**日期**|**版本**|**修改内容**|
 |------|------|--------|
-|2020-10-30|V3.17.0|-   Android SDK 包名重构优化，降低接入理解成本，更加友好，新包名统一以com.aliyun.svideosdk.\*命名。最新接口请参见[t1959870.md\#](/intl.zh-CN/短视频SDK/Android短视频SDK/工程配置.md)。
+|2020-10-30|V3.17.0|-   Android SDK 包名重构优化，降低接入理解成本，更加友好，新包名统一以com.aliyun.svideosdk.\*命名。最新接口请参见[工程配置](/intl.zh-CN/短视频SDK/Android短视频SDK/工程配置.md)。
 
 转换工具请下载[辅助转换工具](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/shortVideo/tool/interface_upgrade.py)。
 
@@ -230,7 +230,7 @@
 
 |**日期**|**版本**|**修改内容**|
 |------|------|--------|
-|2020-10-30|V3.17.0|-   Android SDK包名重构优化，降低接入理解成本，更加友好，新包名统一以com.aliyun.svideosdk.\*命名。最新接口请参见[t1959870.md\#](/intl.zh-CN/短视频SDK/Android短视频SDK/工程配置.md)。
+|2020-10-30|V3.17.0|-   Android SDK包名重构优化，降低接入理解成本，更加友好，新包名统一以com.aliyun.svideosdk.\*命名。最新接口请参见[工程配置](/intl.zh-CN/短视频SDK/Android短视频SDK/工程配置.md)。
 
 转换工具请下载[辅助转换工具](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/shortVideo/tool/interface_upgrade.py)。
 
