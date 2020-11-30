@@ -1,6 +1,6 @@
 # 删除AI模板
 
-删除AI模板。
+调用DeleteAITemplate删除AI模板。
 
 **说明：** 已设置为默认的AI模板不能删除。
 
@@ -12,25 +12,23 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|DeleteAITemplate|系统规定参数，取值：**DeleteAITemplate**。 |
-|TemplateId|String|是|XXXXX|模板ID。 |
+|Action|String|是|DeleteAITemplate|系统规定参数。取值：**DeleteAITemplate**。 |
+|TemplateId|String|是|1706a0063dd733f6a823e\*\*\*\*0a5879e|模板ID。 |
 
 ## 返回数据
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|RequestId|String|25818875-5F78-4A13-BEF6-XXXXXXX|请求ID。 |
-|TemplateId|String|XXXXXXX|模板ID。 |
-
-**说明：** 下述请求示例中的“公共请求参数”详情，参见[公共参数说明文档](~~44432~~)。
+|RequestId|String|25818875-5F78-4A13-BEF6-\*\*\*\*|请求ID。 |
+|TemplateId|String|1706a0063dd733f6a823e\*\*\*\*0a5879e|模板ID。 |
 
 ## 示例
 
 请求示例
 
 ```
-http(s)://[Endpoint]/?Action=DeleteAITemplate
-&TemplateId=XXXXX
+https://vod.aliyuncs.com/?Action=DeleteAITemplate
+&TemplateId=1706a0063dd733f6a823e****0a5879e
 &<公共请求参数>
 ```
 
@@ -40,8 +38,8 @@ http(s)://[Endpoint]/?Action=DeleteAITemplate
 
 ```
 <DeleteAITemplateResponse>
-	  <RequestId>25818875-5F78-4A13-BEF6-XXXXXXX</RequestId>
-	  <TemplateId>XXXXXXX</TemplateId>
+	  <RequestId>25818875-5F78-4A13-BEF6-****</RequestId>
+	  <TemplateId>1706a0063dd733f6a823e****0a5879e</TemplateId>
 </DeleteAITemplateResponse>
 ```
 
@@ -49,8 +47,8 @@ http(s)://[Endpoint]/?Action=DeleteAITemplate
 
 ```
 {
-    "RequestId": "25818875-5F78-4A13-BEF6-XXXXXXX",
-    "TemplateId":"XXXXXXX"
+    "RequestId": "25818875-5F78-4A13-BEF6-****",
+    "TemplateId":"1706a0063dd733f6a823e****0a5879e"
 }
 ```
 
@@ -60,13 +58,13 @@ http(s)://[Endpoint]/?Action=DeleteAITemplate
 
 ## SDK示例
 
-建议使用 [服务端SDK](~~101789~~) 来调用API，此API各语言调用的示例代码，请参考如下：
+建议使用[服务端SDK](~~101789~~)来调用API，此API各语言调用的示例代码，请参见：
 
--   [Java](~~100692#DeleteAITemplate~~)
--   [Python](~~101181#DeleteAITemplate~~)
--   [PHP](~~101159#DeleteAITemplate~~)
--   [.NET](~~100844#DeleteAITemplate~~)
--   [Node.js](~~101564#DeleteAITemplate~~)
--   [Go](~~101575#DeleteAITemplate~~)
--   [C/C++](~~102987#DeleteAITemplate~~)
+-   [Java](~~61063~~)
+-   [Python](~~61054~~)
+-   [PHP](~~61069~~)
+-   [.NET](~~84750~~)
+-   [Node.js](~~101396~~)
+-   [Go](~~101411~~)
+-   [C/C++](~~101261~~)
 
