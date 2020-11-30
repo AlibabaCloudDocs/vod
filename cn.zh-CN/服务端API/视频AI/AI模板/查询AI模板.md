@@ -1,6 +1,6 @@
 # 查询AI模板
 
-查询AI模板。
+调用GetAITemplate查询AI模板。
 
 ## 调试
 
@@ -10,7 +10,7 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|GetAITemplate|系统规定参数，取值：**GetAITemplate**。 |
+|Action|String|是|GetAITemplate|系统规定参数。取值：**GetAITemplate**。 |
 |TemplateId|String|是|1706a0063dd733f6a823e83\*\*\*\*5879e|模板ID。 |
 
 ## 返回数据
@@ -19,26 +19,30 @@
 |--|--|---|--|
 |RequestId|String|080DA371-8AC0-4CD4-\*\*\*\*-33E64282D81F|请求ID。 |
 |TemplateInfo|Struct| |AI模板信息。 |
-|CreationTime|String|2020-07-08T06:50:45Z|创建时间，UTC格式。 |
-|IsDefault|String|NotDefault|是否默认。取值：**Default**\(是\)，**NotDefault**\(否\)。 |
-|ModifyTime|String|2018-12-12T15:09:38:894Z|修改时间，UTC格式。 |
-|Source|String|Custom|模板来源：
+|CreationTime|String|2020-07-08T06:50:45Z|创建时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|IsDefault|String|NotDefault|是否默认。取值：
 
- -   System：系统
--   Custom：自定义 |
-|TemplateConfig|String|\{"AuditRange":\["text-title","video"\],"AuditContent":\["screen"\],"AuditItem":\["terrorism","porn"\],"AuditAutoBlock":"yes"\}|模板详细配置。 |
+ -   **Default**：是。
+-   **NotDefault**：否。 |
+|ModifyTime|String|2018-12-12T15:09:38:894Z|修改时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|Source|String|Custom|模板来源。
+
+ -   **System**：系统。
+-   **Custom**：自定义。 |
+|TemplateConfig|String|\{"AuditRange":\["text-title","video"\],"AuditContent":\["screen"\],"AuditItem":\["terrorism","porn"\],"AuditAutoBlock":"yes"\}|模板详细配置。JSON字符串。具体值，请参见[AITemplateConfig](~~89863~~)。 |
 |TemplateId|String|1706a0063dd733f6a823e83\*\*\*\*5879e|模板ID。 |
 |TemplateName|String|DemoAITemplate|模板名称。 |
-|TemplateType|String|AIMediaAudit|模板类型。 |
+|TemplateType|String|AIMediaAudit|模板类型。取值范围：
 
-**说明：** 下述请求示例中的“公共请求参数”详情，参见[公共参数说明文档](~~44432~~)。
+ -   **AIMediaAudit**：智能审核。
+-   **AIImage**：智能封面。 |
 
 ## 示例
 
 请求示例
 
 ```
-http(s)://[Endpoint]/?Action=GetAITemplate
+https://vod.aliyuncs.com/?Action=GetAITemplate
 &TemplateId=1706a0063dd733f6a823e83****5879e
 &<公共请求参数>
 ```
@@ -87,13 +91,13 @@ http(s)://[Endpoint]/?Action=GetAITemplate
 
 ## SDK示例
 
-建议使用 [服务端SDK](~~101789~~) 来调用API，此API各语言调用的示例代码，请参考如下：
+建议使用[服务端SDK](~~101789~~)来调用API，此API各语言调用的示例代码，请参见：
 
--   [Java](~~100692#GetAITemplate~~)
--   [Python](~~101181#GetAITemplate~~)
--   [PHP](~~101159#GetAITemplate~~)
--   [.NET](~~100844#GetAITemplate~~)
--   [Node.js](~~101564#GetAITemplate~~)
--   [Go](~~101575#GetAITemplate~~)
--   [C/C++](~~102987#GetAITemplate~~)
+-   [Java](~~61063~~)
+-   [Python](~~61054~~)
+-   [PHP](~~61069~~)
+-   [.NET](~~84750~~)
+-   [Node.js](~~101396~~)
+-   [Go](~~101411~~)
+-   [C/C++](~~101261~~)
 
