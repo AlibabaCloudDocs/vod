@@ -2,7 +2,7 @@
 
 调用GetURLUploadInfos获取URL上传信息。
 
-**说明：** 通过URL上传时返回的JobId或者上传时使用的URL获取URL上传信息，包括URL上传状态、UserData、创建时间、完成时间，如果上传失败可以查看错误码和错误信息，上传成功可以查到对应的视频ID。
+**说明：** 通过URL上传时返回的JobId或者上传时使用的URL获取URL上传信息，包括URL上传状态、UserData、创建时间、完成时间。如果上传失败可以查看错误码和错误信息，上传成功可以查到对应的视频ID。
 
 ## 调试
 
@@ -13,8 +13,10 @@
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
 |Action|String|是|GetURLUploadInfos|系统规定参数。取值：**GetURLUploadInfos**。 |
-|JobIds|String|否|86c192\*\*\*\*\*5fba0,7afb\*\*\*\*\*201e7fa,2cc49\*\*\*\*\*97378|JobId列表。多个用逗号分隔，最多支持10个。 |
-|UploadURLs|String|否|http://xxx.mp4|上传源视频URL列表。需URLencode，多个用逗号分隔，最多支持10个。如果同一URL视频多次上传，建议传入单个URL进行查询，最多返回100条记录。 |
+|JobIds|String|否|86c192\*\*\*\*\*5fba0,7afb\*\*\*\*\*201e7fa,2cc49\*\*\*\*\*97378|JobId列表。JobId可以通过[GetPlayInfo](~~56124~~)接口中返回的PlayInfo结构体中获取。
+
+ **说明：** 多个ID使用英文逗号（,）分隔，最多支持10个。 |
+|UploadURLs|String|否|http://\*\*\*\*.mp4|上传源视频URL列表。需URLencode，多个使用英文逗号（,）分隔，最多支持10个。如果同一URL视频多次上传，建议传入单个URL进行查询。 |
 
 **说明：** JobIds和UploadURLs必须指定一个，二者同时传入时只处理JobIds。
 
@@ -22,28 +24,28 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|NonExists|List|\["XXXX1", "XXX2"\]|不存在的ID或URL列表。 |
+|NonExists|List|\["\*\*\*\*1", "\*\*\*\*2"\]|不存在的ID或URL列表。 |
 |RequestId|String|25818875-5F78-4A\*\*\*\*\*F6-D7393642CA58|请求ID。 |
-|URLUploadInfoList|Array of UrlUploadJobInfoDTO| |[URL上传信息列表](~~52839#title-cpc-fw5-xwn~~)。 |
-|CompleteTime|String|2019-01-01T01:01:01Z|完成时间。 |
-|CreationTime|String|2019-01-01T01:01:01Z|创建时间。 |
+|URLUploadInfoList|Array of UrlUploadJobInfoDTO| |URL上传信息列表。具体上传名称及描述，请参见[URL上传信息](~~52839~~)。 |
+|CompleteTime|String|2019-01-01T01:01:01Z|完成时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|CreationTime|String|2019-01-01T01:01:01Z|创建时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
 |ErrorCode|String|200|错误码。 |
 |ErrorMessage|String|error\_message|错误信息。 |
-|FileSize|String|24|文件大小（字节）。 |
-|JobId|String|xxxxxxx|Job ID。 |
-|MediaId|String|xxxxx|上传视频ID。 |
-|Status|String|SUCCESS|[视频状态](~~52839#title-vqg-8cz-7p8~~)。 |
-|UploadURL|String|http://xxx|上传URL地址。 |
-|UserData|String|xxxx|用户自定义字段。 |
+|FileSize|String|24|文件大小。单位：字节。 |
+|JobId|String|86c192\*\*\*\*\*5fba0|Job ID。 |
+|MediaId|String|93ab850b4f6f\*\*\*\*\*54b6e91d24d81d4|上传视频ID。 |
+|Status|String|SUCCESS|URL拉取任务状态。具体的拉取状态取值及说明，请参见[URL上传任务状态](~~52839~~)。 |
+|UploadURL|String|http://\*\*\*\*.mp4|上传URL地址。
 
-**说明：** 下述请求示例中的“公共请求参数”详情，参见[公共参数说明文档](~~44432~~)。
+ **说明：** 最多可以返回100条记录。 |
+|UserData|String|\{"MessageCallback":"\{"CallbackURL":"http://test.test.com"\}", "Extend":"\{"localId":"\*\*\*", "test":"www"\}"\}|自定义设置。为JSON字符串。更多信息，请参见[UserData](~~86952~~)。 |
 
 ## 示例
 
 请求示例
 
 ```
-http(s)://[Endpoint]/?Action=GetURLUploadInfos
+https://vod.aliyuncs.com/?Action=GetURLUploadInfos
 &<公共请求参数>
 ```
 
@@ -53,36 +55,20 @@ http(s)://[Endpoint]/?Action=GetURLUploadInfos
 
 ```
 <GetURLUploadInfosResponse>
-      <RequestId>25818875-5F78-4A*****F6-D7393642CA58</RequestId>
-      <URLUploadInfoList>
-            <JobId>86c192*****5fba0</JobId>
-            <UploadURL>http://xxx.mp4</UploadURL>
-            <MediaId>xxxxx</MediaId>
-            <Status>SUCCESS</Status>
-            <CreationTime>2019-01-01T01:01:01Z</CreationTime>
-            <CompleteTime>2019-01-01T01:05:01Z</CompleteTime>
-            <UserData>xxxx</UserData>
-      </URLUploadInfoList>
-      <URLUploadInfoList>
-            <JobId>7afb*****201e7fa</JobId>
-            <UploadURL>http://xxxx.flv</UploadURL>
-            <Status>PENDING</Status>
-            <CreationTime>2019-01-01T01:01:01Z</CreationTime>
-            <CompleteTime>2019-01-01T01:05:01Z</CompleteTime>
-            <UserData>xxxx</UserData>
-      </URLUploadInfoList>
-      <URLUploadInfoList>
-            <JobId>2cc49*****97378</JobId>
-            <UploadURL>http://xxxx.m3u8</UploadURL>
-            <Status>UPLOAD_FAIL</Status>
-            <CreationTime>2019-01-01T01:01:01Z</CreationTime>
-            <CompleteTime>2019-01-01T01:05:01Z</CompleteTime>
-            <UserData>xxxx</UserData>
-            <ErrorCode></ErrorCode>
-            <ErrorMessage></ErrorMessage>
-      </URLUploadInfoList>
-      <NonExists>XXXX1</NonExists>
-      <NonExists>XXX2</NonExists>
+  <RequestId>25818875-5F78-4A*****F6-D7393642CA58</RequestId>
+  <URLUploadInfoList>
+        <Status>SUCCESS</Status>
+        <UploadURL>http://****.mp4</UploadURL>
+        <MediaId>93ab850b4f6f*****54b6e91d24d81d4</MediaId>
+        <UserData>{"MessageCallback":"{"CallbackURL":"http://test.test.com"}", "Extend":"{"localId":"***", "test":"www"}"}</UserData>
+        <CreationTime>2019-01-01T01:01:01Z</CreationTime>
+        <ErrorCode>200</ErrorCode>
+        <ErrorMessage>error_message</ErrorMessage>
+        <CompleteTime>2019-01-01T01:01:01Z</CompleteTime>
+        <JobId>86c192*****5fba0</JobId>
+        <FileSize>24</FileSize>
+  </URLUploadInfoList>
+  <NonExists>["****1", "****2"]</NonExists>
 </GetURLUploadInfosResponse>
 ```
 
@@ -90,35 +76,20 @@ http(s)://[Endpoint]/?Action=GetURLUploadInfos
 
 ```
 {
-     "RequestId": "25818875-5F78-4A*****F6-D7393642CA58",
-      "URLUploadInfoList" :[{
-                "JobId":"86c192*****5fba0",
-                 "UploadURL" : "http://xxx.mp4",
-                 "MediaId" : "xxxxx",
-                 "Status": "SUCCESS",
-                 "CreationTime" : "2019-01-01T01:01:01Z",
-                 "CompleteTime": "2019-01-01T01:05:01Z",
-                 "UserData": "xxxx"
-             }, 
-             {
-                "JobId":"7afb*****201e7fa",
-                 "UploadURL" : "http://xxxx.flv",
-                 "Status": "PENDING",
-                 "CreationTime" : "2019-01-01T01:01:01Z",
-                 "CompleteTime": "2019-01-01T01:05:01Z",
-               "UserData": "xxxx"
-             }, 
-             {
-                "JobId":"2cc49*****97378",
-                 "UploadURL" : "http://xxxx.m3u8",
-                 "Status": "UPLOAD_FAIL",
-                 "CreationTime" : "2019-01-01T01:01:01Z",
-                 "CompleteTime": "2019-01-01T01:05:01Z",
-                 "UserData": "xxxx",
-                 "ErrorCode":"",
-                 "ErrorMessage":""
-             }],
-     "NonExists": ["XXXX1", "XXX2"]
+	"RequestId": "25818875-5F78-4A*****F6-D7393642CA58",
+	"URLUploadInfoList": [{
+		"Status": "SUCCESS",
+		"UploadURL": "http://****.mp4",
+		"MediaId": "93ab850b4f6f*****54b6e91d24d81d4",
+		"UserData": "{\"MessageCallback\":\"{\"CallbackURL\":\"http://test.test.com\"}\", \"Extend\":\"{\"localId\":\"***\", \"test\":\"www\"}\"}",
+		"CreationTime": "2019-01-01T01:01:01Z",
+		"ErrorCode": "200",
+		"ErrorMessage": "error_message",
+		"CompleteTime": "2019-01-01T01:01:01Z",
+		"JobId": "86c192*****5fba0",
+		"FileSize": "24"
+	}],
+	"NonExists": "[\"****1\", \"****2\"]"
 }
 ```
 
