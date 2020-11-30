@@ -47,6 +47,8 @@ HTTPS安全传输的优势：
 |API接口|保护敏感信息或重要操作指令的传输，避免核心信息在传输过程中被劫持。|
 |企业网站|激活绿色安全标识（DV或OV）或地址栏企业名称标识（EV），为潜在客户带来更可信、更放心的访问体验。|
 
+## 操作步骤
+
 1.  购买[云盾证书](https://common-buy.aliyun.com/?spm=5176.doc27118.2.9.u2oPum&commodityCode=cas#/buy)。
 
     开启HTTPS安全加速需具备匹配加速域名的证书。您可在 **云盾证书服务** 中，根据业务需要快速申请免费证书或购买高级证书。![免费证书](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8631106061/p172540.png)
