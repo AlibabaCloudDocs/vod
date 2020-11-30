@@ -1,8 +1,6 @@
 # 查询AI作业
 
-查询AI作业。在提交AI作业后，会进行异步处理，通过此接口可以实时查询作业信息。
-
-**说明：** 目前支持查询的作业类型：**AIMediaDNA**，**AIVideoTag**。
+调用ListAIJob查询AI作业。在提交AI作业后，会进行异步处理，通过此接口可以实时查询作业信息。
 
 ## 调试
 
@@ -12,8 +10,10 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|ListAIJob|系统规定参数，取值：**ListAIJob**。 |
-|JobIds|String|是|a718a3a1e8\*\*\*\*\*bb42ee3bc88921e9|作业ID列表。最多一次查10个，多个ID之间用逗号隔开。 |
+|Action|String|是|ListAIJob|系统规定参数。取值：**ListAIJob**。 |
+|JobIds|String|是|a718a3a1e8\*\*\*\*\*bb42ee3bc88921e9|作业ID列表。JobId可以通过[GetPlayInfo](~~56124~~)接口中返回的PlayInfo结构体中获取。
+
+ **说明：** 多个ID之间用英文逗号（,）隔开，一次最多可以查10个。 |
 
 ## 返回数据
 
@@ -22,33 +22,34 @@
 |AIJobList|Array of AIJob| |作业信息列表。 |
 |AIJob| | | |
 |Code|String|0|作业错误码。当Status为失败时，可关注该字段。 |
-|CompleteTime|String|2020-06-28T02:04:47Z|作业结束时间。 |
-|CreationTime|String|2020-06-28T02:04:32Z|作业开始时间。 |
+|CompleteTime|String|2020-06-28T02:04:47Z|作业结束时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|CreationTime|String|2020-06-28T02:04:32Z|作业开始时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
 |Data|String|\{"OrigASRData":\{"AsrTextList":\[\{"EndTime":700,"StartTime":0,"Text":"嗯。","ChannelId":0,"SpeechRate":85\},\{"EndTime":3750,"StartTime":1630,"Text":"的。","ChannelId":0,"SpeechRate":28\},\{"EndTime":5910,"StartTime":4020,"Text":"听不厌。","ChannelId":0,"SpeechRate":95\},\{"EndTime":12750,"StartTime":10090,"Text":"留言。","ChannelId":0,"SpeechRate":45\},\{"EndTime":25230,"StartTime":13590,"Text":"hello，中午好。","ChannelId":0,"SpeechRate":20\},\{"EndTime":30000,"StartTime":28220,"Text":"嗯。","ChannelId":0,"SpeechRate":33\}\],"Duration":"30016"\}\}|作业结果数据，JSON数据格式。
 
- -   当Type值为AIMediaDNA时，关于Data的数据结构参见[AIMediaDNAResult](~~89863#title-buu-6vj-ccs~~)。
--   当Type值为AIVideoTagResult时，关于Data的数据结构参见[AIVideoTagResult](~~89863#title-3uk-lrt-f4y~~)。 |
+ -   当Type值为**AIMediaDNA**时，关于Data的数据结构，请参见[AIMediaDNAResult](~~89863~~)。
+-   当Type值为**AIVideoTagResult**时，关于Data的数据结构，请参见[AIVideoTagResult](~~89863~~)。 |
 |JobId|String|53d4a9c7b00c\*\*\*\*\*cdcb4b0c2c854c7|作业ID。 |
 |MediaId|String|a718a3a1e8\*\*\*\*\*bb42ee3bc88921e9|视频ID。 |
 |Message|String|OK|作业错误信息。当Status为失败时，可关注该字段。 |
 |Status|String|success|作业状态。取值：
 
- -   success\(成功\)
--   fail\(失败\)
--   init\(初始化\)
--   processing\(处理中\) |
-|Type|String|AIVideoTag|作业类型。 |
+ -   **success**：成功。
+-   **fail**：失败。
+-   **init**：初始化。
+-   **processing**：处理中。 |
+|Type|String|AIVideoTag|作业类型。多个类型使用英文逗号（,）分隔。取值：
+
+ -   **AIMediaDNA**：视频DNA。
+-   **AIVideoTag**：智能标签。 |
 |NonExistAIJobIds|List|\["aasdcsfg\*\*\*\*\*782740asd", "k2l3ibask\*\*\*\*\*od98wrns9"\]|不存在的作业ID列表。 |
 |RequestId|String|8233A0E4-E112-44\*\*\*\*\*58-2BCED1B88173|请求ID。 |
-
-**说明：** 下述请求示例中的“公共请求参数”详情，参见[公共参数说明文档](~~44432~~)。
 
 ## 示例
 
 请求示例
 
 ```
-http(s)://[Endpoint]/?Action=ListAIJob
+https://vod.aliyuncs.com/?Action=ListAIJob
 &JobIds=1236ca184c0e47098a5b665e2xxxxxx
 &<公共请求参数>
 ```
@@ -111,13 +112,13 @@ http(s)://[Endpoint]/?Action=ListAIJob
 
 ## SDK示例
 
-建议使用 [服务端SDK](~~101789~~) 来调用API，此API各语言调用的示例代码，请参考如下：
+建议使用[服务端SDK](~~101789~~)来调用API，此API各语言调用的示例代码，请参见：
 
--   [Java](~~100692#ListAIJob~~)
--   [Python](~~101181#ListAIJob~~)
--   [PHP](~~101159#ListAIJob~~)
--   [.NET](~~100844#ListAIJob~~)
--   [Node.js](~~101564#ListAIJob~~)
--   [Go](~~101575#ListAIJob~~)
--   [C/C++](~~102987#ListAIJob~~)
+-   [Java](~~61063~~)
+-   [Python](~~61054~~)
+-   [PHP](~~61069~~)
+-   [.NET](~~84750~~)
+-   [Node.js](~~101396~~)
+-   [Go](~~101411~~)
+-   [C/C++](~~101261~~)
 
