@@ -1,6 +1,6 @@
 # 修改AI模板
 
-修改AI模板。
+调用UpdateAITemplate修改AI模板。
 
 ## 调试
 
@@ -10,26 +10,24 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|UpdateAITemplate|系统规定参数，取值：**UpdateAITemplate** |
-|TemplateConfig|String|是|\{"AuditItem":\["terrorism","porn"\],"AuditRange":\["text-title","video"\],"AuditContent":\["screen"\],"AuditAutoBlock":"yes"\}|模板详细配置。JSON字符串，具体值详见[AITemplateConfig](~~89863#title-vd3-499-o36~~) |
+|Action|String|是|UpdateAITemplate|系统规定参数。取值：**UpdateAITemplate**。 |
+|TemplateConfig|String|是|\{"AuditItem":\["terrorism","porn"\],"AuditRange":\["text-title","video"\],"AuditContent":\["screen"\],"AuditAutoBlock":"yes"\}|模板详细配置。JSON字符串。具体值，请参见[AITemplateConfig](~~89863~~)。 |
 |TemplateId|String|是|1706a0063dd733f6a823e\*\*\*\*0a5879e|模板ID。 |
-|TemplateName|String|是|DemoAITemplate|模板名称，最大128字节。 |
+|TemplateName|String|是|DemoAITemplate|模板名称。最大128字节。 |
 
 ## 返回数据
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|RequestId|String|25818875-5F78-4A13-BEF6-XXXXXXX|请求ID。 |
-|TemplateId|String|XXXXXXX|模板ID。 |
-
-**说明：** 下述请求示例中的“公共请求参数”详情，参见[公共参数说明文档](~~44432~~)。
+|RequestId|String|25818875-5F78-4A13-BEF6-\*\*\*\*|请求ID。 |
+|TemplateId|String|1706a0063dd733f6a823e\*\*\*\*0a5879e|模板ID。 |
 
 ## 示例
 
 请求示例
 
 ```
-http(s)://[Endpoint]/?Action=UpdateAITemplate
+https://vod.aliyuncs.com/?Action=UpdateAITemplate
 &TemplateConfig={"AuditItem":["terrorism","porn"],"AuditRange":["text-title","video"],"AuditContent":["screen"],"AuditAutoBlock":"yes"}
 &TemplateId=1706a0063dd733f6a823e****0a5879e
 &TemplateName=DemoAITemplate
@@ -42,8 +40,8 @@ http(s)://[Endpoint]/?Action=UpdateAITemplate
 
 ```
 <UpdateAITemplateResponse>
-	  <RequestId>25818875-5F78-4A13-BEF6-XXXXXXX</RequestId>
-	  <TemplateId>XXXXXXX</TemplateId>
+	  <RequestId>25818875-5F78-4A13-BEF6-****</RequestId>
+	  <TemplateId>1706a0063dd733f6a823e****0a5879e</TemplateId>
 </UpdateAITemplateResponse>
 ```
 
@@ -51,8 +49,8 @@ http(s)://[Endpoint]/?Action=UpdateAITemplate
 
 ```
 {
-    "RequestId": "25818875-5F78-4A13-BEF6-XXXXXXX",
-    "TemplateId":"XXXXXXX"
+    "RequestId": "25818875-5F78-4A13-BEF6-****",
+    "TemplateId":"1706a0063dd733f6a823e****0a5879e"
 }
 ```
 
@@ -62,13 +60,13 @@ http(s)://[Endpoint]/?Action=UpdateAITemplate
 
 ## SDK示例
 
-建议使用 [服务端SDK](~~101789~~) 来调用API，此API各语言调用的示例代码，请参考如下：
+建议使用[服务端SDK](~~101789~~)来调用API，此API各语言调用的示例代码，请参见：
 
--   [Java](~~100692#UpdateAITemplate~~)
--   [Python](~~101181#UpdateAITemplate~~)
--   [PHP](~~101159#UpdateAITemplate~~)
--   [.NET](~~100844#UpdateAITemplate~~)
--   [Node.js](~~101564#UpdateAITemplate~~)
--   [Go](~~101575#UpdateAITemplate~~)
--   [C/C++](~~102987#UpdateAITemplate~~)
+-   [Java](~~61063~~)
+-   [Python](~~61054~~)
+-   [PHP](~~61069~~)
+-   [.NET](~~84750~~)
+-   [Node.js](~~101396~~)
+-   [Go](~~101411~~)
+-   [C/C++](~~101261~~)
 
