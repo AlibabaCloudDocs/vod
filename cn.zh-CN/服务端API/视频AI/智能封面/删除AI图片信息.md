@@ -2,7 +2,7 @@
 
 调用DeleteAIImageInfos删除AI图片信息。
 
-**说明：** 此接口只是删除AI图片信息，并不会实际删除图片文件。
+**说明：** 此接口只仅删除AI图片信息，并不会实际删除图片文件。
 
 ## 调试
 
@@ -12,8 +12,8 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|DeleteAIImageInfos|系统规定参数，取值：**DeleteAIImageInfos** |
-|AIImageInfoIds|String|是|b89a6aabf144\*\*\*\*\*6197ebd6fe6cf29|AI图片文件ID，英文逗号分隔，最大支持10个ID。 |
+|Action|String|是|DeleteAIImageInfos|系统规定参数。取值：**DeleteAIImageInfos**。 |
+|AIImageInfoIds|String|是|b89a6aabf144\*\*\*\*\*6197ebd6fe6cf29|AI图片文件ID。 多个ID使用英文逗号（,）分隔，最大支持10个ID。 |
 
 ## 返回数据
 
@@ -21,14 +21,12 @@
 |--|--|---|--|
 |RequestId|String|FCDC80EA-363C-41\*\*\*\*\*B8-0DF14033D643|请求ID。 |
 
-**说明：** 下述请求示例中的“公共请求参数”详情，参见[公共参数说明文档](~~44432~~)。
-
 ## 示例
 
 请求示例
 
 ```
-http(s)://[Endpoint]/?Action=DeleteAIImageInfos
+https://vod.aliyuncs.com/?Action=DeleteAIImageInfos
 &AIImageInfoIds=b89a6aabf144*****6197ebd6fe6cf29
 &<公共请求参数>
 ```
