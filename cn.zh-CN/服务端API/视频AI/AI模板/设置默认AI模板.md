@@ -1,6 +1,6 @@
 # 设置默认AI模板
 
-设置默认AI模板。
+调用SetDefaultAITemplate设置默认AI模板。
 
 ## 调试
 
@@ -10,7 +10,7 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|SetDefaultAITemplate|系统规定参数，取值：**SetDefaultAITemplate**。 |
+|Action|String|是|SetDefaultAITemplate|系统规定参数。取值：**SetDefaultAITemplate**。 |
 |TemplateId|String|是|1706a0063dd733f6a823e83\*\*\*\*5879e|模板ID。 |
 
 ## 返回数据
@@ -20,14 +20,12 @@
 |RequestId|String|8E70E3F8-E2EE-47BC-\*\*\*\*-379D6F28514F|请求ID。 |
 |TemplateId|String|1706a0063dd733f6a823e83\*\*\*\*5879e|模板ID。 |
 
-**说明：** 下述请求示例中的“公共请求参数”详情，参见[公共参数说明文档](~~44432~~)。
-
 ## 示例
 
 请求示例
 
 ```
-http(s)://[Endpoint]/?Action=SetDefaultAITemplate
+https://vod.aliyuncs.com/?Action=SetDefaultAITemplate
 &TemplateId=1706a0063dd733f6a823e83****5879e
 &<公共请求参数>
 ```
@@ -58,13 +56,13 @@ http(s)://[Endpoint]/?Action=SetDefaultAITemplate
 
 ## SDK示例
 
-建议使用 [服务端SDK](~~101789~~) 来调用API，此API各语言调用的示例代码，请参考如下：
+建议使用[服务端SDK](~~101789~~)来调用API，此API各语言调用的示例代码，请参见：
 
--   [Java](~~100692#SetDefaultAITemplate~~)
--   [Python](~~101181#SetDefaultAITemplate~~)
--   [PHP](~~101159#SetDefaultAITemplate~~)
--   [.NET](~~100844#SetDefaultAITemplate~~)
--   [Node.js](~~101564#SetDefaultAITemplate~~)
--   [Go](~~101575#SetDefaultAITemplate~~)
--   [C/C++](~~102987#SetDefaultAITemplate~~)
+-   [Java](~~61063~~)
+-   [Python](~~61054~~)
+-   [PHP](~~61069~~)
+-   [.NET](~~84750~~)
+-   [Node.js](~~101396~~)
+-   [Go](~~101411~~)
+-   [C/C++](~~101261~~)
 
