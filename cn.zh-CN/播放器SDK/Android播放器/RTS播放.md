@@ -14,7 +14,15 @@
 
     -   下载[RTS SDK](https://help.aliyun.com/document_detail/177373.html)，将RTS SDK的aar文件添加到项目的libs目录下，添加到gradle依赖中即可。
     -   支持Maven依赖，详情请参见[集成移动端](https://help.aliyun.com/document_detail/185582.html)。
-2.  设置播放器最大缓冲延迟等
+2.  Load低延迟so库
+
+    在使用播放器的Activity内加入，示例如下：
+
+    ```
+    static { System.loadLibrary("RtsSDK"); }
+    ```
+
+3.  设置播放器最大缓冲延迟等
 
     播放器SDK通过PlayerConfig提供了MaxDelayTime等设置播放直播流最大延迟缓存的接口。RTS场景下，建议的参数设置值如下：
 
