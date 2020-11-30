@@ -1,10 +1,11 @@
 # 查询AI处理用量数据
 
-查询AI处理（智能审核、视频DNA等）的用量数据。
+调用DescribeVodAIData查询AI处理（智能审核、视频DNA等）的用量数据。
 
 **说明：**
 
--   起始结束时间间隔在7天以内时，返回小时粒度的数据；大于7天时，返回天粒度的数据；最大间隔为31天。
+-   目前仅支持**上海**地域。
+-   当起始结束时间间隔在7天以内时，返回小时粒度的数据；当起始结束时间间隔大于7天时，返回天粒度的数据；最大间隔为31天。
 
 ## 调试
 
@@ -14,44 +15,48 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|DescribeVodAIData|系统规定参数，取值：**DescribeVodAIData**。 |
-|EndTime|String|是|2019-02-01T15:00:00Z|获取数据结束时间点，需大于起始时间。
+|Action|String|是|DescribeVodAIData|系统规定参数。取值：**DescribeVodAIData**。 |
+|EndTime|String|是|2019-02-01T15:00:00Z|获取数据结束时间点，需晚于起始时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|StartTime|String|是|2019-02-01T15:00:00Z|获取数据起始时间点。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|Region|String|否|cn-beijing|存储地域。默认返回所有区域。支持批量查询，多个地域使用用半角逗号（,）分隔。取值范围：
 
- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：**YYYY-MM-DDThh:mm:ssZ**。 |
-|StartTime|String|是|2019-02-01T15:00:00Z|获取数据起始时间点。
+ -   **cn-shanghai**（上海）
+-   **cn-beijing**（北京）
+-   **eu-central-1**（德国）
+-   **ap-southeast-1**（新加坡） |
+|AIType|String|否|AIVideoCensor|AI类型。默认返回类型。支持批量查询，多个区域使用半角逗号（,）分隔。取值范围：
 
- 日期格式按照ISO8601表示法，并使用UTC时间。格式为：**YYYY-MM-DDThh:mm:ssZ**。 |
-|Region|String|否|cn-beijing|存储区域，默认返回所有区域。
-
- 支持批量查询，多个区域用逗号（半角）分隔。取值范围：**cn-shanghai\(上海\)**、**cn-beijing\(北京\)**、**eu-central-1\(德国\)**、**ap-southeast-1\(新加坡\)**。 |
-|AIType|String|否|AIVideoCensor|AI类型，默认返回类型。
-
- 支持批量查询，多个区域用逗号（半角）分隔。取值范围：**AIVideoCensor（智能审核）**、**AIVideoFPShot（视频DNA）**、**AIVideoTag（多模态标签）**。 |
+ -   **AIVideoCensor**（智能审核）
+-   **AIVideoFPShot**（视频DNA）
+-   **AIVideoTag**（智能标签） |
 
 ## 返回数据
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|AIData|Array of AIDataItem| |转码用量数据。 |
+|AIData|Array of AIDataItem| |AI处理用量数据。 |
 |AIDataItem| | | |
-|Data|Array of DataItem| |转码用量详细数据。 |
+|Data|Array of DataItem| |AI处理用量详细数据。 |
 |DataItem| | | |
-|Name|String|AIVideoCensor|AI类型。
+|Name|String|AIVideoCensor|AI类型。 取值范围：
 
- 取值范围：AIVideoCensor（智能审核）、AIVideoFPShot（视频DNA）、AIVideoTag（多模态标签） |
-|Value|String|111|处理时长，单位：秒。 |
-|TimeStamp|String|2019-02-01T13:00:00Z|时间片起始时刻。 |
-|DataInterval|String|day|返回数据的时间颗粒度。取值范围：**hour（小时数据）**，**day（天数据）**。 |
+ -   **AIVideoCensor**（智能审核）
+-   **AIVideoFPShot**（视频DNA）
+-   **AIVideoTag**（智能标签） |
+|Value|String|111|处理时长。单位：秒。 |
+|TimeStamp|String|2019-02-01T13:00:00Z|时间片起始时刻。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|DataInterval|String|day|返回数据的时间颗粒度。取值范围：
+
+ -   **hour**（小时数据）
+-   **day**（天数据） |
 |RequestId|String|C370DAF1-C838-4288-\*\*\*\*-9A87633D248E|请求ID。 |
-
-**说明：** 下述请求示例中的“公共请求参数”详情，参见[公共参数说明文档](~~44432~~)。
 
 ## 示例
 
 请求示例
 
 ```
-http(s)://[Endpoint]/?Action=DescribeVodAIData
+https://vod.aliyuncs.com/?Action=DescribeVodAIData
 &EndTime=2019-02-01T15:00:00Z
 &StartTime=2019-02-01T15:00:00Z
 &<公共请求参数>
@@ -153,61 +158,61 @@ http(s)://[Endpoint]/?Action=DescribeVodAIData
 
 |503
 
-|请求被流量控制限制 |
+|请求被流量控制限制。 |
 |OperationDenied
 
 |Your account does not open VOD service yet.
 
 |403
 
-|未开通VOD服务 |
+|未开通VOD服务。 |
 |OperationDenied
 
 |Your VOD service is suspended.
 
 |403
 
-|VOD服务已被停止 |
+|VOD服务已被停止。 |
 |InvalidParameter
 
 |Invalid Parameter.
 
 |400
 
-|参数错误 |
+|参数错误。 |
 |InvalidParameterAliUid
 
 |Invalid Parameter AliUid.
 
 |400
 
-|AliUid参数错误 |
+|AliUid参数错误。 |
 |InvalidParameterStartTime
 
 |Invalid Parameter StartTime.
 
 |400
 
-|StartTime参数错误 |
+|StartTime参数错误。 |
 |InvalidParameterEndTime
 
 |Invalid Parameter EndTime.
 
 |400
 
-|EndTime参数错误 |
+|EndTime参数错误。 |
 |InvalidTimeRange
 
 |StartTime and EndTime range should less than 1 month.
 
 |400
 
-|SndTime和StartTime差值不能超过31天 |
+|SndTime和StartTime差值不能超过31天。 |
 |InvalidParameterRegion
 
 |Invalid Parameter Region.
 
 |400
 
-|Region参数错误 |
+|Region参数错误。 |
 
