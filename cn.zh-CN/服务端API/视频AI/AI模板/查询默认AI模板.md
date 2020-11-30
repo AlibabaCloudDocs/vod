@@ -1,6 +1,6 @@
 # 查询默认AI模板
 
-查询默认AI模板。
+调用GetDefaultAITemplate查询默认AI模板。
 
 ## 调试
 
@@ -10,8 +10,8 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|GetDefaultAITemplate|系统规定参数，取值：**GetDefaultAITemplate**。 |
-|TemplateType|String|是|AIMediaAudit|模板类型，取值：**AIMediaAudit\(智能审核\)**。 |
+|Action|String|是|GetDefaultAITemplate|系统规定参数。取值：**GetDefaultAITemplate**。 |
+|TemplateType|String|是|AIMediaAudit|模板类型。取固定值：**AIMediaAudit**（智能审核）。 |
 
 ## 返回数据
 
@@ -19,26 +19,27 @@
 |--|--|---|--|
 |RequestId|String|A017F1DE-3DC3-4441-\*\*\*\*-37E81113C10F|请求ID。 |
 |TemplateInfo|Struct| |AI模板信息。 |
-|CreationTime|String|2020-07-08T06:50:45Z|创建时间。 |
-|IsDefault|String|Default|是否默认。取值：**Default**\(是\)，**NotDefault**\(否\)。 |
-|ModifyTime|String|2020-07-08T07:05:49Z|修改时间。 |
-|Source|String|Custom|模板来源：
+|CreationTime|String|2020-07-08T06:50:45Z|创建时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|IsDefault|String|Default|是否默认。取值：
 
- -   System：系统
--   Custom：自定义 |
-|TemplateConfig|String|\{"AuditRange":\["text-title","video"\],"AuditContent":\["screen"\],"AuditItem":\["terrorism","porn"\],"AuditAutoBlock":"yes"\}|模板详细配置。JSON字符串，详见[AITemplateConfig](~~89863#title-vd3-499-o36~~)。 |
+ -   **Default**（是）
+-   **NotDefault**（否） |
+|ModifyTime|String|2020-07-08T07:05:49Z|修改时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|Source|String|Custom|模板来源。取值：
+
+ -   **System**（系统）
+-   **Custom**（自定义） |
+|TemplateConfig|String|\{"AuditRange":\["text-title","video"\],"AuditContent":\["screen"\],"AuditItem":\["terrorism","porn"\],"AuditAutoBlock":"yes"\}|模板详细配置。JSON字符串，详细信息，请参见[AITemplateConfig](~~89863~~)。 |
 |TemplateId|String|1706a0063dd733f6a823e83\*\*\*\*5879e|模板ID。 |
 |TemplateName|String|DemoAITemplate|模板名称。 |
-|TemplateType|String|AIMediaAudit|模板类型。 |
-
-**说明：** 下述请求示例中的“公共请求参数”详情，参见[公共参数说明文档](~~44432~~)。
+|TemplateType|String|AIMediaAudit|模板类型。取固定值：**AIMediaAudit**（智能审核）。 |
 
 ## 示例
 
 请求示例
 
 ```
-http(s)://[Endpoint]/?Action=GetDefaultAITemplate
+https://vod.aliyuncs.com/?Action=GetDefaultAITemplate
 &TemplateType=AIMediaAudit
 &<公共请求参数>
 ```
@@ -107,13 +108,13 @@ http(s)://[Endpoint]/?Action=GetDefaultAITemplate
 
 ## SDK示例
 
-建议使用 [服务端SDK](~~101789~~) 来调用API，此API各语言调用的示例代码，请参考如下：
+建议使用[服务端SDK](~~101789~~)来调用API，此API各语言调用的示例代码，请参见：
 
--   [Java](~~100692#GetDefaultAITemplate~~)
--   [Python](~~101181#GetDefaultAITemplate~~)
--   [PHP](~~101159#GetDefaultAITemplate~~)
--   [.NET](~~100844#GetDefaultAITemplate~~)
--   [Node.js](~~101564#GetDefaultAITemplate~~)
--   [Go](~~101575#GetDefaultAITemplate~~)
--   [C/C++](~~102987#GetDefaultAITemplate~~)
+-   [Java](~~61063~~)
+-   [Python](~~61054~~)
+-   [PHP](~~61069~~)
+-   [.NET](~~84750~~)
+-   [Node.js](~~101396~~)
+-   [Go](~~101411~~)
+-   [C/C++](~~101261~~)
 
