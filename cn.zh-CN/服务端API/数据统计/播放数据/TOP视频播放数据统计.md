@@ -1,13 +1,14 @@
 # TOP视频播放数据统计
 
-获取每日TOP视频的播放数据统计（包括VV、UV和播放总时长）。
+调用DescribePlayTopVideos获取每日TOP视频的播放数据统计（包括播放次数、播放用户数和播放总时长）。
 
 **说明：**
 
--   最多可查询该日 Top1000 的视频播放统计数据，Top视频列表默认基于VV数排序。
--   仅支持使用了阿里云点播播放器SDK的播放数据统计。
+-   目前仅支持**上海**地域。
+-   最多可查询该日Top1000的视频播放统计数据，Top视频列表默认基于播放次数数排序。
+-   仅支持统计使用了阿里云点播播放器SDK的播放数据。
 -   以北京时间（UTC+8）为基准，每天上午9点生成前一天的播放数据统计。
--   支持查询 2018-01-01 起的数据，数据查询的起止时间跨度最大为90天。
+-   支持查询2018-01-01之后的数据，数据查询的起止时间跨度最大为90天。
 
 ## 调试
 
@@ -17,10 +18,10 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|DescribePlayTopVideos|操作接口名，系统规定参数。取值：DescribePlayTopVideos |
-|BizDate|String|是|2016-06-29T13:00:00Z|日期，UTC格式。 |
-|PageNo|Long|否|1|分页的页码，默认值：**1**。 |
-|PageSize|Long|否|100|每页大小。
+|Action|String|是|DescribePlayTopVideos|操作接口名，系统规定参数。取值：**DescribePlayTopVideos**。 |
+|BizDate|String|是|2016-06-29T13:00:00Z|日期。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|PageNo|Long|否|1|分页的页码。默认值：**1**。 |
+|PageSize|Long|否|100|每页大小，每页显示的条数。取值：
 
  -   默认值为**100**。
 -   最大值为**1000**。 |
@@ -35,20 +36,18 @@
 |TopPlayVideos|Array of TopPlayVideoStatis| |用户每天播放top统计数据。 |
 |TopPlayVideoStatis| | | |
 |VideoId|String|2a8d4cb9ecbb487681473a15\*\*\*\*8fda|视频ID。 |
-|PlayDuration|String|4640369|播放时长，单位：毫秒。 |
+|PlayDuration|String|4640369|播放时长。单位：毫秒。 |
 |Title|String|4路（2路加密）：流畅-HLS-加密+标清-MP4+高清-H|视频名称。 |
 |VV|String|107|播放次数。 |
 |UV|String|1|播放用户数。 |
 |RequestId|String|4B0BCF9F-2FD5-4817-\*\*\*\*-7BEBBE3AF90B"|请求ID。 |
-
-**说明：** 下述请求示例中的“公共请求参数”详情，参见[公共参数说明文档](~~44432~~)。
 
 ## 示例
 
 请求示例
 
 ```
-http(s)://[Endpoint]/?Action=DescribePlayTopVideos
+https://vod.aliyuncs.com/?Action=DescribePlayTopVideos
 &BizDate=2016-06-29T13:00:00Z
 &<公共请求参数>
 ```
@@ -141,7 +140,7 @@ http(s)://[Endpoint]/?Action=DescribePlayTopVideos
 
 |400
 
-|BizDate格式错误，应为UTC格式，例如：2018-06-29T13:00:00Z。 |
+|BizDate格式错误。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
 |InvalidBizDate.BeyondCurrent
 
 |EndTime beyond current time.
