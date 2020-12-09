@@ -40,9 +40,9 @@
  -   与UploadURLs里的URL匹配才能生效。
 -   JSON格式：`[UploadMetadata, UploadMetadata,…]`，需转为JSON字符串 。
 -   更多信息，请参见下表**UploadMetadata**。 |
-|UserData|String|否|\{"MessageCallback":\{"CallbackURL":"http://test.test.com"\},"Extend":\{"localId":"xxx","test":"www"\}\}|自定义设置，为JSON字符串，支持消息回调、上传加速等设置。更多信息，请参见[UserData](~~86952#UserData~~)。
+|UserData|String|否|\{"MessageCallback":\{"CallbackURL":"http://test.test.com"\},"Extend":\{"localId":"xxx","test":"www"\}\}|自定义设置。为JSON字符串，支持消息回调、上传加速等设置。使用上传加速前，需要您提交工单给后台帮您开通后再使用。更多信息，请参见[UserData](~~86952#UserData~~)。
 
- **说明：** 使用上传加速前，需要您提交工单给后台帮您开通后再使用。 |
+ **说明：** 此参数中消息回调的使用前提是需要在控制台配置HTTP回调地址和勾选对应的回调事件类型才能使用，否则回调设置不生效。 |
 |AppId|String|否|app-\*\*\*\*|应用ID。默认取值：**app-1000000**。 更多详情，请参见[多应用](~~113600~~)。 |
 |WorkflowId|String|否|e1e243b4254\*\*\*\*\*8248197d6f74f9|工作流ID。
 
