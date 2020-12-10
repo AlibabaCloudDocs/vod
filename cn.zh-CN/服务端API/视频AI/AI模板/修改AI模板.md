@@ -10,8 +10,12 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|UpdateAITemplate|系统规定参数。取值：**UpdateAITemplate**。 |
-|TemplateConfig|String|是|\{"AuditItem":\["terrorism","porn"\],"AuditRange":\["text-title","video"\],"AuditContent":\["screen"\],"AuditAutoBlock":"yes"\}|模板详细配置。JSON字符串。具体值，请参见[AITemplateConfig](~~89863~~)。 |
+|Action|String|是|UpdateAITemplate|操作接口名，系统规定参数。取值：**UpdateAITemplate**。 |
+|TemplateConfig|String|是|\{"AuditItem":\["terrorism","porn"\],"AuditRange":\["text-title","video"\],"AuditContent":\["screen"\],"AuditAutoBlock":"yes"\}|模板详细配置，JSON字符串。
+
+ 具体值，请参见[AITemplateConfig](https://help.aliyun.com/document_detail/89863.html#title-vd3-499-o36)
+
+ 。 |
 |TemplateId|String|是|1706a0063dd733f6a823e\*\*\*\*0a5879e|模板ID。 |
 |TemplateName|String|是|DemoAITemplate|模板名称。最大128字节。 |
 
@@ -62,11 +66,11 @@ https://vod.aliyuncs.com/?Action=UpdateAITemplate
 
 建议使用[服务端SDK](~~101789~~)来调用API，此API各语言调用的示例代码，请参见：
 
--   [Java](~~61063~~)
--   [Python](~~61054~~)
--   [PHP](~~61069~~)
--   [.NET](~~84750~~)
--   [Node.js](~~101396~~)
--   [Go](~~101411~~)
--   [C/C++](~~101261~~)
+-   [Java](~~100692~~)
+-   [Python](~~101181~~)
+-   [PHP](~~101159~~)
+-   [.NET](~~100844~~)
+-   [Node.js](~~101564~~)
+-   [Go](~~101575~~)
+-   [C/C++](~~102987~~)
 
