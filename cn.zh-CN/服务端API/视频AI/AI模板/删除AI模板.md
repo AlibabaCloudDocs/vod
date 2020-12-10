@@ -12,7 +12,7 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|DeleteAITemplate|系统规定参数。取值：**DeleteAITemplate**。 |
+|Action|String|是|DeleteAITemplate|操作接口名，系统规定参数。取值：**DeleteAITemplate**。 |
 |TemplateId|String|是|1706a0063dd733f6a823e\*\*\*\*0a5879e|模板ID。 |
 
 ## 返回数据
@@ -60,11 +60,11 @@ https://vod.aliyuncs.com/?Action=DeleteAITemplate
 
 建议使用[服务端SDK](~~101789~~)来调用API，此API各语言调用的示例代码，请参见：
 
--   [Java](~~61063~~)
--   [Python](~~61054~~)
--   [PHP](~~61069~~)
--   [.NET](~~84750~~)
--   [Node.js](~~101396~~)
--   [Go](~~101411~~)
--   [C/C++](~~101261~~)
+-   [Java](~~100692~~)
+-   [Python](~~101181~~)
+-   [PHP](~~101159~~)
+-   [.NET](~~100844~~)
+-   [Node.js](~~101564~~)
+-   [Go](~~101575~~)
+-   [C/C++](~~102987~~)
 
