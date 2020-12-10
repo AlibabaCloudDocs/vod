@@ -13,9 +13,7 @@
 |Action|String|是|UpdateAITemplate|操作接口名，系统规定参数。取值：**UpdateAITemplate**。 |
 |TemplateConfig|String|是|\{"AuditItem":\["terrorism","porn"\],"AuditRange":\["text-title","video"\],"AuditContent":\["screen"\],"AuditAutoBlock":"yes"\}|模板详细配置，JSON字符串。
 
- 具体值，请参见[AITemplateConfig](https://help.aliyun.com/document_detail/89863.html#title-vd3-499-o36)
-
- 。 |
+ 具体值，请参见[AITemplateConfig](https://help.aliyun.com/document_detail/89863.html#title-vd3-499-o36)。 |
 |TemplateId|String|是|1706a0063dd733f6a823e\*\*\*\*0a5879e|模板ID。 |
 |TemplateName|String|是|DemoAITemplate|模板名称。最大128字节。 |
 
