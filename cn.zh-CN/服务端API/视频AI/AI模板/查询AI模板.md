@@ -10,7 +10,7 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|GetAITemplate|系统规定参数。取值：**GetAITemplate**。 |
+|Action|String|是|GetAITemplate|操作接口名，系统规定参数。取值：**GetAITemplate**。 |
 |TemplateId|String|是|1706a0063dd733f6a823e83\*\*\*\*5879e|模板ID。 |
 
 ## 返回数据
@@ -19,20 +19,22 @@
 |--|--|---|--|
 |RequestId|String|080DA371-8AC0-4CD4-\*\*\*\*-33E64282D81F|请求ID。 |
 |TemplateInfo|Struct| |AI模板信息。 |
-|CreationTime|String|2020-07-08T06:50:45Z|创建时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|CreationTime|String|2020-07-08T06:50:45Z|创建时间。日期格式按照ISO8601表示法，并使用UTC时间，格式为：*yyyy-MM-dd*T*HH:mm:ss*Z。 |
 |IsDefault|String|NotDefault|是否默认。取值：
 
  -   **Default**：是。
 -   **NotDefault**：否。 |
-|ModifyTime|String|2018-12-12T15:09:38:894Z|修改时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|ModifyTime|String|2018-12-12T15:09:38:894Z|修改时间。日期格式按照ISO8601表示法，并使用UTC时间，格式为：*yyyy-MM-dd*T*HH:mm:ss*Z。 |
 |Source|String|Custom|模板来源。
 
  -   **System**：系统。
 -   **Custom**：自定义。 |
-|TemplateConfig|String|\{"AuditRange":\["text-title","video"\],"AuditContent":\["screen"\],"AuditItem":\["terrorism","porn"\],"AuditAutoBlock":"yes"\}|模板详细配置。JSON字符串。具体值，请参见[AITemplateConfig](~~89863~~)。 |
+|TemplateConfig|String|\{"AuditRange":\["text-title","video"\],"AuditContent":\["screen"\],"AuditItem":\["terrorism","porn"\],"AuditAutoBlock":"yes"\}|模板详细配置，JSON字符串。
+
+ 具体值，请参见[AITemplateConfig](https://help.aliyun.com/document_detail/89863.html#title-vd3-499-o36)。 |
 |TemplateId|String|1706a0063dd733f6a823e83\*\*\*\*5879e|模板ID。 |
 |TemplateName|String|DemoAITemplate|模板名称。 |
-|TemplateType|String|AIMediaAudit|模板类型。取值范围：
+|TemplateType|String|AIMediaAudit|模板类型。取值：
 
  -   **AIMediaAudit**：智能审核。
 -   **AIImage**：智能封面。 |
@@ -93,11 +95,11 @@ https://vod.aliyuncs.com/?Action=GetAITemplate
 
 建议使用[服务端SDK](~~101789~~)来调用API，此API各语言调用的示例代码，请参见：
 
--   [Java](~~61063~~)
--   [Python](~~61054~~)
--   [PHP](~~61069~~)
--   [.NET](~~84750~~)
--   [Node.js](~~101396~~)
--   [Go](~~101411~~)
--   [C/C++](~~101261~~)
+-   [Java](~~100692~~)
+-   [Python](~~101181~~)
+-   [PHP](~~101159~~)
+-   [.NET](~~100844~~)
+-   [Node.js](~~101564~~)
+-   [Go](~~101575~~)
+-   [C/C++](~~102987~~)
 
