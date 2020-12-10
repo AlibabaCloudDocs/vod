@@ -10,15 +10,13 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|AddAITemplate|系统规定参数。取值：**AddAITemplate**。 |
-|TemplateConfig|String|是|\{"AuditItem":\["terrorism","porn"\],"AuditRange":\["image-cover","text-title","video"\],"AuditContent":\["screen"\],"AuditAutoBlock":"yes"\}|模板详细配置，JSON字符串。具体值，请参见[AITemplateConfig](~~89863~~)。 |
+|Action|String|是|AddAITemplate|操作接口名，系统规定参数。取值：**AddAITemplate**。 |
+|TemplateConfig|String|是|\{"AuditItem":\["terrorism","porn"\],"AuditRange":\["image-cover","text-title","video"\],"AuditContent":\["screen"\],"AuditAutoBlock":"yes"\}|模板详细配置，JSON字符串。具体值，请参见[AITemplateConfig](~~89863~~#title-vd3-499-o36)。 |
 |TemplateName|String|是|AI-media-test|模板名称。最大128字节。 |
-|TemplateType|String|是|AIMediaAudit|模板类型。取值范围：
+|TemplateType|String|是|AIMediaAudit|模板类型。取值：
 
- -   **AIMediaAudit**（智能审核）
--   **AIImage**（智能封面）
-
- **说明：** 智能封面模板在控制台暂不可见。 |
+ -   智能审核：**AIMediaAudit**。
+-   智能封面：**AIImage**。 |
 
 ## 返回数据
 
@@ -67,11 +65,11 @@ https://vod.aliyuncs.com/?Action=AddAITemplate
 
 建议使用[服务端SDK](~~101789~~)来调用API，此API各语言调用的示例代码，请参见：
 
--   [Java](~~61063~~)
--   [Python](~~61054~~)
--   [PHP](~~61069~~)
--   [.NET](~~84750~~)
--   [Node.js](~~101396~~)
--   [Go](~~101411~~)
--   [C/C++](~~101261~~)
+-   [Java](~~100692~~)
+-   [Python](~~101181~~)
+-   [PHP](~~101159~~)
+-   [.NET](~~100844~~)
+-   [Node.js](~~101564~~)
+-   [Go](~~101575~~)
+-   [C/C++](~~102987~~)
 
