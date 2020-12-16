@@ -24,7 +24,7 @@
 
  -   **Default**：是。
 -   **NotDefault**：否。 |
-|ModifyTime|String|2018-12-12T15:09:38:894Z|修改时间。日期格式按照ISO8601表示法，并使用UTC时间，格式为：*yyyy-MM-dd*T*HH:mm:ss*Z。 |
+|ModifyTime|String|2020-07-08T06:58:45Z|修改时间。日期格式按照ISO8601表示法，并使用UTC时间，格式为：*yyyy-MM-dd*T*HH:mm:ss*Z。 |
 |Source|String|Custom|模板来源。
 
  -   **System**：系统。
@@ -57,7 +57,7 @@ https://vod.aliyuncs.com/?Action=GetAITemplate
 <GetAITemplateResponse>
       <TemplateInfo>
             <IsDefault>NotDefault</IsDefault>
-            <ModifyTime>2018-12-12T15:09:38:894Z</ModifyTime>
+            <ModifyTime>2020-07-08T06:58:45Z</ModifyTime>
             <CreationTime>2020-07-08T06:50:45Z</CreationTime>
             <TemplateConfig>{"AuditRange":["text-title","video"],"AuditContent":["screen"],"AuditItem":["terrorism","porn"],"AuditAutoBlock":"yes"}</TemplateConfig>
             <TemplateName>DemoAITemplate</TemplateName>
@@ -75,7 +75,7 @@ https://vod.aliyuncs.com/?Action=GetAITemplate
 {
 	"TemplateInfo": {
 		"IsDefault": "NotDefault",
-		"ModifyTime": "2018-12-12T15:09:38:894Z",
+		"ModifyTime": "2020-07-08T06:58:45Z",
 		"CreationTime": "2020-07-08T06:50:45Z",
 		"TemplateConfig": "{\"AuditRange\":[\"text-title\",\"video\"],\"AuditContent\":[\"screen\"],\"AuditItem\":[\"terrorism\",\"porn\"],\"AuditAutoBlock\":\"yes\"}",
 		"TemplateName": "DemoAITemplate",
