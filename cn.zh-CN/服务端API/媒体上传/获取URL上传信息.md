@@ -27,7 +27,7 @@
 |NonExists|List|\["\*\*\*\*1", "\*\*\*\*2"\]|不存在的ID或URL列表。 |
 |RequestId|String|25818875-5F78-4A\*\*\*\*\*F6-D7393642CA58|请求ID。 |
 |URLUploadInfoList|Array of UrlUploadJobInfoDTO| |URL上传信息列表。具体上传名称及描述，请参见[URL上传信息](~~52839~~)。 |
-|CompleteTime|String|2019-01-01T01:01:01Z|完成时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|CompleteTime|String|2019-01-01T01:11:01Z|完成时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
 |CreationTime|String|2019-01-01T01:01:01Z|创建时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
 |ErrorCode|String|200|错误码。 |
 |ErrorMessage|String|error\_message|错误信息。 |
@@ -64,7 +64,7 @@ https://vod.aliyuncs.com/?Action=GetURLUploadInfos
         <CreationTime>2019-01-01T01:01:01Z</CreationTime>
         <ErrorCode>200</ErrorCode>
         <ErrorMessage>error_message</ErrorMessage>
-        <CompleteTime>2019-01-01T01:01:01Z</CompleteTime>
+        <CompleteTime>2019-01-01T01:11:01Z</CompleteTime>
         <JobId>86c192*****5fba0</JobId>
         <FileSize>24</FileSize>
   </URLUploadInfoList>
@@ -85,7 +85,7 @@ https://vod.aliyuncs.com/?Action=GetURLUploadInfos
 		"CreationTime": "2019-01-01T01:01:01Z",
 		"ErrorCode": "200",
 		"ErrorMessage": "error_message",
-		"CompleteTime": "2019-01-01T01:01:01Z",
+		"CompleteTime": "2019-01-01T01:11:01Z",
 		"JobId": "86c192*****5fba0",
 		"FileSize": "24"
 	}],
