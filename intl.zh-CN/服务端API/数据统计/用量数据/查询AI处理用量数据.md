@@ -17,7 +17,7 @@
 |--|--|----|---|--|
 |Action|String|是|DescribeVodAIData|系统规定参数。取值：**DescribeVodAIData**。 |
 |EndTime|String|是|2019-02-01T15:00:00Z|获取数据结束时间点，需晚于起始时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
-|StartTime|String|是|2019-02-01T15:00:00Z|获取数据起始时间点。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|StartTime|String|是|2019-02-01T13:00:00Z|获取数据起始时间点。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
 |Region|String|否|cn-beijing|存储地域。默认返回所有区域。支持批量查询，多个地域使用用半角逗号（,）分隔。取值范围：
 
  -   **cn-shanghai**（上海）
@@ -58,7 +58,7 @@
 ```
 https://vod.aliyuncs.com/?Action=DescribeVodAIData
 &EndTime=2019-02-01T15:00:00Z
-&StartTime=2019-02-01T15:00:00Z
+&StartTime=2019-02-01T13:00:00Z
 &<公共请求参数>
 ```
 
@@ -207,7 +207,7 @@ https://vod.aliyuncs.com/?Action=DescribeVodAIData
 
 |400
 
-|SndTime和StartTime差值不能超过31天。 |
+|EndTime和StartTime差值不能超过31天。 |
 |InvalidParameterRegion
 
 |Invalid Parameter Region.
