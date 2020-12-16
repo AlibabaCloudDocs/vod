@@ -21,7 +21,7 @@
 |SecurityIpList|Array of SecurityIp| |审核安全IP详情。 |
 |CreationTime|String|2018-05-22T06:54:23Z|创建时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
 |Ips|String|30.27.14.0/24,30.39.127.245|安全IP列表。 |
-|ModificationTime|String|2018-05-22T06:54:23Z|更新时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
+|ModificationTime|String|2018-05-22T06:55:14Z|更新时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
 |SecurityGroupName|String|Default|安全IP组名称。 |
 
 ## 示例
