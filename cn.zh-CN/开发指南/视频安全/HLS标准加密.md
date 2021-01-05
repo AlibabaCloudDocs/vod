@@ -52,7 +52,7 @@ HLS标准加密需要配合密钥管理服务和令牌服务使用，本文为�
 
     -   加密模板：在控制台的[添加转码模板组](https://vod.console.aliyun.com/?#/settings/transcode/add)页面，创建HLS模板，开启**视频加密**，并勾选**私有加密**选项（必须勾选，否则不加密）。具体操作，请参见[转码设置](/cn.zh-CN/控制台指南/配置管理/转码设置.md)。
 
-        ![加密模板](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0579475061/p183774.png)
+        ![加密模板](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6231389061/p183774.png)
 
         **说明：** 该模板在调用[提交媒体转码作业](/cn.zh-CN/服务端API/媒体处理/发起处理/提交媒体转码作业.md)接口时，通过TemplateGroupId参数传递，如此视频点播将按照设置的模板和传递的秘钥信息进行标准加密转码。
 
