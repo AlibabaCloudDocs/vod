@@ -2,20 +2,26 @@
 
 本文为您介绍了阿里云Android播放器在不同更新时间对应的更新功能。
 
+## 2021-01-07
+
+|日期|版本|修改内容|历史版本|
+|--|--|----|----|
+|2021-01-07|V5.2.3|-   优化下载模块逻辑。
+-   优化MP4 HLS的兼容性。
+-   支持阿里云听视频功能。
+
+|[Android播放器SDK 5.2.3](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.2.3/ApsaraVideo_videoPlay_v5.2.3_Android_20210107.zip)|
+
 ## 2020-11-17
 
 |日期|版本|修改内容|历史版本|
 |--|--|----|----|
-|2020-11-17|V5.2.2|-   解决播放一个时长为0的点播HLS崩溃问题。
--   解决播放60FPS的视频，视频延迟问题。
--   解决stop接口慢的问题。
--   解决artc播放时设置的max\_buffer\_duration过小导致播放不起来的问题。
--   解决倍速播放stop后再播放，视频丢帧问题。
--   解决有elst box的MP4文件播放快进问题。
--   解决列表播放断网后导致视频播放失败问题。
--   解决超低帧率视频播放，音频卡顿问题。
--   优化音量设置逻辑。
--   添加HEVC硬解码黑名单。
+|2020-11-17|V5.2.2|-   优化不同帧率的视频播放的兼容性。
+-   解决倍速播放暂停（stop）后再次播放时，视频丢帧问题。
+-   优化播放MP4文件的兼容性。
+-   优化列表播放。
+-   优化音量和静音设置。
+-   硬解码黑名单支持HEVC格式。
 
 |[Android播放器SDK 5.2.2](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.2.2/ApsaraVideo_videoPlay_v5.2.2_Android_20201116.zip)|
 
@@ -23,13 +29,11 @@
 
 |日期|版本|修改内容|历史版本|
 |--|--|----|----|
-|2020-09-30|V5.2.1|-   完善HLS格式的兼容性，支持FMP4分片，支持aac es流ID3解析，支持多分片字幕。
--   demuxer支持插件自定义消息传递通道。
--   分离artc包，降低artc和播放器SDK的版本耦合。
--   支持WideVine DRM。
--   修复某些手机后台播放音频卡顿问题。
--   支持HEVC硬解码器黑名单设置。
--   支持content:// 协议。
+|2020-09-30|V5.2.1|-   提高HLS格式的兼容性。
+-   分离artc包，降低artc和播放器SDK版本的耦合。
+-   支持WideVine DRM。
+-   优化后台播放。
+-   支持content协议。
 -   支持扩展外部播放器。
 
 |[Android播放器SDK 5.2.1](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.2.1/ApsaraVideo_videoPlay_v5.2.1_Android_20200930.zip)|
@@ -40,12 +44,10 @@
 |--|--|----|----|
 |2020-09-22|V5.1.6|-   优化进度显示逻辑。
 -   优化外挂字幕显示。
--   修复rtmp长时间播放出现音视频不同步问题。
--   优化使用vid列表播放的起播速度。
--   修复播放器stop后视频旋转角度未清除问题。
--   优化软解码的稳定性。
--   修复采样率大于48k的视频播放快进问题。
--   修复某些设备视频硬解后台播放解码器无法工作的问题。
+-   优化音视频同步逻辑。
+-   优化vid列表播放的起播速度。
+-   优化采样率音频播放。
+-   优化后台播放。
 
 |[Android播放器SDK 5.1.6](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.1.6/ApsaraVideo_videoPlay_v5.1.6_Android_20200922.zip)|
 
@@ -53,19 +55,19 @@
 
 |日期|版本|修改内容|历史版本|
 |--|--|----|----|
-|2020-07-22|V5.1.5|播放器SDK 支持RTS低延迟直播拉流。RTS支持aac、opus、H.264编码，支持平滑追帧等特性。|[Android播放器SDK 5.1.5](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.1.5/ApsaraVideo_videoPlay_v5.1.5_Android_20200722.zip)|
+|2020-07-22|V5.1.5|支持artc播放。|[Android播放器SDK 5.1.5](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.1.5/ApsaraVideo_videoPlay_v5.1.5_Android_20200722.zip)|
 
 ## 2020-07-07
 
 |日期|版本|修改内容|历史版本|
 |--|--|----|----|
-|2020-07-07|V5.1.4|-   支持STS加密直播的播放。
--   增加设置IPV4/V6解析。
--   增加播放器轻量预缓存功能。
--   增加视频背景色设置。
--   降低HLS直播延迟，支持设置起播分片。
+|2020-07-07|V5.1.4|-   支持HLS直播加密。
+-   支持设置IP解析类型。
+-   优化预缓存功能。
+-   支持设置视频背景色。
+-   优化HLS直播延迟。
 -   播放器兼容性优化。
--   播放器内核开源CicadaPlayer。
+-   播放内核开源CicadaPlayer。
 
 |[Android播放器SDK 5.1.4](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.1.4/ApsaraVideo_videoPlay_v5.1.4_Android_20200707.zip)|
 
