@@ -2,20 +2,27 @@
 
 本文为您介绍了阿里云iOS播放器在不同更新时间对应的更新功能。
 
+## 2021-01-07
+
+|日期|版本|修改内容|历史版本|
+|--|--|----|----|
+|2021-01-07|V5.2.3|-   优化下载模块逻辑。
+-   优化MP4 HLS的兼容性。
+-   支持阿里云听视频功能。
+-   解决列表播放切换视频会出现噪音问题。
+
+|[iOS播放器SDK 5.2.3](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.2.3/ApsaraVideo_videoPlay_v5.2.3_iOS_20210107.zip)|
+
 ## 2020-11-17
 
 |日期|版本|修改内容|历史版本|
 |--|--|----|----|
-|2020-11-17|V5.2.2|-   解决播放一个时长为0的点播HLS崩溃问题。
--   解决播放60FPS的视频，视频延迟问题。
--   解决stop接口慢的问题。
--   解决artc播放时设置的max\_buffer\_duration过小导致播放不起来的问题。
--   解决倍速播放stop后再播放，视频丢帧问题。
--   解决有elst box的MP4文件播放快进问题。
--   解决列表播放断网后导致视频播放失败问题。
--   解决超低帧率视频播放，音频卡顿问题。
--   优化音量设置逻辑。
--   解决静音起播可能出现短暂声音问题。
+|2020-11-17|V5.2.2|-   优化不同帧率的视频播放的兼容性。
+-   解决倍速播放暂停（stop）后再次播放时，视频丢帧问题。
+-   优化播放MP4文件的兼容性。
+-   优化列表播放。
+-   优化音量和静音设置。
+-   加快播放器暂停（stop）速度。
 
 |[iOS播放器SDK 5.2.2](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.2.2/ApsaraVideo_videoPlay_v5.2.2_iOS_20201117.zip)|
 
@@ -23,12 +30,11 @@
 
 |日期|版本|修改内容|历史版本|
 |--|--|----|----|
-|2020-09-30|V5.2.1|-   完善HLS格式的兼容性，支持FMP4分片，支持aac es流ID3解析，支持多分片字幕。
--   demuxer支持插件自定义消息传递通道。
--   分离artc包，降低artc和播放器SDK的版本耦合。
--   支持FairPlay DRM。
--   使用Darwin SSL替换OpenSSL，减小包的体积。
--   去掉HLS标准加密流不输出pixelbuffer的限制。
+|2020-09-30|V5.2.1|-   提高HLS格式的兼容性。
+-   分离artc包，降低artc和播放器SDK版本的耦合。
+-   支持FairPlay DRM。
+-   去除OpenSSL，减小体积。
+-   去除HLS标准加密流不输出pixelbuffer的限制。
 
 |[iOS播放器SDK 5.2.1](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.2.1/ApsaraVideo_videoPlay_v5.2.1_iOS_20200930.zip)|
 
@@ -38,13 +44,11 @@
 |--|--|----|----|
 |2020-09-22|V5.1.6|-   优化进度显示逻辑。
 -   优化外挂字幕显示。
--   修复rtmp长时间播放出现音视频不同步问题。
--   优化使用vid列表播放的起播速度。
--   修复播放器stop后视频旋转角度未清除问题。
--   优化软解码的稳定性。
--   修复采样率大于48k的视频播放快进问题。
--   修改前后台事件监听逻辑,兼容iPad设备。
--   修复隔行H.264不能软解的问题。
+-   优化音视频同步逻辑。
+-   优化vid列表播放的起播速度。
+-   优化采样率音频播放。
+-   修改前后台事件监听逻辑，兼容iPad设备。
+-   修复隔行不能自动软解的问题。
 
 |[iOS播放器SDK 5.1.6](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.1.6/ApsaraVideo_videoPlay_v5.1.6_iOS_20200922.zip)|
 
@@ -52,21 +56,20 @@
 
 |日期|版本|修改内容|历史版本|
 |--|--|----|----|
-|2020-07-22|V5.1.5|播放器SDK支持RTS低延迟直播拉流。RTS支持aac、opus、H.264编码，支持平滑追帧等特性。|[iOS播放器SDK 5.1.5](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.1.5/ApsaraVideo_videoPlay_v5.1.5_iOS_20200721.zip)|
+|2020-07-22|V5.1.5|支持artc播放。|[iOS播放器SDK 5.1.5](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.1.5/ApsaraVideo_videoPlay_v5.1.5_iOS_20200721.zip)|
 
 ## 2020-07-07
 
 |日期|版本|修改内容|历史版本|
 |--|--|----|----|
-|2020-07-07|V5.1.4|-   支持STS加密直播的播放。
--   增加设置IPv4/v6解析。
--   增加播放器轻量预缓存功能。
--   增加视频背景色设置。
--   增加pixelbuffer输出，方便flutter集成。
--   支持设置AudioSession的Delegate。
--   降低HLS直播延迟，支持设置起播分片。
+|2020-07-07|V5.1.4|-   支持HLS直播加密。
+-   支持设置IP解析类型。
+-   优化预缓存功能。
+-   支持设置视频背景色。
+-   优化HLS直播延迟。
 -   播放器兼容性优化。
--   播放器内核开源CicadaPlayer。
+-   播放内核开源CicadaPlayer。
+-   支持自定义AudioSession属性。
 
 |[iOS播放器SDK 5.1.4](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.1.4/ApsaraVideo_videoPlay_v5.1.4_iOS_20200709.zip)|
 
