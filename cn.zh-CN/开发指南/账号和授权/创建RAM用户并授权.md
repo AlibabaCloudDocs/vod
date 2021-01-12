@@ -12,8 +12,6 @@
 
 3.  勾选**编程访问**，单击**确定**。
 
-    此时创建了一个拥有和主账号一样完全访问VOD权限的RAM用户。
-
     ![创建用户](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0112204061/p177870.png)
 
     单击**确定**后会弹出手机验证窗口，完成验证码验证后，自动生成该RAM用户的AccessKey。
