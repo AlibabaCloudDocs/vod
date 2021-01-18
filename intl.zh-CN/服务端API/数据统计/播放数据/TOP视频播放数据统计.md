@@ -8,7 +8,7 @@
 -   最多可查询该日Top1000的视频播放统计数据，Top视频列表默认基于播放次数数排序。
 -   仅支持统计使用了阿里云点播播放器SDK的播放数据。
 -   以北京时间（UTC+8）为基准，每天上午9点生成前一天的播放数据统计。
--   支持查询2018-01-01之后的数据，数据查询的起止时间跨度最大为90天。
+-   支持查询2018-01-01之后的数据，数据查询的起止时间跨度最大为180天。
 
 ## 调试
 
@@ -54,7 +54,7 @@ https://vod.aliyuncs.com/?Action=DescribePlayTopVideos
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
 <DescribePlayTopVideosResponse>
@@ -81,7 +81,7 @@ https://vod.aliyuncs.com/?Action=DescribePlayTopVideos
 </DescribePlayTopVideosResponse>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
 {
