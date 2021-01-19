@@ -8,7 +8,7 @@ DeleteMediaComplete
 
 ## Event description
 
-The DeleteMediaComplete event is generated only for the [t1235523.md\#](/intl.en-US/API Reference/Media management/Audio&Video Management/DeleteVideo.md) operation.
+The DeleteMediaComplete event is generated only for the [DeleteVideo](/intl.en-US/API Reference/Media management/Audio&Video Management/DeleteVideo.md) operation.
 
 ## Event notification content
 
