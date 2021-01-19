@@ -14,7 +14,7 @@ The VideoAnalysisComplete event is generated after ApsaraVideo VOD analyzes audi
 
 -   By default, ApsaraVideo VOD analyzes all audio and video mezzanine files to be uploaded free of charge.
 -   During the analysis, ApsaraVideo VOD extracts the metadata of the mezzanine files. Such metadata includes duration, resolution \(width and height\), bitrate, and frame rate.
--   Metadata obtained from the analysis is stored in the media library. You can call the [t1235518.md\#](/intl.en-US/API Reference/Media management/Audio&Video Management/GetMezzanineInfo.md) operation to obtain the metadata of mezzanine files.
+-   Metadata obtained from the analysis is stored in the media library. You can call the [GetMezzanineInfo](/intl.en-US/API Reference/Media management/Audio&Video Management/GetMezzanineInfo.md) operation to obtain the metadata of mezzanine files.
 
 ## Event notification content
 
