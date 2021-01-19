@@ -50,7 +50,7 @@ You can call the [CreateAppInfo]() operation to create applications. Up to 10 ap
 
 ## Grant permissions to the identity entity
 
-You can call the [t1235660.md\#]() operation to grant permissions to an identity entity \(RAM user or role\) before the identity entity can manage resources in applications. For more information about policies, see the "Policies" section in [Overview](/intl.en-US/Developer Guide/Multi-application service/Overview.md).
+You can call the [AttachAppPolicyToIdentity]() operation to grant permissions to an identity entity \(RAM user or role\) before the identity entity can manage resources in applications. For more information about policies, see the "Policies" section in [Overview](/intl.en-US/Developer Guide/Multi-application service/Overview.md).
 
 ## Use the multi-application service
 
@@ -62,9 +62,9 @@ Only the **callback** and **media services \(including media upload, playback, a
 
     You can set a separate callback method and URL for each application. You can use the AppId parameter in the following operation:
 
-    [t1235667.md\#](/intl.en-US/API Reference/Global Config/Event notification/SetMessageCallback.md): If the AppId parameter is specified, you can configure callbacks for the application. If the AppId parameter is not specified, the system default application is used.
+    [SetMessageCallback](/intl.en-US/API Reference/Global Config/Event notification/SetMessageCallback.md): If the AppId parameter is specified, you can configure callbacks for the application. If the AppId parameter is not specified, the system default application is used.
 
-    -       -       After the settings are complete, callbacks are performed for event notifications for video and image uploads in different applications based on the settings. You can also call the [t1235668.md\#](/intl.en-US/API Reference/Global Config/Event notification/GetMessageCallback.md) operation to query related configurations.
+    -       -       After the settings are complete, callbacks are performed for event notifications for video and image uploads in different applications based on the settings. You can also call the [GetMessageCallback](/intl.en-US/API Reference/Global Config/Event notification/GetMessageCallback.md) operation to query related configurations.
 
     **Note:** After you activate the multi-application service, you can manage callback configurations for only the default application in the ApsaraVideo VOD console. The ApsaraVideo VOD console will be upgraded to support the management of other applications.
 
