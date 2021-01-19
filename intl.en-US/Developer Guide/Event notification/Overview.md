@@ -14,26 +14,24 @@ Event types
 The following table describes the event types for which event notifications are provided in ApsaraVideo VOD.
 
 
-|       **Event type**        |                                                              **Reference**                                                              |
-|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| FileUploadComplete          | [FileUploadComplete](/intl.en-US/Developer Guide/Event notification/Event List/FileUploadComplete.md)                   |
-| ImageUploadComplete         | [ImageUploadComplete](/intl.en-US/Developer Guide/Event notification/Event List/ImageUploadComplete.md)                 |
-| StreamTranscodeComplete     | [StreamTranscodeComplete](/intl.en-US/Developer Guide/Event notification/Event List/StreamTranscodeComplete.md)         |
-| TranscodeComplete           | [TranscodeComplete](/intl.en-US/Developer Guide/Event notification/Event List/TranscodeComplete.md)                     |
-| SnapshotComplete            | [SnapshotComplete](/intl.en-US/Developer Guide/Event notification/Event List/SnapshotComplete.md)                       |
-| DynamicImageComplete        | [DynamicImageComplete]()                                                                                                |
-| AddLiveRecordVideoComplete  | [AddLiveRecordVideoComplete](/intl.en-US/Developer Guide/Event notification/Event List/AddLiveRecordVideoComplete.md)   |
-| LiveRecordVideoComposeStart | [LiveRecordVideoComposeStart](/intl.en-US/Developer Guide/Event notification/Event List/LiveRecordVideoComposeStart.md) |
-| UploadByURLComplete         | [UploadByURLComplete](/intl.en-US/Developer Guide/Event notification/Event List/UploadByURLComplete.md)                 |
-| CreateAuditComplete         | [CreateAuditComplete](/intl.en-US/Developer Guide/Event notification/Event List/CreateAuditComplete.md)                 |
-| AIMediaAuditComplete        | [AIMediaAuditComplete](/intl.en-US/Developer Guide/Event notification/Event List/AIMediaAuditComplete.md)               |
-| VideoAnalysisComplete       | [VideoAnalysisComplete](/intl.en-US/Developer Guide/Event notification/Event List/VideoAnalysisComplete.md)             |
-| AIMediaDNAComplete          | [AIMediaDNAComplete](/intl.en-US/Developer Guide/Event notification/Event List/AIMediaDNAComplete.md)                   |
-| AIVideoTagComplete          | [AIVideoTagComplete]()                                                                                                  |
-| AttachedMediaUploadComplete | [AttachedMediaUploadComplete](/intl.en-US/Developer Guide/Event notification/Event List/AttachedMediaUploadComplete.md) |
-| ProduceMediaComplete        | [ProduceMediaComplete](/intl.en-US/Developer Guide/Event notification/Event List/ProduceMediaComplete.md)               |
-| DeleteMediaComplete         | [DeleteMediaComplete](/intl.en-US/Developer Guide/Event notification/Event List/DeleteMediaComplete.md)                 |
-| MediaBaseChangeComplete     | [MediaBaseChangeComplete]()                                                                                             |
+|       **Event type**        |                                                            **Reference**                                                            |
+|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| FileUploadComplete          | [FileUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/FileUploadComplete.md)                   |
+| ImageUploadComplete         | [ImageUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/ImageUploadComplete.md)                 |
+| StreamTranscodeComplete     | [StreamTranscodeComplete](/intl.en-US/Developer Guide/Event notification/Events/StreamTranscodeComplete.md)         |
+| TranscodeComplete           | [TranscodeComplete](/intl.en-US/Developer Guide/Event notification/Events/TranscodeComplete.md)                     |
+| SnapshotComplete            | [SnapshotComplete](/intl.en-US/Developer Guide/Event notification/Events/SnapshotComplete.md)                       |
+| DynamicImageComplete        | [DynamicImageComplete](/intl.en-US/Developer Guide/Event notification/Events/DynamicImageComplete.md)               |
+| AddLiveRecordVideoComplete  | [AddLiveRecordVideoComplete](/intl.en-US/Developer Guide/Event notification/Events/AddLiveRecordVideoComplete.md)   |
+| LiveRecordVideoComposeStart | [LiveRecordVideoComposeStart](/intl.en-US/Developer Guide/Event notification/Events/LiveRecordVideoComposeStart.md) |
+| UploadByURLComplete         | [UploadByURLComplete](/intl.en-US/Developer Guide/Event notification/Events/UploadByURLComplete.md)                 |
+| CreateAuditComplete         | [CreateAuditComplete](/intl.en-US/Developer Guide/Event notification/Events/CreateAuditComplete.md)                 |
+| AIMediaAuditComplete        | [AIMediaAuditComplete](/intl.en-US/Developer Guide/Event notification/Events/AIMediaAuditComplete.md)               |
+| VideoAnalysisComplete       | [VideoAnalysisComplete](/intl.en-US/Developer Guide/Event notification/Events/VideoAnalysisComplete.md)             |
+| AttachedMediaUploadComplete | [AttachedMediaUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/AttachedMediaUploadComplete.md) |
+| ProduceMediaComplete        | [ProduceMediaComplete](/intl.en-US/Developer Guide/Event notification/Events/ProduceMediaComplete.md)               |
+| DeleteMediaComplete         | [DeleteMediaComplete](/intl.en-US/Developer Guide/Event notification/Events/DeleteMediaComplete.md)                 |
+| MediaBaseChangeComplete     | [MediaBaseChangeComplete](/intl.en-US/Developer Guide/Event notification/Events/MediaBaseChangeComplete.md)         |
 
 
 
@@ -49,7 +47,7 @@ ApsaraVideo VOD provides the **HTTP callback** ( **HTTPS compatible** **)** and 
 
 * MNS callback:
 
-  You must [authorize ApsaraVideo VOD to access MNS](https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22%3A%20%7B%22request1%22%3A%20%7B%22RoleName%22%3A%20%22AliyunVODDefaultRole%22%2C%20%22TemplateId%22%3A%20%22DefaultRole%22%7D%7D%2C%20%22ReturnUrl%22%3A%20%22https%3A//vod.console.aliyun.com/%22%2C%20%22Service%22%3A%20%22VOD%22%7D). Then, you can log on to the [MNS console](https://mns.console.aliyun.com) and create a queue or use an existing queue and call API operations to configure event notifications. When an event is generated, ApsaraVideo VOD writes callback messages to the queue. For information about how to read the messages, see the MNS documentation. For more information, see [Reliable MNS event notification](/intl.en-US/Developer Guide/Event notification/Reliable MNS event notifications.md).
+  You must [authorize ApsaraVideo VOD to access MNS](https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22%3A%20%7B%22request1%22%3A%20%7B%22RoleName%22%3A%20%22AliyunVODDefaultRole%22%2C%20%22TemplateId%22%3A%20%22DefaultRole%22%7D%7D%2C%20%22ReturnUrl%22%3A%20%22https%3A//vod.console.aliyun.com/%22%2C%20%22Service%22%3A%20%22VOD%22%7D). Then, you can log on to the [MNS console](https://mns.console.aliyun.com) and create a queue or use an existing queue and call API operations to configure event notifications. When an event is generated, ApsaraVideo VOD writes callback messages to the queue. For information about how to read the messages, see the MNS documentation. For more information, see [Reliable MNS event notification](/intl.en-US/Developer Guide/Event notification/Reliable MNS event notification.md).
   
 
 
