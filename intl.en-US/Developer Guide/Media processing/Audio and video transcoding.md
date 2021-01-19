@@ -166,7 +166,7 @@ Transcoding templates
 
 Transcoding parameters are often complex. To relieve users of complex parameter management, ApsaraVideo VOD saves complex parameters as templates. You can customize transcoding templates. A custom transcoding template contains a set of transcoding parameters such as audio, video, and container parameters to satisfy your personalized transcoding needs. A transcoding template can generate multiple output streams. In addition, ApsaraVideo VOD provides recommended parameter settings based on the video definition and audio quality, which allows you to start transcoding videos without learning the technical details.
 
-The following figure shows the **[Added Transcoding Template Group](https://vod.console.aliyun.com/#/settings/transcode/add)** page of the ApsaraVideo VOD console.![转码模板 ](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7056348061/p182466.png)
+The following figure shows the **[Added Transcoding Template Group](https://vod.console.aliyun.com/#/settings/transcode/add)** page of the ApsaraVideo VOD console.![转码模板 ](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6468301161/p182466.png)
 
 **Transcoding template details** 
 
