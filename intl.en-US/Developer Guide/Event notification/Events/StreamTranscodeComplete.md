@@ -42,7 +42,7 @@ The StreamTranscodeComplete event is generated after a video stream in a single 
 |Size|Long|No|The size of the video stream. Unit: bytes.|
 |Width|Long|No|The width of the video stream. Unit: px.|
 |JobId|String|No|The ID of the transcoding job.|
-|Extend|String|No|The user-defined parameter that is returned in the pass-through mode in callbacks. For more information, see [t1235674.md\#section\_6fg\_qll\_v3w](/intl.en-US/API Reference/Appendix/Request parameters.md).|
+|Extend|String|No|The user-defined parameter that is returned in the pass-through mode in callbacks. For more information, see [UserData](/intl.en-US/API Reference/Appendix/Request parameters.md).|
 
 ## Sample callbacks
 
