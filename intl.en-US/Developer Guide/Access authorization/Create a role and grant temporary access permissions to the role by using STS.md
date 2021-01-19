@@ -23,33 +23,17 @@ Permissions granted to RAM users can be used for an extended period of time, whi
 
 1.  In the left-side navigation pane of the [RAM console](https://ram.console.aliyun.com/roles), click RAM Roles. On the RAM Roles page, click **Create RAM Role**.
 
-    ![Create RAM Role](../images/p177972.png)
-
 2.  In the Create RAM Role dialog box, select **Alibaba Cloud Account** and click **Next**.
-
-    ![Create RAM Role-1](../images/p177974.png)
 
 3.  Enter a RAM role name and select **Current Alibaba Cloud Account**. Then, click **OK**.
 
-    ![Create RAM Role-2](../images/p177977.png)
-
-    When the RAM role is created, the following message appears:
-
-    ![RAM role created](../images/p178014.png)
-
 4.  Go back to the RAM Roles page. Find the role that you created, and click **Add Permissions** in the Actions column.
 
-    ![Add Permissions](../images/p178018.png)
-
 5.  Select the **AliyunVODFullAccess** policy from the list of policies under System Policy, and click **OK**.
-
-    ![Grant permissions](../images/p178021.png)
 
     **Note:** To control risks, we recommend that you grant permissions to RAM roles based on the principle of least privilege.
 
     After the permission is granted, a record is generated.
-
-    ![Permission granted](../images/p178022.png)
 
 
 ## Use STS to authorize access
