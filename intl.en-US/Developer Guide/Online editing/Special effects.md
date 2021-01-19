@@ -24,7 +24,7 @@ This topic describes the parameters used to configure the special effects of ban
 -   FontSize: the size of the font.
 -   FontColorOpacity: the transparency of the font color.
 
-**Note:** For more information about the parameters, see [t1235673.md\#section\_i3j\_wna\_gxo](/intl.en-US/API Reference/Appendix/Basic data types.md).
+**Note:** For more information about the parameters, see [Effect](/intl.en-US/API Reference/Appendix/Basic data types.md).
 
 |Video|
 |DeWatermark|Masking|-   In: the start time of the masking relative to the video clip.
