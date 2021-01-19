@@ -8,7 +8,7 @@ CreateAuditComplete
 
 ## Event description
 
-The CreateAuditComplete event is generated when the [t1235575.md\#](/intl.en-US/API Reference/Content Moderation/Manual Audit/CreateAudit.md) operation is called.
+The CreateAuditComplete event is generated when the [CreateAudit](/intl.en-US/API Reference/Content Moderation/Manual Audit/CreateAudit.md) operation is called.
 
 ## Event notification content
 
