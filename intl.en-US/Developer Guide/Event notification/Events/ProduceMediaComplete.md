@@ -12,7 +12,7 @@ This event is generated after media editing is complete.
 
 **Note:**
 
--   Media editing can be initiated on the [Video Editor](https://vod.console.aliyun.com/#/videoEditor/list) page in the ApsaraVideo VOD console or through calls to the [t1235562.md\#](/intl.en-US/API Reference/Video editing/ProduceEditingProjectVideo.md) operation.
+-   Media editing can be initiated on the [Video Editor](https://vod.console.aliyun.com/#/videoEditor/list) page in the ApsaraVideo VOD console or through calls to the [ProduceEditingProjectVideo](/intl.en-US/API Reference/Video editing/ProduceEditingProjectVideo.md) operation.
 -   Media files produced from media editing are used as the mezzanine files of media resources.
 
 ## Event notification content
