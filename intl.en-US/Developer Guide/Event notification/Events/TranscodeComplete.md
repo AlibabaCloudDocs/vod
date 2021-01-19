@@ -21,7 +21,7 @@ The TranscodeComplete event is generated after all streams of a video are transc
 |VideoId|String|Yes|The ID of the video.|
 |Status|String|Yes|Indicates whether the video streams are transcoded. The value is success as long as one video stream is transcoded. Valid values:-   **success**: The video streams are transcoded.
 -   **fail**: The video streams failed to be transcoded. |
-|Extend|String|No|The user-defined parameter that is returned in the pass-through mode in callbacks. For more information, see [t1235674.md\#section\_6fg\_qll\_v3w](/intl.en-US/API Reference/Appendix/Request parameters.md).|
+|Extend|String|No|The user-defined parameter that is returned in the pass-through mode in callbacks. For more information, see [UserData](/intl.en-US/API Reference/Appendix/Request parameters.md).|
 |StreamInfos|Array|No|Details about the video streams. For more information, see the following table.|
 
 The value of StreamInfos is an array. The following table describes the fields of this parameter for each stream.
