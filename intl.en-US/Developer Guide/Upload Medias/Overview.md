@@ -4,7 +4,7 @@ ApsaraVideo VOD allows you to upload media files such as audio, video, and image
 
 For information about the AccessKey pairs and permissions required for media uploads, see [Overview](/intl.en-US/Developer Guide/Access authorization/Overview.md).
 
-ApsaraVideo VOD issues **upload URLs and credentials** to authorize users to upload media files to OSS buckets allocated by ApsaraVideo VOD. For more information, see [Upload URLs and credentials](/intl.en-US/Developer Guide/Upload Medias/Upload URL and credential.md).
+ApsaraVideo VOD issues **upload URLs and credentials** to authorize users to upload media files to OSS buckets allocated by ApsaraVideo VOD. For more information, see [Upload URLs and credentials](/intl.en-US/Developer Guide/Upload Medias/Upload URLs and credentials.md).
 
 ## Upload methods
 
@@ -13,12 +13,12 @@ The following table describes the methods that you can use to upload media files
 |Method|Description|Scenario|Reference|
 |------|-----------|--------|---------|
 |Upload in the ApsaraVideo VOD console|After you activate ApsaraVideo VOD, you can log on to the ApsaraVideo VOD console to upload audio, video, and image files. Batch upload is supported.|Scenarios in which you want to upload media resources to ApsaraVideo VOD in a fast and convenient manner.|[Upload media assets](/intl.en-US/User Guide/Media library/Upload media assets.md)|
-|Upload from servers|You can upload media files stored on application servers to ApsaraVideo VOD. Server upload SDKs are required.|Scenarios in which you require automated upload or you want to upload a large amount of video files.|[Upload from servers](/intl.en-US/Developer Guide/Upload Medias/Server upload.md)|
+|Upload from servers|You can upload media files stored on application servers to ApsaraVideo VOD. Server upload SDKs are required.|Scenarios in which you require automated upload or you want to upload a large amount of video files.|[Upload from servers](/intl.en-US/Developer Guide/Upload Medias/Upload from servers.md)|
 |Upload from clients|Users of mobile terminals, web pages, or PCs upload media files from the client to ApsaraVideo VOD. Client upload SDKs are required. The following SDKs are supported:-   Upload SDK for Android
 -   Upload SDK for iOS
 -   Web upload SDK
 
-|Scenarios in which user generated content \(UGC\) and professionally generated content \(PGC\) are uploaded.|[Upload from clients](/intl.en-US/Developer Guide/Upload Medias/Client upload.md)|
+|Scenarios in which user generated content \(UGC\) and professionally generated content \(PGC\) are uploaded.|[Upload from clients](/intl.en-US/Developer Guide/Upload Medias/Upload from clients.md)|
 |Upload offline|You can upload media files stored not in servers or clients to ApsaraVideo VOD. You can call the UploadMediaByURL operation and specify the URLs of the media files to be uploaded. Then, ApsaraVideo VOD automatically pulls the media files from the source storage in the background to upload them.|Scenarios where media files are not stored on servers or clients.|[UploadMediaByURL](/intl.en-US/API Reference/Media upload/UploadMediaByURL.md)|
 |Upload by using client tools|You can use client tools to upload media files from your computers. You must download and install the client tools before you can use them. Currently, only the Windows and MacOS operating systems are supported. **Note:** When you upload large files in the ApsaraVideo VOD console, it typically takes an extended period of time to complete the upload. Your logon session may expire due to security settings before the upload is complete. You can use client tools to avoid this issue.
 
@@ -127,7 +127,7 @@ After media files are uploaded, you can receive real-time event notifications, p
 
     -   Manage media resources in the ApsaraVideo VOD console. For more information, see [Media management](/intl.en-US/User Guide/Media library/Manage media assets.md).
     -   Call media management API operations. For more information, see the "Media management" section in [List of operations by function](/intl.en-US/API Reference/API overview.md).
-    **Note:** For more information about media management, see [Overview]() \(this topic describes how to query, search for, and update information about media resources\), [Download media files](), and [Delete media files]().
+    **Note:** For more information about media management, see [Overview](/intl.en-US/Developer Guide/Media asset management/Overview.md) \(this topic describes how to query, search for, and update information about media resources\), [Download media files](/intl.en-US/Developer Guide/Media asset management/Download media files.md), and [Delete media files](/intl.en-US/Developer Guide/Media asset management/Delete media files.md).
 
 -   **Playback**
 
@@ -135,6 +135,6 @@ After media files are uploaded, you can receive real-time event notifications, p
 
     -   For a video \(or audio\) that does not need to be transcoded, you can play it after you receive the [FileUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/FileUploadComplete.md) event notification. You can call the [GetPlayInfo](/intl.en-US/API Reference/Video playback/GetPlayInfo.md) operation to obtain the playback URL.
     -   For a transcoded video, you can play it after you receive the [StreamTranscodeComplete](/intl.en-US/Developer Guide/Event notification/Events/StreamTranscodeComplete.md) event notification. To ensure that streams in all definitions can be obtained, we recommend that you play the video after you receive the [TranscodeComplete](/intl.en-US/Developer Guide/Event notification/Events/TranscodeComplete.md) event notification.
-    You can also use the No Transcoding template to upload videos so that they are not transcoded. After you receive the [FileUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/FileUploadComplete.md) event notification, you can call the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitTranscodeJobs.md), [SubmitSnapshotJob](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitSnapshotJob.md) operation to process the uploaded videos.
+    You can also use the No Transcoding template to upload videos so that they are not transcoded. After you receive the [FileUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/FileUploadComplete.md) event notification, you can call the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitTranscodeJobs.md), [SubmitSnapshotJob](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitSnapshotJob.md), or [SubmitAIMediaAuditJob]() operation to process the uploaded videos.
 
 
