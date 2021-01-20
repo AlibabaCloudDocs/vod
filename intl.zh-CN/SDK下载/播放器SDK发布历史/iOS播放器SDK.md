@@ -2,6 +2,21 @@
 
 本文为您介绍了阿里云iOS播放器在不同更新时间对应的更新功能。
 
+## 2021-01-19
+
+|日期|版本|修改内容|历史版本|
+|--|--|----|----|
+|2021-01-19|V5.3.0|-   优化暂停（stop）的速度。
+-   优化vid播放默认清晰度选择逻辑。
+-   支持阿里云HLS。
+-   优化播放进度的精度。
+-   完善外挂字幕支持。
+-   去除对connan包的依赖。
+-   播放器内核增加对WideVine的支持。
+-   支持HDR10视频播放。
+
+|[iOS播放器SDK 5.3.0](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.3.0/ApsaraVideo_videoPlay_v5.3.0_iOS_20210119.zip)|
+
 ## 2021-01-07
 
 |日期|版本|修改内容|历史版本|
@@ -32,7 +47,7 @@
 |--|--|----|----|
 |2020-09-30|V5.2.1|-   提高HLS格式的兼容性。
 -   分离artc包，降低artc和播放器SDK版本的耦合。
--   支持FairPlay DRM。
+-   支持FairPlay DRM。
 -   去除OpenSSL，减小体积。
 -   去除HLS标准加密流不输出pixelbuffer的限制。
 
