@@ -47,7 +47,7 @@ Web端SDK下载
 |       客户端       |                                         说明文档                                         |                                                                                                                                                                                                            下载地址                                                                                                                                                                                                            |
 |-----------------|--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Web播放器          | [Web播放器使用说明](https://player.alicdn.com/aliplayer/index.html)        | [详见文档引入即可](https://help.aliyun.com/document_detail/125570.html#topic5790)                                                                                                                                                                                                                                                                                                                                 |
-| JavaScript上传SDK | [JavaScript上传SDK使用说明](/intl.zh-CN/上传SDK/客户端上传/使用JavaScript上传SDK.md) | * [JavaScript上传SDK 1.5.0](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1559546038907/aliyun-upload-sdk-1.5.0.zip)   * [示例代码(jquery和Vue)](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1559546061415/aliyun-upload-sdk-1.5.0demo.zip)    |
+| JavaScript上传SDK | [JavaScript上传SDK使用说明](/intl.zh-CN/上传SDK/客户端上传/使用JavaScript上传SDK.md) | * [JavaScript上传SDK 1.5.0](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1559546038907/aliyun-upload-sdk-1.5.0.zip)   * [示例代码(jquery和Vue)](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1559546061415/aliyun-upload-sdk-1.5.0demo.zip)    |
 
 
 
@@ -61,10 +61,10 @@ Web端SDK下载
 
 |    上传SDK    |                                    说明文档                                    |                                                                               下载地址                                                                                |
 |-------------|----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Java上传SDK   | [Java上传SDK使用说明](/intl.zh-CN/上传SDK/服务端上传/Java上传SDK.md)     | [Java上传SDK 1.4.13及示例代码](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1600848199952/VODUploadDemo-java-1.4.13.zip) |
+| Java上传SDK   | [Java上传SDK使用说明](/intl.zh-CN/上传SDK/服务端上传/Java上传SDK.md)     | [Java上传SDK 1.4.13及示例代码](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1600848199952/VODUploadDemo-java-1.4.13.zip) |
 | Python上传SDK | [Python上传SDK使用说明](/intl.zh-CN/上传SDK/服务端上传/Python上传SDK.md) | [Python上传SDK 1.3.2及示例代码](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/upload/Python/1.3.2/VodUploadSDK-Python-1.3.2.zip)           |
-| PHP上传SDK    | [PHP上传SDK使用说明](/intl.zh-CN/上传SDK/服务端上传/PHP上传SDK.md)       | [PHP上传SDK 1.0.2及示例代码](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/62952/cn_zh/1555416464043/VodUploadSDK-PHP_1.0.2.zip)      |
-| C/C++上传SDK  | [C/C++上传SDK使用说明](/intl.zh-CN/上传SDK/服务端上传/C/C++上传SDK.md)   | [C/C++上传SDK 1.0.0及示例代码](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1547544294378/VodSDK-C_1.0.0.gz)             |
+| PHP上传SDK    | [PHP上传SDK使用说明](/intl.zh-CN/上传SDK/服务端上传/PHP上传SDK.md)       | [PHP上传SDK 1.0.2及示例代码](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/62952/cn_zh/1555416464043/VodUploadSDK-PHP_1.0.2.zip)      |
+| C/C++上传SDK  | [C/C++上传SDK使用说明](/intl.zh-CN/上传SDK/服务端上传/C/C++上传SDK.md)   | [C/C++上传SDK 1.0.0及示例代码](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1547544294378/VodSDK-C_1.0.0.gz)             |
 
 
 
