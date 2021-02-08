@@ -1,0 +1,2 @@
+# Common error codes
+
