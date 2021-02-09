@@ -34,7 +34,7 @@ This topic describes the development environments and integration methods of Aps
 
 The following figure shows the directory structure of a project.
 
-![Directory structure of ApsaraVideo Player SDK for Flutter](../images/p211510.png)
+![Directory structure of ApsaraVideo Player SDK for Flutter](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9793582161/p211510.png)
 
 The following table describes the names and features of the files in the directory.
 
