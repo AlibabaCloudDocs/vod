@@ -2,20 +2,26 @@
 
 This topic describes the release notes of different versions of ApsaraVideo Player SDK for Android.
 
+## 2021-01-07
+
+|Release date|Version|Description|Download link|
+|------------|-------|-----------|-------------|
+|2021-01-07|V5.2.3|-   The download logic is optimized.
+-   The compatibility with the MP4 and HTTP Live Streaming \(HLS\) formats is optimized.
+-   The audio extraction feature is supported.
+
+|[ApsaraVideo Player SDK V5.2.3 for Android](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.2.3/ApsaraVideo_videoPlay_v5.2.3_Android_20210107.zip)|
+
 ## 2020-11-17
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2020-11-17|V5.2.2|-   The issue is fixed where the player unexpectedly quits when an on-demand HTTP Live Streaming \(HLS\) video that lasts 0s is played.
--   The issue is fixed where a latency exists when a video whose frame rate is 60 FPS is played.
--   The response speed of the stop operation is improved.
--   The issue is fixed where ARTC videos cannot be played when the value of the max\_buffer\_duration parameter is too small.
+|2020-11-17|V5.2.2|-   The compatibility with the videos with different frame rates is optimized.
 -   The issue is fixed where frames are lost when you resume playback for a video that is played at an adjusted speed.
--   The issue is fixed where MP4 videos that contain the elst box cannot be fast forwarded.
--   The issue is fixed where videos cannot be played in list playback mode after the network is disconnected.
--   The issue is fixed where the audio freezes when a video with an ultra-low frame rate is played.
--   The volume setting logic is optimized.
--   A blacklist for High Efficiency Video Coding \(HEVC\) hardware decoding is added.
+-   The compatibility with MP4 files is optimized.
+-   The list playback feature is optimized.
+-   The setting logic of volume and mute mode is optimized.
+-   The feature of setting a blacklist for High Efficiency Video Coding \(HEVC\) hardware decoding is added.
 
 |[ApsaraVideo Player SDK V5.2.2 for Android](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.2.2/ApsaraVideo_videoPlay_v5.2.2_Android_20201116.zip)|
 
@@ -23,13 +29,11 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2020-09-30|V5.2.1|-   The compatibility with the HLS format is improved. Fragmented MP4 \(fMP4\) files are supported. Advanced Audio Coding \(AAC\) ES streams can be resolved by using the Iterative Dichotomiser 3 \(ID3\) algorithm. Subtitles are supported for multipart files.
--   The demuxer plug-in is supported to customize channel-based message passing.
--   The ARTC package is separated to reduce the dependency of ARTC on SDK versions.
+|2020-09-30|V5.2.1|-   The compatibility with the HLS format is optimized.
+-   The Alibaba Real-Time Communication \(ARTC\) package is separated to reduce the dependency of ARTC on SDK versions.
 -   Widevine digital rights management \(DRM\) is supported.
--   The issue is fixed where freezes occur when music is played in the background on some phone models.
--   The feature of setting a blacklist for HEVC hardware decoding is added.
--   The content:// protocol header is supported.
+-   The background playback feature is optimized.
+-   The content protocol is supported.
 -   External players are supported.
 
 |[ApsaraVideo Player SDK V5.2.1 for Android](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.2.1/ApsaraVideo_videoPlay_v5.2.1_Android_20200930.zip)|
@@ -40,12 +44,10 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 |------------|-------|-----------|-------------|
 |2020-09-22|V5.1.6|-   The progress display logic is optimized.
 -   The display of external subtitles is optimized.
--   The issue is fixed where audio and video signals are out of synchronization during the long-time playback of Real-Time Messaging Protocol \(RTMP\) streams.
+-   The logic of synchronizing audio signals with video signals is optimized.
 -   The startup loading time of video ID \(VID\)-based list playback is shortened.
--   The issue is fixed where the video rotation angle cannot be reset after the playback is stopped.
--   The stability of software decoding is improved.
--   The issue is fixed where videos with a sample rate of higher than 48 kHz cannot be fast forwarded.
--   The issue is fixed where the decoder cannot hard-decode a video that is played in the background on some devices.
+-   The playback of audio with specific sample rates is optimized.
+-   The background playback feature is optimized.
 
 |[ApsaraVideo Player SDK V5.1.6 for Android](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.1.6/ApsaraVideo_videoPlay_v5.1.6_Android_20200922.zip)|
 
@@ -53,17 +55,17 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2020-07-22|V5.1.5|The pulling of Real Time Streaming \(RTS\) streams is supported. RTS supports smooth frame synchronization and Advanced Audio Coding \(AAC\), Opus, and H.264 encoding.|[ApsaraVideo Player SDK V5.1.5 for Android](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.1.5/ApsaraVideo_videoPlay_v5.1.5_Android_20200722.zip)|
+|2020-07-22|V5.1.5|The playback of ARTC videos is supported.|[ApsaraVideo Player SDK V5.1.5 for Android](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.1.5/ApsaraVideo_videoPlay_v5.1.5_Android_20200722.zip)|
 
 ## 2020-07-07
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2020-07-07|V5.1.4|-   Encrypted live streaming based on Security Token Service \(STS\) is supported.
--   Resolution to IPv4 and IPv6 addresses is supported.
--   Lightweight precache is supported for players.
+|2020-07-07|V5.1.4|-   Encrypted live streaming based on HLS is supported.
+-   The resolution type of IP addresses can be specified.
+-   The precache feature is optimized.
 -   The video background color can be specified.
--   The latency of HLS-based playback is reduced. The part setting for startup loading is supported.
+-   The latency of HLS-based playback is reduced.
 -   The compatibility with players is optimized.
 -   The open source player CicadaPlayer is used as the player core.
 
@@ -114,7 +116,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 |2019-08-19|V4.7.0|-   WebVTT-based thumbnails are supported.
 -   Precise seeking is supported.
 -   The encryption type can be specified for videos to be requested.
--   [RTS](https://promotion.aliyun.com/ntms/lowlatencylive.html) is supported.
+-   [Real-time Streaming \(RTS\)](https://promotion.aliyun.com/ntms/lowlatencylive.html) is supported.
 
 |[ApsaraVideo Player SDK V4.7.0 for Android](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/4.7.0/ApsaraVideo_videoPlay_v4.7.0_Android_20190809.zip)|
 
