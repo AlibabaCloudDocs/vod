@@ -12,8 +12,8 @@
 -----------------------------------------
 
 调用SubmitAIJob接口，完成提交AI作业功能。
-接口参数和返回字段请参见[SubmitAIJob](/cn.zh-CN/服务端API/视频AI/提交AI作业.md)。调用示例如下： {#h2--ai-div-id-submitaijob-div-2}
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+接口参数和返回字段请参见[SubmitAIJob](/cn.zh-CN/服务端API/视频AI/提交AI作业.md)。调用示例如下：
 
     import com.aliyuncs.vod.model.v20170321.SubmitAIJobRequest;
     import com.aliyuncs.vod.model.v20170321.SubmitAIJobResponse;
@@ -68,8 +68,8 @@
 ---------------------------------------
 
 调用ListAIJob接口，完成查询AI作业功能。
-接口参数和返回字段请参见[ListAIJob ](/cn.zh-CN/服务端API/视频AI/查询AI作业.md)。调用示例如下： {#h2--ai-div-id-listaijob-div-3}
--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+接口参数和返回字段请参见[ListAIJob ](/cn.zh-CN/服务端API/视频AI/查询AI作业.md)。调用示例如下：
 
     import com.aliyuncs.vod.model.v20170321.ListAIJobRequest;
     import com.aliyuncs.vod.model.v20170321.ListAIJobResponse;
@@ -136,8 +136,8 @@
 -------------------------------------------
 
 调用AddAITemplate接口，完成添加AI模板功能。
-接口参数和返回字段请参见[AddAITemplate](/cn.zh-CN/服务端API/视频AI/AI模板/添加AI模板.md)。调用示例如下： {#h2--ai-div-id-addaitemplate-div-4}
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+接口参数和返回字段请参见[AddAITemplate](/cn.zh-CN/服务端API/视频AI/AI模板/添加AI模板.md)。调用示例如下：
 
     import com.alibaba.fastjson.JSONArray;
     import com.alibaba.fastjson.JSONObject;
@@ -206,8 +206,8 @@
 ----------------------------------------------
 
 调用DeleteAITemplate接口，完成删除AI模板功能。
-接口参数和返回字段请参见[DeleteAITemplate](/cn.zh-CN/服务端API/视频AI/AI模板/删除AI模板.md)。调用示例如下： {#h2--ai-div-id-deleteaitemplate-div-5}
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+接口参数和返回字段请参见[DeleteAITemplate](/cn.zh-CN/服务端API/视频AI/AI模板/删除AI模板.md)。调用示例如下：
 
     import com.aliyuncs.vod.model.v20170321.DeleteAITemplateRequest;
     import com.aliyuncs.vod.model.v20170321.DeleteAITemplateResponse;
@@ -321,8 +321,8 @@
 -------------------------------------------
 
 调用GetAITemplate接口，完成查询AI模板功能。
-接口参数和返回字段请参见[GetAITemplate](/cn.zh-CN/服务端API/视频AI/AI模板/查询AI模板.md)。调用示例如下： {#h2--ai-div-id-getaitemplate-div-7}
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+接口参数和返回字段请参见[GetAITemplate](/cn.zh-CN/服务端API/视频AI/AI模板/查询AI模板.md)。调用示例如下：
 
     import com.aliyuncs.vod.model.v20170321.GetAITemplateRequest;
     import com.aliyuncs.vod.model.v20170321.GetAITemplateResponse;
@@ -370,8 +370,8 @@
 ----------------------------------------------
 
 调用ListAITemplate接口，完成查询AI模板列表功能。
-接口参数和返回字段请参见[ListAITemplate](/cn.zh-CN/服务端API/视频AI/AI模板/查询AI模板列表.md)。调用示例如下： {#h2--ai-div-id-listaitemplate-div-8}
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+接口参数和返回字段请参见[ListAITemplate](/cn.zh-CN/服务端API/视频AI/AI模板/查询AI模板列表.md)。调用示例如下：
 
     import com.aliyuncs.vod.model.v20170321.ListAITemplateRequest;
     import com.aliyuncs.vod.model.v20170321.ListAITemplateResponse;
@@ -424,8 +424,8 @@
 ----------------------------------------------------
 
 调用SetDefaultAITemplate接口，完成设置默认AI模板功能。
-接口参数和返回字段请参见[SetDefaultAITemplate](/cn.zh-CN/服务端API/视频AI/AI模板/设置默认AI模板.md)。调用示例如下： {#h2--ai-div-id-setdefaultaitemplate-div-9}
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+接口参数和返回字段请参见[SetDefaultAITemplate](/cn.zh-CN/服务端API/视频AI/AI模板/设置默认AI模板.md)。调用示例如下：
 
     import com.aliyuncs.vod.model.v20170321.SetDefaultAITemplateRequest;
     import com.aliyuncs.vod.model.v20170321.SetDefaultAITemplateResponse;
@@ -470,8 +470,8 @@
 -----------------------------------------------------
 
 调用GetDefaultAITemplate接口，完成查询默认AI模板功能。
-接口参数和返回字段请参见[GetDefaultAITemplate](/cn.zh-CN/服务端API/视频AI/AI模板/查询默认AI模板.md)。调用示例如下： {#h2--ai-div-id-getdefaultaitemplate-div-10}
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+接口参数和返回字段请参见[GetDefaultAITemplate](/cn.zh-CN/服务端API/视频AI/AI模板/查询默认AI模板.md)。调用示例如下：
 
     import com.aliyuncs.vod.model.v20170321.GetDefaultAITemplateRequest;
     import com.aliyuncs.vod.model.v20170321.GetDefaultAITemplateResponse;
