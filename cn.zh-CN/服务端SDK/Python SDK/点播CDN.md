@@ -42,8 +42,8 @@
 -----------------------------------------------
 
 调用RefreshVodObjectCaches接口，完成刷新缓存功能。
-接口参数和返回字段请参见[RefreshVodObjectCaches](/cn.zh-CN/服务端API/点播CDN/刷新预热/刷新缓存.md)。调用示例如下： 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+接口参数和返回字段请参见[RefreshVodObjectCaches](/cn.zh-CN/服务端API/点播CDN/刷新预热/刷新缓存.md)。调用示例如下：
 
     from aliyunsdkvod.request.v20170321 import RefreshVodObjectCachesRequest
     def refresh_object_caches(clt):
@@ -72,8 +72,8 @@
 -----------------------------------------------------
 
 调用DescribeVodRefreshTasks接口，完成查询刷新和预热状态功能。
-接口参数和返回字段请参见[DescribeVodRefreshTasks](/cn.zh-CN/服务端API/点播CDN/刷新预热/查询刷新和预热状态.md)。调用示例如下： 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+接口参数和返回字段请参见[DescribeVodRefreshTasks](/cn.zh-CN/服务端API/点播CDN/刷新预热/查询刷新和预热状态.md)。调用示例如下：
 
     from aliyunsdkvod.request.v20170321 import DescribeVodRefreshTasksRequest
     def describe_refresh_task(clt):
@@ -101,8 +101,8 @@
 ---------------------------------------------------------
 
 调用DescribeVodRefreshQuota接口，完成查询刷新预热次数限制和余量功能。
-接口参数和返回字段请参见[DescribeVodRefreshQuota](/cn.zh-CN/服务端API/点播CDN/刷新预热/查询刷新预热次数限制和余量.md)。调用示例如下： 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+接口参数和返回字段请参见[DescribeVodRefreshQuota](/cn.zh-CN/服务端API/点播CDN/刷新预热/查询刷新预热次数限制和余量.md)。调用示例如下：
 
     from aliyunsdkvod.request.v20170321 import DescribeVodRefreshQuotaRequest
     def describe_refresh_quota(clt):
@@ -128,8 +128,8 @@
 -------------------------------------------------------
 
 调用DescribeVodDomainTrafficData接口，完成查询流量数据功能。
-接口参数和返回字段请参见[DescribeVodDomainTrafficData](/cn.zh-CN/服务端API/点播CDN/数据监控/查询流量数据.md)。调用示例如下： 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+接口参数和返回字段请参见[DescribeVodDomainTrafficData](/cn.zh-CN/服务端API/点播CDN/数据监控/查询加速域名的流量数据.md)。调用示例如下：
 
     from aliyunsdkvod.request.v20170321 import DescribeVodDomainTrafficDataRequest
     def describe_domain_traffic_data(clt):
@@ -158,8 +158,8 @@
 ---------------------------------------------------
 
 调用DescribeVodDomainBpsData接口，完成查询网络带宽功能。
-接口参数和返回字段请参见[DescribeVodDomainBpsData](/cn.zh-CN/服务端API/点播CDN/数据监控/查询网络带宽.md)。调用示例如下： 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+接口参数和返回字段请参见[DescribeVodDomainBpsData](/cn.zh-CN/服务端API/点播CDN/数据监控/查询加速域名的网络带宽.md)。调用示例如下：
 
     from aliyunsdkvod.request.v20170321 import DescribeVodDomainBpsDataRequest
     def describe_domain_bps_data(clt):
@@ -188,8 +188,8 @@
 -----------------------------------------------
 
 调用DescribeVodDomainLog接口，完成下载域名日志功能。
-接口参数和返回字段请参见[DescribeVodDomainLog](/cn.zh-CN/服务端API/点播CDN/日志管理/下载域名日志.md)。调用示例如下： 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+接口参数和返回字段请参见[DescribeVodDomainLog](/cn.zh-CN/服务端API/点播CDN/日志管理/查询域名日志.md)。调用示例如下：
 
     from aliyunsdkvod.request.v20170321 import DescribeVodDomainLogRequest
     def describe_domain_log(clt):
