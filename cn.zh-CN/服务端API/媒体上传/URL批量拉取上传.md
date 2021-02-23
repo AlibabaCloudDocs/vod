@@ -2,12 +2,14 @@
 
 调用UploadMediaByURL基于源文件URL，批量拉取媒体文件进行上传。
 
-上传完成后会收到[URL上传视频完成](~~86326~~)事件通知，您可以通过[获取URL上传信息](~~106830~~)查询上传状态。
+上传完成后会收到事件通知，更多信息，请参见[URL上传视频完成](~~86326~~)。
+
+您可以通过接口查询上传状态，更多信息，请参见[获取URL上传信息](~~106830~~)。
 
 **说明：**
 
 -   提交成功后，会在云端生成异步执行的任务，进行排队执行；上传完成后可根据事件通知（消息回调）返回的URL和视频ID等信息进行关联。
--   URL拉取上传的时效性较低，主要针对离线搬站场景，一般提交后会在数小时、甚至数天内完成迁移上传。如果想要更实时，建议您使用[服务端上传SDK](~~51992~~)，其会在本地实时下载和上传。
+-   URL拉取上传的时效性较低，主要针对离线搬站场景，一般提交后会在数小时、甚至数天内完成迁移上传。如果想要更实时，建议您使用服务端上传SDK，在本地实时下载和上传。具体操作，请参见[服务端上传SDK](~~51992~~)。
 -   URL上传目前仅支持**上海**地域。
 
 ## 调试
@@ -40,10 +42,13 @@
  -   与UploadURLs里的URL匹配才能生效。
 -   JSON格式：`[UploadMetadata, UploadMetadata,…]`，需转为JSON字符串 。
 -   更多信息，请参见下表**UploadMetadata**。 |
-|UserData|String|否|\{"MessageCallback":\{"CallbackURL":"http://test.test.com"\},"Extend":\{"localId":"xxx","test":"www"\}\}|自定义设置。为JSON字符串，支持消息回调、上传加速等设置。使用上传加速前，需要您提交工单给后台帮您开通后再使用。更多信息，请参见[UserData](~~86952#UserData~~)。
+|UserData|String|否|\{"MessageCallback":\{"CallbackURL":"http://test.test.com"\},"Extend":\{"localId":"xxx","test":"www"\}\}|自定义设置。为JSON字符串，支持消息回调、上传加速等设置。更多信息，请参见[UserData](~~86952#UserData~~)。
 
- **说明：** 此参数中消息回调的使用前提是需要在控制台配置HTTP回调地址和勾选对应的回调事件类型才能使用，否则回调设置不生效。 |
-|AppId|String|否|app-\*\*\*\*|应用ID。默认取值：**app-1000000**。 更多详情，请参见[多应用](~~113600~~)。 |
+ **说明：**
+
+-   此参数中消息回调的使用前提是需要在控制台配置HTTP回调地址和勾选对应的回调事件类型才能使用，否则回调设置不生效。
+-   上传加速功能在使用前请您提交[工单](https://selfservice.console.aliyun.com/ticket/createIndex)开通，更多信息，请参见[上传相关说明](~~55396~~)。 |
+|AppId|String|否|app-\*\*\*\*|应用ID。默认取值：**app-1000000**。 更多信息，请参见[多应用](~~113600~~)。 |
 |WorkflowId|String|否|e1e243b4254\*\*\*\*\*8248197d6f74f9|工作流ID。
 
  **说明：** 如果同时传递了WorkflowId和TemplateGroupId，以WorkflowId为准。更多信息，请参见[工作流](~~115347~~)。 |
@@ -162,7 +167,7 @@ https://vod.aliyuncs.com/?Action=UploadMediaByURL
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
 <UploadMediaByURLResponse>
@@ -174,7 +179,7 @@ https://vod.aliyuncs.com/?Action=UploadMediaByURL
 </UploadMediaByURLResponse>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
 {
