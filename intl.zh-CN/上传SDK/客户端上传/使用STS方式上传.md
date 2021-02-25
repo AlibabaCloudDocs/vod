@@ -20,8 +20,6 @@
 
 ## 设置STS
 
-上传地址和凭证和每个文件一一对应，因此需要在开始上传的回调里，在用户应用服务器获取并设置给对应的上传实例。具体代码如下所示：
-
 STS在初始化上传实例的时候进行设置，具体的初始化代码如下所示：
 
 -   iOS示例代码
@@ -69,5 +67,5 @@ STS在初始化上传实例的时候进行设置，具体的初始化代码如�
 
 -   [Android端文件上传](/intl.zh-CN/上传SDK/客户端上传/Android上传SDK/文件上传.md)
 -   [iOS端文件上传](/intl.zh-CN/上传SDK/客户端上传/iOS上传SDK/文件上传.md)
--   [使用JavaScript上传SDK](/intl.zh-CN/上传SDK/客户端上传/JavaScript上传SDK.md)
+-   [使用JavaScript上传SDK](/intl.zh-CN/上传SDK/客户端上传/使用JavaScript上传SDK.md)
 
