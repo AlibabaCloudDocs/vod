@@ -57,7 +57,7 @@
               //文件上传进度，单位：字节
               'onUploadProgress': function (uploadInfo, totalSize, loadedPercent) {
               },
-              //上传凭证超时
+              //上传凭证或STS token超时
               'onUploadTokenExpired': function (uploadInfo) {
               },
             //全部文件上传结束
@@ -165,7 +165,7 @@
                   'onUploadProgress': function (uploadInfo, totalSize, loadedPercent) {
                       log("onUploadProgress:file:" + uploadInfo.file.name + ", fileSize:" + totalSize + ", percent:" + Math.ceil(loadedPercent * 100) + "%");
                   },
-                  //上传凭证超时
+                  //STS token超时
                   'onUploadTokenExpired': function (uploadInfo) {
                       console.log("onUploadTokenExpired");
                       //重新获取STS token，恢复上传
