@@ -8,7 +8,7 @@ The upload SDK is an important part of ApsaraVideo. It supports interactions bet
 
 -   Service activation
     -   An Alibaba Cloud account is created. Real-name verification is complete for the Alibaba Cloud account. For more information, see [Registration](https://account.aliyun.com/register/register.htm?oauth_callback=https%3A%2F%2Fvod.console.aliyun.com%2F&lang=zh) and [Real-name verification](https://help.aliyun.com/knowledge_list/37170.html).
-    -   ApsaraVideo VOD is activated and configured. For more information, see the [ApsaraVideo VOD product page](https://www.aliyun.com/product/vod) and [t1959237.md\#](/intl.en-US/Quick Start/Get started with ApsaraVideo for VOD.md).
+    -   ApsaraVideo VOD is activated and configured. For more information, see the [ApsaraVideo VOD product page](https://www.aliyun.com/product/vod) and [Get started with ApsaraVideo VOD](/intl.en-US/Quick Start/Get started with ApsaraVideo for VOD.md).
 -   Account preparation
 
     An AccessKey pair is created to access ApsaraVideo VOD. For more information, see [Overview](/intl.en-US/Developer Guide/Access authorization/Overview.md).
@@ -35,9 +35,9 @@ When media files are uploaded from clients, the files are uploaded to Object Sto
 
 ApsaraVideo VOD provides the following client upload SDKs:
 
--   [Upload SDK for Android](/intl.en-US/Upload SDK/Client upload/Android upload SDK/Multipart upload.md)
--   [Upload SDK for iOS](/intl.en-US/Upload SDK/Client upload/Upload SDK for iOS/Upload a file.md)
--   [Upload SDK for web](/intl.en-US/Upload SDK/Client upload/JavaScript upload SDK.md)
+-   [Upload SDK for Android](/intl.en-US/Upload SDK/Upload from clients/Upload SDK for Android/Upload a file.md)
+-   [Upload SDK for iOS](/intl.en-US/Upload SDK/Upload from clients/Upload SDK for iOS/Upload a file.md)
+-   [Upload SDK for web](/intl.en-US/Upload SDK/Upload from clients/Use the upload SDK for JavaScript.md)
 
 ## Upload from servers
 
@@ -47,6 +47,4 @@ A server upload SDK encapsulates the underlying logic for obtaining and parsing 
 -   [Upload SDK for Python](/intl.en-US/Upload SDK/Upload from servers/Upload SDK for Python.md)
 -   [Upload SDK for PHP](/intl.en-US/Upload SDK/Upload from servers/Upload SDK for PHP.md)
 -   [Upload SDK for C or C++](/intl.en-US/Upload SDK/Upload from servers/Upload SDK for C or C++.md)
-
-Upload SDKs for other programming languages, such as .NET, Node.js, and Go, will be available in the future.
 
