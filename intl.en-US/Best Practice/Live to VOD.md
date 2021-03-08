@@ -91,7 +91,7 @@ This method applies to scenarios where you want all recorded videos to be merged
 
 The following figure shows the process.
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7043815161/p178462.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8904815161/p178462.png)
 
 1.  A stream ingest is started.
 2.  When a recording period is reached, the recorded video is automatically delivered to ApsaraVideo VOD.
