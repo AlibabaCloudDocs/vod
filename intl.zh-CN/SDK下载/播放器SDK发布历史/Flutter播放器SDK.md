@@ -9,7 +9,7 @@
 |2021-01-21|V5.3.0|-   添加了禁用音视频、字幕延时、切换播放器等新接口以及界面。
 -   同步升级播放器SDK。
 
-|[Flutter播放器SDK 5.3.0](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.3.0/ApsaraVideo_videoPlay_v5.3.0_Android_20210119.zip)|
+|[Flutter播放器SDK 5.3.0](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.3.0/flutter_aliplayer_5.3.0.zip)|
 
 ## 2020-12-29
 
