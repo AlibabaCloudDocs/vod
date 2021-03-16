@@ -1,10 +1,12 @@
 # Production and upload
 
-## Features
+This topic describes the production and upload features and shows you how to produce and upload a video.
+
+## Overview
 
 The short video SDK allows you to produce and upload videos. The core class is AliyunVodPublishManager. If you want to produce and upload videos in a more flexible manner, you can use the AliyunEdit class together with the VODUpload framework.
 
-## Edition difference
+## Differences among editions
 
 |Edition|Description|
 |-------|-----------|
@@ -14,8 +16,8 @@ The short video SDK allows you to produce and upload videos. The core class is A
 
 ## Related class
 
-|Name|Description|
-|----|-----------|
+|Class|Description|
+|-----|-----------|
 |AliyunVodPublishManager|The core class for production and upload.|
 
 ## Initialization
@@ -40,7 +42,7 @@ The following table describes the callback events that are supported by AliyunIE
 |The production starts.|```
  - (void)exporterDidStart;
 ``` |
-|The production progress is monitored.|```
+|The production progress is returned.|```
  /**
  @param progress 0-1
  */
@@ -55,7 +57,7 @@ The following table describes the callback events that are supported by AliyunIE
 |The production is canceled.|```
  - (void)exporterDidCancel;
 ``` |
-|The production is completed.|```
+|The production is complete.|```
   /**
  @param outputPath The path of the output file.
  */
@@ -74,7 +76,7 @@ The following table describes the callback events that are supported by AliyunIV
 |The upload fails.|```
 - (void)publishManager:(AliyunVodPublishManager *)manager uploadFailedWithCode:(NSString *)code message:(NSString *)message;
 ``` |
-|The upload progress is monitored.|```
+|The upload progress is returned.|```
 - (void)publishManager:(AliyunVodPublishManager *)manager uploadProgressWithUploadedSize:(long long)uploadedSize totalSize:(long long)totalSize;
 ``` |
 |The token expires.|```
@@ -83,11 +85,11 @@ The following table describes the callback events that are supported by AliyunIV
 |The upload times out and a retry starts.|```
 - (void)publishManagerUploadRetry:(AliyunVodPublishManager *)manager;
 ``` |
-|The retry is completed and the upload resumes.|```
+|The retry is complete and the upload resumes.|```
 - (void)publishManagerUploadRetryResume:(AliyunVodPublishManager *)manager;
 ``` |
 
-## Production control
+## Production management
 
 |Action|Sample code|
 |------|-----------|
@@ -106,7 +108,7 @@ The following table describes the callback events that are supported by AliyunIV
 - (int)cancelExport;
 ``` |
 
-## Upload control
+## Upload management
 
 |Action|Sample code|
 |------|-----------|
