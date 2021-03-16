@@ -1,24 +1,22 @@
 # Duet recording
 
-## Overview
-
 The short video SDK provides the AliyunIMixRecorder operation for you to record a duet that consists of an existing sample video and a video that is being taken by the camera. The two videos are arranged in the specified layout, such as left-right split-screen, up-down split-screen, or picture-in-picture.
 
 ## Terms
 
 This section describes the terms that help you better understand the duet feature.
 
--   **Duet feature**
+-   Duet feature
 
     The duet feature allows you to produce a video from two videos. One is a sample video and the other is taken by the camera. The two videos are arranged in the specified layout, such as left-right split-screen, up-down split-screen, or picture-in-picture. Each frame of the produced video contains images from the two videos, and the audio of the sample video is used as the audio of the produced video. The following figure shows sample layouts. The short video SDK allows you to customize the layout, which is described later in this topic.
 
-    ![Duet](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1148911161/p180476.png)
+    ![Duet feature](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1148911161/p180476.png)
 
--   **Track**
+-   Track
 
-    The two videos mentioned earlier are abstracted to two tracks in the short video SDK: Track A and Track B. Track A stores the video that is collected by the camera and Track B stores the sample video. This abstraction helps you better understand the concept of track layout.
+    The two videos that are mentioned earlier are abstracted to two tracks in the short video SDK: Track A and Track B. Track A stores the video that is collected by the camera and Track B stores the sample video. This abstraction helps you better understand the concept of track layout.
 
--   **Track layout**
+-   Track layout
 
     The track layout is a property of a track, which specifies the position of the track in the produced video. This property uses a normalized coordinate system to describe the center point of the track and its size. The size of a track indicates the width and height of the track.
 
@@ -27,9 +25,11 @@ This section describes the terms that help you better understand the duet featur
     The track layout involves the following two classes:
 
     -   AliyunMixTrackLayoutParam specifies the center point and size of a track.
-    -   AliyunMixRecorderDisplayParam provides the displayMode and layoutLevel attributes to specify more information in addition to the information specified by AliyunMixTrackLayoutParam. The displayMode attribute specifies the scaling mode that is used when the aspect ratio of the video in a track differs from that of the track. For example, you can specify padding or cropping as the scaling mode. The layoutLevel attribute can be called to specify the layout level. If two tracks overlap, the track with a higher layout level is displayed above the other.
+    -   AliyunMixRecorderDisplayParam provides the displayMode and layoutLevel attributes to specify more information in addition to the information that is specified by AliyunMixTrackLayoutParam. The displayMode attribute specifies the scaling mode that is used when the aspect ratio of the video in a track differs from that of the track. For example, you can specify padding or cropping as the scaling mode. The layoutLevel attribute specifies the layout level. If two tracks overlap, the track with a higher layout level is displayed above the other.
 
-## Edition difference
+![Duet recording](../images/p213140.jpg)
+
+## Differences among editions
 
 |Edition|Description|
 |-------|-----------|
@@ -45,15 +45,14 @@ This section describes the terms that help you better understand the duet featur
 |----------------------|-----------|
 |[Set parameters](#title_m6w_pl3_r9q)|This step is performed to create or destroy a recording instance.|
 |[Set callbacks](#title_6n9_3dq_4bj)|This step is performed to set callbacks.|
-|[Control preview](#title_zzx_8n8_xkg)|This step is performed to start or stop the preview.|
-|[Control and manage recording](#title_8eo_po7_4em)|This step is performed to configure recording information.|
+|[Manage preview](#title_zzx_8n8_xkg)|This step is performed to start or stop the preview.|
+|[Configure and manage recording](#title_8eo_po7_4em)|This step is performed to configure recording information.|
 |[Configure effects](#title_zwq_jza_b48)|This step is performed to configure beautification and filters for recording.|
 |[Start recording](#title_h5o_3gy_y2h)|This step is performed to start, cancel, or stop recording a video clip.|
-|[Sample code](#title_1w1_rxs_q2g)|Sample code for duet recording.|
 
 ## Set parameters
 
--   **Initialization**
+-   Initialization
 
     |Action|Sample code|
     |------|-----------|
@@ -61,27 +60,27 @@ This section describes the terms that help you better understand the duet featur
 AliyunIMixRecorder recorder = AliyunMixRecorderCreator.createAlivcMixRecorderInstance(Context context); // We recommend that you use Application Context as the context.
     ``` |
     |Destroy the recording instance.|    ```
-AliyunIMixRecorder#release();
+AliyunIMixRecorder.release();
     ``` |
 
--   **Output settings**
+-   Output settings
 
 |Action|Sample code|
 |------|-----------|
 |Set the input and output parameters for duet recording.|```
-AliyunIMixRecorder#setMixMediaInfo(AliyunMixMediaInfoParam inputMediaInfo, MediaInfo outputInfo);// For more information, see AliyunMixMediaInfoParam and MediaInfo in the SDK documentation.
+AliyunIMixRecorder.setMixMediaInfo(AliyunMixMediaInfoParam inputMediaInfo, MediaInfo outputInfo);// For more information, see AliyunMixMediaInfoParam and MediaInfo in the SDK documentation.
 ``` |
 |Set the output path.|```
-AliyunIMixRecorder#setOutputPath(String path);
+AliyunIMixRecorder.setOutputPath(String path);
 ``` |
 |Set the quality of the produced video.|```
-AliyunIMixRecorder#setVideoQuality(VideoQuality quality);
+AliyunIMixRecorder.setVideoQuality(VideoQuality quality);
 ``` |
 |Set the bitrate of the produced video.|```
-AliyunIMixRecorder#setVideoBitrate(int bitrate);// Unit: Kbit/s.
+AliyunIMixRecorder.setVideoBitrate(int bitrate);// Unit: Kbit/s.
 ``` |
 |Set the group of pictures \(GOP\) size of the produced video.|```
-AliyunIMixRecorder#setGop(int gop);// Unit: frames.
+AliyunIMixRecorder.setGop(int gop);// Unit: frames.
 ``` |
 
 
@@ -90,120 +89,123 @@ AliyunIMixRecorder#setGop(int gop);// Unit: frames.
 |Action|Sample code|
 |------|-----------|
 |Set the recording callback.|```
-AliyunIRecorder#setRecordCallBack(RecordCallback callBack);
+AliyunIMixRecorder.setRecordCallBack(RecordCallback callBack);
 ``` |
 |Set the callback for video frame collection.|```
-AliyunIRecorder#setOnFrameCallback(OnFrameCallBack callback);
+AliyunIMixRecorder.setOnFrameCallback(OnFrameCallBack callback);
 ``` |
 |Set the audio collection callback.|```
-AliyunIRecorder#setOnAudioCallback(OnAudioCallBack callback);
+AliyunIMixRecorder.setOnAudioCallback(OnAudioCallBack callback);
 ``` |
 
-## Control preview
+## Manage preview
 
 |Action|Sample code|
 |------|-----------|
 |Start the preview.|```
-AliyunIMixRecorder#startPreview();
+AliyunIMixRecorder.startPreview();
 ``` |
 |Stop the preview.|```
-AliyunIMixRecorder#stopPreview();
+AliyunIMixRecorder.stopPreview();
 ``` |
 
-## Control and manage recording
+## Configure and manage recording
 
--   **Control recording**
+-   Control recording
 
     |Action|Sample code|
     |------|-----------|
     |Obtain the number of cameras.|    ```
-AliyunIRecorder#getCameraCount();
+AliyunIMixRecorder.getCameraCount();
     ``` |
     |Set the camera type.|    ```
-AliyunIRecorder#setCamera(CameraType cameraType);
+AliyunIMixRecorder.setCamera(CameraType cameraType);
     ``` |
     |Set the camera preview parameters, including the flash mode, focus mode, zoom factor, and exposure value.|    ```
-AliyunIRecorder#setCameraParam(CameraParam
+AliyunIMixRecorder.setCameraParam(CameraParam
 cameraParam);// You can also separately set the parameters. For more information, see the following methods.
     ``` |
     |Switch between the front and rear cameras.|    ```
-AliyunIRecorder#switchCamera();
+AliyunIMixRecorder.switchCamera();
     ``` |
     |Set the flash mode.|    ```
-AliyunIRecorder#setLight(FlashType flashType);
+AliyunIMixRecorder.setLight(FlashType flashType);
     ``` |
     |Set the zoom factor.|    ```
-AliyunIRecorder#setZoom(float rate);
+AliyunIMixRecorder.setZoom(float rate);
     ``` |
     |Set the exposure value.|    ```
-AliyunIRecorder#setExposureCompensationRatio(float value);
+AliyunIMixRecorder.setExposureCompensationRatio(float value);
     ``` |
     |Set the focus mode.|    ```
-AliyunIRecorder#setFocusMode(int mode);
+AliyunIMixRecorder.setFocusMode(int mode);
     ``` |
     |Set the manual focus point.|    ```
-AliyunIRecorder#setFocus(float xRatio, float yRatio);
+AliyunIMixRecorder.setFocus(float xRatio, float yRatio);
     ``` |
     |Set the preview view.|    ```
-AliyunIMixRecorder#setDisplayView(SurfaceView previewView, SurfaceView playView); // **Note: Do not use the GLSurfaceView class or its subclass. **
+AliyunIMixRecorder.setDisplayView(SurfaceView previewView, SurfaceView playView);// **Note: Do not use the GLSurfaceView class or its subclass. **
     ``` |
     |Set the sensor rotation angle. This configuration is very important. We recommend that you carefully read the SDK documentation.|    ```
-AliyunIRecorder#setRotation(int rotation);
+AliyunIMixRecorder.setRotation(int rotation);
     ``` |
     |Set the face detection angle. This configuration is very important. We recommend that you carefully read the SDK documentation.|    ```
-AliyunIRecorder#setFaceDetectRotation(int rotation);
+AliyunIMixRecorder.setFaceDetectRotation(int rotation);
     ``` |
     |Set the video recording angle. This configuration is very important. We recommend that you carefully read the SDK documentation.|    ```
-AliyunIRecorder#setRecordRotation(int rotation);
+AliyunIMixRecorder.setRecordRotation(int rotation);
     ``` |
     |Specify whether to mute the audio during recording.|    ```
-AliyunIRecorder#setMute(boolean isMute);
+AliyunIMixRecorder.setMute(boolean isMute);
+    ``` |
+    |Specify an audio track for duet recording. By default, the original audio track is used.|    ```
+AliyunIMixRecorder.setMixAudioSource(MixAudioSourceType mixAudioSourceType);
     ``` |
 
--   **Manage recording**
+-   Manage recording
 
     |Action|Sample code|
     |------|-----------|
     |Obtain the clip manager.|    ```
-AliyunIMixRecorder#getClipManager(); // **Note: To delete the last clip, do not call the method of AliyunIClipManager. Instead, you must call the AliyunIMixRecorder#deleteLastPart() method. **
+AliyunIMixRecorder.getClipManager();// **Note: To delete the last clip, do not call the method of AliyunIClipManager. Instead, you must call the AliyunIMixRecorder.deleteLastPart() method. **
     ``` |
     |Set the maximum recording duration, which is the maximum duration of all video clips instead of a single video clip.|    ```
-AliyunIClipManager#setMaxDuration(int maxDurationMs);
+AliyunIClipManager.setMaxDuration(int maxDurationMs);
     ``` |
     |Set the minimum recording duration, which is the minimum duration of all video clips instead of a single video clip.|    ```
-AliyunIClipManager#setMinDuration(int minDurationMs);
+AliyunIClipManager.setMinDuration(int minDurationMs);
     ``` |
     |Obtain the total duration of video clips.|    ```
-AliyunIClipManager#getDuration();
+AliyunIClipManager.getDuration();
     ``` |
     |Obtain the total number of video clips.|    ```
-AliyunIClipManager#getPartCount();
+AliyunIClipManager.getPartCount();
     ``` |
     |Delete the last video clip.|    ```
-AliyunIMixRecorder#deleteLastPart(); // Do not call the AliyunIClipManager#deletePart() method. Otherwise, you cannot seek to the last position where the recording stops in the sample video.
+AliyunIMixRecorder.deleteLastPart();// Do not call the AliyunIClipManager.deletePart() method. Otherwise, you cannot seek to the last position where the recording stops in the sample video.
     ``` |
     |Delete the specified video clip.|    ```
-AliyunIClipManager#deletePart(int index); // This method only deletes the specified video clip and does not trigger seeking in the sample video.
+AliyunIClipManager.deletePart(int index);// This method only deletes the specified video clip and does not trigger seeking in the sample video.
     ``` |
     |Delete all video clips.|    ```
-AliyunIClipManager#deleteAllPart(); // This method only deletes the specified video clip and does not trigger seeking in the sample video.
+AliyunIClipManager.deleteAllPart();// This method only deletes the specified video clip and does not trigger seeking in the sample video.
     ``` |
     |Obtain the paths of video clips.|    ```
-AliyunIClipManager#getVideoPathList();
+AliyunIClipManager.getVideoPathList();
     ``` |
 
 
 ## Configure effects
 
--   **Beautification**
+-   Beautification
 
     |Action|Sample code|
     |------|-----------|
     |Set the beautification level.|    ```
-AliyunIRecorder#setBeautyLevel(int level);
+AliyunIMixRecorder.setBeautyLevel(int level);
     ``` |
-    |Turn on or off the beautification switch.|    ```
-AliyunIRecorder#setBeautyStatus(boolean on);
+    |Enable or disable beautification.|    ```
+AliyunIMixRecorder.setBeautyStatus(boolean on);
     ``` |
 
 -   **Common filter**
@@ -211,21 +213,21 @@ AliyunIRecorder#setBeautyStatus(boolean on);
     |Action|Sample code|
     |------|-----------|
     |Add a common filter.|    ```
-AliyunIRecorder#applyFilter(EffectFilter effectFilter);// You can remove a common filter by setting its path to null.
+AliyunIMixRecorder.applyFilter(EffectFilter effectFilter);// You can remove a common filter by setting its path to null.
     ``` |
     |Remove a common filter.|    ```
-AliyunIRecorder#applyFilter(new EffectFilter(null));
+AliyunIMixRecorder.applyFilter(new EffectFilter(null));
     ``` |
 
--   **Animated filter**
+-   Animated filter
 
     |Action|Sample code|
     |------|-----------|
     |Add an animated filter, such as the filter that provides the effect of spirit freed from the body.|    ```
-AliyunIRecorder#applyAnimationFilter(EffectFilter effectFilter);
+AliyunIMixRecorder.applyAnimationFilter(EffectFilter effectFilter);
     ``` |
     |Remove an animated filter.|    ```
-AliyunIRecorder#removeAnimationFilter(EffectFilter effctFilter);
+AliyunIMixRecorder.removeAnimationFilter(EffectFilter effctFilter);
     ``` |
 
 -   **Facial recognition \(supported only in Professional Edition\)**
@@ -233,16 +235,16 @@ AliyunIRecorder#removeAnimationFilter(EffectFilter effctFilter);
     |Action|Sample code|
     |------|-----------|
     |Set face coordinates. The coordinates are required by third-party facial recognition products.|    ```
-AliyunIRecorder#setFace(float[][] faces);
+AliyunIMixRecorder.setFaces(float[][] faces);
     ``` |
     |Specify whether to use the built-in facial recognition feature of the SDK.|    ```
-AliyunIRecorder#needFaceTrackInternal(boolean need);
+AliyunIMixRecorder.needFaceTrackInternal(boolean need);
     ``` |
     |Specify a model file to use the built-in facial recognition feature of the SDK.|    ```
-AliyunIRecorder#setFaceTrackInternalModelPath(String path);
+AliyunIMixRecorder.setFaceTrackInternalModelPath(String path);
     ``` |
     |Set the maximum number of faces that can be recognized by using the built-in facial recognition feature of the SDK.|    ```
-AliyunIRecorder#setFaceTrackInternalMaxFaceCount(int maxFaceCount);
+AliyunIMixRecorder.setFaceTrackInternalMaxFaceCount(int maxFaceCount);
     ``` |
 
 -   Animated sticker \(supported only in Professional Edition\)
@@ -250,24 +252,24 @@ AliyunIRecorder#setFaceTrackInternalMaxFaceCount(int maxFaceCount);
     |Action|Sample code|
     |------|-----------|
     |Add an animated face sticker.|    ```
-AliyunIRecorder#addPaster(EffectPaster effectPaster);
+AliyunIMixRecorder.addPaster(EffectPaster effectPaster);
     ``` |
     |Add a common animated sticker.|    ```
-AliyunIRecorder#addPaster(EffectPaster effectPaster,float sx,float sy,float sw,float sh,float rotation,boolean flip);
+AliyunIMixRecorder.addPaster(EffectPaster effectPaster,float sx,float sy,float sw,float sh,float rotation,boolean flip);
     ``` |
     |Remove an animated sticker.|    ```
-AliyunIRecorder#removePaster(EffectPaster effectPaster);
+AliyunIMixRecorder.removePaster(EffectPaster effectPaster);
     ``` |
 
--   **Static watermark and static sticker**
+-   Static watermark and static sticker
 
     |Action|Sample code|
     |------|-----------|
     |Add a static watermark or static sticker.|    ```
-AliyunIRecorder#addImage(EffectImage effctImage);
+AliyunIMixRecorder.addImage(EffectImage effctImage);
     ``` |
     |Remove a static watermark or static sticker.|    ```
-AliyunIRecorder#removeImage(EffectImage effctImage);
+AliyunIMixRecorder.removeImage(EffectImage effctImage);
     ``` |
 
 -   **Background music \(supported in Professional Edition and Standard Edition\)**
@@ -275,18 +277,18 @@ AliyunIRecorder#removeImage(EffectImage effctImage);
     |Action|Sample code|
     |------|-----------|
     |Set the background music.|    ```
-AliyunIRecorder#setMusic(String path,long startTime,long duration);
+AliyunIMixRecorder.setMusic(String path,long startTime,long duration);
     ``` |
     |Remove the background music.|    ```
-AliyunIRecorder#setMusic(null, 0, 0);
+AliyunIMixRecorder.setMusic(null, 0, 0);
     ``` |
 
--   **Speed adjustment \(supported in Professional Edition and Standard Edition\)**
+-   Speed adjustment \(supported in Professional Edition and Standard Edition\)
 
     |Action|Sample code|
     |------|-----------|
     |Set the recording speed.|    ```
-AliyunIRecorder#setRate(float rate);
+AliyunIMixRecorder.setRate(float rate);
     ``` |
 
 -   **Custom rendering**
@@ -294,29 +296,29 @@ AliyunIRecorder#setRate(float rate);
     |Action|Sample code|
     |------|-----------|
     |Set the callback for custom rendering.|    ```
-AliyunIRecorder#setOnTextureIdCallback(OnTextureIdCallBack callback);
+AliyunIMixRecorder.setOnTextureIdCallback(OnTextureIdCallBack callback);
     ``` |
 
--   **Photo taking**
+-   Photo taking
 
     |Action|Sample code|
     |------|-----------|
     |Take a photo with effects.|    ```
-AliyunIRecorder#takePhoto(boolean needBitmap);
+AliyunIMixRecorder.takePhoto(boolean needBitmap);
     ``` |
     |Take a photo by using the system camera feature. In this case, a photo is taken without effects.|    ```
-AliyunIRecorder#takePicture(boolean needBitmap);
+AliyunIMixRecorder.takePicture(boolean needBitmap);
     ``` |
     |Set the photo size. This method is supported only when you use the system camera feature to take a photo.|    ```
-AliyunIRecorder#setPictureSize(Camera.Size size);
+AliyunIMixRecorder.setPictureSize(Camera.Size size);
     ``` |
 
--   **Others**
+-   Others
 
     |Action|Sample code|
     |------|-----------|
     |Configure the effect information, including the position and size of a watermark, a static sticker, or an animated sticker.|    ```
-AliyunIRecorder#setEffectView(float xRatio,float yRatio,float widthRatio,float heightRatio,EffectBase effectBase);
+AliyunIMixRecorder.setEffectView(float xRatio,float yRatio,float widthRatio,float heightRatio,EffectBase effectBase);
     ``` |
 
 
@@ -325,23 +327,24 @@ AliyunIRecorder#setEffectView(float xRatio,float yRatio,float widthRatio,float h
 |Action|Sample code|
 |------|-----------|
 |Start recording a video clip.|```
-AliyunIMixRecorder#startRecording();
+AliyunIMixRecorder.startRecording();
 ``` |
 |Stop recording a video clip.|```
-AliyunIMixRecorder#stopRecording();
+AliyunIMixRecorder.stopRecording();
 ``` |
 |Stop the recording and merge the recorded video clips into one video.|```
-AliyunIMixRecorder#finishRecording();
+AliyunIMixRecorder.finishRecording();
 ``` |
 
 ## Sample code
 
 ```
-// The following code demonstrates how to record a duet. Before you run the following code, make sure that a video named sample.mp4 exists in the root directory of the SD card on your mobile phone. In other words, the /sdcard/sample.mp4 file exists. The code demonstrates only the core process. Do not copy the code to your project for use. For more information about the detailed process, see the code of the demo.
+// Produce a duet. Make sure that a sample video named sample.mp4 is stored in the root directory: /sdcard/sample.mp4.
+// The following code describes only the core process. You cannot directly copy and paste the following code for your project. For more information about the detailed process, see the demo.
 AliyunIMixRecorder mMixRecorder = AliyunIMixRecorder createAlivcMixRecorderInstance(getApplicationContext());
 if(WYSIWYG is required){
     mRecorder.setRecordRotation(0); // This setting enables WYSIWYG so that a video that is recorded in landscape mode is not automatically rotated in the produced video.
-    mRecorder.setFaceDetectRotation(getPictureRotation()); // For more information about the getPictureRotation() method, see the code of the demo.
+    mRecorder.setFaceDetectRotation(getPictureRotation());// For more information about the getPictureRotation() method, see the code of the demo.
 }else {
     mRecorder.setRotation(getPictureRotation());
 }
