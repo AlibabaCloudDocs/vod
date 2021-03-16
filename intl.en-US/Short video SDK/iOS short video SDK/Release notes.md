@@ -1,39 +1,68 @@
 # Release notes
 
+## V3.19.0
+
+**Feature updates**
+
+-   The noise reduction feature is added to the editing module.
+-   Background image and background color can be set during duet recording and video merging.
+-   Audio tracks can be merged during duet recording and video merging.
+-   Echoes can be removed for duet recording.
+-   The issue is fixed where the halo color changes when a transparent halo effect is added to a watermark or an image.
+-   The issue is fixed where added static images are not rotated in the expected angle.
+
+**SDK changes**
+
+Deprecated operation:
+
+AliyunCamera & AliyunIRecorder,@property\(nonatomic, assign\) BOOL useAudioSessionModeVideoRecording;
+
+## V3.18.1
+
+**Feature updates**
+
+The issue is fixed where memory leak occurs when hardware encoding is used on specific iOS phone models.
+
+## V3.18.0
+
+**Feature updates**
+
+Audio tracks, such as the track of the original audio, recorded audio, or mute audio, can be specified for duet recording.
+
 ## V3.17.1
 
 **Feature updates**
 
 -   The scaling mode is supported for front cameras.
--   The issue is fixed where Open Graphics Library \(OpenGL\) unexpectedly quits applications installed on specific phone models after a video is produced.
+-   The issue is fixed where Open Graphics Library \(OpenGL\) unexpectedly quits applications on specific phone models after a video is produced.
 
 ## V3.17.0
 
 **Feature updates**
 
--   The sound effect of lolita is optimized and the sound effects of Chinese dialects are added.
+-   The voice effect of lolita is optimized and the voice effects of Chinese dialects are added.
 -   The issue is fixed where the screen becomes green when a video that is shot on iPhone 12 is imported to the cropping or editing module.
 
 ## V3.16.2
 
 **Feature updates**
 
--   The effect of the Gaussian blur background is optimized.
+The Gaussian blur effect on backgrounds is improved.
 
 ## V3.16.1
 
 **Feature updates**
 
--   The issue is fixed where a recorded video cannot be merged with an existing video whose length is shorter than that of the recorded video.
+The issue is fixed where a recorded video cannot be merged with an existing video whose length is shorter than that of the recorded video.
 
 ## V3.16.0
 
 **Feature updates**
 
--   The mainstream animation effects are added again.
--   The issue of intermittent unexpected quits that users report online is fixed.
+-   The major animation effects are added again.
+-   The issue is fixed where intermittent unexpected quits occur when users send feedback online.
 -   The issue is fixed where stuttering may occur during the playback of long videos.
--   The issue is fixed where the watermark is displayed in a wrong direction when a video is recorded in landscape mode.
+-   The issue is fixed where the watermark is not displayed in the expected direction when a video is recorded in landscape mode.
 
 ## V3.15.0
 
@@ -41,12 +70,12 @@
 
 -   The issue is fixed where stuttering occurs during the playback of produced videos.
 -   The issue is fixed where the speed of multiple clips cannot be changed at the same time.
--   Two sets of transitions, filter effect transitions, and filters are added based on the specifications for producing custom effects.
+-   Two sets of transitions, filter effect transitions, and filters are added based on the standards of producing custom effects.
 
 **SDK changes**
 
--   An interface is added so that you can modify the parameters of custom effects in real time.
--   The features of custom filters and transitions are supported. For more information about the specifications for producing custom effects, see the official documentation.
+-   An interface is added to modify the parameters of custom effects in real time.
+-   The features of custom filters and transitions are supported. For more information about the standards of producing custom effects, see the official documentation.
 
 ## V3.14.0
 
@@ -56,7 +85,7 @@
 -   The stability of the recording module is optimized to deal with exceptions, such as background execution and hardware resource occupation.
 -   The known memory leaks are fixed and the performance of specific modules is optimized.
 
-**Issue fix**
+**Fixed issues**
 
 -   The issue is fixed where occasional quits occur when the application is switched to the background during recording.
 -   The issue is fixed where exceptions occur when audio resources are occupied during recording.
@@ -66,10 +95,9 @@
 
 **SDK changes**
 
--   The AliyunVideoSDKPro.framework dynamic framework is split into AliyunVideoSDKPro.framework static framework and AliyunVideoCore.framework dynamic framework. If you want to manually integrate the short video SDK,
+The AliyunVideoSDKPro.framework dynamic framework is split into AliyunVideoSDKPro.framework static framework and AliyunVideoCore.framework dynamic framework. If you want to manually integrate the short video SDK,
 
-    see [Project configuration](/intl.en-US/Short video SDK/iOS short video SDK/Project configuration.md).
-
+see [Project configuration](/intl.en-US/Short video SDK/iOS short video SDK/Project configuration.md).
 
 ## V3.13.0
 
@@ -81,7 +109,7 @@
 
 **SDK changes**
 
--   The method used for the MV effect is deprecated and the feature of adding the MV effect is removed.
+The method for the music video \(MV\) effect is deprecated and the feature of adding the MV effect is removed.
 
 ## V3.12.0
 
@@ -98,13 +126,13 @@
 
 -   The performance of the editing module is improved.
 
-**Issue fix**
+**Fixed issues**
 
--   The issue is fixed where the recording process is stopped but the corresponding thread is still running.
+The issue is fixed where the recording process is stopped but the corresponding thread is still running.
 
 **SDK changes**
 
--   The applyRunningDisplayMode method is deleted from the editing module.
+The applyRunningDisplayMode operation is deleted from the editing module.
 
 ## V3.11.0
 
@@ -115,10 +143,10 @@
 -   The transcoding speed in specific scenarios is improved by precisely adjusting the group of pictures \(GOP\) size.
 -   The time that is required to switch between cameras is reduced.
 
-**Issue fix**
+**Fixed issues**
 
--   The issue is fixed where the number of frames in a GIF image is incorrectly parsed.
--   The issue is fixed where specific videos stutter when the videos are played reversely.
+-   The issue is fixed where the number of frames in a GIF image is not accurately parsed.
+-   The issue is fixed where specific videos stutter when the videos are reversely played.
 -   The issue is fixed where the duration of a recorded video is inaccurate.
 -   The issue is fixed where the audio and image of a multi-clip video are not synchronized.
 
@@ -131,19 +159,19 @@
 
 **Feature updates**
 
--   The duet feature is supported.
--   The feature of producing a video with multiple videos is supported. The feature allows you to achieve effects such as picture-in-picture and left-right split-screen.
+-   The AliyunMixRecorder interface is added. This interface can be called to record videos in duet mode.
+-   The AliyunMixComposer interface is added. This interface can be called to achieve effects such as picture-in-picture and left-right split-screen.
 
 ## V3.10.0
 
 **Feature updates**
 
--   The sound effects of the big devil and Minions are added to the editing module.
+-   The voice effects of the big devil and Minions are added to the editing module.
 -   Videos in the MJPEG format can be edited.
 -   The compatibility with specific damaged video files is improved for playback during editing.
 -   The draw method is added to forcibly draw a frame during editing.
 
-**Issue fix**
+**Fixed issues**
 
 -   The issue is fixed where the duration is incorrectly displayed for a recorded video clip.
 -   The issue is fixed where the watermark that is added during recording disappears when the application is switched to the background.
@@ -154,7 +182,7 @@
 
 **Feature updates**
 
--   The sound effect feature is supported. The sound effects include lolita, uncle, reverberation, and echo.
+-   The voice effect feature is supported. The voice effects include lolita, uncle, reverberation, and echo.
 -   The seeking performance during editing is improved.
 -   The stability of the SDK is improved.
 
@@ -168,7 +196,7 @@
 -   The video production speed is improved for the editing module.
 -   Some issues are fixed.
 -   The production can be resumed after the application is switched to the foreground from the background.
--   To meet the requirement of SDK stability monitoring and data-related requirements in the future, the AlivcConan.framework is changed as a required dependency. Manual integration: Add AlivcConan.framework. CocoaPods integration: Add pod 'AlivcConan', '0.9.0' to Podfile. For more information, see the demo.
+-   To meet the requirement of SDK stability monitoring and data-related requirements in the future, the AlivcConan.framework is changed as a required dependency. In manual integration, you must add AlivcConan.framework. In CocoaPods integration, you must add pod 'AlivcConan', '0.9.0' to Podfile. For more information, see the demo.
 
 ## V3.7.7
 
@@ -181,19 +209,19 @@
 
 **Feature updates**
 
--   The issue is fixed where a display exception occurs during the reverse playback of HEVC videos that are generated by iOS 12.
+-   The issue is fixed where a display exception occurs during the reverse playback of High Efficiency Video Coding \(HEVC\) videos that are generated by iOS 12.
 -   The issue is fixed where unexpected quits may occur when a third-party rendering interface is used in editing.
 -   The playback smoothness of videos with time effects is improved.
 -   The compatibility with GIF images is improved.
--   Videos whose resolution consists of odd numbers can be imported.
--   Audio and video synchronization during multi-clip recording is improved.
+-   Videos with odd resolution can be imported.
+-   Audio and video synchronization during multi-clip recording is optimized.
 -   The stability is improved.
 
 ## V3.7.0
 
 **Feature updates**
 
--   The transition feature is supported with mainstream effects, such as fade, polygon, and blinds.
+-   The transition feature is supported with major effects, such as fade, polygon, and blinds.
 -   The animation feature is supported with basic animations, such as rotation, translation, scaling, and alpha, and custom animations such as linear erasure.
 -   The Gaussian blur effect can be added to the specified stream in the specified time period.
 -   The display mode, including padding and cropping, can be set for the specified stream in the specified time period.
@@ -214,7 +242,7 @@
 
 **Feature updates**
 
--   The SDK is compatible with Xcode10.
+The SDK is compatible with Xcode 10.
 
 ## V3.6.5.3
 
@@ -236,21 +264,20 @@
 
 **Feature updates**
 
--   Framework file size and basic issues
+Framework file size and basic issues
 
-    |Name|Size \(Unit: MB\)|
-    |----|-----------------|
-    |AliyunVideoSDKPro.framework3.5.0 release|4.9M|
-    |AliyunVideoSDKPro.framework3.5.0 debug|10.1M|
-    |AliyunVideoSDKPro.framework3.6.0 release|7.6M|
-    |AliyunVideoSDKPro.framework3.6.0 debug|15.7M|
-    |QuCore-ThirdParty.framework3.5.0 release|9.3M|
-    |QuCore-ThirdParty.framework3.5.0 debug|23.1M|
-    |QuCore-ThirdParty.framework3.6.0 release|10.2M|
-    |QuCore-ThirdParty.framework3.6.0 debug|23.2M|
+|Name|Size \(Unit: MB\)|
+|----|-----------------|
+|AliyunVideoSDKPro.framework3.5.0 release|4.9M|
+|AliyunVideoSDKPro.framework3.5.0 debug|10.1M|
+|AliyunVideoSDKPro.framework3.6.0 release|7.6M|
+|AliyunVideoSDKPro.framework3.6.0 debug|15.7M|
+|QuCore-ThirdParty.framework3.5.0 release|9.3M|
+|QuCore-ThirdParty.framework3.5.0 debug|23.1M|
+|QuCore-ThirdParty.framework3.6.0 release|10.2M|
+|QuCore-ThirdParty.framework3.6.0 debug|23.2M|
 
-    **Note:** AliyunVideoSDKPro.framework and QuCore-ThirdParty.framework must be replaced at the same time. Otherwise, exceptions such as an unexpected quit during production may occur.
-
+**Note:** AliyunVideoSDKPro.framework and QuCore-ThirdParty.framework must be replaced at the same time. Otherwise, exceptions such as an unexpected quit during production may occur.
 
 **SDK changes**
 
@@ -279,7 +306,6 @@
     ```
 
 -   Method for adding music
-
     -   Multiple audio streams can be mixed. To add only one audio stream, you must call the removeMusics method. The following code provides an example on how to add one audio stream:
 
         ```
@@ -288,7 +314,7 @@
         [self.editor applyMusic:music];
         ```
 
-    -   To add music, call the removeMVMusic method. Example: AliyunEffectMusic \*music = \[\[AliyunEffectMusic alloc\] initWithFile:path\].
+    -   To add music, call the removeMVMusic method, for example, AliyunEffectMusic \*music = \[\[AliyunEffectMusic alloc\] initWithFile:path\].
 
         ```
         [self.editor removeMVMusic];
@@ -306,8 +332,7 @@
         music.streamDuration = streamDuration * [_player getStreamDuration]; // Set the playback duration of the music stream in the playback timeline.
         ```
 
--   New time effect display method
-
+-   New method for displaying time effects
     -   The addTimelineTimeFilterItem method is added. For more information about the code, see demo.
     -   Time effects affect animated filters.
 
@@ -377,34 +402,34 @@
 
 **Note:** You must know the basic concepts about the player when you use time effects.
 
--   /\* Obtain the total playback duration. Unit: seconds. @return The total duration. /
+-   /\* Obtain the total playback duration, in seconds. @return The total duration. /
 
     \(double\)getDuration
 
--   /\* Obtain the current playback position. Unit: seconds. /
+-   /\* Obtain the current playback position, in seconds. /
 
     \(double\)getCurrentTime
 
--   /\* Obtain the duration of the original video stream. Unit: seconds. @return The total duration. /
+-   /\* Obtain the duration of the original video stream, in seconds. @return The total duration. /
 
     \(double\)getStreamDuration
 
--   /\* Obtain the playback position in the original video stream. Unit: seconds. /
+-   /\* Obtain the playback position in the original video stream, in seconds. /
 
     \(double\)getCurrentStreamTime
 
 
-**Example:**
+**Examples**
 
 -   If the duration of a video is 15s and the entire video is played at twice the speed, getDuration returns 7.5s and getStreamDuration returns 15s. In this case, when getCurrentTime returns 3.5s, getCurrentStreamTime returns 7s.
--   If the duration of a video is 15s and the entire video is played at half the speed, getDuration returns 30s and getStreamDuration returns 15s. In this case, when getCurrentTime returns 10s, getCurrentStreamTime returns 5s.
+-   If the duration of a video is 15s and the entire video is played at half the speed, getDuration returns 30s and getStreamDuration returns 15s. In this case, when getCurrentTime returns 10s, getCurrentStreamTime returns 7.5s.
 -   If the duration of a video is 15s and the entire video is reversely played, getDuration and getStreamDuration both return 15s. In this case, when getCurrentTime returns 6s, getCurrentStreamTime returns 9s.
 
 In the preceding examples, the time effect is applied to the entire video. If the time effect is applied only to a part of the video, the playback duration, stream duration, and playback positions are calculated based on the same rules.
 
 ## Others
 
-**ReleaseNote:**
+**ReleaseNote**
 
 -   New time effect methods
     -   \(int\)applyTimeFilter:\(AliyunEffectTimeFilter \*\)filter
@@ -422,7 +447,7 @@ In the preceding examples, the time effect is applied to the entire video. If th
         [importor addMediaClip:clip];
         ```
 
--   The playback status and methods are adjusted. Compared with V3.5.0, the events of switching between the foreground and background and screen switching are handled internally in V3.6.0.
+-   The playback status and methods are adjusted. Compared with V3.5.0, the events of switching between the foreground and background and screen switching are internally handled in V3.6.0.
 
     The setActive method is deprecated.
 
@@ -433,12 +458,12 @@ In the preceding examples, the time effect is applied to the entire video. If th
     Error handling: In V3.6.0, when an error occurs during the playback or production, the playback or production is stopped, and the error is returned through the playError or exportError callback. You can handle the error as needed.
 
 -   New methods for the player
-    -   \(double\)getStreamDuration; // Obtain the duration of the original video stream. Unit: seconds.
-    -   \(double\)getCurrentStreamTime; // Obtain the playback position in the original video stream. Unit: seconds.
+    -   \(double\)getStreamDuration; // Obtain the duration of the original video stream, in seconds.
+    -   \(double\)getCurrentStreamTime; // Obtain the playback position in the original video stream., in seconds.
 -   Method changes for watermarks
     -   The setWaterMark: frame method is deprecated.
     -   The setWaterMark:\(AliyunEffect\*\)waterMark method is added.
-    -   You can call the setTailWaterMark: method to set an end watermark, which can be previewed.
+    -   The setTailWaterMark: method can be called to set an end watermark, which can be previewed.
 -   Method for adding music
     -   Multiple audio streams can be mixed. The specified part of a music stream can be played. To add only one audio stream, you must call the removeMusics method. The following code provides an example:
 
