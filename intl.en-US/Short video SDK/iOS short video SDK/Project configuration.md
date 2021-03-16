@@ -1,53 +1,55 @@
 # Project configuration
 
-## System version
+This topic shows you how to integrate the short video SDK for iOS in pod mode and manually integrate the SDK.
 
-The short video SDK for iOS is applicable to iOS 8.0 and later.
+Required environments are prepared. The following table describes the required environments for development.
 
-## Development environment
+|Environment|Supported version|
+|-----------|-----------------|
+|iOS|iOS 9.0 and later.|
+|macOS High Sierra|macOS High Sierra 10.13 and later.|
+|Xcode|Xcode 9.0 and later. To download Xcode, visit [Mac App Store](https://apps.apple.com/cn/app/xcode/id497799835?mt=12).|
 
-We recommend that you use macOS High Sierra 10.13 and Xcode 9.0 or later.
+## SDK reference
 
-## API reference
+For more information about the documents in Chinese, see [SDK Reference](https://alivc-demo-cms.alicdn.com/versionProduct/doc/shortVideo/iOS_cn/index.html).
 
-Documents in Chinese: [API Reference](https://alivc-demo-cms.alicdn.com/versionProduct/doc/shortVideo/iOS_cn/index.html).
-
-Documents in English: [API Reference](https://alivc-demo-cms.alicdn.com/versionProduct/doc/shortVideo/iOS_en/index.html).
+For more information about the documents in English, see [SDK Reference](https://alivc-demo-cms.alicdn.com/versionProduct/doc/shortVideo/iOS_en/index.html).
 
 ## SDK editions
 
-The short video SDK has three editions: Basic Edition, Standard Edition, and Professional Edition. The three editions use the same framework name AliyunVideoSDKPro.framework.
+The short video SDK has the following three editions: Basic Edition, Standard Edition, and Professional Edition. The three editions use the same framework name AliyunVideoSDKPro.framework.
 
 -   The Basic Edition supports only the recording and cropping features.
--   The Professional Edition and Standard Edition support all features. However, advanced features of the Standard Edition must be authorized separately.
+-   The Professional Edition and Standard Edition support all features. However, advanced features of the Standard Edition must be separately authorized.
 
-## SDK integration
+## SDK integration in pod mode \(recommended\)
 
-**SDK integration in pod mode \(recommended\)**
+Procedure
 
-1.  Add dependencies to the Podfile file.
+1.  Add dependencies to the Podfile file. The following table describes the dependencies of each edition.
 
     |Edition|Dependency to be added to the Podfile file|
     |-------|------------------------------------------|
     |Professional Edition|    ```
-pod 'AliyunVideoSDKPro', '3.17.1'
+pod 'AliyunVideoSDKPro', '3.19.0'
 pod 'QuCore-ThirdParty', '3.15.0'
 pod 'AlivcConan', '1.0.3'
 pod 'VODUpload'
 pod 'AliyunOSSiOS'
     ``` |
     |Standard Edition|    ```
-pod 'AliyunVideoSDKStd', '3.17.1'
+pod 'AliyunVideoSDKStd', '3.19.0'
 pod 'QuCore-ThirdParty', '3.15.0'
 pod 'AlivcConan', '1.0.3'
 pod 'VODUpload'
 pod 'AliyunOSSiOS'
     ``` |
     |Basic Edition|    ```
-pod 'AliyunVideoSDKBasic', '3.17.1'
+pod 'AliyunVideoSDKBasic', '3.19.0'
 pod 'QuCore-ThirdParty', '3.15.0'
 pod 'AlivcConan', '1.0.3'
-pod 'VODUpload'pod '
+pod 'VODUpload'
 pod 'AliyunOSSiOS'
     ``` |
 
@@ -68,7 +70,7 @@ pod 'AliyunOSSiOS'
 
 ## SDK integration in manual mode \(not recommended\)
 
-To manually integrate the SDK, you must download packages of the latest release from GitHub, including six frameworks and a bundle resource package.
+To manually integrate the SDK, you must download packages of the latest release from GitHub, including six frameworks and one bundle resource package.
 
 |Name|Type|Description|Download URL|
 |----|----|-----------|------------|
@@ -82,31 +84,41 @@ To manually integrate the SDK, you must download packages of the latest release 
 
 In the preceding frameworks, AliyunVideoCore, alivcffmpeg, and AlivcConan are dynamic frameworks. When you manually integrate and release dynamic frameworks, take note of the following information:
 
-1.  To add a dynamic framework, select the target and choose General \> Embedded Binaries.
+1.  To add a dynamic framework, select the target. Then, add the dynamic framework in the **Embedded Binaries** section of the **General** tab.
 2.  To submit an application to App Store, you must strip dynamic frameworks of the x86-based simulator architecture. Otherwise, your application will be rejected. You can strip dynamic frameworks of the simulator architecture by using one of the following methods:
     -   Use the lipo command-line tool to strip the dynamic frameworks of the simulator architecture.
     -   Integrate dynamic frameworks in pod mode. Then, dynamic frameworks of the simulator architecture are automatically stripped when the pods are packaged.
 
-**To manually integrate the SDK, perform the following steps:**
+Procedure
 
-1.  Open the project and select the target. Choose General \> Embedded Binaries. Click the plus sign \(+\), click Add Other, and then import the AliyunVideoCore.framework, AlivcConan.framework, and alivcffmpeg.framework files.
+1.  Add dynamic frameworks.
 
-2.  Open the project and select the target. Choose General \> Linked Frameworks And Libraries. Click the plus sign \(+\), click Add Other, and then import the AliyunVideoSDKPro.framework, AliyunOSSiOS.framework, and VODUpload.framework files.
+    Click the **General** tab. In the **Frameworks**, **Libraries**, and **Embedded Content** section, click **+**. Select **Add Other...** from the drop-down list and import the AliyunVideoCore.framework, AlivcConan.framework, and alivcffmpeg.framework files. After the frameworks are imported, select Embed &Sign.
 
-3.  Open the project and select the target. Choose General \> Linked Frameworks And Libraries. Click the plus sign \(+\) and import the libz.tbd, ImageIO.framework, CoreMedia.framework, CoreVideo.framework, VideoToolBox.framework, MediaPlayer.framework, OpenAL.framework, libc++.tbd, libsqlite3.tbd, and libiconv.tbd files.
+2.  Add static frameworks.
 
-4.  If you are using the short video SDK Professional Edition, you must also import the AliyunVideoSDKPro.bundle resource package to your project.
+    Click the **General** tab. In the **Frameworks**, **Libraries**, and **Embedded Content** section, click **+**. Select **Add Other...** from the drop-down list and import the AliyunVideoSDKPro.framework, AliyunOSSiOS.framework, and VODUpload.framework files.
+
+3.  Add other frameworks.
+
+    Click the **General** tab. In the **Frameworks**, **Libraries**, and **Embedded Content** section, click **+** and import the MobileCoreServices.framework, SystemConfiguration.framework, and libresolv.tbd files.
+
+4.  If you are using the short video SDK Professional Edition, import the AliyunVideoSDKPro.bundle resource package to your project.
 
 
-**Note:** The process of manually integrating the SDK is complicated. You must also strip dynamic frameworks when you submit your application to App Store. We recommend that you integrate the SDK in pod mode.
+**Note:**
 
-## Project configuration
+The process of manually integrating the SDK is complex. In addition, you must strip dynamic frameworks when you submit your application to App Store. We recommend that you integrate the SDK in pod mode.
+
+If an error occurs during compilation, set the **Compile Sources As** parameter to **Objective-C++** in the **Apple Clang - Language** section of the **Build Settings** tab.
+
+## Configure the project
 
 After the SDK is integrated, open the project and modify the configuration.
 
-1.  Choose Build Setting \> Linking \> Other Linker Flags and add -ObjC.
+1.  Choose **Build Setting** \> **Linking** \> **Other Linker Flags** and add -ObjC.
 
-2.  Choose Build Setting \> Build Options and set the Enable Bitcode parameter to NO.
+2.  Choose **Build Setting** \> **Build Options** and set the **Enable Bitcde** parameter to NO.
 
 3.  Open the info.Plist file of the project and add the following permissions:
 
