@@ -1,10 +1,8 @@
 # Import and editing
 
-## Overview
+The short video SDK allows you to import videos or images and produce videos with extensive effects such as filters, dubbing, time effects, and transitions.
 
-The short video SDK allows you to import videos or images and produce videos with extensive effects such as filters, dubbing, time effects, and transitions. The core editing class is AliyunEditor.
-
-## Edition difference
+## Differences among editions
 
 |Edition|Description|
 |-------|-----------|
@@ -14,59 +12,59 @@ The short video SDK allows you to import videos or images and produce videos wit
 
 ## Import and editing
 
-The following figure shows the import and editing process.
+The following figure shows the process of import and editing videos and images.
 
 ![Import and editing](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9848911161/p181691.png)
 
 **Note:**
 
+-   The core editing class is AliyunIEditor.
 -   The startEdit and stopEdit methods must be called in pairs. After you call the startEdit method, the SDK internally creates resources. After you call the stopEdit method, the SDK internally releases the resources. You must call the stopEdit method before an editor is destroyed. Otherwise, memory leak occurs.
 -   Media clips must be determined before editing. Call the media clip management method AliyunIClipConstructor before you call the startEdit method.
 -   Call the playback control, editing, and production methods after you call the startEdit method and before you call the stopEdit method.
 
 ## Initialization
 
-**Set the TaskPath parameter**
+-   Set the TaskPath parameter
 
-The TaskPath parameter specifies the path of the folder that stores configuration files and temporary files. The configuration files contain the video material information such as the path, output bitrate, group of pictures \(GOP\) value, and resolution. AliyunEditor reads parameter settings from the configuration files in the folder that is specified by the TaskPath parameter. You can set the TaskPath parameter in the following ways:
+    The TaskPath parameter specifies the path of the folder that stores configuration files and temporary files. The configuration files contain the information about video materials such as the path, output bitrate, group of pictures \(GOP\) size, and resolution. AliyunEditor reads parameter settings from the configuration files in the folder that is specified by the TaskPath parameter. You can set the TaskPath parameter in the following ways:
 
--   When you record videos for editing, initialize an AliyunIRecorder object and set the TaskPath parameter to the path of an empty folder. When you call recording methods, a configuration file is automatically created and video resources are automatically added.
--   When you import videos for editing, initialize an AliyunImporter object and set the TaskPath parameter to the path of an empty folder. Call the methods of the AliyunIClipConstructor protocol to add video resources. Then, call the `- (void)generateProjectConfigure` method to create a configuration file.
+    -   When you record videos for editing, initialize an AliyunIRecorder object and set the TaskPath parameter to the path of an empty folder. When you call recording methods, a configuration file is automatically created and video resources are automatically added.
+    -   When you import videos for editing, initialize an AliyunImporter object and set the TaskPath parameter to the path of an empty folder. Call the methods of the AliyunIClipConstructor protocol to add video resources. Then, call the `- (void)generateProjectConfigure` method to create a configuration file.
+    AliyunImporter is used to generate the editing configuration file. The following table describes the actions that are supported by AliyunImporter.
 
-AliyunImporter is used to generate the editing configuration file. The following table describes the actions that are supported by AliyunImporter.
-
-|Action|Sample code|
-|------|-----------|
-|Initialize an instance.|```
+    |Action|Sample code|
+    |------|-----------|
+    |Initialize an instance.|    ```
 /**
  Initialize an AliyunImporter instance. @param TaskPath The path of the folder. Make sure that the folder exists. 
 @param outputSize The resolution of the output video, in even numbers. 
 @return AliyunImporter
  */
 - (instancetype)initWithPath:(NSString *)TaskPath outputSize:(CGSize)outputSize;
-``` |
-|Set video output parameters.|```
+    ``` |
+    |Set video output parameters.|    ```
 /**
  Set video output parameters.
  @param videoParam The video output parameters. 
 */
 - (void)setVideoParam:(AliyunVideoParam *)videoParam;
-``` |
-|Generate a configuration file.|```
+    ``` |
+    |Generate a configuration file.|    ```
 /**
 /**
  Generate a configuration file in the folder that is specified by the TaskPath parameter.
  */
 - (void)generateProjectConfigure;
-``` |
-|Add a media clip.|AliyunImporter implements the AliyunIClipConstructor protocol and is used to configure media clips.
+    ``` |
+    |Add a media clip.|AliyunImporter implements the AliyunIClipConstructor protocol and is used to configure media clips.
 
 AliyunClip indicates a video clip or an image clip. You can call the initialization method to create an AliyunClip object.
 
-```
+    ```
 - (void)addMediaClip:(AliyunClip *)clip;
-``` |
-|Create a video clip.|```
+    ``` |
+    |Create a video clip.|    ```
 /**
  Create a video clip.
  @param path The path of the video.
@@ -75,8 +73,8 @@ AliyunClip indicates a video clip or an image clip. You can call the initializat
  */
 - (instancetype)initWithVideoPath:(NSString *)path
                      animDuration:(CGFloat)animDuration;
-``` |
-|Create an image clip.|```
+    ``` |
+    |Create an image clip.|    ```
 /**
  Create an image clip.
  @param path The path of the image.
@@ -87,210 +85,211 @@ AliyunClip indicates a video clip or an image clip. You can call the initializat
 - (instancetype)initWithImagePath:(NSString *)path
                          duration:(CGFloat)duration
                      animDuration:(CGFloat)animDuration;
-``` |
-|Create a GIF clip.|```
+    ``` |
+    |Create a GIF clip.|    ```
  Create a GIF clip.
 @param path The path of the GIF file. 
-@ return The GIF clip.
+@return The GIF clip.
  */
 - (instancetype)initWithGifPath:(NSString *)path;
-``` |
+    ``` |
 
-**Initialize an editor**
+-   Initialize an editor
 
-Call the initialization method to create an AliyunEditor object.
+    Call the initialization method to create an AliyunEditor object.
 
-```
- /**
- @param TaskPath The path of the folder.
- @param preview The view for previewing the editing.
- @return Editor
- */
- - (instancetype)initWithPath:(NSString *)TaskPath preview:(UIView *)preview;
-```
+    ```
+     /**
+     @param TaskPath The path of the folder.
+     @param preview The view for previewing the editing.
+     @return Editor
+     */
+     - (instancetype)initWithPath:(NSString *)TaskPath preview:(UIView *)preview;
+    ```
 
-**Note:** The TaskPath parameter must be set to the path of the folder where a configuration file has been generated. The preview parameter specifies the user interface \(UI\) view for preview. The aspect ratio of the UI view for preview must be the same as that of the output video. If you want to produce a video without the need to preview it, set the preview parameter to nil.
+    **Note:** The TaskPath parameter must be set to the path of the folder where a configuration file has been generated. The preview parameter specifies the user interface \(UI\) view for preview. The aspect ratio of the UI view for preview must be the same as that of the output video. If you want to produce a video without the need to preview it, set the preview parameter to nil.
 
-**Manage media clips**
+-   Manage media clips
 
-The editor can call the `-(id<AliyunIClipConstructor>)getClipConstructor` method to obtain the media clip manager for managing media clips. AliyunIClipConstructor is used to add and remove media clips. The following table describes the actions that are supported by AliyunIClipConstructor.
+    The editor can call the `-(id<AliyunIClipConstructor>)getClipConstructor` method to obtain the media clip manager for managing media clips. AliyunIClipConstructor is used to add and remove media clips. The following table describes the actions that are supported by AliyunIClipConstructor.
 
-|Action|Sample code|
-|------|-----------|
-|Add a media clip.|```
+    |Action|Sample code|
+    |------|-----------|
+    |Add a media clip.|    ```
 /**
 @param clip The media clip.
 */
 - (void)addMediaClip:(AliyunClip *)clip;
-``` |
-|Specify all media clips.|```
+    ``` |
+    |Specify all media clips.|    ```
 /**
 @param clips The list of media clips.
 */
 - (void)setMediaClips:(NSArray<AliyunClip *> *)clips;
-``` |
-|Add a media clip to the specified position.|```
+    ``` |
+    |Add a media clip to the specified position.|    ```
 /**
 @param clip The media clip.
 @param index index
 */
 - (void)addMediaClip:(AliyunClip *)clip atIndex:(NSInteger)index;
-``` |
-|Update a media clip.|```
+    ``` |
+    |Update a media clip.|    ```
 /**
 @param clip The media clip.
 @param index index
 */
 - (void)updateMediaClip:(AliyunClip *)clip atIndex:(NSInteger)index;
-``` |
-|Remove a media clip.|```
+    ``` |
+    |Remove a media clip.|    ```
 /**
 @param index index
 */
 - (void)deleteMediaClipAtIndex:(NSInteger)index;
-``` |
-|Remove all media clips.|```
+    ``` |
+    |Remove all media clips.|    ```
 - (void)deleteAllMediaClips;
-``` |
-|Obtain a media clip.|```
+    ``` |
+    |Obtain a media clip.|    ```
 /**
 @param index index
 @return The media clip.
 */
 - (AliyunClip *)mediaClipAtIndex:(NSInteger)index;
-``` |
-|Obtain all media clips.|```
+    ``` |
+    |Obtain all media clips.|    ```
 /**
 @return The list of media clips.
 */
 - (NSArray<AliyunClip *> *)mediaClips;
-``` |
+    ``` |
 
-**Note:** Manage media clips before you call the startEdit method or after you call the stopEdit method.
+    **Note:** Manage media clips before you call the startEdit method or after you call the stopEdit method.
+
 
 ## Playback control
 
-**Control playback**
+-   Manage the playback
 
-|Action|Sample code|
-|------|-----------|
-|Obtain the player.|```
+    |Action|Sample code|
+    |------|-----------|
+    |Obtain the player.|    ```
  - (id<AliyunIPlayer>)getPlayer;
-``` |
-|Start the playback.|```
+    ``` |
+    |Start the playback.|    ```
 - (int)play;
-``` |
-|Seek to a point in time.|```
+    ``` |
+    |Seek to a point in time.|    ```
 /**
 @param time The point in time. Unit: seconds.
 */
 -(int)seek:(float)time;
-``` |
-|Draw a frame.|```
+    ``` |
+    |Draw a frame.|    ```
 /**
 @param time The point in time. Unit: seconds.
 */
 -(int)draw:(float)time;
-``` |
-|Pause the playback.|```
+    ``` |
+    |Pause the playback.|    ```
 - (int)pause;
-``` |
-|Resume the playback.|```
+    ``` |
+    |Resume the playback.|    ```
 - (int)resume;
-``` |
-|Check whether the player is playing a video.|```
+    ``` |
+    |Check whether the player is playing a video.|    ```
 /**
 @return The player is playing a video.
 */
 - (BOOL)isPlaying;
-``` |
-|Start the playback all over again.|```
+    ``` |
+    |Start the playback all over again.|    ```
 - (int)replay;
-``` |
-|Stop the playback.|```
+    ``` |
+    |Stop the playback.|    ```
 /**
 * If the status is normal, ALIVC_COMMON_RETURN_SUCCESS is returned.
 * If the status is invalid, ALIVC_COMMON_INVALID_STATE is returned.
 */
 - (int)stop;
-``` |
-|Obtain the total playback duration, in seconds.|```
+    ``` |
+    |Obtain the total playback duration, in seconds.|    ```
 /**
 @return The total duration.
 */
 - (double)getDuration;
-``` |
-|Obtain the current playback position, in seconds.|```
+    ``` |
+    |Obtain the current playback position, in seconds.|    ```
 - (double)getCurrentTime;
-``` |
-|Obtain the duration of the original video stream, in seconds.|```
+    ``` |
+    |Obtain the duration of the original video stream, in seconds.|    ```
 /**
 @return The total duration.
 */
 - (double)getStreamDuration;
-``` |
-|Obtain the playback position in the original video stream, in seconds.|```
+    ``` |
+    |Obtain the playback position in the original video stream, in seconds.|    ```
 - (double)getCurrentStreamTime;
-``` |
-|Obtain the time at which a video clip starts to be played in the playback timeline, in seconds.|```
+    ``` |
+    |Obtain the point in time at which a video clip starts to be played in the playback timeline, in seconds.|    ```
 /**
 @param idx The index of the video clip.
 @return The point in time. Unit: seconds.
 */
 - (double)getClipStartTimeAtIndex:(int)idx;
-``` |
-|Set the refresh rate of the player.|Default value: 30. Maximum value: 60. Unit: frames per second. We recommend that you set the fps parameter to a value greater than or equal to 20.
+    ``` |
+    |Set the refresh rate of the player.|Default value: 30. Maximum value: 60. Unit: frames per second. We recommend that you set the fps parameter to a value greater than or equal to 20.
 
-```
+    ```
 /**
 @param fps The refresh rate.
 */
 - (void)setRefreshFps:(double)fps;
-``` |
+    ``` |
 
-**Listen to playback callbacks**
+-   Listen to playback callbacks
 
-The delegate object needs to implement the AliyunIPlayerCallback protocol to monitor the playback status. The following table describes the related callback events.
+    The delegate object needs to implement the AliyunIPlayerCallback protocol to monitor the playback status. The following table describes the related callback events.
 
-|Callback event|Sample code|
-|--------------|-----------|
-|The playback starts.|```
+    |Callback event|Sample code|
+    |--------------|-----------|
+    |The playback starts.|    ```
 - (void)playerDidStart;
-``` |
-|The playback ends.|To play a video again from the start after the playback ends, call the replay method.
+    ``` |
+    |The playback ends.|To play a video all over again after the playback ends, call the replay method.
 
-```
+    ```
 - (void)playerDidEnd;
-``` |
-|The seeking ends.|```
+    ``` |
+    |The seeking ends.|    ```
 - (void)seekDidEnd;
-``` |
-|The playback progress is returned.|```
+    ``` |
+    |The playback progress is returned.|    ```
 /**
 @param playSec The playback position.
 @param streamSec The playback duration of the stream.
 */
 - (void)playProgress:(double)playSec streamProgress:(double)streamSec;
-``` |
-|A playback error occurs.|```
+    ``` |
+    |A playback error occurs.|    ```
 /**
 @param errorCode The error code.
 */
 - (void)playError:(int)errorCode;
-``` |
+    ``` |
 
-**Note:**
+    **Note:**
 
--   The play and stop methods must be called in pairs. The pause and resume methods must be called in pairs.
--   If you call the seek method or add an effect such as music video \(MV\) or music, the player is paused. You must call the resume method to resume the playback.
--   Time effects affect the playback timeline. The following examples show the differences between getDuration and getStreamDuration and between getCurrentTime and getCurrentStreamTime:
-    -   The duration of a video is 15s and the entire video is played at twice the speed. In this case, getDuration returns 7.5s and getStreamDuration returns 15s. If getCurrentTime returns 3.5s, getCurrentStreamTime returns 7s.
-    -   The duration of a video is 15s and the entire video is played at half the speed. In this case, getDuration returns 30s and getStreamDuration returns 15s. If getCurrentTime returns 10s, getCurrentStreamTime returns 7.5s.
-    -   The duration of a video is 15s and the entire video is reversely played. In this case, getDuration returns 15s and getStreamDuration returns 15s. If getCurrentTime returns 6s, getCurrentStreamTime returns 9s.
+    -   The play and stop methods must be called in pairs. The pause and resume methods must be called in pairs.
+    -   If you call the seek method or add an effect such as music video \(MV\) or music, the player is paused. You must call the resume method to resume the playback.
+    -   Time effects affect the playback timeline. The following examples show the differences between getDuration and getStreamDuration and between getCurrentTime and getCurrentStreamTime:
+        -   The duration of a video is 15s and the entire video is played at twice the speed. In this case, getDuration returns 7.5 and getStreamDuration returns 15. If getCurrentTime returns 3.5, getCurrentStreamTime returns 7. Unit: seconds.
+        -   The duration of a video is 15s and the entire video is played at half the speed. In this case, getDuration returns 30 and getStreamDuration returns 15. If getCurrentTime returns 10, getCurrentStreamTime returns 5. Unit: seconds.
+        -   The duration of a video is 15s and the entire video is reversely played. In this case, getDuration returns 15 and getStreamDuration returns 15. If getCurrentTime returns 6, getCurrentStreamTime returns 9. Unit: seconds.
 
 ## Effect settings
 
--   **Filter**
+-   Filter
 
     The filter resources of the short video SDK are stored in the filter folder. The filter folder contains a configuration file and related resources. AliyunEffectFilter indicates a filter resource. You can call the initialization method to create a filter instance. The path parameter specifies the path of the folder that stores the filter resource.
 
@@ -308,7 +307,7 @@ The delegate object needs to implement the AliyunIPlayerCallback protocol to mon
 - (int)removeFilter;
     ``` |
 
--   **Time effect**
+-   Time effect
 
     A time effect refers to repetition, speed adjustment, or reverse playback of a video. AliyunEffectTimeFilter indicates a time effect. You can run the following sample code to add a time effect:
 
@@ -332,9 +331,9 @@ The delegate object needs to implement the AliyunIPlayerCallback protocol to mon
 
     **Note:** The reverse playback and repetition effects apply only to a single video clip, and cannot be overlaid with other time effects. We recommend that you transcode the video before you apply the reverse playback effect. Otherwise, video stuttering may occur.
 
--   **MV**
+-   MV
 
-    The MV resources of the short video SDK are stored in the MV folder. The MV folder contains a configuration file and related resources. The downloaded MV package contains four folders with MV resources in different aspect ratios to apply to different output resolutions. AliyunEffectMV indicates an MV resource. You can call the initialization method to create an MV instance. The path parameter specifies the path of the folder that stores the MV resource.
+    The MV resources of the short video SDK are stored in the MV folder. The MV folder contains a configuration file and related resources. The downloaded MV package contains four folders with MV resources in different aspect ratios that are applicable to different output resolutions. AliyunEffectMV indicates an MV resource. You can call the initialization method to create an MV instance. The path parameter specifies the path of the folder that stores the MV resource.
 
     |Action|Sample code|
     |------|-----------|
@@ -353,7 +352,7 @@ The delegate object needs to implement the AliyunIPlayerCallback protocol to mon
 -(int)removeMVMusic;
     ``` |
 
--   **Music**
+-   Music
 
     AliyunEffectMusic indicates a music resource. You can call the initialization method to create a music instance. The path parameter specifies the path of the music resource file.
 
@@ -362,7 +361,7 @@ The delegate object needs to implement the AliyunIPlayerCallback protocol to mon
     |Generate a music object.|    ```
 - (id)initWithFile:(NSString *)path;
     ``` |
-    |Add music.|    ```
+    |Add a music stream.|    ```
 - (int)applyMusic:(AliyunEffectMusic *)music;
     ``` |
     |Remove a specific music stream.|The short video SDK allows you to overlay multiple music streams. You can run the following sample code to remove a specific music stream:
@@ -374,16 +373,16 @@ The delegate object needs to implement the AliyunIPlayerCallback protocol to mon
 - (int)removeMusics;
     ``` |
 
-    You can play a specific part of a music stream and play the music stream in a specific time period of a video. You can run the following sample code to configure properties:
+    You can play a specific part of a music stream and play the music stream in a specific period of a video. You can run the following sample code to configure properties:
 
     ```
-    @property (nonatomic, assign) CGFloat startTime;        // The start time of the part to be played in the music stream.
+    @property (nonatomic, assign) CGFloat startTime;        // The beginning of the part to be played in the music stream.
     @property (nonatomic, assign) CGFloat duration;         // The duration of the part to be played in the music stream.
     @property (nonatomic, assign) CGFloat streamStartTime;  // The time when the music stream starts to be played in the playback timeline.
     @property (nonatomic, assign) CGFloat streamDuration;   // The playback duration of the music stream in the playback timeline.
     ```
 
-    For example, play the part from the fifth second to the tenth second in a music stream and repeat this part of music twice from the eighth second of a video. You can run the following sample code:
+    For example, play the part from the fifth second to the tenth second in a music stream and repeat this part of music twice from the eighth second of a video. You can use the following sample code:
 
     ```
     AliyunEffectMusic *music = [[AliyunEffectMusic alloc] initWithFile: 'The path of the music file'];
@@ -395,13 +394,13 @@ The delegate object needs to implement the AliyunIPlayerCallback protocol to mon
 
     **Note:** After you call music-related methods, the player is paused. You must call the resume method to resume the playback.
 
--   **Dubbing**
+-   Dubbing
 
-    AliyunEffectDub indicates a dubbing resource and inherits AliyunEffectMusic. The methods for configuring dubbing are basically the same as those for configuring music. The following table describes the related actions.
+    AliyunEffectDub indicates a dubbing resource and inherits AliyunEffectMusic. The methods for configuring dubbing are basically the same as those for configuring music. The following table describes the actions that are supported by AliyunEffectDub.
 
     |Action|Sample code|
     |------|-----------|
-    |Add dubbing.|    ```
+    |Add a dubbing track.|    ```
 - (int)applyDub:(AliyunEffectDub *)dub;
     ``` |
     |Remove a dubbing track.|    ```
@@ -413,36 +412,36 @@ The delegate object needs to implement the AliyunIPlayerCallback protocol to mon
 
     **Note:** Dubbing differs from music in that dubbing supports speed adjustment whereas music does not. For example, a video is played at twice the speed. In this case, the dubbing is also played at twice the speed, but the music is played at the normal speed.
 
--   **Sound effect**
+-   Sound effect
 
-    The short video SDK allows you to add sound effects to each audio stream and provides various sound effects such as lolita, uncle, reverberation, and echo.
+    The short video SDK allows you to add voice effects to each audio stream and provides various voice effects such as lolita, uncle, reverberation, and echo.
 
-    AliyunAudioEffectType indicates a sound effect type. The weight parameter specifies the weight of the sound effect. Valid values: 0 to 100. The stream ID of a music stream is stored in the effectVid property of AliyunEffectMusic. The stream ID of an MV stream is stored in the audioEffectVid property of AliyunEffectMV. The stream ID of a main stream is stored in the streamId property of AliyunClip.
+    AliyunAudioEffectType indicates a voice effect type. The weight parameter specifies the weight of the voice effect. Valid values: 0 to 100. The stream ID of a music stream is stored in the effectVid property of AliyunEffectMusic. The stream ID of an MV stream is stored in the audioEffectVid property of AliyunEffectMV. The stream ID of a main stream is stored in the streamId property of AliyunClip. The following table describes the actions that are supported by AliyunAudioEffectType.
 
     |Action|Sample code|
     |------|-----------|
-    |Set the sound effect of a single stream.|    ```
+    |Set the voice effect of a single stream.|    ```
   - (int)setAudioEffect:(AliyunAudioEffectType)type weight:(int)weight streamId:(int)streamId;
     ``` |
-    |Remove the sound effect of a single stream.|Sound effects can be overlaid. To switch to a new sound effect, you must remove the existing sound effect.
+    |Remove the voice effect of a single stream.|Voice effects can be overlaid. To switch to a new voice effect, you must remove the existing voice effect.
 
     ```
 - (int)removeAudioEffect:(AliyunAudioEffectType)type streamId:(int)streamId;
     ``` |
-    |Set the sound effect of main streams.|In addition to the sound effect of a single stream, the short video SDK allows you to set the sound effect of main streams.
+    |Set the voice effect of main streams.|In addition to the voice effect of a single stream, the short video SDK allows you to set the voice effect of main streams.
 
     ```
 - (int)setMainStreamsAudioEffect:(AliyunAudioEffectType)type weight:(int)weight;
     ``` |
-    |Remove the sound effect of main streams.|    ```
+    |Remove the voice effect of main streams.|    ```
 - (int)removeMainStreamsAudioEffect:(AliyunAudioEffectType)type;
     ``` |
 
--   **Other audio settings**
+-   Other audio settings
 
     |Action|Sample code|
     |------|-----------|
-    |Mute audio.|    ```
+    |Mute an audio stream.|    ```
 - (int)setMute:(BOOL)mute;
     ``` |
     |Set the volume.|Default value: 100. If the volume parameter is set to a value greater than 100, the sound may be distorted. We recommend that you set the volume parameter to a value in the range of 0 to 100.
@@ -455,7 +454,7 @@ The delegate object needs to implement the AliyunIPlayerCallback protocol to mon
     ```
 - (int)setMainStreamsAudioWeight:(int)weight;
     ``` |
-    |Set the volume of a stream.|Each added video, music, dubbing, or MV stream is assigned a unique stream ID. The stream ID of a music stream is stored in the effectVid property of AliyunEffectMusic. The stream ID of an MV stream is stored in the audioEffectVid property of AliyunEffectMV. The stream ID of a main stream is stored in the streamId property of AliyunClip.
+    |Set the volume of an audio stream.|Each added video, music, dubbing, or MV stream is assigned a unique stream ID. The stream ID of a music stream is stored in the effectVid property of AliyunEffectMusic. The stream ID of an MV stream is stored in the audioEffectVid property of AliyunEffectMV. The stream ID of a main stream is stored in the streamId property of AliyunClip.
 
     ```
 - (int)setAudioWeight:(int)weight streamId:(int)streamId;
@@ -467,7 +466,7 @@ The delegate object needs to implement the AliyunIPlayerCallback protocol to mon
 - (int)setAudioDenoise:(BOOL)denoise streamId:(int)streamId;
     ``` |
 
--   **Animated sticker**
+-   Animated sticker
 
     The short video SDK supports three types of stickers: common sticker, subtitle, and bubble subtitle. You can add stickers by using the AliyunPasterManager class or the underlying class AliyunPasterRender.
 
@@ -485,9 +484,9 @@ The delegate object needs to implement the AliyunIPlayerCallback protocol to mon
 
         ![Schematic diagram of the MVC design](../images/p181774.png)
 
-        You can learn from the preceding schematic diagram that AliyunPasterManager is used to create an AliyunPasterController object. The controller calls the AliyunPasterBaseView method to obtain the upper-layer UI status. User modifications on the UI are sent to the controller by using AliyunPasterBaseView. Then, the controller synchronizes the UI status to the renderer to complete sticker rendering. This way, you can customize the UI as needed, provided that AliyunPasterUIEventProtocol is implemented.
+        You can learn from the preceding schematic diagram that AliyunPasterManager is used to create an AliyunPasterController object. The controller calls the AliyunPasterBaseView method to obtain the upper-layer UI status. User modifications on the UI are sent to the controller by using AliyunPasterBaseView. Then, the controller synchronizes the UI status to the renderer to complete sticker rendering. This way, you can customize the UI as needed, provided that AliyunPasterViewUIEventProtocol is implemented.
 
-        AliyunPasterViewUIEventProtocol supports the following actions:
+        AliyunPasterViewUIEventProtocol supports the following methods:
 
         ```
           - (void)eventBoundsDidChanged:(CGRect)aBounds; // Synchronize the size of the animated sticker to the controller for rendering.
@@ -500,11 +499,11 @@ The delegate object needs to implement the AliyunIPlayerCallback protocol to mon
           - (void)eventEditDidEnd; // Complete the editing.
         ```
 
-        AliyunPasterManager manages all animated stickers. To ensure that the position and size of each animated sticker are correctly rendered, first specify the editing area and rendering area. The following table describes the related actions.
+        AliyunPasterManager manages all animated stickers. To ensure that the position and size of each animated sticker are correctly rendered, first specify the editing area and rendering area. The following table describes the actions that are supported by AliyunPasterManager.
 
         |Action|Sample code|
         |------|-----------|
-        |Specify the editing area.|        ```
+        |Set the editing area.|        ```
 /**
 In general, the editing area needs to cover the entire video area, and all the upper-layer animated stickers are added to the editing area.
 */
@@ -512,7 +511,7 @@ In general, the editing area needs to cover the entire video area, and all the u
         ``` |
         |Set the resolution of the output video.|        ```
 /**
-During production, the size of the rendering area is calculated based on the output resolution.
+During production, the size of the rendering area is calculated based on the resolution of the output video.
 */
 @property (nonatomic, assign) CGSize outputSize;
         ``` |
@@ -520,7 +519,7 @@ During production, the size of the rendering area is calculated based on the out
 
         ```
 /**
-The rendering area is used to convert logical pixels to physical pixels. You can call the [_editor getPreviewRenderSize] method to obtain the size of the rendering area.
+Call the [_editor getPreviewRenderSize] method to obtain the size of the rendering area.
 */
 @property (nonatomic, assign) CGSize previewRenderSize;
         ``` |
@@ -605,7 +604,7 @@ API_AVAILABLE(3.7.0)
         |Set the type of the animated sticker.|        ```
 @property (nonatomic, assign, readonly) AliyunPasterEffectType pasterType;
         ``` |
-        |Set the rotation angle \(radian\) of the animated sticker.|All the values that are related to positions and sizes are logical pixels, which are converted to physical pixels for internal rendering.
+        |Set the rotation angle or radian of the animated sticker.|All the values that are related to positions and sizes are logical pixels, which are converted to physical pixels for internal rendering.
 
         ```
 @property (nonatomic, assign) CGFloat pasterRotate;
@@ -654,10 +653,10 @@ API_AVAILABLE(3.7.0)
         |Set the keyframe image.|        ```
 @property (nonatomic, strong, readonly) UIImage *kernelImage;
         ``` |
-        |Set the start time of the animated sticker, in seconds.|        ```
+        |Set the beginning of the animated sticker, in seconds.|        ```
 @property (nonatomic, assign) CGFloat pasterStartTime;
         ``` |
-        |Set the end time of the animated sticker, in seconds.|        ```
+        |Set the end of the animated sticker, in seconds.|        ```
 @property (nonatomic, assign) CGFloat pasterEndTime;
         ``` |
         |Set the duration of the animated sticker, in seconds.|        ```
@@ -666,7 +665,7 @@ API_AVAILABLE(3.7.0)
         |Set the minimum duration of the animated sticker, in seconds.|        ```
 @property (nonatomic, assign) CGFloat pasterMinDuration;
         ``` |
-        |Specify the editing area.|        ```
+        |Set the editing area.|        ```
 @property (nonatomic, assign) CGSize displaySize;
         ``` |
         |Set the resolution of the output video.|        ```
@@ -678,7 +677,7 @@ API_AVAILABLE(3.7.0)
 
         **Note:** All the values that are related to positions and sizes are logical pixels, which are converted to physical pixels for internal rendering.
 
-        AliyunPasterController provides methods for managing the editing status. You must call related methods to instruct an animated sticker controller to change the status when you start or stop the editing. The following table describes the related actions.
+        AliyunPasterController provides methods for managing the editing status. You must call related methods to instruct an animated sticker controller to change the status when you start or stop the editing. The following table describes the actions that are supported by AliyunPasterController.
 
         |Action|Sample code|
         |------|-----------|
@@ -708,7 +707,7 @@ This method provides the same feature as the previous method, and will be deprec
 - (void)editCompletedWithImage:(UIImage *)image;
         ``` |
 
-        You can use AliyunPasterControllerDelegate to fire callbacks to monitor the status of an animated sticker. The following table describes the related callback events.
+        You can use AliyunPasterControllerDelegate to fire callbacks to monitor the status of an animated sticker. The following table describes the callback events that are related to AliyunPasterControllerDelegate.
 
         |Callback event|Sample code|
         |--------------|-----------|
@@ -744,7 +743,7 @@ This method provides the same feature as the previous method, and will be deprec
 - (void)onEditEnd:(id)obj image:(UIImage *)image;
         ``` |
 
-        **Sample code:**
+        Sample code
 
         ```
             AliyunPasterController *pasterController = [self.pasterManager addPaster:pasterInfo.resourcePath startTime:range.startTime duration:range.duration]; // Initialize an AliyunPasterController object.
@@ -764,7 +763,7 @@ This method provides the same feature as the previous method, and will be deprec
 
     -   Use AliyunPasterRender
 
-        AliyunPasterManager uses the default UI that is provided by the short video SDK to add animated stickers. If you need to customize the UI, use AliyunPasterRender. The following table describes the related actions.
+        AliyunPasterManager uses the default UI that is provided by the short video SDK to add animated stickers. If you need to customize the UI, use AliyunPasterRender. The following table describes the actions that are supported by AliyunPasterRender.
 
         |Action|Sample code|
         |------|-----------|
@@ -809,7 +808,7 @@ This method provides the same feature as the previous method, and will be deprec
 - (int)removePaster:(AliyunEffectPasterBase *)basePaster;
         ``` |
 
--   **Doodle**
+-   Doodle
 
     Doodles involve the AliyunIPaint and AliyunICanvasView classes. AliyunIPaint indicates a paint brush and AliyunICanvasView indicates a canvas.
 
@@ -865,7 +864,7 @@ This method provides the same feature as the previous method, and will be deprec
 - (instancetype)initWithFrame:(CGRect)frame
                       paint:(AliyunIPaint *)paint;
         ``` |
-        |Modify the paint brush configuration.|        ```
+        |Modify the configuration of the paint brush.|        ```
 /**
 @param paint The paint brush.
 */
@@ -890,7 +889,7 @@ This method provides the same feature as the previous method, and will be deprec
 - (UIImage *)complete;
         ``` |
 
-        The following table describes the callback events related to doodling.
+        The following table describes the callback events that are related to doodling.
 
         |Callback event|Sample code|
         |--------------|-----------|
@@ -907,7 +906,7 @@ This method provides the same feature as the previous method, and will be deprec
 - (void)endDrawingWithCurrentPoint:(CGPoint)endPoint;
         ``` |
 
--   **Watermark**
+-   Watermark
 
     AliyunEffectImage indicates an image resource. You can call the initialization method to create a watermark image instance. The path parameter specifies the path of the watermark image file.
 
@@ -927,7 +926,7 @@ After initialization, you must set the frame parameter to specify the size and p
 
 You can set the endTime parameter of AliyunEffectMusic to set the duration of the end watermark. |
 
--   **Transition**
+-   Transition
 
     The short video SDK V3.7.0 and later provide the transition feature. The transition base class is AliyunTransitionEffect.
 
@@ -958,7 +957,7 @@ Make sure that the transition duration is greater than or equal to the video cli
         AliyunTransitionEffectFade: the fade transition.
     ```
 
-    **Note:** If you are familiar with OpenGL Shading Language, you can use transitionParam and customShader to customize transition settings.
+    **Note:** If you are familiar with Open Graphics Library \(OpenGL\) Shading Language, you can use transitionParam and customShader to customize transition settings.
 
     When you create an AliyunImporter instance, you can run the following sample code to add a transition effect to the video clip:
 
@@ -995,12 +994,12 @@ clipIndex:      0                1                N-1
     |Remove a transition.|    ```
 /**
 API_AVAILABLE(3.7.0) Note: Before you call this method, call [_editor stopEdit]. After you call this method, call [_editor startEdit] and [_player play].
-@param clipIdx The index.
+@param clipIdx The index of a video clip.
 */
 - (int)removeTransitionAtIndex:(int)clipIdx;
     ``` |
 
-    **Sample code**
+    Sample code
 
     ```
     AliyunTransitionEffectFade *fade = [[AliyunTransitionEffectFade alloc] init];
@@ -1008,7 +1007,7 @@ API_AVAILABLE(3.7.0) Note: Before you call this method, call [_editor stopEdit].
     [self.editor applyTransition:fade atIndex:idx];
     ```
 
--   **Animation**
+-   Animation
 
     In the short video SDK V3.7.0 and later, all objects that inherit AliyunClip and AliyunEffectPasterBase support the animation feature. The animation base class is AliyunAction.
 
@@ -1130,9 +1129,9 @@ API_AVAILABLE(3.7.0)
                                           };[effectPaster runAction:customAction];
     ```
 
-    **Note:** In this example, the customized fragmentShader and customUniformsMapper define the animation effect of a linear eraser.
+    **Note:** In this example, the configurations of fragmentShader and customUniformsMapper define the animation effect of a linear eraser.
 
--   **Custom rendering**
+-   Custom rendering
 
     The short video SDK allows you to obtain the texture IDs of the raw and rendered videos by using related methods. You can perform custom rendering in the rendering process. To perform custom rendering, you must implement the shader. Otherwise, you do not need to implement the shader.
 
@@ -1158,7 +1157,7 @@ API_AVAILABLE(3.7.0)
     - (int)textureRender:(int)srcTexture size:(CGSize)size;
     ```
 
--   **Padding and cropping**
+-   Padding and cropping
 
     You can use AliyunEffectRunningDisplayMode to dynamically switch the player to the padding mode or cropping mode during playback. The following related actions are supported:
 
@@ -1169,7 +1168,7 @@ API_AVAILABLE(3.7.0)
     @property(nonatomic, assign) int targetStreamId; // Specify the ID of the stream to which the playback mode applies.
     ```
 
-    **Sample code**
+    Sample code
 
     ```
     AliyunEffectRunningDisplayMode *displayMode = [[AliyunEffectRunningDisplayMode alloc ] init];
