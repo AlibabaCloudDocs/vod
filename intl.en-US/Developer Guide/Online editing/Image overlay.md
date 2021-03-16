@@ -4,7 +4,7 @@ This topic describes the parameters of image overlay. This topic also provides e
 
 ## Overview
 
-Video editing and the two methods about how to use the media editing service are introduced in [Overview](/intl.en-US/Developer Guide/Online editing/Overview.md). You can call the [ProduceEditingProjectVideo](/intl.en-US/API Reference/Video editing/ProduceEditingProjectVideo.md) operation to initiate and implement the media editing service. The timeline is the key data processed by the media editing service and the core object in video editing. The internal parameters of the timeline can be organized in multiple ways to meet requirements in different business scenarios.
+Video editing and the two methods about how to use the media editing service are introduced in [Overview](/intl.en-US/Developer Guide/Online editing/Overview.md). You can call the [ProduceEditingProjectVideo](/intl.en-US/API Reference/Online editing/ProduceEditingProjectVideo.md) operation to initiate and implement the media editing service. The timeline is the key data processed by the media editing service and the core object in video editing. The internal parameters of the timeline can be organized in multiple ways to meet requirements in different business scenarios.
 
 ## Parameters
 
@@ -13,12 +13,12 @@ Video editing and the two methods about how to use the media editing service are
 |Coordinates of the image overlaid on the output video|-   X: the horizontal distance between the upper-left corner of the image and the upper-left corner of the output video.
 -   Y: the vertical distance between the upper-left corner of the image and the upper-left corner of the output video.
 
-You can set the value to a percentage or the number of pixels.-   If the value is within \[**0～0.9999**\], the percentage of the horizontal or vertical offset distance of the image relative to the width or height of the output video. X indicates the percentage of the width, and Y indicates the percentage of the height.
+You can set the value to a percentage or the number of pixels.-   If the value is within **0～0.9999**, the percentage of the horizontal or vertical offset distance of the image relative to the width or height of the output video. X indicates the percentage of the width, and Y indicates the percentage of the height.
 -   If the value is an integer greater than or equal to 8, the value indicates the number of pixels. |
 |Size of the image overlaid on the output video|-   Width: the width of the image overlaid on the output video.
 -   Height: the height of the image overlaid on the output video.
 
-You can set the value to a percentage or the number of pixels.-   If the value is within \[**0～0.9999**\], the percentage of the width or height of the image relative to that of the output video. Width indicates the percentage of the width, and Height indicates the percentage of the height.
+You can set the value to a percentage or the number of pixels.-   If the value is within **0～0.9999**, the percentage of the width or height of the image relative to that of the output video. Width indicates the percentage of the width, and Height indicates the percentage of the height.
 -   If the value is an integer greater than or equal to 8, the value indicates the number of pixels. |
 |Time interval when the image is overlaid on the output video|-   TimelineIn: the start time of the image relative to the timeline.
 -   TimelineOut: the end time of the image relative to the timeline. |
