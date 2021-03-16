@@ -1,68 +1,78 @@
 # Video merging
 
+This topic describes the video merging feature and process. It also provides the sample code to show you how to merge videos by using the short video SDK for Android.
+
 ## Overview
 
-The AliyunIMixComposer operation is used to produce a video from multiple videos offline. The videos can be arranged in the specified layout, such as picture-in-picture, nine-square grid, left-right split-screen, or up-down split-screen. You can use this operation to produce a video from two or more videos, not only two videos in a duet.
+The short video SDK provides the AliyunIMixComposer interface for you to merge videos. You can implement this interface to produce a video from multiple videos offline. The videos can be arranged in the specified layout, such as picture-in-picture, nine-square grid, left-right split-screen, or up-down split-screen. Two or more video tracks can be created for video merging.
 
 ## Merging process
 
--   **Initialize a merging instance**
+-   Load files
+
+    Load all files.
+
+    ```
+    AlivcSdkCore.register(getApplicationContext());
+    ```
+
+-   Create an AliyunIMixComposer instance
 
     ```
     AliyunMixComposerCreator.createMixComposerInstance();
     ```
 
--   **Create tracks**
+-   Create tracks
 
     ```
-    AliyunIMixComposer#createTrack(AliyunMixTrackLayoutParam layoutParam);
+    AliyunIMixComposer.createTrack(AliyunMixTrackLayoutParam layoutParam);
     ```
 
--   **Add video streams to the tracks**
+-   Add video streams to tracks
 
     |Action|Sample code|
     |------|-----------|
     |Create a video stream.|    ```
 new AliyunMixStream.Builder().build();
     ``` |
-    |Add the video stream to a track.|    ```
-AliyunMixTrack#addStream(AliyunMixStream stream);
+    |Add a video stream to a track.|    ```
+AliyunMixTrack.addStream(AliyunMixStream stream);
     ``` |
 
--   **Set output parameters**
+-   Set output parameters
 
     ```
-    AliyunIMixComposer#setOutputParam(AliyunMixOutputParam param);
+    AliyunIMixComposer.setOutputParam(AliyunMixOutputParam param);
     ```
 
--   **Start merging**
+-   Start merging
 
     ```
-    AliyunIMixComposer#start(AliyunMixCallback callback);
+    AliyunIMixComposer.start(AliyunMixCallback callback);
     ```
 
--   **Pause merging**
+-   Pause merging
 
     ```
-    AliyunIMixComposer#pause();
+    AliyunIMixComposer.pause();
     ```
 
--   **Resume merging**
+-   Resume merging
 
     ```
-    AliyunIMixComposer#resume();
+    AliyunIMixComposer.resume();
     ```
 
--   **Cancel merging**
+-   Cancel merging
 
     ```
-    AliyunIMixComposer#cancel();
+    AliyunIMixComposer.cancel();
     ```
 
--   **Destroy the merging instance**
+-   Destroy the AliyunIMixComposer instance
 
     ```
-    AliyunIMixComposer#release();
+    AliyunIMixComposer.release();
     ```
 
 
@@ -123,13 +133,15 @@ AliyunMixStream stream22 = new AliyunMixStream
         .filePath("/storage/emulated/0/22.mp4")
         .streamEndTimeMills(20000)
         .build();
+
 // Add the video stream to Track 2.
 track2.addStream(stream22);
+
 // Set output parameters.
 AliyunMixOutputParam outputParam = new AliyunMixOutputParam.Builder()
         .outputPath("/sdcard/output.mp4")
-        .outputAudioReferenceTrack(track2)// Specify that the audio of Track 2 is used as the audio of the produced audio. The produced video supports only one audio stream. Therefore, the audio of the second video stream of Track 2 is not added to the produced video.
-        .outputDurationReferenceTrack(track2) // Specify that the duration of Track 2 is used as the duration of the produced video. If the duration of Track 1 is shorter than this value, the video of Track 1 stops at the last frame.
+        .outputAudioReferenceTrack(track2)// Specify that the audio of Track 2 is used as the output audio. The merged video supports only one audio stream. Therefore, the audio of the second video stream of Track 2 is not added to the merged video.
+        .outputDurationReferenceTrack(track2) // Specify that the duration of Track 2 is used as the duration of the merged video. If the duration of Track 1 is shorter than this value, the video of Track 1 stops at the last frame.
         .crf(6)
         .videoQuality(VideoQuality.HD)
         .outputWidth(720)
@@ -139,7 +151,7 @@ AliyunMixOutputParam outputParam = new AliyunMixOutputParam.Builder()
         .build();
 mixComposer.setOutputParam(outputParam);
 
-// Start the merging.
+// Start merging.
 AliyunMixCallback callback = new AliyunMixCallback() {
             @Override
             public void onProgress(long progress) {// The merging progress.
