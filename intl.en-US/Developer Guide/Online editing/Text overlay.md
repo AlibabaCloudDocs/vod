@@ -4,7 +4,7 @@ This topic describes the parameters of text overlay. This topic also provides ex
 
 ## Overview
 
-Video editing and the two methods about how to use the media editing service are introduced in [Overview](/intl.en-US/Developer Guide/Online editing/Overview.md). You can call the [ProduceEditingProjectVideo](/intl.en-US/API Reference/Video editing/ProduceEditingProjectVideo.md) operation to initiate and implement the media editing service. The timeline is the key data processed by the media editing service and the core object in video editing. The internal parameters of the timeline can be organized in multiple ways to meet requirements in different business scenarios.
+Video editing and the two methods about how to use the media editing service are introduced in [Overview](/intl.en-US/Developer Guide/Online editing/Overview.md). You can call the [ProduceEditingProjectVideo](/intl.en-US/API Reference/Online editing/ProduceEditingProjectVideo.md) operation to initiate and implement the media editing service. The timeline is the key data processed by the media editing service and the core object in video editing. The internal parameters of the timeline can be organized in multiple ways to meet requirements in different business scenarios.
 
 ## Parameters
 
@@ -13,7 +13,7 @@ Video editing and the two methods about how to use the media editing service are
 |Coordinates of the text overlaid on the output video|-   X : the horizontal distance between the upper-left corner of the text and the upper-left corner of the output video.
 -   Y: the vertical distance between the upper-left corner of the text and the upper-left corner of the output video.
 
-You can set the value to a percentage or the number of pixels.-   If the value is within \[**0～0.9999**\], the percentage of the horizontal or vertical offset distance of the text relative to the width or height of the output video. X indicates the percentage of the width, and Y indicates the percentage of the height.
+You can set the value to a percentage or the number of pixels.-   If the value is within **0～0.9999**, the percentage of the horizontal or vertical offset distance of the text relative to the width or height of the output video. X indicates the percentage of the width, and Y indicates the percentage of the height.
 -   If the value is an integer greater than or equal to 8, the value indicates the number of pixels. |
 |Text attributes|-   Content: the text content.
 -   Font: the font used by the text. Default value: SimSun.
