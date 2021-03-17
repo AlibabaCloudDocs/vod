@@ -81,7 +81,7 @@
     use OSS\Core\OssException;
     ```
 
-    **说明：** 更多信息可参考VOD PHP SDK安装 和 OSS PHP SDK安装。
+    **说明：** 更多信息，请参见[VOD PHP SDK安装](https://help.aliyun.com/document_detail/61067.html?spm=a2c4g.11186623.6.1068.6fd36de0T82ILT) 和 [OSS PHP SDK安装](https://help.aliyun.com/document_detail/85580.html?spm=a2c4g.11174283.6.1226.43167da2eqJiPR)。
 
 
 **参考代码**
@@ -357,7 +357,7 @@
 -   .NET Framework 4.6.1 及其以上版本。
 -   .NET Standard 2.0 及其以上版本。
 
-**说明：** 更多信息可参考 环境要求。
+**说明：** 更多信息，请参见 [环境要求](https://help.aliyun.com/document_detail/72085.html?spm=a2c4g.11186623.6.1088.25d64b183GDvRr)。
 
 **安装**
 
@@ -371,7 +371,7 @@
     dotnet add package aliyun-net-sdk-vod
     ```
 
-    **说明：** 说明 更多信息可参考VOD .NET SDK安装 和 OSS .NET SDK安装。
+    **说明：** 说明 更多信息，请参见[VOD .NET SDK安装](https://help.aliyun.com/document_detail/72085.html?spm=a2c4g.11186623.6.1088.37e04671A0WBW9) 和 [OSS .NET SDK安装](https://help.aliyun.com/document_detail/32086.html?spm=a2c4g.11186623.6.1338.67335ab7Pf3NfJ)。
 
 
 **参考代码**
@@ -513,7 +513,7 @@
 </dependency>
 ```
 
-**说明：** 更多信息可参考VOD Java SDK 和 OSS Java SDK。
+**说明：** 更多信息，请参见[VOD Java SDK](https://help.aliyun.com/document_detail/57756.html?spm=a2c4g.11186623.6.1032.786624eeXjAWxG) 和 [OSS Java SDK](https://help.aliyun.com/document_detail/32009.html?spm=a2c4g.11186623.6.923.3747516dEkaKTD)。
 
 **参考代码**
 
