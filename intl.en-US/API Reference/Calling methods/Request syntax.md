@@ -9,7 +9,7 @@ Endpoints
 The endpoint for the ApsaraVideo VOD API is `vod.{ApiRegion}.aliyuncs.com.`
 **Note**
 
-Replace {ApiRegion} with the ID of the region where the ApsaraVideo VOD API is used. For example, if the region is China (Shanghai), set the ID to `cn-shanghai`. In this case, the endpoint is `vod.cn-shanghai.aliyuncs.com`. If the region is Singapore, set the ID to `ap-southeast-1`. In this case, the endpoint is `vod.ap-southeast-1.aliyuncs.com`. For more information, see [VOD centers and endpoints]().
+Replace {ApiRegion} with the ID of the region where the ApsaraVideo VOD API is used. For example, if the region is China (Shanghai), set the ID to `cn-shanghai`. In this case, the endpoint is `vod.cn-shanghai.aliyuncs.com`. If the region is Singapore, set the ID to `ap-southeast-1`. In this case, the endpoint is `vod.ap-southeast-1.aliyuncs.com`. For more information, see [VOD centers and endpoints](/intl.en-US/Developer Guide/VOD centers and endpoints.md).
 
 Communication protocols 
 --------------------------------------------
