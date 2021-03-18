@@ -8,15 +8,17 @@ The advanced beautification and skin beautification features that are used in th
 
 ## Online music
 
-The sample music that is used in the demo of the short video SDK is provided by DMH Music of Taihe Music Group. DMH Music covers various music genres and provides tens of thousands of high-quality songs whose copyright can be authorized. It allows you to access music resources by using SDKs or APIs. DMH Music charges a fee for using online music resources based on the number of calls. You can consult this partner about the billing policies. For more information about this partner, visit the [DMH official website](https://cp.dmhmusic.com/).
+The sample music that is used in the demo of the short video SDK is provided by DMH Music of Taihe Music Group. The DMH platform provides tens of thousands of high-quality songs of various genres and is authorized to delegate the copyright of the songs. You can have access to music resources by using SDKs or API operations. DMH Music charges a fee for using online music resources based on the number of calls. You can consult this partner about the billing policies. For more information about this partner, visit the [DMH official website](https://cp.dmhmusic.com/).
+
+The DMH platform is available only in mainland China. If you are from a region outside mainland China, we recommend that you partner with music providers in your region.
 
 ## MV materials
 
 You can customize MV materials in the short video SDK. For more information about how to customize MV materials, see [Instructions on producing MV materials](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/123586/cn_zh/1561623344457/%E9%98%BF%E9%87%8C%E4%BA%91%E7%9F%AD%E8%A7%86%E9%A2%91SDKMV%E5%88%B6%E4%BD%9C%E8%A7%84%E8%8C%83.pdf).
 
-Xi'an Zhong Jing Film and TV Media Co., Ltd. owns numerous creative and themed MV templates for short videos. It is superior in video post-production and the production of effect materials for short videos. This partner charges a fee for effect production. You can consult this partner about the billing policies. For more information, visit the [Solutions for producing effect materials](http://mv.dashivlog.com/index).
+Xi'an Zhong Jing Film and TV Media Co., Ltd. owns numerous creative and themed MV templates for short videos. It is superior in video post-production and the production of effect materials for short videos. This partner charges a fee for effect production. You can consult this partner about the billing policies. For more information, visit [Solutions for producing effect materials](http://mv.dashivlog.com/index).
 
 ## Animated stickers
 
-You can customize animated stickers in the short video SDK. For more information about how to customize animated stickers, see [Specifications for customizing animated stickers and bubbles in Alibaba Cloud short video SDK](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/123586/cn_zh/1561623388954/%E9%98%BF%E9%87%8C%E4%BA%91%E7%9F%AD%E8%A7%86%E9%A2%91SDK%E5%8A%A8%E6%80%81%E8%B4%B4%E7%BA%B8%E5%8F%8A%E6%B0%94%E6%B3%A1%E5%88%B6%E4%BD%9C%E8%A7%84%E8%8C%83.pdf).
+You can customize animated stickers in the short video SDK.
 
