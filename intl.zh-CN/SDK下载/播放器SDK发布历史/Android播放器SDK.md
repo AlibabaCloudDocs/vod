@@ -2,6 +2,15 @@
 
 本文为您介绍了阿里云Android播放器在不同更新时间对应的更新功能。
 
+## 2021-03-18
+
+|日期|版本|修改内容|历史版本|
+|--|--|----|----|
+|2021-03-18|V5.3.3|-   优化Android内存。
+-   提升手机的适配能力。
+
+|[Android播放器SDK 5.3.3](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.3.3/ApsaraVideo_videoPlay_v5.3.3_Android_20210317.zip)|
+
 ## 2021-03-08
 
 |日期|版本|修改内容|历史版本|
