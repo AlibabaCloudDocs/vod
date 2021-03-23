@@ -28,7 +28,7 @@ HLS标准加密需要配合密钥管理服务和令牌服务使用，本文为�
 ## 准备工作
 
 1.  [开通KMS服务](https://common-buy.aliyun.com/?spm=a2c4g.11186623.2.3.bhZoMo&commodityCode=kms#/open)。
-2.  提交[工单](https://workorder.console.aliyun.com/console.htm#/ticket/add?productCode=vod&commonQuestionId=561&isSmart=true&iatraceid=1606446020666-2b842b67ddd84da10488b6&channel=selfservice)申请创建Service Key。Service Key与视频存储的源站区域必须一致，例如：视频存储在华东2，则Service Key必须是华东2。
+2.  提交[工单](https://ticket-intl.console.aliyun.com/#/ticket/createIndex)申请创建Service Key。Service Key与视频存储的源站区域必须一致，例如：视频存储在华东2，则Service Key必须是华东2。
 
     **说明：** Service Key是秘钥管理服务的一种加密主Key，接入标准加密的秘钥必须要使用该Service Key生成。视频点播控制台暂不支持用户自主创建Service Key。
 
@@ -108,7 +108,7 @@ HLS标准加密需要配合密钥管理服务和令牌服务使用，本文为�
 
 ## 解密播放最佳实践
 
-标准加密视频解密播放最佳实践，请参见[HLS标准加密安全播放]()。
+标准加密视频解密播放最佳实践，请参见[HLS标准加密安全播放](/intl.zh-CN/最佳实践/HLS标准加密安全播放.md)。
 
 ## 常见问题
 
