@@ -28,7 +28,7 @@ Http-Live-Streaming \(HLS\) Encryption must be used with Key Management Service 
 ## Preparations
 
 1.  [Activate KMS](https://common-buy.aliyun.com/?spm=a2c4g.11186623.2.3.bhZoMo&commodityCode=kms#/open).
-2.  Submit a [ticket](https://workorder.console.aliyun.com/console.htm#/ticket/add?productCode=vod&commonQuestionId=561&isSmart=true&iatraceid=1606446020666-2b842b67ddd84da10488b6&channel=selfservice) to create a service key. A service key must be created in the same region as the origin that stores videos. For example, if videos are stored in the China \(Shanghai\) region, the service key must be created in the China \(Shanghai\) region.
+2.  Submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex) to create a service key. A service key must be created in the same region as the origin that stores videos. For example, if videos are stored in the China \(Shanghai\) region, the service key must be created in the China \(Shanghai\) region.
 
     **Note:** A service key is a primary encryption key used in KMS. You must use the service key to generate keys for HLS Encryption. You cannot create service keys in the ApsaraVideo VOD console.
 
@@ -52,13 +52,13 @@ Use HLS Encryption based on the following procedure:
 
     -   Transcoding template that has encryption enabled: Log on to the ApsaraVideo VOD console and click Add Template in the Normal Transcoding Template section on the [Added Transcoding Template Group](https://vod.console.aliyun.com/?#/settings/transcode/add) page. Select hls from the Encapsulation Format drop-down list to create an HLS transcoding template. Enable **Video Encryption** and select **Alibaba Cloud Proprietary Cryptography** in the Advanced Parameters section. You must turn on the Video Encryption switch. Otherwise, videos are unencrypted. For more information, see [Manage transcoding settings](/intl.en-US/User Guide/Global settings/Manage transcoding settings.md).
 
-        **Note:** When you call the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitTranscodeJobs.md) operation, you can use the TemplateGroupId parameter to encrypt and transcode videos based on the specified template and key.
+        **Note:** When you call the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitTranscodeJobs.md) operation, you can use the TemplateGroupId parameter to encrypt and transcode videos based on the specified template and key.
 
     -   No transcoding template
 
         You can click [Set as Default](https://vod.console.aliyun.com/#/settings/transcode/list) in the Actions column to activate the no transcoding template on the Transcode page in the console. If the no transcoding template already exists, you do not need to activate it again.
 
-        **Note:** By default, ApsaraVideo VOD automatically transcodes uploaded videos. However, automatic transcoding does not support HLS Encryption. To prevent automatic transcoding when you use HLS Encryption, you must use the no transcoding template to upload videos. Then, you can call the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitTranscodeJobs.md) operation to start HLS Encryption and transcoding.
+        **Note:** By default, ApsaraVideo VOD automatically transcodes uploaded videos. However, automatic transcoding does not support HLS Encryption. To prevent automatic transcoding when you use HLS Encryption, you must use the no transcoding template to upload videos. Then, you can call the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitTranscodeJobs.md) operation to start HLS Encryption and transcoding.
 
 2.  Use RAM to authorize ApsaraVideo VOD
 
@@ -74,7 +74,7 @@ Use HLS Encryption based on the following procedure:
 
 5.  Start HLS Encryption and transcoding
 
-    Call the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitTranscodeJobs.md) operation by passing the **ID of the template** created in Step 1 and **HLS Encryption parameters** to start HLS Encryption and transcoding.
+    Call the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitTranscodeJobs.md) operation by passing the **ID of the template** created in Step 1 and **HLS Encryption parameters** to start HLS Encryption and transcoding.
 
 6.  Verify whether HLS Encryption and transcoding are successful
 
@@ -85,7 +85,7 @@ Use HLS Encryption based on the following procedure:
     -   If you are unsure after you check the result by using the preceding methods, copy the URL of the M3U8 file that is marked as Encrypted and run the `curl -v "URL of the M3U8 file"` command. Check whether the displayed M3U8 information contains the following information: `URI="<The decryption URL that you pass when you start HLS Encryption, which is the value of DecryptKeyUri in [EncryptConfig](/intl.en-US/API Reference/Appendix/Request parameters.md)>"`. If the preceding information exists, the file is encrypted in HLS Encryption mode and that the encryption is successful.
 7.  Obtain the playback URL and credential of a video
 
-    Call the [GetPlayInfo](/intl.en-US/API Reference/Video playback/GetPlayInfo.md) and [GetVideoPlayAuth](/intl.en-US/API Reference/Video playback/GetVideoPlayAuth.md) operations to obtain the playback URL and credential of a video.
+    Call the [GetPlayInfo](/intl.en-US/API Reference/Audio and video playback/GetPlayInfo.md) and [GetVideoPlayAuth](/intl.en-US/API Reference/Audio and video playback/GetVideoPlayAuth.md) operations to obtain the playback URL and credential of a video.
 
 8.  Pass the authentication information
 
@@ -104,7 +104,7 @@ Use HLS Encryption based on the following procedure:
 
 ## Best practices of decryption and playback
 
-For more information about the best practices of video decryption and playback, see [Secure playback based on HLS encryption]().
+For more information about the best practices of video decryption and playback, see [Secure playback based on HLS encryption](/intl.en-US/Best Practice/Secure playback based on HLS encryption.md).
 
 ## FAQ
 
@@ -120,7 +120,7 @@ For more information about the best practices of video decryption and playback, 
 
 -   How do I use the generated keys?
 
-    The GenerateDataKey operation returns a ciphertext key and a plaintext key. You need to pass only the ciphertext key to ApsaraVideo VOD. For more information about the parameters to be passed, see "the [EncryptConfig](/intl.en-US/API Reference/Appendix/Request parameters.md) parameters" section of the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitTranscodeJobs.md) topic.
+    The GenerateDataKey operation returns a ciphertext key and a plaintext key. You need to pass only the ciphertext key to ApsaraVideo VOD. For more information about the parameters to be passed, see "the [EncryptConfig](/intl.en-US/API Reference/Appendix/Request parameters.md) parameters" section of the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitTranscodeJobs.md) topic.
 
     **Note:**
 
@@ -139,7 +139,7 @@ For more information about the best practices of video decryption and playback, 
 
     All players that support HLS can decrypt and play a video encrypted in HLS Encryption mode. Procedure:
 
-    1.  Call the GetPlayInfo and GetVideoPlayAuth operations to obtain the playback URL and credential of a video. For more information, see [GetPlayInfo](/intl.en-US/API Reference/Video playback/GetPlayInfo.md) and [GetVideoPlayAuth](/intl.en-US/API Reference/Video playback/GetVideoPlayAuth.md).
+    1.  Call the GetPlayInfo and GetVideoPlayAuth operations to obtain the playback URL and credential of a video. For more information, see [GetPlayInfo](/intl.en-US/API Reference/Audio and video playback/GetPlayInfo.md) and [GetVideoPlayAuth](/intl.en-US/API Reference/Audio and video playback/GetVideoPlayAuth.md).
     2.  After the player obtains the URL of the M3U8 file, the player parses and accesses the URI in the EXT-X-KEY tag of the M3U8 file. This way, the player obtains the decryption operation URI that has the ciphertext key. This decryption operation URI is the value of DecryptKeyUri in Request parameters that you pass when you start HLS Encryption. For more information, see [EncryptConfig](/intl.en-US/API Reference/Appendix/Request parameters.md). If you allow only authorized users to access the video, the player must provide the authentication information you acknowledge when the player obtains the decryption key. The authentication information can be passed by using the MtsHlsUriToken parameter.
 
         Example:
@@ -159,7 +159,7 @@ For more information about the best practices of video decryption and playback, 
 -   Other FAQ
     -   Interface notes:
 
-        KeyNotFound is returned when the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitTranscodeJobs.md) operation is called. In this case, contact ApsaraVideo VOD technical support to create a service key in the required region such as China \(Beijing\) or China \(Shanghai\). The service key is used to generate encryption keys.
+        KeyNotFound is returned when the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitTranscodeJobs.md) operation is called. In this case, contact ApsaraVideo VOD technical support to create a service key in the required region such as China \(Beijing\) or China \(Shanghai\). The service key is used to generate encryption keys.
 
     -   Unencrypted file:
 
@@ -179,6 +179,6 @@ For more information about the best practices of video decryption and playback, 
 
     -   Duplicate encrypted files:
 
-        Duplicate encrypted files are generated. In this case, check whether the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitTranscodeJobs.md) operation is called repeatedly. If this operation is called repeatedly, duplicate encrypted files are generated. HLS Encryption and transcoding can be only manually started.
+        Duplicate encrypted files are generated. In this case, check whether the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitTranscodeJobs.md) operation is called repeatedly. If this operation is called repeatedly, duplicate encrypted files are generated. HLS Encryption and transcoding can be only manually started.
 
 
