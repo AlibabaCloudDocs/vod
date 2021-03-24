@@ -36,9 +36,12 @@ Obtains a URL and a credential for uploading a video and generates the video ID.
 -   Separate multiple tags with commas \(,\).
 -   Each tag can be up to 32 characters in length.
 -   The value must be encoded in UTF-8. |
-|UserData|String|No|\{"MessageCallback":"\{"CallbackURL":"http://test.test.com"\}", "Extend":"\{"localId":"\*\*\*\*\*", "test":"www"\}"\}|The custom configurations, including callback configurations and upload acceleration. The value is a JSON-formatted string. To enable the upload acceleration feature, submit a ticket. For more information, see the "UserData" section of the [Request parameters](~~86952~~) topic.
+|UserData|String|No|\{"MessageCallback":"\{"CallbackURL":"http://test.test.com"\}", "Extend":"\{"localId":"\*\*\*\*\*", "test":"www"\}"\}|The custom configurations, including callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the "UserData" section of the [Request parameters](~~86952~~) topic.
 
- **Note:** The callback configurations take effect only when you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console. |
+ **Note:**
+
+-   The callback configurations take effect only when you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console.
+-   To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex). For more information, see [Upload instructions](~~55396~~). |
 |TemplateGroupId|String|No|405477f9e21\*\*\*\*\*d19ea2c7c854|The ID of the transcoding template group.
 
  **Note:** If this parameter is set to a specific value, the specified template group is used for transcoding. Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.16.6948257eaZ4m54#/settings/transcode/list). In the left-side navigation pane, choose **Configuration Management** \> **Media Processing** \> **Transcode**. On the Transcode page, you can view the ID of the template group. |
@@ -52,7 +55,7 @@ Obtains a URL and a credential for uploading a video and generates the video ID.
 
 **Note:**
 
--   If you use the No Transcoding template group to upload videos, only the videos in the format of MP4, FLV, MP3, or M3U8 can be played. Videos in the other formats are supported only for storage. You can know the video format based on the file name extensions of the FileName parameter. If you want to use the ApsaraVideo Player, the version must be 3.1.0 or later.
+-   If you use the No Transcoding template group to upload videos, only the videos in the format of MP4, FLV, MP3, or M3U8 can be played. Videos in the other formats are supported only for storage. You can know the video format based on the file name extension in the value of the FileName parameter. If you want to use ApsaraVideo Player, the version must be 3.1.0 or later.
 -   If the No Transcoding template group is used, only the [FileUploadComplete](~~55630~~) but not the [TranscodeComplete](~~55636~~) event notification is returned after the video is uploaded.
 
 ## Response parameters
@@ -66,7 +69,7 @@ Obtains a URL and a credential for uploading a video and generates the video ID.
 
 **Note:**
 
--   This operation does not upload videos. To upload a video, you must obtain the [upload URL and credential](~~55397~~), decode the URL and credential by using the [Base64 algorithm](~~55397~~), and then use OSS SDKs to upload the video to a specified bucket. For more information, see [Upload videos by using the OSS native SDK](~~61388~~).
+-   This operation does not upload videos. To upload a video, you must obtain the [upload URL and credential](~~55397~~), decode the URL and credential by using the [Base64 algorithm](~~55397~~), and then use Object Storage Service \(OSS\) SDKs to upload the video to a specified bucket. For more information, see [Upload videos by using the OSS native SDK](~~61388~~).
 -   If the video upload credential expires after 3,000 seconds, you can call the [RefreshUploadVideo](~~55408~~) operation to obtain a new upload credential.
 
 ## Examples
@@ -126,21 +129,21 @@ The following table describes the common errors that this operation can return.
 
 |400
 
-|The error message returned because the file name extension of the FileName parameter is invalid. For more information about file name extensions supported by ApsaraVideo VOD, see [Overview](~~55396~~). |
+|The error message returned because the file name extension in the value of the FileName parameter is invalid. For more information about file name extensions supported by ApsaraVideo VOD, see [Overview](~~55396~~). |
 |IllegalCharacters
 
 |The specified $Parameter contains illegal emoticon or special characters.
 
 |400
 
-|The error message returned because the value of the request parameter such as Title, Description, and Tags contains emoticons. |
+|The error message returned because the value of a request parameter such as Title, Description, or Tags contains emoticons. |
 |LengthExceededMax
 
 |The specified $Parameter length has exceeded $MaxLength bytes.
 
 |400
 
-|The error message returned because the value length of the request parameter such as Title, Description, and Tags exceeds the upper limit. For more information about the length limit of parameter values, see the description of the request parameters in this topic. |
+|The error message returned because the value length of a request parameter such as Title, Description, or Tags exceeds the upper limit. For more information about the length limit of parameter values, see the description of the request parameters in this topic. |
 |TagsExceededMax
 
 |The specified Tags count has exceeded 16.
@@ -179,7 +182,7 @@ The following table describes the common errors that this operation can return.
 
 ## SDK examples
 
-We recommend that you use [server SDKs](~~101789~~) to call this operation. You can view the sample code of different languages to call this operation by clicking the following links:
+We recommend that you use a [server SDK](~~101789~~) to call this operation. For more information about the sample code that is used to call this operation in various languages, see the following topics:
 
 -   [Java](~~61063~~)
 -   [Python](~~61054~~)
