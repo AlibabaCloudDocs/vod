@@ -23,7 +23,7 @@ Obtains a URL and a credential for uploading an image.
 -   The value must be encoded in UTF-8. |
 |ImageExt|String|No|png|The file name extension of the image. Valid values:
 
- -   **png.** This is the default value.
+ -   **png**: This is the default value.
 -   **jpg**
 -   **jpeg**
 -   **gif** |
@@ -34,13 +34,16 @@ Obtains a URL and a credential for uploading an image.
 -   The value must be encoded in UTF-8. |
 |StorageLocation|String|No|outin-\*\*\*\*..oss-cn-shanghai.aliyuncs.com|The storage location.
 
- If this parameter is set to a specific value, the video is uploaded to the specified storage location. Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored). In the left-side navigation pane, choose **Configuration Management** \> **Media Management** \> **Storage**. On the Storage page, you can view the storage location. |
+ If this parameter is set to a specific value, the image is uploaded to the specified storage location. Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored). In the left-side navigation pane, choose **Configuration Management** \> **Media Management** \> **Storage**. On the Storage page, you can view the storage location. |
 |CateId|Long|No|12001111|The ID of the category.
 
  Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored). In the left-side navigation pane, choose **Configuration Management** \> **Media Management** \> **Categories**. On the Categories page, you can view the category IDs or modify categories. |
-|UserData|String|No|\{"MessageCallback":\{"CallbackURL":"http://test.test.com"\},"Extend":\{"localId":"xxx","test":"www"\}\}|The custom configurations, including callback configurations and upload acceleration. The value is a JSON-formatted string. To enable the upload acceleration feature, submit a ticket. For more information, see the "UserData" section of the [Request parameters](~~86952~~) topic.
+|UserData|String|No|\{"MessageCallback":\{"CallbackURL":"http://test.test.com"\},"Extend":\{"localId":"xxx","test":"www"\}\}|The custom configurations, including callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the "UserData" section of the [Request parameters](~~86952~~) topic.
 
- **Note:** The callback configurations take effect only when you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console. |
+ **Note:**
+
+-   The callback configurations take effect only when you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console.
+-   To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex). For more information, see [Upload instructions](~~55396~~). |
 |Description|String|No|Image upload test|The description of the image.
 
  -   The description can be up to 1,024 bytes in length.
@@ -112,7 +115,7 @@ For a list of error codes, visit the [API Error Center](https://error-center.ali
 
 ## SDK examples
 
-We recommend that you use [server SDKs](~~101789~~) to call this operation. You can view the sample code of different languages to call this operation by clicking the following links:
+We recommend that you use a [server SDK](~~101789~~) to call this operation. For more information about the sample code that is used to call this operation in various languages, see the following topics:
 
 -   [Java](~~61063~~)
 -   [Python](~~61054~~)
