@@ -2,12 +2,14 @@
 
 Uploads multiple media files based on the URLs of mezzanine files to ApsaraVideo VOD at a time.
 
-After upload jobs are submitted, you can receive an [UploadByURLComplete](~~86326~~) event notification. You can query the upload status by calling the [GetURLUploadInfos](~~106830~~) operation.
+After the media files are uploaded, you can receive an UploadByURLComplete event notification. For more information, see [UploadByURLComplete](~~86326~~).
+
+You can query the upload status by calling the GetURLUploadInfos operation. For more information, see [GetURLUploadInfos](~~106830~~).
 
 **Note:**
 
--   After the upload jobs are submitted, the jobs are executed asynchronously in the cloud. All submitted upload jobs are queued for execution. You can check the job status based on the URL and video ID returned in the event notification.
--   The UploadMediaByURL operation is suitable for scenarios where you relocate a site with no specific timeliness requirement. Videos are uploaded usually within several hours or days after the jobs are submitted. If you need to upload videos in real time, we recommend that you use [server upload SDKs](~~51992~~) to upload videos on your on-premises device in real time.
+-   After an upload job is submitted, the job is asynchronously executed on the cloud. All submitted upload jobs are queued for execution. You can check the job status based on the URL and video ID returned in the event notification.
+-   The UploadMediaByURL operation is suitable for scenarios where you relocate a site with no specific timeliness requirement. Videos are usually uploaded within several hours or days after the jobs are submitted. If you need to upload videos in real time, we recommend that you use server upload SDKs to upload videos on your on-premises device in real time. For more information, see [SDK download](~~51992~~).
 -   The UploadMediaByURL operation is available only in the **China \(Shanghai\)** region.
 
 ## Debugging
@@ -26,7 +28,7 @@ After upload jobs are submitted, you can receive an [UploadByURLComplete](~~8632
     -   If the URL contains a file name extension and the FileExtension parameter is set, the value of the FileExtension parameter is used.
     -   For more information about the supported file name extensions, see [Overview](~~55396~~).
 -   URL encoding is required. Separate multiple URLs with commas \(,\). You can enter a maximum of 20 URLs.
--   Special characters can cause upload video failures. Therefore, encode URLs before you separate them with commas \(,\). |
+-   Special characters may cause video upload failures. Therefore, encode URLs before you separate them with commas \(,\). |
 |TemplateGroupId|String|No|ca3a8f6e49\*\*\*\*\*57b65806709586|The ID of the transcoding template group.
 
  -   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.16.6948257eaZ4m54#/settings/transcode/list). In the left-side navigation pane, choose **Configuration Management** \> **Media Processing** \> **Transcode**. On the Transcode page, you can view the ID of the template group.
@@ -35,14 +37,17 @@ After upload jobs are submitted, you can receive an [UploadByURLComplete](~~8632
 |StorageLocation|String|No|outin-bfefbb90a47c\*\*\*\*\*\*163e1c7426.oss-cn-shanghai.aliyuncs.com|The storage location of the video.
 
  Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored). In the left-side navigation pane, choose **Configuration Management** \> **Media Management** \> **Storage**. On the Storage page, you can view the storage location. If you do not specify the storage location, the default bucket is used. |
-|UploadMetadatas|String|No|\{"SourceURL":"http://test.com/a.mp4","Title":"urlUploadTest"\}|The metadata of the videos to be uploaded. The value is a JSON-formatted string.
+|UploadMetadatas|String|No|\{"SourceURL":"http://test.com/a.mp4","Title":"urlUploadTest"\}|The metadata of the videos to be uploaded. The value is a JSON string.
 
  -   This parameter takes effect only when the value of the nested parameter SourceURL matches the URL specified by the UploadURLs parameter.
--   The JSON-formatted data, for example, `[UploadMetadata, UploadMetadata,…]`, must be converted into a JSON-formatted string.
+-   The JSON-formatted data, for example, `[UploadMetadata, UploadMetadata,…]`, must be converted into a JSON string.
 -   For more information, see the **"UploadMetadata"** section. |
-|UserData|String|No|\{"MessageCallback":\{"CallbackURL":"http://test.test.com"\},"Extend":\{"localId":"xxx","test":"www"\}\}|The custom configurations, including callback configurations and upload acceleration. The value is a JSON-formatted string. To enable the upload acceleration feature, submit a ticket. For more information, see the "UserData" section of the [Request parameters](~~86952#UserData~~) topic.
+|UserData|String|No|\{"MessageCallback":\{"CallbackURL":"http://test.test.com"\},"Extend":\{"localId":"xxx","test":"www"\}\}|The custom configurations, including callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the "UserData" section of the [Request parameters](~~86952#UserData~~) topic.
 
- **Note:** The callback configurations take effect only when you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console. |
+ **Note:**
+
+-   The callback configurations take effect only when you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console.
+-   To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex). For more information, see [Upload instructions](~~55396~~). |
 |AppId|String|No|app-\*\*\*\*|The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~). |
 |WorkflowId|String|No|e1e243b4254\*\*\*\*\*8248197d6f74f9|The ID of the workflow.
 
@@ -132,10 +137,10 @@ After upload jobs are submitted, you can receive an [UploadByURLComplete](~~8632
 **Note:**
 
 -   Nested parameters such as Title, Description, and Tags under the UploadMetadata parameter cannot contain emoticons.
--   If you use the **No Transcoding** template group to upload videos, only the videos in the format of MP4, FLV, MP3, or M3U8 can be played. If you want to use the ApsaraVideo Player, the version must be 3.1.0 or later.
+-   If you use the **No Transcoding** template group to upload videos, only the videos in the format of MP4, FLV, MP3, or M3U8 can be played. If you want to use ApsaraVideo Player, the version must be 3.1.0 or later.
 -   If the No Transcoding template group is used, only the [FileUploadComplete](~~55630~~) but not the [TranscodeComplete](~~55636~~) event notification is returned after the video is uploaded.
 -   In addition to the FileUploadComplete and TranscodeComplete event notifications, ApsaraVideo VOD sends an [UploadByURLComplete](~~86326~~) event notification after the video is uploaded.
--   If you specify multiple media files at a time, ApsaraVideo VOD sends event notifications separately for each media file.
+-   If you specify multiple media files at a time, ApsaraVideo VOD sends event notifications for each media file after the media file is uploaded.
 
 ## Response parameters
 
@@ -148,7 +153,7 @@ After upload jobs are submitted, you can receive an [UploadByURLComplete](~~8632
 
 **Note:**
 
--   This operation is used to upload videos asynchronously. Upload jobs are queued for execution after they are submitted. The completion time of each upload job varies based on the number of jobs in the queue.
+-   This operation is used to asynchronously upload videos. Upload jobs are queued for execution after they are submitted. The completion time of an upload job varies based on the number of jobs in the queue.
 
 ## Examples
 
@@ -213,7 +218,7 @@ The following table describes the common errors that this operation can return.
 
 ## SDK examples
 
-We recommend that you use [server SDKs](~~101789~~) to call this operation. You can view the sample code of different languages to call this operation by clicking the following links:
+We recommend that you use a [server SDK](~~101789~~) to call this operation. For more information about the sample code that is used to call this operation in various languages, see the following topics:
 
 -   [Java](~~61063~~)
 -   [Python](~~61054~~)
