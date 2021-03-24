@@ -1,6 +1,6 @@
 # CreateUploadAttachedMedia
 
-Obtains a URL and a credential for uploading an auxiliary media asset, such as a watermark file and a subtitle file.
+Obtains a URL and a credential for uploading an auxiliary media asset, such as a watermark file or a subtitle file.
 
 ## Debugging
 
@@ -34,14 +34,17 @@ Obtains a URL and a credential for uploading an auxiliary media asset, such as a
 -   The value must be encoded in UTF-8. |
 |StorageLocation|String|No|outin-bfefbb90a47c\*\*\*\*\*\*163e1c7426.oss-cn-shanghai.aliyuncs.com|The storage location.
 
- If this parameter is set to a specific value, the video is uploaded to the specified storage location. Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored). In the left-side navigation pane, choose **Configuration Management** \> **Media Management** \> **Storage**. On the Storage page, you can view the storage location. |
+ If this parameter is set to a specific value, the auxiliary media asset is uploaded to the specified storage location. Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored). In the left-side navigation pane, choose **Configuration Management** \> **Media Management** \> **Storage**. On the Storage page, you can view the storage location. |
 |Description|String|No|uploadTest|The description of the media asset. Rules:
 
  -   The description can be up to 1,024 bytes in length.
 -   The value must be encoded in UTF-8. |
-|UserData|String|No|\{"MessageCallback":\{"CallbackURL":"http://test.test.com"\},"Extend":\{"localId":"xxx","test":"www"\}\}|The custom configurations, including callback configurations and upload acceleration. The value is a JSON-formatted string. To enable the upload acceleration feature, [submit a ticket](https://selfservice.console.aliyun.com/ticket/category/vod/recommend/561?spm=a2c4g.11186623.2.20.2bbb1a9ea7Td9D). For more information, see the "UserData" section of the [Request parameters](~~86952~~) topic.
+|UserData|String|No|\{"MessageCallback":\{"CallbackURL":"http://test.test.com"\},"Extend":\{"localId":"xxx","test":"www"\}\}|The custom configurations, including callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the "UserData" section of the [Request parameters](~~86952~~) topic.
 
- **Note:** The callback configurations take effect only when you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console. |
+ **Note:**
+
+-   The callback configurations take effect only when you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console.
+-   To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex). For more information, see [Upload instructions](~~55396~~). |
 |CateIds|String|No|12984346,08130876|The ID of the category.
 
  -   Separate multiple IDs with commas \(,\). A maximum of five IDs can be specified.
@@ -54,7 +57,7 @@ Obtains a URL and a credential for uploading an auxiliary media asset, such as a
 |---------|----|-------|-----------|
 |FileURL|String|https://sample.oss-cn-shanghai.aliyuncs.com/watermark/\*\*\*\*.mov|The Object Storage Service \(OSS\) URL of the file. The URL does not contain the information used for authentication. You can set the FileUrl parameter to this URL when you call the [AddWatermark](~~98617~~) operation. |
 |MediaId|String|97dc17a5a\*\*\*\*\*bc3668489b84ce9|The ID of the media asset. |
-|MediaURL|String|http://sample.com/watermark/\*\*\*\*.mov?auth\_key=\*\*\*\*|The URL of the media asset. If a Content Delivery Network \(CDN\) domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned. |
+|MediaURL|String|http://sample.com/watermark/\*\*\*\*.mov?auth\_key=\*\*\*\*|The URL of the media asset. If a domain name for CDN is specified, a CDN URL is returned. Otherwise, an OSS URL is returned. |
 |RequestId|String|73254DE5-F260-47\*\*\*\*\*20-D06856B63C01|The ID of the request. |
 |UploadAddress|String|LWNuLXNoYW5\*\*\*\*\*naGFpLmFsaXl1b|The upload URL. |
 |UploadAuth|String|UzFnUjFxNkZ0NUI\*\*\*\*\*ZTaklyNWJoQ00zdHF|The upload credential. |
@@ -110,7 +113,7 @@ For a list of error codes, visit the [API Error Center](https://error-center.ali
 
 ## SDK examples
 
-We recommend that you use [server SDKs](~~101789~~) to call this operation. You can view the sample code of different languages to call this operation by clicking the following links:
+We recommend that you use a [server SDK](~~101789~~) to call this operation. For more information about the sample code that is used to call this operation in various languages, see the following topics:
 
 -   [Java](~~61063~~)
 -   [Python](~~61054~~)
