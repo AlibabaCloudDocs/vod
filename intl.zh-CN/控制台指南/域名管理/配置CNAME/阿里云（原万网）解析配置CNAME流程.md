@@ -2,6 +2,8 @@
 
 您在视频点播中添加自己的域名后，会自动生成有效的CNAME地址。如果您想启用视频点播加速服务，您需在自己域名所在的DNS服务商处，为域名添加CNAME记录，访问加速域名的请求才能转发到CDN节点上，达到加速效果。本文以阿里云解析（原万网）为例，为您介绍CNAME的配置流程。
 
+## 操作步骤
+
 1.  获取加速域名的CNAME地址。
 
     1.  登录[视频点播控制台](https://vod.console.aliyun.com/)。
@@ -16,7 +18,7 @@
 
     该步骤以在阿里云云解析DNS控制台添加CNAME记录为例，为您介绍CNAME的配置流程。如果您是在DNSPod、新网、Godaddy等其他域名解析服务商设置的域名解析，请前往对应的域名解析服务商添加CNAME记录，添加方法和本文介绍的方法类似。
 
-    1.  登录[阿里云云解析DNS控制台](https://dc.console.aliyun.com/dns)。
+    1.  登录[阿里云云解析DNS控制台](https://dns.console.aliyun.com)。
 
     2.  进入**域名解析**页面，在您需要设置的域名后面，单击**解析设置**。
 
@@ -24,7 +26,7 @@
 
         **说明：** 一个加速域名对应一个CNAME地址，主域名的CNAME地址不能被二级域名使用。如果您需要加速二级域名，需将二级域名也添加到CDN上，并解析到对应的CNAME地址，或者在CDN上添加泛域名，泛域名的CNAME可以被二级域名使用。
 
-        ![添加记录](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5562819951/p64412.png)
+        ![添加记录](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5843918061/p64412.png)
 
         -   记录类型：选择`CNAME`。
         -   主机记录：加速域名的前缀。
@@ -53,6 +55,6 @@
 
     2.  在命令行中ping加速域名，如果返回的解析结果和CDN控制台上该加速域名的CNAME值一致，则表示CDN加速已经生效。
 
-        ![CNAME生效验证](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6423839951/p66693.png)
+        ![CNAME生效验证](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9618134161/p66693.png)
 
 
