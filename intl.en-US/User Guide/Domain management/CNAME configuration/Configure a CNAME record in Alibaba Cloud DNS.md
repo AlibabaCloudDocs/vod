@@ -16,7 +16,7 @@ After you add a domain name to Alibaba Cloud CDN, Alibaba Cloud CDN assigns a CN
 
     The following procedure uses the Alibaba Cloud DNS console as an example to describe how to configure a CNAME record for the accelerated domain name. You can perform similar operations in other DNS services such as DNSPod, Xinnet, and GoDaddy to configure a CNAME record for the accelerated domain name.
 
-    1.  Log on to the [Alibaba Cloud DNS console](https://dc.console.aliyun.com/dns).
+    1.  Log on to the [Alibaba Cloud DNS console](https://dns.console.aliyun.com).
 
     2.  On the **Manage DNS** page, select the domain name that you want to manage, and then click **Configure** in the Actions column.
 
