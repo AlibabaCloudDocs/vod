@@ -4,8 +4,8 @@
 
 **说明：**
 
--   目前仅支持**上海**地域。
--   当起始结束时间间隔在7天以内时，返回小时粒度的数据；当起始结束时间间隔大于7天时，返回天粒度的数据；最大间隔为31天。
+-   目前服务地址仅支持：**华东2（上海）**。
+-   当起始结束时间间隔在7天以内时，返回小时粒度的数据。当起始结束时间间隔大于7天时，返回天粒度的数据，最大间隔为31天。
 
 ## 调试
 
@@ -18,17 +18,17 @@
 |Action|String|是|DescribeVodAIData|系统规定参数。取值：**DescribeVodAIData**。 |
 |EndTime|String|是|2019-02-01T15:00:00Z|获取数据结束时间点，需晚于起始时间。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
 |StartTime|String|是|2019-02-01T13:00:00Z|获取数据起始时间点。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
-|Region|String|否|cn-beijing|存储地域。默认返回所有区域。支持批量查询，多个地域使用用半角逗号（,）分隔。取值范围：
+|Region|String|否|cn-beijing|存储地域。默认返回所有区域。支持批量查询，多个地域使用半角逗号（,）分隔。取值：
 
- -   **cn-shanghai**（上海）
--   **cn-beijing**（北京）
--   **eu-central-1**（德国）
--   **ap-southeast-1**（新加坡） |
-|AIType|String|否|AIVideoCensor|AI类型。默认返回类型。支持批量查询，多个区域使用半角逗号（,）分隔。取值范围：
+ -   **cn-shanghai**：上海。
+-   **cn-beijing**：北京。
+-   **eu-central-1**：德国。
+-   **ap-southeast-1**：新加坡。 |
+|AIType|String|否|AIVideoCensor|AI类型。默认返回类型。支持批量查询，多个区域使用半角逗号（,）分隔。取值：
 
- -   **AIVideoCensor**（智能审核）
--   **AIVideoFPShot**（视频DNA）
--   **AIVideoTag**（智能标签） |
+ -   **AIVideoCensor**：智能审核。
+-   **AIVideoFPShot**：视频DNA。
+-   **AIVideoTag**：智能标签。 |
 
 ## 返回数据
 
@@ -38,17 +38,17 @@
 |AIDataItem| | | |
 |Data|Array of DataItem| |AI处理用量详细数据。 |
 |DataItem| | | |
-|Name|String|AIVideoCensor|AI类型。 取值范围：
+|Name|String|AIVideoCensor|AI类型。 取值：
 
- -   **AIVideoCensor**（智能审核）
--   **AIVideoFPShot**（视频DNA）
--   **AIVideoTag**（智能标签） |
+ -   **AIVideoCensor**：智能审核。
+-   **AIVideoFPShot**：视频DNA。
+-   **AIVideoTag**：智能标签。 |
 |Value|String|111|处理时长。单位：秒。 |
 |TimeStamp|String|2019-02-01T13:00:00Z|时间片起始时刻。格式为：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。 |
-|DataInterval|String|day|返回数据的时间颗粒度。取值范围：
+|DataInterval|String|day|返回数据的时间颗粒度。取值：
 
- -   **hour**（小时数据）
--   **day**（天数据） |
+ -   **hour**：小时数据。
+-   **day**：天数据。 |
 |RequestId|String|C370DAF1-C838-4288-\*\*\*\*-9A87633D248E|请求ID。 |
 
 ## 示例
@@ -64,7 +64,7 @@ https://vod.aliyuncs.com/?Action=DescribeVodAIData
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
 <DescribeVodAIDataResponse>
@@ -97,7 +97,7 @@ https://vod.aliyuncs.com/?Action=DescribeVodAIData
 </DescribeVodAIDataResponse>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
 {
