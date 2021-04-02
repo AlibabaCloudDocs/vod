@@ -2,9 +2,9 @@
 
 The short video AppServer is used to exchange data between the short video application and ApsaraVideo VOD, process business logic, and manage operations data. This topic describes how to build the short video AppServer.
 
--   An Alibaba Cloud account is created. Real-name verification is complete for the Alibaba Cloud account. For more information, see [t12832.md\#]().
+-   An Alibaba Cloud account is created. Real-name verification is complete for the Alibaba Cloud account.
 -   Elastic Compute Service \(ECS\) is activated. An ECS instance is configured. For more information, see [Activate and configure ECS](/intl.en-US/Short Video Solution/Activate and configure ECS.md).
--   Java Development Kit \(JDK\) 8 is installed on the ECS instance. For more information, see [t1989721.md\#section\_hzq\_5v9\_ffy]().
+-   Java Development Kit \(JDK\) 8 is installed on the ECS instance.
 -   MySQL 5.7 is installed on the ECS instance. For more information, see [Install and configure a MySQL database](). When you publish your short video service to the production environment, we recommend that you use ApsaraDB RDS. For more information, visit [the buy page of ApsaraDB RDS](https://rds-buy.aliyun.com/nextBuy/rds#/create/rds/mysql).
 -   ApsaraVideo VOD is activated. For more information, see [Activate and configure ApsaraVideo VOD](/intl.en-US/Short Video Solution/Activate and configure ApsaraVideo VOD.md).
 
@@ -186,7 +186,7 @@ The short video AppServer is used to exchange data between the short video appli
         |Q\_SOURCE|No|
         |CALLBACK\_PRIVETEKEY|Yes|The key that is used for callback authentication. You can obtain the key from the [Callback](https://vod.console.aliyun.com/settings/transcode/list#/settings/callback) page in the ApsaraVideo VOD console.|
         |CALLBACK\_NAME|Yes|The callback URL, in the format of http://Public IP address of the ECS instance:8080/vodcallback/callback. In this example, the callback URL is http://10.10.10.101:8080/vodcallback/callback.|
-        |AUDIT\_SETTINGS\_FLAG|Yes|Specifies whether to review videos before the videos are released. Default value: on. Valid values:         -   **on**: Review videos before the videos are released.
+        |AUDIT\_SETTINGS\_FLAG|Yes|Specifies whether to review videos before the videos are released. Default value: on. Valid values:        -   **on**: Review videos before the videos are released.
         -   **off**: Review videos after the videos are released. |
         |auth\_key|No|The configurations for live streaming. If you do not set the parameters, the **no data found** message appears on the live streaming page. The current edition of the short video AppServer does not provide the source code of live streaming. To use the live streaming feature, submit a ticket to apply for the source code of the preview edition.|
         |live\_domain|No|
