@@ -27,7 +27,7 @@ If the immersive mode is disabled in Android-based WeChat, videos are played in 
 
     For more information, download the [HTML5 demo](https://github.com/alilmq/h5demo).
 
-    ![](../images/p190051.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0400677161/p190051.png)
 
 -   Configure the immersive mode for video playback in full-screen mode
 
@@ -43,7 +43,7 @@ If the immersive mode is disabled in Android-based WeChat, videos are played in 
 
     For more information, download the [HTML5 live demo](https://github.com/alilmq/h5livedemo).
 
-    ![](../images/p190052.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0400677161/p190052.png)
 
 
 Suggestions for configuring the immersive mode
@@ -82,7 +82,7 @@ When you configure the immersive mode, take note of the following suggestions:
     -   scale-down
     The following figure shows the display effects of the preceding values.
 
-    ![](../images/p190053.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0400677161/p190053.png)
 
     The following code provides an example on how to use the object-fit property:
 
@@ -119,7 +119,7 @@ When you configure the immersive mode, take note of the following suggestions:
 
     The following figure shows different display effects based on different values of the object-position property.
 
-    ![](../images/p190054.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0400677161/p190054.png)
 
 -   Height adjustment for the player container
 
