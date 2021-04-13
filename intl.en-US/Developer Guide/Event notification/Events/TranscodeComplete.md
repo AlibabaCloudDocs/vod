@@ -10,7 +10,7 @@ TranscodeComplete
 
 The TranscodeComplete event is generated after all streams of a video are transcoded.
 
-**Note:** If you have enabled URL signing, you must generate your own auth\_key to access the playback URL of the video. Otherwise, the `HTTP 403` error code is returned for your request. For more information about URL signing, see [URL authentication](/intl.en-US/Developer Guide/Video security/URL signing.md).
+**Note:** If you have enabled URL signing, you must generate your own auth\_key to access the playback URL of the video. Otherwise, the `HTTP 403` error code is returned for your request. For more information about URL signing, see [URL authentication](/intl.en-US/Developer Guide/Video security/URL authentication.md).
 
 ## Event notification content
 
@@ -30,7 +30,7 @@ The value of StreamInfos is an array. The following table describes the fields o
 |-----|----|--------|-----------|
 |Status|String|No|Indicates whether the video stream is transcoded. Valid values:-   **success**: The video stream is transcoded.
 -   **fail**: The video stream failed to be transcoded. |
-|Bitrate|Float|No|The bitrate of the video stream. Unit: Kbps.|
+|Bitrate|String|No|The bitrate of the video stream. Unit: Kbps.|
 |Definition|String|No|The definition of the video stream. Valid values:-   **FD**: low definition
 -   **LD**: standard definition
 -   **SD**: high definition
@@ -46,7 +46,7 @@ The value of StreamInfos is an array. The following table describes the fields o
 |FileUrl|String|No|The playback URL of the video stream. The URL does not carry the signing auth\_key. If you have enabled URL signing, you must generate your own auth\_key to access the playback URL of the video stream.|
 |Format|String|No|The format of the video stream.-   **mp4**
 -   **m3u8** |
-|Fps|Float|No|The frame rate of the video stream, in frames per second.|
+|Fps|String|No|The frame rate of the video stream, in frames per second.|
 |Height|Long|No|The height of the video stream. Unit: px.|
 |Size|Long|No|The size of the video stream. Unit: bytes.|
 |Width|Long|No|The width of the video stream. Unit: px.|
@@ -70,13 +70,13 @@ Description:
   [
    {
      "Status": "success",
-     "Bitrate": 925,
+     "Bitrate": "925",
      "Definition": "LD",
      "Duration": 15,
      "Encrypt": false,
      "FileUrl": "http://vod.aliyunsample.com/ABEBDE1JSU79FD4D1329/62cb3151eba52js82j2da3b55bc5****.mp4",
      "Format": "mp4",
-     "Fps": 30,
+     "Fps": "30",
      "Height": 960,
      "Size": 1815321,
      "Width": 540,
@@ -84,13 +84,13 @@ Description:
    },
    {
      "Status": "success",
-     "Bitrate": 1575,
+     "Bitrate": "1575",
      "Definition": "SD",
      "Duration": 15,
      "Encrypt": false,
      "FileUrl": "http://vod.aliyunsample.com/ABEBDE1JSU79FD4D1329/62cb3151eba52js82j2da3b55bc5****.mp4",
      "Format": "mp4",
-     "Fps": 30,
+     "Fps": "30",
      "Height": 960,
      "Size": 3090951,
      "Width": 540,
