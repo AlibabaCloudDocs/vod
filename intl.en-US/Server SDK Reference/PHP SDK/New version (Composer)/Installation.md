@@ -66,7 +66,7 @@ Install Alibaba Cloud SDK for PHP by using one of the following methods:
 
     If Composer is unavailable, you can download a ZIP file that contains all classes and dependencies.
 
-    Download the [SDK.zip](http://aliyunsdk-pages.alicdn.com/php-sdk/sdk.zip?spm=a2c4g.11186623.2.31.37214) file, decompress it in a specified directory of the project, and then include the autoloader in your script. Example:
+    Download the [SDK](https://aliyunsdk-pages.alicdn.com/php-sdk/sdk.zip?spm=a2c4g.11186623.2.31.37214) file, decompress it in a specified directory of the project, and then include the autoloader in your script. Example:
 
     ```
     <? php
