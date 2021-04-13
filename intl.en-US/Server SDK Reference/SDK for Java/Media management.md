@@ -10,7 +10,7 @@ Before you can use the SDK, initialize a client. For more information, see [Init
 
 You can call the SearchMedia operation to search for media asset information.
 
-For more information about the request and response parameters of this operation, see [SearchMedia](/intl.en-US/API Reference/Media management/Media Search/SearchMedia.md). Example:
+For more information about the request and response parameters of this operation, see [SearchMedia](/intl.en-US/API Reference/Media asset management/Media asset search/SearchMedia.md). Example:
 
 ```
 import com.aliyuncs.vod.model.v20170321.SearchMediaRequest;
@@ -63,7 +63,7 @@ public static void main(String[] argv) {
 
 You can call the GetVideoInfo operation to query details about a video.
 
-For more information about the request and response parameters of this operation, see [GetVideoInfo](/intl.en-US/API Reference/Media management/Audio&Video Management/GetVideoInfo.md). Example:
+For more information about the request and response parameters of this operation, see [GetVideoInfo](/intl.en-US/API Reference/Media asset management/Audio and video management/GetVideoInfo.md). Example:
 
 ```
 import com.aliyuncs.vod.model.v20170321.GetVideoInfoRequest;
@@ -100,7 +100,7 @@ public static void main(String[] argv) {
 
 You can call the GetVideoInfos operation to query videos.
 
-For more information about the request and response parameters of this operation, see [GetVideoInfos](/intl.en-US/API Reference/Media management/Audio&Video Management/GetVideoInfos.md). Example:
+For more information about the request and response parameters of this operation, see [GetVideoInfos](/intl.en-US/API Reference/Media asset management/Audio and video management/GetVideoInfos.md). Example:
 
 ```
 import com.aliyuncs.vod.model.v20170321.GetVideoInfosRequest;
@@ -151,7 +151,7 @@ public static void main(String[] argv) {
 
 You can call the UpdateVideoInfo operation to modify the information about a video.
 
-For more information about the request and response parameters of this operation, see [UpdateVideoInfo](/intl.en-US/API Reference/Media management/Audio&Video Management/UpdateVideoInfo.md). Example:
+For more information about the request and response parameters of this operation, see [UpdateVideoInfo](/intl.en-US/API Reference/Media asset management/Audio and video management/UpdateVideoInfo.md). Example:
 
 ```
 import com.aliyuncs.vod.model.v20170321.UpdateVideoInfoRequest;
@@ -189,7 +189,7 @@ public static void main(String[] argv) {
 
 You can call the UpdateVideoInfos operation to modify the information about videos.
 
-For more information about the request and response parameters of this operation, see [UpdateVideoInfos](/intl.en-US/API Reference/Media management/Audio&Video Management/UpdateVideoInfos.md). Example:
+For more information about the request and response parameters of this operation, see [UpdateVideoInfos](/intl.en-US/API Reference/Media asset management/Audio and video management/UpdateVideoInfos.md). Example:
 
 ```
 import com.aliyuncs.vod.model.v20170321.UpdateVideoInfosRequest;
@@ -244,7 +244,7 @@ public static void main(String[] argv) {
 
 You can call the DeleteVideo operation to delete videos.
 
-For more information about the request and response parameters of this operation, see [DeleteVideo](/intl.en-US/API Reference/Media management/Audio&Video Management/DeleteVideo.md). Example:
+For more information about the request and response parameters of this operation, see [DeleteVideo](/intl.en-US/API Reference/Media asset management/Audio and video management/DeleteVideo.md). Example:
 
 ```
 import com.aliyuncs.vod.model.v20170321.DeleteVideoRequest;
@@ -280,7 +280,7 @@ public static void main(String[] argv) {
 
 You can call the GetMezzanineInfo operation to query source file information.
 
-For more information about the request and response parameters of this operation, see [GetMezzanineInfo](/intl.en-US/API Reference/Media management/Audio&Video Management/GetMezzanineInfo.md). Example:
+For more information about the request and response parameters of this operation, see [GetMezzanineInfo](/intl.en-US/API Reference/Media asset management/Audio and video management/GetMezzanineInfo.md). Example:
 
 ```
 import com.aliyuncs.vod.model.v20170321.GetMezzanineInfoRequest;
@@ -323,7 +323,7 @@ public static void main(String[] argv) {
 
 You can call the GetVideoList operation to query videos by using filter conditions.
 
-For more information about the request and response parameters of this operation, see [GetVideoList](/intl.en-US/API Reference/Media management/Audio&Video Management/GetVideoList.md). Example:
+For more information about the request and response parameters of this operation, see [GetVideoList](/intl.en-US/API Reference/Media asset management/Audio and video management/GetVideoList.md). Example:
 
 ```
 import com.aliyuncs.vod.model.v20170321.GetVideoListRequest;
@@ -389,7 +389,7 @@ public static void main(String[] argv) {
 
 You can call the DeleteStream operation to delete a media stream.
 
-For more information about the request and response parameters of this operation, see [DeleteStream](/intl.en-US/API Reference/Media management/Audio&Video Management/DeleteStream.md). Example:
+For more information about the request and response parameters of this operation, see [DeleteStream](/intl.en-US/API Reference/Media asset management/Audio and video management/DeleteStream.md). Example:
 
 ```
 import com.aliyuncs.vod.model.v20170321.DeleteStreamRequest;
@@ -425,7 +425,7 @@ public static void main(String[] argv) {
 
 You can call the DeleteMezzanines operation to delete source files.
 
-For more information about the request and response parameters of this operation, see [DeleteMezzanines](/intl.en-US/API Reference/Media management/Audio&Video Management/DeleteMezzanines.md). Example:
+For more information about the request and response parameters of this operation, see [DeleteMezzanines](/intl.en-US/API Reference/Media asset management/Audio and video management/DeleteMezzanines.md). Example:
 
 ```
 import com.aliyuncs.vod.model.v20170321.DeleteMezzaninesRequest;
@@ -463,7 +463,7 @@ public static void main(String[] argv) {
 
 You can call the UpdateImageInfos operation to modify the information about images.
 
-For more information about the request and response parameters of this operation, see [UpdateImageInfos](/intl.en-US/API Reference/Media management/Image Management/UpdateImageInfos.md). Example:
+For more information about the request and response parameters of this operation, see [UpdateImageInfos](/intl.en-US/API Reference/Media asset management/Image management/UpdateImageInfos.md). Example:
 
 ```
 import com.aliyuncs.vod.model.v20170321.UpdateImageInfosRequest;
@@ -517,7 +517,7 @@ public static void main(String[] argv) throws Exception {
 
 You can call the GetImageInfo operation to query details about an image.
 
-For more information about the request and response parameters of this operation, see [GetImageInfo](/intl.en-US/API Reference/Media management/Image Management/GetImageInfo.md). Example:
+For more information about the request and response parameters of this operation, see [GetImageInfo](/intl.en-US/API Reference/Media asset management/Image management/GetImageInfo.md). Example:
 
 ```
 import com.aliyuncs.vod.model.v20170321.GetImageInfoRequest;
@@ -557,7 +557,7 @@ public static void main(String[] argv) throws ClientException {
 
 You can call the DeleteImage operation to delete images.
 
-For more information about the request and response parameters of this operation, see [DeleteImage](/intl.en-US/API Reference/Media management/Image Management/DeleteImage.md). Example:
+For more information about the request and response parameters of this operation, see [DeleteImage](/intl.en-US/API Reference/Media asset management/Image management/DeleteImage.md). Example:
 
 ```
 import com.aliyuncs.vod.model.v20170321.DeleteImageRequest;
