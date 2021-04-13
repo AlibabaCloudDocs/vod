@@ -12,8 +12,8 @@ Create a category {#h2--div-id-addcategory-div-2}
 -------------------------------------------------
 
 You can call the AddCategory operation to create a category.
-For more information about the request and response parameters of this operation, see [AddCategory](/intl.en-US/API Reference/Media management/Media Category/AddCategory.md). Example: 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [AddCategory](/intl.en-US/API Reference/Media asset management/Media asset category/AddCategory.md). Example: 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import AddCategoryRequest
     def add_category(clt, cateName, parentId=-1):
@@ -39,8 +39,8 @@ Modify a category {#h2--div-id-updatecategory-div-3}
 ----------------------------------------------------
 
 You can call the UpdateCategory operation to modify a category.
-For more information about the request and response parameters of this operation, see [UpdateCategory](/intl.en-US/API Reference/Media management/Media Category/UpdateCategory.md). Example: 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [UpdateCategory](/intl.en-US/API Reference/Media asset management/Media asset category/UpdateCategory.md). Example: 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import UpdateCategoryRequest
     def update_category(clt, cateId, cateName):
@@ -66,8 +66,8 @@ Delete a category {#h2--div-id-deletecategory-div-4}
 ----------------------------------------------------
 
 You can call the DeleteCategory operation to delete a category.
-For more information about the request and response parameters of this operation, see [DeleteCategory](/intl.en-US/API Reference/Media management/Media Category/DeleteCategory.md). Example: 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [DeleteCategory](/intl.en-US/API Reference/Media asset management/Media asset category/DeleteCategory.md). Example: 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import UpdateCategoryRequest
     # If you delete a video category, its subcategories, including level-2 and level-3 categories, are also deleted. Perform this operation with caution.
@@ -93,8 +93,8 @@ Query a category and its subcategories {#h2--div-id-getcategories-div-5}
 ------------------------------------------------------------------------
 
 You can call the GetCategories operation to query a category and its subcategories.
-For more information about the request and response parameters of this operation, see [GetCategories](/intl.en-US/API Reference/Media management/Media Category/GetCategories.md). Example: 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [GetCategories](/intl.en-US/API Reference/Media asset management/Media asset category/GetCategories.md). Example: 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import GetCategoriesRequest
     def get_categories(clt, cateId=-1, pageNo=1, pageSize=10):
