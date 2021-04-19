@@ -299,7 +299,7 @@ onUploadstarted': function (uploadInfo) {
 if (上传方式1) {
   if(!uploadInfo.videoId)//这个文件没有上传异常
   {
-    //实际环境中调用调用视频点播的获取上传凭证接口
+    //实际环境中调用视频点播的获取上传凭证接口
     uploader.setUploadAuthAndAddress(uploadInfo, uploadAuth, uploadAddress,videoId);
   }
   else//如果videoId有值，根据videoId刷新上传凭证
