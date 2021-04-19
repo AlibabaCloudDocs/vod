@@ -34,16 +34,16 @@ ApsaraVideo VOD provides server upload SDKs and demos of how to use them. Server
 
 The following SDKs are provided:
 
--   [Java upload SDK](/intl.en-US/Upload SDK/Server upload/Java upload SDK.md)
--   [Python upload SDK](/intl.en-US/Upload SDK/Server upload/Python upload SDK.md)
--   [C/C++ upload SDK](/intl.en-US/Upload SDK/Server upload/C/C++ Upload SDK.md)
--   [PHP upload SDK](/intl.en-US/Upload SDK/Server upload/PHP upload SDK.md)
+-   [Java upload SDK](/intl.en-US/Upload SDK/Upload from servers/Upload SDK for Java.md)
+-   [Python upload SDK](/intl.en-US/Upload SDK/Upload from servers/Upload SDK for Python.md)
+-   [C/C++ upload SDK](/intl.en-US/Upload SDK/Upload from servers/Upload SDK for C or C++.md)
+-   [PHP upload SDK](/intl.en-US/Upload SDK/Upload from servers/Upload SDK for PHP.md)
 
 ## Use OSS SDKs
 
 ApsaraVideo VOD does not provide server upload SDKs for all programming languages. If the server upload SDK for a programming language is unavailable, you can use OSS SDKs. You can perform the following steps to upload files by using OSS SDKs:
 
-1.  Access ApsaraVideo VOD and obtain the upload URL and credential. For more information, see [Upload URLs and credentials]().
+1.  Access ApsaraVideo VOD and obtain the upload URL and credential. For more information, see [Upload URLs and credentials](/intl.en-US/Developer Guide/Upload Medias/Upload URLs and credentials.md).
 
     **Note:** Information about the media file and a media ID \(such as a video ID or an Image ID\) are returned in this step. Keep the media ID for subsequent operations such as video playback, management, and AI processing.
 
