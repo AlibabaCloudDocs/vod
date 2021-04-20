@@ -84,7 +84,7 @@ debug包包含模拟器和真机版本，可以保证模拟器编译通过；在
 
 1.  阿里云主账户创建子账户 —- 给子账户授权AliyunSTSAssumeRoleAccess。
 2.  使用子账户—-创建角色 —- 给角色授权VODFULL。
-3.  通过调用STS的SDK，获取STS，参考：[Java SDK 示例](https://help.aliyun.com/document_detail/28788.html)。
+3.  通过调用STS的SDK，获取STS，参考：[Java示例](/intl.zh-CN/SDK参考/SDK参考（STS）/Java示例.md)。
 
     **说明：** 调用STS的SDK中的ak必须要是子账户的ak。
 
