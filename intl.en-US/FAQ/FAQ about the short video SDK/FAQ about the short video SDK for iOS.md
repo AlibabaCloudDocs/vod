@@ -84,7 +84,7 @@ Perform the following steps to obtain a security token that Security Token Servi
 
 1.  Create a RAM user by using your Alibaba Cloud account and grant the AliyunSTSAssumeRoleAccess permission to the RAM user.
 2.  Use the RAM user to create a role and grant the AliyunVODFullAccess permission to the role.
-3.  Call the STS SDK to obtain the security token. For more information, see [Sample code of SDK for Java](https://help.aliyun.com/document_detail/28788.html).
+3.  Call the STS SDK to obtain the security token. For more information, see [STS SDK for Java](/intl.en-US/SDK Reference/STS SDK Reference/STS SDK for Java.md).
 
     **Note:** Use the AccessKey pair of the RAM user to call the STS SDK.
 
