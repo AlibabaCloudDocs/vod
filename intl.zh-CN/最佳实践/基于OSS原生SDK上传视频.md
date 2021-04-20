@@ -1,5 +1,7 @@
 # 基于OSS原生SDK上传视频
 
+通过阅读本文，让您了解基于OSS原声SDK上传视频的实现方式。
+
 ## 场景
 
 视频点播提供了丰富的 [上传方式](https://help.aliyun.com/document_detail/55396.html?spm=a2c4g.11186623.2.64.47154eaf9iu1C0#h2-u4E0Au4F20u65B9u5F0F2)包括[客户端上传](https://help.aliyun.com/document_detail/55398.html)、[服务端上传](https://help.aliyun.com/document_detail/55399.html)等，但可能缺乏需要的语言版本（如Go等），此时可以直接基于OSS原生SDK进行上传。
@@ -524,7 +526,7 @@
 
         ```
         public static DefaultAcsClient initVodClient(String accessKeyId, String accessKeySecret) throws ClientException {
-            // 根据点播接入服务所在的Region填写，例如：接入服务在上海，则填cn-shanghai；其他区域请参见文档[点播中心](~~98194~~)
+            // 根据点播接入服务所在的Region填写，例如：接入服务在上海，则填cn-shanghai；其他区域请参见[点播中心和访问域名](/intl.zh-CN/开发指南/点播中心和访问域名.md)。
             String regionId = "cn-shanghai";
             DefaultProfile profile = DefaultProfile.getProfile(regionId, accessKeyId, accessKeySecret);
             DefaultAcsClient client = new DefaultAcsClient(profile);
