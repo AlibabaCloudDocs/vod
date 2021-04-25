@@ -10,14 +10,16 @@
 -   上传网络音视频到视频点播：自动从URL地址下载并上传到视频点播，最大支持48.8 TB的单个文件。
 -   上传本地图片到视频点播：自动从本地文件路径上传到视频点播。
 -   上传网络图片到视频点播：自动从URL地址下载并上传到视频点播。
--   上传本地m3u8音视频（包括所有分片文件）到视频点播：需指定本地m3u8索引文件和分片文件目录。
--   上传网络m3u8音视频（包括所有分片文件）到视频点播：需指定网络m3u8索引文件和分片文件的URL地址。
+-   上传本地M3U8音视频（包括所有分片文件）到视频点播：需指定本地M3U8索引文件和分片文件目录。
+-   上传网络M3U8音视频（包括所有分片文件）到视频点播：需指定网络M3U8索引文件和分片文件的URL地址。
 -   上传本地辅助媒资文件到视频点播：自动从本地文件路径上传到视频点播。
 -   上传网络辅助媒资文件到视频点播：自动从URL地址下载并上传到视频点播。
 
+**说明：** 上传的URL，需要将URL编码后再传入使用，避免存在特殊字符导致无法上传视频的情况。
+
 除了上述主要功能外，上传SDK服务还可实现以下功能：
 
--   上传进度条，支持SDK默认进度回调和自定义进度回调，m3u8文件上传暂不支持。
+-   上传进度条，支持SDK默认进度回调和自定义进度回调，M3U8文件上传暂不支持。
 -   可指定上传脚本部署的ECS区域，如果与视频点播存储（OSS）区域相同，则自动使用内网上传文件至存储，上传更快且更省公网流量（由于视频点播API只提供外网域名访问，因此部署上传脚本的ECS服务器必须具有访问外网的权限）。
 -   可指定视频点播中心（默认为上海）和存储区域，便于海外上传。
 -   支持上传时设置元数据（标题）、StorageLocation、UserData、转码模板、视频点播工作流等。
@@ -27,16 +29,16 @@
 
 ## 安装SDK
 
-1.  下载Java上传SDK及示例代码VODUploadDemo-java-1.4.13.zip，请参见[SDK下载](/cn.zh-CN/SDK下载/SDK下载.md)中的服务端上传SDK部分内容。
+1.  下载Java上传SDK及示例代码VODUploadDemo-java-1.4.14.zip，更多下载信息，请参见[服务端上传SDK](/cn.zh-CN/SDK下载/SDK下载.md)。
 
-    **说明：** 此处以Java1.8版本、SDK1.4.13版本举例说明。其他版本请根据实际情况操作。
+    **说明：** 此处以Java1.8版本、SDK1.4.14版本举例说明。其他版本请根据实际情况操作。
 
-2.  解压VODUploadDemo-java-1.4.13.zip，将lib目录下的所有jar文件复制到您的项目中。
+2.  解压VODUploadDemo-java-1.4.14.zip，将lib目录下的所有jar文件复制到您的项目中。
 
-    **说明：** 以下列举出部分依赖jar包的版本，您可直接在您的项目中添加maven依赖，也可以将VODUploadDemo-java-1.4.13.zip包中的所有jar包引入您的项目中使用。同时，请确保部分jar包符合以下要求：
+    **说明：** 以下列举出部分依赖jar包的版本，您可直接在您的项目中添加maven依赖，也可以将VODUploadDemo-java-1.4.14.zip包中的所有jar包引入您的项目中使用。同时，请确保部分jar包符合以下要求：
 
-    -   使用上传SDK aliyun-java-vod-upload-1.4.13.jar时，需保证aliyun-sdk-oss的版本号不小于3.9.0。
-    -   目前视频点播已在国内发布的区域有上海、深圳、北京，使用上传SDK上传到深圳、北京区域，需保证aliyun-java-sdk-vod版本号为2.15.11、aliyun-java-sdk-core版本号不小于4.4.5。
+    -   使用上传SDK aliyun-java-vod-upload-1.4.14.jar时，需保证aliyun-sdk-oss的版本号不小于3.9.0。
+    -   目前视频点播已在国内发布的区域有上海、深圳、北京，使用上传SDK上传到深圳、北京区域，需保证aliyun-java-sdk-vod版本号不低于2.15.11、aliyun-java-sdk-core版本号不小于4.4.5。
     ```
        <dependency>
             <groupId>com.aliyun</groupId>
@@ -83,7 +85,7 @@
 
 -   上传SDK示例
 
-    将VODUploadDemo-java-1.4.13.zip开发包解压，sample目录下的UploadVideoDemo.java为文件上传示例代码，如下所示：
+    将VODUploadDemo-java-1.4.14.zip开发包解压，sample目录下的UploadVideoDemo.java为文件上传示例代码，如下所示：
 
     ```
     public class UploadVideoDemo {
@@ -213,7 +215,7 @@
 
 -   上传进度条示例
 
-    将VODUploadDemo-java-1.4.13.zip开发包解压，sample目录下的PutObjectProgressListener.java为上传进度回调函数示例程序。该类必须继承VoDProgressListener类，ProgressEvent是通过OSS上传文件时产生的进度回调通知，您可以自定义各个事件通知的业务处理逻辑，示例代码如下所示：
+    将VODUploadDemo-java-1.4.14.zip开发包解压，sample目录下的PutObjectProgressListener.java为上传进度回调函数示例程序。该类必须继承VoDProgressListener类，ProgressEvent是通过OSS上传文件时产生的进度回调通知，您可以自定义各个事件通知的业务处理逻辑，示例代码如下所示：
 
     ```
     import com.aliyun.oss.event.ProgressEvent;
