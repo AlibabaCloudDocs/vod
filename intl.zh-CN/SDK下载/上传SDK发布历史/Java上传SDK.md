@@ -2,6 +2,12 @@
 
 本文为您介绍了阿里云Java上传SDK在不同更新时间对应的更新功能。
 
+## 2021-04-23
+
+|日期|版本|修改内容|下载地址|
+|--|--|----|----|
+|2021-04-23|V1.4.14|修复uploadVideo接口在上传视频大小为0的文件时，上传状态一直是上传中的问题。|[Java上传SDK及示例代码](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/upload/java/VODUploadDemo-java-1.4.14.zip)|
+
 ## 2020-09-23
 
 |日期|版本|修改内容|下载地址|
