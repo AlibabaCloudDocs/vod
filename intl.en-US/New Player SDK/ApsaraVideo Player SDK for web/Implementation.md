@@ -1,12 +1,12 @@
 # Implementation
 
-This topic shows you how to implement various features of ApsaraVideo Player SDK for web. This topic also provides sample code so that you can implement the features with ease.
+This topic shows you how to implement various features of ApsaraVideo Player SDK for web. This topic also provides sample code so that you can implement these features with ease.
 
 ## Continuous playback
 
 The operations required for autoplay of the next video at the end of the current video differ based on the player type and the URL format of the next video.
 
--   Playback based on URLs of videos that use the same streaming protocol
+-   Playback based on the URLs of videos that use the same streaming protocol
 
     For an HTML5 or a Flash player, you must configure the player to subscribe to the `ended` event. After the player receives the `ended` event, it calls the `loadByUrl` method to load the next video based on the specified URL. The following code provides an example:
 
@@ -20,7 +20,7 @@ The operations required for autoplay of the next video at the end of the current
     ```
 
 -   Playback based on video IDs and playback credentials
-    -   For an HTML5 player, you can configure the player to call the `replayByVidAndPlayAuth` method after it receives the `ended` event. The ID and playback credential of the next video must be passed to the method. The following code provides an example:
+    -   For an HTML5 player, you can configure the player to call the `replayByVidAndPlayAuth` method after it receives the `ended` event. The ID and playback credential of the next video must be passed to the method.```` The following code provides an example:
 
         ```
         function endedHandle()
@@ -31,7 +31,7 @@ The operations required for autoplay of the next video at the end of the current
         player.on("ended", endedHandle);
         ```
 
-    -   A Flash player does not provide a method to switch to a video based on the video ID and playback credential. To switch to a video, you must destroy the existing player and create another player. The following code provides an example:
+    -   A Flash player does not provide a method to switch to a video based on the video ID and playback credential. To switch to a video, you must destroy the existing player and create another player.```` The following code provides an example:
 
         ```
         function endedHandle()
@@ -53,11 +53,11 @@ The operations required for autoplay of the next video at the end of the current
         player.on("ended", endedHandle);
         ```
 
-        **Note:** A playback credential is valid for only 100s. When a player calls the `replayByVidAndPlayAuth` method, the player must pass a new playback credential to the method. For more information, see [GetVideoPlayAuth](/intl.en-US/API Reference/Video playback/GetVideoPlayAuth.md).
+        **Note:** A playback credential is valid for only 100s. When a player calls the `replayByVidAndPlayAuth` method, the player must pass a new playback credential to the method. For more information, see [GetVideoPlayAuth](/intl.en-US/API Reference/Audio and video playback/GetVideoPlayAuth.md).``
 
 -   Playback based on URLs of videos that use different streaming protocols
 
-    Assume that an MP4 video is being played and the next video uses the HLS streaming protocol. To enable autoplay of the next video at the end of the current video, you must create another player. The following code provides an example:
+    Assume that an MP4 video is being played and the next video uses the HTTP Live Streaming \(HLS\) protocol. To enable autoplay of the next video at the end of the current video, you must create another player. The following code provides an example:
 
     ```
     function endedHandle()
@@ -140,7 +140,7 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
       }
     ```
 
-    **Note:** When you play FLV videos by using an HTML5 player in Safari, the snapshot feature is not supported. The snapshot button is not displayed even if you enable this feature.
+    **Note:** When you play FLV videos by using an HTML5 player in Safari, the snapshot feature is not supported. The snapshot button does not appear even if you enable this feature.
 
 -   Set snapshot size and quality
 
@@ -152,7 +152,7 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
 
 -   Subscribe to the snapshoted event
 
-    After a snapshot is taken, a `snapshoted event` is triggered and the snapshot data is returned. The following code provides an example:
+    After a snapshot is taken, the `snapshoted event` is triggered and the snapshot data is returned. The following code provides an example:
 
     ```
     player.on("snapshoted", function(data) {
@@ -165,11 +165,11 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
     The preceding code contains the following parameters:
 
     -   time: the point in time of the snapshot.
-    -   base64: the Base64-encoded string of the snapshot. It can be directly used to display the image.
-    -   binary: the binary data of the snapshot. It can be used to upload the image.
+    -   base64: the Base64-encoded string of the snapshot. This string can be directly used to display the image.
+    -   binary: the binary data of the snapshot. The binary data can be used to upload the image.
 -   Add a header that is used to enable CORS for an HTML5 player
 
-    Canvas is the element that enables the snapshot feature for an HTML5 player. You must add a header that is used to enable CORS to the playback domain name. For more information, see [How do I configure CORS](https://help.aliyun.com/document_detail/62950.html?spm=a2c4g.11186623.2.56.1e606fc59YbZqx).
+    Canvas is the element that enables the snapshot feature for an HTML5 player. You must add a header that is used to enable CORS to the playback domain name. For more information, see [How do I configure CORS?](https://help.aliyun.com/document_detail/62950.html?spm=a2c4g.11186623.2.56.1e606fc59YbZqx)
 
 -   Add text watermarks to snapshots taken in an HTML5 player
 
@@ -180,7 +180,7 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
     |left|The distance to the left side.|
     |top|The height of the upper-left corner, including the height of text.|
     |text|The text in the watermark.|
-    |font|The format of the text. You can set multiple font attributes together by separating every two of them with a space.    -   **font-style**: specifies the font style.
+    |font|The format of the text. You can set multiple font attributes together by separating them with spaces.     -   **font-style**: specifies the font style.
     -   **font-weight**: specifies the font weight.
     -   **font-size**: specifies the font size.
     -   **font-family**: specifies the font family. |
@@ -213,13 +213,13 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
         |liveTimeShiftUrl|The URL that is used to query the time shifting information.|
         |liveStartTime|The start time of live streaming.|
         |liveOverTime|The end time of live streaming.|
-        |liveShiftSource|The HLS URL for time shifting.**Note:** This attribute is set only for FLV live streams. |
+        |liveShiftSource|The HLS URL for time shifting. **Note:** This attribute is set only for FLV live streams. |
 
 -   Time shifting UI
 
-    The time shifting UI mainly consists of a progress bar, which displays time in the area that supports time shifting.
+    The time shifting UI consists of a progress bar, which displays time in the area that supports time shifting.
 
-    ![Time display](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2280401161/p208961.png)
+    ![Time display](../images/p183664.png)
 
     **Note:** The time area displays the current playback time, end time of live streaming, and current live streaming time from left to right.
 
@@ -278,7 +278,7 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
      videoHeight:"200px", // The height of the video.
     ```
 
-    ![Effects](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2280401161/p208962.png)
+    ![Effects](../images/p183673.png)
 
 -   Method description
 
@@ -286,13 +286,13 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
     |------|-----------|
     |setRotate|Sets the rotation angle. A positive value indicates clockwise rotation, whereas a negative value indicates anticlockwise rotation. Example: setRotate\(90\).|
     |getRotate|Obtains the rotation angle.|
-    |setImage|Sets the mirroring type. Valid values:    -   **horizon**: vertical mirroring.
-    -   **vertical**: horizontal mirroring. |
+    |setImage|Sets the mirroring type. Valid values:    -   **horizon**: horizontal mirroring.
+    -   **vertical**: vertical mirroring. |
 
 -   Browser adaptability
-    -   Web browsers for PC and iOS support the two features.
-    -   Chrome and Firefox for Android support the two features.
-    -   WeChat and many other web browsers for Android may modify the settings of ApsaraVideo Player SDK without your permission or knowledge. In this case, the two features are not supported.
+    -   Web browsers for PC and iOS support rotation and mirroring.
+    -   Chrome and Firefox for Android support rotation and mirroring.
+    -   WeChat and many other web browsers for Android may modify the settings of ApsaraVideo Player SDK without your permission or knowledge. In this case, rotation and mirroring are not supported.
 
 ## Multi-resolution playback
 
@@ -319,19 +319,19 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
 
 ## Considerations
 
--   When an HTML5 player plays a video, the message "No 'Access-Control-Allow-Origin' header is present on the requested resource" may be displayed in the web browser console. To resolve this issue, configure CORS. For more information, see [How do I configure CORS](https://help.aliyun.com/document_detail/62950.html?spm=a2c4g.11186623.2.52.1e606fc53hzRt4).
--   When a Flash player plays a video, a Canonical Name \(CNAME\) or CORS error may occur. To resolve this issue, configure CORS. For more information, see [How do I configure CORS](https://help.aliyun.com/document_detail/62950.html?spm=a2c4g.11186623.2.52.1e606fc53hzRt4).'
--   When you play a video in WeChat or QQ on an Android mobile phone, the Tencent X5 browser hijacks the video tag to automatically play the video in full-screen mode. To resolve this issue, enable the immersive mode for the HTML5 player. For more information, see [How do I enable the immersive mode for the HTML5 player](https://help.aliyun.com/document_detail/62953.html?spm=a2c4g.11186623.2.54.1a616fc5zJ9Ai1).
+-   When an HTML5 player plays a video, the message "No 'Access-Control-Allow-Origin' header is present on the requested resource" may be displayed in the web browser console. To resolve this issue, configure CORS. For more information, see [How do I configure CORS?](https://help.aliyun.com/document_detail/62950.html?spm=a2c4g.11186623.2.52.1e606fc53hzRt4)
+-   When a Flash player plays a video, a Canonical Name \(CNAME\) or CORS error may occur. To resolve this issue, configure CORS. For more information, see [How do I configure CORS?](https://help.aliyun.com/document_detail/62950.html?spm=a2c4g.11186623.2.52.1e606fc53hzRt4)
+-   When you play a video in WeChat or QQ on an Android mobile phone, the Tencent X5 browser hijacks the video tag to automatically play the video in full-screen mode. To resolve this issue, enable the immersive mode for the HTML5 player. For more information, see [How do I enable the immersive mode for the HTML5 player?](https://help.aliyun.com/document_detail/62953.html?spm=a2c4g.11186623.2.54.1a616fc5zJ9Ai1)
 
 ## Other features
 
 -   [Progress bar marking](https://developer.aliyun.com/article/686043)
--   [How do I configure the skin for the player](https://help.aliyun.com/document_detail/62947.html?spm=a2c4g.11186623.2.62.60ef6fc5ZDqksa)
--   [How do I set the skinLayout attribute](https://help.aliyun.com/document_detail/62948.html?spm=a2c4g.11186623.2.63.60ef6fc5WM2gri)
--   [How do I configure CORS](https://help.aliyun.com/document_detail/62950.html?spm=a2c4g.11186623.2.64.60ef6fc5yzOd32)
--   [How do I resume live streaming after an error occurred](https://help.aliyun.com/document_detail/63067.html?spm=a2c4g.11186623.2.66.60ef6fc5NzCFtM)
--   [How do I use the diagnostics tool](https://help.aliyun.com/document_detail/63068.html?spm=a2c4g.11186623.2.67.60ef6fc5TW3z5q)
--   [How do I customize the error UI for the HTML5 player](https://help.aliyun.com/document_detail/63069.html?spm=a2c4g.11186623.2.68.60ef6fc5YO4DaJ)
--   [How do I customize components](https://help.aliyun.com/document_detail/63207.html?spm=a2c4g.11186623.2.69.60ef6fc5BZZ2Fp)
--   [How do I configure playback delay](https://help.aliyun.com/document_detail/63198.html?spm=a2c4g.11186623.2.70.60ef6fc5Ldbbb5)
+-   [How do I configure the skin for the player?](https://help.aliyun.com/document_detail/62947.html?spm=a2c4g.11186623.2.62.60ef6fc5ZDqksa)
+-   [How do I set the skinLayout attribute?](https://help.aliyun.com/document_detail/62948.html?spm=a2c4g.11186623.2.63.60ef6fc5WM2gri)
+-   [How do I configure CORS?](https://help.aliyun.com/document_detail/62950.html?spm=a2c4g.11186623.2.64.60ef6fc5yzOd32)
+-   [How do I resume live streaming after an error occurred?](https://help.aliyun.com/document_detail/63067.html?spm=a2c4g.11186623.2.66.60ef6fc5NzCFtM)
+-   [How do I use the diagnostics tool?](https://help.aliyun.com/document_detail/63068.html?spm=a2c4g.11186623.2.67.60ef6fc5TW3z5q)
+-   [How do I customize the error UI for the HTML5 player?](https://help.aliyun.com/document_detail/63069.html?spm=a2c4g.11186623.2.68.60ef6fc5YO4DaJ)
+-   [How do I customize components?](https://help.aliyun.com/document_detail/63207.html?spm=a2c4g.11186623.2.69.60ef6fc5BZZ2Fp)
+-   [How do I configure playback delay?](https://help.aliyun.com/document_detail/63198.html?spm=a2c4g.11186623.2.70.60ef6fc5Ldbbb5)
 
