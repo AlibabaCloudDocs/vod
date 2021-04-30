@@ -23,7 +23,7 @@ Before you read this topic, check whether the upload SDK is provided in your req
 ## Preparations
 
 -   Activate and configure ApsaraVideo VOD.
--   Obtain the AccessKey of your Alibaba Cloud account and the upload permission. For more information, see [Overview](https://help.aliyun.com/document_detail/57055.html).
+-   Obtain the AccessKey pair of your Alibaba Cloud account and the upload permission. For more information, see [Overview](https://help.aliyun.com/document_detail/57055.html).
 
 ## Upload procedure
 
@@ -34,12 +34,12 @@ Before you read this topic, check whether the upload SDK is provided in your req
     **Note:** A media asset record is created and a video ID is returned in this step. Keep the video ID for subsequent operations. For example, you can play a video, manage a video, and use AI to process a video based on the video ID.
 
 2.  Parse the values of the returned UploadAddress and UploadAuth parameters to obtain the Object Storage Service \(OSS\) upload URL and authorization information. For more information, see [Upload URL and credential](https://help.aliyun.com/document_detail/55397.html?spm=a2c4g.11186623.2.61.627e4eafSZjXWo#UploadAuthDecode).
-3.  Call OSS SDK to upload video files to the specified bucket by using Security Token Service \(STS\)-based authentication. Use the decoded upload URL and authentication information rather than your AccessKey for initialization.
+3.  Call OSS SDK to upload video files to the specified bucket by using Security Token Service \(STS\)-based authentication. Use the decoded upload URL and authentication information rather than your AccessKey pair for initialization.
 
 ## Code implementation
 
 -   To implement the core code, perform the following four steps:
-    1.  Use the AccessKey to initialize the ApsaraVideo VOD client.
+    1.  Use the AccessKey pair to initialize the ApsaraVideo VOD client.
     2.  Obtain the upload URL and credential for a video.
     3.  Use the upload URL and credential to initialize the OSS client.
     4.  Upload an on-premises file.
@@ -63,7 +63,7 @@ Before you read this topic, check whether the upload SDK is provided in your req
 1.  Create an empty folder that is named aliyun-php-sdk in your PHP project.
 2.  Download the entire source code from [aliyun-openapi-php-sdk](https://github.com/aliyun/aliyun-openapi-php-sdk?spm=a2c4g.11186623.2.68.627e4eafSZjXWo). Decompress the downloaded package and copy the aliyun-php-sdk-core and aliyun-php-sdk-vod folders to the aliyun-php-sdk directory.
 3.  Download the latest source code of OSS SDK for PHP from [aliyun-oss-php-sdk](https://github.com/aliyun/aliyun-oss-php-sdk/releases?spm=a2c4g.11186623.2.69.627e4eafSZjXWo). Decompress the downloaded package. Then, add the decompressed folder to the aliyun-php-sdk directory. For example, if [aliyun-oss-php-sdk-2.2.4.zip](https://github.com/aliyun/aliyun-oss-php-sdk/archive/v2.2.4.zip?spm=a2c4g.11186623.2.70.627e4eafSZjXWo&file=v2.2.4.zip) is downloaded and decompressed, the decompressed folder is aliyun-oss-php-sdk-2.2.4.
-4.  Open the aliyun-php-sdk/aliyun-php-sdk-core/Config.php file, find "//config sdk auto load path.", and then add the following code below this line:
+4.  Open the aliyun-php-sdk/aliyun-php-sdk-core/Config.php file, find "//config sdk auto load path.",and then add the following code below this line:
 
     ```
     Autoloader::addAutoloadPath("aliyun-php-sdk-vod");
@@ -71,7 +71,7 @@ Before you read this topic, check whether the upload SDK is provided in your req
 
 5.  Reference the files of ApsaraVideo VOD and OSS in the code.
 
-    The following code provides an example:
+    Sample code:
 
     ```
     require_once './aliyun-php-sdk/aliyun-php-sdk-core/Config.php';   // Assume that your source code file is in the aliyun-php-sdk directory.
@@ -81,15 +81,15 @@ Before you read this topic, check whether the upload SDK is provided in your req
     use OSS\Core\OssException;
     ```
 
-    **Note:** For more information, see the topics about the installation of ApsaraVideo VOD SDK for PHP and OSS SDK for PHP.
+    **Note:** For more information, see the topics about the installation of [ApsaraVideo VOD SDK for PHP](https://help.aliyun.com/document_detail/61067.html?spm=a2c4g.11186623.6.1068.6fd36de0T82ILT) and [OSS SDK for PHP](https://help.aliyun.com/document_detail/85580.html?spm=a2c4g.11174283.6.1226.43167da2eqJiPR).
 
 
 **Reference code**
 
 -   Define the functions of the core steps:
-    1.  Use the AccessKey to initialize the ApsaraVideo VOD client.
+    1.  Use the AccessKey pair to initialize the ApsaraVideo VOD client.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         function init_vod_client($accessKeyId, $accessKeySecret) {
@@ -101,7 +101,7 @@ Before you read this topic, check whether the upload SDK is provided in your req
 
     2.  Obtain the upload URL and credential for a video.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         function create_upload_video($vodClient) {
@@ -117,7 +117,7 @@ Before you read this topic, check whether the upload SDK is provided in your req
 
     3.  Use the upload URL and credential to initialize the OSS client. Before you pass the parameters of the upload URL and credential, decode them in the Base64 format and then in the JSON format.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         function init_oss_client($uploadAuth, $uploadAddress) {
@@ -137,7 +137,7 @@ Before you read this topic, check whether the upload SDK is provided in your req
 
     4.  Upload an on-premises file.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         function upload_local_file($ossClient, $uploadAddress, $localFile) {
@@ -147,7 +147,7 @@ Before you read this topic, check whether the upload SDK is provided in your req
 
     5.  Update the upload credential.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         function refresh_upload_video($vodClient, $videoId) {
@@ -159,7 +159,7 @@ Before you read this topic, check whether the upload SDK is provided in your req
 
 -   Execute the entire process. Capture exceptions during the execution.
 
-    The following code provides an example:
+    Sample code:
 
     ```
     $accessKeyId = '<AccessKeyId>';                    // Your AccessKey ID.
@@ -202,7 +202,7 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
 
     **Note:**
 
-    -   No messages are displayed during the installation. Please wait. If the installation times out, run the command again.
+    -   When you run the preceding command to install the SDK, no prompts are displayed. If the installation times out, run the command again.
     -   If the src/github.com/aliyun/alibaba-cloud-sdk-go/services/vod subdirectory appears in the directory that is specified by GOPATH, the SDK is installed.
 -   Run the glide command to install the upload SDK for Go.
 
@@ -211,23 +211,23 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
     ```
 
 -   Define the functions of the core steps:
-    1.  Use the AccessKey to initialize the ApsaraVideo VOD client.
+    1.  Use the AccessKey pair to initialize the ApsaraVideo VOD client.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         func InitVodClient(accessKeyId string, accessKeySecret string) (client *vod.Client, err error) {
             // Specify the access region of ApsaraVideo VOD.
             regionId := "cn-shanghai"
-            // Create an authorization object.
+            // Create an object for authentication.
             credential := &credentials.AccessKeyCredential{
                 accessKeyId,
                 accessKeySecret,
             }
-            // Customize configuration.
+            // The custom configuration parameters.
             config := sdk.NewConfig()
-            config.AutoRetry = true      // Specify whether the connection is automatically retried upon a connection failure.
-            config.MaxRetryTime = 3 // The maximum number of retries allowed.
+            config.AutoRetry = true      // Specifies whether to automatically reconnect to the network if a connection fails.
+            config.MaxRetryTime = 3      // The maximum number of retry attempts.
             config.Timeout = 3000000000  // The connection timeout period, in nanoseconds. The default value is 3 seconds.
             // Create a vodClient instance.
             return vod.NewClientWithOptions(regionId, config, credential)
@@ -236,7 +236,7 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
 
     2.  Obtain the upload URL and credential for a video.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         func MyCreateUploadVideo(client *vod.Client) (response *vod.CreateUploadVideoResponse, err error) {
@@ -254,7 +254,7 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
 
     3.  Use the upload URL and credential to initialize the OSS client. Before you pass the parameters of the upload URL and credential, decode them in the Base64 format and then in the JSON format.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         func InitOssClient(uploadAuthDTO UploadAuthDTO, uploadAddressDTO UploadAddressDTO) (*oss.Client, error) {
@@ -269,19 +269,19 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
 
     4.  Upload an on-premises file.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         func UploadLocalFile(client *oss.Client, uploadAddressDTO UploadAddressDTO, localFile string) {
-            // Obtain the bucket.
+            // Obtain the name of the bucket.
             bucket, err := client.Bucket(uploadAddressDTO.Bucket)
-            if err ! = nil {
+            if err != nil {
                 fmt.Println("Error:", err)
                 os.Exit(-1)
             }
             // Upload an on-premises file.
             err = bucket.PutObjectFromFile(uploadAddressDTO.FileName, localFile)
-            if err ! = nil {
+            if err != nil {
                 fmt.Println("Error:", err)
                 os.Exit(-1)
             }
@@ -290,7 +290,7 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
 
     5.  Update the upload credential.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         func MyRefreshUploadVideo(client *vod.Client) (response *vod.RefreshUploadVideoResponse, err error) {
@@ -303,7 +303,7 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
 
 -   Execute the entire process. Capture exceptions during the execution.
 
-    The following code provides an example:
+    Sample code:
 
     ```
     type UploadAuthDTO struct {
@@ -322,13 +322,13 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
         var localFile string = "/Users/yours/Video/testVideo.flv";   // The full path of the on-premises file that you want to upload to ApsaraVideo VOD.
         // Initialize the ApsaraVideo VOD client and obtain the upload URL and credential.
         var vodClient, initVodClientErr = InitVodClient(accessKeyId, accessKeySecret)
-        if initVodClientErr ! = nil {
+        if initVodClientErr != nil {
             fmt.Println("Error:", initVodClientErr)
             return
         }
         // Obtain the upload URL and credential.
         var response, createUploadVideoErr = MyCreateUploadVideo(vodClient)
-        if createUploadVideoErr ! = nil {
+        if createUploadVideoErr != nil {
             fmt.Println("Error:", createUploadVideoErr)
             return
         }
@@ -357,29 +357,29 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
 -   Install .NET Framework 4.6.1 or later.
 -   Install .NET Standard 2.0 or later.
 
-**Note:** For more information, see environment requirements.
+**Note:** For more information, see [Installation](https://help.aliyun.com/document_detail/72085.html?spm=a2c4g.11186623.6.1088.25d64b183GDvRr).
 
 **Installation**
 
 -   Install the SDK by using NuGet. In Solution Explorer, right-click your project and select Manage NuGet Packages. In NuGet Package Manager, click the Browse tab, enter aliyun-net-sdk-core, and then install the latest version of the module. Repeat the preceding steps to install the aliyun-net-sdk-vod module.
 -   Install the SDK by using .NET Core command-line interface \(CLI\).
 
-    The following code provides an example:
+    Sample code:
 
     ```
     dotnet add package aliyun-net-sdk-core
     dotnet add package aliyun-net-sdk-vod
     ```
 
-    **Note:** For more information, see the topics about the installation of ApsaraVideo VOD SDK for .NET and OSS SDK for .NET.
+    **Note:** For more information, see the topics about the installation of [ApsaraVideo VOD SDK for .NET](https://help.aliyun.com/document_detail/72085.html?spm=a2c4g.11186623.6.1088.37e04671A0WBW9) and [OSS SDK for .NET](https://help.aliyun.com/document_detail/32086.html?spm=a2c4g.11186623.6.1338.67335ab7Pf3NfJ).
 
 
 **Reference code**
 
 -   Define the functions of the core steps:
-    1.  Use the AccessKey to initialize the ApsaraVideo VOD client.
+    1.  Use the AccessKey pair to initialize the ApsaraVideo VOD client.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         public static DefaultAcsClient InitVodClient(string accessKeyId, string accessKeySecret)
@@ -393,7 +393,7 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
 
     2.  Obtain the upload URL and credential for a video.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         public static CreateUploadVideoResponse CreateUploadVideo(DefaultAcsClient vodClient)
@@ -419,7 +419,7 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
 
     3.  Use the upload URL and credential to initialize the OSS client. Before you pass the parameters of the upload URL and credential, decode them in the Base64 format and then in the JSON format.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         public static OssClient InitOssClient(JObject uploadAuth, JObject uploadAddress) 
@@ -434,7 +434,7 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
 
     4.  Upload an on-premises file.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         public static void UploadLocalFile(OssClient ossClient, JObject uploadAddress, string localFile) 
@@ -447,7 +447,7 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
 
     5.  Update the upload credential.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         public static RefreshUploadVideoResponse RefreshUploadVideo(DefaultAcsClient vodClient)
@@ -464,7 +464,7 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
 
 -   Execute the entire process. Capture exceptions during the execution.
 
-    The following code provides an example:
+    Sample code:
 
     ```
     // Your AccessKey ID.
@@ -503,7 +503,7 @@ Install Go 1.7 or later. You can visit the official website of Go to download an
 
 **Installation**
 
-Add dependencies to a Maven project. To use OSS SDK for Java in a Maven project, you only need to add specific dependencies to the pom.xml file. For example, if you use OSS SDK V2.8.3, add the following content to the pom.xml file:
+Add dependencies to a Maven project. To use OSS SDK for Java in a Maven project, you need only to add specific dependencies to the pom.xml file. For example, if you use OSS SDK V2.8.3, add the following content to the pom.xml file:
 
 ```
 <dependency>
@@ -513,14 +513,14 @@ Add dependencies to a Maven project. To use OSS SDK for Java in a Maven project,
 </dependency>
 ```
 
-**Note:** For more information, see the topics about the installation of ApsaraVideo VOD SDK for Java and OSS SDK for Java.
+**Note:** For more information, see the topics about the installation of [ApsaraVideo VOD SDK for Java](https://help.aliyun.com/document_detail/57756.html?spm=a2c4g.11186623.6.1032.786624eeXjAWxG) and [OSS SDK for Java](https://help.aliyun.com/document_detail/32009.html?spm=a2c4g.11186623.6.923.3747516dEkaKTD).
 
 **Reference code**
 
 -   Define the functions of the core steps:
-    1.  Use the AccessKey to initialize the ApsaraVideo VOD client.
+    1.  Use the AccessKey pair to initialize the ApsaraVideo VOD client.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         public static DefaultAcsClient initVodClient(String accessKeyId, String accessKeySecret) throws ClientException {
@@ -534,7 +534,7 @@ Add dependencies to a Maven project. To use OSS SDK for Java in a Maven project,
 
     2.  Obtain the upload URL and credential for a video.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         public static CreateUploadVideoResponse createUploadVideo(DefaultAcsClient vodClient) {
@@ -558,7 +558,7 @@ Add dependencies to a Maven project. To use OSS SDK for Java in a Maven project,
 
     3.  Use the upload URL and credential to initialize the OSS client. Before you pass the parameters of the upload URL and credential, decode them in the Base64 format and then in the JSON format.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         public static OSSClient initOssClient(JSONObject uploadAuth, JSONObject uploadAddress) {
@@ -572,7 +572,7 @@ Add dependencies to a Maven project. To use OSS SDK for Java in a Maven project,
 
     4.  Upload an on-premises file.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         public static void uploadLocalFile(OSSClient ossClient, JSONObject uploadAddress, String localFile){
@@ -585,7 +585,7 @@ Add dependencies to a Maven project. To use OSS SDK for Java in a Maven project,
 
     5.  Update the upload credential.
 
-        The following code provides an example:
+        Sample code:
 
         ```
         public static RefreshUploadVideoResponse refreshUploadVideo(DefaultAcsClient vodClient) throws ClientException {
@@ -601,7 +601,7 @@ Add dependencies to a Maven project. To use OSS SDK for Java in a Maven project,
 
 -   Execute the entire process. Capture exceptions during the execution.
 
-    The following code provides an example:
+    Sample code:
 
     ```
     import com.alibaba.fastjson.JSONObject;
@@ -647,8 +647,8 @@ Add dependencies to a Maven project. To use OSS SDK for Java in a Maven project,
 
 ## Demo download
 
-|Language|Source code|References|
-|--------|-----------|----------|
+|Language|Source code|Reference|
+|--------|-----------|---------|
 |Upload demo for PHP|[Source code of the upload demo for PHP](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/61388/cn_zh/1510043384229/vod-php-upload-demo-1.0.1.zip?spm=a2c4g.11186623.2.79.627e4eafSZjXWo&file=vod-php-upload-demo-1.0.1.zip)|[OSS SDK for PHP](https://help.aliyun.com/document_detail/32103.html?spm=a2c4g.11186623.2.80.627e4eafSZjXWo)|
 |Upload demo for Go|[Source code of the upload demo for Go](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/61388/cn_zh/1550544147777/SimpleUpload.go?spm=a2c4g.11186623.2.81.627e4eafSZjXWo&file=SimpleUpload.go)|[OSS SDK for Go](https://help.aliyun.com/document_detail/32147.html?spm=a2c4g.11186623.2.82.627e4eafSZjXWo)|
 |Upload demo for .NET|[Source code of the upload demo for .NET](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/61388/cn_zh/1556179514218/VodUploadOssDemo.cs?spm=a2c4g.11186623.2.87.2c134eaf9gJJ3q&file=VodUploadOssDemo.cs)|[OSS SDK for .NET](https://help.aliyun.com/document_detail/32090.html?spm=a2c4g.11186623.2.88.2c134eaf9gJJ3q)|
