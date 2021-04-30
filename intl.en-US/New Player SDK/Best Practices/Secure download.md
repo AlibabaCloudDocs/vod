@@ -6,7 +6,12 @@ ApsaraVideo Player SDK allows you to download videos from ApsaraVideo VOD. This 
 
 ApsaraVideo Player SDK allows you to download videos from ApsaraVideo VOD by using VidSts and VidAuth sources. In secure download mode, a downloaded video is saved as an encrypted video. The encrypted video can be played only on the application that is associated with the bundle ID or signature that is specified in the console when you download the encrypted file.
 
-**Note:** This mode protects video copyrights and can be used only by ApsaraVideo VOD users.
+**Note:**
+
+-   This mode protects video copyrights and can be used only by ApsaraVideo VOD users.
+-   To use ApsaraVideo Player to cache a video encrypted by HTTP Live Streaming \(HLS\) Encryption on an on-premises device, you must enable the secure download feature in the ApsaraVideo VOD console.
+-   Videos that are downloaded in secure download mode are encrypted. For more information, see [HLS Encryption](/intl.en-US/Developer Guide/Video security/HLS Encryption.md).
+-   Videos that are encrypted by proprietary cryptography cannot be played in a web browser in iOS.
 
 ## Key implementation in Android
 
@@ -23,7 +28,7 @@ ApsaraVideo Player SDK allows you to download videos from ApsaraVideo VOD by usi
     mAliDownloader.setSaveDir("The path of the folder for storing downloaded files");
     ```
 
-    To download videos that are encrypted and transcoded by Alibaba Cloud, you must configure a security file encryptedApp.dat for encryption verification. For more information, see [t1959945.md\#](/intl.en-US/FAQ/Player/Obtain the security file.md). Sample code:
+    To download videos that are encrypted and transcoded by Alibaba Cloud, you must configure a security file encryptedApp.dat for encryption verification. For more information, see [How can I obtain a security file?](/intl.en-US/FAQ/Player/How can I obtain a security file?.md). Sample code:
 
     ```
      PrivateService.initService(getApplicationContext(), "The path of the encryptedApp.dat file");
@@ -64,7 +69,7 @@ ApsaraVideo Player SDK allows you to download videos from ApsaraVideo VOD by usi
             });
     ```
 
-    **Note:** The difference between callbacks for download progress and processing progress lies in that the callback for download progress requires online data before the download is completed. However, the callback for processing progress does not require online data.
+    **Note:** The difference between callbacks for download progress and processing progress lies in that the callback for download progress requires online data before the download is complete. However, the callback for processing progress does not require online data.
 
 3.  Prepare the download source.
 
@@ -82,7 +87,7 @@ ApsaraVideo Player SDK allows you to download videos from ApsaraVideo VOD by usi
      mAliDownloader.prepare(aliyunVidSts)
     ```
 
-4.  Prepare the download source.
+4.  Select a download task.
 
     After the preparation, the OnPreparedListener callback is fired. Select a track for download. Sample code:
 
@@ -130,7 +135,7 @@ ApsaraVideo Player SDK allows you to download videos from ApsaraVideo VOD by usi
     [downloader setDelegate:self];
     ```
 
-    To download videos that are encrypted and transcoded by Alibaba Cloud, you must configure a security file encryptedApp.dat for encryption verification. For more information, see [Obtain the security file](/intl.en-US/FAQ/Player/Obtain the security file.md). Sample code:
+    To download videos that are encrypted and transcoded by Alibaba Cloud, you must configure a security file encryptedApp.dat for encryption verification. For more information, see [How can I obtain a security file?](/intl.en-US/FAQ/Player/How can I obtain a security file?.md). Sample code:
 
     ```
     NSString *encrptyFilePath = [[NSBundle mainBundle] pathForResource:@"encryptedApp" ofType:@"dat"];
@@ -159,7 +164,7 @@ ApsaraVideo Player SDK allows you to download videos from ApsaraVideo VOD by usi
     }
     ```
 
-    **Note:** The difference between callbacks for download progress and processing progress lies in that the callback for download progress requires online data before the download is completed. However, the callback for processing progress does not require online data.
+    **Note:** The difference between callbacks for download progress and processing progress lies in that the callback for download progress requires online data before the download is complete. However, the callback for processing progress does not require online data.
 
 3.  Prepare the download source.
 
@@ -168,11 +173,11 @@ ApsaraVideo Player SDK allows you to download videos from ApsaraVideo VOD by usi
     ```
     // Create a VidSts object.
     AVPVidStsSource* stsSource = [[AVPVidStsSource alloc] init];
-    stsSource.vid = source.vid; // The video ID.
-    stsSource.region = DEFAULT_SERVER.region; // The access region.
-    stsSource.securityToken = DEFAULT_SERVER.securityToken; // The security token.
-    stsSource.accessKeySecret = DEFAULT_SERVER.accessKeySecret; // The temporary AccessKey secret.
-    stsSource.accessKeyId = DEFAULT_SERVER.accessKeyId; // The temporary AccessKey ID.
+    stsSource.vid = source.vid;// The video ID.
+    stsSource.region = DEFAULT_SERVER.region;// The access region.
+    stsSource.securityToken = DEFAULT_SERVER.securityToken;// The security token.
+    stsSource.accessKeySecret = DEFAULT_SERVER.accessKeySecret;// The temporary AccessKey secret.
+    stsSource.accessKeyId = DEFAULT_SERVER.accessKeyId;// The temporary AccessKey ID.
     // Prepare the download source.
     [downloader prepareWithVid:stsSource];
     ```
