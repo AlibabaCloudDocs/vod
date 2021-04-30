@@ -14,7 +14,7 @@ We recommend that you use Visual Studio 2017 as the development tool. This topic
 
 -   SDK download
 
-    Download the latest version of ApsaraVideo Player SDK for Windows. For more information, see [Release notes of ApsaraVideo Player SDK for Windows](/intl.en-US/SDK Downloads/player-sdk-new-history/Player SDK for Windows.md).
+    Download the latest version of ApsaraVideo Player SDK for Windows. For more information, see [Release notes of ApsaraVideo Player SDK for Windows](/intl.en-US/SDK Downloads/player-sdk-new-history/Release notes of ApsaraVideo Player SDK for Windows.md).
 
 -   SDK structure
 
@@ -46,8 +46,8 @@ We recommend that you use Visual Studio 2017 as the development tool. This topic
 
     Copy the sdk\_headers and bin folders in the sdk folder to your Qt project directory and set dependencies for your project. For example, copy the sdk\_headers and bin folders to the third\_party/aliplayer directory of your project.
 
-    1.  Copy files in the sdk/sdk\_headers directory to the third\_party/aliplayer directory.
-    2.  Copy the AliPlayer.lib and artpSource.lib files in the sdk/bin directory to the third\_party/aliplayer/lib directory.
-    3.  Configure the add-on package in the third\_party/aliplayer/sdk\_headers directory of your project in Visual Studio 2017.
-    4.  After the project is compiled, copy all the .dll files in the sdk/bin directory to the directory of the same level as the .exe file.
+    1.  Copy files in the sdk/sdk\_headers directory to the third\_party/aliplayer directory.**** \> ******** \> ****
+    2.  Copy the AliPlayer.lib and artpSource.lib files in the sdk/bin directory to the third\_party/aliplayer/lib directory.**** \> ******** \> **** \> ****
+    3.  Configure the add-on package in the third\_party/aliplayer/sdk\_headers directory of your project in Visual Studio 2017.**** \> **** \> ****
+    4.  After the project is compiled, copy all the .dll files in the sdk/bin directory to the directory of the same level as the .exe file.**** \> ****
 
