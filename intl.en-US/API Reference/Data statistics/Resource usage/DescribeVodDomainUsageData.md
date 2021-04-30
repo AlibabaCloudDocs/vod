@@ -20,19 +20,19 @@ Queries the traffic or bandwidth data for one or more domain names for CDN.
 |EndTime|String|Yes|2015-12-10T12:20:00Z|The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
 |Field|String|Yes|bps|The type of the data to be queried. Valid values:
 
--   **bps**: bandwidth.
+ -   **bps**: bandwidth.
 -   **traf**: traffic. |
 |StartTime|String|Yes|2015-12-10T10:20:00Z|The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
 |DomainName|String|No|example.com|The domain name for CDN. If you do not specify this parameter, the merged data of all your domain names for CDN is returned. You can specify multiple domain names. Separate them with commas \(,\). |
 |Type|String|No|static|The type of the content based on which the data is generated. Valid values:
 
--   **static**
+ -   **static**
 
--   **dynamic**
+ -   **dynamic**
 -   **all** |
 |Area|String|No|CN|The region where the data is queried. The default value is CN, which indicates mainland China. Valid values:
 
--   **CN**: mainland China.
+ -   **CN**: mainland China.
 -   **OverSeas**: outside mainland China. |
 
 ## Response parameters
@@ -47,9 +47,9 @@ Queries the traffic or bandwidth data for one or more domain names for CDN.
 |StartTime|String|2015-12-10T10:20:00Z|The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC. |
 |Type|String|static|The type of the content based on which the data is generated. Valid values:
 
--   **static**
+ -   **static**
 
--   **dynamic**
+ -   **dynamic**
 -   **all** |
 |UsageDataPerInterval|Array of DataModule| |The details of traffic or bandwidth data. |
 |DataModule| | | |
@@ -172,7 +172,7 @@ The following table describes the common errors that this operation can return.
 
 |404
 
-|The error message returned because the domain name does not exist or does not belong to you. |
+|The error message returned because the specified CDN domain does not exist or does not belong to you. |
 |InvalidDomain.Offline
 
 |The domain provided is offline.
@@ -249,5 +249,7 @@ The following table describes the common errors that this operation can return.
 
 |400
 
-|The error message returned because the value of the Interval parameter is invalid. |
+|The error message returned because the value of the Interval parameter is invalid.
+
+|. |
 
