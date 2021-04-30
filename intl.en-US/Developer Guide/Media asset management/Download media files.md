@@ -1,7 +1,7 @@
 Download media files 
 =========================================
 
-You can download media files stored in ApsaraVideo VOD to local disks or other storage devices. You can use the ApsaraVideo VOD console, client, or API operations to query the download URLs of various media files. This topic describes the media files, download URL types, download limits, and query methods.
+You can download media files stored in ApsaraVideo VOD to on-premises disks or other storage devices. You can use the ApsaraVideo VOD console, client, or API operations to query the download URLs of various media files. This topic describes the media files, download URL types, download limits, and query methods. 
 
 Media files 
 --------------------------------
@@ -31,7 +31,7 @@ ApsaraVideo VOD may generate multiple types of media files, which include mezzan
 
     
   
-  * Image files of normal snapshots, image sprite snapshots, and original snapshots that compose sprite snapshots generated after you call the [SubmitSnapshotJob](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitSnapshotJob.md) operation
+  * Image files of normal snapshots, image sprite snapshots, and original snapshots that compose sprite snapshots generated after you call the SubmitSnapshotJob operation. For more information, see [SubmitSnapshotJob](/intl.en-US/API Reference/Media processing/Process initiation/SubmitSnapshotJob.md).
 
     
   
@@ -44,7 +44,7 @@ ApsaraVideo VOD may generate multiple types of media files, which include mezzan
 Download URL types 
 ---------------------------------------
 
-The media file download URLs that you can obtain include the OSS source URLs and CDN URLs. You are charged [media asset management (storage) fees](https://www.aliyun.com/price/detail/vod#module3) for downloads from OSS source URLs. These fees are the result of OSS outbound traffic. You are charged [CDN traffic fees](https://www.aliyun.com/price/product?#/cdn/detail) for downloads from CDN URLs. These fees are the result of CDN acceleration.
+The media file download URLs that you can obtain include the Object Storage Service (OSS) source URLs and Alibaba Cloud CDN URLs. You are charged [media asset management](https://www.aliyun.com/price/detail/vod#module3) fees for downloads from OSS source URLs. These fees are the result of OSS outbound traffic. You are charged CDN traffic fees for downloads from CDN URLs. These fees are the result of [CDN acceleration](https://www.aliyun.com/price/product?#/cdn/detail). 
 
 * Storage address
 
@@ -52,7 +52,7 @@ The media file download URLs that you can obtain include the OSS source URLs and
 
     
   
-  * If a domain name for CDN is configured, the download URL of each media file is the CDN URL. You can forcibly return the OSS URL of a mezzanine file or a transcoded stream file as the download URL. To obtain the OSS URL, you can set `OutputType` to `oss` to obtain the download URL. For more information, see [GetMezzanineInfo](/intl.en-US/API Reference/Media management/Audio&Video Management/GetMezzanineInfo.md) and [GetPlayInfo](/intl.en-US/API Reference/Video playback/GetPlayInfo.md). The download URL of a mezzanine file stored in an input bucket is the OSS URL even when a domain name for CDN is configured. The name of an input bucket starts with `in-`.
+  * If a domain name for CDN is configured, the download URL of each media file is the CDN URL. You can forcibly return the OSS URL of a mezzanine file or a transcoded stream file as the download URL. To obtain the OSS URL, you can set the `OutputType` parameter to `oss` to obtain the download URL. For more information, see [GetMezzanineInfo](/intl.en-US/API Reference/Media asset management/Audio and video management/GetMezzanineInfo.md) and [GetPlayInfo](/intl.en-US/API Reference/Audio and video playback/GetPlayInfo.md). The download URL of a mezzanine file stored in an input bucket is the OSS URL even when a domain name for CDN is configured. The name of an input bucket starts with `in-`.
 
     
   
@@ -70,7 +70,7 @@ The media file download URLs that you can obtain include the OSS source URLs and
 Limits 
 ---------------------------
 
-If media security services such as hotlink protection and video encryption are configured, media file download is limited even when the download URLs are obtained.
+If media security services such as hotlink protection and video encryption are configured, media file download is limited even when the download URLs are obtained. 
 
 * If the [access control](/intl.en-US/Developer Guide/Video security/Access control.md) service is configured, downloads from CDN URLs are limited by policies such as Referer-based hotlink protection and IP address blacklist or whitelist. The limits are the same as those for online playback. However, the limits do not apply to the downloads from OSS URLs.
 
@@ -98,17 +98,17 @@ Use the console to obtain the download URLs
 
   * Audio and video mezzanine files and transcoded stream files:
 
-    On the **[Video and Audio](https://vod.console.aliyun.com/#/media/video/list)** page in the ApsaraVideo VOD console, click **Manage** in the Actions column.![View download URLs](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3928301161/p180272.png)
+    On the **[Video and Audio](https://vod.console.aliyun.com/#/media/video/list)** page in the ApsaraVideo VOD console, find the file that you want to manage and click **Manage** in the Actions column.![View download URLs](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3928301161/p180272.png) 
 
-    On the **Video URL** tab, click **Copy** in the Actions column to copy the download URL for a file. You can copy the original file and the download URL of the transcoded file in each definition.![Copy the download URL](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3928301161/p180274.png)
+    On the **Video URL** tab, click **Copy** in the Actions column to copy the download URL for a file. You can copy the download URL of the mezzanine file or the transcoded file in each definition.![Copy the download URL](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3928301161/p180274.png)
     
   
   * Image files uploaded to ApsaraVideo VOD:
 
-    On the **[Image](https://vod.console.aliyun.com/#/media/image/list)** page in the ApsaraVideo VOD console, click **Manage** in the Actions column.![Manage](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3928301161/p180276.png)
+    On the **[Image](https://vod.console.aliyun.com/#/media/image/list)** page in the ApsaraVideo VOD console, find the file that you want to manage and click **Manage** in the Actions column.![Management](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3928301161/p180276.png)
     
   
-  * On the **Image Details** page, click **Copy** to copy the image linking.![Copy the download URL](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3928301161/p180279.png)
+  * On the image details page, click **Copy** to copy the image URL.![Copy the download URL](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3928301161/p180279.png)
 
     
   
@@ -119,12 +119,12 @@ Use the console to obtain the download URLs
 
   * Audio and video transcoded stream files:
 
-    On the **[Video and Audio](https://vod.console.aliyun.com/#/media/video/list)** page in the ApsaraVideo VOD console, click the Export Media URL icon in the upper-right corner to export download URLs for the first 200 videos and audios in each definition under the filter condition.![Export the download URL](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3928301161/p180280.png)
+    On the **[Video and Audio](https://vod.console.aliyun.com/#/media/video/list)** page in the ApsaraVideo VOD console, click the ![Export media URLs](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3928301161/p180280.png)Export Media URL icon in the upper-right corner. The system exports the download URLs for the first 200 video and audio files transcoded in each definition based on the specified filter conditions.
     
   
   * Image files uploaded to ApsaraVideo VOD:
 
-    On the **[Image](https://vod.console.aliyun.com/#/media/image/list)** page in the ApsaraVideo VOD console, click the ![Export media URLs](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3928301161/p180280.png)Export Media URL icon in the upper-right corner to export download URLs for the first 100 images in each definition under the filter condition.
+    On the **[Image](https://vod.console.aliyun.com/#/media/image/list)** page in the ApsaraVideo VOD console, click the ![Export media URLs](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3928301161/p180280.png)Export Media URL icon in the upper-right corner. The system exports the download URLs for the first 100 images based on the specified filter conditions.
     
   
 
@@ -136,27 +136,27 @@ Use the console to obtain the download URLs
 Use the API or SDK to obtain the download URLs 
 -------------------------------------------------------------------
 
-You can download audio and video mezzanine files, transcoded stream files, snapshot files that are automatically generated, and image files. You can use the following operations to obtain the download URLs of required files and download them.
+You can download audio and video mezzanine files, transcoded stream files, snapshot files that are automatically generated, and image files. You can use the following operations to obtain the download URLs of required files and download these URLs. 
 
 
-|   Obtain information    |                                                                                                                                                                                                                                                                                                                                                                                        Description                                                                                                                                                                                                                                                                                                                                                                                         |                                                                 Reference                                                                  |
-|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| Mezzanine file URL      | Obtains the download URL of a mezzanine file. In the [Mezzanine](/intl.en-US/API Reference/Appendix/Basic data types.md) object that is returned, `FileURL` indicates the download URL of the mezzanine file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | [Obtain mezzanine file information](/intl.en-US/API Reference/Media management/Audio&Video Management/GetMezzanineInfo.md) |
-| Playback information    | Obtains the playback URL of a transcoded stream file. In the [PlayInfo](/intl.en-US/API Reference/Appendix/Basic data types.md) object that is returned, `PlayURL` indicates the playback URL of the transcoded stream file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | [Obtain video playback URLs](/intl.en-US/API Reference/Video playback/GetPlayInfo.md)                                      |
-| Video information       | Obtains video information. In the [Video](/intl.en-US/API Reference/Appendix/Basic data types.md) object that is returned, `CoverURL` indicates the thumbnail URL, and `Snapshots` indicates a URL array of the snapshots that are automatically captured.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | [Obtain video information](/intl.en-US/API Reference/Media management/Audio&Video Management/GetVideoInfo.md)              |
-| Image information       | Obtains image information. In the [ImageInfo](/intl.en-US/API Reference/Appendix/Basic data types.md) object that is returned, `URL` indicates the image URL.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | [Obtain image information](/intl.en-US/API Reference/Media management/Image Management/GetImageInfo.md)                    |
-| Media asset Information | Obtains media asset information. If the media asset type is set to video or audio, the media asset information is returned in the [Video](/intl.en-US/API Reference/Appendix/Media asset search protocol.md) or [Audio](/intl.en-US/API Reference/Appendix/Media asset search protocol.md) object. In the object, `CoverURL` indicates the thumbnail URL, `Snapshots` indicates a URL array of video snapshots, and `SpriteSnapshots` indicates a URL array of the sprite snapshots that are automatically taken. If the media asset type is set to image, the media asset information is returned in the [Image](/intl.en-US/API Reference/Appendix/Media asset search protocol.md) object. In the object, `URL` indicates the image URL. | [Search for media information](/intl.en-US/API Reference/Media management/Media Search/SearchMedia.md)                     |
-| Snapshot data           | Obtains snapshot information. In the [MediaSnapshot](/intl.en-US/API Reference/Appendix/Basic data types.md) object that is returned, `Snapshots` indicates a URL array of the snapshots of the type specified by `SnapshotType`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | [Obtain snapshot data](/intl.en-US/API Reference/Media management/Image Management/ListSnapshots.md)                       |
+|    Operation     |                                                                                                                                                                                                                                                                                                                                                                                                                    Description                                                                                                                                                                                                                                                                                                                                                                                                                     |                                                              Reference                                                              |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| GetMezzanineInfo | Queries the download URL of a mezzanine file. In the [Mezzanine](/intl.en-US/API Reference/Appendix/Basic data types.md) object that is returned, the `FileURL` parameter indicates the download URL of the mezzanine file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | [GetMezzanineInfo](/intl.en-US/API Reference/Media asset management/Audio and video management/GetMezzanineInfo.md) |
+| GetPlayInfo      | Queries the streaming URL of a transcoded stream file. In the [PlayInfo](/intl.en-US/API Reference/Appendix/Basic data types.md) object that is returned, the `PlayURL` parameter indicates the streaming URL of the transcoded stream file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | [GetPlayInfo](/intl.en-US/API Reference/Audio and video playback/GetPlayInfo.md)                                    |
+| GetVideoInfo     | Queries video information. In the [Video](/intl.en-US/API Reference/Appendix/Basic data types.md) object that is returned, the `CoverURL` parameter indicates the thumbnail URL, and the `Snapshots` parameter indicates a URL array of the snapshots that are automatically taken.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | [GetVideoInfo](/intl.en-US/API Reference/Media asset management/Audio and video management/GetVideoInfo.md)         |
+| GetImageInfo     | Queries image information. In the [ImageInfo](/intl.en-US/API Reference/Appendix/Basic data types.md) object that is returned, the `URL` parameter indicates the image URL.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | [GetImageInfo](/intl.en-US/API Reference/Media asset management/Image management/GetImageInfo.md)                   |
+| SearchMedia      | Queries media asset information. If the media asset type is set to video or audio, the media asset information is returned in the [Video](/intl.en-US/API Reference/Appendix/Media asset search protocol.md) or [Audio](/intl.en-US/API Reference/Appendix/Media asset search protocol.md) object. In the object, the `CoverURL` parameter indicates the thumbnail URL, the `Snapshots` parameter indicates a URL array of video snapshots, and the `SpriteSnapshots` parameter indicates a URL array of the sprite snapshots that are automatically taken. If the media asset type is set to image, the media asset information is returned in the [Image](/intl.en-US/API Reference/Appendix/Media asset search protocol.md) object. In the object, the `URL` parameter indicates the image URL. | [SearchMedia](/intl.en-US/API Reference/Media asset management/Media asset search/SearchMedia.md)                   |
+| ListSnapshots    | Queries snapshot information. In the [MediaSnapshot](/intl.en-US/API Reference/Appendix/Basic data types.md) object that is returned, the `Snapshots` parameter indicates a URL array of the snapshots of the type specified by the `SnapshotType` parameter.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | [ListSnapshots](/intl.en-US/API Reference/Media asset management/Image management/ListSnapshots.md)                 |
 
 
 
 **Call methods:** 
 
-* To obtain media asset information, we recommend that you use a server SDK by calling the API operations. This method is simpler and more efficient. For more information, see [Usage notes](/intl.en-US/Server SDK Reference/Instructions.md). For more information about API operations, see `SDK examples` for each API operation.
+* We recommend that you use a server SDK to obtain media asset information by calling the API operation. This method is simpler and more efficient. For more information about server SDKs, see [Usage notes](/intl.en-US/Server SDK Reference/Usage notes.md). For more information about API operations, see the "`SDK example`" section of API references.
 
   
 
-* For more information about how to generate HTTP or HTTPS requests, see [Common parameters](/intl.en-US/API Reference/Calling methods/Common parameters.md) and [Examples](/intl.en-US/API Reference/Calling methods/Call Examples.md).
+* You can send HTTP or HTTPS requests to obtain upload URLs and credentials. For more information, see [Common parameters](/intl.en-US/API Reference/Calling methods/Common parameters.md) and [Call examples](/intl.en-US/API Reference/Calling methods/Call Examples.md).
 
   
 
@@ -166,13 +166,13 @@ You can download audio and video mezzanine files, transcoded stream files, snaps
 Client download 
 ------------------------------------
 
-ApsaraVideo Player SDK provides the **download** feature to allow users to cache audio and video stream files on their mobile terminals and watch the streams offline. You can enable or disable this feature. The Normal and Encrypted download modes are supported.
+ApsaraVideo Player SDK provides the **download** feature to allow users to cache audio and video stream files on their mobile terminals and watch the streams offline. You can enable or disable this feature. The Normal and Encrypted download modes are supported. 
 
-**Download** 
+**Download settings** 
 
-On the **[download settings](https://vod.console.aliyun.com/#/settings/download)** page in the ApsaraVideo VOD console, you can set Download Mode. For more information, see [Configure offline download](/intl.en-US/User Guide/Domain management/Configure offline download.md).
+On the **[Download](https://vod.console.aliyun.com/#/settings/download)** page in the ApsaraVideo VOD console, you can set the Download Mode parameter. For more information, see [Configure offline download](/intl.en-US/User Guide/Domain management/Configure offline download.md). 
 
-* Normal: In this mode, downloaded audio and video files are unencrypted. The files can be copied and can be played by using any player. Exercise caution when you set the download mode to Normal.
+* Normal: In this mode, downloaded audio and video files are unencrypted. The files can be copied and can be played by using a player. Exercise caution when you set the download mode to Normal.
 
   
 
@@ -185,4 +185,4 @@ On the **[download settings](https://vod.console.aliyun.com/#/settings/download)
 
 **ApsaraVideo Player SDK** 
 
-Both ApsaraVideo Player SDK for iOS and ApsaraVideo Player SDK for Android support the secure download feature. For more information, see [Usage](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for iOS/Features and usage.md) of ApsaraVideo Player SDK for iOS and [Usage](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for Android/Features and usage.md) of ApsaraVideo Player SDK for Android.
+Both ApsaraVideo Player SDK for iOS and ApsaraVideo Player SDK for Android support the secure download feature. For more information, see [Implementation](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for iOS/Implementation.md) of ApsaraVideo Player SDK for iOS and [Implementation](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for Android/Implementation.md) of ApsaraVideo Player SDK for Android.
