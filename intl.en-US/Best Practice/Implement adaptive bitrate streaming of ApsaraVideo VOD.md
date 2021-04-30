@@ -320,10 +320,10 @@ The following table describes the differences between an adaptive bitrate stream
 3.  **View the processing effects.**
     -   The following figure shows the video streams that are generated after adaptive bitrate streaming is implemented. In this example, three transcoded streams and one adaptive bitrate stream are generated.
 
-        ![Effect display 1](../images/p180161.png)
+        ![Effect display 1](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7797679161/p180161.png)
 
     -   The following figure shows the effect of playing the adaptive bitrate stream.
 
-        ![Effect display 2](../images/p180162.png)
+        ![Effect display 2](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7797679161/p180162.png)
 
 
