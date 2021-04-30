@@ -33,19 +33,8 @@ maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
 com.aliyun.video.android:core:1.2.2
 com.alivc.conan:AlivcConan:1.0.3
 com.aliyun.video.android:AlivcFFmpeg:2.0.0
-```
-
-    |Edition|Dependent library managed by Gradle|
-    |-------|-----------------------------------|
-    |Professional Edition|    ```
 com.aliyun.video.android:svideopro:3.19.0
-    ``` |
-    |Standard Edition|    ```
-com.aliyun.video.android:svideostand:3.19.0
-    ``` |
-    |Basic Edition|    ```
-com.aliyun.video.android:svideosnap:3.19.0
-    ``` |
+```
 
 
 ## V3.18.1
@@ -68,19 +57,8 @@ maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
 com.aliyun.video.android:core:1.2.2
 com.alivc.conan:AlivcConan:1.0.3
 com.aliyun.video.android:AlivcFFmpeg:2.0.0
-```
-
-    |Edition|Dependent library managed by Gradle|
-    |-------|-----------------------------------|
-    |Professional Edition|    ```
 com.aliyun.video.android:svideopro:3.18.1
-    ``` |
-    |Standard Edition|    ```
-com.aliyun.video.android:svideostand:3.18.1
-    ``` |
-    |Basic Edition|    ```
-com.aliyun.video.android:svideosnap:3.18.1
-    ``` |
+```
 
 
 ## V3.18.0
@@ -104,19 +82,8 @@ maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
 com.aliyun.video.android:core:1.2.2
 com.alivc.conan:AlivcConan:1.0.3
 com.aliyun.video.android:AlivcFFmpeg:2.0.0
-```
-
-    |Edition|Dependent library managed by Gradle|
-    |-------|-----------------------------------|
-    |Professional Edition|    ```
 com.aliyun.video.android:svideopro:3.18.0
-    ``` |
-    |Standard Edition|    ```
-com.aliyun.video.android:svideostand:3.18.0
-    ``` |
-    |Basic Edition|    ```
-com.aliyun.video.android:svideosnap:3.18.0
-    ``` |
+```
 
 
 ## V3.17.1
@@ -141,19 +108,8 @@ maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
 com.aliyun.video.android:core:1.2.2
 com.alivc.conan:AlivcConan:1.0.3
 com.aliyun.video.android:AlivcFFmpeg:2.0.0
-```
-
-    |Edition|Dependent library managed by Gradle|
-    |-------|-----------------------------------|
-    |Professional Edition|    ```
 com.aliyun.video.android:svideopro:3.17.1
-    ``` |
-    |Standard Edition|    ```
-com.aliyun.video.android:svideostand:3.17.1
-    ``` |
-    |Basic Edition|    ```
-com.aliyun.video.android:svideosnap:3.17.1
-    ``` |
+```
 
 
 ## V3.17.0
@@ -192,20 +148,9 @@ maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
 com.aliyun.video.android:core:1.2.2
 com.alivc.conan:AlivcConan:1.0.3
 com.aliyun.video.android:AlivcFFmpeg:2.0.0
+com.aliyun.video.android:svideopro:3.17.0
 ```
 
-
-|Edition|Dependent library managed by Gradle|
-|-------|-----------------------------------|
-|Professional Edition|```
-com.aliyun.video.android:svideopro:3.17.0
-``` |
-|Standard Edition|```
-com.aliyun.video.android:svideostand:3.17.0
-``` |
-|Basic Edition|```
-com.aliyun.video.android:svideosnap:3.17.0
-``` |
 
 ## V3.16.2
 
@@ -227,20 +172,9 @@ maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
 com.aliyun.video.android:core:1.2.2
 com.alivc.conan:AlivcConan:1.0.3
 com.aliyun.video.android:AlivcFFmpeg:2.0.0
+com.aliyun.video.android:svideopro:3.16.2
 ```
 
-
-|Edition|Dependent library managed by Gradle|
-|-------|-----------------------------------|
-|Professional Edition|```
-com.aliyun.video.android:svideopro:3.16.2
-``` |
-|Standard Edition|```
-com.aliyun.video.android:svideostand:3.16.2
-``` |
-|Basic Edition|```
-com.aliyun.video.android:svideosnap:3.16.2
-``` |
 
 ## V3.16.1
 
@@ -263,20 +197,9 @@ maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
 com.aliyun.video.android:core:1.2.2
 com.alivc.conan:AlivcConan:1.0.3
 com.aliyun.video.android:AlivcFFmpeg:2.0.0
+com.aliyun.video.android:svideopro:3.16.1
 ```
 
-
-|Edition|Dependent library managed by Gradle|
-|-------|-----------------------------------|
-|Professional Edition|```
-com.aliyun.video.android:svideopro:3.16.1
-``` |
-|Standard Edition|```
-com.aliyun.video.android:svideostand:3.16.1
-``` |
-|Basic Edition|```
-com.aliyun.video.android:svideosnap:3.16.1
-``` |
 
 ## V3.16.0
 
@@ -301,20 +224,9 @@ maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
 com.aliyun.video.android:core:1.2.2
 com.alivc.conan:AlivcConan:1.0.3
 com.aliyun.video.android:AlivcFFmpeg:2.0.0
+com.aliyun.video.android:svideopro:3.16.0
 ```
 
-
-|Edition|Dependent library managed by Gradle|
-|-------|-----------------------------------|
-|Professional Edition|```
-com.aliyun.video.android:svideopro:3.16.0
-``` |
-|Standard Edition|```
-com.aliyun.video.android:svideostand:3.16.0
-``` |
-|Basic Edition|```
-com.aliyun.video.android:svideosnap:3.16.0
-``` |
 
 ## V3.15.0
 
@@ -339,20 +251,9 @@ Others
 com.aliyun.video.android:core:1.2.2
 com.alivc.conan:AlivcConan:1.0.3
 com.aliyun.video.android:AlivcFFmpeg:2.0.0
+com.aliyun.video.android:svideopro:3.15.0
 ```
 
-
-|Edition|Dependent library managed by Gradle|
-|-------|-----------------------------------|
-|Professional Edition|```
-com.aliyun.video.android:svideopro:3.15.0
-``` |
-|Standard Edition|```
-com.aliyun.video.android:svideostand:3.15.0
-``` |
-|Basic Edition|```
-com.aliyun.video.android:svideosnap:3.15.0
-``` |
 
 ## V3.14.0
 
@@ -384,20 +285,9 @@ maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
 com.aliyun.video.android:core:1.2.2
 com.alivc.conan:AlivcConan:1.0.2
 com.aliyun.video.android:AlivcSvideoFFmpeg:1.1.0
+com.aliyun.video.android:svideopro:3.14.0
 ```
 
-
-|Edition|Dependent library managed by Gradle|
-|-------|-----------------------------------|
-|Professional Edition|```
-com.aliyun.video.android:svideopro:3.14.0
-``` |
-|Standard Edition|```
-com.aliyun.video.android:svideostand:3.14.0
-``` |
-|Basic Edition|```
-com.aliyun.video.android:svideosnap:3.14.0
-``` |
 
 ## V3.13.0
 
@@ -424,20 +314,9 @@ Others
 com.aliyun.video.android:core:1.2.2: corresponds to AlivcCore.jar.
 com.alivc.conan:AlivcConan:1.0.1
 com.aliyun.video.android:AlivcSvideoFFmpeg:1.0.2
+com.aliyun.video.android:svideopro:3.13.0
 ```
 
-
-|Edition|Dependent library managed by Gradle|
-|-------|-----------------------------------|
-|Professional Edition|```
-com.aliyun.video.android:svideopro:3.13.0
-``` |
-|Standard Edition|```
-com.aliyun.video.android:svideostand:3.13.0
-``` |
-|Basic Edition|```
-com.aliyun.video.android:svideosnap:3.13.0
-``` |
 
 ## V3.12.0
 
@@ -477,20 +356,9 @@ Others
 com.aliyun.video.android:core:1.2.2: corresponds to AlivcCore.jar.
 com.alivc.conan:AlivcConan:1.0.1
 com.aliyun.video.android:AlivcSvideoFFmpeg:1.0.2
+com.aliyun.video.android:svideopro:3.12.0
 ```
 
-
-|Edition|Dependent library managed by Gradle|
-|-------|-----------------------------------|
-|Professional Edition|```
-com.aliyun.video.android:svideopro:3.12.0
-``` |
-|Standard Edition|```
-com.aliyun.video.android:svideostand:3.12.0
-``` |
-|Basic Edition|```
-com.aliyun.video.android:svideosnap:3.12.0
-``` |
 
 ## V3.11.0
 
@@ -530,20 +398,9 @@ maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
 om.aliyun.video.android:core:1.2.1: corresponds to AlivcCore.jar.
 com.alivc.conan:AlivcConan:0.9.5.1
 com.aliyun.video.android:AlivcSvideoFFmpeg:1.0.1
+com.aliyun.video.android:svideopro:3.11.0: corresponds to the .so libraries of armeabi-v7a&arm64-v8a and the AliyunSdk-RCE.aar library, on which the short video SDK Professional Edition for Android depends.
 ```
 
-
-|Edition|Dependent library managed by Gradle|
-|-------|-----------------------------------|
-|Professional Edition|```
-com.aliyun.video.android:svideopro:3.11.0: corresponds to the .so libraries of armeabi-v7a&arm64-v8a and the AliyunSdk-RCE.aar library, on which the short video SDK Professional Edition for Android depends.
-``` |
-|Standard Edition|```
-com.aliyun.video.android:svideostand:3.11.0: corresponds to the .so libraries of armeabi-v7a&arm64-v8a and the AliyunSdk-RCE.aar library, on which the short video SDK Standard Edition for Android depends.
-``` |
-|Basic Edition|```
-com.aliyun.video.android:svideosnap:3.11.0: corresponds to the .so libraries of armeabi-v7a&arm64-v8a and the AliyunSdk-RC.aar library, on which the short video SDK Basic Edition for Android depends.
-``` |
 
 ## V3.10.5
 
@@ -588,20 +445,9 @@ Others
 com.aliyun.video.android:core:1.1.2: corresponds to AlivcCore.jar.
 com.alivc.conan:AlivcConan:0.9.4
 com.aliyun.video.android:AlivcSvideoFFmpeg:1.0.0
+com.aliyun.video.android:svideopro:3.10.0: corresponds to the .so libraries of armeabi-v7a&arm64-v8a and the AliyunSdk-RCE.aar library, on which the short video SDK Professional Edition for Android depends.
 ```
 
-
-|Edition|Dependent library managed by Gradle|
-|-------|-----------------------------------|
-|Professional Edition|```
-com.aliyun.video.android:svideopro:3.10.0: corresponds to the .so libraries of armeabi-v7a&arm64-v8a and the AliyunSdk-RCE.aar library, on which the short video SDK Professional Edition for Android depends.
-``` |
-|Standard Edition|```
-com.aliyun.video.android:svideostand:3.10.0: corresponds to the .so libraries of armeabi-v7a&arm64-v8a and the AliyunSdk-RCE.aar library, on which the short video SDK Standard Edition for Android depends.
-``` |
-|Basic Edition|```
-com.aliyun.video.android:svideosnap:3.10.0: corresponds to the .so libraries of armeabi-v7a&arm64-v8a and the AliyunSdk-RC.aar library, on which the short video SDK Basic Edition for Android depends.
-``` |
 
 ## V3.9.0
 
@@ -657,27 +503,12 @@ maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
 -   Core libraries
 
 ```
- compile 'com.aliyun.video.android:core:1.1.0': corresponds to AlivcCore.jar.
-```
-
-
-|Edition|Dependent library managed by Gradle|
-|-------|-----------------------------------|
-|Professional Edition|```
+compile 'com.aliyun.video.android:core:1.1.0': corresponds to AlivcCore.jar.
 com.aliyun.video.android:svideopro:3.8.0: corresponds to the AliyunSdk-RCE.aar library, on which the short video SDK Professional Edition for Android depends.
 com.aliyun.video.android:svideopro-armv7a:3.8.0: corresponds to all .so libraries of armeabi-v7a, on which the short video SDK Professional Edition for Android depends.
 com.aliyun.video.android:svideopro-arm64:3.8.0: corresponds to all .so libraries of arm64-v8a, on which the short video SDK Professional Edition for Android depends.
-``` |
-|Standard Edition|```
-com.aliyun.video.android:svideostand:3.8.0: corresponds to the AliyunSdk-RCE.aar library, on which the short video SDK Standard Edition for Android depends.
-com.aliyun.video.android:svideostand-armv7a:3.8.0: corresponds to all .so libraries of armeabi-v7a, on which the short video SDK Standard Edition for Android depends.
-com.aliyun.video.android:svideostand-arm64:3.8.0: corresponds to all .so libraries of arm64-v8a, on which the short video SDK Standard Edition for Android depends.
-``` |
-|Basic Edition|```
-com.aliyun.video.android:svideosnap:3.8.0: corresponds to the AliyunSdk-RC.aar library, on which the short video SDK Basic Edition for Android depends.
-com.aliyun.video.android:svideosnap-armv7a:3.8.0: corresponds to all .so libraries of armeabi-v7a, on which the short video SDK Basic Edition for Android depends.
-com.aliyun.video.android:svideosnap-arm64:3.8.0: corresponds to all .so libraries of arm64-v8a, on which the short video SDK Basic Edition for Android depends.
-``` |
+```
+
 
 **Note:** The upload SDK is removed from the short video SDK. If the upload feature is required, you must add the external dependency com.aliyun.video.android:upload:1.5.2'9 by using Gradle. To meet the requirement of SDK stability monitoring and data-related requirements in the future, you must add the com.alivc.conan:AlivcConan:0.9.0 dependency and obfuscation to the short video SDK. For more information, see the demo code.
 
