@@ -10,7 +10,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
     -   AliPlayer
     -   AliListPlayer
-    To play a single video, create an AliPlayer object. Example:
+    To play a single video, create an AliPlayer object. Sample code:
 
     ```
     AliPlayer aliyunVodPlayer;
@@ -24,13 +24,13 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
     PrivateService.initService(getApplicationContext(), "The path of the encryptedApp.dat file");
     ```
 
-    For more information about how to create a security file for encryption verification, see [Obtain the security file](/intl.en-US/FAQ/Player/Obtain the security file.md).
+    For more information about how to create a security file for encryption verification, see [How can I obtain a security file?](/intl.en-US/FAQ/Player/How can I obtain a security file?.md).
 
     **Note:** If you do not configure a correct security file for encryption verification, the ERROR\_DEMUXER\_OPENSTREAM error message appears when you play a video that is downloaded in secure download mode.
 
 2.  Set player listeners.
 
-    ApsaraVideo Player SDK for Android provides a variety of listeners, such as onPrepared and onCompletion. Example:
+    ApsaraVideo Player SDK for Android provides a variety of listeners, such as onPrepared and onCompletion. Sample code:
 
     ```
     aliyunVodPlayer.setOnCompletionListener(new IPlayer.OnCompletionListener() {
@@ -123,7 +123,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
     });
     ```
 
-    **Note:** For more information about callback parameters, see [API operations](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for Android/API.md).
+    **Note:** For more information about callback parameters, see [API operations](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for Android/API operations.md).
 
 3.  Set a playback source and prepare for playback.
 
@@ -135,10 +135,10 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
     -   UrlSource
     **Note:** You can use UrlSource for URL-based playback, and use the other three playback sources for video ID \(VID\)-based playback. VidSts and VidAuth are available for ApsaraVideo VOD users. VidMps is available for ApsaraVideo for Media Processing users only.
 
-    The following code uses VidSts as an example:
+    In the following example, VidSts is used.
 
     ```
-    // Create the VidSts playback source.
+    // Create the VidSts download source.
      VidSts aliyunVidSts = new VidSts();
      aliyunVidSts.setVid(Video ID);
      aliyunVidSts.setAccessKeyId(Temporary AccessKey ID);
@@ -154,9 +154,9 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
     **Note:** For more information about the video playback process and concepts in ApsaraVideo for Media Processing, see [Video playback](https://help.aliyun.com/document_detail/53522.html?spm=a2c4g.11186623.2.15.7a45195dpABgQj). For more information about the process of using the playback credential for playback, see [Use playback credentials](/intl.en-US/Developer Guide/Video play/Use playback credentials to play videos.md). For more information about region settings, see [VOD centers and endpoints](/intl.en-US/Developer Guide/VOD centers and endpoints.md).
 
-4.  Set the UI view.
+4.  Set the user interface \(UI\) view.
 
-    If the playback source contains video images, you must set the UI view to display the video images in the player. You can use SurfaceView or TextureView to set the UI view. The following code uses SurfaceView as an example:
+    If the playback source contains video images, you must set the UI view to display the video images in the player. You can use SurfaceView or TextureView to set the UI view. In the following example, SurfaceView is used.
 
     ```
     surfaceView = (SurfaceView) findViewById(R.id.playview);
@@ -180,7 +180,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
 5.  Set playback control.
 
-    You can create playback control buttons and associate click events with playback control methods to implement playback control. The basic control features include play, stop, pause, and seek. The seek feature is valid only for ApsaraVideo VOD. If you pause a live stream, the live stream stops at the current position. After you resume the playback of the live stream, the live stream starts from the paused position. Example:
+    You can create playback control buttons and associate click events with playback control methods to implement playback control. The basic control features include play, stop, pause, and seek. The seek feature is valid only for ApsaraVideo VOD. If you pause a live stream, the live stream stops at the current position. After you resume the playback of the live stream, the live stream starts from the paused position. Sample code:
 
     ```
     // Start the playback.
@@ -199,20 +199,20 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
 6.  Set multi-bitrate switching.
 
-    ApsaraVideo Player SDK for Android allows you to play an HTTP Live Streaming \(HLS\) stream in different bitrates. After the player is prepared by calling the `prepare` method, you can call the `getMediaInfo` method to obtain the bitrate information, which is indicated by values of the `TrackInfo` parameter. Example:
+    ApsaraVideo Player SDK for Android allows you to play an HTTP Live Streaming \(HLS\) stream in different bitrates. After the player is prepared by calling the `prepare` method, you can call the `getMediaInfo` method to obtain the bitrate information, which is indicated by values of the `TrackInfo` parameter. Sample code:
 
     ```
     List<TrackInfo> trackInfos  = aliyunVodPlayer.getMediaInfo().getTrackInfos();
     ```
 
-    During the playback, you can call the selectTrack method to switch the bitrate. Example:
+    During the playback, you can call the selectTrack method to switch the bitrate. Sample code:
 
     ```
     int index = trackInfo.getIndex();
     aliyunVodPlayer.selectTrack(index);
     ```
 
-    You can call the `OnTrackChangedListener` callback to view the switching result. You must call the OnTrackChangedListener method before you call the `selectTrack` method. Example:
+    You can call the `OnTrackChangedListener` callback to view the switching result. You must call the OnTrackChangedListener method before you call the `selectTrack` method. Sample code:
 
     ```
     aliyunVodPlayer.setOnTrackChangedListener(new IPlayer.OnTrackChangedListener() {
@@ -229,13 +229,13 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
 7.  Set the autoplay feature.
 
-    ApsaraVideo Player SDK for Android supports the autoplay feature. To set the autoplay feature, call the `setAutoPlay` method before you call the `prepare` method. Example:
+    ApsaraVideo Player SDK for Android supports the autoplay feature. To set the autoplay feature, call the `setAutoPlay` method before you call the `prepare` method. Sample code:
 
     ```
     aliyunVodPlayer.setAutoPlay(true);
     ```
 
-    After you set the autoplay feature and prepare the player, videos are automatically played. Example:
+    After you set the autoplay feature and prepare the player, videos are automatically played. Sample code:
 
     ```
     -(void)onPlayerEvent:(AliPlayer*)player eventType:(AVPEventType)eventType {
@@ -252,13 +252,13 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
 8.  Set the loop playback feature.
 
-    ApsaraVideo Player SDK for Android supports the loop playback feature. To set the loop playback feature, call the `setLoop` method. The loop playback feature allows the player to play a video again when the player plays the video to the end position. Example:
+    ApsaraVideo Player SDK for Android supports the loop playback feature. To set the loop playback feature, call the `setLoop` method. The loop playback feature allows the player to play a video again when the player plays the video to the end position. Sample code:
 
     ```
     aliyunVodPlayer.setLoop(true);
     ```
 
-    The callback for the start of loop playback is fired by the `onInfo` callback. Example:
+    The callback for the start of loop playback is fired by the `onInfo` callback. Sample code:
 
     ```
     aliyunVodPlayer.setOnInfoListener(new IPlayer.OnInfoListener() {
@@ -273,7 +273,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
 9.  Set video image rotation, scaling, and mirroring.
 
-    ApsaraVideo Player SDK for Android provides multiple methods for you to precisely control video images. You can set the rotation angle, scaling mode, and mirroring mode for video images. Example:
+    ApsaraVideo Player SDK for Android provides multiple methods for you to precisely control video images. You can set the rotation angle, scaling mode, and mirroring mode for video images. Sample code:
 
     ```
     // Set the mirroring mode for video images to horizontal mirroring, vertical mirroring, or no mirroring.
@@ -311,7 +311,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
 10. Set the mute mode and volume control.
 
-    ApsaraVideo Player SDK for Android allows you to control video volumes. You can call the `setMute` method to set the mute mode for the player. In addition, you can call the `setVolume` method to set the player volume in the range of \[0, 1\]. Example:
+    ApsaraVideo Player SDK for Android allows you to control video volumes. You can call the `setMute` method to set the mute mode for the player. In addition, you can call the `setVolume` method to set the player volume in the range of \[0, 1\].**** Sample code:
 
     ```
     // Mute the player.
@@ -322,7 +322,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
 11. Set the playback speed.
 
-    ApsaraVideo Player SDK for Android allows you to set the playback speed. You can call the `setSpeed` method to change the playback speed from 0.5x to 2x. The audio pitch remains unchanged at different speeds. Example:
+    ApsaraVideo Player SDK for Android allows you to set the playback speed. You can call the `setSpeed` method to change the playback speed from 0.5x to 2x. The audio pitch remains unchanged at different speeds. Sample code:
 
     ```
     // Set the playback speed. You can change the playback speed from 0.5x to 2x.
@@ -331,7 +331,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
 12. Set the snapshot feature.
 
-    ApsaraVideo Player SDK for Android provides the snapshot feature, which can be used to capture video snapshots.`` When you capture a snapshot, the player saves the source data of the video image to be captured and converts the source data to a bitmap.`` Then, you can call the `OnSnapShotListener` method to obtain the bitmap. Example:
+    ApsaraVideo Player SDK for Android provides the snapshot feature, which can be used to capture video snapshots.`` When you capture a snapshot, the player saves the source data of the video image to be captured and converts the source data to a bitmap.`` Then, you can call the `OnSnapShotListener` method to obtain the bitmap. Sample code:
 
     ```
     // Set the callback for snapshot capture.
@@ -347,7 +347,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
 13. Set the play-and-cache feature.
 
-    ApsaraVideo Player SDK for Android supports the play-and-cache feature. This feature saves your data traffic during loop playback. To set the play-and-cache feature, call the `CacheConfig` method before you call the `prepare` method. Example:
+    ApsaraVideo Player SDK for Android supports the play-and-cache feature. This feature saves your data traffic during loop playback. To set the play-and-cache feature, call the `CacheConfig` method before you call the `prepare` method. Sample code:
 
     ```
     CacheConfig cacheConfig = new CacheConfig();
@@ -381,7 +381,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
     -   previewTime: the preview duration.
 |The absolute path of the cached file.|
 
-    The play-and-cache feature does not mean that all videos are cached during playback. In some scenarios, videos are not cached. Example:
+    The play-and-cache feature does not mean that all videos are cached during playback. In some scenarios, videos are not cached. Sample code:
 
     -   When the UrlSource playback source is used for URL-based playback,`` the video is not cached if the player uses the HLS protocol to play the video based on the video URL in the .m3u8 file. For other supported formats of URL-based playback, the player caches a video during playback as configured.
     -   When the player plays a video based on the VID, the player caches the video during playback as configured.
@@ -403,7 +403,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
     After you set the preview duration, the server returns the preview video instead of the whole video when you use ApsaraVideo Player SDK for Android to play the video.
 
-    You can use the preview feature by using ApsaraVideo Player SDK for Android with ApsaraVideo VOD. The playback sources that support the preview feature are VidSts and VidAuth. For more information about how to set and use the preview feature, see [Configure the preview feature for VOD resources](). After you enable the preview feature, you can call the `setPreviewTime()` method in VidPlayerConfigGen to set the preview duration. The following code uses VidSts as an example:
+    You can use the preview feature by using ApsaraVideo Player SDK for Android with ApsaraVideo VOD. The playback sources that support the preview feature are VidSts and VidAuth. For more information about how to set and use the preview feature, see [Configure the preview feature for VOD resources](/intl.en-US/Best Practice/Configure the preview feature for VOD resources.md). After you enable the preview feature, you can call the `setPreviewTime()` method in VidPlayerConfigGen to set the preview duration. In the following example, VidSts is used.
 
     ```
     VidSts vidSts = new VidSts;
@@ -416,18 +416,18 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
     **Note:**
 
-    -   You can call the VidPlayerConfigGen method to set the request parameters that are supported by the server. For more information, see [Request parameters](/intl.en-US/API Reference/Appendix/Request parameters.md).
+    -   You can call the VidPlayerConfigGen method to set the request parameters that are supported by the server. For more information, see [t1235674.md\#](/intl.en-US/API Reference/Appendix/Request parameters.md).
     -   The preview feature is not supported for Flash Video \(FLV\) and MP3 files.
 15. Enable or disable hardware decoding.
 
-    ApsaraVideo Player SDK for Android supports hardware decoding based on the H.264 and H.265 standards. You can call the `enableHardwareDecoder` method to enable or disable the hardware decoding feature. By default, the hardware decoding feature is enabled. If hardware decoding fails to be initialized, the player switches to software decoding to ensure normal video playback. Example:
+    ApsaraVideo Player SDK for Android supports hardware decoding based on the H.264 and H.265 standards. You can call the `enableHardwareDecoder` method to enable or disable the hardware decoding feature. By default, the hardware decoding feature is enabled. If hardware decoding fails to be initialized, the player switches to software decoding to ensure normal video playback. Sample code:
 
     ```
     // Enable hardware decoding. By default, hardware decoding is enabled.
     mAliyunVodPlayer.enableHardwareDecoder(true);
     ```
 
-    When hardware decoding is switched to software decoding, a callback is fired by the `onInfo` method. Example:
+    When hardware decoding is switched to software decoding, a callback is fired by the `onInfo` method. Sample code:
 
     ```
     mApsaraPlayerActivity.setOnInfoListener(new IPlayer.OnInfoListener() {
@@ -442,7 +442,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
 16. Set a blacklist.
 
-    ApsaraVideo Player SDK for Android allows you to set a blacklist for hardware decoding. If hardware decoding is not allowed for a device, you can use software decoding to avoid decoding failures. Example:
+    ApsaraVideo Player SDK for Android allows you to set a blacklist for hardware decoding. If hardware decoding is not allowed for a device, you can use software decoding to avoid decoding failures. Sample code:
 
     ```
     DeviceInfo deviceInfo = new DeviceInfo();
@@ -454,35 +454,35 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
 17. Set the referer.
 
-    ApsaraVideo Player SDK for Android provides the `PlayerConfig` class for you to set the request referer. You can implement access control by setting referers in the blacklist or whitelist in the ApsaraVideo VOD console. The following code provides an example:
+    ApsaraVideo Player SDK for Android provides the `PlayerConfig` class for you to set the request referer. You can implement access control by setting referers in the blacklist or whitelist in the ApsaraVideo VOD console. Sample code:
 
     ```
     // Query the configuration.
     PlayerConfig config = mAliyunVodPlayer.getConfig();
     // Set the referer.
     config.mReferrer = referrer;
-    .... // Set other parameters.
+    ....// Set other parameters.
       // Specify the settings for the player.
     mAliyunVodPlayer.setConfig(config);
     ```
 
 18. Set the UserAgent.
 
-    ApsaraVideo Player SDK for Android provides the `PlayerConfig` class for you to set the request UserAgent. After you set the UserAgent, the UserAgent information is contained in the requests from the player. The following code provides an example:
+    ApsaraVideo Player SDK for Android provides the `PlayerConfig` class for you to set the request UserAgent. After you set the UserAgent, the UserAgent information is contained in the requests from the player. Sample code:
 
     ```
     // Query the configuration.
     PlayerConfig config = mAliyunVodPlayer.getConfig();
     // Set the UserAgent.
     config.mUserAgent = "Required UserAgent";
-    .... // Set other parameters.
+    ....// Set other parameters.
       // Specify the settings for the player.
     mAliyunVodPlayer.setConfig(config);
     ```
 
 19. Set the network timeout period and the number of retries.
 
-    You can use the `PlayerConfig` class to set the network timeout period and the number of retries for the player. The following code provides an example:
+    You can use the `PlayerConfig` class to set the network timeout period and the number of retries for the player. Sample code:
 
     ```
     // Query the configuration.
@@ -491,7 +491,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
     config.mNetworkTimeout = 5000;
     // Set the number of retries when a timeout occurs. The networkTimeout parameter indicates the retry interval. By default, the networkRetryCount parameter is set to 2. If the networkRetryCount parameter is set to 0, retry is prohibited. The application determines the retry policy.
     config.mNetworkRetryCount=2;
-    .... // Set other parameters.
+    ....// Set other parameters.
       // Specify the settings for the player.
     mAliyunVodPlayer.setConfig(config);
     ```
@@ -500,10 +500,10 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
     -   If you set the networkRetryCount parameter to a value other than 0, the player retries the playback when it enters the loading status due to network errors. The number of retries is the value of the networkRetryCount parameter and the retry interval is the value of the mNetworkTimeout parameter.
     -   If the loading status persists after the maximum number of retries is reached, the `onError` callback is fired. In this case, the ErrorInfo.getCode\(\) method returns ErrorCode.ERROR\_LOADING\_TIMEOUT.
-    -   If the networkRetryCount parameter is set to 0, the `onInfo` callback is fired when a network timeout occurs. In this case, the InfoBean.getCode\(\) method returns InfoCode.NetworkRetry. To resolve the issue, you can call the `reload` method of ApsaraVideo Player SDK for Android to reload network packets or perform other operations as required. The application can process the relevant logic.
+    -   If the networkRetryCount parameter is set to 0, the `onInfo` callback is fired when a network timeout occurs. In this case, the InfoBean.getCode\(\) method returns InfoCode.NetworkRetry.**** To resolve the issue, you can call the `reload` method of ApsaraVideo Player SDK for Android to reload network packets or perform other operations as required. The application can process the relevant logic.
 20. Configure buffer and delay settings.
 
-    ApsaraVideo Player SDK for Android provides the `PlayerConfig` class for you to configure buffer and delay settings. Example:
+    ApsaraVideo Player SDK for Android provides the `PlayerConfig` class for you to configure buffer and delay settings. Sample code:
 
     ```
     // Query the configuration.
@@ -516,7 +516,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
     config.mHighBufferDuration = 3000;
     // Set the startup loading time. Unit: milliseconds. The shorter the startup loading time, the sooner the playback starts. A short startup loading time may cause the player to buffer soon after the playback starts.
     config.mStartBufferDuration = 500;
-    .... // Set other parameters.
+    ....// Set other parameters.
     // Specify the settings for the player.
     mAliyunVodPlayer.setConfig(config);
     ```
@@ -525,7 +525,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
 21. Set HTTP headers.
 
-    ApsaraVideo Player SDK for Android provides the `PlayerConfig` class for you to add HTTP headers to requests. Example:
+    ApsaraVideo Player SDK for Android provides the `PlayerConfig` class for you to add HTTP headers to requests. Sample code:
 
     ```
     // Query the configuration.
@@ -535,7 +535,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
     headers[0]="Hos t:xxx.com";// For example, add the host information to the header.
     // Set the header.
     config.setCustomHeaders(headers);
-    .... // Set other parameters.
+    ....// Set other parameters.
       // Specify the settings for the player.
     mAliyunVodPlayer.setConfig(config);
     ```
@@ -551,7 +551,7 @@ Nowadays, list playback for short video content is prevalent. ApsaraVideo Player
 
     -   AliPlayer
     -   AliListPlayer
-    AliListPlayer and AliPlayer provide the same features, except that AliListPlayer provides the list playback feature. To use the list playback feature, create an AliListPlayer object. Example:
+    AliListPlayer and AliPlayer provide the same features, except that AliListPlayer provides the list playback feature.```` To use the list playback feature, create an AliListPlayer object.`` Sample code:
 
     ```
     AliListPlayer aliyunListPlayer;
@@ -561,7 +561,7 @@ Nowadays, list playback for short video content is prevalent. ApsaraVideo Player
 
 2.  Set the count of videos to be preloaded.
 
-    You can significantly reduce the startup loading time by appropriately setting the count of videos to be preloaded. Example:
+    You can significantly reduce the startup loading time by appropriately setting the count of videos to be preloaded. Sample code:
 
     ```
     // Set the count of videos to be preloaded. The total number of loaded videos equals 1 plus twice the count.
@@ -570,12 +570,12 @@ Nowadays, list playback for short video content is prevalent. ApsaraVideo Player
 
 3.  Add or remove multiple playback sources.
 
-    List playback supports the VidSts and UrlSource playback sources. You can use UrlSource for URL-based playback, and use VidSts for VID-based playback. Example:
+    List playback supports the VidSts and UrlSource playback sources. You can use UrlSource for URL-based playback, and use VidSts for VID-based playback. Sample code:
 
     ```
     // Add a VidSts playback source.
     aliyunListPlayer.addVid(String videoId, String uid);
-    // Add an UrlSource playback source.
+    // Add a UrlSource playback source.
     aliyunListPlayer.addUrl(String url, String uid);
     // Remove a playback source.
     aliyunListPlayer.removeSource(String uid);
@@ -584,10 +584,10 @@ Nowadays, list playback for short video content is prevalent. ApsaraVideo Player
     **Note:**
 
     -   VidAuth and VidMps are not supported for list playback.
-    -   The uid parameter indicates the unique ID of a video. It is used to differentiate videos. Videos with the same unique ID are considered the same. If the player plays a video that is not the one you specified, check whether you specify a unique ID for multiple videos. You can set the uid parameter to a string of any characters.
+    -   The uid parameter indicates the unique ID of a video. It is used to differentiate videos. Videos with the same unique ID are considered the same. If the player plays a video that is not the one you specified, check whether you specify a unique ID for multiple videos. You can set the uid parameter to a string.
 4.  Play a playback source.
 
-    After you add one or more playback sources, call the `moveTo` method to play the content from the specified playback source. Example:
+    After you add one or more playback sources, call the `moveTo` method to play the content from the specified playback source. Sample code:
 
     ```
     // Call the following method for URL-based playback.
@@ -598,7 +598,7 @@ Nowadays, list playback for short video content is prevalent. ApsaraVideo Player
 
 5.  Play the previous or next video in the list.
 
-    You can call the `moveToPrev` method to play the previous video or call the `moveToNext` method to play the next video. Example:
+    You can call the `moveToPrev` method to play the previous video or call the `moveToNext` method to play the next video. Sample code:
 
     ```
     // Play the next video. Note: This method is valid only for URL-based playback. The method is invalid for VID-based playback.
@@ -627,7 +627,7 @@ ApsaraVideo Player SDK for Android allows you to download videos from ApsaraVide
 
 1.  Create and set a downloader.
 
-    You can use the `AliDownloaderFactory` class to create a downloader. Example:
+    You can use the `AliDownloaderFactory` class to create a downloader. Sample code:
 
     ```
     AliMediaDownloader mAliDownloader = null;
@@ -638,7 +638,7 @@ ApsaraVideo Player SDK for Android allows you to download videos from ApsaraVide
     mAliDownloader.setSaveDir("The path of the folder for storing downloaded files");
     ```
 
-    ApsaraVideo Player SDK for Android allows you to download videos that are encrypted by using Alibaba Cloud proprietary cryptography. For security reasons, you must configure a security file for encryption verification in the SDK. We recommend that you configure the security file in your application, once for all. Example:
+    ApsaraVideo Player SDK for Android allows you to download videos that are encrypted by using Alibaba Cloud proprietary cryptography. For security reasons, you must configure a security file for encryption verification in the SDK.We recommend that you configure the security file in your application, once for all. Sample code:
 
     ```
     PrivateService.initService(getApplicationContext(), "The path of the encryptedApp.dat file");
@@ -648,7 +648,7 @@ ApsaraVideo Player SDK for Android allows you to download videos from ApsaraVide
 
 2.  Set listeners.
 
-    The downloader provides multiple listeners. Example:
+    The downloader provides multiple listeners. Sample code:
 
     ```
     mAliDownloader.setOnPreparedListener(new AliMediaDownloader.OnPreparedListener() {
@@ -683,7 +683,7 @@ ApsaraVideo Player SDK for Android allows you to download videos from ApsaraVide
 
 3.  Prepare a download source.
 
-    You can call the `prepare` method to prepare a download source. VidSts and VidAuth are supported as download sources. The following code uses VidSts as an example:
+    You can call the `prepare` method to prepare a download source. VidSts and VidAuth are supported as download sources. In the following example, VidSts is used.
 
     ```
     // Create the VidSts download source.
@@ -699,7 +699,7 @@ ApsaraVideo Player SDK for Android allows you to download videos from ApsaraVide
 
 4.  Select the content to be downloaded from the prepared download source.
 
-    After the download source is prepared, the `OnPreparedListener` callback is fired. Select a track to be downloaded. Example:
+    After the download source is prepared, the `OnPreparedListener` callback is fired. Select a track to be downloaded. Sample code:
 
     ```
     public void onPrepared(MediaInfo mediaInfo) {
@@ -712,7 +712,7 @@ ApsaraVideo Player SDK for Android allows you to download videos from ApsaraVide
 
 5.  Update the download source and start the download.
 
-    VidSts or VidAuth may expire before the download. Therefore, we recommend that you update the download source before you start the download. Example:
+    VidSts or VidAuth may expire before the download. Therefore, we recommend that you update the download source before you start the download. Sample code:
 
     ```
     // Update the download source.
@@ -721,9 +721,9 @@ ApsaraVideo Player SDK for Android allows you to download videos from ApsaraVide
     mAliDownloader.start();
     ```
 
-6.  Release the downloader after the download succeeds or fails.
+6.  Release the download object after the download succeeds or fails.
 
-    After the download succeeds, call the `release` method to release the downloader. You can release the downloader when the `onCompletion` or `onError` callback is fired. Example:
+    After the download succeeds, call the `release` method to release the downloader. You can release the downloader when the `onCompletion` or `onError` callback is fired. Sample code:
 
     ```
     mAliDownloader.stop();
@@ -732,7 +732,7 @@ ApsaraVideo Player SDK for Android allows you to download videos from ApsaraVide
 
 7.  Delete a downloaded file.
 
-    You can delete a downloaded file during the download or after the download is complete. Example:
+    You can delete a downloaded file during the download or after the download is complete. Sample code:
 
     ```
     // Delete the file by using the downloader.
@@ -740,5 +740,62 @@ ApsaraVideo Player SDK for Android allows you to download videos from ApsaraVide
     // Delete the file by using the static method.
     AliDownloaderFactory.deleteFile("The directory of the downloaded file",vid, format,index);
     ```
+
+
+## Playback of encrypted live streams
+
+ApsaraVideo Player SDK for Android supports the playback of encrypted live streams. For more information about how to create and use a player, see the [Playback](#section_t2w_s5v_3xp) section of this topic.
+
+1.  Set a playback source.
+
+    You must specify AVPLiveStsSource as the playback source. Sample code:
+
+    ```
+    // Create the AVPLiveStsSource playback source.
+     LiveSts liveSts = new LiveSts();
+     liveSts.setUrl("The URL of the encrypted live stream");
+     liveSts.setAccessKeyId("The temporary AccessKey ID");
+     liveSts.setAccessKeySecret("The temporary AccessKey secret");
+     liveSts.setSecurityToken("The security token");
+     liveSts.setDomain("The name of the streaming domain");
+     liveSts.setApp("The name of the application to which the live stream belongs");
+     liveSts.setStream("The name of the live stream");
+     // Set the playback source.
+     aliyunVodPlayer.setDataSource(liveSts);
+     ......
+     // Prepare for playback.
+     aliyunVodPlayer.prepare();
+    ```
+
+2.  Monitor whether the STS token is valid.
+
+    The encryption key may change during the playback of encrypted live streams. When the key is changed, the player requests the latest key from STS. You must monitor whether the STS token is valid. If the token is invalid, the playback of encrypted live streams is affected. Sample code:
+
+    ```
+    mAliyunVodPlayer.setOnVerifyStsCallback(new IPlayer.OnVerifyStsCallback() {
+        @Override
+        public IPlayer.StsStatus onVerifySts(StsInfo info) {
+            if (info can be used) {
+                return IPlayer.StsStatus.Valid;
+            }
+    
+            if(A valid STS token can be obtained){
+                Obtain STS();// This operation can be synchronously or asynchronously performed.
+                return IPlayer.StsStatus.Pending;
+            }
+            // If info is invalid and the latest STS token cannot be obtained, we recommend that you stop the playback to prevent screen flickers.
+            mAliyunVodPlayer.stop();
+            return IPlayer.StsStatus.Invalid;
+        }
+    });
+    ```
+
+    After you obtain a valid STS token, you must call the `updateStsInfo` method to update the STS token. If you fail to obtain the token, we recommend that you stop the playback.
+
+    ```
+    mAliyunVodPlayer.updateStsInfo(stsInfo);
+    ```
+
+    **Note:** If you do not call the updateStsInfo method, the player uses the expired STS token to obtain the encryption key. If the STS token becomes invalid, screen flickers may occur or the playback may fail.
 
 
