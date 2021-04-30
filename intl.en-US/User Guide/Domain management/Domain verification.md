@@ -10,9 +10,9 @@ ApsaraVideo VOD allows you to accelerate website content delivery by using Aliba
 
 2.  Apply for an Internet content provider \(ICP\) license from the Ministry of Industry and Information Technology \(MIIT\) of China. We recommend that you use the [Alibaba Cloud ICP Filing system](https://beian.aliyun.com/?spm=5176.8142029.388261.3.a0SCC3).
 
-3.  Review the content saved on the origin server of the domain name for CDN. To be exempt from content review, you can specify an Object Storage Service \(OSS\) bucket or a bucket provided by ApsaraVideo VOD as the origin server. If your origin server is not deployed on Alibaba Cloud, submit a [ticket](https://selfservice.console.aliyun.com/ticket/createIndex).
+3.  Review the content saved on the origin server of the domain name for CDN. To be exempt from content review, you can specify an Object Storage Service \(OSS\) bucket or a bucket provided by ApsaraVideo VOD as the origin server. If your origin server is not deployed on Alibaba Cloud, submit a [ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex).
 
-4.  Add a canonical name \(CNAME\) record for your domain name at the DNS service provider. This ensures that your domain name is mapped to the CNAME that is allocated by CDN. For more information, see [Configure a CNAME record]().
+4.  Add a canonical name \(CNAME\) record for your domain name at the DNS service provider. This ensures that your domain name is mapped to the CNAME that is allocated by CDN. For more information, see [Configure a CNAME record](/intl.en-US/User Guide/Domain management/CNAME configuration/Configure a CNAME record in Alibaba Cloud DNS.md).
 
 
 **Note:**
