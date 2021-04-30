@@ -28,10 +28,6 @@ Required environments are prepared. The following table describes the required e
     For more information about the documents in English, see [SDK Reference](https://alivc-demo-cms.alicdn.com/versionProduct/doc/shortVideo/android_en/index.html).
 
 
-## SDK editions
-
-The short video SDK has three editions: Basic Edition, Standard Edition, and Professional Edition. For more information about the differences among the editions, see [Introduction](https://help.aliyun.com/document_detail/53407.html?spm=a2c4g.11186623.6.1057.39475741dRJ5ji#h2--5).
-
 ## Integrate the SDK by using Maven
 
 Integrate the SDK by using Maven \(Recommended\)
@@ -50,11 +46,9 @@ allprojects {
 }
 ```
 
-Add dependencies to a Maven project. The following table describes the dependencies to be added for different editions of SDKs.
+Add dependencies to a Maven project.
 
-|Edition|Dependencies to be added to the Maven project|
-|-------|---------------------------------------------|
-|Professional Edition|```
+```
 dependencies{
     implementation 'com.aliyun.video.android:svideopro:3.19.0' // Required. The short video SDK in Professional Edition.
     implementation 'com.aliyun.video.android:core:1.2.2' // Required. A core library.
@@ -64,29 +58,7 @@ dependencies{
     implementation 'com.google.code.gson:gson:2.8.0' // A third-party library.
     implementation 'com.squareup.okhttp3:okhttp:3.2.0' // A third-party library.
 }
-``` |
-|Standard Edition|```
-dependencies {
-    implementation 'com.aliyun.video.android:svideostandard:3.19.0' // Required. The short video SDK in Standard Edition.
-    implementation 'com.aliyun.video.android:core:1.2.2' // Required. A core library.
-    implementation  'com.alivc.conan:AlivcConan:1.0.3' // Required. A core library.
-    implementation  'com.aliyun.video.android:AlivcFFmpeg:2.0.0' // Required.
-    implementation  'com.aliyun.video.android:upload:1.6.0' // Optional. The upload library.
-    implementation 'com.google.code.gson:gson:2.8.0' // A third-party library.
-    implementation 'com.squareup.okhttp3:okhttp:3.2.0' // A third-party library.
-}
-``` |
-|Basic Edition|```
-dependencies {
-    implementation 'com.aliyun.video.android:svideosnap:3.19.0' // Required. The short video SDK in Basic Edition.
-    implementation 'com.aliyun.video.android:core:1.2.2' // Required. A core library.
-    implementation  'com.alivc.conan:AlivcConan:1.0.3' // Required. A core library.
-    implementation  'com.aliyun.video.android:AlivcFFmpeg:2.0.0' // Required.
-    implementation  'com.aliyun.video.android:upload:1.6.0' // Optional. The upload library.
-    implementation 'com.google.code.gson:gson:2.8.0' // A third-party library.
-    implementation 'com.squareup.okhttp3:okhttp:3.2.0' // A third-party library.
-}
-``` |
+```
 
 **Note:** The short video SDK supports only armeabi-v7a and arm64-v8a instruction sets. To ensure the compatibility with armeabi, we recommend that you copy the .so files in the armeabi-v7a folder to the armeabi folder. The compatibility with ARMv5 and ARMv6 devices is insignificant because Android rapidly develops but the short video SDK is applicable only to Android 4.3 and later.
 
