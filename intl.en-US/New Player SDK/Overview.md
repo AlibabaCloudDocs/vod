@@ -23,7 +23,7 @@ ApsaraVideo Player SDK provides a player framework to meet different user needs 
 |VID-based playback|ApsaraVideo Player SDK supports the video playback in ApsaraVideo VOD.|
 |Autoplay|ApsaraVideo Player SDK supports autoplay of a video after the video is prepared.|
 |Seek|ApsaraVideo Player SDK allows you to drag the slider on the progress bar to the specified point in time. You can use gestures to control the slider on the UI.|
-|Screen lock|ApsaraVideo Player SDK supports the screen lock feature, which allows you to lock the screen orientation and hide UI elements. You can use gestures to use the screen lock feature on the UI.|
+|Screen lock|ApsaraVideo Player SDK supports the screen lock feature, which allows you to lock the screen orientation and hide UI elements. You can use the screen lock feature on the UI.|
 |Resolution switching|ApsaraVideo Player SDK allows you to switch between multiple resolutions for VOD and transcoded streams.|
 |Encrypted playback|ApsaraVideo Player SDK allows you to play VOD and transcoded streams that are encrypted.|
 |Secure download|ApsaraVideo Player SDK allows you to use the specified application to download and encrypt videos.|
@@ -95,5 +95,7 @@ ApsaraVideo Player SDK provides a player framework to meet different user needs 
 
 ## SDK download
 
-For more information, see [SDK download](/intl.en-US/SDK Downloads/SDK download.md), where you can download the SDK and demo as needed.
+You can experience the demos of ApsaraVideo Player. For more information, see [Demo](/intl.en-US/Quick Start/Demo.md).
+
+You can download and integrate the required SDK. For more information, see [SDK download](/intl.en-US/SDK Downloads/SDK download.md).
 
