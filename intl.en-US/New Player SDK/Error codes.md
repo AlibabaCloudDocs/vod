@@ -35,7 +35,7 @@ This topic describes the error codes of ApsaraVideo Player SDK, including the de
 
 |Error definition|Error code in hexadecimal notation|Error code in decimal notation|Description|
 |----------------|----------------------------------|------------------------------|-----------|
-|ERROR\_SERVER\_VOD\_UNKNOWN|20010200|536936960|The error message returned because an unknown error has occurred in ApsaraVideo VOD. For more information, see [GetPlayInfo](/intl.en-US/API Reference/Video playback/GetPlayInfo.md).|
+|ERROR\_SERVER\_VOD\_UNKNOWN|20010200|536936960|The error message returned because an unknown error has occurred in ApsaraVideo VOD. For more information, see [GetPlayInfo](/intl.en-US/API Reference/Audio and video playback/GetPlayInfo.md).|
 |ERROR\_SERVER\_VOD\_FORBIDDEN\_ILLEGALSTATUS|20010201|536936961|The error message returned because the video status is invalid.|
 |ERROR\_SERVER\_VOD\_INVALIDVIDEO\_NOTFOUND|20010202|536936962|The error message returned because the video does not exist.|
 |ERROR\_SERVER\_VOD\_INVALIDVIDEO\_NOSTREAM|20010203|536936963|The error message returned because no transcoded stream can be used for playback based on your filter criteria.|
@@ -72,7 +72,7 @@ This topic describes the error codes of ApsaraVideo Player SDK, including the de
 |ERROR\_SERVER\_MPS\_MEDIA\_NOT\_FOUND\_CIPHERTEXT|20010316|536937238|The error message returned because the ciphertext of the media ID is not found.|
 |ERROR\_SERVER\_MPS\_INVALID\_PARAMETER\_RAND|20010317|536937239|The error message returned because the specified rand parameter is invalid.|
 |ERROR\_SERVER\_MPS\_REDIS\_POOL\_IS\_EMPTY|20010318|536937240|The error message returned because the cache connection pool is empty.|
-|ERROR\_SERVER\_MPS\_SIGNATURE\_CHECK\_MEDIA\_FAILED|20010319|536937241|The error message returned because the media ID does not match.|
+|ERROR\_SERVER\_MPS\_SIGNATURE\_CHECK\_MEDIA\_FAILED|20010319|536937241|The error message returned because the signature and the media ID do not match.|
 |ERROR\_SERVER\_MPS\_SIGNATURE\_CHECK\_EXPIREDTIME\_FAILED|2001031A|536937242|The error message returned because the specified timeout value expires.|
 |ERROR\_SERVER\_MPS\_INVALID\_SESSION\_TIME|2001031B|536937243|The error message returned because the specified SessionTime parameter is invalid. Set the SessionTime parameter to a value greater than **0**.|
 |ERROR\_SERVER\_MPS\_INVALID\_END\_USER\_ID|2001031C|536937244|The error message returned because the length of the EndUserId parameter is invalid.|
