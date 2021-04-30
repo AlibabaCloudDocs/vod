@@ -10,7 +10,7 @@ This topic describes the general terms that are used in the ApsaraVideo VOD cons
 
 -   PlayConfig
 
-    A field that specifies the custom configuration for media playback. The value is a JSON string. You can specify a streaming domain to play videos. For more information, see [Request parameters](/intl.en-US/API Reference/Appendix/Request parameters.md).
+    A field that specifies the custom configuration for media playback. The value is a JSON string. You can specify a streaming domain to play videos. For more information, see [t1235674.md\#](/intl.en-US/API Reference/Appendix/Request parameters.md).
 
 -   Temporary AccessKey ID, AccessKey secret, and security token
 
@@ -18,14 +18,14 @@ This topic describes the general terms that are used in the ApsaraVideo VOD cons
 
 -   PlayAuth
 
-    The unique credential for video playback. Each playback credential is bound to a user ID. Playback credentials cannot be exchanged among different users. Otherwise, videos cannot be played. By default, a playback credential has a limited validity period of 100 seconds. For more information, see [Obtain a playback credential](/intl.en-US/New Player SDK/Playback credential.md).
+    The unique credential for video playback. Each playback credential is bound to a user ID. Playback credentials cannot be exchanged among different users. Otherwise, videos cannot be played. By default, a playback credential has a limited validity period of 100 seconds. For more information, see [Obtain a playback credential](/intl.en-US/New Player SDK/Obtain a playback credential.md).
 
 -   Hotlink protection
 
-    ApsaraVideo VOD checks the referer in the header of a request to determine whether the request is originated from the local site and whether the requested video can be played. You can set the referer in the ApsaraVideo VOD or Alibaba Cloud CDN console. For more information, see [Hotlink protection](/intl.en-US/User Guide/Domain management/Access control/Hotlink protection.md).
+    ApsaraVideo VOD checks the referer in the header of a request to determine whether the request is originated from the on-premises site and whether the requested video can be played.You can set the referer in the ApsaraVideo VOD or Alibaba Cloud CDN console. For more information, see [Hotlink protection](/intl.en-US/User Guide/Domain management/Access control/Hotlink protection.md).
 
 -   Secure download
 
-    Secure download is a process where a private key is used to perform secondary encryption on videos when they are downloaded. After a video is downloaded, ApsaraVideo Player SDK decrypts the video. This ensures that the offline video can be played only by the application with the bundle ID or keystore that is specified in secure download settings. This feature is available only to ApsaraVideo VOD and ApsaraVideo for Media Processing users. For more information, see [Secure download](/intl.en-US/New Player SDK/Best practice/Secure download.md).
+    Secure download is a process where a private key is used to perform secondary encryption on videos when they are downloaded. After a video is downloaded, ApsaraVideo Player SDK decrypts the video. This ensures that the offline video can be played only by the application with the bundle ID or keystore that is specified in secure download settings. This feature is available only to ApsaraVideo VOD and ApsaraVideo for Media Processing users. For more information, see [Secure download](/intl.en-US/New Player SDK/Best Practices/Secure download.md).
 
 
