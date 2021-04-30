@@ -1,56 +1,56 @@
 Overview 
 =============================
 
-ApsaraVideo VOD provides a comprehensive content security protection mechanism to meet the security requirements in different business scenarios such as access control, URL authentication, CDN reauthentication, video encryption, and secure download.
+ApsaraVideo VOD provides comprehensive protection over content security by delivering features such as access control, URL signing, content delivery network (CDN) reauthentication, video encryption, and secure download. You can use these features to meet your security requirements in different business scenarios. 
 
 Overview 
 -----------------------------
 
-ApsaraVideo VOD provides a complete secure playback mechanism to protect video content from hotlinking and illegal download or distribution. You can use ApsaraVideo VOD to protect the copyright of online videos in industries such as education, finance, industry training, and premium TV shows.
+ApsaraVideo VOD provides comprehensive mechanisms to protect video content from hotlinking and illegal download or distribution. You can use ApsaraVideo VOD to protect the copyright of online videos in industries such as education, finance, industry training, and premium TV shows. 
 
-Apsaravideo VOD provides the following security mechanisms:
+The following table describes the security mechanisms that are provided by ApsaraVideo VOD.
 
 
-|                              Security mechanism                               |                                                        Security method                                                        |                                                                                                           Characteristic                                                                                                            | Security level  |                                                           Threshold                                                            |
-|-------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------|
-| [Access control](#section-kvj-w98-xpu)                        | Referer blacklist or whitelist                                                                                                | This feature tracks sources based on HTTP headers, which are prone to forgery.                                                                                                                                                      | Low             | Low. Only configurations on the cloud are required.                                                                            |
-| [Access control](#section-kvj-w98-xpu)                        | User-Agent blacklist or whitelist                                                                                             | This feature tracks sources based on HTTP headers, which are prone to forgery.                                                                                                                                                      | Low             | Low. Only configurations on the cloud are required.                                                                            |
-| [Access control](#section-kvj-w98-xpu)                        | IP address blacklist or whitelist                                                                                             | This feature rejects or allows access only from specified IP addresses. This feature is unsuitable for the distribution of content to a large number of consumers.                                                                  | Relatively low  | Low. Only configurations on the cloud are required.                                                                            |
-| [Access control](#section-kvj-w98-xpu)                        | Limits on the number of access times and the number of unique IP addresses                                                    | This feature sets access limits. This feature is unsuitable for the distribution of content to a large number of consumers. Additionally, illegal access may occur even when the limit on threshold values are not exceeded.        | Relatively low  | Low. Only configurations on the cloud are required.                                                                            |
-| [URL authentication by ApsaraVideo VOD](#section-rwn-udf-1na) | URL authentication                                                                                                            | This measure generates signed URLs that dynamically change. You can customize the validity period of signed URLs.                                                                                                                   | Medium          | Relatively low. Signed URLs are obtained by calling the API operations or automatically generated based on the key.            |
-| [CDN reauthentication by the customer](#section-iwq-rbj-l48)  | CDN transparently transmits user requests to authentication centers of customers to determine whether the requests are legal  | You can add custom business request information and use their own authentication centers to verify requests.                                                                                                                        | Relatively high | Relatively high. You must deploy their own authentication centers and ensure high availability of the authentication centers.  |
-| [Video encryption](#section-h1i-ytf-tam)                      | Alibaba Cloud video encryption (private encryption)                                                                           | ApsaraVideo VOD provides a cloud-device integrated the solution to encrypt video. The solution uses a proprietary encryption algorithm to ensure the security of transmission links.                                                | High            | Relatively low. You need only to perform simple configurations and integrate ApsaraVideo Player SDK.                           |
-| [Video encryption](#section-h1i-ytf-tam)                      | HLS Encryption                                                                                                                | Http-Live-Streaming (HLS) Encryption uses AES-128 to encrypt video content. This applies to all HLS players. However, the keys are prone to theft.                                                                                  | Relatively high | High. You must construct a key management service and a token issuance service, and ensure the security of transmission links. |
-| [Video encryption](#section-h1i-ytf-tam)                      | Commercial DRM                                                                                                                | Many platforms such as Microsoft PlayReady, Apple FairPlay, and Google Widevine provide native support for commercial DRM. Commercial DRM provides high security and meets the requirements of large copyrighted content providers. | High            | High. You must purchase a separate license and integrate a specified SDK.                                                      |
-| [Secure download (caching)](#section-x3i-rmm-yy3)             | A private key is used to perform a secondary encryption on a downloaded video file, which can be decrypted and played offline | Multiple mechanisms are used to ensure that a video can be played only by the specified application. Each video has an independent private key. The private key file is stored after encryption to prevent theft.                   | High            | Relatively low. You need only to perform simple configurations and integrate ApsaraVideo Player SDK.                           |
+|                              Security mechanism                              |                                                        Security method                                                         |                                                                                                             Characteristic                                                                                                              | Security level  |                                                           Threshold                                                            |
+|------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------|
+| [Access control](#section-kvj-w98-xpu)                       | Referer blacklist or whitelist                                                                                                 | This feature tracks sources based on HTTP headers, which are prone to forgery.                                                                                                                                                          | Low             | Low. Only configurations in the cloud are required.                                                                            |
+| [Access control](#section-kvj-w98-xpu)                       | User-Agent blacklist or whitelist                                                                                              | This feature tracks sources based on HTTP headers, which are prone to forgery.                                                                                                                                                          | Low             | Low. Only configurations in the cloud are required.                                                                            |
+| [Access control](#section-kvj-w98-xpu)                       | IP address blacklist or whitelist                                                                                              | This feature rejects or allows access only from specified IP addresses. This feature is unsuitable for the distribution of content to a large number of consumers.                                                                      | Relatively low  | Low. Only configurations in the cloud are required.                                                                            |
+| [Access control](#section-kvj-w98-xpu)                       | Limits on the number of access times and the number of unique IP addresses                                                     | This feature sets access limits. This feature is unsuitable for the distribution of content to a large number of consumers. In addition, illegal access may occur even when the limit on threshold values is not exceeded.              | Relatively low  | Low. Only configurations in the cloud are required.                                                                            |
+| [URL signing by ApsaraVideo VOD](#section-rwn-udf-1na)       | URL signing                                                                                                                    | This feature generates signed URLs that dynamically change. You can customize the validity period of signed URLs.                                                                                                                       | Medium          | Relatively low. Signed URLs are obtained by calling API operations or automatically generated based on the key.                |
+| [CDN reauthentication by the customer](#section-iwq-rbj-l48) | ApsaraVideo Live passes through business requests to the authentication center of a customer for authentication.               | The customer can add custom information to the requests and use their own authentication center to verify requests.                                                                                                                     | Relatively high | Relatively high. You must deploy an authentication center and ensure its high availability.                                    |
+| [Video encryption](#section-h1i-ytf-tam)                     | Alibaba Cloud proprietary cryptography                                                                                         | ApsaraVideo VOD provides a cloud-device integrated solution to encrypt videos. The solution uses a proprietary encryption algorithm to ensure the security of transmission links.                                                       | High            | Relatively low. You need only to perform simple configurations and integrate ApsaraVideo Player SDK.                           |
+| [Video encryption](#section-h1i-ytf-tam)                     | HTTP-Live-Streaming (HLS) encryption                                                                                           | HLS encryption uses AES-128 to encrypt video content. This applies to all HLS players. However, the keys are prone to theft.                                                                                                            | Relatively high | High. You must construct a key management service and a token issuance service, and ensure the security of transmission links. |
+| [Video encryption](#section-h1i-ytf-tam)                     | Commercial digital rights management (DRM)                                                                                     | Many platforms, such as Apple FairPlay and Google Widevine, provide native support for commercial DRM. Commercial DRM provides high security and meets the requirements of large copyrighted content providers.                         | High            | High. You are charged based on the number of license calls. You need only to integrate ApsaraVideo Player SDK.                 |
+| [Secure download and caching](#section-x3i-rmm-yy3)          | A private key is used to perform a secondary encryption on a downloaded video file, which can be decrypted and played offline. | Multiple mechanisms are used to ensure that a video can be decrypted and played offline only on the specified application. Each video has an independent private key. The private key file is stored after encryption to prevent theft. | High            | Relatively low. You need only to perform simple configurations and integrate ApsaraVideo Player SDK.                           |
 
 
 
 Access control 
 -----------------------------------
 
-**Introduction:** describes access policies in the cloud to provide basic protection for video resources.
+**Introduction:** Access policies are configured on the cloud to provide basic protection for video resources. 
 
 The following common access control policies are provided:
 
 * Referer
 
-  You can use the Referer header in HTTP requests to track and identify where requests come from. You can configure a Referer blacklist or whitelist to control access to video resources. You cannot use a Referer blacklist and whitelist for a video resource at the same time.
+  You can use the Referer header in HTTP requests to track and identify where the requests come from. You can configure a referer blacklist or whitelist to manage access to video resources.
   
 
 * User-Agent
 
-  You can configure a User-Agent blacklist or whitelist by using the HTTP User-Agent header to control access to video resources.
+  You can use the User-Agent header in HTTP requests to track and identify where the requests come from. You can configure a User-Agent blacklist or whitelist to manage access to video resources.
   
 
 * IP address
 
-  You can configure an IP address blacklist or whitelist by using the HTTP X-Forwarded-For header or actual IP addresses of users to control access to video resources. You can configure the IP address blacklist or whitelist by using an IP address list or a subnet mask.
+  You can configure an IP address blacklist or whitelist by using the X-Forwarded-For header or actual IP addresses of users to manage access to video resources. You can configure the IP address blacklist or whitelist by using an IP address list or a subnet mask.
   
 
 * Limits on the number of access times
 
-  You can configure the maximum number of times that a video URL can be accessed in a specific period and the maximum number of unique IP addresses that are granted access to the video URL after deduplication.
+  You can configure the maximum number of times that a video URL can be accessed in a specific period and the maximum number of unique IP addresses that are granted access to the video URL.
   
 
 
@@ -58,44 +58,44 @@ The following common access control policies are provided:
 
 For more information, see [Access control](/intl.en-US/Developer Guide/Video security/Access control.md).
 
-URL authentication by ApsaraVideo VOD 
-----------------------------------------------------------
+URL signing by ApsaraVideo VOD 
+---------------------------------------------------
 
-**Background:** If fixed playback URLs are used, unauthorized video distribution may occur and cannot be controlled.
+**Background:** If fixed streaming URLs are used, unauthorized video distribution may occur and cannot be controlled. 
 
-**Introduction:** ApsaraVideo VOD provides the URL authentication feature. This feature generates dynamic and signed URLs that contain information such as the permission verification and validity period to distinguish legal requests and protect video resources.
+**Introduction:** ApsaraVideo VOD provides the URL signing feature. This feature generates dynamic signed URLs that contain information such as the permission verification and validity period to distinguish legal requests and protect video resources. 
 
-After URL authentication is enabled:
+After URL signing is enabled:
 
-* The URLs of all media resources, which include videos, audio, thumbnails, and snapshots, must be signed.
-
-  
-
-* ApsaraVideo Player SDKs and the API or SDKs for obtaining playback URLs automatically generate playback URLs with a validity period. For more information about how to manually generate a dynamic authentication URL, see the "`Authentication method`" section of the [URL authentication](/intl.en-US/Developer Guide/Video security/URL signing.md) topic.
+* The URLs of all media resources, including videos, audio, thumbnails, and snapshots, must be signed.
 
   
 
+* ApsaraVideo Player SDKs and the API or SDKs for obtaining streaming URLs automatically generate streaming URLs with a validity period. For more information about how to manually generate a dynamic signed URL, see the "`Authentication method`" section of the [URL authentication](/intl.en-US/Developer Guide/Video security/URL authentication.md) topic.
+
+  
 
 
 
-For more information, see [URL authentication](/intl.en-US/Developer Guide/Video security/URL signing.md).
+
+For more information, see [URL authentication](/intl.en-US/Developer Guide/Video security/URL authentication.md).
 
 CDN reauthentication by the customer 
 ---------------------------------------------------------
 
-**Background:** This authentication method cannot detect all illegal requests such as hotlinking requests. CDN reauthentication can introduce the business requests of customers and make the detection more accurate.
+**Background:** The URL signing by ApsaraVideo VOD cannot detect all illegal requests such as hotlinking requests. CDN reauthentication allows customers to authenticate business requests and makes the authentication more accurate. 
 
-**Introduction:** In CDN reauthentication mode, CDN transparently transmits user requests to your authentication center whether the requests are legal. CDN allows or rejects the requests based on your judgment.
+**Introduction:** In CDN reauthentication mode, CDN passes through user requests to your authentication center for you to determine whether the requests are legal. CDN allows or rejects the requests based on your judgment. 
 
-* To implement CDN reauthentication, you must develop and deploy an authentication center. If the domain name of the authentication center is accelerated in CDN, CDN can cache the authentication results based on specific rules. This reduces the pressure on your authentication center.
-
-  
-
-* By default, CDN transparently transmits the headers and request_uri fields in user requests to your authentication center and performs operations based on the authentication results returned by the authentication center.
+* To implement CDN reauthentication, you must develop and deploy an authentication center. If the domain name of the authentication center is accelerated in CDN, CDN can cache the authentication results based on specific rules. This reduces the workloads on your authentication center.
 
   
 
-* You can use CDN to verify requests. For example, if you hide the logon cookie or UUID of a user in a playback request and transparently transmits the playback request, CDN can verify the request. This way, you can determine whether the user is a legal user.
+* By default, CDN passes through the headers and request_uri fields in user requests to your authentication center and performs operations based on the authentication results that are returned by the authentication center.
+
+  
+
+* You can use CDN to verify requests. If you hide the logon cookie or universally unique identifier (UUID) of a user in a playback request and pass through the playback request, CDN can verify the request. This way, you can determine whether the user is a legal user.
 
   
 
@@ -108,20 +108,20 @@ You must develop and deploy your own authentication center to use CDN reauthenti
 Video encryption 
 -------------------------------------
 
-**Background:** The hotlink protection mechanism can protect access to your content. However, in the paid video scenario, users can pay a one-time fee for a video and download the video file from the legitimate playback URL that has hotlink protection configured. After the video is downloaded, distribution of the video is uncontrollable. Therefore, the hotlink protection mechanism is insufficient to protect video copyrights. The leakage of video files can cause serious economic losses to businesses that charge users for watching videos.
+**Background:** The hotlink protection mechanism protects access to your content. However, in the paid video scenario, users can pay a one-time fee for a video and download the video file from the legitimate streaming URL for which hotlink protection is configured. After the video is downloaded, distribution of the video is uncontrollable. Therefore, hotlink protection is far from enough to protect video copyrights. The leakage of video files may cause serious economic losses to customers that charge users for watching videos. 
 
-**Introduction:** Alibaba Cloud video encryption service encrypts video data. Video files downloaded to a local device are encrypted, which prevents unauthorized redistribution. This prevents video leakage and hotlinking.
+**Introduction:** Alibaba Cloud proprietary cryptography encrypts video data. The video files that are downloaded to on-premises devices are encrypted. This prevents unauthorized redistribution and video leakage and hotlinking. 
 
-* Alibaba Cloud video encryption
+* Alibaba Cloud proprietary cryptography
 
-  Alibaba Cloud proprietary cryptography uses a proprietary encryption algorithm and a secure transmission mechanism to provide a security solution for cloud-device integrated video. Alibaba Cloud video encryption contains two parts: **encryption and transcoding** and **decryption and playback** .
+  Alibaba Cloud proprietary cryptography uses the proprietary cryptography algorithm and secure transmission mechanism to provide a cloud-device integrated solution to secure video security. Alibaba Cloud proprietary cryptography consists of **encrypted transcoding** and **playback after decryption** . 
 
   Benefits:
-  * Each media file has a dedicated encryption key. This prevents the leakage of a large number of video files if the key for a single file is leaked.
+  * Each media file has a dedicated encryption key. This reduces the risk of leaking a large number of video files when a unified key that is used for video files is disclosed.
 
     
   
-  * ApsaraVideo VOD provides an envelope encryption system by using **ciphertext and plaintext keys** . Only the ciphertext keys are stored. The plaintext keys are used only for processing in the memory but are not stored. They are immediately destroyed after use.
+  * ApsaraVideo VOD provides an envelope encryption system by using **ciphertext and plaintext keys** . Only the ciphertext keys are stored. The plaintext keys are used in the memory and are immediately destroyed after use.
 
     
   
@@ -129,11 +129,11 @@ Video encryption
 
     
   
-  * The proprietary cryptography protocol is used to transmit ciphertext keys between players and the cloud. The plaintext keys are not transmitted. This can prevent the keys from being intercepted.
+  * The proprietary cryptography protocol is used to transmit ciphertext keys between players and the cloud. The plaintext keys are not transmitted. This effectively prevents the keys from being intercepted.
 
     
   
-  * ApsaraVideo VOD provides the secure download feature. Videos cached locally are encrypted again. This allows videos to be played offline without being copied.
+  * ApsaraVideo VOD provides the secure download feature. The videos that are cached on on-premises devices are encrypted again. This allows videos to be played offline and prevents videos from being copied.
 
     
   
@@ -141,16 +141,16 @@ Video encryption
   
   **Notice**
 
-  Alibaba Cloud video encryption has the following limits:
-  * Only the HLS format is supported.
+  Videos that are encrypted by using Alibaba Cloud proprietary cryptography have the following limits:
+  * The videos can be exported only in the HLS format.
 
     
   
-  * You can use only ApsaraVideo Player SDK.
+  * The videos can be played only by ApsaraVideo Player.
 
     
   
-  * Web pages do not support the playback in IOS.
+  * The videos cannot be played on web pages in the iOS system.
 
     
   
@@ -160,10 +160,10 @@ Video encryption
   For more information, see [Alibaba Cloud video encryption](/intl.en-US/Developer Guide/Video security/Alibaba Cloud video encryption.md).
   
 
-* HLS Encryption
+* HLS encryption
 
-  [HTTP-Live-Streaming](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23) Encryption supports the common encryption scheme specified in HLS. HLS Encryption uses AES-128 to encrypt the video content and supports all HLS-compatible players. You can use your self-developed player or an open source player to play videos encrypted in HLS Encryption mode. Compared with Alibaba Cloud proprietary cryptography, HLS Encryption is relatively difficult to use and provides lower security.
-  * You must construct a key management service (KMS) to generate keys to encrypt videos during transcoding and obtain decryption keys during playback. You can also encapsulate [Alibaba Cloud KMS](https://www.aliyun.com/product/kms).
+  HLS encryption supports the common encryption scheme that is specified in [HLS](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23). HLS encryption uses AES-128 to encrypt the video content and supports all HLS-compatible players. You can use your custom player or an open source player to play the videos that are encrypted in HLS encryption mode. Compared with Alibaba Cloud proprietary cryptography, HLS encryption is more flexible but is difficult to use and less secure. 
+  * You must construct a key management service to generate keys to encrypt videos during transcoding and obtain decryption keys during playback. You can also use [Key Management Service (KMS)](https://www.aliyun.com/product/kms) of Alibaba Cloud to encapsulate keys.
 
     
   
@@ -171,21 +171,21 @@ Video encryption
 
     
   
-  * The plaintext keys are transmitted between players and the cloud, which makes them prone to be intercepted.
+  * The plaintext keys are transmitted between players and the cloud and are prone to interception.
 
     
   
 
   
 
-  For more information, see [HLS Encryption](/intl.en-US/Developer Guide/Video security/Standard HLS encryption.md).
+  For more information, see [HLS Encryption](/intl.en-US/Developer Guide/Video security/HLS Encryption.md).
   
 
 * Commercial DRM
 
-  High-end video programs must meet the security requirements of content providers such as Hollywood. Alibaba ApsaraVideo cooperates with ChinaDRM, which has been certified by both National Radio and Television Administration (NRTA) of China and Hollywood, to launch the first cloud DRM solution in China. This solution will be commercially available.
+  High-end video programs must meet the security requirements of content providers, such as Hollywood and Warner. ApsaraVideo VOD provides a cloud-based DRM solution that supports FairPlay and Widevine DRM encryption. This solution integrates the video encryption, license issuance, and video playback features. 
 
-  If you want to use this solution, contact your business manager, submit a ticket, or contact ApsaraVideo VOD after-sales.
+  For more information, see [Introduction](/intl.en-US/User Guide/DRM Management/Introduction.md).
   
 
 
@@ -196,14 +196,14 @@ Each video encryption solution has advantages and disadvantages. In general, a m
 
 **Feature comparison:** 
 
-* Security level: commercial DRM approximately equal to Alibaba Cloud video encryption greater than HLS Encryption
+* Security level: commercial DRM \> Alibaba Cloud proprietary cryptography \> HLS encryption 
 
-  The security level of Alibaba Cloud video encryption is approximately equal to that of commercial DRM. The security levels of both Alibaba Cloud video encryption and commercial DRM are significantly higher than that of HLS Encryption.
+  The security level of Alibaba Cloud proprietary cryptography is approximately equal to that of commercial DRM. The security levels of Alibaba Cloud proprietary cryptography and commercial DRM are significantly higher than that of HLS encryption.
   
 
-* Ease of use: Alibaba Cloud video encryption greater than HLS Encryption greater than commercial DRM
+* Ease of use: commercial DRM = Alibaba Cloud proprietary cryptography \> HLS encryption 
 
-  * Alibaba Cloud video encryption provides a cloud-device integrated solution that allows you to seamlessly integrate the encryption capability by using simple configurations and ApsaraVideo Player SDKs.
+  * Alibaba Cloud proprietary cryptography provides a cloud-device integrated solution that allows you to seamlessly integrate the encryption capability by using simple configurations and ApsaraVideo Player SDKs.
 
     
   
@@ -218,9 +218,9 @@ Each video encryption solution has advantages and disadvantages. In general, a m
 
   
 
-* Universality: HLS Encryption greater than commercial DRM greater than Alibaba Cloud video encryption
+* Universality: HLS encryption \> commercial DRM \> Alibaba Cloud proprietary cryptography 
 
-  * HLS Encryption supports all HLS-compatible players.
+  * HLS encryption supports all HLS-compatible players.
 
     
   
@@ -228,27 +228,27 @@ Each video encryption solution has advantages and disadvantages. In general, a m
 
     
   
-  * Alibaba Cloud video encryption supports ApsaraVideo Player only for Android, iOS, HTML5, and Flash.
+  * Alibaba Cloud proprietary cryptography supports ApsaraVideo Player only for Android, iOS, HTML5, and Flash.
 
     
   
 
   
 
-* Cost: Alibaba Cloud video encryption equal to HLS Encryption much smaller than commercial DRM 
+* Cost: Alibaba Cloud proprietary cryptography = HLS encryption \< commercial DRM 
 
-  Both Alibaba Cloud video encryption and HLS Encryption are free of charge.
+  Both Alibaba Cloud proprietary cryptography and HLS encryption are free of charge. Commercial DRM requires additional license fees.
   
 
 
 
 
-Commercial DRM requires additional license fees. 
----------------------------------------------------------------------
+Secure download and caching 
+------------------------------------------------
 
-**Background:** Video applications, especially those for mobile devices such as Android and iOS, often must cache videos on or download videos to local devices. The videos stored locally must be protected from unauthorized playback or redistribution. The secure download feature provided by ApsaraVideo Player can protect the videos downloaded to local devices.
+**Background:** Video applications, especially those for mobile devices on Android and iOS, must cache videos on or download videos to on-premises devices. The videos that are stored on on-premises devices must be protected from unauthorized playback or redistribution. The secure download feature provided by ApsaraVideo Player can protect the videos that are downloaded to on-premises devices. 
 
-**Introduction:** Secure download is a process where asymmetric encryption is used to encrypt a video. After the video is downloaded, it is decrypted in ApsaraVideo Player SDKs. This ensures that the offline video can be played only by the application with the bundleID or keystore specified in secure download settings.
+**Introduction:** Secure download is a process where secondary encryption is performed on a video by using a private key. After the video is downloaded, it is decrypted in ApsaraVideo Player SDKs. This ensures that the offline video can be played only by the application with the bundle ID or keystore that is specified in secure download settings. 
 
 Benefits:
 
@@ -256,7 +256,7 @@ Benefits:
 
   
 
-* Each video has an independent private key. The private key file is stored after encryption to prevent theft.
+* The private key file is stored after encryption to prevent theft.
 
   
 
@@ -267,4 +267,4 @@ Benefits:
 
 
 
-To use this feature, configure download in the ApsaraVideo VOD console. For more information, see [Configure offline download](/intl.en-US/User Guide/Domain management/Configure offline download.md). Only [ApsaraVideo Player for Android](https://help.aliyun.com/document_detail/61910.html#h2-2-4-4) and [ApsaraVideo Player for iOS](https://help.aliyun.com/document_detail/61668.html#h2-2-4-4) support the secure download feature.
+To use this feature, enable encrypted download in the ApsaraVideo VOD console. For more information, see [Configure offline download](/intl.en-US/User Guide/Domain management/Configure offline download.md). Only [ApsaraVideo Player for Android](https://help.aliyun.com/document_detail/61910.html#h2-2-4-4) and [ApsaraVideo Player for iOS](https://help.aliyun.com/document_detail/61668.html#h2-2-4-4) support the secure download feature.
