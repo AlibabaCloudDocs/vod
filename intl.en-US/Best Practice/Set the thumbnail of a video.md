@@ -33,12 +33,12 @@ To beautify the display of videos, ApsaraVideo VOD sets a thumbnail for each upl
 
 ## Set the thumbnail by using the API or SDK
 
-ApsaraVideo VOD provides various [methods to upload videos](). You can specify the thumbnail when you upload a video. If you do not specify a thumbnail, ApsaraVideo VOD selects a snapshot as the default thumbnail. You can call the following operations to set the thumbnail:
+ApsaraVideo VOD provides various [methods to upload videos](/intl.en-US/Developer Guide/Upload Medias/Overview.md). You can specify the thumbnail when you upload a video. If you do not specify a thumbnail, ApsaraVideo VOD selects a snapshot as the default thumbnail. You can call the following operations to set the thumbnail:
 
--   When you call the [CreateUploadVideo]() operation, you can set the CoverURL parameter to specify the URL of the thumbnail.
--   When you call the [UploadMediaByURL]() operation, you can set the CoverURL parameter in UploadMetadata to specify the URL of the thumbnail.
--   If the video is stored in Object Storage Service \(OSS\), you can call the [RegisterMedia]() operation to register the media asset in ApsaraVideo VOD. When you call this operation, you can set the CoverURL parameter in RegisterMetadata to specify the URL of the thumbnail.
--   After the video is uploaded to ApsaraVideo VOD, you can call the [UpdateVideoInfo]() or [UpdateVideoInfos]() operation and set the CoverURL parameter to specify the URL of the thumbnail.
+-   When you call the [CreateUploadVideo](/intl.en-US/API Reference/Media upload/CreateUploadVideo.md) operation, you can set the CoverURL parameter to specify the URL of the thumbnail.
+-   When you call the [UploadMediaByURL](/intl.en-US/API Reference/Media upload/UploadMediaByURL.md) operation, you can set the CoverURL parameter in UploadMetadata to specify the URL of the thumbnail.
+-   If the video is stored in Object Storage Service \(OSS\), you can call the [RegisterMedia](/intl.en-US/API Reference/Media upload/RegisterMedia.md) operation to register the media asset in ApsaraVideo VOD. When you call this operation, you can set the CoverURL parameter in RegisterMetadata to specify the URL of the thumbnail.
+-   After the video is uploaded to ApsaraVideo VOD, you can call the [UpdateVideoInfo](/intl.en-US/API Reference/Media asset management/Audio and video management/UpdateVideoInfo.md) or [UpdateVideoInfos](/intl.en-US/API Reference/Media asset management/Audio and video management/UpdateVideoInfos.md) operation and set the CoverURL parameter to specify the URL of the thumbnail.
 
 ## Use the intelligent thumbnail feature
 
