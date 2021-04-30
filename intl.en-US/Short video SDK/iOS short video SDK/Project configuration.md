@@ -16,42 +16,19 @@ For more information about the documents in Chinese, see [SDK Reference](https:/
 
 For more information about the documents in English, see [SDK Reference](https://alivc-demo-cms.alicdn.com/versionProduct/doc/shortVideo/iOS_en/index.html).
 
-## SDK editions
-
-The short video SDK has the following three editions: Basic Edition, Standard Edition, and Professional Edition. The three editions use the same framework name AliyunVideoSDKPro.framework.
-
--   The Basic Edition supports only the recording and cropping features.
--   The Professional Edition and Standard Edition support all features. However, advanced features of the Standard Edition must be separately authorized.
-
 ## SDK integration in pod mode \(recommended\)
 
 Procedure
 
-1.  Add dependencies to the Podfile file. The following table describes the dependencies of each edition.
+1.  Add dependencies to the Podfile file.
 
-    |Edition|Dependency to be added to the Podfile file|
-    |-------|------------------------------------------|
-    |Professional Edition|    ```
-pod 'AliyunVideoSDKPro', '3.19.0'
-pod 'QuCore-ThirdParty', '3.15.0'
-pod 'AlivcConan', '1.0.3'
-pod 'VODUpload'
-pod 'AliyunOSSiOS'
-    ``` |
-    |Standard Edition|    ```
-pod 'AliyunVideoSDKStd', '3.19.0'
-pod 'QuCore-ThirdParty', '3.15.0'
-pod 'AlivcConan', '1.0.3'
-pod 'VODUpload'
-pod 'AliyunOSSiOS'
-    ``` |
-    |Basic Edition|    ```
-pod 'AliyunVideoSDKBasic', '3.19.0'
-pod 'QuCore-ThirdParty', '3.15.0'
-pod 'AlivcConan', '1.0.3'
-pod 'VODUpload'
-pod 'AliyunOSSiOS'
-    ``` |
+    ```
+    pod 'AliyunVideoSDKPro', '3.19.0'
+    pod 'QuCore-ThirdParty', '3.15.0'
+    pod 'AlivcConan', '1.0.3'
+    pod 'VODUpload'
+    pod 'AliyunOSSiOS'
+    ```
 
 2.  Update the pod repository.
 
