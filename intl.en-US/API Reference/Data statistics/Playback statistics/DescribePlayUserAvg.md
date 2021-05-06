@@ -5,7 +5,7 @@ Queries the statistics on average playback each day in a specified time range.
 **Note:**
 
 -   This operation is available only in the **China \(Shanghai\)** region.
--   You can call this operation to query only playback statistics collected from videos that are played by using ApsaraVideo Player SDKs.
+-   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
 -   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
 -   You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.
 
@@ -126,21 +126,21 @@ The following table describes the common errors that this operation can return.
 
 |400
 
-|The error message returned because the format of the start time is invalid. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
+|The error message returned because the format of the start time that is specified by the StartTime parameter is invalid. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
 |InvalidEndTime.Malformed
 
 |Specified EndTime is malformed.
 
 |400
 
-|The error message returned because the format of the end time is invalid. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
+|The error message returned because the format of the end time that is specified by the EndTime parameter is invalid. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
 |InvalidEndTime.BeyondCurrent
 
 |EndTime beyond current time.
 
 |400
 
-|The error message returned because the end time is later than the current time. |
+|The error message returned because the end time that is specified by the EndTime parameter is later than the current time. |
 |InvalidEndTime.Mismatch
 
 |StartTime or EndTime is mismatch.
