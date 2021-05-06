@@ -8,8 +8,8 @@ Required environments are prepared. The following table describes the required e
 |-----------|-----------------|
 |Android|Android 4.3 and later.|
 |Java|Java 1.7 and later.|
-|API level|Android API level 18 and later.|
-|Android Studio|Android Studio 2.3 and later. To download Android Studio, visit the [Android Studio](https://developer.android.google.cn/studio/) page.|
+|API LEVEL|Android API level 18 and later.|
+|Android Studio|Android Studio 2.3 and later. To download Android Studio, visit [Android Studio](https://developer.android.google.cn/studio/).|
 
 ## SDK reference
 
@@ -50,9 +50,9 @@ Add dependencies to a Maven project.
 
 ```
 dependencies{
-    implementation 'com.aliyun.video.android:svideopro:3.19.0' // Required. The short video SDK in Professional Edition.
+    implementation 'com.aliyun.video.android:svideopro:3.20.0' // Required. The short video SDK in Professional Edition.
     implementation 'com.aliyun.video.android:core:1.2.2' // Required. A core library.
-    implementation 'com.alivc.conan:AlivcConan:1.0.3' // Required. A core library.
+    implementation  'com.alivc.conan:AlivcConan:1.0.3' // Required. A core library.
     implementation  'com.aliyun.video.android:AlivcFFmpeg:2.0.0' // Required.
     implementation  'com.aliyun.video.android:upload:1.6.0' // Optional. The upload library.
     implementation 'com.google.code.gson:gson:2.8.0' // A third-party library.
@@ -165,6 +165,6 @@ You can set the obfuscation configuration in the proguard-rules.pro file. The fo
 -keep class com.qu.**{*;}
 -keep class com.alibaba.**{*;}
 -keep class component.alivc.**{*;}
--keep class com.alivc. **{*;}
+-keep class com.alivc.**{*;}
 ```
 
