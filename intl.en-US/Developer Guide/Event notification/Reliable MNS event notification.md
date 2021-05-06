@@ -21,11 +21,11 @@ Alibaba Cloud Message Service \(MNS\) is a distributed messaging service that fe
 
     ![Cloud Resource Access Authorization](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9466301161/p178869.png)
 
-2.  Log on to the [MNS console](https://mns.console.aliyun.com/?spm=a2c4g.11186623.2.19.20d83502Ek9Nnu) to create a queue or use an existing queue. For more information, see [Manage queues in the console]().
+2.  Log on to the [MNS console](https://mns.console.aliyun.com/?spm=a2c4g.11186623.2.19.20d83502Ek9Nnu) to create a queue or use an existing queue. For more information, see [t1835614.md\#]().
 
     **Note:** If your video is stored in a mainland China region, we recommend that you select **China \(Shanghai\)** from the drop-down list.
 
-3.  Call the [SetMessageCallback](/intl.en-US/API Reference/Global Config/Event notification/SetMessageCallback.md) operation to configure the event notification.
+3.  Call the [SetMessageCallback](/intl.en-US/API Reference/Global configurations/Event notifications/SetMessageCallback.md) operation to configure the event notification.
 
     -   The `MnsEndpoint` parameter specifies the public endpoint of the queue. You can obtain the endpoint by clicking **Get Endpoint** in the upper-right corner of the Queues page.
     -   The `EventTypeList` parameter specifies the event type. For more information, see the "Event types" section in [Overview](/intl.en-US/Developer Guide/Event notification/Overview.md).
@@ -38,7 +38,7 @@ Alibaba Cloud Message Service \(MNS\) is a distributed messaging service that fe
 
 After you complete the configurations, you can use code to consume messages.
 
--   For information about how to consume messages by using Java code, see [Use sample code to receive messages]().
+-   For information about how to consume messages by using Java code, see [Manage queues]().
 -   For information about how to consume messages by using Python code, see [Manage queues]().
 -   For information about how to consume messages by using C\# code, see [Manage queues]().
 -   For information about how to consume messages by using PHP code, see [Manage queues]().
