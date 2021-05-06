@@ -4,8 +4,8 @@ Queries the usage of storage-related resources. The resources include the storag
 
 **Note:**
 
--   This operation is available only in the **China \(Shanghai\)**region.
--   If the time range to query is less than seven days, the system returns the statistics collected on an hourly basis. If the time range to query is more than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
+-   This operation is available only in the **China \(Shanghai\)** region.
+-   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
 
 ## Debugging
 
@@ -18,14 +18,14 @@ Queries the usage of storage-related resources. The resources include the storag
 |Action|String|Yes|DescribeVodStorageData|The operation that you want to perform. Set the value to **DescribeVodStorageData**. |
 |EndTime|String|Yes|2019-02-01T15:00:00Z|The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
 |StartTime|String|Yes|2019-02-01T14:00:00Z|The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
-|Region|String|No|cn-shanghai|The region where media assets are stored. If you do not specify this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas \(,\). Valid values:
+|Region|String|No|cn-shanghai|The region where media assets are stored. If you do not set this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas \(,\). Valid values:
 
--   **cn-shanghai**: China \(Shanghai\).
--   **cn-beijing**: China \(Beijing\).
--   **eu-central-1**: Germany \(Frankfurt\).
--   **ap-southeast-1**: Singapore. |
+ -   **cn-shanghai**: China \(Shanghai\)
+-   **cn-beijing**: China \(Beijing\)
+-   **eu-central-1**: Germany \(Frankfurt\)
+-   **ap-southeast-1**: Singapore |
 |StorageType|String|No|OSS|The storage type. Set the value to **OSS**. |
-|Storage|String|No|bucket|The name of the Object Storage Service \(OSS\) bucket. If you do not specify this parameter, the data of all buckets is returned. You can specify multiple buckets. Separate them with commas \(,\). |
+|Storage|String|No|bucket|The name of the Object Storage Service \(OSS\) bucket. If you do not set this parameter, the data of all buckets is returned. You can specify multiple buckets. Separate them with commas \(,\). |
 
 ## Response parameters
 
@@ -33,12 +33,12 @@ Queries the usage of storage-related resources. The resources include the storag
 |---------|----|-------|-----------|
 |DataInterval|String|day|The time granularity at which the data was queried. Valid values:
 
--   **hour**
+ -   **hour**
 -   **day** |
 |RequestId|String|C370DAF1-C838-4288-\*\*\*\*-9A87633D248E|The ID of the request. |
 |StorageData|Array of StorageDataItem| |The detailed usage of storage-related resources. |
 |StorageDataItem| | | |
-|NetworkOut|String|111111|The outbound traffic. Unit: byte. The outbound traffic is generated when videos are directly downloaded or played from Object Storage Service \(OSS\) buckets without content delivery acceleration based on Alibaba Cloud CDN. |
+|NetworkOut|String|111111|The outbound traffic. Unit: byte. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration. |
 |StorageUtilization|String|111111|The storage volume. Unit: byte. |
 |TimeStamp|String|2019-02-01T15:00:00Z|The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC. |
 
@@ -59,20 +59,20 @@ Sample success responses
 
 ```
 <DescribeVodStorageDataResponse>
-      <RequestId>C370DAF1-C838-4288-****-9A87633D248E</RequestId>
-      <DataInterval>day</DataInterval>
-      <StorageData>
-            <StorageDataItem>
-                  <StorageUtilization>111111</StorageUtilization>
-                  <NetworkOut>111111</NetworkOut>
-                  <TimeStamp>2019-02-01T15:00:00Z</TimeStamp>
-            </StorageDataItem>
-            <StorageDataItem>
-                  <StorageUtilization>111111</StorageUtilization>
-                  <NetworkOut>111111</NetworkOut>
-                  <TimeStamp>2019-02-02T15:00:00Z</TimeStamp>
-            </StorageDataItem>
-      </StorageData>
+	  <RequestId>C370DAF1-C838-4288-****-9A87633D248E</RequestId>
+	  <DataInterval>day</DataInterval>
+	  <StorageData>
+		    <StorageDataItem>
+			      <StorageUtilization>111111</StorageUtilization>
+			      <NetworkOut>111111</NetworkOut>
+			      <TimeStamp>2019-02-01T15:00:00Z</TimeStamp>
+		    </StorageDataItem>
+		    <StorageDataItem>
+			      <StorageUtilization>111111</StorageUtilization>
+			      <NetworkOut>111111</NetworkOut>
+			      <TimeStamp>2019-02-02T15:00:00Z</TimeStamp>
+		    </StorageDataItem>
+	  </StorageData>
 </DescribeVodStorageDataResponse>
 ```
 
