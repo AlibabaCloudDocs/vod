@@ -2,12 +2,41 @@
 
 This topic describes the release notes of different versions of ApsaraVideo Player SDK for Android.
 
+## 2021-03-08
+
+|Release date|Version|Description|Download link|
+|------------|-------|-----------|-------------|
+|2021-03-08|V5.3.2|-   Precise seeking is supported for audio-only files.
+-   Non-standard supplemental enhancement information \(SEI\) callbacks are supported.
+-   The compatibility with the HTTP Live Streaming \(HLS\) format is optimized.
+-   More tracking information is supported.
+-   The volume control logic is optimized.
+-   The compatibility with the operation of the system player is optimized.
+-   The issue is fixed where tracking information cannot be obtained.
+
+|[ApsaraVideo Player SDK V5.3.2 for Android](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.3.2/ApsaraVideo_videoPlay_v5.3.2_Android_20210308.zip)|
+
+## 2021-01-19
+
+|Release date|Version|Description|Download link|
+|------------|-------|-----------|-------------|
+|2021-01-19|V5.3.0|-   The response speed of the stop operation is improved.
+-   The logic of selecting the default resolution for video ID \(VID\)-based playback is optimized.
+-   The HLS format is supported.
+-   The precision of the playback progress is optimized.
+-   The display of external subtitles is optimized.
+-   The Conan dependency is removed.
+-   Widevine is supported in the player core.
+-   HDR10 videos can be played.
+
+|[ApsaraVideo Player SDK V5.3.0 for Android](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.3.0/ApsaraVideo_videoPlay_v5.3.0_Android_20210119.zip)|
+
 ## 2021-01-07
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
 |2021-01-07|V5.2.3|-   The download logic is optimized.
--   The compatibility with the MP4 and HTTP Live Streaming \(HLS\) formats is optimized.
+-   The compatibility with the MP4 and HLS formats is optimized.
 -   The audio extraction feature is supported.
 
 |[ApsaraVideo Player SDK V5.2.3 for Android](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.2.3/ApsaraVideo_videoPlay_v5.2.3_Android_20210107.zip)|
@@ -16,7 +45,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2020-11-17|V5.2.2|-   The compatibility with the videos with different frame rates is optimized.
+|2020-11-17|V5.2.2|-   The compatibility with the videos that have different frame rates is optimized.
 -   The issue is fixed where frames are lost when you resume playback for a video that is played at an adjusted speed.
 -   The compatibility with MP4 files is optimized.
 -   The list playback feature is optimized.
@@ -45,7 +74,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 |2020-09-22|V5.1.6|-   The progress display logic is optimized.
 -   The display of external subtitles is optimized.
 -   The logic of synchronizing audio signals with video signals is optimized.
--   The startup loading time of video ID \(VID\)-based list playback is shortened.
+-   The startup loading time of VID-based list playback is shortened.
 -   The playback of audio with specific sample rates is optimized.
 -   The background playback feature is optimized.
 
@@ -104,8 +133,8 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2019-09-18|V4.7.1|-   Supplemental enhancement information \(SEI\) in H.264-encoded videos can be obtained.
--   Frame synchronization is supported for FLV-based live streaming.
+|2019-09-18|V4.7.1|-   SEI in H.264-encoded videos can be obtained.
+-   Frame synchronization is supported for Flash Video \(FLV\)-based live streaming.
 
 |[ApsaraVideo Player SDK V4.7.1 for Android](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/4.7.1/ApsaraVideo_videoPlay_v4.7.1_Android_20190918.zip)|
 
@@ -116,7 +145,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 |2019-08-19|V4.7.0|-   WebVTT-based thumbnails are supported.
 -   Precise seeking is supported.
 -   The encryption type can be specified for videos to be requested.
--   [Real-time Streaming \(RTS\)](https://promotion.aliyun.com/ntms/lowlatencylive.html) is supported.
+-   [Real-Time Streaming \(RTS\)](https://promotion.aliyun.com/ntms/lowlatencylive.html) is supported.
 
 |[ApsaraVideo Player SDK V4.7.0 for Android](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/4.7.0/ApsaraVideo_videoPlay_v4.7.0_Android_20190809.zip)|
 
@@ -125,7 +154,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
 |2019-08-02|V4.5.0|-   The AliPlayer operation is added to improve the usability.
--   Software and hardware decoding are supported for H.265-encoded videos. H.265 live streaming is supported.
+-   Software and hardware decoding is supported for H.265-encoded videos. H.265 live streaming is supported.
 -   Hardware decoding is supported for H.264-encoded videos in Android.
 -   The preview feature is supported.
 -   The AliListPlayer operation is added.
@@ -192,7 +221,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 |2018-05-27|V3.4.5|-   The issue is fixed where a 4003 error message is returned when you seek to the end of a video.
 -   The issue is fixed where you cannot seek to the start of a video.
 -   The issue is fixed where an error message is returned if you seek to a position beyond the buffer when the network is disconnected during playback.
--   The player UI is open sourced.
+-   The player user interface \(UI\) is open sourced.
 
 |[ApsaraVideo Player SDK V3.4.5 for Android](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1527413416523/AliyunPlayerSDK_android_3.4.5_20180527.zip)
 
@@ -202,7 +231,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2018-04-25|V3.4.3|The issue is fixed where MP3 files with thumbnails cannot be played.|[ApsaraVideo Player SDK V3.4.3 for Android](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1524628346935/AliyunPlayerSDK_android_3.4.3_20180425.zip)
+|2018-04-25|V3.4.3|The issue is fixed where MP3 files that have thumbnails cannot be played.|[ApsaraVideo Player SDK V3.4.3 for Android](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1524628346935/AliyunPlayerSDK_android_3.4.3_20180425.zip)
 
 [Sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1524628267192/AliyunPlayerDemo_android_3.4.3_20180425.zip) |
 
@@ -221,7 +250,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2018-02-26|V3.4.0|-   Time shifting during live streaming is supported.
+|2018-02-26|V3.4.0|-   Time shifting is supported.
 -   Secure download from ApsaraVideo for Media Processing is supported.
 -   The demo that illustrates continuous playback is added.
 
@@ -233,10 +262,10 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2018-02-06|V3.3.4|-   The issue is fixed where the STS token expires due to inconsistent time zones.
+|2018-02-06|V3.3.4|-   The issue is fixed where the Security Token Service \(STS\) token expires due to inconsistent time zones.
 -   The issue is fixed where the metadata is lost when cached and stored videos are rotated.
 -   HTTPS requests are used to call internal API operations.
--   The error messages of playback status and the error messages that appear when STS expires are optimized.
+-   The error messages of playback status and the error messages that appear when the STS token expires are optimized.
 -   Resolution switching during video playback is supported.
 
 |[ApsaraVideo Player SDK V3.3.4 for Android](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1517928354668/AliyunPlayerSDK_android_3.3.4_20180206.zip)
@@ -268,8 +297,8 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2017-11-23|V3.2.2|-   The issue is fixed where the stream ingest SDK mutes the audio when the application is switched to the background.
--   The issue is fixed where the player unexpectedly quits when the player is released without stopping the playback.
+|2017-11-23|V3.2.2|-   The issue is fixed where the AliLive SDK mutes the audio when the application is switched to the background.
+-   The issue is fixed where the player unexpectedly quits when the player is destroyed without stopping the playback.
 
 |[ApsaraVideo Player SDK V3.2.2 for Android](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1511447292886/AliyunPlayerSDK_android_3.2.2_20171123.zip)
 
