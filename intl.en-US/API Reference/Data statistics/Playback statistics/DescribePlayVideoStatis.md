@@ -1,11 +1,11 @@
 # DescribePlayVideoStatis
 
-Queries daily playback statistics on a video in a specified time range.
+Queries daily playback statistics on a specified video in a specified time range.
 
 **Note:**
 
 -   This operation is available only in the **China \(Shanghai\)** region.
--   You can call this operation to query only playback statistics collected from videos that are played by using ApsaraVideo Player SDKs.
+-   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
 -   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
 -   You can query only data in the last 730 days. The maximum time range to query is 180 days.
 
@@ -27,7 +27,7 @@ Queries daily playback statistics on a video in a specified time range.
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
 |RequestId|String|A92D3600-A3E7-43D6-\*\*\*\*-B6E3B4A1FE6B|The ID of the request. |
-|VideoPlayStatisDetails|Array of VideoPlayStatisDetail| |The details of daily playback statistics on the video. |
+|VideoPlayStatisDetails|Array of VideoPlayStatisDetail| |The daily playback statistics on the video. |
 |VideoPlayStatisDetail| | | |
 |Date|String|20170120|The date when the statistics were generated. The date follows the *yyyy-MM-dd* format. |
 |PlayDuration|String|967277|The playback duration. Unit: milliseconds. |
@@ -54,54 +54,32 @@ Sample success responses
 
 ```
 <DescribePlayVideoStatisResponse>
-      <RequestId>A92D3600-A3E7-43D6-****-B6E3B4A1FE6B</RequestId>
-      <VideoPlayStatisDetails>
-            <VideoPlayStatisDetail>
-                  <Date>20180101</Date>
-                  <PlayDuration>3288</PlayDuration>
-                  <PlayRange>&lt;=1m:79.2%;&gt;1&lt;=5m:16.7%;&gt;5&lt;=10m:4.2%</PlayRange>
-                  <Title>Four streams (one stream encrypted): LD-HLS + SD-MP4 + HD-HLS-encrypted + UHD-MP4</Title>
-                  <UV>1</UV>
-                  <VV>1</VV>
-            </VideoPlayStatisDetail>
-            <VideoPlayStatisDetail>
-                  <Date>20180102</Date>
-                  <PlayDuration>967277</PlayDuration>
-                  <PlayRange>&lt;=1m:79.2%;&gt;1&lt;=5m:16.7%;&gt;5&lt;=10m:4.2%</PlayRange>
-                  <Title>Four streams (one stream encrypted): LD-HLS + SD-MP4 + HD-HLS-encrypted + UHD-MP4</Title>
-                  <UV>1</UV>
-                  <VV>24</VV>
-            </VideoPlayStatisDetail>
-      </VideoPlayStatisDetails>
+	  <RequestId>A92D3600-A3E7-43D6-****-B6E3B4A1FE6B</RequestId>
+	  <VideoPlayStatisDetails>
+		    <VideoPlayStatisDetail>
+			      <Date>20180101</Date>
+			      <PlayDuration>3288</PlayDuration>
+			      <PlayRange>&lt;=1m:79.2%;&gt;1&lt;=5m:16.7%;&gt;5&lt;=10m:4.2%</PlayRange>
+			      <Title>Four streams (one stream encrypted): LD-HLS + SD-MP4 + HD-HLS-encrypted + UHD-MP4</Title>
+			      <UV>1</UV>
+			      <VV>1</VV>
+		    </VideoPlayStatisDetail>
+		    <VideoPlayStatisDetail>
+			      <Date>20180102</Date>
+			      <PlayDuration>967277</PlayDuration>
+			      <PlayRange>&lt;=1m:79.2%;&gt;1&lt;=5m:16.7%;&gt;5&lt;=10m:4.2%</PlayRange>
+			      <Title>Four streams (one stream encrypted): LD-HLS + SD-MP4 + HD-HLS-encrypted + UHD-MP4</Title>
+			      <UV>1</UV>
+			      <VV>24</VV>
+		    </VideoPlayStatisDetail>
+	  </VideoPlayStatisDetails>
 </DescribePlayVideoStatisResponse>
 ```
 
 `JSON` format
 
 ```
-{
-    "RequestId":"A92D3600-A3E7-43D6-****-B6E3B4A1FE6B",
-    "VideoPlayStatisDetails":{
-        "VideoPlayStatisDetail":[
-            {
-                "Date":"20180101",
-                "PlayDuration":"3288",
-                "PlayRange":"<=1m:79.2%;>1<=5m:16.7%;>5<=10m:4.2%",
-                "Title": "Four streams (one stream encrypted): LD-HLS + SD-MP4 + HD-HLS-encrypted ​​​+ UHD-MP4",
-                "UV":"1",
-                "VV":"1"
-            },
-            {
-                "Date":"20180102",
-                "PlayDuration":"967277",
-                "PlayRange":"<=1m:79.2%;>1<=5m:16.7%;>5<=10m:4.2%",
-                "Title": "Four streams (one stream encrypted): LD-HLS + SD-MP4 + HD-HLS-encrypted ​​​+ UHD-MP4",
-                "UV":"1",
-                "VV":"24"
-            }
-        ]
-    }
-}
+{"VideoPlayStatisDetails":{"VideoPlayStatisDetail":[{"PlayRange":"<=1m:79.2%;>1<=5m:16.7%;>5<=10m:4.2%","VV":"24","UV":"1","PlayDuration":"967277","Title":"Four streams (one stream encrypted): LD-HLS + SD-MP4 + HD-HLS-encrypted + UHD-MP4","Date":"20170120"}]},"RequestId":"A92D3600-A3E7-43D6-****-B6E3B4A1FE6B"}
 ```
 
 ## Error codes
@@ -133,21 +111,21 @@ The following table describes the common errors that this operation can return.
 
 |400
 
-|The error message returned because the format of the start time is invalid. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
+|The error message returned because the format of the start time that is specified by the StartTime parameter is invalid. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
 |InvalidEndTime.Malformed
 
 |Specified EndTime is malformed.
 
 |400
 
-|The error message returned because the format of the end time is invalid. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
+|The error message returned because the format of the end time that is specified by the EndTime parameter is invalid. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
 |InvalidEndTime.BeyondCurrent
 
 |EndTime beyond current time.
 
 |400
 
-|The error message returned because the end time is later than the current time. |
+|The error message returned because the end time that is specified by the EndTime parameter is later than the current time. |
 |InvalidEndTime.Mismatch
 
 |StartTime or EndTime is mismatch.
