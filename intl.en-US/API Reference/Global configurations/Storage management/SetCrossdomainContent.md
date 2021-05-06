@@ -2,7 +2,7 @@
 
 Updates the cross-domain policy file crossdomain.xml.
 
-**Note:** After you use the cross-domain policy file to update the resources on the origin server, you must refresh the resources that are cached on Alibaba Cloud CDN nodes. You can use the ApsaraVideo VOD console to refresh resources. For more information, see [Refresh and prefetch](~~86098~~). In addition, you can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh resources.
+**Note:** After you use the cross-domain policy file to update the resources on the origin server, you must refresh the resources that are cached on Alibaba Cloud CDN nodes. You can use the ApsaraVideo VOD console to refresh resources. For more information, see [Refresh and prefetch](~~86098~~). Alternatively, you can call the [RefreshVodObjectCaches](~~69215~~) operation to refresh resources.
 
 ## Debugging
 
@@ -13,7 +13,7 @@ Updates the cross-domain policy file crossdomain.xml.
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
 |Action|String|Yes|SetCrossdomainContent|The operation that you want to perform. Set the value to **SetCrossdomainContent**. |
-|Content|String|Yes|%3C? xml%20version=%221.0%22%20encoding=%22UTF-8%22? %3E%0A%3Ccross-domain-policy%3E%0A%20%20%20%20%3Callow-access-from%20domain=%22\*%22/%3E%0A%20%20%20%20%3Callow-http-request-headers-from%20domain=%22\*%22%20headers=%22\*%22%20secure=%22false%22/%3E%0A%3C/cross-domain-policy%3E|The content of the cross-domain policy file. The file must be in the XML format and can contain up to 2,048 characters. |
+|Content|String|Yes|<cross-domain-policy\><allow-access-from domain="\*"/\><allow-http-request-headers-from domain="\*" headers="\*" secure="false"/\></cross-domain-policy\>|The content of the cross-domain policy file. The file must be in the XML format and can contain up to 2,048 characters. |
 |StorageLocation|String|Yes|outin-67870fd5b\*\*\*\*1e98a3900163e1c35d5.oss-cn-shanghai.aliyuncs.com|The URL of the Object Storage Service \(OSS\) bucket. |
 |ResourceRealOwnerId|String|No|3461111|The ID of the resource owner. |
 
@@ -28,8 +28,8 @@ Updates the cross-domain policy file crossdomain.xml.
 Sample requests
 
 ```
-https://vod.aliyuncs.com/?Action=SetCrossdomainContent
-&Content=%3C? xml%20version=%221.0%22%20encoding=%22UTF-8%22? %3E%0A%3Ccross-domain-policy%3E%0A%20%20%20%20%3Callow-access-from%20domain=%22*%22/%3E%0A%20%20%20%20%3Callow-http-request-headers-from%20domain=%22*%22%20headers=%22*%22%20secure=%22false%22/%3E%0A%3C/cross-domain-policy%3E
+http(s)://[Endpoint]/?Action=SetCrossdomainContent
+&Content=<cross-domain-policy><allow-access-from domain="***"/><allow-http-request-headers-from domain="***" headers="*" secure="false"/></cross-domain-policy>
 &StorageLocation=outin-67870fd5b****1e98a3900163e1c35d5.oss-cn-shanghai.aliyuncs.com
 &<Common request parameters>
 ```
