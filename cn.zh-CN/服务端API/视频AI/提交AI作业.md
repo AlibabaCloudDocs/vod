@@ -5,6 +5,7 @@
 **说明：**
 
 -   只有开通相关的AI服务后，才能调用此接口。更多详情，请参见[视频AI](~~101148~~)。
+-   AI作业内容包含视频DNA作业和智能标签作业。
 -   作业在提交成功后会异步执行，不保证接口返回时作业已处理完成。
 
 ## 调试
@@ -56,7 +57,7 @@ https://vod.aliyuncs.com/?Action=SubmitAIJob
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
 <SubmitAIJobResponse>
@@ -76,7 +77,7 @@ https://vod.aliyuncs.com/?Action=SubmitAIJob
 </SubmitAIJobResponse>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
 {
@@ -91,7 +92,7 @@ https://vod.aliyuncs.com/?Action=SubmitAIJob
 			"Data": "1",
 			"Code": "1",
 			"JobId": "9e82640c85114bf5af23edfaf****"
-		}]
+		}]        
 	}
 }
 ```
