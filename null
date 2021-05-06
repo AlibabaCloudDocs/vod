@@ -1,120 +1,59 @@
-# 安装与配置MySQL数据库
+# 查询视频DNA作业
 
-通过阅读本文，您可以了解到Linux环境下安装和配置MySQL数据库的方法。
+## 说明
 
-## 操作步骤
+查询视频DNA作业。可调用API：[ListAIJob](/cn.zh-CN/服务端API/视频AI/查询AI作业.md)，其中参数JobIds为视频DNA作业ID列表。
 
-1.  登录Linux服务器终端。
+## API示例
 
-    **说明：** 本文以Ubuntu 18.04版本为例说明，其他Linux发行版本，请根据实际情况操作。
+## 请求示例
 
-2.  更新软件源并安装wget。
+```
+http://vod.cn-shanghai.aliyuncs.com?Action=ListAIJob
+&JobIds=1236ca184c0e47098a5b665e2a126654
+&Format=JSON
+&<公共参数>
+			
+```
 
-    sudo apt update
+**说明：** 示例中的“公共参数”参见[公共参数说明文档](/cn.zh-CN/服务端API/调用方式/公共参数.md)。
 
-    sudo apt install wget
+## 返回示例
 
-3.  下载MySQL数据库安装包。
+```
+{
+    "RequestId": "25818875-5F78-4A13-BEF6-D7393642CA58",
+    "AIJobList": {
+        "AIJob": [
+            {
+                "JobId": "1236ca184c0e47098a5b665e2a126654",
+                "MediaId":"3D3D12340d92c641401fab46a0b847fdff97",
+                "Type":"AIMediaDNA",
+                "CreationTime": "2018-01-10T12:00:00Z",
+                "CompleteTime":"2018-01-10T12:00:30Z",
+                "Status":"success",
+                "Code":"0",
+                "Message":"OK",
+                "Data":"\"VideoDNA\":[{\"Similarity\":\"0.98\",\"PrimaryKey\":\"6ad8987da46f4b14b9d6490ce2873745\",\"Detail\":[{\"Input\":{\"Start\":\"2.0\",\"Duration\":\"12.0\"},\"Duplication\":{\"Start\":\"2.0\",\"Duration\":\"12.1\"}}]}]}"
+            }
+        ]
+    },
+    "NonExistAIJobIds": {
+        "String": []
+    }
+}
+			
+```
 
-    wget https://dev.mysql.com/get/mysql-apt-config\_0.8.16-1\_all.deb -y
+## SDK示例
 
-    **说明：** 如果没有安装wget，需要先执行apt install wget安装wget。
+建议使用[服务端SDK](t1826050.md#)来调用API，此API各语言调用的示例代码，请参考如下：
 
-4.  使用deb包更新软件源。
-
-    sudo dpkg -i mysql-apt-config\_0.8.16-1\_all.deb
-
-    在弹出的对话框中选择**MySQL Server & Cluster \(Currently selected: mysql-5.7\)**，然后选择**Ok**。
-
-    ![install_mysql_01](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5363746061/p185799.png)
-
-5.  获取软件包的所有可安装版本。
-
-    sudo apt update
-
-    sudo apt-cache policy mysql-server
-
-    ```
-    mysql-server:
-      Installed: (none)
-      Candidate: 5.7.32-1ubuntu18.04
-      Version table:
-      ...
-    ```
-
-    其中，**5.7.32-1ubuntu18.04**表示MySQL数据库安装版本。
-
-6.  根据获取到的安装版本安装MySQL5.7，安装过程中需设置root用户密码并妥善保存。
-
-    sudo apt install -f mysql-client=5.7.32-1ubuntu18.04 mysql-community-server=5.7.32-1ubuntu18.04 mysql-server=5.7.32-1ubuntu18.04
-
-7.  配置MySQL数据库。
-
-    1.  设置常规化安全。
-
-        sudo mysql\_secure\_installation
-
-        请根据提示信息设置，如下所示：
-
-        ```
-        Enter current password for root (enter for none): <Enter password>
-        VALIDATE PASSWORD PLUGIN can be used to test passwords 
-        and improve security. It checks the strength of password 
-        and allows the users to set only those passwords which are 
-        secure enough. Would you like to setup VALIDATE PASSWORD plugin? 
-        
-        Press y|Y for Yes, any other key for No: Y 
-        
-        There are three levels of password validation policy: 
-        
-        LOW    Length >= 8 
-        MEDIUM Length >= 8, numeric, mixed case, and special characters 
-        STRONG Length >= 8, numeric, mixed case, special characters and dictionary                 
-        
-        Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: 1 
-        Using existing password for root. 
-        Estimated strength of the password: 25  
-        Change the password for root ? ((Press y|Y for Yes, any other key for No) : d
-        Remove anonymous users? [Y/n] Y 
-        Disallow root login remotely? [Y/n] Y 
-        Remove test database and access to it? [Y/n] Y 
-        Reload privilege tables now? [Y/n] Y 
-        ```
-
-    2.  开启远程访问。
-
-        1.  编辑MySQL数据库的配置文件。
-
-            sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
-
-        2.  按**I**键，将bind-address的值修改为0.0.0.0。
-        3.  按**Esc**键，输入:wq!保存并退出。
-    3.  重启MySQL数据库服务使配置生效。
-
-        sudo systemctl restart mysql
-
-8.  验证MySQL数据库服务是否正常。
-
-    1.  以root用户登录MySQL数据库。
-
-        mysql -u root -p
-
-    2.  在MySQL数据库交互控制台查询现有数据库。
-
-        show databases;
-
-        ```
-        +--------------------+
-        | Database           |
-        +--------------------+
-        | information_schema |
-        | mysql              |
-        | performance_schema |
-        | sys                |
-        +--------------------+
-        5 rows in set (0.00 sec)
-        ```
-
-        如上所示，现有MySQL数据库服务正常。
-
+-   [Java](t1826065.md#)
+-   [Python](t1826082.md#)
+-   [PHP](t1826104.md#)
+-   [.NET](t1826121.md#)
+-   [Node.js](t1826137.md#)
+-   [Go](t1826153.md#)
+-   [C/C++](t1826171.md#)
 
