@@ -1,5 +1,35 @@
 # Release notes
 
+## V3.20.0
+
+**Feature updates**
+
+-   The audio fade effect is added to the editing module.
+-   The combined subtitle feature is added to the editing module.
+-   The basic editing capability is added to the editing module.
+-   The issue is fixed where the screen flickers on specific phone models when you switch between the preview pages of multiple video clips during editing.
+-   The issue is fixed where the frame rate that you set for the exported video during editing does not take effect.
+-   The issue is fixed where the camera transformation matrix may be empty during custom rendering in the Android system.
+-   The stability of the SDK is improved.
+
+**Others**
+
+-   **URL of the Maven repository for the short video SDK for Android**
+
+```
+maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
+```
+
+-   **Core libraries**
+
+```
+com.aliyun.video.android:core:1.2.2
+com.alivc.conan:AlivcConan:1.0.3
+com.aliyun.video.android:AlivcFFmpeg:2.0.0
+com.aliyun.video.android:svideopro:3.20.0
+```
+
+
 ## V3.19.0
 
 **Feature updates**
