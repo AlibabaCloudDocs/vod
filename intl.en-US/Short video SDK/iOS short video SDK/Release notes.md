@@ -1,11 +1,22 @@
 # Release notes
 
+## V3.20.0
+
+**Feature updates**
+
+-   The audio fade effect is added to the editing module.
+-   The combined subtitle feature is added to the editing module.
+-   The basic editing capability is added to the editing module.
+-   The capability of obtaining the thumbnails of specified video timestamps is added.
+-   The issue is fixed where the frame rate that you set for the exported video during editing does not take effect.
+-   The stability of the SDK is improved.
+
 ## V3.19.0
 
 **Feature updates**
 
 -   The noise reduction feature is added to the editing module.
--   Background image and background color can be set during duet recording and video merging.
+-   The background image and background color can be set during duet recording and video merging.
 -   Audio tracks can be merged during duet recording and video merging.
 -   Echoes can be removed for duet recording.
 -   The issue is fixed where the halo color changes when a transparent halo effect is added to a watermark or an image.
@@ -13,7 +24,7 @@
 
 **SDK changes**
 
-Deprecated operation:
+Deprecated classes:
 
 AliyunCamera & AliyunIRecorder,@property\(nonatomic, assign\) BOOL useAudioSessionModeVideoRecording;
 
@@ -21,13 +32,13 @@ AliyunCamera & AliyunIRecorder,@property\(nonatomic, assign\) BOOL useAudioSessi
 
 **Feature updates**
 
-The issue is fixed where memory leak occurs when hardware encoding is used on specific iOS phone models.
+The issue is fixed where a memory leak occurs when hardware encoding is used on specific iOS phone models.
 
 ## V3.18.0
 
 **Feature updates**
 
-Audio tracks, such as the track of the original audio, recorded audio, or mute audio, can be specified for duet recording.
+Audio tracks can be specified during duet recording. For example, you can use the original or recorded audio. You can also mute the audio.
 
 ## V3.17.1
 
@@ -74,30 +85,28 @@ The issue is fixed where a recorded video cannot be merged with an existing vide
 
 **SDK changes**
 
--   An interface is added to modify the parameters of custom effects in real time.
+-   A method is added to modify the parameters of custom effects in real time.
 -   The features of custom filters and transitions are supported. For more information about the standards of producing custom effects, see the official documentation.
 
 ## V3.14.0
 
 **Feature updates**
 
--   The cropping module is optimized to avoid chromatic distortion when a video is cropped multiple times.
+-   The cropping module is optimized to prevent chromatic distortion when a video is cropped multiple times.
 -   The stability of the recording module is optimized to deal with exceptions, such as background execution and hardware resource occupation.
 -   The known memory leaks are fixed and the performance of specific modules is optimized.
 
 **Fixed issues**
 
--   The issue is fixed where occasional quits occur when the application is switched to the background during recording.
+-   The issue is fixed where intermittent unexpected quits occurs when the application is switched to the background during recording.
 -   The issue is fixed where exceptions occur when audio resources are occupied during recording.
 -   The issue is fixed where the color setting of the background does not take effect.
 -   The issue is fixed where a part of the playback image is enlarged after the view of the editing module is changed on iOS devices.
--   Some memory leaks and other known issues are fixed.
+-   The known issues, such as specific known memory leaks, are fixed.
 
 **SDK changes**
 
-The AliyunVideoSDKPro.framework dynamic framework is split into AliyunVideoSDKPro.framework static framework and AliyunVideoCore.framework dynamic framework. If you want to manually integrate the short video SDK,
-
-see [Project configuration](/intl.en-US/Short video SDK/iOS short video SDK/Project configuration.md).
+The AliyunVideoSDKPro.framework dynamic framework is split into AliyunVideoSDKPro.framework static framework and AliyunVideoCore.framework dynamic framework. If you want to manually integrate the short video SDK, see [Project configuration](/intl.en-US/Short video SDK/iOS short video SDK/Project configuration.md).
 
 ## V3.13.0
 
@@ -115,12 +124,12 @@ The method for the music video \(MV\) effect is deprecated and the feature of ad
 
 **Feature updates**
 
--   The feature of log analysis is supported. The AliyunVideoSDKInfo setDebugLogLevel operation is added for specifying whether to enable the feature. The following three options are provided:
+-   The feature of log analysis is supported. The AliyunVideoSDKInfo setDebugLogLevel method is added to specify whether to enable the feature. The following three options are provided:
 
     ```
     AlivcDebugLogClose: Disable the feature of log analysis.
     AlivcDebugLogNormal: Analyze warning or error logs. We recommend that you use this option to analyze logs.
-    AlivcDebugLogAll: Analyze all logs. We recommend that you use this option only for troubleshooting. We recommend that you do not use this option in the official release. You can only use this option to analyze logs of the SDK.
+    AlivcDebugLogAll: Analyze all logs. We recommend that you use this option only for troubleshooting. However, we recommend that you do not use this option in the official release where this option can be used only to analyze logs of the SDK.
                             
     ```
 
@@ -132,13 +141,13 @@ The issue is fixed where the recording process is stopped but the corresponding 
 
 **SDK changes**
 
-The applyRunningDisplayMode operation is deleted from the editing module.
+The applyRunningDisplayMode method is deleted from the editing module.
 
 ## V3.11.0
 
 **Feature updates**
 
--   The start and stop speeds of clip recording and the video production speed are improved, which enables smoother clip recording.
+-   The start and stop speeds of clip recording and the video production speed are improved, which allows smoother clip recording.
 -   The granularity and accuracy of the recording progress callback are improved.
 -   The transcoding speed in specific scenarios is improved by precisely adjusting the group of pictures \(GOP\) size.
 -   The time that is required to switch between cameras is reduced.
@@ -159,8 +168,8 @@ The applyRunningDisplayMode operation is deleted from the editing module.
 
 **Feature updates**
 
--   The AliyunMixRecorder interface is added. This interface can be called to record videos in duet mode.
--   The AliyunMixComposer interface is added. This interface can be called to achieve effects such as picture-in-picture and left-right split-screen.
+-   The AliyunMixRecorder interface is added. This interface can be used to record videos in duet mode.
+-   The AliyunIMixComposer interface is added. This interface can be used to achieve effects such as picture-in-picture \(PiP\) and left-right split-screen.
 
 ## V3.10.0
 
@@ -173,7 +182,7 @@ The applyRunningDisplayMode operation is deleted from the editing module.
 
 **Fixed issues**
 
--   The issue is fixed where the duration is incorrectly displayed for a recorded video clip.
+-   The issue is fixed where the duration is not accurately displayed for a recorded video clip.
 -   The issue is fixed where the watermark that is added during recording disappears when the application is switched to the background.
 -   The issue is fixed where stuttering occurs when you switch between the front and rear cameras during recording.
 -   The issue is fixed where an unexpected quit may occur when the application is switched to the background during production.
@@ -182,7 +191,7 @@ The applyRunningDisplayMode operation is deleted from the editing module.
 
 **Feature updates**
 
--   The voice effect feature is supported. The voice effects include lolita, uncle, reverberation, and echo.
+-   The voice effect feature is supported. The voice effects include lolita, male, reverberation, and echo.
 -   The seeking performance during editing is improved.
 -   The stability of the SDK is improved.
 
@@ -194,9 +203,9 @@ The applyRunningDisplayMode operation is deleted from the editing module.
 -   The accuracy of time selection during cropping is improved.
 -   The playback capability during editing is optimized to ensure smooth playback.
 -   The video production speed is improved for the editing module.
--   Some issues are fixed.
+-   Specific issues are fixed.
 -   The production can be resumed after the application is switched to the foreground from the background.
--   To meet the requirement of SDK stability monitoring and data-related requirements in the future, the AlivcConan.framework is changed as a required dependency. In manual integration, you must add AlivcConan.framework. In CocoaPods integration, you must add pod 'AlivcConan', '0.9.0' to Podfile. For more information, see the demo.
+-   To meet the requirement of SDK stability monitoring and data-related requirements in the future, the AlivcConan.framework is changed as a required dependency. In manual integration, you must add AlivcConan.framework. In CocoaPods integration, you must add pod 'AlivcConan', '0.9.0' to Podfile. For more information, see the demo code.
 
 ## V3.7.7
 
@@ -222,11 +231,11 @@ The applyRunningDisplayMode operation is deleted from the editing module.
 **Feature updates**
 
 -   The transition feature is supported with major effects, such as fade, polygon, and blinds.
--   The animation feature is supported with basic animations, such as rotation, translation, scaling, and alpha, and custom animations such as linear erasure.
+-   The animation feature is supported with basic animations, such as rotation, translation, scaling, and alpha, and custom animations, such as linear erasure.
 -   The Gaussian blur effect can be added to the specified stream in the specified time period.
 -   The display mode, including padding and cropping, can be set for the specified stream in the specified time period.
 -   The dubbing feature is supported with multi-track dubbing and speed adjustment.
--   Multiple speed control effects can be added to multiple videos. The repetition and reverse playback effects can be added only to a single video.
+-   Multiple speed control effects can be added to a multi-clip video. The repetition and reverse playback effects can be configured only for a single-clip video.
 
 **SDK changes**
 
@@ -250,7 +259,7 @@ The SDK is compatible with Xcode 10.
 
 -   The issue is fixed where an unexpected quit may occur if the screen is locked when you add an MV during recording.
 -   The issue is fixed where an animated filter is not displayed in the specified time period during the reverse playback.
--   The issue is fixed where some videos are not displayed in the correct color.
+-   The issue is fixed where specific videos are not displayed in the correct color.
 -   Audio files in the AAC SBR format are supported.
 
 ## V3.6.5
@@ -333,14 +342,14 @@ Framework file size and basic issues
         ```
 
 -   New method for displaying time effects
-    -   The addTimelineTimeFilterItem method is added. For more information about the code, see demo.
+    -   The addTimelineTimeFilterItem method is added. For more information about the code, see the demo code.
     -   Time effects affect animated filters.
 
         If you add an animated filter when the playback speed is adjusted in the entire video or the entire video is reversely played, make sure that the animated filter is displayed in the desired time period. In V3.6.0, the code is in the following methods:
 
         ```
-        (void)didBeganLongPressEffectFilter:(AliyunEffectFilterInfo *)animtinoFilterInfo
-        (void)didTouchingProgress
+        (void)didBeganLongPressEffectFilter:(AliyunEffectFilterInfo *)animtinoFilterInfo;
+        (void)didTouchingProgress;
         (void)didEndLongPress;
         ```
 
@@ -361,7 +370,7 @@ Framework file size and basic issues
 
 -   New time effect method
 
-    The new methods can also be used in V3.5.0. For more information about the code, see the demo of V3.6.0.
+    The new methods can also be used in V3.5.0. For more information about the code, see the demo code of V3.6.0.
 
     ```
     AliyunEffectTimeFilter *timeFilter = [[AliyunEffectTimeFilter alloc] init];
@@ -377,14 +386,14 @@ Framework file size and basic issues
     Compared with V3.5.0, the events of switching between the foreground and background and screen switching are internally handled in V3.6.0.
 
     -   The setActive method is deprecated.
-    -   Handling of viewWillAppear and viewWillDisappear: When the viewWillDisappear callback is received, you do not need to call the stopEdit method to release the entire AliyunEdit instance. Instead, you only need to call the stop method to stop the playback. Similarly, when the viewWillAppear callback is received, you only need to call the play method to restart the playback.
+    -   Handling of viewWillAppear and viewWillDisappear: When the viewWillDisappear callback is received, you do not need to call the stopEdit method to release the entire AliyunEdit instance. Instead, you need only to call the stop method to stop the playback. Similarly, when the viewWillAppear callback is received, you need only to call the play method to restart the playback.
     -   Handling when the application is switched to the background or foreground:
 
         When the application is switched to the background, the SDK stops the playback or production. When the application is switched to the foreground, the SDK starts or pauses the playback by default.
 
         Error handling:
 
-        In V3.6.0, when an error occurs during the playback or production, the playback or production is stopped, and the error is returned through the playError or exportError callback. You can handle the error as needed.
+        In V3.6.0, when an error occurs during the playback or production, the playback or production is stopped, and the error is returned in the playError or exportError callback. You can handle the error as needed.
 
 -   The following three methods of the AliyunImporter class are deprecated. For compatibility with earlier versions, these methods can still be used in V3.6.0.
 
@@ -422,7 +431,7 @@ Framework file size and basic issues
 **Examples**
 
 -   If the duration of a video is 15s and the entire video is played at twice the speed, getDuration returns 7.5s and getStreamDuration returns 15s. In this case, when getCurrentTime returns 3.5s, getCurrentStreamTime returns 7s.
--   If the duration of a video is 15s and the entire video is played at half the speed, getDuration returns 30s and getStreamDuration returns 15s. In this case, when getCurrentTime returns 10s, getCurrentStreamTime returns 7.5s.
+-   If the duration of a video is 15s and the entire video is played at half the speed, getDuration returns 30s and getStreamDuration returns 15s. In this case, when getCurrentTime returns 10s, getCurrentStreamTime returns 5s.
 -   If the duration of a video is 15s and the entire video is reversely played, getDuration and getStreamDuration both return 15s. In this case, when getCurrentTime returns 6s, getCurrentStreamTime returns 9s.
 
 In the preceding examples, the time effect is applied to the entire video. If the time effect is applied only to a part of the video, the playback duration, stream duration, and playback positions are calculated based on the same rules.
@@ -451,11 +460,11 @@ In the preceding examples, the time effect is applied to the entire video. If th
 
     The setActive method is deprecated.
 
-    Handling of viewWillAppear and viewWillDisappear: When the viewWillDisappear callback is received, you do not need to call the stopEdit method to release the entire AliyunEdit instance. Instead, you only need to call the stop method to stop the playback. Similarly, when the viewWillAppear callback is received, you only need to call the play method to restart the playback.
+    Handling of viewWillAppear and viewWillDisappear: When the viewWillDisappear callback is received, you do not need to call the stopEdit method to release the entire AliyunEdit instance. Instead, you need only to call the stop method to stop the playback. Similarly, when the viewWillAppear callback is received, you need only to call the play method to restart the playback.
 
     Handling when the application is switched to the background or foreground: When the application is switched to the background, the SDK stops the playback or production. When the application is switched to the foreground, the SDK starts or pauses the playback by default.
 
-    Error handling: In V3.6.0, when an error occurs during the playback or production, the playback or production is stopped, and the error is returned through the playError or exportError callback. You can handle the error as needed.
+    Error handling: In V3.6.0, when an error occurs during the playback or production, the playback or production is stopped, and the error is returned in the playError or exportError callback. You can handle the error as needed.
 
 -   New methods for the player
     -   \(double\)getStreamDuration; // Obtain the duration of the original video stream, in seconds.
