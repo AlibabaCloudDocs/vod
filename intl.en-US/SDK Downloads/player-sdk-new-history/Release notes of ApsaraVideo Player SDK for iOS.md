@@ -2,12 +2,39 @@
 
 This topic describes the release notes of different versions of ApsaraVideo Player SDK for iOS.
 
+## 2021-03-08
+
+|Release date|Version|Description|Download link|
+|------------|-------|-----------|-------------|
+|2021-03-08|V5.3.2|-   Hybrid Log-Gamma \(HLG\) High Dynamic Range \(HDR\) videos can be played.
+-   Rotation, mirroring, snapshots, and padding mode modification are supported for HDR video playback.
+-   Audio that has more than two sound channels can be played.
+-   The stability of audio playback is improved.
+-   The support for the system player is optimized.
+
+|[ApsaraVideo Player SDK V5.3.2 for iOS](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.3.2/ApsaraVideo_videoPlay_v5.3.2_iOS_20210308.zip)|
+
+## 2021-01-19
+
+|Release date|Version|Description|Download link|
+|------------|-------|-----------|-------------|
+|2021-01-19|V5.3.0|-   The response speed of the stop operation is improved.
+-   The logic of selecting the default resolution for video ID \(VID\)-based playback is optimized.
+-   The HTTP Live Streaming \(HLS\) format is supported.
+-   The precision of the playback progress is optimized.
+-   The display of external subtitles is optimized.
+-   The Conan dependency is removed.
+-   Widevine is supported in the player core.
+-   HDR10 videos can be played.
+
+|[ApsaraVideo Player SDK V5.3.0 for iOS](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.3.0/ApsaraVideo_videoPlay_v5.3.0_iOS_20210119.zip)|
+
 ## 2021-01-07
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
 |2021-01-07|V5.2.3|-   The download logic is optimized.
--   The compatibility with the MP4 and HTTP Live Streaming \(HLS\) formats is optimized.
+-   The compatibility with the MP4 and HLS formats is optimized.
 -   The audio extraction feature is supported.
 -   The issue is fixed where noise occurs when videos are switched during list playback.
 
@@ -17,7 +44,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2020-11-17|V5.2.2|-   The compatibility with the videos with different frame rates is optimized.
+|2020-11-17|V5.2.2|-   The compatibility with the videos that have different frame rates is optimized.
 -   The issue is fixed where frames are lost when you resume playback for a video that is played at an adjusted speed.
 -   The compatibility with MP4 files is optimized.
 -   The list playback feature is optimized.
@@ -45,7 +72,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 |2020-09-22|V5.1.6|-   The progress display logic is optimized.
 -   The display of external subtitles is optimized.
 -   The logic of synchronizing audio signals with video signals is optimized.
--   The startup loading time of video ID \(VID\)-based list playback is shortened.
+-   The startup loading time of VID-based list playback is shortened.
 -   The playback of audio with specific sample rates is optimized.
 -   The listener logic for frontend and backend events is modified. iPad devices are compatible.
 -   The issue is fixed where software decoding is not supported for interlaced videos.
@@ -113,7 +140,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
 |2019-09-18|V4.7.1|-   Supplemental enhancement information \(SEI\) in H.264-encoded videos can be obtained.
--   Frame synchronization is supported for FLV-based live streaming.
+-   Frame synchronization is supported for Flash Video \(FLV\)-based live streaming.
 
 |[ApsaraVideo Player SDK V4.7.1 for iOS](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/4.7.1/ApsaraVideo_videoPlay_v4.7.1_iOS_20190918.zip)|
 
@@ -124,7 +151,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 |2019-08-19|V4.7.0|-   WebVTT-based thumbnails are supported.
 -   Precise seeking is supported.
 -   The encryption type can be specified for videos to be requested.
--   [Real-time Streaming \(RTS\)](https://promotion.aliyun.com/ntms/lowlatencylive.html) is supported.
+-   [Real-Time Streaming \(RTS\)](https://promotion.aliyun.com/ntms/lowlatencylive.html) is supported.
 
 |[ApsaraVideo Player SDK V4.7.0 for iOS](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/4.7.0/ApsaraVideo_videoPlay_v4.7.0_iOS_20190809.zip)|
 
@@ -133,7 +160,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
 |2019-08-02|V4.5.0|-   The AliPlayer operation is added to improve the usability.
--   Software and hardware decoding are supported for H.265-encoded videos. H.265 live streaming is supported.
+-   Software and hardware decoding is supported for H.265-encoded videos. H.265 live streaming is supported.
 -   The preview feature is supported.
 -   The AliListPlayer operation is added.
 -   HLS streams can be played based on the MasterPlaylist parameter.
@@ -160,7 +187,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 |------------|-------|-----------|-------------|
 |2019-01-04|V3.4.9|-   Loop playback is optimized.
 -   The issue is fixed where repetitive VID-based requests cannot be stopped.
--   The issue is fixed where freezing occurs when the player is switched from the background to the foreground.
+-   The issue is fixed where stuttering occurs when the player is switched from the background to the foreground.
 -   The issue is fixed where the player unexpectedly quits when you scroll through the short video playlist at a high speed.
 
 |[ApsaraVideo Player SDK V3.4.9 for iOS](https://vod-download.cn-shanghai.aliyuncs.com/sdk/player/3.4.9/ApsaraVideo_videoPlay_v3.4.9_iOS_20190104.zip)|
@@ -197,7 +224,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 |2018-05-27|V3.4.5|-   The issue is fixed where a 4003 error message is returned when you seek to the end of a video.
 -   The issue is fixed where you cannot seek to the start of a video.
 -   The issue is fixed where an error message is returned if you seek to a position beyond the buffer when the network is disconnected during playback.
--   The player UI is open sourced.
+-   The player user interface \(UI\) is open sourced.
 
 |[ApsaraVideo Player SDK V3.4.5 for iOS](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1527416197411/AliyunPlayerSDK_iOS_3.4.5_20180527.zip)
 
@@ -210,7 +237,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
 |2018-05-04|V3.4.4|-   The issue is fixed where a video cannot be played if its title contains spaces.
--   The issue is fixed where playback cannot be resumed after image streams are ingested in the background.
+-   The issue is fixed where playback cannot be resumed after image streams are pushed in the background.
 
 |[ApsaraVideo Player SDK V3.4.4 for iOS](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1525440967427/AliyunPlayerSDK_iOS_3.4.4_20180504.zip)
 
@@ -222,7 +249,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2018-04-25|V3.4.3|-   The issue is fixed where MP3 files with thumbnails cannot be played.
+|2018-04-25|V3.4.3|-   The issue is fixed where MP3 files that have thumbnails cannot be played.
 -   The issue is fixed where the player mutes the audio during playback when the device screen is turned off.
 
 |[ApsaraVideo Player SDK V3.4.3 for iOS](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1524628158418/AliyunPlayerSDK_iOS_3.4.3_20180425.zip)
@@ -259,7 +286,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2018-02-26|V3.4.0|-   Time shifting during live streaming is supported.
+|2018-02-26|V3.4.0|-   Time shifting is supported.
 -   Secure download from ApsaraVideo for Media Processing is supported.
 -   The demo that illustrates continuous playback is added.
 
@@ -273,10 +300,10 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2018-02-06|V3.3.4|-   The issue is fixed where the STS token expires due to inconsistent time zones.
+|2018-02-06|V3.3.4|-   The issue is fixed where the Security Token Service \(STS\) token expires due to inconsistent time zones.
 -   The issue is fixed where the metadata is lost when cached and stored videos are rotated.
 -   The issue is fixed where an error occurs when applications are uploaded to App Store.
--   The error messages of playback status and the error messages that appear when STS expires are optimized.
+-   The error messages of playback status and the error messages that appear when the STS token expires are optimized.
 -   The download completion logic is optimized.
 -   The issue is fixed where the Domain Name System \(DNS\) request fails when the network is disconnected.
 -   Resolution switching during video playback is supported.
@@ -304,7 +331,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2018-01-08|V3.3.2|Unexpected quits that are caused by the lack of language packs is fixed.|[ApsaraVideo Player SDK V3.3.2 for iOS](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1515423301613/AliyunPlayerSDK_iOS_3.3.2_20180108.zip)
+|2018-01-08|V3.3.2|Unexpected quits that are caused by the lack of language packs are fixed.|[ApsaraVideo Player SDK V3.3.2 for iOS](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1515423301613/AliyunPlayerSDK_iOS_3.3.2_20180108.zip)
 
 [ApsaraVideo Player SDK V3.3.2 for iOS \(with a simulator\)](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1515423329342/AliyunPlayerSDK_iOS_simulator_3.3.2_20180108.zip)
 
@@ -330,7 +357,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2017-11-23|V3.2.2|The issue is fixed where the stream ingest SDK mutes the audio when the application is switched to the background.|[ApsaraVideo Player SDK V3.2.2 for iOS](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1511447652057/AliyunPlayerSDK_iOS_3.2.2_20171123.zip)
+|2017-11-23|V3.2.2|The issue is fixed where the AliLive SDK mutes the audio when the application is switched to the background.|[ApsaraVideo Player SDK V3.2.2 for iOS](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1511447652057/AliyunPlayerSDK_iOS_3.2.2_20171123.zip)
 
 [ApsaraVideo Player SDK V3.2.2 for iOS \(with a simulator\)](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1511447722625/AliyunPlayerSDK_iOS_simulator_3.2.2_20171123.zip)
 
@@ -344,7 +371,7 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 -   The snapshot feature is supported.
 -   In-buffer seeking is supported.
 -   The features of ApsaraVideo Player Basic and ApsaraVideo Player Pro are combined in the demo.
--   Callbacks for full screen events are supported for the player UI.
+-   Callbacks for full-screen events are supported for the player UI.
 
 |[ApsaraVideo Player SDK V3.2.0 for iOS](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1510825327903/AliyunPlayerSDK_iOS_3.2.0_20171115.zip)
 
