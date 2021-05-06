@@ -5,7 +5,7 @@ Queries the statistics on video AI of different types, such as automated review 
 **Note:**
 
 -   This operation is available only in the **China \(Shanghai\)** region.
--   If the time range to query is less than seven days, the system returns the statistics collected on an hourly basis. If the time range to query is more than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
+-   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
 
 ## Debugging
 
@@ -18,17 +18,17 @@ Queries the statistics on video AI of different types, such as automated review 
 |Action|String|Yes|DescribeVodAIData|The operation that you want to perform. Set the value to **DescribeVodAIData**. |
 |EndTime|String|Yes|2019-02-01T15:00:00Z|The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
 |StartTime|String|Yes|2019-02-01T13:00:00Z|The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
-|Region|String|No|cn-beijing|The region where the processed file is stored. If you do not specify this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas \(,\). Valid values:
+|Region|String|No|cn-beijing|The region where the processed file is stored. If you do not set this parameter, the data in all regions is returned. You can specify multiple regions. Separate them with commas \(,\). Valid values:
 
- -   **cn-shanghai**: China \(Shanghai\).
--   **cn-beijing**: China \(Beijing\).
--   **eu-central-1**: Germany \(Frankfurt\).
--   **ap-southeast-1**: Singapore. |
-|AIType|String|No|AIVideoCensor|The type of video AI. If you do not specify this parameter, the data of all video AI types is returned. You can specify multiple types. Separate them with commas \(,\). Valid values:
+ -   **cn-shanghai**: China \(Shanghai\)
+-   **cn-beijing**: China \(Beijing\)
+-   **eu-central-1**: Germany \(Frankfurt\)
+-   **ap-southeast-1**: Singapore |
+|AIType|String|No|AIVideoCensor|The type of video AI. If you do not set this parameter, the data of all video AI types is returned. You can specify multiple types. Separate them with commas \(,\). Valid values:
 
- -   **AIVideoCensor**: automated review.
--   **AIVideoFPShot**: media fingerprinting.
--   **AIVideoTag**: smart tag. |
+ -   **AIVideoCensor**: automated review
+-   **AIVideoFPShot**: media fingerprinting
+-   **AIVideoTag**: smart tag |
 
 ## Response parameters
 
@@ -40,9 +40,9 @@ Queries the statistics on video AI of different types, such as automated review 
 |DataItem| | | |
 |Name|String|AIVideoCensor|The type of video AI. Valid values:
 
- -   **AIVideoCensor**: automated review.
--   **AIVideoFPShot**: media fingerprinting.
--   **AIVideoTag**: smart tag. |
+ -   **AIVideoCensor**: automated review
+-   **AIVideoFPShot**: media fingerprinting
+-   **AIVideoTag**: smart tag |
 |Value|String|111|The processing duration. Unit: seconds. |
 |TimeStamp|String|2019-02-01T13:00:00Z|The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC. |
 |DataInterval|String|day|The time granularity at which the data was queried. Valid values:
