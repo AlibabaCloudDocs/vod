@@ -1,0 +1,59 @@
+# 查询视频DNA作业
+
+## 说明
+
+查询视频DNA作业。可调用API：[ListAIJob](/cn.zh-CN/服务端API/视频AI/查询AI作业.md)，其中参数JobIds为视频DNA作业ID列表。
+
+## API示例
+
+## 请求示例
+
+```
+http://vod.cn-shanghai.aliyuncs.com?Action=ListAIJob
+&JobIds=1236ca184c0e47098a5b665e2a126654
+&Format=JSON
+&<公共参数>
+			
+```
+
+**说明：** 示例中的“公共参数”参见[公共参数说明文档](/cn.zh-CN/服务端API/调用方式/公共参数.md)。
+
+## 返回示例
+
+```
+{
+    "RequestId": "25818875-5F78-4A13-BEF6-D7393642CA58",
+    "AIJobList": {
+        "AIJob": [
+            {
+                "JobId": "1236ca184c0e47098a5b665e2a126654",
+                "MediaId":"3D3D12340d92c641401fab46a0b847fdff97",
+                "Type":"AIMediaDNA",
+                "CreationTime": "2018-01-10T12:00:00Z",
+                "CompleteTime":"2018-01-10T12:00:30Z",
+                "Status":"success",
+                "Code":"0",
+                "Message":"OK",
+                "Data":"\"VideoDNA\":[{\"Similarity\":\"0.98\",\"PrimaryKey\":\"6ad8987da46f4b14b9d6490ce2873745\",\"Detail\":[{\"Input\":{\"Start\":\"2.0\",\"Duration\":\"12.0\"},\"Duplication\":{\"Start\":\"2.0\",\"Duration\":\"12.1\"}}]}]}"
+            }
+        ]
+    },
+    "NonExistAIJobIds": {
+        "String": []
+    }
+}
+			
+```
+
+## SDK示例
+
+建议使用[服务端SDK](t1826050.md#)来调用API，此API各语言调用的示例代码，请参考如下：
+
+-   [Java](t1826065.md#)
+-   [Python](t1826082.md#)
+-   [PHP](t1826104.md#)
+-   [.NET](t1826121.md#)
+-   [Node.js](t1826137.md#)
+-   [Go](t1826153.md#)
+-   [C/C++](t1826171.md#)
+
