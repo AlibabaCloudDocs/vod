@@ -12,7 +12,7 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|DeleteAIImageInfos|系统规定参数。取值：**DeleteAIImageInfos**。 |
+|Action|String|是|DeleteAIImageInfos|操作接口名，系统规定参数。取值：**DeleteAIImageInfos**。 |
 |AIImageInfoIds|String|是|b89a6aabf144\*\*\*\*\*6197ebd6fe6cf29|AI图片文件ID。 多个ID使用英文逗号（,）分隔，最大支持10个ID。 |
 
 ## 返回数据
@@ -33,7 +33,7 @@ https://vod.aliyuncs.com/?Action=DeleteAIImageInfos
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
 <DeleteAIImageInfosResponse>
@@ -41,7 +41,7 @@ https://vod.aliyuncs.com/?Action=DeleteAIImageInfos
 </DeleteAIImageInfosResponse>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
 {
@@ -52,4 +52,16 @@ https://vod.aliyuncs.com/?Action=DeleteAIImageInfos
 ## 错误码
 
 访问[错误中心](https://error-center.aliyun.com/status/product/vod)查看更多错误码。
+
+## SDK示例
+
+建议使用[服务端SDK](~~101789~~)来调用API，此API各语言调用的示例代码，请参见：
+
+-   [Java](~~100692~~)
+-   [Python](~~101181~~)
+-   [PHP](~~101159~~)
+-   [.NET](~~100844~~)
+-   [Node.js](~~101564~~)
+-   [Go](~~101575~~)
+-   [C/C++](~~102987~~)
 
