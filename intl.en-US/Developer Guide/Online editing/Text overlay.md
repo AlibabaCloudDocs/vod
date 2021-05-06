@@ -54,7 +54,7 @@ This action overlays text on a video from the start time to the end time of the 
                             "X": 31,
                             "Y": 93,
                             "Font": "WenQuanYi Zen Hei Mono",
-                            "Content": "Test Text Test Text",
+                            "Content": "Test Text",
                             "FontSize": 26,
                             "FontColorOpacity": 0.2,
                             "FontColor": "#000000",
@@ -69,7 +69,7 @@ This action overlays text on a video from the start time to the end time of the 
                             "X": 30,
                             "Y": 92,
                             "Font": "WenQuanYi Zen Hei Mono",
-                            "Content": "Test Text Test Text",
+                            "Content": "Test Text",
                             "FontSize": 26,
                             "FontColorOpacity": 1,
                             "FontColor": "#FFFFFF"
@@ -79,7 +79,7 @@ This action overlays text on a video from the start time to the end time of the 
                             "X": 0.8123,
                             "Y": 0.7896,
                             "Font": "WenQuanYi Zen Hei Mono",
-                            "Content": "Test Text Test Text",
+                            "Content": "Test Text",
                             "FontSize": 26,
                             "FontColorOpacity": 0.2,
                             "FontColor": "#000000"
@@ -89,7 +89,7 @@ This action overlays text on a video from the start time to the end time of the 
                             "X": 0.8223,
                             "Y": 0.7796,
                             "Font": "WenQuanYi Zen Hei Mono",
-                            "Content": "Test Text Test Text",
+                            "Content": "Test Text",
                             "FontSize": 26,
                             "FontColorOpacity": 1,
                             "FontColor": "#FFFFFF"
@@ -125,7 +125,7 @@ This action overlays text on a video in the specified time interval of the video
                             "TimelineIn": 0,
                             "TimelineOut": 5,
                             "Font": "WenQuanYi Zen Hei Mono",
-                            "Content": "Test Text Test Text",
+                            "Content": "Test Text",
                             "FontSize": 26,
                             "FontColorOpacity": 0.2,
                             "FontColor": "#000000",
@@ -142,7 +142,7 @@ This action overlays text on a video in the specified time interval of the video
                             "TimelineIn": 0,
                             "TimelineOut": 5,
                             "Font": "WenQuanYi Zen Hei Mono",
-                            "Content": "Test Text Test Text",
+                            "Content": "Test Text",
                             "FontSize": 26,
                             "FontColorOpacity": 1,
                             "FontColor": "#FFFFFF"
@@ -154,7 +154,7 @@ This action overlays text on a video in the specified time interval of the video
                             "TimelineIn": 5,
                             "TimelineOut": 10,
                             "Font": "WenQuanYi Zen Hei Mono",
-                            "Content": "Test Text Test Text",
+                            "Content": "Test Text",
                             "FontSize": 26,
                             "FontColorOpacity": 0.2,
                             "FontColor": "#000000"
@@ -166,7 +166,7 @@ This action overlays text on a video in the specified time interval of the video
                             "TimelineIn": 5,
                             "TimelineOut": 10,
                             "Font": "WenQuanYi Zen Hei Mono",
-                            "Content": "Test Text Test Text",
+                            "Content": "Test Text",
                             "FontSize": 26,
                             "FontColorOpacity": 1,
                             "FontColor": "#FFFFFF"
