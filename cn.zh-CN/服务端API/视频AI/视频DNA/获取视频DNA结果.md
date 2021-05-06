@@ -10,7 +10,7 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|GetMediaDNAResult|系统规定参数。取值：**GetMediaDNAResult**。 |
+|Action|String|是|GetMediaDNAResult|操作接口名，系统规定参数。取值：**GetMediaDNAResult**。 |
 |MediaId|String|是|88c6ca184c0e\*\*\*\*\*a5b665e2a126797|视频ID。 |
 
 ## 返回数据
@@ -102,11 +102,11 @@ https://vod.aliyuncs.com/?Action=GetMediaDNAResult
 
 建议使用[服务端SDK](~~101789~~)来调用API，此API各语言调用的示例代码，请参见：
 
--   [Java](~~61063~~)
--   [Python](~~61054~~)
--   [PHP](~~61069~~)
--   [.NET](~~84750~~)
--   [Node.js](~~101396~~)
--   [Go](~~101411~~)
--   [C/C++](~~101261~~)
+-   [Java](~~100692~~)
+-   [Python](~~101181~~)
+-   [PHP](~~101159~~)
+-   [.NET](~~100844~~)
+-   [Node.js](~~101564~~)
+-   [Go](~~101575~~)
+-   [C/C++](~~102987~~)
 
