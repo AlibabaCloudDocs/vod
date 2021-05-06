@@ -6,7 +6,7 @@ Required environments are prepared. The following table describes the required e
 
 |Environment|Supported version|
 |-----------|-----------------|
-|Android|iOS 9.0 and later.|
+|iOS|iOS 9.0 and later.|
 |macOS High Sierra|macOS High Sierra 10.13 and later.|
 |Xcode|Xcode 9.0 and later. To download Xcode, visit [Mac App Store](https://apps.apple.com/cn/app/xcode/id497799835?mt=12).|
 
@@ -16,42 +16,19 @@ For more information about the documents in Chinese, see [SDK Reference](https:/
 
 For more information about the documents in English, see [SDK Reference](https://alivc-demo-cms.alicdn.com/versionProduct/doc/shortVideo/iOS_en/index.html).
 
-## SDK editions
-
-The short video SDK has the following three editions: Basic Edition, Standard Edition, and Professional Edition. The three editions use the same framework name AliyunVideoSDKPro.framework.
-
--   Basic Edition supports only the recording and cropping features.
--   Professional Edition and Standard Edition support all features. However, advanced features of the Standard Edition must be separately authorized.
-
-## Integrate the SDK in pod mode \(Recommended\)
+## SDK integration in pod mode \(recommended\)
 
 Procedure
 
-1.  Add dependencies to the Podfile file. The following table describes the dependencies to be added for different editions of SDKs.
+1.  Add dependencies to the Podfile file.
 
-    |Edition|Dependency to be added to the Podfile file|
-    |-------|------------------------------------------|
-    |Professional Edition|    ```
-pod 'AliyunVideoSDKPro', '3.20.0'
-pod 'QuCore-ThirdParty', '3.15.0'
-pod 'AlivcConan', '1.0.3'
-pod 'VODUpload'
-pod 'AliyunOSSiOS'
-    ``` |
-    |Standard Edition|    ```
-pod 'AliyunVideoSDKStd', '3.20.0'
-pod 'QuCore-ThirdParty', '3.15.0'
-pod 'AlivcConan', '1.0.3'
-pod 'VODUpload'
-pod 'AliyunOSSiOS'
-    ``` |
-    |Basic Edition|    ```
-pod 'AliyunVideoSDKBasic', '3.20.0'
-pod 'QuCore-ThirdParty', '3.15.0'
-pod 'AlivcConan', '1.0.3'
-pod 'VODUpload'
-pod 'AliyunOSSiOS'
-    ``` |
+    ```
+    pod 'AliyunVideoSDKPro', '3.19.0'
+    pod 'QuCore-ThirdParty', '3.15.0'
+    pod 'AlivcConan', '1.0.3'
+    pod 'VODUpload'
+    pod 'AliyunOSSiOS'
+    ```
 
 2.  Update the pod repository.
 
@@ -66,27 +43,27 @@ pod 'AliyunOSSiOS'
     ```
 
 
-**Note:** Make sure that you can access and update the pod repository over the network. After the pods are installed, check whether the framework versions are the latest, as listed on the Alibaba Cloud international site \(alibabacloud.com\).
+**Note:** Make sure that you can access and update the pod repository over the network. After the pods are installed, check whether the framework versions are the latest, as listed on the Alibaba Cloud website.
 
-## Manually integrate the SDK \(Not recommended\)
+## SDK integration in manual mode \(not recommended\)
 
 To manually integrate the SDK, you must download packages of the latest release from GitHub, including six frameworks and one bundle resource package.
 
-|Name|Type|Description|Download link|
-|----|----|-----------|-------------|
-|AliyunVideoSDKPro|Static framework|Short video SDK|[Professional Edition](https://github.com/aliyunvideo/AliyunVideoSDKPro/releases) [Standard Edition](https://github.com/aliyunvideo/AliyunVideoSDKStd/releases) [Basic Edition](https://github.com/aliyunvideo/AliyunVideoSDKBasic/releases)|
-|AliyunVideoCore|Dynamic framework|Short video SDK|[Professional Edition](https://github.com/aliyunvideo/AliyunVideoSDKPro/releases) [Standard Edition](https://github.com/aliyunvideo/AliyunVideoSDKStd/releases) [Basic Edition](https://github.com/aliyunvideo/AliyunVideoSDKBasic/releases)|
-|AliyunVideoSDKPro.bundle|Resource package|Short video SDK|[Resource package that is required only by Professional Edition](https://github.com/aliyunvideo/AliyunVideoSDKPro/releases)|
-|alivcffmpeg|Dynamic framework|FFmpeg framework|[Download link on GitHub](https://github.com/aliyunvideo/QuCore-ThirdParty/releases)|
-|AlivcConan|Dynamic framework|Tool framework|[Download link on GitHub](https://github.com/aliyunvideo/AlivcConanSDK/releases)|
-|VODUpload|Static framework|Upload framework of ApsaraVideo VOD|[Download link on GitHub](https://github.com/aliyunvideo/VODUpload/releases)|
-|AliyunOSSiOS|Static framework|OSS upload framework|[Download link on GitHub](https://github.com/aliyun/aliyun-oss-ios-sdk/releases)|
+|Name|Type|Description|Download URL|
+|----|----|-----------|------------|
+|AliyunVideoSDKPro|Static framework|Short video SDK|[Professional Edition](https://github.com/aliyunvideo/AliyunVideoSDKPro/releases)[Standard Edition](https://github.com/aliyunvideo/AliyunVideoSDKStd/releases)[Basic Edition](https://github.com/aliyunvideo/AliyunVideoSDKBasic/releases)|
+|AliyunVideoCore|Dynamic framework|Short video SDK|[Professional Edition](https://github.com/aliyunvideo/AliyunVideoSDKPro/releases)[Standard Edition](https://github.com/aliyunvideo/AliyunVideoSDKStd/releases)[Basic Edition](https://github.com/aliyunvideo/AliyunVideoSDKBasic/releases)|
+|AliyunVideoSDKPro.bundle|Resource package|Short video SDK|[Resource package that is required only by the Professional Edition](https://github.com/aliyunvideo/AliyunVideoSDKPro/releases)|
+|alivcffmpeg|Dynamic framework|FFmpeg framework|[Download URL on GitHub](https://github.com/aliyunvideo/QuCore-ThirdParty/releases)|
+|AlivcConan|Dynamic framework|Tool framework|[Download URL on GitHub](https://github.com/aliyunvideo/AlivcConanSDK/releases)|
+|VODUpload|Static framework|Upload framework of ApsaraVideo VOD|[Download URL on GitHub](https://github.com/aliyunvideo/VODUpload/releases)|
+|AliyunOSSiOS|Static framework|OSS upload framework|[Download URL on GitHub](https://github.com/aliyun/aliyun-oss-ios-sdk/releases)|
 
-In the preceding frameworks, AliyunVideoCore, alivcffmpeg, and AlivcConan are dynamic frameworks. When you manually integrate and release dynamic frameworks, take note of the following points:
+In the preceding frameworks, AliyunVideoCore, alivcffmpeg, and AlivcConan are dynamic frameworks. When you manually integrate and release dynamic frameworks, take note of the following information:
 
 1.  To add a dynamic framework, select the target. Then, add the dynamic framework in the **Embedded Binaries** section of the **General** tab.
 2.  To submit an application to App Store, you must strip dynamic frameworks of the x86-based simulator architecture. Otherwise, your application will be rejected. You can strip dynamic frameworks of the simulator architecture by using one of the following methods:
-    -   Use the lipo command line tool to strip the dynamic frameworks of the simulator architecture.
+    -   Use the lipo command-line tool to strip the dynamic frameworks of the simulator architecture.
     -   Integrate dynamic frameworks in pod mode. Then, dynamic frameworks of the simulator architecture are automatically stripped when the pods are packaged.
 
 Procedure
@@ -103,9 +80,7 @@ Procedure
 
     Click the **General** tab. In the **Frameworks**, **Libraries**, and **Embedded Content** section, click **+** and import the MobileCoreServices.framework, SystemConfiguration.framework, and libresolv.tbd files.
 
-4.  If you are using the short video SDK Professional Edition,
-
-    import the AliyunVideoSDKPro.bundle resource package to your project.
+4.  If you are using the short video SDK Professional Edition, import the AliyunVideoSDKPro.bundle resource package to your project.
 
 
 **Note:**
