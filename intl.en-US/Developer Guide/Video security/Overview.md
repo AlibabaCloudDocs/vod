@@ -267,4 +267,4 @@ Benefits:
 
 
 
-To use this feature, enable encrypted download in the ApsaraVideo VOD console. For more information, see [Configure offline download](/intl.en-US/User Guide/Domain management/Configure offline download.md). Only [ApsaraVideo Player for Android](https://help.aliyun.com/document_detail/61910.html#h2-2-4-4) and [ApsaraVideo Player for iOS](https://help.aliyun.com/document_detail/61668.html#h2-2-4-4) support the secure download feature.
+To use this feature, enable encrypted download in the ApsaraVideo VOD console. For more information, see [Configure offline download](/intl.en-US/User Guide/Domain management/Configure offline download.md). Only [ApsaraVideo Player for Android](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for Android/Implementation.md)and [ApsaraVideo Player for iOS](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for iOS/Implementation.md) support the secure download feature.
