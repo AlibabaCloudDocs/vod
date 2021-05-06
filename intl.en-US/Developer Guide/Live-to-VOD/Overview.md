@@ -39,7 +39,7 @@ ApsaraVideo Live records live streams and stores the recorded videos in ApsaraVi
 
 Under the same CDN domain name of ApsaraVideo Live, live-to-VOD configurations of live streams are distinguished by their `AppName` and `StreamName` parameters. All live streams with the same `application name` and `stream name` use the same live-to-VOD configuration specified for the `application name` and `stream name`. 
 
-1. Activate ApsaraVideo VOD For more information, see [Get started with ApsaraVideo VOD](/intl.en-US/Quick Start/Get started with ApsaraVideo for VOD.md).
+1. Activate ApsaraVideo VOD For more information, see [Get started with ApsaraVideo VOD](/intl.en-US/Quick Start/Get started with ApsaraVideo VOD.md).
 
    
 
@@ -47,16 +47,16 @@ Under the same CDN domain name of ApsaraVideo Live, live-to-VOD configurations o
 
    
 
-3. Activate ApsaraVideo Live. For more information, see [Activate ApsaraVideo Live]().
+3. Activate ApsaraVideo Live. For more information, see [Activate ApsaraVideo LiveActivate](/intl.en-US/Pricing/Billing-related operations/Activate ApsaraVideo Live and purchase resource plans.md).
 
    
 
-4. On the [Domain Management](https://live.console.aliyun.com//domain/list#/domain/list) page of the ApsaraVideo Live console, specify the live-to-VOD configuration. Select the template that you created earlier as the recording and transcoding template, as shown in the following figure. For more information, see [Store live recordings in VOD]().
+4. On the [Domain Management](https://live.console.aliyun.com//domain/list#/domain/list) page of the ApsaraVideo Live console, specify the live-to-VOD configuration. Select the template that you created earlier as the recording and transcoding template, as shown in the following figure. For more information, see [Store live recordings in ApsaraVideo VOD](/intl.en-US/Console Guide/Domain Names/Recording management/Store live recordings in ApsaraVideo VOD.md).
 
-   You can also add recording configurations by calling the AddLiveRecordVodConfig operation. For more information, see [AddLiveRecordVodConfig]().
+   You can also add recording configurations by calling the AddLiveRecordVodConfig operation. For more information, see [AddLiveRecordVodConfig](/intl.en-US/API Reference/Store live recordings to ApsaraVideo VOD/AddLiveRecordVodConfig.md).
    **Note**
 
-   For more information about transcoding templates and production templates in the live-to-VOD configuration, see [FAQ about Live to VOD](/intl.en-US/Developer Guide/Live-to-VOD/Live-to-VOD configuration.md).
+   For more information about transcoding templates and production templates in the live-to-VOD configuration, see [FAQ about Live to VOD](/intl.en-US/Developer Guide/Live-to-VOD/FAQ about Live to VOD.md).
    
 
 5. After the preceding preparations, you can start to use the Live to VOD feature.
@@ -94,7 +94,7 @@ After live streams are recorded into on-demand videos, ApsaraVideo VOD provides 
 
 * Query recorded videos by calling API operations
 
-  ApsaraVideo VOD provides the ListLiveRecordVideo operation for you to query recorded videos based on the domain name, `application name`, and `stream name`. For more information, see [ListLiveRecordVideo](/intl.en-US/API Reference/Conversion/ListLiveRecordVideo.md)
+  ApsaraVideo VOD provides the ListLiveRecordVideo operation for you to query recorded videos based on the domain name, `application name`, and `stream name`. For more information, see [ListLiveRecordVideo](/intl.en-US/API Reference/Live to VOD/ListLiveRecordVideo.md)
   
 
 
