@@ -1,7 +1,7 @@
 视频DNA 
 ==========================
 
-本篇文档提供了Node.js SDK视频DNA模块相关功能的API调用示例。包含提交视频DNA作业、查询视频DNA作业、获取视频DNA结果。
+本文为您提供了Node.js SDK视频DNA模块相关功能的API调用示例。包含提交视频DNA作业、查询视频DNA作业、获取视频DNA结果。
 
 初始化客户端 {#h2-u521Du59CBu5316u5BA2u6237u7AEF1}
 --------------------------------------------
@@ -13,7 +13,7 @@
 
 调用SubmitAIJob接口，完成提交视频DNA作业功能。
 
-接口参数和返回字段请参见[SubmitAIJob](/cn.zh-CN/服务端API/视频AI/视频DNA/提交视频DNA作业.md)。调用示例如下：
+接口参数和返回字段请参见[SubmitAIJob](/cn.zh-CN/服务端API/视频AI/视频DNA/提交AI作业.md)。调用示例如下：
 
     // 调用样例
     var client = initVodClient('<Your AccessKeyId>','<Your AccessKeySecret>');
@@ -47,7 +47,7 @@
 
 调用ListAIJob接口，完成查询视频DNA作业功能。
 
-接口参数和返回字段请参见[ListAIJob](/cn.zh-CN/服务端API/视频AI/视频DNA/查询视频DNA作业.md)。调用示例如下：
+接口参数和返回字段请参见[ListAIJob](/cn.zh-CN/服务端API/视频AI/视频DNA/查询AI作业.md)。调用示例如下：
 
     // 调用样例
     var client = initVodClient('<Your AccessKeyId>','<Your AccessKeySecret>');
