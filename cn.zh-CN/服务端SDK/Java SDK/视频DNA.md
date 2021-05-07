@@ -13,7 +13,7 @@
 
 调用SubmitAIJob接口，完成提交视频DNA作业功能。
 
-接口参数和返回字段请参见[SubmitAIJob](/cn.zh-CN/服务端API/视频AI/视频DNA/提交视频DNA作业.md)。调用示例如下：
+接口参数和返回字段请参见[SubmitAIJob](/cn.zh-CN/服务端API/视频AI/视频DNA/提交AI作业.md)。调用示例如下：
 
     import com.aliyuncs.vod.model.v20170321.SubmitAIJobRequest;
     import com.aliyuncs.vod.model.v20170321.SubmitAIJobResponse;
@@ -69,7 +69,7 @@
 
 调用ListAIJob接口，完成查询视频DNA作业功能。
 
-接口参数和返回字段请参见[ListAIJob](/cn.zh-CN/服务端API/视频AI/视频DNA/查询视频DNA作业.md)。调用示例如下：
+接口参数和返回字段请参见[ListAIJob](/cn.zh-CN/服务端API/视频AI/查询AI作业.md)。调用示例如下：
 
     import com.aliyuncs.vod.model.v20170321.ListAIJobRequest;
     import com.aliyuncs.vod.model.v20170321.ListAIJobResponse;
