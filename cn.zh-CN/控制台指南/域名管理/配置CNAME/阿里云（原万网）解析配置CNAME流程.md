@@ -26,7 +26,7 @@
 
         **说明：**
 
-        -   您添加CNAME记录时如果遇到冲突问题，建议更换一个加速域名或调整冲突的记录。详细信息，请参见[域名解析冲突]()。
+        -   您添加CNAME记录时如果遇到冲突问题，建议更换一个加速域名或调整冲突的记录。详细信息，请参见[解析记录冲突规则](https://help.aliyun.com/knowledge_detail/39787.html)。
         -   一个加速域名对应一个CNAME地址，主域名的CNAME地址不能被二级域名使用。如果您需要加速二级域名，需将二级域名也添加到CDN上，并解析到对应的CNAME地址，或者在CDN上添加泛域名，泛域名的CNAME可以被二级域名使用。
         ![添加记录](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5843918061/p64412.png)
 
