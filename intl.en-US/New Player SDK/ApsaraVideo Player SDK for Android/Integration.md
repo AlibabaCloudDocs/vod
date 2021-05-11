@@ -8,7 +8,7 @@ This topic describes the supported systems, development environments, and integr
 |Mobile phone processor|One of the following processor architectures is used:-   ARMv7
 -   ARM64 |
 |Development tool|A development tool is available. We recommend that you use Android Studio as the development tool. This topic is based on the Android Studio development environment. To download Android Studio, visit the [Android Studio](https://developer.android.google.cn/studio/) page.|
-|Version of ApsaraVideo Player SDK for Android|ApsaraVideo Player SDK V5.3.0 for Android or later is used. For more information, see [Update ApsaraVideo Player SDK for Android from V3.x.x to V4.5.0]().|
+|Version of ApsaraVideo Player SDK for Android|ApsaraVideo Player SDK V5.3.0 for Android or later is used.|
 
 ## Integrate the SDK
 
@@ -21,7 +21,7 @@ You can integrate the SDK by using on-premises files or the Gradle package.
 
     -   SDK structure
 
-        ![Structure](../images/p182917.png)
+        ![Structure](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9475270261/p182917.png)
 
         The SDK package contains the following .aar files:
 
@@ -37,7 +37,7 @@ You can integrate the SDK by using on-premises files or the Gradle package.
     -   Integration procedure
         1.  Copy the required AAR package to the libs directory of your project. Create a libs directory if it does not exist.
 
-            ![Image](../images/p182953.png)
+            ![Image](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0575270261/p182953.png)
 
         2.  In the build.gradle file of the project, add the flatDir setting in the repositories part of the allprojects block. Sample code:
 
@@ -81,7 +81,7 @@ You can integrate the SDK by using on-premises files or the Gradle package.
 
         The following figure shows the result of the preceding operations.
 
-        ![Result](../images/p182983.png)
+        ![Result](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0575270261/p182983.png)
 
     2.  Add the reference to the AAR package to the dependencies part in the build.gradle file of your application. Sample code:
 
@@ -93,7 +93,7 @@ You can integrate the SDK by using on-premises files or the Gradle package.
 
         The following figure shows the result of the preceding operations.
 
-        ![Result](../images/p182991.png)
+        ![Result](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0575270261/p182991.png)
 
 
 ## Integrate a demo of ApsaraVideo Player
@@ -102,7 +102,7 @@ You can integrate the SDK by using on-premises files or the Gradle package.
 
     Download the latest version of ApsaraVideo Player SDK for Android. For more information, see [Release notes of ApsaraVideo Player SDK for Android](/intl.en-US/SDK Downloads/player-sdk-new-history/Release notes of ApsaraVideo Player SDK for Android.md).
 
-    ![image-20210128161414045](../images/p243024.png)
+    ![image-20210128161414045](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0575270261/p243024.png)
 
     The following table describes the SDK structure.
 
@@ -117,7 +117,7 @@ You can integrate the SDK by using on-premises files or the Gradle package.
 
     In the navigation bar of Android Studio, choose **File** \> **New** \> **Import Project...**. Import the demo of ApsaraVideo Player, as shown in the following figure.
 
-    ![mage-20210128162213155.png](../images/p243028.png)
+    ![mage-20210128162213155.png](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0575270261/p243028.png)
 
     In the demo, Gradle dependency is used to import ApsaraVideo Player SDK for Android. In addition, some API operations are encapsulated in the SDK, and custom user interfaces \(UIs\) are provided. You can integrate required modules in the demo or directly use ApsaraVideo Player SDK as needed.
 
@@ -139,17 +139,17 @@ You can integrate the SDK by using on-premises files or the Gradle package.
     -   You must also import the thirdparty-lib module. The thirdparty-lib module is not a built-in module in Android Studio. You must manually copy the module to the directory that stores the AliyunPlayerBase and AliyunVideoCommon modules in the project.
     In the following example, the AliyunPlayer module is used to show you how to integrate modules in the demo:
 
-    1.  In the navigation bar of Android Studio, choose **File** \> **New** \> **Import Module...**. Select the module to be imported, as shown in the following figure.
+    1.  In the navigation bar of Android Studio, choose **File** \> **Open**. Select the module to be imported, as shown in the following figure.
 
-        ![image-20210128173551010](../images/p243052.png)
+        ![image-20210128173551010](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0575270261/p243052.png)
 
     2.  Click **Finish**. Other required modules are automatically selected in Android Studio, as shown in the following figure.
 
-        ![image-20210128173905107](../images/p243056.png)
+        ![image-20210128173905107](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0575270261/p243056.png)
 
     3.  After you import the modules, manually import the thirdparty-lib module by copying the module to the project. Add the reference to the module and the URL of Alibaba Cloud Maven repository to the build.gradle file. The following figure shows the imported thirdparty-lib module.
 
-        ![image-20210201100541465](../images/p243059.png)
+        ![image-20210201100541465](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0575270261/p243059.png)
 
         ```
         buildscript {
@@ -222,7 +222,7 @@ You can integrate the SDK by using on-premises files or the Gradle package.
         -   The SurfaceRenerView file is used to render video images based on the SurfaceView class. The TextureRenderView file is used to render video images based on the TextureView class.
         -   The AliyunRenderView file is used to encapsulate the player and bind the player with the render view.
         -   You do not need to copy the AliyunVodPlayerView file because this file contains the sample code of the AliyunRenderView class.
-        ![image-20210202094604436](../images/p243070.png)
+        ![image-20210202094604436](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1575270261/p243070.png)
 
     -   Use the AliyunRenderView class.
 
