@@ -5,7 +5,7 @@ Queries the statistics on total playback each day in a specified time range.
 **Note:**
 
 -   This operation is available only in the **China \(Shanghai\)** region.
--   You can call this operation to query only playback statistics collected from videos that are played by using ApsaraVideo Player SDKs.
+-   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
 -   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
 -   You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.
 
@@ -32,10 +32,10 @@ Queries the statistics on total playback each day in a specified time range.
 |PlayDuration|String|9340070|The total playback duration. Unit: milliseconds. |
 |PlayRange|String|"<=1m:74.3%;\>1<=5m:22.8%;\>5<=10m:1.0%;\>10<=15m:1.0%;\>15<=30m:1.0%"|The distribution of the playback duration. |
 |VV|Struct| |The total number of video views. |
-|Android|String|161|The total number of video views that is collected by ApsaraVideo Player SDK for Android. |
-|iOS|String|0|The total number of video views that is collected by ApsaraVideo Player SDK for iOS. |
-|Flash|String|2|The total number of video views that is collected by ApsaraVideo Player SDK for Flash. |
-|HTML5|String|2|The total number of video views that is collected by ApsaraVideo Player SDK for HTML5. |
+|Android|String|161|The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for Android. |
+|iOS|String|0|The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for iOS. |
+|Flash|String|2|The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for Flash. |
+|HTML5|String|2|The total number of video views that is collected for videos that are played by using ApsaraVideo Player SDK for HTML5. |
 |UV|Struct| |The total number of unique visitors. |
 |Android|String|2|The total number of unique visitors who use ApsaraVideo Player SDK for Android. |
 |iOS|String|0|The total number of unique visitors who use ApsaraVideo Player SDK for iOS. |
@@ -61,7 +61,7 @@ Sample success responses
 <DescribePlayUserTotalResponse>
       <UserPlayStatisTotals>
 		    <UserPlayStatisTotal>
-			      <PlayRange>&lt;=1m:74.3%;&gt;1&lt;=5m:22.8%;&gt;5&lt;=10m:1.0%;&gt;10&lt;=15m:1.0%;&gt;15&lt;=30m:1.0%</PlayRange>
+			      <PlayRange><=1m:74.3%;>1<=5m:22.8%;>5<=10m:1.0%;>10<=15m:1.0%;>15<=30m:1.0%</PlayRange>
 			      <Date>20180101</Date>
 			      <VV>
 				        <Android>101</Android>
@@ -74,7 +74,7 @@ Sample success responses
 			      </UV>
 		    </UserPlayStatisTotal>
 		    <UserPlayStatisTotal>
-			      <PlayRange>&lt;=1m:73.6%;&gt;1&lt;=5m:23.9%;&gt;5&lt;=10m:2.5%</PlayRange>
+			      <PlayRange><=1m:73.6%;>1<=5m:23.9%;>5<=10m:2.5%</PlayRange>
 			      <Date>20180102</Date>
 			      <VV>
 				        <Android>161</Android>
@@ -91,6 +91,37 @@ Sample success responses
 	  </UserPlayStatisTotals>
 	  <RequestId>0B9BA42C-8BDE-4611-****-C856BBE20898</RequestId>
 </DescribePlayUserTotalResponse>
+		     
+			       
+			       
+			       
+				         
+				         
+			       
+			       
+			       
+				         
+				         
+			       
+		     
+		     
+			       
+			       
+			       
+				         
+				         
+				         
+			       
+			       
+			       
+				         
+				         
+				         
+			       
+		     
+	   
+	   
+ 
 ```
 
 `JSON` format
@@ -98,39 +129,72 @@ Sample success responses
 ```
 {
     "UserPlayStatisTotals": {
-        "UserPlayStatisTotal": [
+        "UserPlayStatisTotal":
+        [
             {
                 "PlayRange": "<=1m:74.3%;>1<=5m:22.8%;>5<=10m:1.0%;>10<=15m:1.0%;>15<=30m:1.0%", 
-                "Date": "20180101", 
-                "VV": {
+                "Date":
+            "20180101", 
+                "VV":
+                {
                     "Android": "101", 
-                    "iOS": "1"
+                    "iOS": 
+                "1"
                 }, 
                 "PlayDuration": "6215417", 
-                "UV": {
+                "UV": 
+                {
                     "Android": "5", 
-                    "iOS": "1"
+                    "iOS":
+                    "1"
                 }
             }, 
             {
                 "PlayRange": "<=1m:73.6%;>1<=5m:23.9%;>5<=10m:2.5%", 
-                "Date": "20180102", 
+                "Date": 
+                    "20180102", 
                 "VV": {
-                    "Android": "161", 
-                    "Flash": "2", 
+                    "Android":
+                "161", 
+                    "Flash": 
+                "2", 
                     "HTML5": "1"
                 }, 
-                "PlayDuration": "9340070", 
+                "PlayDuration": 
+                "9340070", 
                 "UV": {
-                    "Android": "1", 
+                    "Android":
+                    "1", 
                     "Flash": "2", 
-                    "HTML5": "1"
+                    "HTML5": 
+                    "1"
                 }
             }
         ]
     }, 
     "RequestId": "0B9BA42C-8BDE-4611-****-C856BBE20898"
 }
+                 
+              
+             
+                    
+                    
+                   
+                        
+                        
+                       
+                  
+                    
+                   
+                        
+                        
+                       
+                 
+             
+         
+      
+       
+ 
 ```
 
 ## Error codes
@@ -162,21 +226,21 @@ The following table describes the common errors that this operation can return.
 
 |400
 
-|The error message returned because the format of the start time is invalid. The time must be in UTC. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
+|The error message returned because the format of the start time that is specified by the StartTime parameter is invalid. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
 |InvalidEndTime.Malformed
 
 |Specified EndTime is malformed.
 
 |400
 
-|The error message returned because the format of the end time is invalid. The time must be in UTC. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
+|The error message returned because the format of the end time that is specified by the EndTime parameter is invalid. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
 |InvalidEndTime.BeyondCurrent
 
 |EndTime beyond current time.
 
 |400
 
-|The error message returned because the end time is later than the current time. |
+|The error message returned because the end time that is specified by the EndTime parameter is later than the current time. |
 |InvalidEndTime.Mismatch
 
 |StartTime or EndTime is mismatch.
