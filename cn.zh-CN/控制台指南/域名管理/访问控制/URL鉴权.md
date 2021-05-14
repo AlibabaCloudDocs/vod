@@ -28,7 +28,7 @@ URL鉴权功能通过阿里云CDN加速节点与客户资源站点配合，形�
 
 6.  单击**URL鉴权**页签，单击**修改配置**。
 
-    ![修改配置](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3961325061/p181688.png)
+    ![修改配置](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8025790261/p181688.png)
 
 7.  开启**URL鉴权**，配置URL鉴权信息，单击**确定**完成。
 
