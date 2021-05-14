@@ -2,6 +2,18 @@
 
 本文为您介绍了阿里云iOS播放器在不同更新时间对应的更新功能。
 
+## 2021-05-14
+
+|日期|版本|修改内容|历史版本|
+|--|--|----|----|
+|2021-05-14|V5.4.0|-   支持dash流媒体技术。
+-   支持backward buffer。
+-   支持获取当前下载速度。
+-   播放器SDK兼容性改进。
+-   去除对OpenGL ES依赖。
+
+|[iOS播放器SDK 5.4.0](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.4.0/ApsaraVideo_videoPlay_v5.4.0_iOS_20210514.zip)|
+
 ## 2021-05-11
 
 |日期|版本|修改内容|历史版本|
