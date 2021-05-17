@@ -13,7 +13,7 @@ Create a watermark {#h2--div-id-addwatermark-div-2}
 
 You can call the AddWatermark operation to create a watermark.
 
-For more information about the request and response parameters of this operation, see [AddWatermark](/intl.en-US/API Reference/Media processing/Video Watermark/AddWatermark.md). Example:
+For more information about the request and response parameters of this operation, see [AddWatermark](/intl.en-US/API Reference/Media processing/Video watermark/AddWatermark.md). Example:
 
     /**
      * Build the parameters of an image watermark. Configure the parameters as required.
@@ -114,7 +114,7 @@ Modify a watermark {#h2--div-id-updatewatermark-div-3}
 ------------------------------------------------------
 
 You can call the UpdateWatermark operation to modify a watermark.
-For more information about the request and response parameters of this operation, see [UpdateWatermark](/intl.en-US/API Reference/Media processing/Video Watermark/UpdateWatermark.md). Example: {#h2--div-id-updatewatermark-div-3}
+For more information about the request and response parameters of this operation, see [UpdateWatermark](/intl.en-US/API Reference/Media processing/Video watermark/UpdateWatermark.md). Example: {#h2--div-id-updatewatermark-div-3}
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     /**
@@ -192,7 +192,7 @@ Delete a watermark {#h2--div-id-deletewatermark-div-4}
 ------------------------------------------------------
 
 You can call the DeleteWatermark operation to delete a watermark.
-For more information about the request and response parameters of this operation, see [DeleteWatermark](/intl.en-US/API Reference/Media processing/Video Watermark/DeleteWatermark.md). Example: {#h2--div-id-deletewatermark-div-4}
+For more information about the request and response parameters of this operation, see [DeleteWatermark](/intl.en-US/API Reference/Media processing/Video watermark/DeleteWatermark.md). Example: {#h2--div-id-deletewatermark-div-4}
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     /**
@@ -225,7 +225,7 @@ Query watermarks {#h2--div-id-listwatermark-div-5}
 --------------------------------------------------
 
 You can call the ListWatermark operation to query watermarks.
-For more information about the request and response parameters of this operation, see [ListWatermark](/intl.en-US/API Reference/Media processing/Video Watermark/ListWatermark.md). Example: {#h2--div-id-listwatermark-div-5}
+For more information about the request and response parameters of this operation, see [ListWatermark](/intl.en-US/API Reference/Media processing/Video watermark/ListWatermark.md). Example: {#h2--div-id-listwatermark-div-5}
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     /**
@@ -255,7 +255,7 @@ Query a watermark {#h2--div-id-getwatermark-div-6}
 --------------------------------------------------
 
 You can call the GetWatermark operation to query details about a watermark.
-For more information about the request and response parameters of this operation, see [GetWatermark](/intl.en-US/API Reference/Media processing/Video Watermark/GetWatermark.md). Example: {#h2--div-id-getwatermark-div-6}
+For more information about the request and response parameters of this operation, see [GetWatermark](/intl.en-US/API Reference/Media processing/Video watermark/GetWatermark.md). Example: {#h2--div-id-getwatermark-div-6}
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     /**
@@ -288,7 +288,7 @@ Specify a watermark as the default one {#h2--div-id-setdefaultwatermark-div-7}
 ------------------------------------------------------------------------------
 
 You can call the SetDefaultWatermark operation to specify a watermark as the default one.
-For more information about the request and response parameters of this operation, see [SetDefaultWatermark](/intl.en-US/API Reference/Media processing/Video Watermark/SetDefaultWatermark.md). Example: {#h2--div-id-setdefaultwatermark-div-7}
+For more information about the request and response parameters of this operation, see [SetDefaultWatermark](/intl.en-US/API Reference/Media processing/Video watermark/SetDefaultWatermark.md). Example: {#h2--div-id-setdefaultwatermark-div-7}
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     /**
