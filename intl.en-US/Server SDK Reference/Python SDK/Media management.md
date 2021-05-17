@@ -13,7 +13,7 @@ Search for media asset information {#h2--div-id-searchmedia-div-2}
 
 You can call the SearchMedia operation to search for media asset information.
 
-For more information about the request and response parameters of this operation, see [SearchMedia](/intl.en-US/API Reference/Media management/Media Search/SearchMedia.md). Example:
+For more information about the request and response parameters of this operation, see [SearchMedia](/intl.en-US/API Reference/Media asset management/Media asset search/SearchMedia.md). Example:
 
     from aliyunsdkvod.request.v20170321 import SearchMediaRequest
     def search_media(clt):
@@ -45,8 +45,8 @@ Query a video {#h2--div-id-getvideoinfo-div-3}
 ----------------------------------------------
 
 You can call the GetVideoInfo operation to query details about a video.
-For more information about the request and response parameters of this operation, see [GetVideoInfo](/intl.en-US/API Reference/Media management/Audio&Video Management/GetVideoInfo.md). Example: 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [GetVideoInfo](/intl.en-US/API Reference/Media asset management/Audio and video management/GetVideoInfo.md). Example: 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import GetVideoInfoRequest
     def get_video_info(clt, videoId):
@@ -71,8 +71,8 @@ Query videos {#h2--div-id-getvideoinfos-div-4}
 ----------------------------------------------
 
 You can call the GetVideoInfos operation to query videos.
-For more information about the request and response parameters of this operation, see [GetVideoInfos](/intl.en-US/API Reference/Media management/Audio&Video Management/GetVideoInfos.md). Example: 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [GetVideoInfos](/intl.en-US/API Reference/Media asset management/Audio and video management/GetVideoInfos.md). Example: 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import GetVideoInfosRequest
     def get_video_infos(clt):
@@ -101,8 +101,8 @@ Modify the information about a video {#h2--div-id-updatevideoinfo-div-5}
 ------------------------------------------------------------------------
 
 You can call the UpdateVideoInfo operation to modify the information about a video.
-For more information about the request and response parameters of this operation, see [UpdateVideoInfo](/intl.en-US/API Reference/Media management/Audio&Video Management/UpdateVideoInfo.md). Example: 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [UpdateVideoInfo](/intl.en-US/API Reference/Media asset management/Audio and video management/UpdateVideoInfo.md). Example: 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import UpdateVideoInfoRequest
     def update_video_info(clt, videoId):
@@ -133,8 +133,8 @@ Modify the information about videos {#h2--div-id-updatevideoinfos-div-6}
 ------------------------------------------------------------------------
 
 You can call the UpdateVideoInfos operation to modify the information about videos.
-For more information about the request and response parameters of this operation, see [UpdateVideoInfos](/intl.en-US/API Reference/Media management/Audio&Video Management/UpdateVideoInfos.md). Example: 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [UpdateVideoInfos](/intl.en-US/API Reference/Media asset management/Audio and video management/UpdateVideoInfos.md). Example: 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import UpdateVideoInfosRequest
     def update_video_infos(clt):
@@ -167,8 +167,8 @@ Delete videos {#h2--div-id-deletevideo-div-7}
 ---------------------------------------------
 
 You can call the DeleteVideo operation to delete videos.
-For more information about the request and response parameters of this operation, see [DeleteVideo](/intl.en-US/API Reference/Media management/Audio&Video Management/DeleteVideo.md). Example: 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [DeleteVideo](/intl.en-US/API Reference/Media asset management/Audio and video management/DeleteVideo.md). Example: 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import DeleteVideoRequest
     def delete_videos(clt):
@@ -195,8 +195,8 @@ Query source file information (including the file URL) {#h2--div-id-getmezzanine
 -------------------------------------------------------------------------------------------
 
 You can call the GetMezzanineInfo operation to query source file information.
-For more information about the request and response parameters of this operation, see [GetMezzanineInfo](/intl.en-US/API Reference/Media management/Audio&Video Management/GetMezzanineInfo.md). Example: 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [GetMezzanineInfo](/intl.en-US/API Reference/Media asset management/Audio and video management/GetMezzanineInfo.md). Example: 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import GetMezzanineInfoRequest
     def get_mezzanine_info(clt, videoId):
@@ -222,10 +222,10 @@ Query videos by using filter conditions {#h2--div-id-getvideolist-div-9}
 ------------------------------------------------------------------------
 
 You can call the GetVideoList operation to query videos by using filter conditions.
-For more information about the request and response parameters of this operation, see [GetVideoList](/intl.en-US/API Reference/Media management/Audio&Video Management/GetVideoList.md). Example:
+For more information about the request and response parameters of this operation, see [GetVideoList](/intl.en-US/API Reference/Media asset management/Audio and video management/GetVideoList.md). Example:
 **Notice**
 The time must be in UTC. For example, 2018-01-01T12:00:00Z indicates 20:00:00 on January 1, 2018 (UTC+8). {#h2--div-id-getvideolist-div-9}
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import GetVideoListRequest
     def get_video_list(clt):
@@ -259,8 +259,8 @@ Delete a media stream {#h2--div-id-deletestream-div-10}
 -------------------------------------------------------
 
 You can call the DeleteStream operation to delete a media stream.
-For more information about the request and response parameters of this operation, see [DeleteStream](/intl.en-US/API Reference/Media management/Audio&Video Management/DeleteStream.md). Example: 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [DeleteStream](/intl.en-US/API Reference/Media asset management/Audio and video management/DeleteStream.md). Example: 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import DeleteStreamRequest
     # Delete video or audio streams and their storage files. Multiple streams can be deleted at a time. The deleted streams cannot be played if the CDN cache expires. Delete streams with caution.
@@ -290,8 +290,8 @@ Delete source files {#h2--div-id-deletemezzanines-div-11}
 ---------------------------------------------------------
 
 You can call the DeleteMezzanines operation to delete source files.
-For more information about the request and response parameters of this operation, see [DeleteMezzanines](/intl.en-US/API Reference/Media management/Audio&Video Management/DeleteMezzanines.md). Example: 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [DeleteMezzanines](/intl.en-US/API Reference/Media asset management/Audio and video management/DeleteMezzanines.md). Example: 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import DeleteMezzaninesRequest
     def delete_mezzanines(clt):
@@ -320,8 +320,8 @@ Modify the information about images {#h2--div-id-updateimageinfos-div-12}
 -------------------------------------------------------------------------
 
 You can call the UpdateImageInfos operation to modify the information about images.
-For more information about the request and response parameters of this operation, see [UpdateImageInfos](/intl.en-US/API Reference/Media management/Image Management/UpdateImageInfos.md). Example: 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [UpdateImageInfos](/intl.en-US/API Reference/Media asset management/Image management/UpdateImageInfos.md). Example: 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import UpdateImageInfosRequest
     def update_image_infos(clt):
@@ -354,8 +354,8 @@ Query an image {#h2--div-id-getimageinfo-div-13}
 ------------------------------------------------
 
 You can call the GetImageInfo operation to query an image.
-For more information about the request and response parameters of this operation, see [GetImageInfo](/intl.en-US/API Reference/Media management/Image Management/GetImageInfo.md). Example: 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [GetImageInfo](/intl.en-US/API Reference/Media asset management/Image management/GetImageInfo.md). Example: 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import GetImageInfoRequest
     def get_image_info(clt):
@@ -383,8 +383,8 @@ Delete images {#h2--div-id-deleteimage-div-14}
 ----------------------------------------------
 
 You can call the DeleteImage operation to delete images.
-For more information about the request and response parameters of this operation, see [DeleteImage](/intl.en-US/API Reference/Media management/Image Management/DeleteImage.md). Example: 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [DeleteImage](/intl.en-US/API Reference/Media asset management/Image management/DeleteImage.md). Example: 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import DeleteImageRequest
     def delete_image(clt):
