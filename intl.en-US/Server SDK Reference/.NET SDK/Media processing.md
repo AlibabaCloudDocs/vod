@@ -12,8 +12,8 @@ Submit a transcoding job {#h2--div-id-submittranscodejobs-div-2}
 ----------------------------------------------------------------
 
 You can call the SubmitTranscodeJobs operation to submit a transcoding job.
-For more information about the request and response parameters of this operation, see [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitTranscodeJobs.md). Example: 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitTranscodeJobs.md). Example: 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     using System;
     using Aliyun.Acs.Core;
@@ -171,10 +171,10 @@ Submit a snapshot job {#h2--div-id-submitsnapshotjob-div-3}
 -----------------------------------------------------------
 
 You can call the SubmitSnapshotJob operation to submit a snapshot job.
-For more information about the request and response parameters of this operation, see [SubmitSnapshotJob](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitSnapshotJob.md). Example:
+For more information about the request and response parameters of this operation, see [SubmitSnapshotJob](/intl.en-US/API Reference/Media processing/Process initiation/SubmitSnapshotJob.md). Example:
 **Note**
-For more information about how to create a snapshot template, see [Create a snapshot template](/intl.en-US/API Reference/Media processing/Snapshot Template/AddVodTemplate.md). {#h2--div-id-submitsnapshotjob-div-3}
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about how to create a snapshot template, see [Create a snapshot template](/intl.en-US/API Reference/Media processing/Snapshot template/AddVodTemplate.md). {#h2--div-id-submitsnapshotjob-div-3}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     using System;
     using Aliyun.Acs.Core;
@@ -266,8 +266,8 @@ Query snapshot data {#h2--div-id-listsnapshots-div-4}
 -----------------------------------------------------
 
 You can call the ListSnapshots operation to query snapshot data.
-For more information about the request and response parameters of this operation, see [ListSnapshots](/intl.en-US/API Reference/Media management/Image Management/ListSnapshots.md). Example: 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [ListSnapshots](/intl.en-US/API Reference/Media asset management/Image management/ListSnapshots.md). Example: 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     using System;
     using Aliyun.Acs.Core;
@@ -332,8 +332,8 @@ Preprocess videos in the production studio {#h2--div-id-submitpreprocessjobs-div
 -----------------------------------------------------------------------------------
 
 You can call the SubmitPreprocessJobs operation to preprocess videos in the production studio.
-For more information about the request and response parameters of this operation, see [SubmitPreprocessJobs](). Example: 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [SubmitPreprocessJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitPreprocessJobs.md). Example: 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     using System;
     using Aliyun.Acs.Core;
