@@ -4,8 +4,8 @@ To beautify the display of videos, ApsaraVideo VOD sets a thumbnail for each upl
 
 ## Preparations
 
--   [Register](https://account.aliyun.com/register/register.htm?oauth_callback=https%3A%2F%2Fvod.console.aliyun.com%2F&lang=zh) an Alibaba Cloud account, complete [real-name verification](https://help.aliyun.com/knowledge_list/37170.html), and then activate [ApsaraVideo VOD](https://www.aliyun.com/product/vod).
--   Obtain an AccessKey pair to access ApsaraVideo VOD. You can create an AccessKey pair for your Alibaba Cloud account on the [Security Management](https://ak-console.aliyun.com/?spm=5176.doc57741.2.8.uLYY2M#/accesskey) page in the Alibaba Cloud Management Console. You can also create a RAM user in the [RAM console](https://ram.console.aliyun.com/?spm=5176.doc57741.2.2.fQnI2T#/user/list) and grant the RAM user the permissions to access ApsaraVideo VOD. For more information, see [Grant permissions to a RAM user](https://help.aliyun.com/document_detail/116146.html).
+-   [Register](https://account.aliyun.com/register/register.htm?oauth_callback=https%3A%2F%2Fvod.console.aliyun.com%2F&lang=zh) an Alibaba Cloud account, complete real-name verification, and then activate [ApsaraVideo VOD](https://www.aliyun.com/product/vod).
+-   Obtain an AccessKey pair to access ApsaraVideo VOD. You can create an AccessKey pair for your Alibaba Cloud account on the [Security Management](https://ak-console.aliyun.com/?spm=5176.doc57741.2.8.uLYY2M#/accesskey) page in the Alibaba Cloud Management Console. You can also create a RAM user in the [RAM console](https://ram.console.aliyun.com/?spm=5176.doc57741.2.2.fQnI2T#/user/list) and grant the RAM user the permissions to access ApsaraVideo VOD. For more information, see [Grant permissions to a RAM user](/intl.en-US/RAM User Management/Authorization management/Grant permissions to a RAM user.md).
 -   If you want to use the intelligent thumbnail feature, you must apply to [enable](https://ai.aliyun.com/vi/cover) the feature.
 
 ## Set the thumbnail in the console
