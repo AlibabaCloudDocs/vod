@@ -12,10 +12,10 @@ Create a video assembly task based on a timeline {#h2--div-id-produceeditingproj
 -----------------------------------------------------------------------------------------------
 
 You can call the ProduceEditingProjectVideo operation to create a video assembly task based on a timeline.
-The timeline method is most commonly used to assemble videos. For more information about the request and response parameters of this operation, see [ProduceEditingProjectVideo](/intl.en-US/API Reference/Video editing/ProduceEditingProjectVideo.md). Example:
+The timeline method is most commonly used to assemble videos. For more information about the request and response parameters of this operation, see [ProduceEditingProjectVideo](/intl.en-US/API Reference/Online editing/ProduceEditingProjectVideo.md). Example:
 **Note**
 For more examples on how to assemble videos based on timelines, see [Video assembly](/intl.en-US/Developer Guide/Online editing/Overview.md). {#h2--div-id-produceeditingprojectvideo-div-2}
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // Call example
     var client = initVodClient('<Your AccessKeyId>','<Your AccessKeySecret>');
@@ -66,8 +66,8 @@ For more examples on how to assemble videos based on timelines, see [Video assem
 
 
 Also, you can call the ProduceEditingProjectVideo operation to create a video assembly task based on an online editing project.
-If you have high requirements for online editing and management, we recommend that you use this method. For more information about the request and response parameters of this operation, see [ProduceEditingProjectVideo](/intl.en-US/API Reference/Video editing/ProduceEditingProjectVideo.md). Example: 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If you have high requirements for online editing and management, we recommend that you use this method. For more information about the request and response parameters of this operation, see [ProduceEditingProjectVideo](/intl.en-US/API Reference/Online editing/ProduceEditingProjectVideo.md). Example: 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // Call example
     var client = initVodClient('<Your AccessKeyId>','<Your AccessKeySecret>');
@@ -109,8 +109,8 @@ Create an online editing project {#h2--div-id-addeditingproject-div-4}
 ----------------------------------------------------------------------
 
 You can call the AddEditingProject operation to create an online editing project.
-For more information about the request and response parameters of this operation, see [AddEditingProject](/intl.en-US/API Reference/Video editing/Editing Projects/AddEditingProject.md). Example: 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [AddEditingProject](/intl.en-US/API Reference/Online editing/Project management for online editing/AddEditingProject.md). Example: 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // Call example
     var client = initVodClient('<Your AccessKeyId>','<Your AccessKeySecret>');
@@ -151,8 +151,8 @@ Modify an online editing project {#h2--div-id-updateeditingproject-div-5}
 -------------------------------------------------------------------------
 
 You can call the UpdateEditingProject operation to modify an online editing project.
-For more information about the request and response parameters of this operation, see [UpdateEditingProject](/intl.en-US/API Reference/Video editing/Editing Projects/UpdateEditingProject.md). Example: 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [UpdateEditingProject](/intl.en-US/API Reference/Online editing/Project management for online editing/UpdateEditingProject.md). Example: 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // Call example
     var client = initVodClient('<Your AccessKeyId>','<Your AccessKeySecret>');
@@ -189,8 +189,8 @@ Delete an online editing project {#h2--div-id-deleteeditingproject-div-6}
 -------------------------------------------------------------------------
 
 You can call the DeleteEditingProject operation to delete an online editing project.
-For more information about the request and response parameters of this operation, see [DeleteEditingProject](/intl.en-US/API Reference/Video editing/Editing Projects/DeleteEditingProject.md). Example: 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [DeleteEditingProject](/intl.en-US/API Reference/Online editing/Project management for online editing/DeleteEditingProject.md). Example: 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // Call example
     var client = initVodClient('<Your AccessKeyId>','<Your AccessKeySecret>');
@@ -211,8 +211,8 @@ Query an online editing project {#h2--div-id-geteditingproject-div-7}
 ---------------------------------------------------------------------
 
 You can call the GetEditingProject operation to query details about an online editing project.
-For more information about the request and response parameters of this operation, see [GetEditingProject](/intl.en-US/API Reference/Video editing/Editing Projects/GetEditingProject.md). Example: 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [GetEditingProject](/intl.en-US/API Reference/Online editing/Project management for online editing/GetEditingProject.md). Example: 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // Call example
     var client = initVodClient('<Your AccessKeyId>','<Your AccessKeySecret>');
@@ -243,8 +243,8 @@ Search for online editing projects {#h2--div-id-searcheditingproject-div-8}
 ---------------------------------------------------------------------------
 
 You can call the SearchEditingProject operation to search for online editing projects.
-For more information about the request and response parameters of this operation, see [SearchEditingProject](/intl.en-US/API Reference/Video editing/Editing Projects/SearchEditingProject.md). Example: 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [SearchEditingProject](/intl.en-US/API Reference/Online editing/Project management for online editing/SearchEditingProject.md). Example: 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // Call example
     var client = initVodClient('<Your AccessKeyId>','<Your AccessKeySecret>');
@@ -283,8 +283,8 @@ Configure materials for an online editing project {#h2--div-id-seteditingproject
 ------------------------------------------------------------------------------------------------
 
 You can call the SetEditingProjectMaterials operation to configure materials for an online editing project.
-For more information about the request and response parameters of this operation, see [SetEditingProjectMaterials](/intl.en-US/API Reference/Video editing/Editing Projects/SetEditingProjectMaterials.md). Example: 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [SetEditingProjectMaterials](/intl.en-US/API Reference/Online editing/Project management for online editing/SetEditingProjectMaterials.md). Example: 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // Call example
     var client = initVodClient('<Your AccessKeyId>','<Your AccessKeySecret>');
@@ -306,8 +306,8 @@ Query the materials of an online editing project {#h2--div-id-geteditingprojectm
 ------------------------------------------------------------------------------------------------
 
 You can call the GetEditingProjectMaterials operation to query the materials of an online editing project.
-For more information about the request and response parameters of this operation, see [GetEditingProjectMaterials](/intl.en-US/API Reference/Video editing/Editing Projects/GetEditingProjectMaterials.md). Example: 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [GetEditingProjectMaterials](/intl.en-US/API Reference/Online editing/Project management for online editing/GetEditingProjectMaterials.md). Example: 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // Call example
     var client = initVodClient('<Your AccessKeyId>','<Your AccessKeySecret>');
