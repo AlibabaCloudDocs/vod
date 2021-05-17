@@ -8,16 +8,7 @@ Overview
 
 The media asset information that can be obtained includes basic information and mezzanine file information of media files.
 
-* For video files, you can also obtain playback information.
-
-  
-
-* For video files that are processed by the AI service, you can also obtain AI data.
-
-  
-
-
-
+For video files, you can also obtain playback information.
 
 Console management 
 ---------------------------------------
@@ -30,16 +21,13 @@ API or SDK operations
 The following table describes the API operations that are used to obtain media asset information.
 
 
-|      Information type      |                                                      Description                                                      |                                                                     Reference                                                                      |
-|----------------------------|-----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Basic information          | Obtains the details of a single audio or video file.                                                                  | [Obtain video information](/intl.en-US/API Reference/Media management/Audio&Video Management/GetVideoInfo.md)                      |
-| Basic information          | Obtains the information about multiple audio and video files.                                                         | [Obtain the information about multiple videos](/intl.en-US/API Reference/Media management/Audio&Video Management/GetVideoInfos.md) |
-| Basic information          | Obtains image information.                                                                                            | [Obtain image information](/intl.en-US/API Reference/Media management/Image Management/GetImageInfo.md)                            |
-| Mezzanine file information | Obtains the information about the mezzanine files of audios or videos.                                                | [Obtain mezzanine file information](/intl.en-US/API Reference/Media management/Audio&Video Management/GetMezzanineInfo.md)         |
-| Playback information       | Obtains the playback information.                                                                                     | [Obtain the playback URL](/intl.en-US/Developer Guide/Video play/Use playback URLs.md)                                             |
-| AI data                    | Obtains the summary of intelligent review results.                                                                    | [Obtain the summary of intelligent review results]()                                                                               |
-| AI data                    | Obtains the details of intelligent review results.                                                                    | [Obtain the details of intelligent review results]()                                                                               |
-| AI data                    | Obtains the AI results of speech recognition, text recognition, multimodal video recognition, and people recognition. | [Video AI]()                                                                                                                       |
+|      Information type      |                              Description                               |                                                                          Reference                                                                           |
+|----------------------------|------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Basic information          | Obtains the details of a single audio or video file.                   | [Obtain video information](/intl.en-US/API Reference/Media asset management/Audio and video management/GetVideoInfo.md)                      |
+| Basic information          | Obtains the information about multiple audio and video files.          | [Obtain the information about multiple videos](/intl.en-US/API Reference/Media asset management/Audio and video management/GetVideoInfos.md) |
+| Basic information          | Obtains image information.                                             | [Obtain image information](/intl.en-US/API Reference/Media asset management/Image management/GetImageInfo.md)                                |
+| Mezzanine file information | Obtains the information about the mezzanine files of audios or videos. | [Obtain mezzanine file information](/intl.en-US/API Reference/Media asset management/Audio and video management/GetMezzanineInfo.md)         |
+| Playback information       | Obtains the playback information.                                      | [Obtain the playback URL](/intl.en-US/Developer Guide/Video play/Obtain playback URLs to play videos.md)                                     |
 
 
 **Note**
@@ -48,7 +36,7 @@ You can also call the [SearchMedia](/intl.en-US/Developer Guide/Media asset mana
 
 **Call methods:** 
 
-* We recommend that you use a server SDK to obtain media asset information by calling the API operation. This method is simpler and more efficient. For more information about server SDKs, see [Usage notes](/intl.en-US/Server SDK Reference/Instructions.md). For more information about API details, see the "`SDK example`" section of API references.
+* We recommend that you use a server SDK to obtain media asset information by calling the API operation. This method is simpler and more efficient. For more information about server SDKs, see [Usage notes](/intl.en-US/Server SDK Reference/Usage notes.md). For more information about API details, see the "`SDK example`" section of API references.
 
   
 
