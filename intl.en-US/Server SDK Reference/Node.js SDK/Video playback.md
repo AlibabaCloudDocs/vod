@@ -12,8 +12,8 @@ Query a playback URL {#h2--div-id-getplayinfo-div-2}
 ----------------------------------------------------
 
 You can call the GetPlayInfo operation to query a playback URL.
-For more information about the request and response parameters of this operation, see [GetPlayInfo](/intl.en-US/API Reference/Video playback/GetPlayInfo.md). Example: 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [GetPlayInfo](/intl.en-US/API Reference/Audio and video playback/GetPlayInfo.md). Example: 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // Call example
     var client = initVodClient('<Your AccessKeyId>','<Your AccessKeySecret>');
@@ -44,8 +44,8 @@ Query a playback credential {#h2--div-id-getvideoplayauth-div-3}
 ----------------------------------------------------------------
 
 You can call the GetVideoPlayAuth operation to query a playback credential.
-For more information about the request and response parameters of this operation, see [GetVideoPlayAuth](/intl.en-US/API Reference/Video playback/GetVideoPlayAuth.md). Example: 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [GetVideoPlayAuth](/intl.en-US/API Reference/Audio and video playback/GetVideoPlayAuth.md). Example: 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // Call example
     var client = initVodClient('<Your AccessKeyId>','<Your AccessKeySecret>');
