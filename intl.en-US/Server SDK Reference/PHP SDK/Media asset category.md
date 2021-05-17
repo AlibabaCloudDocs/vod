@@ -14,7 +14,7 @@ Create a category {#h2--div-id-addcategory-div-2}
 You can call the AddCategory operation to create a category.
 
 
-For more information about the request and response parameters of this operation, see [AddCategory](/intl.en-US/API Reference/Media management/Media Category/AddCategory.md). Example:
+For more information about the request and response parameters of this operation, see [AddCategory](/intl.en-US/API Reference/Media asset management/Media asset category/AddCategory.md). Example:
 
     function addCategory($client, $cateName, $parentId=-1) {
         $request = new vod\AddCategoryRequest();
@@ -40,7 +40,7 @@ Modify a category {#h2--div-id-updatecategory-div-3}
 You can call the UpdateCategory operation to modify a category.
 
 
-For more information about the request and response parameters of this operation, see [UpdateCategory](/intl.en-US/API Reference/Media management/Media Category/UpdateCategory.md). Example:
+For more information about the request and response parameters of this operation, see [UpdateCategory](/intl.en-US/API Reference/Media asset management/Media asset category/UpdateCategory.md). Example:
 
     function updateCategory($client, $cateId, $cateName) {
         $request = new vod\UpdateCategoryRequest();
@@ -65,8 +65,8 @@ Delete a category {#h2--div-id-deletecategory-div-4}
 
 You can call the DeleteCategory operation to delete a category.
 
-For more information about the request and response parameters of this operation, see [DeleteCategory](/intl.en-US/API Reference/Media management/Media Category/DeleteCategory.md). Example: 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [DeleteCategory](/intl.en-US/API Reference/Media asset management/Media asset category/DeleteCategory.md). Example: 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // If you delete a video category, its subcategories, including level-2 and level -3 categories, are also deleted. Perform this operation with caution.
     function deleteCategory($client, $cateId) {
@@ -91,8 +91,8 @@ Query a category and its subcategories {#h2--div-id-getcategories-div-5}
 
 You can call the GetCategories operation to query a category and its subcategories.
 
-For more information about the request and response parameters of this operation, see [GetCategories](/intl.en-US/API Reference/Media management/Media Category/GetCategories.md). Example: 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [GetCategories](/intl.en-US/API Reference/Media asset management/Media asset category/GetCategories.md). Example: 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     // Query the information about the specified category and its subcategories.
     function getCategories($client, $cateId=-1, $pageNo=1, $pageSize=10) {
