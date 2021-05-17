@@ -13,7 +13,7 @@ Create a snapshot template {#h2--div-id-addvodtemplate-div-2}
 
 You can call the AddVodTemplate operation to create a snapshot template.
 
-For more information about the request and response parameters of this operation, see [AddVodTemplate](/intl.en-US/API Reference/Media processing/Snapshot Template/AddVodTemplate.md). Example:
+For more information about the request and response parameters of this operation, see [AddVodTemplate](/intl.en-US/API Reference/Media processing/Snapshot template/AddVodTemplate.md). Example:
 
     /**
      * Create a snapshot template. Configure the parameters as required.
@@ -84,7 +84,7 @@ Modify a snapshot template {#h2--div-id-updatevodtemplate-div-3}
 ----------------------------------------------------------------
 
 You can call the UpdateVodTemplate operation to modify a snapshot template.
-For more information about the request and response parameters of this operation, see [UpdateVodTemplate](/intl.en-US/API Reference/Media processing/Snapshot Template/UpdateVodTemplate.md). Example: 
+For more information about the request and response parameters of this operation, see [UpdateVodTemplate](/intl.en-US/API Reference/Media processing/Snapshot template/UpdateVodTemplate.md). Example: 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     /**
@@ -146,7 +146,7 @@ Delete a snapshot template {#h2--div-id-deletevodtemplate-div-4}
 
 You can call the DeleteVodTemplate operation to delete a snapshot template.
 
-For more information about the request and response parameters of this operation, see [DeleteVodTemplate](/intl.en-US/API Reference/Media processing/Snapshot Template/DeleteVodTemplate.md). Example:
+For more information about the request and response parameters of this operation, see [DeleteVodTemplate](/intl.en-US/API Reference/Media processing/Snapshot template/DeleteVodTemplate.md). Example:
 
     /**
      * Delete a snapshot template.
@@ -179,7 +179,7 @@ Query snapshot templates {#h2--div-id-listvodtemplate-div-5}
 
 You can call the ListVodTemplate operation to query snapshot templates.
 
-For more information about the request and response parameters of this operation, see [ListVodTemplate](/intl.en-US/API Reference/Media processing/Snapshot Template/ListVodTemplate.md). Example:
+For more information about the request and response parameters of this operation, see [ListVodTemplate](/intl.en-US/API Reference/Media processing/Snapshot template/ListVodTemplate.md). Example:
 
     /**
      * Query snapshot templates.
@@ -212,7 +212,7 @@ Query a snapshot template {#h2--div-id-getvodtemplate-div-6}
 
 You can call the GetVodTemplate operation to query a snapshot template.
 
-For more information about the request and response parameters of this operation, see [GetVodTemplate](/intl.en-US/API Reference/Media processing/Snapshot Template/GetVodTemplate.md). Example:
+For more information about the request and response parameters of this operation, see [GetVodTemplate](/intl.en-US/API Reference/Media processing/Snapshot template/GetVodTemplate.md). Example:
 
     /**
      * Query a snapshot template.
