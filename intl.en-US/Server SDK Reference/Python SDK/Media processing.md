@@ -13,7 +13,7 @@ Submit a transcoding job without encryption {#h2--amp-div-id-submittranscodejobs
 
 You can call the SubmitTranscodeJobs operation to submit a transcoding job without encryption.
 
-For more information about the request and response parameters of this operation, see [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitTranscodeJobs.md). Example:
+For more information about the request and response parameters of this operation, see [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitTranscodeJobs.md). Example:
 **Note**
 
 The following code provides an example on transcoding without encryption. For more information about video encryption supported by Alibaba Cloud, see [Alibaba Cloud video encryption](/intl.en-US/Developer Guide/Video security/Alibaba Cloud video encryption.md).
@@ -76,10 +76,10 @@ Submit a transcoding job with HLS encryption enabled {#h2--hls-div-id-submittran
 
 You can call the SubmitTranscodeJobs operation to submit a transcoding job with HTTP Live Streaming (HLS) encryption enabled.
 
-For more information about the request and response parameters of this operation, see [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitTranscodeJobs.md). Example:
+For more information about the request and response parameters of this operation, see [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitTranscodeJobs.md). Example:
 **Note**
 
-The following code provides an example on transcoding with HLS encryption enabled. For more information, see [Standard HLS encryption](/intl.en-US/Developer Guide/Video security/Standard HLS encryption.md).
+The following code provides an example on transcoding with HLS encryption enabled. For more information, see [Standard HLS encryption](/intl.en-US/Developer Guide/Video security/HLS Encryption.md).
 
     """
     * Optional configurations of HLS encryption. If you do not use HLS encryption, leave the parameters empty.
@@ -150,10 +150,10 @@ Submit a snapshot job {#h2--div-id-submitsnapshotjob-div-4}
 
 You can call the SubmitSnapshotJob operation to submit the snapshot job.
 
-For more information about the request and response parameters of this operation, see [SubmitSnapshotJob](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitSnapshotJob.md). Example:
+For more information about the request and response parameters of this operation, see [SubmitSnapshotJob](/intl.en-US/API Reference/Media processing/Process initiation/SubmitSnapshotJob.md). Example:
 **Note**
 
-For more information about how to create a snapshot template, see [Create a snapshot template](/intl.en-US/API Reference/Media processing/Snapshot Template/AddVodTemplate.md).
+For more information about how to create a snapshot template, see [Create a snapshot template](/intl.en-US/API Reference/Media processing/Snapshot template/AddVodTemplate.md).
 
     from aliyunsdkvod.request.v20170321 import SubmitSnapshotJobRequest
     def submit_snapshot_job(clt):
@@ -199,8 +199,8 @@ Query snapshot data {#h2--div-id-listsnapshots-div-5}
 -----------------------------------------------------
 
 You can call the ListSnapshots operation to query snapshot data.
-For more information about the request and response parameters of this operation, see [ListSnapshots](/intl.en-US/API Reference/Media management/Image Management/ListSnapshots.md). Example: 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [ListSnapshots](/intl.en-US/API Reference/Media asset management/Image management/ListSnapshots.md). Example: 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import ListSnapshotsRequest
     def list_snapshots(clt):
@@ -231,8 +231,8 @@ Preprocess videos in the production studio {#h2--div-id-submitpreprocessjobs-div
 -----------------------------------------------------------------------------------
 
 You can call the SubmitPreprocessJobs operation to preprocess the video in production studios.
-For more information about the request and response parameters of this operation, see [SubmitPreprocessJobs](). Example: 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [SubmitPreprocessJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitPreprocessJobs.md). Example: 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.req uest.v20170321 import SubmitPreprocessJobsRequest
     def submit_preprocess_jobs(clt):
