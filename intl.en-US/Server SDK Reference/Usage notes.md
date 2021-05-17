@@ -4,8 +4,8 @@ ApsaraVideo VOD provides SDKs for multiple mainstream programming languages. You
 
 ## Features
 
--   The SDKs encapsulate the API request and response classes to spare you from the complex calculation of an API signature. For more information, see [Signature](/intl.en-US/API Reference/Calling methods/Signature.md).
--   The SDKs support all ApsaraVideo VOD operations and provide relevant sample code. For more information, see [List of operations by function](/intl.en-US/API Reference/API overview.md).
+-   The SDKs encapsulate the API request and response classes to spare you from the complex calculation of an API signature. For more information, see [Signature](/intl.en-US/API Reference/Calling methods/Signature method.md).
+-   The SDKs support all ApsaraVideo VOD operations and provide relevant sample code. For more information, see [List of operations by function](/intl.en-US/API Reference/List of operations by function.md).
 -   ApsaraVideo VOD supports SDKs for Java, Python, PHP, .NET, Node.js, C/C++, and Go.
 
 **Note:** If new operations are published, Alibaba Cloud updates the SDKs in a timely manner. If the sample code for a new operation is unavailable, you can call the operation based on the sample code of existing operations.
@@ -13,8 +13,8 @@ ApsaraVideo VOD provides SDKs for multiple mainstream programming languages. You
 ## Prerequisites
 
 -   Service activation
-    -   An Alibaba Cloud account is created. To create an Alibaba Cloud account, visit the [account registration page](https://account.aliyun.com/register/register.htm?spm=a2c4g.11186623.2.27.215d276d3EY5iw&oauth_callback=https%3A%2F%2Fvod.console.aliyun.com%2F&lang=zh). [Real-name verification](https://help.aliyun.com/knowledge_list/37170.html?spm=a2c4g.11186623.2.28.215d276d3EY5iw) is completed.
-    -   ApsaraVideo VOD is activated and configured. For more information, see [ApsaraVideo VOD](https://www.aliyun.com/product/vod?spm=a2c4g.11186623.2.29.215d276d3EY5iw) and [Quick Start](/intl.en-US/Quick Start/Get started with ApsaraVideo for VOD.md).
+    -   An Alibaba Cloud account is created. To create an Alibaba Cloud account, visit the [account registration page](https://account.aliyun.com/register/register.htm?spm=a2c4g.11186623.2.27.215d276d3EY5iw&oauth_callback=https%3A%2F%2Fvod.console.aliyun.com%2F&lang=zh). Real-name verification is completed.
+    -   ApsaraVideo VOD is activated and configured. For more information, see [ApsaraVideo VOD](https://www.aliyun.com/product/vod?spm=a2c4g.11186623.2.29.215d276d3EY5iw) and [Quick Start](/intl.en-US/Quick Start/Get started with ApsaraVideo VOD.md).
 -   Account preparation
 
     An AccessKey pair is created to access ApsaraVideo VOD. You can access ApsaraVideo VOD by using an Alibaba Cloud account, a Resource Access Management \(RAM\) user, or a Security Token Service \(STS\) token. For more information, see [Accounts and authorization](/intl.en-US/Developer Guide/Access authorization/Overview.md).
@@ -70,7 +70,7 @@ You can access ApsaraVideo VOD in many regions around the world. For more inform
 
 ## Limits
 
-By default, ApsaraVideo VOD limits the resource usage and the number of API calls. For more information, see [Limits on usage](/intl.en-US/Introduction/Limits on usage.md). To increase the limits, you can contact after-sales technical support or submit a ticket to contact us. In the meantime, you must describe your scenarios and expected thresholds, such as the number of domain names and the frequency of playback operation calls.
+By default, ApsaraVideo VOD limits the resource usage and the number of API calls. For more information, see [Limits on usage](/intl.en-US/Introduction/Limits.md). To increase the limits, you can contact after-sales technical support or submit a ticket to contact us. In the meantime, you must describe your scenarios and expected thresholds, such as the number of domain names and the frequency of playback operation calls.
 
 ## SDK calls
 
@@ -80,14 +80,14 @@ SDKs for different programming languages provide complete API call examples. For
 
 You can troubleshoot errors occurred during the use of the SDKs based on error codes. For more information, see the following common errors in different programming languages:
 
--   [Common errors in SDK for Java](https://help.aliyun.com/document_detail/66505.html?spm=a2c4g.11186623.2.67.215d276dm3zK7H#concept-ul4-wlk-zdb)
--   [Common errors in SDK for Python](https://help.aliyun.com/document_detail/67115.html?spm=a2c4g.11186623.2.68.215d276dCz8Rih#concept-ul4-wlk-zdb)
--   [Common errors in SDK for Go](https://help.aliyun.com/document_detail/66230.html?spm=a2c4g.11186623.2.69.215d276d2UuBMb#concept-ul4-wlk-zdb)
--   [Common errors in SDK for .NET](https://help.aliyun.com/document_detail/66519.html?spm=a2c4g.11186623.2.70.215d276dYpgQbe#concept-ul4-wlk-zdb)
+-   [Common errors in SDK for Java]()
+-   [Common errors in SDK for Python]()
+-   [Common errors in SDK for Go]()
+-   [Common errors in SDK for .NET]()
 
 Common errors are similar for SDKs in various programming languages. Most troubleshooting solutions are applicable to these programming languages. For example, you can apply the solution that is used to troubleshoot the `InvalidAccessKeyId.NotFound` error in the preceding languages to the same error in SDK for PHP.
 
 ## Feedback
 
-If you have any questions while you use the SDKs, you can seek help from [Yunqi Community](https://yq.aliyun.com/tags/type_ask-tagid_23350?spm=a2c4g.11186623.2.71.215d276dR8JY7Z). For more information, see [Submit feedbacks](https://help.aliyun.com/document_detail/93957.html?spm=a2c4g.11186623.2.72.215d276dR8JY7Z).
+If you have any questions while you use the SDKs, you can seek help from [Yunqi Community](https://yq.aliyun.com/tags/type_ask-tagid_23350?spm=a2c4g.11186623.2.71.215d276dR8JY7Z).
 
