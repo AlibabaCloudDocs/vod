@@ -13,7 +13,7 @@ Query a playback URL {#h2--div-id-getplayinfo-div-2}
 
 You can call the GetPlayInfo operation to query a playback URL.
 
-For more information about the request and response parameters of this operation, see [GetPlayInfo](/intl.en-US/API Reference/Video playback/GetPlayInfo.md). Example:
+For more information about the request and response parameters of this operation, see [GetPlayInfo](/intl.en-US/API Reference/Audio and video playback/GetPlayInfo.md). Example:
 
     from aliyunsdkvod.request.v20170321 import GetPlayInfoRequest
     def get_play_info(clt, videoId):
@@ -39,8 +39,8 @@ Query a playback credential {#h2--div-id-getvideoplayauth-div-3}
 ----------------------------------------------------------------
 
 You can call the GetVideoPlayAuth operation to query a playback credential.
-For more information about the request and response parameters of this operation, see [GetVideoPlayAuth](/intl.en-US/API Reference/Video playback/GetVideoPlayAuth.md). Example: 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [GetVideoPlayAuth](/intl.en-US/API Reference/Audio and video playback/GetVideoPlayAuth.md). Example: 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     from aliyunsdkvod.request.v20170321 import GetVideoPlayAuthRequest
     def get_video_playauth(clt, videoId):
