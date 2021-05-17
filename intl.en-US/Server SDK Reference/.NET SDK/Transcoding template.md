@@ -12,8 +12,8 @@ Create a transcoding template group {#h2--div-id-addtranscodetemplategroup-div-2
 ---------------------------------------------------------------------------------
 
 You can call the AddTranscodeTemplateGroup operation to create a transcoding template group.
-For more information about the request and response parameters of this operation, see [AddTranscodeTemplateGroup](). Example: 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [AddTranscodeTemplateGroup](/intl.en-US/API Reference/Media processing/Transcoding template/AddTranscodeTemplateGroup.md). Example: 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     using System;
     using Aliyun.Acs.Core;
@@ -151,8 +151,8 @@ Modify a transcoding template group {#h2--div-id-updatetranscodetemplategroup-di
 ------------------------------------------------------------------------------------
 
 You can call the UpdateTranscodeTemplateGroup operation to modify a transcoding template group.
-For more information about the request and response parameters of this operation, see [UpdateTranscodeTemplateGroup](). Example: 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [UpdateTranscodeTemplateGroup](/intl.en-US/API Reference/Media processing/Transcoding template/UpdateTranscodeTemplateGroup.md). Example: 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     using System;
     using Aliyun.Acs.Core;
@@ -294,8 +294,8 @@ Query transcoding template groups {#h2--div-id-listtranscodetemplategroup-div-4}
 --------------------------------------------------------------------------------
 
 You can call the ListTranscodeTemplateGroup operation to query transcoding template groups.
-For more information about the request and response parameters of this operation, see [ListTranscodeTemplateGroup](). Example: 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [ListTranscodeTemplateGroup](/intl.en-US/API Reference/Media processing/Transcoding template/ListTranscodeTemplateGroup.md). Example: 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     using System;
     using Aliyun.Acs.Core;
@@ -379,8 +379,8 @@ Query a transcoding template group {#h2--div-id-gettranscodetemplategroup-div-5}
 --------------------------------------------------------------------------------
 
 You can call the GetTranscodeTemplateGroup operation to query details about a transcoding template group.
-For more information about the request and response parameters of this operation, see [GetTranscodeTemplateGroup](). Example: 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [GetTranscodeTemplateGroup](/intl.en-US/API Reference/Media processing/Transcoding template/GetTranscodeTemplateGroup.md). Example: 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     using System;
     using Aliyun.Acs.Core;
@@ -458,8 +458,8 @@ Specify a transcoding template group as the default one {#h2--div-id-setdefaultt
 ------------------------------------------------------------------------------------------------------------
 
 You can call the SetDefaultTranscodeTemplateGroup operation to specify a transcoding template group as the default one.
-For more information about the request and response parameters of this operation, see [SetDefaultTranscodeTemplateGroup](). Example: 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [SetDefaultTranscodeTemplateGroup](/intl.en-US/API Reference/Media processing/Transcoding template/SetDefaultTranscodeTemplateGroup.md). Example: 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     using System;
     using Aliyun.Acs.Core;
@@ -533,8 +533,8 @@ Delete a transcoding template group {#h2--div-id-deletetranscodetemplategroup-di
 ------------------------------------------------------------------------------------
 
 You can call the DeleteTranscodeTemplateGroup operation to delete a transcoding template group.
-For more information about the request and response parameters of this operation, see [DeleteTranscodeTemplateGroup](). Example: 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [DeleteTranscodeTemplateGroup](/intl.en-US/API Reference/Media processing/Transcoding template/DeleteTranscodeTemplateGroup.md). Example: 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     using System;
     using Aliyun.Acs.Core;
