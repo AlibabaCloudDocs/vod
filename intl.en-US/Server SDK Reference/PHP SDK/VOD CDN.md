@@ -12,8 +12,8 @@ Preload caches {#h2--div-id-preloadvodobjectcaches-div-2}
 ---------------------------------------------------------
 
 You can call the PreloadVodObjectCaches operation to preload caches.
-For more information about the request and response parameters of this operation, see [PreloadVodObjectCaches](/intl.en-US/API Reference/VoD CDN/Refresh and Preheating/PreloadVodObjectCaches.md). Example: 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [PreloadVodObjectCaches](/intl.en-US/API Reference/CDN for ApsaraVideo VOD/Refresh and prefetch/PreloadVodObjectCaches.md). Example: 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     function preloadVodObjectCaches($client) {
         $request = new vod\PreloadVodObjectCachesRequest();
@@ -39,8 +39,8 @@ Refresh caches {#h2--div-id-refreshvodobjectcaches-div-3}
 ---------------------------------------------------------
 
 You can call the RefreshVodObjectCaches operation to refresh caches.
-For more information about the request and response parameters of this operation, see [RefreshVodObjectCaches](/intl.en-US/API Reference/VoD CDN/Refresh and Preheating/RefreshVodObjectCaches.md). Example: 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [RefreshVodObjectCaches](/intl.en-US/API Reference/CDN for ApsaraVideo VOD/Refresh and prefetch/RefreshVodObjectCaches.md). Example: 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     function refreshVodObjectCaches($client) {
         $request = new vod\RefreshVodObjectCachesRequest();
@@ -67,8 +67,8 @@ Query the refresh and preload statuses {#h2--div-id-describevodrefreshtasks-div-
 ----------------------------------------------------------------------------------
 
 You can call the DescribeVodRefreshTasks operation to query the refresh and preload statuses.
-For more information about the request and response parameters of this operation, see [DescribeVodRefreshTasks](/intl.en-US/API Reference/VoD CDN/Refresh and Preheating/DescribeRefreshTasks.md). Example: 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [DescribeVodRefreshTasks](/intl.en-US/API Reference/CDN for ApsaraVideo VOD/Refresh and prefetch/DescribeVodRefreshTasks.md). Example: 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     function describeVodRefreshTasks($client) {
         $request = new vod\DescribeVodRefreshTasksRequest();
@@ -95,8 +95,8 @@ Query the maximum and currently allowed numbers of URLs and directories for refr
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 You can call the DescribeVodRefreshQuota operation to query the maximum and currently allowed numbers of URLs and directories for refresh and preload operations.
-For more information about the request and response parameters of this operation, see [DescribeVodRefreshQuota](/intl.en-US/API Reference/VoD CDN/Refresh and Preheating/DescribeVodRefreshQuota.md). Example: 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [DescribeVodRefreshQuota](/intl.en-US/API Reference/CDN for ApsaraVideo VOD/Refresh and prefetch/DescribeVodRefreshQuota.md). Example: 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     function describeVodRefreshQuota($client) {
         $request = new vod\DescribeVodRefreshQuotaRequest();
@@ -118,8 +118,8 @@ Query traffic data {#h2--div-id-describevoddomaintrafficdata-div-6}
 -------------------------------------------------------------------
 
 You can call the DescribeVodDomainTrafficData operation to query traffic data.
-For more information about the request and response parameters of this operation, see [DescribeVodDomainTrafficData](/intl.en-US/API Reference/VoD CDN/Data Monitoring/DescribeVodDomainTrafficData.md). Example: 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [DescribeVodDomainTrafficData](/intl.en-US/API Reference/CDN for ApsaraVideo VOD/Data monitoring/DescribeVodDomainTrafficData.md). Example: 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     function describeVodDomainTrafficData($client) {
         $request = new vod\DescribeVodDomainTrafficDataRequest();
@@ -148,8 +148,8 @@ Query network bandwidth {#h2--div-id-describevoddomainbpsdata-div-7}
 --------------------------------------------------------------------
 
 You can call the DescribeVodDomainBpsData operation to query network bandwidth.
-For more information about the request and response parameters of this operation, see [DescribeVodDomainBpsData](/intl.en-US/API Reference/VoD CDN/Data Monitoring/DescribeVodDomainBpsData.md). Example: 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [DescribeVodDomainBpsData](/intl.en-US/API Reference/CDN for ApsaraVideo VOD/Data monitoring/DescribeVodDomainBpsData.md). Example: 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     function describeVodDomainBpsData($client) {
         $request = new vod\DescribeVodDomainBpsDataRequest();
@@ -178,8 +178,8 @@ Query the logs of a domain name {#h2--div-id-describevoddomainlog-div-8}
 ------------------------------------------------------------------------
 
 You can call the DescribeVodDomainLog operation to query the logs of a domain name.
-For more information about the request and response parameters of this operation, see [DescribeVodDomainLog](/intl.en-US/API Reference/VoD CDN/Log Management/DescribeVodDomainLog.md). Example: 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [DescribeVodDomainLog](/intl.en-US/API Reference/CDN for ApsaraVideo VOD/Log management/DescribeVodDomainLog.md). Example: 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     function describeVodDomainLog($client) {
         $request = new vod\DescribeVodDomainLogRequest();
