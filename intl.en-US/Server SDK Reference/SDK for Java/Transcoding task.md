@@ -12,8 +12,8 @@ Query the transcoding summary of a video {#h2--div-id-gettranscodesummary-div-2}
 --------------------------------------------------------------------------------
 
 You can call the GetTranscodeSummary operation to query the transcoding summary of a video.
-For more information about the request and response parameters of this operation, see [GetTranscodeSummary](/intl.en-US/API Reference/Media processing/Transcoding job/GetTranscodeSummary.md). Example: 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [GetTranscodeSummary](/intl.en-US/API Reference/Media processing/Transcoding task/GetTranscodeSummary.md). Example: 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     import com.aliyuncs.vod.model.v20170321.GetTranscodeSummaryRequest;
     import com.aliyuncs.vod.model.v20170321.GetTranscodeSummaryResponse;
@@ -60,8 +60,8 @@ Query transcoding tasks {#h2--div-id-listtranscodetask-div-3}
 -------------------------------------------------------------
 
 You can call the ListTranscodeTask operation to query transcoding tasks.
-For more information about the request and response parameters of this operation, see [ListTranscodeTask](/intl.en-US/API Reference/Media processing/Transcoding job/ListTranscodeTask.md). Example: 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [ListTranscodeTask](/intl.en-US/API Reference/Media processing/Transcoding task/ListTranscodeTask.md). Example: 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     import com.aliyuncs.vod.model.v20170321.ListTranscodeTaskRequest;
     import com.aliyuncs.vod.model.v20170321.ListTranscodeTaskResponse;
@@ -102,8 +102,8 @@ Query details about a transcoding task {#h2--div-id-gettranscodetask-div-4}
 ---------------------------------------------------------------------------
 
 You can call the GetTranscodeTask operation to query details about a transcoding task.
-For more information about the request and response parameters of this operation, see [GetTranscodeTask](/intl.en-US/API Reference/Media processing/Transcoding job/GetTranscodeTask.md). Example: 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For more information about the request and response parameters of this operation, see [GetTranscodeTask](/intl.en-US/API Reference/Media processing/Transcoding task/GetTranscodeTask.md). Example: 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     import com.aliyuncs.vod.model.v20170321.GetTranscodeTaskRequest;
     import com.aliyuncs.vod.model.v20170321.GetTranscodeTaskResponse;
