@@ -76,7 +76,7 @@ Scenarios
 Preparations 
 ---------------------------------
 
-1. An Alibaba Cloud account is [registered](https://account.aliyun.com/register/register.htm?oauth_callback=https%3A%2F%2Fvod.console.aliyun.com%2F&lang=zh), [Real-name verification](https://help.aliyun.com/knowledge_list/37170.html) is complete, and [ApsaraVideo VOD](https://www.aliyun.com/product/vod) is activated.
+1. An Alibaba Cloud account is [registered](https://account.aliyun.com/register/register.htm?oauth_callback=https%3A%2F%2Fvod.console.aliyun.com%2F&lang=zh), Real-name verification is complete, and [ApsaraVideo VOD](https://www.aliyun.com/product/vod) is activated.
 
    
 
