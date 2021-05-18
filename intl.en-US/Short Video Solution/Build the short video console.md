@@ -34,7 +34,7 @@ The short video console has the following features:
 
 1.  Download the source code of the short video demo.
 
-    1.  To build the short video console, you must download the source code of the short video AppServer and console demos. For more information, see [SDK download](https://help.aliyun.com/document_detail/51992.html#title-70x-3qd-cla).
+    1.  To build the short video console, you must download the source code of the short video AppServer and console demos. For more information, see [SDK download](/intl.en-US/SDK Downloads/SDK download.md).
 
     2.  Decompress the source code package. The `video-admin` directory contains the following directories and files:
 
