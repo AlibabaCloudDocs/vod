@@ -1,12 +1,12 @@
 Overview 
 =============================
 
-ApsaraVideo VOD provides media review features. These features include intelligent review, manual review, and security review. This topic describes the benefits, features, scenarios, and preparations of ApsaraVideo VOD review.
+ApsaraVideo VOD provides media review features. These features include manual review, and security review. This topic describes the benefits, features, scenarios, and preparations of ApsaraVideo VOD review.
 
 Overview 
 -----------------------------
 
-Media resources uploaded may violate the content laws and regulations. ApsaraVideo VOD provides a full range of media review services such as intelligent review, manual review, and security review configurations for videos, audios, images, and texts. These automated and intelligent features can reduce the risks of illegal and non-compliant content such as terrorism, politically sensitive content, pornography, and violence. These features can also lower the cost of labor that is required to review content.
+Media resources uploaded may violate the content laws and regulations. ApsaraVideo VOD provides a full range of media review services such as manual review, and security review configurations for videos, audios, images, and texts. These automated and intelligent features can reduce the risks of illegal and non-compliant content such as terrorism, politically sensitive content, pornography, and violence. These features can also lower the cost of labor that is required to review content.
 
 Benefits of ApsaraVideo VOD review 
 -------------------------------------------------------
@@ -33,14 +33,6 @@ Benefits of ApsaraVideo VOD review
 Features 
 -----------------------------
 
-* Intelligent review
-
-  The intelligent review service is implemented based on a large amount of labeled data and a large number of deep learning algorithms. This feature detects illegal and prohibited non-compliant content, such as terrorism, politically sensitive content, pornography, and advertisements. The service applies to the content of videos, thumbnails, or titles from multiple dimensions such as voice, text, and vision. This service applies to multiple scenarios such as short video platform audit, live streaming platform audit, and media audit. This way, you can improve your video review efficiency.
-
-  For more information, see [Intelligent review](/intl.en-US/Developer Guide/Media review/Automated review.md).
-  
-
-
 
 
 <!-- -->
@@ -61,7 +53,7 @@ Features
 
   ApsaraVideo VOD provides the security IP address preview service. This service ensures that only users whose IP addresses are added to review security groups can play videos in the Checking or Blocked state.
 
-  For more information, see [Security IP address preview](/intl.en-US/Developer Guide/Media review/Review security IP address.md).
+  For more information, see [Security IP address preview](/intl.en-US/Developer Guide/Media review/Security IP address preview.md).
   
 
 
@@ -106,21 +98,9 @@ Preparations
 
    
 
-4. In the left-side navigation pane, choose **Media Processing \> Callback** . On the [Callback](https://vod.console.aliyun.com/settings/workflow#/settings/callback) page, set Callback URL and select Events.![Callback](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3563401161/p181787.png)
+4. In the left-side navigation pane, choose **Media Processing \> Callback** . On the [Callback](https://vod.console.aliyun.com/settings/workflow#/settings/callback) page, set Callback URL and select Events.![Callback](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6633031261/p181787.png)
 
-   * For manual review, to receive the [CreateAuditComplete](/intl.en-US/Developer Guide/Event notification/Events/CreateAuditComplete.md) event notification, you must select the **Create Audit Completed** event.
-
-     
-   
-   * For intelligent review, to receive the [VideoAnalysisComplete](/intl.en-US/Developer Guide/Event notification/Events/VideoAnalysisComplete.md) event notification, you must select the **Video Analysis Completed** event. You can [submit an AI processing job]() only after this event notification is received.
-
-     
-   
-   * For intelligent review, you also need to select the **AI Processing Completed** event to receive the [AIMediaAuditComplete](/intl.en-US/Developer Guide/Event notification/Events/AIMediaAuditComplete.md) event notification. After you select this event, ApsaraVideo VOD sends you a notification when an AI processing job is complete.
-
-     
-   
-
+   For manual review, to receive the [CreateAuditComplete](/intl.en-US/Developer Guide/Event notification/Events/CreateAuditComplete.md) event notification, you must select the **Create Audit Completed** event.
    
 
 
