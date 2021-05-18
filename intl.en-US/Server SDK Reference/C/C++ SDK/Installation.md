@@ -97,7 +97,7 @@ This topic describes the prerequisites and procedure of installing ApsaraVideo V
     make install
     ```
 
--   Before you use upload SDKs for C/C++, you must download and install Object Storage Service \(OSS\) SDK for C. For more information, see [Installation](https://help.aliyun.com/document_detail/32132.html?spm=a2c4g.11186623.2.27.5dda52d4bv7REl).
+-   Before you use upload SDKs for C/C++, you must download and install Object Storage Service \(OSS\) SDK for C. For more information, see [Installation](/intl.en-US/SDK Reference/C/Installation.md).
 
     **Note:** If some dependent libraries of OSS are installed, you do not need to install them again.
 
@@ -106,7 +106,7 @@ This topic describes the prerequisites and procedure of installing ApsaraVideo V
 
 1.  Download the SDK
 
-    For more information, see [Release notes of the upload SDK for C or C++](/intl.en-US/SDK Downloads/shortvideo-sdk-history/Upload SDK for C_C++.md).
+    For more information, see [Release notes of the upload SDK for C or C++](/intl.en-US/SDK Downloads/shortvideo-sdk-history/Release notes of the upload SDK for C or C++.md).
 
     **Note:** Server SDKs for C/C++ and upload SDKs for C/C++ are of the same version.
 
