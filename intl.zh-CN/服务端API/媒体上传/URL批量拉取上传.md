@@ -37,7 +37,7 @@
 |StorageLocation|String|否|outin-bfefbb90a47c\*\*\*\*\*\*163e1c7426.oss-cn-shanghai.aliyuncs.com|视频存储地址。
 
  登录[点播控制台](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored)，选择**配置管理** \> **媒资管理配置** \> **存储管理**查看存储地址。不指定时会使用默认存储。 |
-|UploadMetadatas|String|否|\{"SourceURL":"http://test.com/a.mp4","Title":"urlUploadTest"\}|上传视频元数据信息，为JSON字符串。
+|UploadMetadatas|String|否|\[\{"SourceURL":"http://test.com/a.mp4","Title":"urlUploadTest"\}\]|上传视频元数据信息，为JSON字符串。
 
  -   与UploadURLs里的URL匹配才能生效。
 -   JSON格式：`[UploadMetadata, UploadMetadata,…]`，需转为JSON字符串 。
