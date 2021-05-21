@@ -1,59 +1,74 @@
-# 查询视频DNA作业
+# Resource plans
 
-## 说明
+ApsaraVideo VOD provides diverse resource plans, such as data transfer plans, storage plans, transcoding plans, and review plans. This topic describes the pricing and usage notes of these resource plans.
 
-查询视频DNA作业。可调用API：[ListAIJob](/cn.zh-CN/服务端API/视频AI/查询AI作业.md)，其中参数JobIds为视频DNA作业ID列表。
+## Description of resource plans
 
-## API示例
+In subscription mode, you purchase resource plans in advance. The resource plans are used to offset the amount of used resources. ApsaraVideo VOD provides data transfer plans and transcoding plans. In this example, resource plans are purchased in mainland China. For more information about supported regions and specifications, visit the [buy page](https://common-buy-intl.alibabacloud.com/?spm=a3c0i.16119627.2449534240.4.68a3375ds2b0Ta&commodityCode=vod_flow_bag_intl#/buy).
 
-## 请求示例
+## Data transfer plan of ApsaraVideo VOD
 
-```
-http://vod.cn-shanghai.aliyuncs.com?Action=ListAIJob
-&JobIds=1236ca184c0e47098a5b665e2a126654
-&Format=JSON
-&<公共参数>
-			
-```
+A data transfer plan of ApsaraVideo VOD contains transfer acceleration traffic and is used to play videos on demand at an accelerated speed. You can purchase multiple data transfer plans. In this case, resource consumption is preferentially deducted from the data transfer plan that you first purchase. The system collects statistics on the downstream traffic that you use every day. The used resources within the quota of a data transfer plan are deducted from the data transfer plan. Excess usage is charged in pay-as-you-go mode. For more information, see [Pay-as-you-go]().
 
-**说明：** 示例中的“公共参数”参见[公共参数说明文档](/cn.zh-CN/服务端API/调用方式/公共参数.md)。
+|Type of resource plan|Price \(USD\)|
+|---------------------|-------------|
+|Acceleration traffic of 100 GB|4|
+|Acceleration traffic of 500 GB|19|
+|Acceleration traffic of 1 TB|37|
+|Acceleration traffic of 5 TB|180|
+|Acceleration traffic of 10 TB|350|
+|Acceleration traffic of 50 TB|1740|
 
-## 返回示例
+## Storage plan of ApsaraVideo VOD
 
-```
-{
-    "RequestId": "25818875-5F78-4A13-BEF6-D7393642CA58",
-    "AIJobList": {
-        "AIJob": [
-            {
-                "JobId": "1236ca184c0e47098a5b665e2a126654",
-                "MediaId":"3D3D12340d92c641401fab46a0b847fdff97",
-                "Type":"AIMediaDNA",
-                "CreationTime": "2018-01-10T12:00:00Z",
-                "CompleteTime":"2018-01-10T12:00:30Z",
-                "Status":"success",
-                "Code":"0",
-                "Message":"OK",
-                "Data":"\"VideoDNA\":[{\"Similarity\":\"0.98\",\"PrimaryKey\":\"6ad8987da46f4b14b9d6490ce2873745\",\"Detail\":[{\"Input\":{\"Start\":\"2.0\",\"Duration\":\"12.0\"},\"Duplication\":{\"Start\":\"2.0\",\"Duration\":\"12.1\"}}]}]}"
-            }
-        ]
-    },
-    "NonExistAIJobIds": {
-        "String": []
-    }
-}
-			
-```
+You can purchase multiple storage plans of ApsaraVideo VOD. The resource quotas of the storage plans can add up within their validity periods. The system collects statistics on the storage space that you use every day. The used resources within the quota of a storage plan are deducted from the storage plan. Excess usage is charged in pay-as-you-go mode. For more information, see [Pay-as-you-go]().
 
-## SDK示例
+|Type of resource plan|Price \(USD\)|
+|---------------------|-------------|
+|Storage plan of 100 GB|18.72|
+|Storage plan of 500 GB|93.6|
+|Storage plan of 1 TB|191.64|
+|Storage plan of 5 TB|958.44|
+|Storage plan of 20 TB|3833.88|
+|Storage plan of 100 TB|19169.28|
 
-建议使用[服务端SDK](t1826050.md#)来调用API，此API各语言调用的示例代码，请参考如下：
+## Transcoding plan of ApsaraVideo VOD
 
--   [Java](t1826065.md#)
--   [Python](t1826082.md#)
--   [PHP](t1826104.md#)
--   [.NET](t1826121.md#)
--   [Node.js](t1826137.md#)
--   [Go](t1826153.md#)
--   [C/C++](t1826171.md#)
+Specifications of common transcoding plans
+
+A common transcoding plan of ApsaraVideo VOD is used to perform common transcoding. You can purchase multiple common transcoding plans. In this case, resource consumption is preferentially deducted from the common transcoding plan that you first purchase. The system collects statistics on the common transcoding duration that you use every day. The used resources within the quota of a common transcoding plan and the specified resolution range are deducted from the common transcoding plan. Excess usage is charged in pay-as-you-go mode. For more information, see [Pay-as-you-go]().
+
+|Type of resource plan|Price \(USD\)|
+|---------------------|-------------|
+|Common transcoding plan of 5,000 minutes|13|
+|Common transcoding plan of 20,000 minutes|47|
+|Common transcoding plan of 100,000 minutes|204|
+|Common transcoding plan of 500,000 minutes|850|
+
+Deduction ratios of common transcoding plans
+
+A common transcoding plan of ApsaraVideo VOD can be used to offset the duration for transcoding videos to H.264 low definition \(LD\), standard definition \(SD\), and high definition \(HD\) videos. The following table describes the deduction ratios.
+
+|Encoding mode|Resolution|Deduction ratio|
+|-------------|----------|---------------|
+|H.264|LD: 640 × 480 pixels and lower|1:1|
+|H.264|SD: 1280 × 720 pixels and lower|1:1.5|
+|H.264|HD: 1920 × 1080 pixels and lower|1:3|
+
+**Note:** Assume that you purchase a common transcoding plan of 5,000 minutes. The deduction duration for transcoding videos to H.264 LD videos is 5,000 minutes. The deduction duration for transcoding videos to H.264 SD videos is 3,333.33 minutes based on the following formula: 5,000/1.5 = 3,333.33. The deduction duration for transcoding videos to H.264 HD videos is 1,666.66 minutes based on the following formula: 5,000/3 = 1,666.66.
+
+Deduction ratios of Narrowband HD™ 1.0 transcoding plans
+
+|Encoding mode|Resolution|Deduction ratio|
+|-------------|----------|---------------|
+|H.264|4K: 3840 × 2160 pixels and lower|1:13|
+|H.264|2K: 2560 × 1440 pixels and lower|1:6.5|
+|H.264|HD: 1920 × 1080 pixels and lower|1:3|
+|H.264|SD: 1280 × 720 pixels and lower|1:1.5|
+|H.264|LD: 640 × 480 pixels and lower|1:1|
+|H.265|4K: 3840 × 2160 pixels and lower|1:65|
+|H.265|2K: 2560 × 1440 pixels and lower|1:32.5|
+|H.265|HD: 1920 × 1080 pixels and lower|1:15|
+|H.265|SD: 1280 × 720 pixels and lower|1:7.5|
+|H.265|LD: 640 × 480 pixels and lower|1:5|
 
