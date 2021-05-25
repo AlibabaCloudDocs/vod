@@ -12,8 +12,8 @@
 
     添加framework有以下两种方式：
 
-    -   下载[RTS SDK](https://help.aliyun.com/document_detail/177373.html)，将RTS SDK和FfmcdnGlue的framework文件添加到General里的Embedded Binaries栏目。
-    -   支持pod导入，动态将framework导入的方式。新增的artcSource.framework和FfmcdnGlue.framework用以支持RTS。
+    -   下载[RTS SDK](https://help.aliyun.com/document_detail/177373.html)，将RtsSDK.framework文件和和artcSource.framework 添加到General里的Embedded Binaries栏目。
+    -   支持pod导入，动态将framework导入的方式。新增的artcSource.framework和RtsSDK.framework用以支持RTS。
 2.  设置播放器最大缓冲延迟等
 
     播放器SDK通过AVPConfig提供了MaxDelayTime等参数设置播放直播流最大延迟缓存的接口。RTS场景下，建议的参数设置值如下：
