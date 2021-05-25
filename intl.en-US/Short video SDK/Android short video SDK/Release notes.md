@@ -636,7 +636,7 @@ Feature updates
 -   The issue is fixed where the volume that is specified during editing does not take effect during production. The volume is larger than that is specified, and the default volume of the SDK is modified.
 -   The issue is fixed where specific videos are stuck at 99% during cropping.
 -   The issue is fixed where specific videos that are cropped on mobile phones stutter during the preview playback.
--   The issue is fixed where animated filters have dashed lines on specific Huawei mobile phones.
+-   The issue is fixed where animated filters have dashed lines on specific phone models.
 -   The issue is fixed where the SDK unexpectedly quits when you remove music on specific phone models.
 -   The issue is fixed where stuttering occurs during reverse playback.
 -   The issue is fixed where a color gamut issue occurs when the BT.709 formula is used for YUV-to-RGB conversion.
