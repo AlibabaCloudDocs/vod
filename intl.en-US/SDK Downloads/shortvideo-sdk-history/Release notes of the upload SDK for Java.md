@@ -2,14 +2,20 @@
 
 This topic describes the release notes of different versions of the upload SDK for Java.
 
+## 2021-04-23
+
+|Release date|Version|Description|Download link|
+|------------|-------|-----------|-------------|
+|2021-04-23|V1.4.14|The issue is fixed where the upload job remains in the pending state when you call the uploadVideo method to upload a video whose size is zero.|[Upload SDK for Java and sample code](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/upload/java/VODUploadDemo-java-1.4.14.zip)|
+
 ## 2020-09-23
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2020-09-23|V1.4.13|-   The issue is fixed where error messages are returned by the uploadWebM3u8 operation and the uploadURLStream operation when you use Security Token Service \(STS\) to upload videos.
+|2020-09-23|V1.4.13|-   The issue is fixed where error messages are returned by the uploadWebM3u8 method and the uploadURLStream method when you use Security Token Service \(STS\) to upload videos.
 -   The Object Storage Service \(OSS\) dependency is updated.
 
-**Note:** The OSS SDK must be V3.9.0 or later.
+**Note:** The version of OSS SDKs must be V3.9.0 or later.
 
 |[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1600848199952/VODUploadDemo-java-1.4.13.zip)|
 
@@ -17,19 +23,19 @@ This topic describes the release notes of different versions of the upload SDK f
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2020-03-16|V1.4.12|Automatic resolution to the addresses of TS files is supported for the upload of M3U8 files. The addresses can be relative paths or absolute paths.|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1584350505412/VODUploadDemo-java-1.4.12.zip)|
+|2020-03-16|V1.4.12|Automatic resolution to the addresses of media segment files is supported for the upload of m3u8 files. The addresses can be relative paths or absolute paths.|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1584350505412/VODUploadDemo-java-1.4.12.zip)|
 
 ## 2019-07-22
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2019-07-22|V1.4.11|Custom local directories are supported for the upload of M3U8 files. The custom local directories are used to temporarily store the downloaded files.|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1563778063998/VODUploadDemo-java-1.4.11.zip)|
+|2019-07-22|V1.4.11|Custom on-premises directories are supported for the upload of m3u8 files. The custom on-premises directories are used to temporarily store the downloaded files.|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1563778063998/VODUploadDemo-java-1.4.11.zip)|
 
 ## 2019-07-12
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2019-07-12|V1.4.10|The issue is fixed where an M3U8 file fails to be uploaded based on the URL that contains authentication information.|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1562903947499/VODUploadDemo-java-1.4.10.zip)|
+|2019-07-12|V1.4.10|The issue is fixed where an m3u8 file fails to be uploaded based on the URL that contains authentication information.|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1562903947499/VODUploadDemo-java-1.4.10.zip)|
 
 ## 2019-06-25
 
@@ -56,7 +62,7 @@ This topic describes the release notes of different versions of the upload SDK f
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2019-03-10|V1.4.6|-   Local auxiliary media assets can be uploaded to ApsaraVideo VOD. After you specify the local directory of an auxiliary media asset, the upload SDK automatically uploads the auxiliary media asset to ApsaraVideo VOD.
+|2019-03-10|V1.4.6|-   On-premises auxiliary media assets can be uploaded to ApsaraVideo VOD. After you specify the on-premises directory of an auxiliary media asset, the upload SDK automatically uploads the auxiliary media asset to ApsaraVideo VOD.
 -   Online auxiliary media assets can be uploaded to ApsaraVideo VOD. After you specify the URL of an online auxiliary media asset, the upload SDK automatically downloads the auxiliary media asset from the URL and uploads it to ApsaraVideo VOD.
 
 |[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1552227669169/VODUploadDemo-java-1.4.6.zip)|
@@ -66,7 +72,7 @@ This topic describes the release notes of different versions of the upload SDK f
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
 |2019-02-19|V1.4.5|-   The workflow ID can be specified during the upload of audio or video files.
--   The incompatibility issues of SDK are fixed.
+-   The incompatibility issues of the upload SDK for Java are fixed.
     -   aliyun-java-sdk-core is updated to V4.3.3.
     -   aliyun-java-sdk-vod is updated to V2.15.0.
     -   V2.8.2 and later versions of the com.google.code.gson dependency are added.
@@ -77,9 +83,9 @@ This topic describes the release notes of different versions of the upload SDK f
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2019-01-30|V1.4.4|-   Local M3U8 audio and video files including all part files can be uploaded to ApsaraVideo VOD. To upload the files, you must specify the local directories of M3U8 index files and part files.
--   Online M3U8 audio and video files including all part files can be uploaded to ApsaraVideo VOD. To upload the files, you must specify the URLs of M3U8 index files and part files.
--   The region of the ECS instance where you want to deploy an upload script can be specified. If the region of the ECS instance is the same as the storage region in ApsaraVideo VOD, the specified file is automatically uploaded by using an internal network, which can accelerate the upload speed and save the public network traffic.
+|2019-01-30|V1.4.4|-   On-premises m3u8 files, including all media segment files, of audio and video files can be uploaded to ApsaraVideo VOD. To upload the files, you must specify the on-premises directories of the m3u8 files and media segment files.
+-   Online m3u8 files, including all media segment files, of audio and video files can be uploaded to ApsaraVideo VOD. To upload the files, you must specify the URLs of the m3u8 files and media segment files.
+-   The region of the ECS instance where you want to deploy an upload script can be specified. If the region of the ECS instance is the same as the storage region in ApsaraVideo VOD, the specified file is automatically uploaded by using an internal network, which can accelerate the upload speed and save the Internet traffic.
 -   The VOD center and storage region can be specified to facilitate upload outside China. The default VOD center is in the China \(Shanghai\) region.
 -   The issue is fixed where the specified part size does not take effect in multipart upload.
 
