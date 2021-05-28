@@ -78,7 +78,6 @@ Description about supported actions
     |------|-----------|
     |**Media Processing**|You can use transcoding templates or workflows to process videos.|
     |**Disable Download**|This action forbids users to download videos. This action must be performed in conjunction with a player.**Note:** You can forbid users to download videos only when the videos are in the Normal state. For more information about the secure download settings, see [Configure offline download](/intl.en-US/User Guide/Domain management/Configure offline download.md). |
-    |**Make Available on Cloud Studio**|Click **Make Available on Cloud Studio** to transcode the video into two streams, which can be added for playback in the production studio of ApsaraVideo VOD. For more information about the production studio features, see [Introduction to production studios]().**Note:** You can click **Make Available on Cloud Studio** only once for each video. |
 
 -   Action: **Export Media URL**
 
