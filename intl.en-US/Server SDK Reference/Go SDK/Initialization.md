@@ -4,7 +4,7 @@ This topic describes how to initialize ApsaraVideo VOD SDK for Go by using an Ac
 
 ## Prerequisites
 
--   An Alibaba Cloud account is created. To create an Alibaba Cloud account, visit the [account registration page](https://account.aliyun.com/register/register.htm?spm=a2c4g.11186623.2.13.2a123bd95a5EuV&oauth_callback=https%3A%2F%2Fvod.console.aliyun.com%2F&lang=zh). [Real-name verification](https://account.console.aliyun.com/v2/?spm=5176.2020520207.103.3.6e0f4c126cK3zB#/authc/types) is completed. [ApsaraVideo VOD](https://www.alibabacloud.com/product/apsaravideo-for-vod?spm=a3c0i.7911826.6791778070.dnavproductmedia3.441914b3psWeWQ) is activated.
+-   An Alibaba Cloud account is created. To create an Alibaba Cloud account, visit the [account registration page](https://account.aliyun.com/register/register.htm?spm=a2c4g.11186623.2.13.2a123bd95a5EuV&oauth_callback=https%3A%2F%2Fvod.console.aliyun.com%2F&lang=zh). Real-name verification is completed. [ApsaraVideo VOD](https://www.alibabacloud.com/product/apsaravideo-for-vod?spm=a3c0i.7911826.6791778070.dnavproductmedia3.441914b3psWeWQ) is activated.
 -   An AccessKey pair is created to call ApsaraVideo VOD operations. You can create the AccessKey pair of your Alibaba Cloud account in the [User Management console](https://usercenter.console.aliyun.com/#/manage/ak). Alternatively, you can create a RAM user in the [RAM console](https://ram.console.aliyun.com/?spm=a2c4g.11186623.2.17.2a123bd95a5EuV#/user/list) and grant the RAM user the permissions on ApsaraVideo VOD. For more information, see [Create and grant permissions to a RAM user](/intl.en-US/Developer Guide/Access authorization/Create and grant permissions to a RAM user.md).
 
 ## Initialize the SDK
@@ -124,7 +124,7 @@ func main() {
 
 **Note:**
 
--   For more information, see [Use Alibaba Cloud SDK for Go](https://help.aliyun.com/document_detail/66217.html?spm=a2c4g.11186623.2.27.3c9b25dfToJUtM#concept-mkk-vpj-zdb).
+-   For more information, see [Use Alibaba Cloud SDK for Go]().
 -   The API operations that are encapsulated in ApsaraVideo VOD SDK for Go support concurrent and generic calls.
 -   You can download the sample code at [test\_vod.go](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/87264/cn_zh/1533550966288/test_vod.go).
 
