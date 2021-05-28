@@ -4,7 +4,7 @@ The Live-to-VOD feature allows you to synchronously record live streams as on-de
 
 ## Preparations
 
--   Activate ApsaraVideo VOD. For more information, see [Get started with ApsaraVideo for VOD](https://help.aliyun.com/document_detail/51512.html?spm=a2c4g.11186623.2.17.8e2b2902sPi32f).
+-   Activate ApsaraVideo VOD. For more information, see [Get started with ApsaraVideo VOD](/intl.en-US/Quick Start/Get started with ApsaraVideo VOD.md).
 -   Activate ApsaraVideo Live. For more information, see [Activate ApsaraVideo Live and purchase resource plans](/intl.en-US/Pricing/Billing-related operations/Activate ApsaraVideo Live and purchase resource plans.md).
 -   Configure settings for the Live-to-VOD feature. For more information, see [Store live recordings in ApsaraVideo VOD](/intl.en-US/Console Guide/Domain Names/Recording management/Store live recordings in ApsaraVideo VOD.md).
 
