@@ -8,7 +8,7 @@ H5自定义错误UI
 
 Aliplayer默认的错误UI如下图所示。![ui](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2107869161/p269995.png) **错误UI开启** 
 
-在Aliplayer2.1.0版本以后，如果用户自定义了skinLayout属性， 则需要把displayError UI组件添加到skinLayout属性中，代码如下所示。更多skinLayout属性信息，请参见[skinLayout属性的配置]()。
+在Aliplayer2.1.0版本以后，如果用户自定义了skinLayout属性， 则需要把displayError UI组件添加到skinLayout属性中，代码如下所示。更多skinLayout属性信息，请参见[skinLayout属性的配置](/intl.zh-CN/播放器SDK/Web播放器/更多功能介绍/配置skinLayout属性.md)。
 
     skinLayout:[
         ......
