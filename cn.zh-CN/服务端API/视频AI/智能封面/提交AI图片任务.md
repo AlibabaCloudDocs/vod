@@ -10,7 +10,7 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|SubmitAIImageJob|系统规定参数。取值：**SubmitAIImageJob**。 |
+|Action|String|是|SubmitAIImageJob|操作接口名，系统规定参数。取值：**SubmitAIImageJob**。 |
 |AITemplateId|String|是|ef1a8842cb9f\*\*\*\*\*cea80cad902e416|AI图片模板ID。 |
 |VideoId|String|是|357a8748c5774\*\*\*\*\*89d2726e6436aa|视频ID。 |
 |UserData|String|否|\{"Extend":\{"localId":"\*\*\*\*","test":"www"\}\}|自定义设置。
@@ -44,7 +44,7 @@ https://vod.aliyuncs.com/?Action=SubmitAIImageJob
 
 正常返回示例
 
-`XML` 格式
+`XML`格式
 
 ```
 <SubmitAIImageJobResponse>
@@ -53,7 +53,7 @@ https://vod.aliyuncs.com/?Action=SubmitAIImageJob
 </SubmitAIImageJobResponse>
 ```
 
-`JSON` 格式
+`JSON`格式
 
 ```
 {
@@ -65,4 +65,16 @@ https://vod.aliyuncs.com/?Action=SubmitAIImageJob
 ## 错误码
 
 访问[错误中心](https://error-center.aliyun.com/status/product/vod)查看更多错误码。
+
+## SDK示例
+
+建议使用[服务端SDK](~~101789~~)来调用API，此API各语言调用的示例代码，请参见：
+
+-   [Java](~~100692~~)
+-   [Python](~~101181~~)
+-   [PHP](~~101159~~)
+-   [.NET](~~100844~~)
+-   [Node.js](~~101564~~)
+-   [Go](~~101575~~)
+-   [C/C++](~~102987~~)
 
