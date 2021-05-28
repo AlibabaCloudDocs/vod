@@ -11,7 +11,7 @@ Alibaba Cloud provides two types of error pages for the status codes: default pa
 
 -   You can join the NotFound project by using the default pages for the 404 status code that are provided by Alibaba Cloud. Default pages for the 404 status code are considered as Alibaba Cloud public resources and are free of charge.
 -   Custom pages are considered as personal resources and you are charged based on the specified billing rules.
--   For more information about the reason why 404 pages are returned, see [Why does the 404 Not Found page appear?](https://www.alibabacloud.com/help/doc-detail/27132.html)
+-   For more information about the reason why 404 pages are returned, see [Why does the 404 Not Found page appear?]()
 
 1.  Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/).
 
