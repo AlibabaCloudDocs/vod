@@ -112,7 +112,7 @@ The following table describes the callback events that are supported by AliyunIV
 
 |Action|Sample code|
 |------|-----------|
-|Upload an image.|After you call this method to upload an image, the uploadState attribute of the AliyunVodPublishManager object is set to AliyunVodUploadImage. For more information about the upload URL and credential that are provided by ApsaraVideo VOD, see [Use the upload URL and credential](https://help.aliyun.com/document_detail/99889.html).
+|Upload an image.|After you call this method to upload an image, the uploadState attribute of the AliyunVodPublishManager object is set to AliyunVodUploadImage. For more information about the upload URL and credential that are provided by ApsaraVideo VOD, see [Use upload URLs and credentials to upload media files](/intl.en-US/Upload SDK/Upload from clients/Use upload URLs and credentials to upload media files.md).
 
 ```
 /**
@@ -126,7 +126,7 @@ The following table describes the callback events that are supported by AliyunIV
               uploadAddress:(NSString *)vodUploadAddress
                  uploadAuth:(NSString *)vodUploadAuth;
 ``` |
-|Upload a video.|After you call this method to upload a video, the uploadState attribute of the AliyunVodPublishManager object is set to AliyunVodUploadVideo. For more information about the upload URL and credential that are provided by ApsaraVideo VOD, see [Use the upload URL and credential](https://help.aliyun.com/document_detail/99889.html).
+|Upload a video.|After you call this method to upload a video, the uploadState attribute of the AliyunVodPublishManager object is set to AliyunVodUploadVideo. For more information about the upload URL and credential that are provided by ApsaraVideo VOD, see [Use upload URLs and credentials to upload media files](/intl.en-US/Upload SDK/Upload from clients/Use upload URLs and credentials to upload media files.md).
 
 ```
 - (int)uploadVideoWithPath:(NSString *)videoPath
