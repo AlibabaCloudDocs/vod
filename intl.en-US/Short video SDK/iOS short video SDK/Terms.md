@@ -1,7 +1,5 @@
 # Terms
 
-## Overview
-
 The short video SDK for iOS is a player component that is provided by Alibaba Cloud. It provides powerful video playback features and also supports features such as video recording, duet recording, and merging of video clips.
 
 ## Version information
@@ -33,7 +31,7 @@ The short video SDK provides the AliyunVideoSDKInfo class that is used to obtain
 
 ## License
 
-You need a license to use the short video SDK. For more information about how to apply for a license, see [Introduction](https://www.alibabacloud.com/help/doc-detail/53407.htm).
+You need a license to use the short video SDK. For more information about how to apply for a license, see [Introduction](/intl.en-US/Short video SDK/Introduction.md).
 
 **Note:** After you apply for a license, make sure that the bundle ID that you submit is the same as that configured in Xcode.
 
