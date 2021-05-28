@@ -482,7 +482,7 @@ AliyunClip indicates a video clip or an image clip. You can call the initializat
 
         You can use AliyunPasterManager to add stickers. The following figure shows the schematic diagram of the model-view-controller \(MVC\) design.
 
-        ![Schematic diagram of the MVC design](../images/p181774.png)
+        ![Schematic diagram of the MVC design](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9322812261/p181774.png)
 
         You can learn from the preceding schematic diagram that AliyunPasterManager is used to create an AliyunPasterController object. The controller calls the AliyunPasterBaseView method to obtain the upper-layer UI status. User modifications on the UI are sent to the controller by using AliyunPasterBaseView. Then, the controller synchronizes the UI status to the renderer to complete sticker rendering. This way, you can customize the UI as needed, provided that AliyunPasterViewUIEventProtocol is implemented.
 
