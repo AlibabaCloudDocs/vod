@@ -86,6 +86,6 @@ AliyunIVodCompose.release();
 
 **Note:**
 
--   The AliyunIVodCompose class uploads a video or an image by using an upload URL and an upload credential. For more information, see [CreateUploadVideo](https://help.aliyun.com/document_detail/55407.html).
--   Each upload credential has a validity period. If an upload credential expires, you must obtain a new credential by calling the onUploadTokenExpired method. For more information, see [RefreshUploadVideo](https://help.aliyun.com/document_detail/55408.html).
+-   The AliyunIVodCompose class uploads a video or an image by using an upload URL and an upload credential. For more information, see [CreateUploadVideo](/intl.en-US/API Reference/Media upload/CreateUploadVideo.md).
+-   Each upload credential has a validity period. If an upload credential expires, you must obtain a new credential by calling the onUploadTokenExpired method. For more information, see [RefreshUploadVideo](/intl.en-US/API Reference/Media upload/RefreshUploadVideo.md).
 
