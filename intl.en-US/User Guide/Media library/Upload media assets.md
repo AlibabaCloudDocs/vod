@@ -21,7 +21,7 @@ The following table describes the supported file name extensions of the uploaded
 
 -   Transcoding settings
     -   Before you upload videos, you can select a transcoding template group to transcode the videos as needed. You can specify a transcoding template group for one or more videos at a time.
-    -   You can configure different definitions in the transcoding template group. You can also customize resolutions, bitrates, and watermarks for the videos of different definitions. For more information, see [Manage transcoding settings](/intl.en-US/User Guide/Global settings/Transcoding settings.md).
+    -   You can configure different definitions in the transcoding template group. You can also customize resolutions, bitrates, and watermarks for the videos of different definitions. For more information, see [Manage transcoding settings](/intl.en-US/User Guide/Global settings/Manage transcoding settings.md).
     -   After you upload videos, the default template group that you configure is selected for the videos. If you upload videos for the first time, check and manage the transcoding settings so that the uploaded videos are transcoded based on your settings.
 -   Category settings
 
@@ -48,7 +48,7 @@ The following table describes the supported file name extensions of the uploaded
 
     -   Upload files based on the file URLs
 
-        If the specified URL does not contain a file name extension, we recommend that you enter a file name extension to avoid upload failures. For more information, see [t1235497.md\#](/intl.en-US/API Reference/Media upload/UploadMediaByURL.md).
+        If the specified URL does not contain a file name extension, we recommend that you enter a file name extension to avoid upload failures. For more information, see [UploadMediaByURL](/intl.en-US/API Reference/Media upload/UploadMediaByURL.md).
 
         ![Upload files based on the file URLs](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1316319061/p184187.png)
 
@@ -92,7 +92,7 @@ The following table describes the supported file name extensions of the uploaded
 
 ## Upload files on the PC client
 
-We recommend that you use the PC client to upload large files or upload multiple files at a time. The uploaded files are displayed in the console. The ApsaraVideo VOD console supports media upload, media asset management, and short video and animated sticker editing. More features will be available soon. Log on to the ApsaraVideo VOD console as a RAM user on the client. This helps you isolate permissions and reduce the risk of configuration errors in the console. For more information about RAM users and AccessKey management, see [t1959300.md\#](/intl.en-US/Developer Guide/Access authorization/RAM user access.md).
+We recommend that you use the PC client to upload large files or upload multiple files at a time. The uploaded files are displayed in the console. The ApsaraVideo VOD console supports media upload, media asset management, and short video and animated sticker editing. More features will be available soon. Log on to the ApsaraVideo VOD console as a RAM user on the client. This helps you isolate permissions and reduce the risk of configuration errors in the console. For more information about RAM users and AccessKey management, see [Create and grant permissions to a RAM user](/intl.en-US/Developer Guide/Access authorization/Create and grant permissions to a RAM user.md).
 
 Download the PC client of an appropriate application version.
 
