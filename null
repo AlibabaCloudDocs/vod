@@ -1,74 +1,41 @@
-# Resource plans
+# Billing methods
 
-ApsaraVideo VOD provides diverse resource plans, such as data transfer plans, storage plans, transcoding plans, and review plans. This topic describes the pricing and usage notes of these resource plans.
+This topic describes the billable items and billing methods of ApsaraVideo VOD.
 
-## Description of resource plans
+## Billable items
 
-In subscription mode, you purchase resource plans in advance. The resource plans are used to offset the amount of used resources. ApsaraVideo VOD provides data transfer plans and transcoding plans. In this example, resource plans are purchased in mainland China. For more information about supported regions and specifications, visit the [buy page](https://common-buy-intl.alibabacloud.com/?spm=a3c0i.16119627.2449534240.4.68a3375ds2b0Ta&commodityCode=vod_flow_bag_intl#/buy).
+Billable items of ApsaraVideo VOD include media asset management, media processing, Alibaba Cloud CDN acceleration, and value-added services.
 
-## Data transfer plan of ApsaraVideo VOD
+## Billing methods
 
-A data transfer plan of ApsaraVideo VOD contains transfer acceleration traffic and is used to play videos on demand at an accelerated speed. You can purchase multiple data transfer plans. In this case, resource consumption is preferentially deducted from the data transfer plan that you first purchase. The system collects statistics on the downstream traffic that you use every day. The used resources within the quota of a data transfer plan are deducted from the data transfer plan. Excess usage is charged in pay-as-you-go mode. For more information, see [Pay-as-you-go]().
+Pay-as-you-go
 
-|Type of resource plan|Price \(USD\)|
-|---------------------|-------------|
-|Acceleration traffic of 100 GB|4|
-|Acceleration traffic of 500 GB|19|
-|Acceleration traffic of 1 TB|37|
-|Acceleration traffic of 5 TB|180|
-|Acceleration traffic of 10 TB|350|
-|Acceleration traffic of 50 TB|1740|
+By default, the billing method of ApsaraVideo VOD is pay-as-you-go. After you activate ApsaraVideo VOD, the default billing method is pay-as-you-go. For common paid services, ApsaraVideo VOD also allows you to select the subscription billing method. In pay-as-you-go mode, service fees are calculated by multiplying the service unit price and the service usage in a billing cycle. The consumption amount is then deducted from the balance of your Alibaba Cloud account.
 
-## Storage plan of ApsaraVideo VOD
+**Note:** All paid services that are provided by ApsaraVideo VOD support the pay-as-you-go billing method.
 
-You can purchase multiple storage plans of ApsaraVideo VOD. The resource quotas of the storage plans can add up within their validity periods. The system collects statistics on the storage space that you use every day. The used resources within the quota of a storage plan are deducted from the storage plan. Excess usage is charged in pay-as-you-go mode. For more information, see [Pay-as-you-go]().
+Subscription
 
-|Type of resource plan|Price \(USD\)|
-|---------------------|-------------|
-|Storage plan of 100 GB|18.72|
-|Storage plan of 500 GB|93.6|
-|Storage plan of 1 TB|191.64|
-|Storage plan of 5 TB|958.44|
-|Storage plan of 20 TB|3833.88|
-|Storage plan of 100 TB|19169.28|
+In subscription mode, you purchase resource plans in advance. The resource plans are used to offset the amount of used resources. ApsaraVideo VOD provides data transfer plans, storage plans, and transcoding plans. For more information about supported regions and specifications, visit the [buy page](https://common-buy-intl.alibabacloud.com/?spm=a3c0i.16119627.2449534240.4.68a3375ds2b0Ta&commodityCode=vod_flow_bag_intl#/buy).
 
-## Transcoding plan of ApsaraVideo VOD
+Usage notes of resource plans
 
-Specifications of common transcoding plans
+-   A resource plan does not cover all billable items. If you use a feature that is not contained in the resource plan, the feature is charged in pay-as-you-go mode. You must take note of your resource usage. You can view the bill in the Billing Management console.
+-   A resource plan takes effect immediately after you purchase it. Use the resource plan within the validity period. The resource plan becomes invalid when it expires.
+-   Paid services are automatically charged in pay-as-you-go mode when a resource plan expires or the usage quota is exceeded. To prevent service unavailability caused by overdue payments, take note of the consumption of the resource plan. This way, you can purchase a new resource plan at the earliest opportunity or ensure sufficient account balance.
+-   You can purchase multiple resource plans. The resource quotas of the resource plans can add up within their validity periods. Resource consumption is preferentially deducted from the resource plan with the earliest expiration date among the resource plans.
+-   The validity period of each resource plan is separately calculated. The validity periods of multiple resource plans cannot be accumulated.
+-   Resource plans cannot be upgraded or downgraded.
+-   Resource plans of ApsaraVideo VOD can be used to offset only the resource consumption of ApsaraVideo VOD paid services.
+-   For users who activated ApsaraVideo VOD before 00:00:00 on October 11, 2018, if they purchase transcoding plans, the resources that are consumed to transcode videos to a resolution of 960 × 540 pixels or lower are deducted from the transcoding plans.
 
-A common transcoding plan of ApsaraVideo VOD is used to perform common transcoding. You can purchase multiple common transcoding plans. In this case, resource consumption is preferentially deducted from the common transcoding plan that you first purchase. The system collects statistics on the common transcoding duration that you use every day. The used resources within the quota of a common transcoding plan and the specified resolution range are deducted from the common transcoding plan. Excess usage is charged in pay-as-you-go mode. For more information, see [Pay-as-you-go]().
+After-sales instructions of resource plans
 
-|Type of resource plan|Price \(USD\)|
-|---------------------|-------------|
-|Common transcoding plan of 5,000 minutes|13|
-|Common transcoding plan of 20,000 minutes|47|
-|Common transcoding plan of 100,000 minutes|204|
-|Common transcoding plan of 500,000 minutes|850|
+-   When a resource plan is in use, you cannot unsubscribe from the resource plan.
+-   After a resource plan is used or expires, the remaining resources in the resource plan cannot be unsubscribed or refunded.
 
-Deduction ratios of common transcoding plans
+**Note:**
 
-A common transcoding plan of ApsaraVideo VOD can be used to offset the duration for transcoding videos to H.264 low definition \(LD\), standard definition \(SD\), and high definition \(HD\) videos. The following table describes the deduction ratios.
-
-|Encoding mode|Resolution|Deduction ratio|
-|-------------|----------|---------------|
-|H.264|LD: 640 × 480 pixels and lower|1:1|
-|H.264|SD: 1280 × 720 pixels and lower|1:1.5|
-|H.264|HD: 1920 × 1080 pixels and lower|1:3|
-
-**Note:** Assume that you purchase a common transcoding plan of 5,000 minutes. The deduction duration for transcoding videos to H.264 LD videos is 5,000 minutes. The deduction duration for transcoding videos to H.264 SD videos is 3,333.33 minutes based on the following formula: 5,000/1.5 = 3,333.33. The deduction duration for transcoding videos to H.264 HD videos is 1,666.66 minutes based on the following formula: 5,000/3 = 1,666.66.
-
-Deduction ratios of Narrowband HD™ 1.0 transcoding plans
-
-|Encoding mode|Resolution|Deduction ratio|
-|-------------|----------|---------------|
-|H.264|4K: 3840 × 2160 pixels and lower|1:13|
-|H.264|2K: 2560 × 1440 pixels and lower|1:6.5|
-|H.264|HD: 1920 × 1080 pixels and lower|1:3|
-|H.264|SD: 1280 × 720 pixels and lower|1:1.5|
-|H.264|LD: 640 × 480 pixels and lower|1:1|
-|H.265|4K: 3840 × 2160 pixels and lower|1:65|
-|H.265|2K: 2560 × 1440 pixels and lower|1:32.5|
-|H.265|HD: 1920 × 1080 pixels and lower|1:15|
-|H.265|SD: 1280 × 720 pixels and lower|1:7.5|
-|H.265|LD: 640 × 480 pixels and lower|1:5|
+-   If you do not consume the resources in a data transfer plan of ApsaraVideo VOD, you can unsubscribe from the data transfer plan within five days after subscription.
+-   If you do not consume the resources in a data transfer plan that is not provided by ApsaraVideo VOD, you can unsubscribe from the data transfer plan within seven days after subscription.
 
