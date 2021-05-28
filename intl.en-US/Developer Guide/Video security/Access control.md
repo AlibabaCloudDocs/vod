@@ -28,7 +28,7 @@ The access control service allows you to configure access policies in the cloud 
 
 **Note**
 
-**User-Agent** and **Limits on the number of access times** are complicated and prone to misoperations. You cannot configure these access control policies in the ApsaraVideo VOD console. If you want to configure these policies,submit[a ticket](https://workorder.console.aliyun.com/console.htm#/ticket/add?productCode=vod&commonQuestionId=561&isSmart=true&iatraceid=1606446020666-2b842b67ddd84da10488b6&channel=selfservice) or contact the Alibaba Cloud technical support.
+**User-Agent** and **Limits on the number of access times** are complicated and prone to misoperations. You cannot configure these access control policies in the ApsaraVideo VOD console. If you want to configure these policies,submit [a ticket](https://workorder.console.aliyun.com/console.htm#/ticket/add?productCode=vod&commonQuestionId=561&isSmart=true&iatraceid=1606446020666-2b842b67ddd84da10488b6&channel=selfservice) or contact the Alibaba Cloud technical support.
 
 Referer blacklist or whitelist 
 ---------------------------------------------------
