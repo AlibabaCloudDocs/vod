@@ -42,7 +42,7 @@ After you complete the configurations, you can use code to consume messages.
 -   For information about how to consume messages by using Python code, see [Manage queues]().
 -   For information about how to consume messages by using C\# code, see [Manage queues]().
 -   For information about how to consume messages by using PHP code, see [Manage queues]().
--   For other languages, you can call the [ReceiveMessage](https://help.aliyun.com/document_detail/35136.html?spm=a2c4g.11186623.6.710.717d6ddc2ip8ZB) operation to receive messages and the [DeleteMessage](https://help.aliyun.com/document_detail/35138.html?spm=a2c4g.11186623.6.713.361c70142DiQIf) operation to delete messages. For more information, see [Call MNS APIs](https://help.aliyun.com/document_detail/27484.html?spm=a2c4g.11186623.6.696.57ab7014mofqn8).
+-   For other languages, you can call the [ReceiveMessage]() operation to receive messages and the [DeleteMessage]() operation to delete messages. For more information, see [Call MNS APIs]().
 
 MNS queues support a large number of concurrent access requests from multiple producers and consumers. After a message is pulled from a queue, the message cannot be pulled again within a specified period of time. A message is invisible for a period of time after it is consumed. You must manually delete the message. Otherwise, the message can be consumed again.
 
