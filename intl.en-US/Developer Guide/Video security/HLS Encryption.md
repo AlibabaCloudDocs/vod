@@ -70,7 +70,7 @@ Use HLS Encryption based on the following procedure:
 
 4.  Receive the upload callback message
 
-    The [FileUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/FileUploadComplete.md)message indicates that the video file has been uploaded to ApsaraVideo VOD.
+    The [FileUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/FileUploadComplete.md) message indicates that the video file has been uploaded to ApsaraVideo VOD.
 
 5.  Start HLS Encryption and transcoding
 
@@ -126,7 +126,7 @@ For more information about the best practices of video decryption and playback, 
 
     -   We recommend that you cache the generated ciphertext key and plaintext key.
     -   After the service key is created, the service key cannot be deleted or updated. The service key is used to generate encryption keys.
-    -   For more information about key-related fees, see the "[Key hosting fees-API operation call fees](https://help.aliyun.com/document_detail/52608.html?spm=a2c4g.11186623.6.547.1jyvOK)" section of the Billing topic.
+    -   For more information about key-related fees, see the "[Key hosting fees-API operation call fees](/intl.en-US/Pricing/Billing.md)" section of the Billing topic.
 -   How do I pass the generated token to the decryption operation?
 
     To rewrite a decryption request by adding the token, you need to use an Alibaba Cloud CDN domain name. When you request an M3U8 file URL, you must pass the generated token in the MtsHlsUriToken parameter. Then, CDN automatically rewrites the decryption request by adding this parameter and sends the request.
