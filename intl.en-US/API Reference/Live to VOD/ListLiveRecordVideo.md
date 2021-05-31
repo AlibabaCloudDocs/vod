@@ -155,7 +155,7 @@ Sample success responses
 
 For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/vod).
 
-The following table describes the errors that are specific to this operation. For more information about errors common to all operations, see [Common errors](~52841~).
+The following table describes the errors that are specific to this operation. For more information about errors common to all operations, see [Common errors](~~52841~~).
 
 |Error code
 
