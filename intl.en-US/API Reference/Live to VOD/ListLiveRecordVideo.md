@@ -20,7 +20,7 @@ Queries live-to-VOD videos.
 |PageSize|Integer|No|10|The number of entries to return on each page. Maximum value: **100**. Default value: **10**. |
 |SortBy|String|No|CreationTime:Desc|The sorting rule of results. Valid values:
 
- -   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.
+-   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.
 -   **CreationTime:Asc**: sorts the results based on the creation time in ascending order. |
 |StartTime|String|No|2017-01-11T12:00:00Z|The beginning of the time range to query. The query is performed based on the time range during which the required live streams were recorded. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
 |EndTime|String|No|2017-01-11T13:00:00Z|The end of the time range to query. The query is performed based on the time range during which the required live streams were recorded. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. |
@@ -49,7 +49,7 @@ Queries live-to-VOD videos.
 |Snapshots|List|\{"Snapshot":\["http://image.example.com/snapshot/sample000001.jpg? auth\_key=1498476426-0-0-f00b9455c49a423ce69cf4e273334f52","http://image.example.com/snapshot/sample00002.jpg?auth\_key=1498476426-0-0-f00b9455c49a423ce69cf4e272434f52"\]\}|The array of video snapshot URLs. |
 |Status|String|Normal|The status of the video. Valid values:
 
- -   **Uploading:**: indicates that the video is being uploaded.
+-   **Uploading:**: indicates that the video is being uploaded.
 -   **UploadFail**: indicates that the video failed to be uploaded.
 -   **UploadSucces**: indicates that the video was uploaded.
 -   **Transcoding**: indicates that the video is being transcoded.
@@ -117,37 +117,37 @@ Sample success responses
 
 ```
 {
-	"RequestId": "25818875-5F78-4A13-****-D7393642CA58",
-	"Total": "123",
-	"LiveRecordVideoList": {
-		"LiveRecordVideo": [{
-			"PlaylistId": "****",
-			"StreamName": "live-test",
-			"RecordStartTime": "2017-12-08T07:40:56Z",
-			"RecordEndTime": "2017-12-08T08:40:56Z",
-			"DomainName": "example.com",
-			"AppName": "testApp"
-		}, {
-			"Video": {
-				"Status": "Normal",
-				"ModifyTime": "2017-12-08T09:40:56Z",
-				"Description": "Description of the ApsaraVideo VOD video",
-				"VideoId": "93ab850b4f6f*****54b6e91d24d81d4",
-				"Size": "10897890",
-				"Title": "Title of the ApsaraVideo VOD video",
-				"Duration": "135.6",
-				"CateName": "Category name",
-				"CateId": "78",
-				"CreationTime": "2017-12-08T07:40:56Z",
-				"CoverURL": "https://image.example.com/coversample.jpg",
-				"Snapshots": {
-					"Snapshot": "{\"Snapshot\":[\"http://image.example.com/snapshot/sample000001.jpg? auth_key=1498476426-0-0-f00b9455c49a423ce69cf4e273334f52\",\"http://image.example.com/snapshot/sample00002.jpg?auth_key=1498476426-0-0-f00b9455c49a423ce69cf4e272434f52\"]}"
-				},
-				"Tags": "Tag 1, Tag 2",
-				"TemplateGroupId": "1"
-			}
-		}]
-	}
+    "RequestId": "25818875-5F78-4A13-****-D7393642CA58",
+    "Total": "123",
+    "LiveRecordVideoList": {
+        "LiveRecordVideo": [{
+            "PlaylistId": "****",
+            "StreamName": "live-test",
+            "RecordStartTime": "2017-12-08T07:40:56Z",
+            "RecordEndTime": "2017-12-08T08:40:56Z",
+            "DomainName": "example.com",
+            "AppName": "testApp"
+        }, {
+            "Video": {
+                "Status": "Normal",
+                "ModifyTime": "2017-12-08T09:40:56Z",
+                "Description": "Description of the ApsaraVideo VOD video",
+                "VideoId": "93ab850b4f6f*****54b6e91d24d81d4",
+                "Size": "10897890",
+                "Title": "Title of the ApsaraVideo VOD video",
+                "Duration": "135.6",
+                "CateName": "Category name",
+                "CateId": "78",
+                "CreationTime": "2017-12-08T07:40:56Z",
+                "CoverURL": "https://image.example.com/coversample.jpg",
+                "Snapshots": {
+                    "Snapshot": "{\"Snapshot\":[\"http://image.example.com/snapshot/sample000001.jpg? auth_key=1498476426-0-0-f00b9455c49a423ce69cf4e273334f52\",\"http://image.example.com/snapshot/sample00002.jpg?auth_key=1498476426-0-0-f00b9455c49a423ce69cf4e272434f52\"]}"
+                },
+                "Tags": "Tag 1, Tag 2",
+                "TemplateGroupId": "1"
+            }
+        }]
+    }
 }
 ```
 
@@ -155,7 +155,7 @@ Sample success responses
 
 For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/vod).
 
-The following table describes the errors that are specific to this operation. For more information about errors common to all operations, see [Common errors](https://help.aliyun.com/document_detail/52841.html?spm=a2c4g.11186623.2.17.72657c55cS5tmj).
+The following table describes the errors that are specific to this operation. For more information about errors common to all operations, see [Common errors](~52841~).
 
 |Error code
 
@@ -171,9 +171,7 @@ The following table describes the errors that are specific to this operation. Fo
 
 |400
 
-|The error message returned because the Ips parameter is not specified.
-
-| |
+|The error message returned because the Ips parameter is not specified. |
 |IpsExceededMax
 
 |The specified Ips count has exceeded 100.
@@ -187,7 +185,5 @@ The following table describes the errors that are specific to this operation. Fo
 
 |403
 
-|The error message returned because the number of review security groups exceeds the upper limit.
-
-| |
+|The error message returned because the number of review security groups exceeds the upper limit. |
 
