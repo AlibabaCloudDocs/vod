@@ -15,7 +15,7 @@ If the following error message is returned, you need to enable CORS for the doma
 
 Add HTTP headers to enable CORS. For more information, see [Configure an HTTP header](/intl.en-US/User Guide/Domain management/Cache configuration/Configure an HTTP header.md). 
 
-* Access-Control-Allow-Origin: specifies the domain name from which cross-origin requests are allowed. Set the value of the HTTP header to the domain name of the website on which videos are played. For example, if videos are played on the https://www.aliyun.com/ website, set the value to https://www.aliyun.com/. The following figure shows how to configure the Access-Control-Allow-Origin header.![Configure the Access-Control-Allow-Origin header](../images/p271224.png)
+* Access-Control-Allow-Origin: specifies the domain name from which cross-origin requests are allowed. Set the value of the HTTP header to the domain name of the website on which videos are played. For example, if videos are played on the https://www.aliyun.com/ website, set the value to https://www.aliyun.com/. The following figure shows how to configure the Access-Control-Allow-Origin header.![Configure the Access-Control-Allow-Origin header](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7132442261/p271224.png)
 
   
 
@@ -24,7 +24,7 @@ Add HTTP headers to enable CORS. For more information, see [Configure an HTTP he
 
 <!-- -->
 
-* Access-Control-Allow-Methods: specifies the allowed methods of the cross-origin requests. Valid values: POST and GET. If both POST and GET need to be allowed, separate them with a comma (,). The following figure shows how to configure the Access-Control-Allow-Methods header.![Configure the Access-Control-Allow-Methods header](../images/p271225.png)
+* Access-Control-Allow-Methods: specifies the allowed methods of the cross-origin requests. Valid values: POST and GET. If both POST and GET need to be allowed, separate them with a comma (,). The following figure shows how to configure the Access-Control-Allow-Methods header.![Configure the Access-Control-Allow-Methods header](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7132442261/p271225.png)
 
   
 
@@ -39,7 +39,7 @@ Configure CORS for the Flash player
 
 If the error message in the following figure is returned, you need to first check whether an Internet content provider (ICP) filing is obtained and whether a CNAME is mapped to the domain name for playback. For more information, see [Domain verification](/intl.en-US/User Guide/Domain management/Domain verification.md) and [Configure a CNAME record in Alibaba Cloud DNS](/intl.en-US/User Guide/Domain management/CNAME configuration/Configure a CNAME record in Alibaba Cloud DNS.md). 
 
-![Error message of the Flash player](../images/p271226.png)
+![Error message of the Flash player](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7132442261/p271226.png)
 
 If the domain name has an ICP filing and is mapped to a CNAME, you need to configure CORS. You can configure CORS by adding a cross-origin policy file named crossdomain.xml for the player. 
 
@@ -91,4 +91,4 @@ Set the following parameters to create a CORS rule:
 
 Specify this rule as the first of all CORS rules.
 
-The following figure shows how to set the parameters to create a CORS rule.![Create a CORS rule](../images/p271235.png)
+The following figure shows how to set the parameters to create a CORS rule.![Create a CORS rule](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7132442261/p271235.png)
