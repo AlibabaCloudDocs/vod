@@ -53,7 +53,7 @@ For a list of error codes, visit the [API Error Center](https://error-center.ali
 
 ## SDK examples
 
-We recommend that you use a [server SDK](~~101789~~)to call this operation. For more information about the sample code that is used to call this operation in various languages, see the following topics:
+We recommend that you use a [server SDK](~~101789~~) to call this operation. For more information about the sample code that is used to call this operation in various languages, see the following topics:
 
 -   [Java](~~61063~~)
 -   [Python](~~61054~~)
