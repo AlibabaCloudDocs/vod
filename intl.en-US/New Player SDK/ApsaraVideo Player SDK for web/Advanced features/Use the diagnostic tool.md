@@ -8,7 +8,7 @@ Open the diagnostic tool
 
 You can open the diagnostic tool that is provided by ApsaraVideo Player by using one of the following methods: 
 
-* Click **Diagnosis** when a video fails to be played.![Error](../images/p269989.png)
+* Click **Diagnosis** when a video fails to be played.![Error](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9601442261/p269989.png)
 
   
 
@@ -24,17 +24,17 @@ Use the diagnostic tool
 
 **View the diagnostic information** 
 
-The diagnostic information includes the operating system, browser, IP address, and operator.![Basic diagnosis](../images/p271371.png) 
+The diagnostic information includes the operating system, browser, IP address, and operator.![Basic diagnosis](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9601442261/p271371.png)
 
 **Configure the domain name for playback before video diagnosis** 
 
 You need to configure the following items to obtain a more accurate diagnosis result: 
 
-* If Referer-based hotlink protection is enabled for the domain name for playback, add `player.alicdn.com` to the whitelist. For more information, see [IP address](/intl.en-US/User Guide/Domain management/Access control/IP address blacklist or whitelist.md)[blacklist](/intl.en-US/User Guide/Domain management/Access control/IP address blacklist or whitelist.md)[or whitelist](/intl.en-US/User Guide/Domain management/Access control/IP address blacklist or whitelist.md).![Add the domain name for playback to the whitelist](../images/p271381.png)
+* If Referer-based hotlink protection is enabled for the domain name for playback, add `player.alicdn.com` to the whitelist. For more information, see [IP address](/intl.en-US/User Guide/Domain management/Access control/IP address blacklist or whitelist.md)[blacklist](/intl.en-US/User Guide/Domain management/Access control/IP address blacklist or whitelist.md)[or whitelist](/intl.en-US/User Guide/Domain management/Access control/IP address blacklist or whitelist.md).![Add the domain name for playback to the whitelist](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9601442261/p271381.png)
 
   
 
-* Add the Access-Control-Allow-Origin HTTP header for the domain name for playback. This header specifies the domain name from which cross-origin requests are allowed. For more information, see [Configure CORS]().
+* Add the Access-Control-Allow-Origin HTTP header for the domain name for playback. This header specifies the domain name from which cross-origin requests are allowed. For more information, see [Configure CORS](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure CORS.md).
 
   
 
@@ -67,7 +67,7 @@ The Source parameter has the highest priority.
 
 You can view the playback log after the diagnostics start. 
 
-![Diagnose a video](../images/p271399.png)
+![Diagnose a video](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9601442261/p271399.png)
 
 
 
