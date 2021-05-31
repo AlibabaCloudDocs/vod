@@ -56,7 +56,7 @@ After you click Set as Default for the TranscodeTemplateGroup template group, th
 
 You can customize the template group by adding a normal transcoding template.
 
-![Transcoding template](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7056348061/p182466.png)
+![Transcoding template](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6468301161/p182466.png)
 
 The following table describes the transcoding template parameters.
 
@@ -65,7 +65,7 @@ The following table describes the transcoding template parameters.
 |①|Basic parameters|Encapsulation Format|-   Valid values for videos: hls, mp4, and flv.
 -   Valid value for audio: mp3.
 
-For more information about each container format, see [t1959239.md\#](/intl.en-US/Introduction/Glossary.md). |
+For more information about each container format, see [Terms](/intl.en-US/Introduction/Terms.md). |
 |Definition|-   Valid values for videos: Low Definition, Standard Definition, High Definition, Ultra High Definition, 2K, 4K, and Original.
 -   Valid values for audio: Standard Quality and High Quality. |
 |②|Video parameters|Disable Video|If you select Disable Video, the transcoded stream does not contain video information. Generally, you can select Disable Video to extract audio, for example, in the radio station scenario.|
@@ -81,7 +81,7 @@ For more information about each container format, see [t1959239.md\#](/intl.en-U
 |Bitrate|Valid values: 8 to 1000, in Kbit/s. We recommend that you use the recommended value.|
 |Audio Channels|We recommend that you use the recommended value.|
 |④|Advanced parameter \(available when the container format is set to HLS\)|Fragment Length|The duration of each TS fragment. We recommend that you use the recommended value.|
-|Video Encryption|Videos of the HLS format support encryption. After you enable video encryption, you must integrate an official player SDK that supports video decryption to play videos. This service offers free trial.**Note:** The video encryption feature that is configured here encrypts videos in Alibaba Cloud proprietary cryptography mode. For more information about how to encrypt videos in HLS Encryption mode, see [t1235535.md\#](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitTranscodeJobs.md). |
+|Video Encryption|Videos of the HLS format support encryption. After you enable video encryption, you must integrate an official player SDK that supports video decryption to play videos. This service offers free trial.**Note:** The video encryption feature that is configured here encrypts videos in Alibaba Cloud proprietary cryptography mode. For more information about how to encrypt videos in HLS Encryption mode, see [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitTranscodeJobs.md). |
 |⑤|Conditional transcoding parameters|Video Resolution Check|Checks whether the input resolution is lower than the resolution that is specified in the transcoding template.|
 |Video Bit Rate Check|Checks whether the bitrate of the video mezzanine file is lower than the bitrate that is specified in the transcoding template.|
 |Audio Bit Rate Check|Checks whether the bitrate of the audio mezzanine file is lower than the bitrate that is specified in the transcoding template.|
