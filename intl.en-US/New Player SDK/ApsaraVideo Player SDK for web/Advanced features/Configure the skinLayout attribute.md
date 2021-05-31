@@ -23,7 +23,7 @@ ApsaraVideo Player allows you to use the skinLayout attribute to specify whether
 
 
 
-You can modify the skinLayout attribute by configuring the aliplayer-min.css file of the player. For more information, see [Configure the player skin]().
+You can modify the skinLayout attribute by configuring the aliplayer-min.css file of the player. For more information, see [Configure the player skin](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure the player skin.md).
 
 Rules for configuring the skinLayout attribute 
 -------------------------------------------------------------------
@@ -151,7 +151,7 @@ Default settings of the skinLayout attribute in ApsaraVideo VOD
 
 
 
-**Effect** ![Default settings of the skinLayout attribute in ApsaraVideo VOD](../images/p270003.png)
+**Effect** ![Default settings of the skinLayout attribute in ApsaraVideo VOD](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6121442261/p270003.png)
 
 Default settings of the skinLayout attribute in ApsaraVideo Live 
 -------------------------------------------------------------------------------------
@@ -194,4 +194,4 @@ Default settings of the skinLayout attribute in ApsaraVideo Live
 
 
 
-**Effect** ![Default settings of the skinLayout attribute in ApsaraVideo Live](../images/p270004.png)
+**Effect** ![Default settings of the skinLayout attribute in ApsaraVideo Live](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6121442261/p270004.png)
