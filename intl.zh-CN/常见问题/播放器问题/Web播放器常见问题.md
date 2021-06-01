@@ -131,10 +131,10 @@ skinLayout: [
 
 ## 如何切换vid和playauth
 
-H5播放器，直接调用reloaduserPlayInfoAndVidRequestMts方法：
+H5播放器，直接调用replayByVidAndPlayauth方法：
 
 ```
- player.reloaduserPlayInfoAndVidRequestMts(newVid, newPlayAuth)
+ player.replayByVidAndPlayauth(newVid, newPlayAuth)
 ```
 
 Flash播放器需要销毁，根据新的vid和playauth重新创建一个：
