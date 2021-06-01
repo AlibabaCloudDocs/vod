@@ -131,10 +131,10 @@ skinLayout: [
 
 ## What can I do if the video ID and playAuth change?
 
-You can call the reloaduserPlayInfoAndVidRequestMts method to replace the existing HTML5 player.
+You can call the replayByVidAndPlayauth method to replace the existing HTML5 player.
 
 ```
- player.reloaduserPlayInfoAndVidRequestMts(newVid, newPlayAuth)
+player.replayByVidAndPlayauth(newVid, newPlayAuth)
 ```
 
 You must destroy the existing Flash player and create one based on the new video ID and playAuth.
