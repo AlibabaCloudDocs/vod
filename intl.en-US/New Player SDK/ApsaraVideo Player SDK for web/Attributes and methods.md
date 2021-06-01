@@ -7,25 +7,21 @@ This topic describes the attributes and events of ApsaraVideo Player SDK for web
 |Attribute|Type|Description|
 |---------|----|-----------|
 |id|String|The ID of the dom element for the external container of the player.|
-|source|String|The video playback URL.-   The URL is a separate URL.
--   By default, a video is played based on the `video ID (VID) and playAuth`.
--   Source-based playback has the highest priority.
-
-**Note:** You can use the source attribute to set multiple resolutions. Example: source:'\{"HD":"address1","SD":"address2"\}'. For more information, see [Multi-resolution playback](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Implementation.md). |
+|source|String|The video playback URL. The URL is a separate URL. By default, a video is played based on the `video ID (VID) and playAuth`. **Note:** Source-based playback has the highest priority. You can use the source attribute to set multiple resolutions. Example: source:'\{"HD":"address1","SD":"address2"\}'. For more information, see [Multi-resolution playback](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Implementation.md). |
 |vid|String|The media ID for media transcoding.|
 |playauth|String|The unique credential for video playback. For more information about how to obtain the playAuth, see [GetVideoPlayAuth](/intl.en-US/API Reference/Audio and video playback/GetVideoPlayAuth.md).|
-|height|String|The height of the player. Valid values:-   100%
--   100px
+|height|String|The height of the player. Valid values:-   **100%**
+-   **100px**
 
 **Note:** The size cannot be smaller than 397 × 297 pixels for a Flash player in Google Chrome. |
-|width|String|The width of the player. Valid values:-   100%
--   100px
+|width|String|The width of the player. Valid values:-   **100%**
+-   **100px**
 
 **Note:** The size cannot be smaller than 397 × 297 pixels for a Flash player in Google Chrome. |
 |videoWidth|String|The width of the video. This attribute is supported only by HTML5 players. For more information, see [Rotation and mirroring](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Implementation.md).|
 |videoHeight|String|The height of the video. This attribute is supported only by HTML5 players. For more information, see [Rotation and mirroring](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Implementation.md).|
 |preload|Boolean|Specifies whether to enable automatic loading for the player. This attribute is supported only by HTML5 players.|
-|cover|String|The default thumbnail of the player. Enter a valid image URL. This attribute takes effect only when the autoplay attribute is set to **false**. [Cross-origin resource sharing \(CORS\)](https://help.aliyun.com/document_detail/63066.html?spm=a2c4g.11186623.2.19.3b97bf80UBxSiO) must be enabled for the thumbnail when the video is played by Flash players.|
+|cover|String|The default thumbnail of the player. Enter a valid image URL. This attribute takes effect only when the autoplay attribute is set to **false**. [Cross-origin resource sharing \(CORS\)](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure CORS.md) must be enabled for the thumbnail when the video is played by Flash players.|
 |isLive|Boolean|Specifies whether the playback is live streaming. If the playback is live streaming, you are not allowed to drag the progress bar.|
 |autoplay|Boolean|Specifies whether to enable autoplay. This attribute does not take effect for mobile platforms. Safari 11 does not automatically enable autoplay. For more information, see [Enable Safari 11 \(MacOS High Sierra\) video autoplay](https://h5.m.youku.com//ju/safari11guide.html?spm=a2c4g.11186623.2.20.3b97bf802A2FeQ).|
 |rePlay|Boolean|Specifies whether to enable automatic loop playback.|
@@ -33,16 +29,16 @@ This topic describes the attributes and events of ApsaraVideo Player SDK for web
 |useFlashPrism|Boolean|Specifies whether to use a Flash player for playback.|
 |playsinline|Boolean|Specifies whether to enable HTML5 embedded playback. This attribute does not take effect for specific Android-based web browsers.|
 |showBuffer|Boolean|Specifies whether to show a buffer icon during playback. The default value is **true**.|
-|skinRes|Url|The skin image. Do not modify this attribute unless necessary. For more information about how to modify the attribute, see [How do I configure the skin for the player?](https://help.aliyun.com/document_detail/62947.html?spm=a2c4g.11186623.2.62.60ef6fc5ZDqksa)|
-|skinLayout|Array \| Boolean|The layout of the components. If you do not set this attribute, the default layout is used for components. If this attribute is set to **false**, all the functional components are hidden. For more information, see [How do I configure the skin for the player?](https://help.aliyun.com/document_detail/62947.html?spm=a2c4g.11186623.2.62.60ef6fc5ZDqksa)|
+|skinRes|Url|The skin image. Do not modify this attribute unless necessary. For more information about how to modify the attribute, see [How do I configure the skin for the player?](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure the player skin.md)|
+|skinLayout|Array \| Boolean|The layout of the components. If you do not set this attribute, the default layout is used for components. If this attribute is set to **false**, all the functional components are hidden. For more information, see [Configure the skinLayout attribute](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure the skinLayout attribute.md).|
 |controlBarVisibility|String|The mode to display the control panel. The default value is **hover**. Valid values:-   **click**
 -   **hover**
 -   **always** |
 |showBarTime|String|The length of time during which the control bar is automatically hidden, in milliseconds.|
-|extraInfo|String|A JSON string that is used to customize operation information. The string supports the following parameters:-   fullTitle: indicates that the video title is displayed when the video is played in full-screen mode. Example: test page. This parameter is supported only by Flash players.
--   m3u8BufferLength: the time duration of buffered TS fragments during the playback of M3U8 videos, in seconds. This parameter is supported only by Flash players.
--   liveStartTime: the start time of live streaming. It is used to indicate that the live streaming has not started. This parameter is supported only by Flash players. Example: 2016/08/17 12:00:00.
--   liveOverTime: the end time of live streaming. It is used to indicate that the live streaming ends. This parameter is supported only by Flash players. Example: 2016/08/17 14:00:00. |
+|extraInfo|String|A JSON string that is used to customize operation information. This attribute is supported only by Flash players. Valid values:-   fullTitle: indicates that the video title is displayed when the video is played in full-screen mode. Example: test page.
+-   m3u8BufferLength: the time duration of buffered TS fragments during the playback of M3U8 videos, in seconds.
+-   liveStartTime: the start time of live streaming. It is used to indicate that the live streaming has not started. Example: 2016/08/17 12:00:00.
+-   liveOverTime: the end time of live streaming. It is used to indicate that the live streaming ends. Example: 2016/08/17 14:00:00. |
 |enableSystemMenu|Boolean|Specifies whether to display the shortcut menu upon a right-click. The default value is **false**.|
 |format|Sting|The streaming URL format. This attribute is supported only by VID-based playback. Valid values:-   **mp4**
 -   **m3u8**
@@ -55,7 +51,7 @@ By default, this attribute is empty. This attribute is supported only by HTML5 p
 |qualitySort|Sting|The sorting method. This attribute is supported only by playback based on the VID and playAuth. Valid values:-   **desc**: the descending order from higher to lower resolutions.
 -   **asc**: the ascending order from lower to higher resolutions.
 
- The default value is **asc**. This attribute is supported only by HTML5 players.|
+The default value is **asc**. This attribute is supported only by HTML5 players.|
 |definition|Sting|The video resolution. Different resolutions are separated by commas \(,\), such as FD,LD. The value is a subset of resolutions of the stream corresponding to the VID. Valid values:-   **FD**: low definition
 -   **LD**: standard definition
 -   **SD**: high definition
@@ -74,25 +70,25 @@ This attribute is supported only by HTML5 players.|
 -   **4K**
 
 This attribute is supported only by HTML5 players.|
-|x5\_type|String|Declares to use the immersive mode of the HTML5 player. Set this attribute to **H5** when you enable the immersive mode of the HTML5 player. For more information, see [How do I enable the immersive mode for the HTML5 player?](https://help.aliyun.com/document_detail/62953.html?spm=a2c4g.11186623.2.21.6bdcbf80wjdbcz)|
+|x5\_type|String|Declares to use the immersive mode of the HTML5 player. Set this attribute to **H5** when you enable the immersive mode of the HTML5 player. For more information, see [How do I enable the immersive mode for the HTML5 player?](/intl.en-US/FAQ/How do I enable the immersive mode for the HTML5 player?.md).|
 |x5\_fullscreen|Boolean|Specifies whether to enter the full-screen mode during video playback by Tencent Browsing Service \(TBS\). The default value is **false**. Valid values:-   **false**: disables background playback.
 -   **true**: enables background playback.
 
-For more information, see [How do I enable the immersive mode for the HTML5 player?](https://help.aliyun.com/document_detail/62953.html?spm=a2c4g.11186623.2.21.6bdcbf80wjdbcz)|
+For more information, see [How do I enable the immersive mode for the HTML5 player?](/intl.en-US/FAQ/How do I enable the immersive mode for the HTML5 player?.md).|
 |x5\_video\_position|String|The position of a video player on the screen. The default value is **center**. Valid values:-   **center**
 -   **top**
 
-For more information, see [How do I enable the immersive mode for the HTML5 player?](https://help.aliyun.com/document_detail/62953.html?spm=a2c4g.11186623.2.21.6bdcbf80wjdbcz)|
+For more information, see [How do I enable the immersive mode for the HTML5 player?](/intl.en-US/FAQ/How do I enable the immersive mode for the HTML5 player?.md).|
 |x5\_orientation|String|The orientation of the video that is played by TBS. Valid values:-   **landscape**
 -   **portrait**
 
-For more information, see [How do I enable the immersive mode for the HTML5 player?](https://help.aliyun.com/document_detail/62953.html?spm=a2c4g.11186623.2.21.6bdcbf80wjdbcz)|
-|x5LandscapeAsFullScreen|String|Specifies whether to enable the landscape mode for full-screen playback by TBS. The default value is **true**. Valid values:-   **true**
--   **false** |
-|autoPlayDelay|Number|The playback delay, in seconds. For more information, see [Playback delay](https://help.aliyun.com/document_detail/63198.html?spm=a2c4g.11186623.2.25.6bdcbf80NEZ98Z).|
-|autoPlayDelayDisplayText|String|The text notifying users of the playback delay. For more information, see [Playback delay](https://help.aliyun.com/document_detail/63198.html?spm=a2c4g.11186623.2.25.6bdcbf80NEZ98Z).|
-|language|String|The language that is used by the player. The default value is **zh-cn**. If this attribute is empty, the language of the web browser applies. Valid values:-   **zh-cn**
--   **en-us** |
+For more information, see [How do I enable the immersive mode for the HTML5 player?](/intl.en-US/FAQ/How do I enable the immersive mode for the HTML5 player?.md).|
+|x5LandscapeAsFullScreen|String|Specifies whether to enable the landscape mode for full-screen playback by TBS. The default value is **true**. Valid values:-   **true**: Enable the landscape mode.
+-   **false**: Enable the portrait mode. |
+|autoPlayDelay|Number|The playback delay, in seconds. For more information, see [Configure the playback delay](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure the playback delay.md).|
+|autoPlayDelayDisplayText|String|The text that notifies users of the playback delay. For more information, see [Configure the playback delay](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure the playback delay.md).|
+|language|String|The language that is used by the player. The default value is **zh-cn**. If this attribute is empty, the language of the web browser applies. Valid values:-   **zh-cn**: Chinese
+-   **en-us**: English |
 |languageTexts|JSON|The JSON structure of the custom player language text. The key value must correspond to the value of the language attribute. Example: \{jp:\{Play:"Play"\}\}. For more information about custom values, see [JSON structure](https://player.alicdn.com/lang.json?spm=a2c4g.11186623.2.27.6bdcbf809nmsYQ&file=lang.json).|
 |snapshot|Boolean|Specifies whether to enable the snapshot capture feature in Flash players.|
 |snapshotWatermark|Object|The snapshot watermark in HTML5.|
@@ -104,12 +100,12 @@ For more information, see [How do I enable the immersive mode for the HTML5 play
 |liveStartTime|String|The start time of live streaming, in the format of yyyy/MM/dd HH:mm:ss. Example: 2018/01/04 12:00:00.|
 |liveOverTime|String|The end time of live streaming, in the format of yyyy/MM/dd HH:mm:ss. Example: 2018/01/04 12:00:00.|
 |liveTimeShiftUrl|String|The URL for querying available time shifting during live streaming. For more information, see [Time shifting](/intl.en-US/API Reference/Time shifting/Time shifting.md).|
-|liveShiftSource|String|The HLS URL for FLV playback. For more information, see [Time shifting](https://help.aliyun.com/document_detail/65129.html?spm=a2c4g.11186623.2.30.6bdcbf80SnCaEa).|
-|recreatePlayer|Function|The method that is used to create a player during the switching between FLV live streaming and HLS time shifting. For more information, see [Time shifting](https://help.aliyun.com/document_detail/65129.html?spm=a2c4g.11186623.2.30.6bdcbf80SnCaEa).|
-|diagnosisButtonVisible|Boolean|Specifies whether to display the diagnosis button. The default value is **true**. Valid values:-   **true**
--   **false** |
-|disableSeek|Boolean|Specifies whether to disable the seeking feature of the progress bar. The default value is **false**.-   **true**
--   **false**
+|liveShiftSource|String|The HLS URL for FLV playback. For more information, see [Time shifting](/intl.en-US/API Reference/Time shifting/Time shifting.md).|
+|recreatePlayer|Function|The method that is used to create a player during the switching between FLV live streaming and HLS time shifting. For more information, see [Time shifting](/intl.en-US/API Reference/Time shifting/Time shifting.md).|
+|diagnosisButtonVisible|Boolean|Specifies whether to display the diagnosis button. The default value is **true**. Valid values:-   **true**: yes
+-   **false**: no |
+|disableSeek|Boolean|Specifies whether to disable the seeking feature of the progress bar. The default value is **false**.-   **true**: yes
+-   **false**: no
 
 This attribute is supported only by Flash players.|
 |encryptType|int|The encryption type. When a video that is encrypted by using Alibaba Cloud proprietary cryptography is played, the default value is **0**. Valid values:-   **0**: Enables encryption.
@@ -151,8 +147,8 @@ Operations must be used after the ready event occurs or during callback in the p
     ```
 
 
-|Method|Parameter|Description|
-|------|---------|-----------|
+|Method|Method|Description|
+|------|------|-----------|
 |play|N/A|Plays a video.|
 |pause|N/A|Pauses a video.|
 |replay|N/A|Replays a video.|
@@ -168,25 +164,25 @@ Operations must be used after the ready event occurs or during callback in the p
 -   **60%**
 
 The size cannot be smaller than 397 × 297 pixels for a Flash player in Google Chrome.|
-|setSpeed|speed|Manually sets the playback speed. Playback speed control is supported only by HTML5 players. This method may not take effect for mobile platforms, such as WeChat for Android. By default, the user interface \(UI\) of playback speed control is enabled. If the `skinlayout` attribute is customized, you must add `speedButton` to the array. Example: \{name:"speedButton",align:"tr",x:10,y:23\}.|
+|setSpeed|speed|Manually sets the playback speed. Playback speed control is supported only by HTML5 players. This method may not take effect for mobile platforms, such as WeChat for Android. By default, the user interface \(UI\) of playback speed control is enabled. If the `skinLayout` attribute is customized, you must add `speedButton` to the array. Example: \{name:"speedButton",align:"tr",x:10,y:23\}.|
 |setSanpshotProperties|width: the width of the snapshot. height: the height of the snapshot. rate: the quality of the snapshot.|Sets parameters for snapshots.|
 |fullscreenService.requestFullScreen|N/A|Enables the full-screen mode of the player. This method is supported only by HTML5 players.|
 |fullscreenService.cancelFullScreen|N/A|Exits the full-screen mode of a player. This method does not take effect on iOS terminals. This method is supported only by HTML5 players.|
 |fullscreenService.getIsFullScreen|N/A|Obtains the full screen status of the player. This method is supported only by HTML5 players.|
-|getStatus|N/A|Obtains the player status. Valid values:-   **init**
--   **ready**
--   **loading**
--   **play**
--   **pause**
--   **playing**
--   **waiting**
--   **error**
--   **ended** |
+|getStatus|N/A|Obtains the player status. Valid values:-   **init**: The player is initializing.
+-   **ready**: The player is ready.
+-   **loading**: The player is loading data.
+-   **play**: The player is resumed from the Pause state.
+-   **pause**: The player is paused.
+-   **playing**: The player is playing.
+-   **waiting**: The player is waiting for buffering.
+-   **error**: An error has occurred.
+-   **ended**: The playback ends. |
 |liveShiftSerivce.setLiveTimeRange|Start time and end time|Sets the start time and end time of live streaming. This method can be called only for time shifting during live streaming. Example: player.liveShiftSerivce.setLiveTimeRange \("", '2018/01/04 20:00:00'\).|
-|setRotate|Rotation angle|Sets the rotation angle. A positive value indicates clockwise rotation, whereas a negative value indicates anticlockwise rotation. Example: setRotate\(90\). For more information, see [Rotation and mirroring](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Implementation.md).|
+|setRotate|rotate: the rotation angle.|Sets the rotation angle. A positive value indicates clockwise rotation, whereas a negative value indicates anticlockwise rotation. Example: setRotate\(90\). For more information, see [Rotation and mirroring](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Implementation.md).|
 |getRotate|N/A|Obtains the rotation angle. For more information, see [Rotation and mirroring](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Implementation.md).|
-|setImage|image: the image type.|Sets the image type. Valid values:-   **horizon**
--   **vertical**
+|setImage|image: the image type.|Sets the image type. Valid values:-   **horizon**: horizontal
+-   **vertical**: vertical
 
 Example: setImage\('horizon'\). For more information, see [Rotation and mirroring](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Implementation.md).|
 |dispose|N/A|Destroys a player.|
@@ -200,47 +196,47 @@ Example: setImage\('horizon'\). For more information, see [Rotation and mirrorin
 
 |Event|Description|
 |-----|-----------|
-|ready|The event that is fired when the video initialization button of the player is rendered. Initial setting of the UI must be triggered after this event to prevent the UI from being overwritten during initialization. The methods that are provided by a player can be called only after this event occurs.|
-|play|The event that is fired when a paused video is played again.|
-|pause|The event that is fired when a video is paused.|
-|canplay|The event that is fired when an audio or video file is ready for playback. This event can be fired many times and is supported only by HTML5 players.|
-|playing|The event that is fired during playback. This event can be fired many times.|
-|ended|The event that is fired at the end of the current video.|
-|liveStreamStop|The event that is fired when live streams are interrupted. For the playback of M3U8, FLV, and RTMP videos, this event is fired when the player fails to obtain data after five consecutive retries. This event indicates that live streams are interrupted or the video needs to be loaded again. **Note:** If the live streams of M3U8, FLV, and RTMP videos are interrupted or an error occurs, the player automatically retires five times. You do not need to set the retry event for the player. |
-|onM3u8Retry|The retry event that is fired when M3U8 live streams are interrupted. This event is fired only once when streaming is interrupted.|
+|ready|The event that is invoked when the video initialization button of the player is rendered. Initial setting of the UI must be triggered after this event to prevent the UI from being overwritten during initialization. The methods that are provided by a player can be called only after this event occurs.|
+|play|The event that is invoked when a paused video is played again.|
+|pause|The event that is invoked when a video is paused.|
+|canplay|The event that is invoked when an audio or video file is ready for playback. This event can be invoked many times and is supported only by HTML5 players.|
+|playing|The event that is invoked during playback. This event can be invoked many times.|
+|ended|The event that is invoked at the end of the current video.|
+|liveStreamStop|The event that is invoked when live streams are interrupted. For the playback of M3U8, FLV, and RTMP videos, this event is invoked when the player fails to obtain data after five consecutive retries. This event indicates that live streams are interrupted or the video needs to be loaded again. **Note:** If the live streams of M3U8, FLV, and RTMP videos are interrupted or an error occurs, the player automatically retires five times. You do not need to set the retry event for the player. |
+|onM3u8Retry|The retry event that is invoked when M3U8 live streams are interrupted. This event is invoked only once when streaming is interrupted.|
 |hideBar|The event to automatically hide the control bar.|
 |showBar|The event to automatically display the control bar.|
 |waiting|The data caching event.|
-|timeupdate|The event that is fired when the playback position changes. This event is supported only by HTML5 players. You can obtain the current playback time by using the getCurrentTime method.|
-|snapshoted|The event that is fired when a snapshot is captured.|
+|timeupdate|The event that is invoked when the playback position changes. This event is supported only by HTML5 players. You can obtain the current playback time by using the getCurrentTime method.|
+|snapshoted|The event that is invoked when a snapshot is captured.|
 |requestFullScreen|The event to enable the full-screen mode. This event is supported only by HTML5 players.|
-|cancelFullScreen|The event to exist the full-screen mode. This event is not fired on iOS terminals. This event is supported only by HTML5 players.|
+|cancelFullScreen|The event to exist the full-screen mode. This event is not invoked on iOS terminals. This event is supported only by HTML5 players.|
 |error|The error event.|
-|startSeek|The event that is fired when seeking starts. The return value is the start time of seeking.|
-|completeSeek|The event that is fired when seeking is complete. The return value is the end time of seeking.|
-|resolutionChange|The event that is fired when the resolution is switched for live stream playback.|
-|seiFrame|The event that is fired when the supplemental enhancement information \(SEI\) notification is received for HLS-based playback.|
+|startSeek|The event that is invoked when seeking starts. The return value is the start time of seeking.|
+|completeSeek|The event that is invoked when seeking is complete. The return value is the end time of seeking.|
+|resolutionChange|The event that is invoked when the resolution is switched for live stream playback.|
+|seiFrame|The event that is invoked when the supplemental enhancement information \(SEI\) notification is received for HLS-based playback.|
 
 ## Event subscription
 
 -   You can subscribe to an event by using the on method of a player instance. The following code provides an example:
 
     ```
-     var handleReady = function(e)
-     {
+    var handleReady = function(e)
+    {
         console.log(e);
-     }
-     player.on('ready',handleReady);
+    }
+    player.on('ready',handleReady);
     ```
 
 -   You can unsubscribe from an event by using the off method of a player instance. The following code provides an example:
 
     ```
-     player.off('ready',handleReady);
+    player.off('ready',handleReady);
     ```
 
 
-## Error code
+## Error codes
 
 |Code|Description|
 |----|-----------|
@@ -261,6 +257,16 @@ Example: setImage\('horizon'\). For more information, see [Rotation and mirrorin
 |4015|The error message returned because retrieving data is aborted.|
 |4016|The error message returned because data loading failed due to a network error.|
 |4017|The error message returned because the returned streaming URL is empty.|
+|4100|The error message returned because a signaling request error occurs.|
+|4110|The error message returned because WebRTC is not supported.|
+|4111|The error message returned because the browser is not supported.|
+|4112|The error message returned because the browser version is outdated.|
+|4113|The error message returned because H.264 is not supported.|
+|4114|The error message returned because the offer fails to be created.|
+|4115|The error message returned because autoplay fails.|
+|4116|The error message returned because the streaming URL uses an invalid protocol.|
+|4118|The error message returned because the specified HTML element is not an audio stream or a video stream.|
+|4200|The error message returned because the playback failed.|
 |4400|The error message returned because an unknown error has occurred. Loading resources failed due to a server or network error or an unsupported format.|
 |4500|The error message returned because a server request error has occurred. Check the VOD request on the network.|
 
