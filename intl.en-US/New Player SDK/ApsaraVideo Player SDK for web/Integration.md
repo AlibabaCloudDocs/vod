@@ -55,7 +55,7 @@ ApsaraVideo Player SDK for web supports playback in Flash and HTML5 players.
 
     **Note:**
 
-    -   To play FLV and M3U8 videos, you must enable [cross-origin resource sharing \(CORS\)](https://help.aliyun.com/document_detail/62950.html?spm=a2c4g.11186623.2.17.595f1c4cG6UJqt) for browsers on PCs.
+    -   To play FLV and M3U8 videos, you must enable [cross-origin resource sharing \(CORS\)](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure CORS.md) for browsers on PCs.
     -   The [Native HLS Playback](https://chrome.google.com/webstore/detail/native-hls-playback/emnphkkblegpebimobpbekeedfgemhof?hl=zh-CN) plug-in must be installed to play M3U8 videos in Google Chrome that uses mobile simulators on PCs.
     -   You cannot play video streams in the FLV format in Internet Explorer 11 for Windows 8 and later. This is because the value of the mseLiveFlvPlayback parameter is false in the flv.js file for Internet Explorer 11.
     |Mobile terminal|MP4|FLV|M3U8|RTMP|MP3|
@@ -85,7 +85,7 @@ ApsaraVideo Player SDK for web supports playback in Flash and HTML5 players.
     Encrypted playback:
 
     -   For more information about encrypted playback in ApsaraVideo VOD, see [Alibaba Cloud video encryption](/intl.en-US/Developer Guide/Video security/Alibaba Cloud video encryption.md).
-    -   For more information about encrypted playback in ApsaraVideo for Media Processing, see [Encryption](https://help.aliyun.com/document_detail/50114.html?spm=a2c4g.11186623.6.640.7cc2354fbFI4nx).
+    -   For more information about encrypted playback in ApsaraVideo for Media Processing, see [Encryption]().
     **Note:** We recommend that you use Google Chrome to play videos on which Alibaba Cloud proprietary cryptography is performed.
 
 -   Enable anti-debugging for Alibaba Cloud proprietary cryptography
@@ -158,7 +158,7 @@ If you need to use an HTML5 player, reference a .css file with the following con
 In addition to video playback by using video source files, ApsaraVideo Player SDK can also play videos by ApsaraVideo.
 
 -   For more information about ApsaraVideo VOD, see [Use playback credentials to play videos](/intl.en-US/Developer Guide/Video play/Use playback credentials to play videos.md).
--   For more information about ApsaraVideo for Media Processing, see [Play videos](https://help.aliyun.com/document_detail/53522.html?spm=a2c4g.11186623.2.22.3f571c4c4bzNi1).
+-   For more information about ApsaraVideo for Media Processing, see [Play videos]().
 
 The following code provides an example:
 
@@ -212,12 +212,12 @@ You can configure the player settings on the [Online Settings](https://player.al
 **Note:**
 
 -   Set the isLive parameter to true for the playback of live streams.
--   For more information about the playback parameters in ApsaraVideo for Media Processing, see [Play videos](https://help.aliyun.com/document_detail/53522.html?spm=a2c4g.11186623.2.24.3f571c4c34fxVy).
+-   For more information about the playback parameters in ApsaraVideo for Media Processing, see [Play videos]().
 -   For more information about the methods in ApsaraVideo VOD, see [Attributes and methods](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Attributes and methods.md).
 
 ## QR code for demos
 
 Use DingTalk to scan the following QR code and experience the demos of ApsaraVideo Player.
 
-![QR code](../images/p183624.png)
+![QR code](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1249162261/p183624.png)
 
