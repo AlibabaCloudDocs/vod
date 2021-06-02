@@ -28,7 +28,7 @@ The token service is used to generate tokens based on the user ID \(UID\), video
 **Note:**
 
 -   A standard player requests for a decryption key only once to play a video. Therefore, tokens that can be used only once and have a validity period are preferred.
--   For more information about how to verify a generated token, see [Sample code of the token service](https://help.aliyun.com/document_detail/124805.html?spm=a2c4g.11186623.6.1171.12542177RctB5T#demo)
+-   For more information about how to verify a generated token, see [Sample code of the token service](#section_1ho_4ps_3rr).
 
 **Decryption service**
 
@@ -40,7 +40,7 @@ The decryption service is used to authenticate the service requester and return 
 **Note:**
 
 -   In this case, the decryption service authenticates the service requester by verifying the validity of the token. The token is passed in the MtsHlsUriToken parameter to the decryption service.
--   For more information about the decryption service, see [Sample code of the decryption service](https://help.aliyun.com/document_detail/124805.html?spm=a2c4g.11186623.6.1171.12542177RctB5T#decryptdemo).
+-   For more information about the decryption service, see [Sample code of the decryption service](#section_dln_tgj_h8x).
 
 ## Implementation
 
@@ -49,7 +49,7 @@ The following section describes the process of decrypting and playing videos tha
 **Note:**
 
 -   This section describes how ApsaraVideo Player decrypts and plays videos that are encrypted in HLS encryption mode.
--   If you do not use ApsaraVideo Player, you must encapsulate the process of requesting for the playback service by yourself. After you obtain the URL of an encrypted video, you can directly pass the URL to the player for decryption and playback. For more information, see [GetPlayInfo](https://help.aliyun.com/document_detail/56124.html?spm=a2c4g.11186623.2.20.7bfe565aOoxJxA).
+-   If you do not use ApsaraVideo Player, you must encapsulate the process of requesting for the playback service by yourself. After you obtain the URL of an encrypted video, you can directly pass the URL to the player for decryption and playback. For more information, see [GetPlayInfo](/intl.en-US/API Reference/Audio and video playback/GetPlayInfo.md).
 
 1.  You request the token service to issue a token.
 2.  The token service generates a token by using the received request information.
