@@ -6,6 +6,11 @@ This topic describes the release notes of different versions of the short video 
 
 |**Release date**|**Version**|**Description**|
 |----------------|-----------|---------------|
+|2021-04-28|V3.21.0|-   Rounded borders are supported when the camera is used for duet recording.
+-   The tools that are used to import High Efficiency Image Coding \(HEIC\) images can be used.
+-   The issue is fixed where the memory piles up and the system stops responding during software encoding on specific phone models.
+-   The issue is fixed where the camera matrix that is used to crop the preview image may not be updated at the earliest opportunity during custom rendering.
+-   The stability of the SDK is improved. |
 |2021-03-24|V3.20.0|-   The audio fade effect is added to the editing module.
 -   The combined subtitle feature is added to the editing module.
 -   The basic editing capability is added to the editing module.
@@ -16,7 +21,7 @@ This topic describes the release notes of different versions of the short video 
 |2021-02-03|V3.19.0|-   The noise reduction feature is added to the editing module.
 -   The background image and background color can be set during duet recording and video merging.
 -   Audio tracks can be merged during duet recording and video merging.
--   Callbacks for audio data can be fired during the preview of recording files.
+-   Callbacks for audio data can be invoked during the preview of recording files.
 -   The issue is fixed where emojis in subtitles fail to be displayed when the font of the subtitles is enlarged to a specific size in the editing module.
 -   The issue is fixed where the halo color changes when a transparent halo effect is added to a watermark or an image.
 -   The issue is fixed where added static images are not rotated in the expected angle. |
@@ -28,7 +33,7 @@ This topic describes the release notes of different versions of the short video 
 -   The issue is fixed where the information about the timestamp and process ID is not written after you call the AlivcSdkCore.setLogPath method. |
 |2020-10-30|V3.17.0|-   The package name of the short video SDK for Android is optimized, which reduces the cost of service integration and makes the SDK more user-friendly. The new package name is in the unified format of com.aliyun.svideosdk.\*. For more information about the latest SDK, see [Project configuration](/intl.en-US/Short video SDK/Android short video SDK/Project configuration.md).
 
-To upgrade the existing SDK to the latest version, download the [upgrade tool](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/shortVideo/tool/interface_upgrade.py).
+To update the existing SDK to the latest version, download the [update tool](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/shortVideo/tool/interface_upgrade.py).
 
 -   The voice effect of lolita is optimized and the voice effects of Chinese dialects are added.
 -   The issue is fixed where unexpected quits occur during photo taking in extreme scenarios.
@@ -59,9 +64,9 @@ To upgrade the existing SDK to the latest version, download the [upgrade tool](h
 |2019-11-21|V3.13.0|-   The stability and performance of the recording module are optimized.
 -   The Render And Compute Everything \(RACE\) engine-based face filters are added to the recording module. |
 |2019-09-10|V3.12.0|-   The feature of log analysis is supported. The AlivcSdkCore\#setDebugLoggerLevel\(AlivcDebugLoggerLevel level\) method is added to specify whether to enable the feature. The following three options are provided:
-    -   AlivcDLClose: Disable the feature of log analysis.
-    -   AlivcDLNormal: Analyze warning or error logs. We recommend that you use this option to analyze logs.
-    -   AlivcDLAll: Analyze all logs. We recommend that you use this option only for troubleshooting. However, we recommend that you do not use this option in the official release where this option can be used only to analyze logs of the SDK.
+    -   AlivcDLClose: disables the feature of log analysis.
+    -   AlivcDLNormal: analyzes warning or error logs. We recommend that you use this option to analyze logs.
+    -   AlivcDLAll: analyzes all logs. We recommend that you use this option only for troubleshooting. However, we recommend that you do not use this option in the official release where this option can be used only to analyze the logs of the SDK.
 -   The performance of the editing module is improved.
 -   The addRunningDisplayMode method is deleted from the editing module.
 -   The removeRunningDisplayMode method is deleted from the editing module. |
