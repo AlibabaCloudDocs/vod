@@ -1,5 +1,14 @@
 # Release notes
 
+## V3.21.0
+
+**Feature updates**
+
+-   View levels can be adjusted and border effects can be set for duet recording.
+-   Mirrored videos can be imported and edited.
+-   The memory issue is optimized during software encoding.
+-   The stability of the SDK is improved.
+
 ## V3.20.0
 
 **Feature updates**
@@ -98,7 +107,7 @@ The issue is fixed where a recorded video cannot be merged with an existing vide
 
 **Fixed issues**
 
--   The issue is fixed where intermittent unexpected quits occurs when the application is switched to the background during recording.
+-   The issue is fixed where intermittent unexpected quits occur when the application is switched to the background during recording.
 -   The issue is fixed where exceptions occur when audio resources are occupied during recording.
 -   The issue is fixed where the color setting of the background does not take effect.
 -   The issue is fixed where a part of the playback image is enlarged after the view of the editing module is changed on iOS devices.
@@ -106,7 +115,7 @@ The issue is fixed where a recorded video cannot be merged with an existing vide
 
 **SDK changes**
 
-The AliyunVideoSDKPro.framework dynamic framework is split into AliyunVideoSDKPro.framework static framework and AliyunVideoCore.framework dynamic framework. If you want to manually integrate the short video SDK, see [Project configuration](/intl.en-US/Short video SDK/iOS short video SDK/Project configuration.md).
+The AliyunVideoSDKPro.framework dynamic framework is split into the AliyunVideoSDKPro.framework static framework and AliyunVideoCore.framework dynamic framework. If you want to manually integrate the short video SDK, see [Project configuration](/intl.en-US/Short video SDK/iOS short video SDK/Project configuration.md).
 
 ## V3.13.0
 
@@ -127,9 +136,9 @@ The method for the music video \(MV\) effect is deprecated and the feature of ad
 -   The feature of log analysis is supported. The AliyunVideoSDKInfo setDebugLogLevel method is added to specify whether to enable the feature. The following three options are provided:
 
     ```
-    AlivcDebugLogClose: Disable the feature of log analysis.
-    AlivcDebugLogNormal: Analyze warning or error logs. We recommend that you use this option to analyze logs.
-    AlivcDebugLogAll: Analyze all logs. We recommend that you use this option only for troubleshooting. However, we recommend that you do not use this option in the official release where this option can be used only to analyze logs of the SDK.
+    AlivcDebugLogClose: disables the feature of log analysis.
+    AlivcDebugLogNormal: analyzes warning or error logs. We recommend that you use this option to analyze logs.
+    AlivcDebugLogAll: analyzes all logs. We recommend that you use this option only for troubleshooting. However, we recommend that you do not use this option in the official release where this option can be used only to analyze the logs of the SDK.
                             
     ```
 
@@ -169,7 +178,7 @@ The applyRunningDisplayMode method is deleted from the editing module.
 **Feature updates**
 
 -   The AliyunMixRecorder interface is added. This interface can be used to record videos in duet mode.
--   The AliyunIMixComposer interface is added. This interface can be used to achieve effects such as picture-in-picture \(PiP\) and left-right split-screen.
+-   The AliyunMixComposer interface is added. This interface can be used to achieve effects such as picture-in-picture \(PiP\) and left-right split-screen.
 
 ## V3.10.0
 
@@ -205,7 +214,7 @@ The applyRunningDisplayMode method is deleted from the editing module.
 -   The video production speed is improved for the editing module.
 -   Specific issues are fixed.
 -   The production can be resumed after the application is switched to the foreground from the background.
--   To meet the requirement of SDK stability monitoring and data-related requirements in the future, the AlivcConan.framework is changed as a required dependency. In manual integration, you must add AlivcConan.framework. In CocoaPods integration, you must add pod 'AlivcConan', '0.9.0' to Podfile. For more information, see the demo code.
+-   To meet the requirement of SDK stability monitoring and data-related requirements in the future, AlivcConan.framework is changed as a required dependency. In manual integration, you must add AlivcConan.framework. In CocoaPods integration, you must add pod 'AlivcConan', '0.9.0' to Podfile. For more information, see the demo code.
 
 ## V3.7.7
 
@@ -277,14 +286,14 @@ Framework file size and basic issues
 
 |Name|Size \(Unit: MB\)|
 |----|-----------------|
-|AliyunVideoSDKPro.framework3.5.0 release|4.9M|
-|AliyunVideoSDKPro.framework3.5.0 debug|10.1M|
-|AliyunVideoSDKPro.framework3.6.0 release|7.6M|
-|AliyunVideoSDKPro.framework3.6.0 debug|15.7M|
-|QuCore-ThirdParty.framework3.5.0 release|9.3M|
-|QuCore-ThirdParty.framework3.5.0 debug|23.1M|
-|QuCore-ThirdParty.framework3.6.0 release|10.2M|
-|QuCore-ThirdParty.framework3.6.0 debug|23.2M|
+|AliyunVideoSDKPro.framework3.5.0 release|4.9 MB|
+|AliyunVideoSDKPro.framework3.5.0 debug|10.1 MB|
+|AliyunVideoSDKPro.framework3.6.0 release|7.6 MB|
+|AliyunVideoSDKPro.framework3.6.0 debug|15.7 MB|
+|QuCore-ThirdParty.framework3.5.0 release|9.3 MB|
+|QuCore-ThirdParty.framework3.5.0 debug|23.1 MB|
+|QuCore-ThirdParty.framework3.6.0 release|10.2 MB|
+|QuCore-ThirdParty.framework3.6.0 debug|23.2 MB|
 
 **Note:** AliyunVideoSDKPro.framework and QuCore-ThirdParty.framework must be replaced at the same time. Otherwise, exceptions such as an unexpected quit during production may occur.
 
@@ -295,7 +304,7 @@ Framework file size and basic issues
     The setWaterMark:frame method is deprecated and the setWaterMark method is added. The following code provides an example on how to set a watermark:
 
     ```
-    NSString watermarkPath = [[NSBundle mainBundle] pathForResource:@"watermark" ofType:@"png"]; 
+    NSString watermarkPath = [[NSBundle mainBundle] pathForResource:@"watermark" ofType:@"png"];
     AliyunEffectImage effectImage = [[AliyunEffectImage alloc] init];
     effectImage.frame = CGRectMake(10, 10, 28, 20);
     effectImage.path = watermarkPath;
@@ -307,7 +316,7 @@ Framework file size and basic issues
     The end watermark can be viewed during preview. The following code provides an example on how to set an end watermark by calling the setTailWaterMark method:
 
     ```
-    NSString tailWatermarkPath = [[NSBundle mainBundle] pathForResource:@"tail" ofType:@"png"]; 
+    NSString tailWatermarkPath = [[NSBundle mainBundle] pathForResource:@"tail" ofType:@"png"];
     AliyunEffectImage tailWatermark = [[AliyunEffectImage alloc] initWithFile:tailWatermarkPath];
     tailWatermark.frame = CGRectMake(CGRectGetMidX(self.movieView.bounds) - 84 / 2, CGRectGetMidY(self.movieView.bounds) - 60 / 2, 84, 60);
     tailWatermark.endTime = 2;
@@ -319,11 +328,11 @@ Framework file size and basic issues
 
         ```
         AliyunEffectMusic *music = [[AliyunEffectMusic alloc] initWithFile:path];
-        [self.editor removeMusics];// If you want to add only one audio stream, call the removeMusics method.
+        [self.editor removeMusics]; // If you want to add only one audio stream, call the removeMusics method.
         [self.editor applyMusic:music];
         ```
 
-    -   To add music, call the removeMVMusic method, for example, AliyunEffectMusic \*music = \[\[AliyunEffectMusic alloc\] initWithFile:path\].
+    -   To add music, call the removeMVMusic method. Example: AliyunEffectMusic \*music = \[\[AliyunEffectMusic alloc\] initWithFile:path\].
 
         ```
         [self.editor removeMVMusic];
@@ -362,11 +371,11 @@ Framework file size and basic issues
         animationFilter.startTime = currentSec;
         animationFilter.endTime = [self.player getDuration];
         animationFilter.streamStartTime = currentStreamSec; // The streamStartTime parameter is added. You must set the parameter when a time effect is applied.
-        animationFilter.streamEndTime = [self.player getStreamDuration];// The streamEndTime parameter is added. You must set the parameter when a time effect is applied.
+        animationFilter.streamEndTime = [self.player getStreamDuration]; // The streamEndTime parameter is added. You must set the parameter when a time effect is applied.
         [self.editor applyAnimationFilter:animationFilter];
         ```
 
-        For compatibility with earlier versions, you can still set the startTime and endTime parameters when no time effect is applied. In this case, streamStartTime and streamEndTime parameters are not required.
+        For compatibility with earlier versions, you can still set the startTime and endTime parameters when no time effect is applied. In this case, the streamStartTime and streamEndTime parameters are not required.
 
 -   New time effect method
 
@@ -411,19 +420,19 @@ Framework file size and basic issues
 
 **Note:** You must know the basic concepts about the player when you use time effects.
 
--   /\* Obtain the total playback duration, in seconds. @return The total duration. /
+-   /\* Obtain the total playback duration. Unit: seconds. @return The total duration. /
 
     \(double\)getDuration
 
--   /\* Obtain the current playback position, in seconds. /
+-   /\* Obtain the current playback position. Unit: seconds. /
 
     \(double\)getCurrentTime
 
--   /\* Obtain the duration of the original video stream, in seconds. @return The total duration. /
+-   /\* Obtain the duration of the original video stream. Unit: seconds. @return The total duration. /
 
     \(double\)getStreamDuration
 
--   /\* Obtain the playback position in the original video stream, in seconds. /
+-   /\* Obtain the playback position in the original video stream. Unit: seconds. /
 
     \(double\)getCurrentStreamTime
 
@@ -467,18 +476,18 @@ In the preceding examples, the time effect is applied to the entire video. If th
     Error handling: In V3.6.0, when an error occurs during the playback or production, the playback or production is stopped, and the error is returned in the playError or exportError callback. You can handle the error as needed.
 
 -   New methods for the player
-    -   \(double\)getStreamDuration; // Obtain the duration of the original video stream, in seconds.
-    -   \(double\)getCurrentStreamTime; // Obtain the playback position in the original video stream., in seconds.
+    -   \(double\)getStreamDuration; // Obtain the duration of the original video stream. Unit: seconds.
+    -   \(double\)getCurrentStreamTime; // Obtain the playback position in the original video stream. Unit: seconds.
 -   Method changes for watermarks
-    -   The setWaterMark: frame method is deprecated.
+    -   The setWaterMark:frame method is deprecated.
     -   The setWaterMark:\(AliyunEffect\*\)waterMark method is added.
-    -   The setTailWaterMark: method can be called to set an end watermark, which can be previewed.
+    -   The setTailWaterMark method can be called to set an end watermark, which can be previewed.
 -   Method for adding music
     -   Multiple audio streams can be mixed. The specified part of a music stream can be played. To add only one audio stream, you must call the removeMusics method. The following code provides an example:
 
         ```
         AliyunEffectMusic *music = [[AliyunEffectMusic alloc] initWithFile:path];
-        [self.editor removeMusics];// If you want to add only one audio stream, call the removeMusics method. 
+        [self.editor removeMusics]; // If you want to add only one audio stream, call the removeMusics method. 
         [self.editor applyMusic:music];
         ```
 
@@ -486,7 +495,7 @@ In the preceding examples, the time effect is applied to the entire video. If th
 
         ```
         AliyunEffectMusic music = [[AliyunEffectMusic alloc] initWithFile:path];
-        music.startTime = startTime; // Set the start time of the part to be played in the music stream. 
+        music.startTime = startTime; // Set the start time of the part to be played in the music stream.
         music.duration = duration; // Set the duration of the part to be played in the music stream.
         music.streamStartTime = streamStart [_player getStreamDuration]; // Set the time when the music stream starts to be played in the playback timeline.
         music.streamDuration = streamDuration * [_player getStreamDuration]; // Set the playback duration of the music stream in the playback timeline.
