@@ -152,7 +152,11 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
      aliyunVodPlayer.prepare();
     ```
 
-    **Note:** For more information about the video playback process and concepts in ApsaraVideo for Media Processing, see [Video playback](https://help.aliyun.com/document_detail/53522.html?spm=a2c4g.11186623.2.15.7a45195dpABgQj). For more information about the process of using the playback credential for playback, see [Use playback credentials](/intl.en-US/Developer Guide/Video play/Use playback credentials to play videos.md). For more information about region settings, see [VOD centers and endpoints](/intl.en-US/Developer Guide/VOD centers and endpoints.md).
+    **Note:** For more information about the video playback process and concepts in ApsaraVideo for Media Processing, see [Video playback]().
+
+    For more information about the process of using the playback credential for playback, see [Use playback credentials](/intl.en-US/Developer Guide/Video play/Use playback credentials to play videos.md).
+
+    For more information about region settings, see [VOD centers and endpoints](/intl.en-US/Developer Guide/VOD centers and endpoints.md).
 
 4.  Set the user interface \(UI\) view.
 
