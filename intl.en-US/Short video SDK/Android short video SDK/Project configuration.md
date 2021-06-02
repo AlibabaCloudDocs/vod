@@ -8,7 +8,7 @@ Required environments are prepared. The following table describes the required e
 |-----------|-----------------|
 |Android|Android 4.3 and later.|
 |Java|Java 1.7 and later.|
-|API LEVEL|Android API level 18 and later.|
+|API level|Android API level 18 and later.|
 |Android Studio|Android Studio 2.3 and later. To download Android Studio, visit [Android Studio](https://developer.android.google.cn/studio/).|
 
 ## SDK reference
@@ -19,7 +19,7 @@ Required environments are prepared. The following table describes the required e
 
     For more information about the documents in English, see [SDK Reference](https://alivc-demo-cms.alicdn.com/versionProduct/doc/shortVideo/android_new_en/index.html).
 
-    To upgrade the existing SDK to the latest version, download the [upgrade tool](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/shortVideo/tool/interface_upgrade.py).
+    To update the existing SDK to the latest version, download the [update tool](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/shortVideo/tool/interface_upgrade.py).
 
 -   Earlier than V3.17.0
 
@@ -32,35 +32,36 @@ Required environments are prepared. The following table describes the required e
 
 Integrate the SDK by using Maven \(Recommended\)
 
-Add the Alibaba Cloud Maven repository
+-   Add the Alibaba Cloud Maven repository
 
-Add the URL of the Maven repository to the build.gradle file.
+    Add the URL of the Maven repository to the build.gradle file.
 
-```
-allprojects {
-    repositories {
-        maven {
-            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
-       }
+    ```
+    allprojects {
+        repositories {
+            maven {
+                url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
+           }
+        }
     }
-}
-```
+    ```
 
-Add dependencies to a Maven project.
+-   Add dependencies to a Maven project
 
-```
-dependencies{
-    implementation 'com.aliyun.video.android:svideopro:3.20.0' // Required. The short video SDK in Professional Edition.
-    implementation 'com.aliyun.video.android:core:1.2.2' // Required. A core library.
-    implementation  'com.alivc.conan:AlivcConan:1.0.3' // Required. A core library.
-    implementation  'com.aliyun.video.android:AlivcFFmpeg:2.0.0' // Required.
-    implementation  'com.aliyun.video.android:upload:1.6.0' // Optional. The upload library.
-    implementation 'com.google.code.gson:gson:2.8.0' // A third-party library.
-    implementation 'com.squareup.okhttp3:okhttp:3.2.0' // A third-party library.
-}
-```
+    ```
+    dependencies{
+        implementation 'com.aliyun.video.android:svideopro:3.21.0' // Required. The short video SDK in Professional Edition.
+        implementation 'com.aliyun.video.android:core:1.2.2' // Required. A core library.
+        implementation  'com.alivc.conan:AlivcConan:1.0.3' // Required. A core library.
+        implementation  'com.aliyun.video.android:AlivcFFmpeg:2.0.0' // Required.
+        implementation  'com.aliyun.video.android:upload:1.6.0' // Optional. The upload library.
+        implementation 'com.google.code.gson:gson:2.8.0' // A third-party library.
+        implementation 'com.squareup.okhttp3:okhttp:3.2.0' // A third-party library.
+    }
+    ```
 
-**Note:** The short video SDK supports only armeabi-v7a and arm64-v8a instruction sets. To ensure the compatibility with armeabi, we recommend that you copy the .so files in the armeabi-v7a folder to the armeabi folder. The compatibility with ARMv5 and ARMv6 devices is insignificant because Android rapidly develops but the short video SDK is applicable only to Android 4.3 and later.
+    **Note:** The short video SDK supports only armeabi-v7a and arm64-v8a instruction sets. To ensure the compatibility with armeabi, we recommend that you copy the .so files in the armeabi-v7a folder to the armeabi folder. The compatibility with ARMv5 and ARMv6 devices is insignificant because Android rapidly develops but the short video SDK is applicable only to Android 4.3 and later.
+
 
 ## Manually integrate the SDK
 
@@ -156,7 +157,7 @@ Import .so files
 
 ## Obfuscation configuration
 
-You can set the obfuscation configuration in the proguard-rules.pro file. The following sample code can be used:
+You can specify the obfuscation configuration in the proguard-rules.pro file. The following sample code can be used:
 
 ```
 ######################Obfuscation configuration of the short video SDK#########################
