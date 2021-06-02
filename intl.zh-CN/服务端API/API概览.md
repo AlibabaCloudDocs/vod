@@ -8,9 +8,7 @@ API概览
 
 **说明**
 
-建议您使用[服务端SDK](/intl.zh-CN/服务端SDK/使用说明.md)来调用API。
-
-使用API时，接入地址请参见[点播中心和访问域名](/intl.zh-CN/开发指南/点播中心和访问域名.md)，使用限制，请参见使用限制。
+建议您使用[服务端SDK](/intl.zh-CN/服务端SDK/使用说明.md)来调用API。使用API时，接入地址请参见[点播中心和访问域名](/intl.zh-CN/开发指南/点播中心和访问域名.md)，使用限制，请参见使用限制。
 
 媒体上传 
 -------------------------
@@ -200,16 +198,15 @@ API概览
 **剪辑工程管理** 
 
 
-|                                               API                                               |                      描述                       |
-|-------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| [AddEditingProject](/intl.zh-CN/服务端API/视频剪辑(云剪辑)/云剪辑工程管理/创建云剪辑工程.md)            | 调用AddEditingProject创建云剪辑工程（视频编辑任务）。           |
-| [UpdateEditingProject](/intl.zh-CN/服务端API/视频剪辑(云剪辑)/云剪辑工程管理/修改云剪辑工程.md)         | 调用UpdateEditingProject修改云剪辑工程（视频编辑任务）。        |
-| [DeleteEditingProject](/intl.zh-CN/服务端API/视频剪辑(云剪辑)/云剪辑工程管理/删除云剪辑工程.md)         | 调用DeleteEditingProject删除云剪辑工程，支持批量删除。         |
-| [GetEditingProject](/intl.zh-CN/服务端API/视频剪辑(云剪辑)/云剪辑工程管理/获取单个云剪辑工程.md)          | 调用GetEditingProject获取云剪辑工程（视频编辑任务）的详细信息。      |
-| [SearchEditingProject](/intl.zh-CN/服务端API/视频剪辑(云剪辑)/云剪辑工程管理/搜索云剪辑工程.md)         | 调用SearchEditingProject搜索云剪辑工程（视频编辑列表）。        |
-| [SetEditingProjectMaterials](/intl.zh-CN/服务端API/视频剪辑(云剪辑)/云剪辑工程管理/设置云剪辑工程素材.md) | 调用SetEditingProjectMaterials设置云剪辑工程的待剪辑素材。    |
-| [GetEditingProjectMaterials](/intl.zh-CN/服务端API/视频剪辑(云剪辑)/云剪辑工程管理/获取云剪辑工程素材.md) | 调用GetEditingProjectMaterials获取云剪辑工程的待剪辑素材列表。  |
-| [DeleteEditingProjectMaterials]()                                               | 调用DeleteEditingProjectMaterials删除云剪辑工程的待剪辑素材。 |
+|                                               API                                               |                      描述                      |
+|-------------------------------------------------------------------------------------------------|----------------------------------------------|
+| [AddEditingProject](/intl.zh-CN/服务端API/视频剪辑(云剪辑)/云剪辑工程管理/创建云剪辑工程.md)            | 调用AddEditingProject创建云剪辑工程（视频编辑任务）。          |
+| [UpdateEditingProject](/intl.zh-CN/服务端API/视频剪辑(云剪辑)/云剪辑工程管理/修改云剪辑工程.md)         | 调用UpdateEditingProject修改云剪辑工程（视频编辑任务）。       |
+| [DeleteEditingProject](/intl.zh-CN/服务端API/视频剪辑(云剪辑)/云剪辑工程管理/删除云剪辑工程.md)         | 调用DeleteEditingProject删除云剪辑工程，支持批量删除。        |
+| [GetEditingProject](/intl.zh-CN/服务端API/视频剪辑(云剪辑)/云剪辑工程管理/获取单个云剪辑工程.md)          | 调用GetEditingProject获取云剪辑工程（视频编辑任务）的详细信息。     |
+| [SearchEditingProject](/intl.zh-CN/服务端API/视频剪辑(云剪辑)/云剪辑工程管理/搜索云剪辑工程.md)         | 调用SearchEditingProject搜索云剪辑工程（视频编辑列表）。       |
+| [SetEditingProjectMaterials](/intl.zh-CN/服务端API/视频剪辑(云剪辑)/云剪辑工程管理/设置云剪辑工程素材.md) | 调用SetEditingProjectMaterials设置云剪辑工程的待剪辑素材。   |
+| [GetEditingProjectMaterials](/intl.zh-CN/服务端API/视频剪辑(云剪辑)/云剪辑工程管理/获取云剪辑工程素材.md) | 调用GetEditingProjectMaterials获取云剪辑工程的待剪辑素材列表。 |
 
 
 
@@ -272,6 +269,18 @@ API概览
 | [BatchStopVodDomain](/intl.zh-CN/服务端API/点播CDN/域名管理/停用加速域名.md)        | 调用BatchStopVodDomain批量停用点播加速域名，将DomainStatus变更为Offline。       |
 | [DescribeVodUserDomains](/intl.zh-CN/服务端API/点播CDN/域名管理/查询加速域名列表.md)  | 调用DescribeVodUserDomains查询用户名下所有的点播加速域名列表。                    |
 | [DescribeVodDomainDetail](/intl.zh-CN/服务端API/点播CDN/域名管理/查询域名基本信息.md) | 调用DescribeVodDomainDetail获取指定点播域名配置的基本信息。                     |
+
+
+
+**域名验证** 
+
+
+|                                          API                                          |                 描述                  |
+|---------------------------------------------------------------------------------------|-------------------------------------|
+| [VerifyVodDomainOwner](/intl.zh-CN/服务端API/点播CDN/域名验证/域名归属校验.md)       | 调用VerifyVodDomainOwner校验域名归属。       |
+| [DescribeVodVerifyContent](/intl.zh-CN/服务端API/点播CDN/域名验证/获取归属校验内容.md) | 调用DescribeVodVerifyContent获取归属校验内容。 |
+
+
 
 
 
