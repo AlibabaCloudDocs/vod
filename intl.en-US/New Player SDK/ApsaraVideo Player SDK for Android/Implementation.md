@@ -420,7 +420,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
 
     **Note:**
 
-    -   You can call the VidPlayerConfigGen method to set the request parameters that are supported by the server. For more information, see [t1235674.md\#](/intl.en-US/API Reference/Appendix/Request parameters.md).
+    -   You can call the VidPlayerConfigGen method to set the request parameters that are supported by the server. For more information, see [Request parameters](/intl.en-US/API Reference/Appendix/Request parameters.md).
     -   The preview feature is not supported for Flash Video \(FLV\) and MP3 files.
 15. Enable or disable hardware decoding.
 
