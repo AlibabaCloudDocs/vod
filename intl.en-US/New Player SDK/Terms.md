@@ -10,11 +10,11 @@ This topic describes the general terms that are used in the ApsaraVideo VOD cons
 
 -   PlayConfig
 
-    A field that specifies the custom configuration for media playback. The value is a JSON string. You can specify a streaming domain to play videos. For more information, see [t1235674.md\#](/intl.en-US/API Reference/Appendix/Request parameters.md).
+    A field that specifies the custom configuration for media playback. The value is a JSON string. You can specify a streaming domain to play videos. For more information, see [Request parameters](/intl.en-US/API Reference/Appendix/Request parameters.md).
 
 -   Temporary AccessKey ID, AccessKey secret, and security token
 
-    The AccessKey ID, AccessKey secret, and security token are obtained by using the STS API or ApsaraVideo VOD SDKs after RAM authorization is enabled. They are used to make playback and download requests. For more information, see [STS SDK overview](https://help.aliyun.com/document_detail/121136.html?spm=a2c4g.11186623.2.13.5a25928b9vFwg3).
+    The AccessKey ID, AccessKey secret, and security token are obtained by using the STS API or ApsaraVideo VOD SDKs after RAM authorization is enabled. They are used to make playback and download requests. For more information, see [STS SDK overview](/intl.en-US/SDK Reference/STS SDK Reference/STS SDK overview.md).
 
 -   PlayAuth
 
