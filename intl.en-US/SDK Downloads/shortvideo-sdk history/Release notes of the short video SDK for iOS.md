@@ -6,6 +6,10 @@ This topic describes the release notes of different versions of the short video 
 
 |**Release date**|**Version**|**Description**|
 |----------------|-----------|---------------|
+|2021-04-28|V3.21.0|-   View levels can be adjusted and border effects can be set for duet recording.
+-   Mirrored videos can be imported and edited.
+-   The memory issue is optimized during software encoding.
+-   The stability of the SDK is improved. |
 |2021-03-24|V3.20.0|-   The audio fade effect is added to the editing module.
 -   The combined subtitle feature is added to the editing module.
 -   The basic editing capability is added to the editing module.
@@ -47,9 +51,9 @@ This topic describes the release notes of different versions of the short video 
     -   AliyunVideoSDKPro.framework static framework
     -   AliyunVideoCore.framework dynamic framework |
 |2019-09-10|V3.12.0|-   The feature of log analysis is supported. The AliyunVideoSDKInfo setDebugLogLevel method is added to specify whether to enable the feature. The following three options are provided:
-    -   AlivcDebugLogClose: Disable the feature of log analysis.
-    -   AlivcDebugLogNormal: Analyze warning or error logs. We recommend that you use this option to analyze logs.
-    -   AlivcDebugLogAll: Analyze all logs. We recommend that you use this option only for troubleshooting. However, we recommend that you do not use this option in the official release where this option can be used only to analyze logs of the SDK.
+    -   AlivcDebugLogClose: disables the feature of log analysis.
+    -   AlivcDebugLogNormal: analyzes warning or error logs. We recommend that you use this option to analyze logs.
+    -   AlivcDebugLogAll: analyzes all logs. We recommend that you use this option only for troubleshooting. However, we recommend that you do not use this option in the official release where this option can be used only to analyze the logs of the SDK.
 -   The performance of the editing module is improved.
 -   The applyRunningDisplayMode method is deleted from the editing module.
 -   The issue is fixed where the recording process is stopped but the corresponding thread is still running. |
