@@ -15,7 +15,7 @@ When you use the frame animation feature, ApsaraVideo VOD transforms a specific 
 
   
 
-* Dynamic image files are generated in an asynchronous manner. You can obtain the status of a frame animation task by receiving the DynamicImageComplete event notification. For more information, see [DynamicImageComplete](https://help.aliyun.com/document_detail/143490.html).
+* Dynamic image files are generated in an asynchronous manner. You can obtain the status of a frame animation task by receiving the DynamicImageComplete event notification. For more information, see [DynamicImageComplete](/intl.en-US/Developer Guide/Event notification/Events/DynamicImageComplete.md).
 
   
 
@@ -23,7 +23,7 @@ When you use the frame animation feature, ApsaraVideo VOD transforms a specific 
 
   
 
-* For information about the billing methods of the frame animation feature, see [Billing Method](https://www.aliyun.com/price/product?spm=a2c4g.11186623.2.16.6ad476f3AVLuN7#/vod/detail).
+* For information about the billing methods of the frame animation feature, see [Billing Method]().
 
   
 
@@ -58,7 +58,7 @@ Usage
 
 * Capture dynamic images by calling API operations
 
-  For more information, see [SubmitDynamicImageJob]().
+  For more information, see [SubmitDynamicImageJob](/intl.en-US/API Reference/Media processing/Process initiation/SubmitDynamicImageJob.md).
   
 
 
@@ -83,7 +83,7 @@ You can obtain information about dynamic images by using the following methods:
 
   
 
-* After dynamic images are generated, you can obtain information about the images by calling the ListDynamicImage operation. For more information, see [ListDynamicImage]().
+* After dynamic images are generated, you can obtain information about the images by calling the ListDynamicImage operation. For more information, see [ListDynamicImage](/intl.en-US/API Reference/Media asset management/Animated sticker management/ListDynamicImage.md).
 
   
 
@@ -91,7 +91,7 @@ You can obtain information about dynamic images by using the following methods:
 
 **Note**
 
-If you set a dynamic image as the thumbnail of a video, you can call the GetVideoInfo operation to obtain the URL to the thumbnail. For more information, see [GetVideoInfo](/intl.en-US/API Reference/Media management/Audio&Video Management/GetVideoInfo.md).
+If you set a dynamic image as the thumbnail of a video, you can call the GetVideoInfo operation to obtain the URL to the thumbnail. For more information, see [GetVideoInfo](/intl.en-US/API Reference/Media asset management/Audio and video management/GetVideoInfo.md).
 
 Templates 
 ------------------------------
@@ -100,7 +100,7 @@ A large number of parameters are involved when the system generates dynamic imag
 
 * Manage frame animation templates by calling API operations
 
-  For more information, see [AddVodTemplate](https://help.aliyun.com/document_detail/141406.html).
+  For more information, see [AddVodTemplate](/intl.en-US/API Reference/Media processing/Snapshot template/AddVodTemplate.md).
   
 
 
