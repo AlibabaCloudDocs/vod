@@ -95,7 +95,7 @@ Alibaba Cloud video encryption service encrypts video data. Video files that are
 
     1.  You must deploy the key management service to generate keys for encrypting videos during transcoding and obtain decryption keys during playback. You can also encapsulate Alibaba Cloud Key Management Service \(KMS\) as the key management service.
     2.  You must deploy the token issuance service to verify players and prevent unauthorized access to decryption keys.
-    3.  The plaintext keys are transmitted between players and the cloud and may be intercepted. For more information, see [https://help.aliyun.com/document\_detail/59885.html?spm=a2c4g.11186623.2.24.76d71179pPCYwc\#concept-mhv-cbw-1fb](https://help.aliyun.com/document_detail/59885.html?spm=a2c4g.11186623.2.24.76d71179pPCYwc#concept-mhv-cbw-1fb).
+    3.  The plaintext keys are transmitted between players and the cloud and may be intercepted. For more information, see [HLS standard encryption](/intl.en-US/Developer Guide/Video encryption/HLS standard encryption.md).
 -   Use of HLS encryption
 
     ApsaraVideo Player supports transmission of the user token. Alibaba Cloud CDN dynamically modifies the decryption URI in the .m3u8 file. The decryption URI contains the user token. Then, you can verify the user token. For example, you can verify the validity of the key.
