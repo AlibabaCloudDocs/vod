@@ -1,5 +1,33 @@
 # Release notes
 
+## V3.21.0
+
+**Feature updates**
+
+-   Rounded borders are supported when the camera is used for duet recording.
+-   The tools that are used to import High Efficiency Image Coding \(HEIC\) images can be used.
+-   The issue is fixed where the memory piles up and the system stops responding during software encoding on specific phone models.
+-   The issue is fixed where the camera matrix that is used to crop the preview image may not be updated at the earliest opportunity during custom rendering.
+-   The stability of the SDK is improved.
+
+**Others**
+
+-   **URL of the Maven repository for the short video SDK for Android**
+
+```
+maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
+```
+
+-   **Core libraries**
+
+```
+com.aliyun.video.android:core:1.2.2
+com.alivc.conan:AlivcConan:1.0.3
+com.aliyun.video.android:AlivcFFmpeg:2.0.0
+com.aliyun.video.android:svideopro:3.21.0
+```
+
+
 ## V3.20.0
 
 **Feature updates**
@@ -37,7 +65,7 @@ com.aliyun.video.android:svideopro:3.20.0
 -   The noise reduction feature is added to the editing module.
 -   The background image and background color can be set during duet recording and video merging.
 -   Audio tracks can be merged during duet recording and video merging.
--   Callbacks for audio data can be fired during the preview of the recording file.
+-   Callbacks for audio data can be invoked during the preview of recording files.
 -   The issue is fixed where emojis in subtitles fail to be displayed when the font of the subtitles is enlarged to a specific size in the editing module.
 -   The issue is fixed where the halo color changes when a transparent halo effect is added to a watermark or an image.
 -   The issue is fixed where added static images are not rotated in the expected angle.
@@ -95,7 +123,7 @@ com.aliyun.video.android:svideopro:3.18.1
 
 **Feature updates**
 
--   Audio tracks, such as the track of the original audio, recorded audio, or mute audio, can be specified for duet recording.
+-   Audio tracks can be specified during duet recording. For example, you can use the original or recorded audio. You can also mute the audio.
 -   The issue is fixed where black bars flicker when the aspect ratio is switched on Android Q phones.
 
 **Others**
@@ -151,10 +179,7 @@ Feature updates
 
 SDK changes
 
--   The package name of the short video SDK for Android is optimized. The new package name is in the unified format of com.aliyun.svideosdk. \*.
-
-    For more information, see the [API Reference](/intl.en-US/Short video SDK/Android short video SDK/Project configuration.md) section in the Project configuration topic. If you need to upgrade the existing API to the latest version, download the [interface\_upgrade](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/shortVideo/tool/interface_upgrade.py) tool.
-
+-   The package name of the short video SDK for Android is optimized. The new package name is in the unified format of com.aliyun.svideosdk.\*. For more information, see the "SDK reference" section of the [Project configuration](/intl.en-US/Short video SDK/Android short video SDK/Project configuration.md) topic. To update the existing SDK to the latest version, download the [update tool](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/shortVideo/tool/interface_upgrade.py).
 -   The following deprecated interfaces are deleted:
     -   com.error.NativeErrorCode
     -   com.qu.preview.callback.OnNativeReady
@@ -238,7 +263,7 @@ Feature updates
 -   The major animation effects are added again.
 -   The issue is fixed where intermittent unexpected quits occur when users send feedback online.
 -   The issue is fixed where stuttering may occur during the playback of long videos.
--   The issue is fixed where the recording unexpectedly quits due to incompatibility with some phone models.
+-   The issue is fixed where the recording unexpectedly quits due to the incompatibility with specific phone models.
 
 Others
 
@@ -269,7 +294,7 @@ Feature updates
 
 SDK changes
 
--   An interface is added to modify the parameters of custom effects in real time.
+-   A method is added to modify the parameters of custom effects in real time.
 -   The features of custom filters and transitions are supported. For more information about the standards of producing custom effects, see the official documentation.
 
 Others
@@ -296,10 +321,10 @@ Feature updates
 Fixed issues
 
 -   The issue is fixed where the error code -10000004 is returned after you call specific methods.
--   The issue of intermittent stuck during video cropping is fixed.
+-   The issue of intermittent unexpected quits during video cropping is fixed.
 -   The issue is fixed where deadlock may occur if you take a photo and adjust the focus at the same time during video recording.
 -   The issue is fixed where the color setting of the background does not take effect.
--   The known memory leaks and other known issues are fixed.
+-   The known issues, such as the known memory leaks, are fixed.
 
 Others
 
@@ -352,7 +377,7 @@ com.aliyun.video.android:svideopro:3.13.0
 
 Feature updates
 
--   The feature of log analysis is added.
+-   The feature of log analysis is supported.
 
     ```
     AlivcSdkCore#setDebugLoggerLevel(AlivcDebugLoggerLevel level)
@@ -360,9 +385,9 @@ Feature updates
 
     The following three options are provided:
 
-    -   AlivcDLAll: Analyze all logs. We recommend that you use this option only for troubleshooting. We recommend that you do not use this option in the official release.
-    -   AlivcDLNormal: Analyze warning or error logs. We recommend that you use this option to analyze logs.
-    -   AlivcDLClose: Disable the feature of log analysis.
+    -   AlivcDLAll: analyzes all logs. We recommend that you use this option only for troubleshooting. We recommend that you do not use this option in the official release.
+    -   AlivcDLNormal: analyzes warning or error logs. We recommend that you use this option to analyze logs.
+    -   AlivcDLClose: disables the feature of log analysis.
     The preceding options apply only to SDK logs.
 
 -   The performance of the editing module is improved.
@@ -394,7 +419,7 @@ com.aliyun.video.android:svideopro:3.12.0
 
 Feature updates
 
--   The start and stop speeds of clip recording and the video production speed are improved, which enables smoother clip recording.
+-   The start and stop speeds of clip recording and the video production speed are improved, which allows smoother clip recording.
 -   The granularity and accuracy of the recording progress callback are improved.
 -   The transcoding speed in specific scenarios is improved by precisely adjusting the group of pictures \(GOP\) size.
 
@@ -428,7 +453,7 @@ maven { url "http://maven.aliyun.com/nexus/content/repositories/releases" }
 om.aliyun.video.android:core:1.2.1: corresponds to AlivcCore.jar.
 com.alivc.conan:AlivcConan:0.9.5.1
 com.aliyun.video.android:AlivcSvideoFFmpeg:1.0.1
-com.aliyun.video.android:svideopro:3.11.0: corresponds to the .so libraries of armeabi-v7a&arm64-v8a and the AliyunSdk-RCE.aar library, on which the short video SDK Professional Edition for Android depends.
+com.aliyun.video.android:svideopro:3.11.0
 ```
 
 
@@ -436,8 +461,8 @@ com.aliyun.video.android:svideopro:3.11.0: corresponds to the .so libraries of a
 
 Feature updates
 
--   The AliyunIMixRecorder interface is added. This interface can be called to record videos in duet mode.
--   The AliyunIMixComposer interface is added. This interface can be called to achieve effects such as picture-in-picture and left-right split-screen.
+-   The AliyunIMixRecorder interface is added.
+-   The AliyunIMixComposer interface is added. This interface can be used to achieve effects such as picture-in-picture \(PiP\) and left-right split-screen.
 
 ## V3.10.0
 
@@ -453,7 +478,7 @@ Feature updates
 
 Fixed issues
 
--   The issue is fixed where the duration is incorrectly displayed for a recorded video clip.
+-   The issue is fixed where the duration is not accurately displayed for a recorded video clip.
 -   The issue is fixed where a memory leak may occur because specific handles are not released.
 
 SDK changes
@@ -475,7 +500,7 @@ Others
 com.aliyun.video.android:core:1.1.2: corresponds to AlivcCore.jar.
 com.alivc.conan:AlivcConan:0.9.4
 com.aliyun.video.android:AlivcSvideoFFmpeg:1.0.0
-com.aliyun.video.android:svideopro:3.10.0: corresponds to the .so libraries of armeabi-v7a&arm64-v8a and the AliyunSdk-RCE.aar library, on which the short video SDK Professional Edition for Android depends.
+com.aliyun.video.android:svideopro:3.10.0
 ```
 
 
@@ -484,7 +509,7 @@ com.aliyun.video.android:svideopro:3.10.0: corresponds to the .so libraries of a
 Feature updates
 
 -   The seeking performance during editing is improved.
--   The voice effect feature is supported. The voice effects include lolita, uncle, reverberation, and echo.
+-   The voice effect feature is supported. The voice effects include lolita, male, reverberation, and echo.
 -   The libAliFaceAREngine.so and libFaceAREngine.so libraries are combined to the libAliFaceAREngine.so library.
 
 SDK changes
@@ -516,9 +541,9 @@ SDK changes
     -   The mNeedRenderCallback parameter is added to enable or disable onCustomRender or onTextureRender. When onCustomRender and onTextureRender are disabled, the editing performance is improved. By default, onCustomRender and onTextureRender are disabled. To enable onCustomRender and onTextureRender, set this parameter in the following ways:
 
         ```
-        mNeedRenderCallback = EditorCallBack.RENDER_CALLBACK_CUSTOM;// Enables onCustomRender.
-        mNeedRenderCallback = EditorCallBack.RENDER_CALLBACK_TEXTURE;// Enables onTextureRender.
-        mNeedRenderCallback = EditorCallBack.RENDER_CALLBACK_TEXTURE|EditorCallBack.RENDER_CALLBACK_CUSTOM;// Enables onCustomRender and onTextureRender at the same time.
+        mNeedRenderCallback = EditorCallBack.RENDER_CALLBACK_CUSTOM; // Enables onCustomRender.
+        mNeedRenderCallback = EditorCallBack.RENDER_CALLBACK_TEXTURE; // Enables onTextureRender.
+        mNeedRenderCallback = EditorCallBack.RENDER_CALLBACK_TEXTURE|EditorCallBack.RENDER_CALLBACK_CUSTOM; // Enables onCustomRender and onTextureRender at the same time.
         ```
 
 
@@ -540,7 +565,7 @@ com.aliyun.video.android:svideopro-arm64:3.8.0: corresponds to all .so libraries
 ```
 
 
-**Note:** The upload SDK is removed from the short video SDK. If the upload feature is required, you must add the external dependency com.aliyun.video.android:upload:1.5.2'9 by using Gradle. To meet the requirement of SDK stability monitoring and data-related requirements in the future, you must add the com.alivc.conan:AlivcConan:0.9.0 dependency and obfuscation to the short video SDK. For more information, see the demo code.
+**Note:** The upload SDK is removed from the short video SDK. If the upload feature is required, you must add the external dependency com.aliyun.video.android:upload:1.5.2 by using Gradle. To meet the requirement of SDK stability monitoring and data-related requirements in the future, you must add the com.alivc.conan:AlivcConan:0.9.0 dependency and obfuscation to the short video SDK. For more information, see the demo code.
 
 ## V3.7.8.1
 
@@ -557,7 +582,7 @@ The frame rate for preview and recording is greatly optimized.
 SDK changes
 
 -   AliyunIRecorder.setDisplayView\(GLSurfaceView surfaceView\) is changed to AliyunIRecorder.setDisplayView\(SurfaceView surfaceView\). That is, GLSurfaceView is changed to SurfaceView in the setDisplayView method.
--   The OnTextureIdCallBack.onTextureDestroyed\(\) callback is added so that you can destroy GL resources during custom third-party rendering. Originally, you must call the GLSurfaceView.queueEvent method to destroy GL resources.
+-   The OnTextureIdCallBack.onTextureDestroyed\(\) callback is added so that you can destroy GL resources during custom third-party rendering. Previously, you must call the GLSurfaceView.queueEvent method to destroy GL resources.
 -   The surface size can be adjusted without the need to restart preview. If you need to reselect the collection resolution, you must restart preview.
 -   The RecordCallback.onInitReady method is called only once in the setRecordCallback method when you create an AliyunIRecorder instance. This ensures compatibility with earlier versions. In fact, you can directly perform other operations after you create an AliyunIRecorder instance, without the need to wait for the RecordCallback.onInitReady callback.
 
@@ -569,7 +594,7 @@ The AlivcSdkCore class is added for debugging. The AlivcSdkCore\#register method
 
 Others
 
--   An [intelligent chatbot](https://h5.m.taobao.com/alicare/meebot.html?appKey=zjrE3jzzba&type=dingding_channel) that can answer your questions about the short video SDK is provided. To obtain precise answers, we recommend that you enter accurate keyword information, such as SDK documentation or how to add a common animated sticker.
+-   An [intelligent chatbot](https://h5.m.taobao.com/alicare/meebot.html?appKey=zjrE3jzzba&type=dingding_channel) that can answer your questions about the short video SDK is provided. To obtain precise answers, we recommend that you enter accurate keyword information, such as SDK documentation or how to add a regular animated sticker.
 -   The resolution of produced or cropped videos is improved.
 -   The overall stability is improved.
 
@@ -589,7 +614,7 @@ Feature updates
 Feature updates
 
 -   The replay method for the preview in the editor is added. To replay a video, call the replay method after you receive the onEnd callback. For more information, see the demo code.
--   The implementation of the mute method AliyunIEditor\#setAudioSilence is modified. The same method in the current version mutes a video only during preview playback. To mute the audio in the produced audio, call the AliyunIEditor\#setVolume\(0\) method to set the output volume to 0.
+-   The implementation of the mute method AliyunIEditor\#setAudioSilence is modified. The same method in the current version mutes a video only during preview playback. To mute the audio in the produced video, call the AliyunIEditor\#setVolume\(0\) method to set the output volume to 0.
 -   The following methods are added to the editing interface AliyunPasterBaseView:
 
     ```
@@ -600,7 +625,7 @@ Feature updates
     getTextFixSize() // Obtains the font size of the text.
     getBackgroundBitmap() // Obtains the background image of the text.
     isTextHasLabel() // Indicates whether the text has a background color.
-    getTextBgLabelColor() // Obtains the background color of the text. You must implement these methods by yourself.
+    getTextBgLabelColor() // Obtains the background color of the text. You must implement these methods by yourself. 
                             
     ```
 
@@ -615,8 +640,8 @@ Feature updates
 -   The issue is fixed where the SDK unexpectedly quits on specific phone models.
 -   The issue is fixed where stuttering occurs during reverse playback.
 -   The issue is fixed where animated filters are not properly displayed on specific phone models.
--   The TransitionBase class is added to provide the transition feature. For more information, see API Reference. Transition-related parameters inDuration, outDuration, and overlapDuration are deleted from the addVideo and addImage methods of the AliyunIimport interface. Subclasses of TransitionBase are used to provide more comprehensive transition effects.
--   The AliyunIEditor\#addFrameAnimation method is added so that you can customize animations. For more information, see API Reference.
+-   The TransitionBase class is added to provide the transition feature. For more information, see the SDK reference. Transition-related parameters inDuration, outDuration, and overlapDuration are deleted from the addVideo and addImage methods of the AliyunIimport interface. Subclasses of TransitionBase are used to provide more comprehensive transition effects.
+-   The AliyunIEditor\#addFrameAnimation method is added so that you can customize animations. For more information, see the SDK reference.
 -   Multiple speed control effects can be added to a multi-clip video. The repetition and reverse playback effects can be configured only for a single-clip video.
 -   The AliyunIEditor\#deleteTimeEffect method is added so that you can delete a time effect.
 -   The AliyunIEditor\#applyBlurBackground method is added so that you can add the Gaussian blur effect to the specified stream in the specified time period.
@@ -631,12 +656,12 @@ The methods for configuring MVs during recording are deprecated, including the a
 
 Feature updates
 
--   FFmpeg software coding is no longer supported for production.
--   The issue is fixed where the onEnd callback is triggered first when you add a time effect.
+-   FFmpeg software encoding is no longer supported for production.
+-   The issue is fixed where the onEnd callback is invoked first when you add a time effect.
 -   The issue is fixed where the volume that is specified during editing does not take effect during production. The volume is larger than that is specified, and the default volume of the SDK is modified.
 -   The issue is fixed where specific videos are stuck at 99% during cropping.
 -   The issue is fixed where specific videos that are cropped on mobile phones stutter during the preview playback.
--   The issue is fixed where animated filters have dashed lines on specific phone models.
+-   The issue is fixed where animated filters have dashed lines on specific Huawei mobile phones.
 -   The issue is fixed where the SDK unexpectedly quits when you remove music on specific phone models.
 -   The issue is fixed where stuttering occurs during reverse playback.
 -   The issue is fixed where a color gamut issue occurs when the BT.709 formula is used for YUV-to-RGB conversion.
@@ -653,7 +678,7 @@ The Alivc.jar package is added. You must add the dependency on this package to y
 
 SDK changes
 
--   The parameters of the addVideo and addImage methods for multi-video import are modified. The fadeDuration parameter is split into the outDuration, inDuration, and overlapDuration parameters. The outDuration parameter specifies the duration for displaying the transition in the previous video. The inDuration parameter specifies the duration for displaying the transition in the next video. The overlapDuration parameter specifies the overlapping duration between the two videos.
+-   The parameters of the addVideo and addImage methods for multi-video import are modified. The fadeDuration parameter is split into the outDuration, inDuration, and overlapDuration parameters. The outDuration parameter specifies the duration for displaying the transition in the previous video. The inDuration parameter specifies the duration for displaying the transition in the current video. The overlapDuration parameter specifies the overlapping duration between the two videos.
 -   The callback parameter of the EditorCallBack type is added to the AliyunEditorFactory.creatAliyunEditor method, which originally has only the uri parameter. The EditorCallback class is a new class that replaces the OnPlayCallback class.
 
     |Original method|New method|
@@ -690,7 +715,7 @@ SDK changes
 
 Others
 
--   The id parameter is added to the applyMusicMixWeight method. This version allows you to add multiple dubbing tracks. Therefore, IDs are needed to distinguish the tracks. For more information about this method, see API Reference.
+-   The id parameter is added to the applyMusicMixWeight method. This version allows you to add multiple dubbing tracks. Therefore, IDs are needed to distinguish the tracks. For more information about this method, see the SDK reference.
 -   The getExporter method is deleted. You can use the production methods in AliyunIEditor to produce videos.
 
     |Original method|New method|
@@ -702,5 +727,5 @@ Others
 -   The OnComposeCallback parameter is changed to the AliyunIComposeCallBack parameter in the AliyunICompose.startCompose method.
 -   The AliyunIEditor\#saveEffectToLocal\(\) method must be called before you create a production instance.
 
-**Note:** The release notes do not cover all changes to parameters of methods. If a parameter-related error is reported during compilation, you can modify your code based on the parameter description in the API Reference.
+**Note:** The release notes do not cover all changes to the parameters of methods. If a parameter-related error is reported during compilation, you can modify your code based on the parameter description in the SDK reference.
 
