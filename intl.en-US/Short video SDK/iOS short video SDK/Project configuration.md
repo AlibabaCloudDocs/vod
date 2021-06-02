@@ -6,7 +6,7 @@ Required environments are prepared. The following table describes the required e
 
 |Environment|Supported version|
 |-----------|-----------------|
-|Android|iOS 9.0 and later.|
+|iOS|iOS 9.0 and later.|
 |macOS High Sierra|macOS High Sierra 10.13 and later.|
 |Xcode|Xcode 9.0 and later. To download Xcode, visit [Mac App Store](https://apps.apple.com/cn/app/xcode/id497799835?mt=12).|
 
@@ -23,7 +23,7 @@ Procedure
 1.  Add dependencies to the Podfile file.
 
     ```
-    pod 'AliyunVideoSDKPro', '3.20.0'
+    pod 'AliyunVideoSDKPro', '3.21.0'
     pod 'QuCore-ThirdParty', '3.15.0'
     pod 'AlivcConan', '1.0.3'
     pod 'VODUpload'
@@ -47,7 +47,7 @@ Procedure
 
 ## Manually integrate the SDK \(Not recommended\)
 
-To manually integrate the SDK, you must download packages of the latest release from GitHub, including six frameworks and one bundle resource package.
+To manually integrate the SDK, you must download packages of the latest release from GitHub, including six frameworks and a bundle resource package.
 
 |Name|Type|Description|Download link|
 |----|----|-----------|-------------|
@@ -59,7 +59,7 @@ To manually integrate the SDK, you must download packages of the latest release 
 |VODUpload|Static framework|Upload framework of ApsaraVideo VOD|[Download link on GitHub](https://github.com/aliyunvideo/VODUpload/releases)|
 |AliyunOSSiOS|Static framework|OSS upload framework|[Download link on GitHub](https://github.com/aliyun/aliyun-oss-ios-sdk/releases)|
 
-In the preceding frameworks, AliyunVideoCore, alivcffmpeg, and AlivcConan are dynamic frameworks. When you manually integrate and release dynamic frameworks, take note of the following points:
+In the preceding frameworks, AliyunVideoCore, alivcffmpeg, and AlivcConan are dynamic frameworks. When you manually integrate and release dynamic frameworks, take note of the following items:
 
 1.  To add a dynamic framework, select the target. Then, add the dynamic framework in the **Embedded Binaries** section of the **General** tab.
 2.  To submit an application to App Store, you must strip dynamic frameworks of the x86-based simulator architecture. Otherwise, your application will be rejected. You can strip dynamic frameworks of the simulator architecture by using one of the following methods:
@@ -70,19 +70,17 @@ Procedure
 
 1.  Add dynamic frameworks.
 
-    Click the **General** tab. In the **Frameworks**, **Libraries**, and **Embedded Content** section, click **+**. Select **Add Other...** from the drop-down list and import the AliyunVideoCore.framework, AlivcConan.framework, and alivcffmpeg.framework files. After the frameworks are imported, select Embed &Sign.
+    Click the **General** tab. In the **Frameworks, Libraries, and Embedded Content** section, click **+**. Select **Add Other...** from the drop-down list and import the AliyunVideoCore.framework, AlivcConan.framework, and alivcffmpeg.framework files. After the frameworks are imported, select Embed & Sign.
 
 2.  Add static frameworks.
 
-    Click the **General** tab. In the **Frameworks**, **Libraries**, and **Embedded Content** section, click **+**. Select **Add Other...** from the drop-down list and import the AliyunVideoSDKPro.framework, AliyunOSSiOS.framework, and VODUpload.framework files.
+    Click the **General** tab. In the **Frameworks, Libraries, and Embedded Content** section, click **+**. Select **Add Other...** from the drop-down list and import the AliyunVideoSDKPro.framework, AliyunOSSiOS.framework, and VODUpload.framework files.
 
 3.  Add other frameworks.
 
-    Click the **General** tab. In the **Frameworks**, **Libraries**, and **Embedded Content** section, click **+** and import the MobileCoreServices.framework, SystemConfiguration.framework, and libresolv.tbd files.
+    Click the **General** tab. In the **Frameworks, Libraries, and Embedded Content** section, click **+** and import the MobileCoreServices.framework, SystemConfiguration.framework, and libresolv.tbd files.
 
-4.  If you are using the short video SDK Professional Edition,
-
-    import the AliyunVideoSDKPro.bundle resource package to your project.
+4.  If you are using the short video SDK in Professional Edition, import the AliyunVideoSDKPro.bundle resource package to your project.
 
 
 **Note:**
