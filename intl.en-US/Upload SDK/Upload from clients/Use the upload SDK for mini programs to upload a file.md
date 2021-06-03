@@ -177,7 +177,7 @@ import VODUpload from 'aliyun-upload-sdk-1.0.0.min.js'
             })
         ```
 
-        During upload, you can specify whether to enable the watermark and job priority features. The value of the userData parameter is a JSON object in string format. In this JSON object, you must set the first Vod parameter, as shown in the following sample code. You can specify attributes in the Vod parameter. For more information about the attributes supported by the userData parameter, see the [createUploadVideo](https://help.aliyun.com/document_detail/55407.html?spm=a2c4g.11186623.6.680.7dda6bd1kRRwXO) operation of ApsaraVideo VOD.
+        During upload, you can specify whether to enable the watermark and job priority features. The value of the userData parameter is a JSON object in string format. In this JSON object, you must set the first Vod parameter, as shown in the following sample code. You can specify attributes in the Vod parameter. For more information about the attributes supported by the userData parameter, see the [CreateUploadVideo](/intl.en-US/API Reference/Media upload/CreateUploadVideo.md) operation of ApsaraVideo VOD.
 
         ```
          var userData = '{"Vod":{"Title":"test","CateId":"234"}"}';
