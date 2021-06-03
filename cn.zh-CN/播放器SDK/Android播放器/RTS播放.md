@@ -12,8 +12,8 @@
 
     添加RTS SDK依赖有以下两种方式：
 
-    -   下载[RTS SDK](https://help.aliyun.com/document_detail/177373.html)，将RTS SDK的aar文件添加到项目的libs目录下，添加到gradle依赖中即可。
-    -   支持Maven依赖，详情请参见[集成移动端](https://help.aliyun.com/document_detail/185582.html)。
+    -   下载[RTS SDK](/cn.zh-CN/低延时直播/SDK下载.md)，将RTS SDK的aar文件添加到项目的libs目录下，添加到gradle依赖中即可。
+    -   支持Maven依赖，具体操作，请参见[集成移动端](/cn.zh-CN/低延时直播/移动端集成/移动端集成说明.md)。
 2.  Load低延迟so库
 
     在使用播放器的Activity内加入，示例如下：
