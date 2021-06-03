@@ -13,19 +13,19 @@ Updates the information about an application.
 |Action|String|Yes|UpdateAppInfo|The operation that you want to perform. Set the value to **UpdateAppInfo**. |
 |AppId|String|No|app-\*\*\*\*|The ID of the application.
 
- -   Default value: **app-1000000**.
+-   Default value: **app-1000000**.
 -   For more information, see [Overview](~~113600~~). |
 |AppName|String|No|test|The name of the application.
 
- -   The name can contain up to 128 characters in length.
+-   The name can contain up to 128 characters in length.
 -   The name can contain only UTF-8 characters. |
 |Description|String|No|my first app.|The description of the application.
 
- -   The description can contain up to 512 characters in length.
+-   The description can contain up to 512 characters in length.
 -   The description can contain only UTF-8 characters. |
 |Status|String|No|Disable|The status of the application. Valid values:
 
- -   **Normal**
+-   **Normal**
 -   **Disable** |
 
 ## Response parameters
@@ -65,7 +65,7 @@ Sample success responses
 
 For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/vod).
 
-The following table describes the common errors that this operation can return. For more information about errors common to all operations, see [Common errors](https://help.aliyun.com/document_detail/52841.html?spm=a2c4g.11186623.2.17.72657c55cS5tmj).
+The following table describes the common errors that this operation can return. For more information about errors common to all operations, see [Common errors](~~52841~~).
 
 |Error code
 
