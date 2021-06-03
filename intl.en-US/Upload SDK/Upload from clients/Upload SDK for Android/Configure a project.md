@@ -13,7 +13,7 @@ You can import the upload SDK by adding Maven dependencies or importing on-premi
 
         ```
         dependencies {
-            compile 'com.aliyun.video.android:upload:1.6.0'
+            compile 'com.aliyun.video.android:upload:1.6.2'
         }
         ```
 
