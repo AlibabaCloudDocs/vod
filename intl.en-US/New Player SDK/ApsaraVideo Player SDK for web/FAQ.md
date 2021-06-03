@@ -4,7 +4,7 @@ This topic provides answers to commonly asked questions about ApsaraVideo Player
 
 ## How do I choose a proper player?
 
-ApsaraVideo Player supports the HTML5 player, Flash player, and adaptive streaming mode. We recommend that you use the adaptive streaming mode so that ApsaraVideo Player selects the most suitable player based on the type of your terminal and browser and the streaming protocol. For more information, see [https://player.alicdn.com/aliplayer/setting/setting.html?spm=a2c4g.11186623.2.28.7224322cKcgNZj](https://player.alicdn.com/aliplayer/setting/setting.html?spm=a2c4g.11186623.2.28.7224322cKcgNZj).
+ApsaraVideo Player supports the HTML5 player, Flash player, and adaptive streaming mode. We recommend that you use the adaptive streaming mode so that ApsaraVideo Player selects the most suitable player based on the type of your terminal and browser and the streaming protocol. For more information, see [online Settings](https://player.alicdn.com/aliplayer/setting/setting.html?spm=a2c4g.11186623.2.28.7224322cKcgNZj).
 
 ## How do I enable the HTML5 player?
 
@@ -46,11 +46,11 @@ All browsers support the Flash player. The Flash player may be disabled by speci
 To drag the slider on the progress bar to a specified point in time for an MP4 or FLV video in the Flash player, make sure that the video data of the specified point in time can be obtained from Content Delivery Network \(CDN\). When the slider on the progress bar is dragged, the player sends a request containing the time range information to CDN. After CDN receives such a request, it returns the corresponding video data. To implement this feature, the following two conditions must be met:
 
 -   Index information, such as the timestamp of an MP4 video and meta information of an FLV video, must be contained in the file header. After the player parses the index information, the player obtains data points of the time range specified by the drag operation and sends a request containing the time range information to CDN.
--   CDN supports requests that contain the time range or byte range information. For more information about how to enable this feature in the CDN console, see [https://help.aliyun.com/document\_detail/27130.html?spm=a2c4g.11186623.2.32.31f8322cy6rBtt](https://help.aliyun.com/document_detail/27130.html?spm=a2c4g.11186623.2.32.31f8322cy6rBtt).
+-   CDN supports requests that contain the time range or byte range information. For more information about how to enable this feature in the CDN console, see [Configure video seeking](/intl.en-US/Domain Management/Video-related settings/Configure video seeking.md).
 
 ## How do I disable automatic full-screen playback in WeChat for Android?
 
-If you use an Android mobile phone, a video is played in full-screen mode in the Tencent browser or WeChat. By default, the Tencent browser hijacks the video tag to use the default player to play the video. In this case, the Dom element is overwritten. You cannot modify this default configuration of the Tencent browser. However, you can enable the immersive mode to prevent the Dom element from being overwritten. For more information, see [https://help.aliyun.com/document\_detail/62953.html?spm=a2c4g.11186623.2.33.31f8322csz6uNo](https://help.aliyun.com/document_detail/62953.html?spm=a2c4g.11186623.2.33.31f8322csz6uNo).
+If you use an Android mobile phone, a video is played in full-screen mode in the Tencent browser or WeChat. By default, the Tencent browser hijacks the video tag to use the default player to play the video. In this case, the Dom element is overwritten. You cannot modify this default configuration of the Tencent browser. However, you can enable the immersive mode to prevent the Dom element from being overwritten. For more information, see [How do I enable the immersive mode for the HTML5 player](/intl.en-US/FAQ/How do I enable the immersive mode for the HTML5 player?.md).
 
 ## How do I enable the autoplay feature in WeChat for iOS?
 
@@ -228,7 +228,7 @@ player.on('error',function  (e) {
 ## How do I disable automatic full-screen playback for my mobile phone?
 
 -   If you use an iOS mobile phone, set the playsinline attribute to **true** to disable automatic full-screen playback.
--   If you use an Android mobile phone, a video is played in full-screen mode in the Tencent browser or WeChat. By default, the Tencent browser hijacks the video tag to use the default player to play the video. In this case, the Dom element is overwritten. You cannot modify this default configuration of the Tencent browser. However, you can enable the immersive mode to prevent the Dom element from being overwritten. For more information, see [https://help.aliyun.com/document\_detail/62953.html?spm=a2c4g.11186623.2.33.31f8322csz6uNo](https://help.aliyun.com/document_detail/62953.html?spm=a2c4g.11186623.2.33.31f8322csz6uNo).
+-   If you use an Android mobile phone, a video is played in full-screen mode in the Tencent browser or WeChat. By default, the Tencent browser hijacks the video tag to use the default player to play the video. In this case, the Dom element is overwritten. You cannot modify this default configuration of the Tencent browser. However, you can enable the immersive mode to prevent the Dom element from being overwritten. For more information, see [How do I enable the immersive mode for the HTML5 player](/intl.en-US/FAQ/How do I enable the immersive mode for the HTML5 player?.md).
 
 ## How do I display the content in the highest available mode in Internet Explorer?
 
