@@ -12,8 +12,8 @@ The following section describes how to integrate RTS SDK into ApsaraVideo Player
 
     You can add the RTS SDK dependency by using the following methods:
 
-    -   Download [RTS SDK](https://help.aliyun.com/document_detail/177373.html), add the required AAR packages that RTS SDK contains to the libs directory of your project, and then add the reference to the packages to the Gradle dependencies part.
-    -   Add Maven dependencies. For more information, see [Integrate RTS SDKs for mobile clients](https://help.aliyun.com/document_detail/185582.html).
+    -   Download [RTS SDK](/intl.en-US/Real-Time Streaming/SDK download.md), add the required AAR packages that RTS SDK contains to the libs directory of your project, and then add the reference to the packages to the Gradle dependencies part.
+    -   Add Maven dependencies. For more information, see [Integrate RTS SDKs for mobile clients](/intl.en-US/Real-Time Streaming/Integration for mobile clients/Integrate RTS SDK for a mobile client with players.md).
 2.  Load low-latency SO libraries.
 
     Add the following code to load low-latency SO libraries for the activities of ApsaraVideo Player SDK for Android:
