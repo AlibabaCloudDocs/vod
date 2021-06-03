@@ -2,6 +2,12 @@
 
 本文为您介绍了阿里云Android上传SDK在不同更新时间对应的更新功能。
 
+## 2021-06-03
+
+|日期|版本|修改内容|下载地址|
+|--|--|----|----|
+|2021-06-03|V1.6.2|修复SDK稳定性问题。|[Android上传SDK及示例代码](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/upload/1.6.2/ApsaraVideo_Upload_v1.6.2_Android_20210602.zip)|
+
 ## 2020-06-23
 
 |日期|版本|修改内容|下载地址|
