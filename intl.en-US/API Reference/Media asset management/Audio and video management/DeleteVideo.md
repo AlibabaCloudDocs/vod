@@ -22,7 +22,7 @@ Deletes one or more videos at a time, including their mezzanine files, transcode
 |RequestId|String|25818875-5F78-4A\*\*\*\*\*F6-D7393642CA58|The ID of the request. |
 |ForbiddenVideoIds|List|73ab850b4f6f4\*\*\*\*\*b6e91d24d81d5|The IDs of the videos that cannot be deleted.
 
- **Note:** Generally, videos cannot be deleted if you do not have required [permissions](~~113600h~~). |
+**Note:** Generally, videos cannot be deleted if you do not have required [permissions](~~113600~~). |
 |NonExistVideoIds|List|93ab850b4f6f\*\*\*\*\*4b6e91d24d81d4|The IDs of the videos that do not exist. |
 
 ## Examples
