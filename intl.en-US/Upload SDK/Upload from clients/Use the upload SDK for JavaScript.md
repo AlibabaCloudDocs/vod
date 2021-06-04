@@ -203,7 +203,7 @@ This topic shows you how to install and use the upload SDK for JavaScript.
          uploader.addFile(event.target.files[i], null, null, null, paramData);
         ```
 
-        If you use STS tokens to upload media files, you can specify whether to enable the watermark and job priority features. The value of the paramData parameter is a JSON object in string format. In this JSON object, you must set the first Vod parameter, as shown in the following sample code. You can specify attributes in the Vod parameter. For more information about attributes supported by the paramData parameter, see [CreateUploadVideo](https://help.aliyun.com/document_detail/55407.html?spm=a2c4g.11186623.6.680.7dda6bd1kRRwXO).
+        If you use STS tokens to upload media files, you can specify whether to enable the watermark and job priority features. The value of the paramData parameter is a JSON object in string format. In this JSON object, you must set the first Vod parameter, as shown in the following sample code. You can specify attributes in the Vod parameter. For more information about attributes supported by the paramData parameter, see [CreateUploadVideo](/intl.en-US/API Reference/Media upload/CreateUploadVideo.md).
 
         ```
          var paramData = '{"Vod":{"Title":"test","CateId":"234"}"}';
