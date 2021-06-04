@@ -37,7 +37,7 @@ Download client SDKs
 
 **Note**
 
-We recommend that you use the PC client to upload large files or upload multiple files at a time. For more information, see [Upload media assets](https://help.aliyun.com/document_detail/86058.html).
+We recommend that you use the PC client to upload large files or upload multiple files at a time. For more information, see [Upload media assets](/intl.en-US/User Guide/Media library/Upload media assets.md).
 
 Download SDKs for web 
 ------------------------------------------
@@ -46,7 +46,7 @@ Download SDKs for web
 
 |              SDK               |                                                               Reference                                                               |                                                                                                                                                                                              Download link                                                                                                                                                                                              |
 |--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ApsaraVideo Player SDK for web | [Aliplayer Web Player](https://player.alicdn.com/aliplayer/index.html)                                               | [Integration](https://help.aliyun.com/document_detail/125570.html#topic5790)                                                                                                                                                                                                                                                                                                           |
+| ApsaraVideo Player SDK for web | [Aliplayer Web Player](https://player.alicdn.com/aliplayer/index.html)                                               | [Integration](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Integration.md)                                                                                                                                                                                                                                                                                                 |
 | Upload SDK for JavaScript      | [Use the upload SDK for JavaScript](/intl.en-US/Upload SDK/Upload from clients/Use the upload SDK for JavaScript.md) | * [Upload SDK V1.5.2 for JavaScript](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/upload/JS/aliyun-upload-sdk-1.5.2.zip)   * [Sample code (jQuery and Vue)](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/upload/JS/aliyun-upload-sdk-1.5.2demo.zip)    |
 
 
