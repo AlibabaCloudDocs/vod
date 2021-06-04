@@ -7,8 +7,8 @@ The upload SDK is an important part of ApsaraVideo. It supports interactions bet
 ## Preparations
 
 -   Service activation
-    -   An Alibaba Cloud account is created. Real-name verification is complete for the Alibaba Cloud account. For more information, see [Registration](https://account.aliyun.com/register/register.htm?oauth_callback=https%3A%2F%2Fvod.console.aliyun.com%2F&lang=zh) and [Real-name verification](https://help.aliyun.com/knowledge_list/37170.html).
-    -   ApsaraVideo VOD is activated and configured. For more information, see the [ApsaraVideo VOD product page](https://www.aliyun.com/product/vod) and [Get started with ApsaraVideo VOD](/intl.en-US/Quick Start/Get started with ApsaraVideo for VOD.md).
+    -   An Alibaba Cloud account is created. Real-name verification is complete for the Alibaba Cloud account. For more information, see [Registration](https://account.aliyun.com/register/register.htm?oauth_callback=https%3A%2F%2Fvod.console.aliyun.com%2F&lang=zh) and Real-name verification.
+    -   ApsaraVideo VOD is activated and configured. For more information, see the [ApsaraVideo VOD product page](https://www.aliyun.com/product/vod) and [Get started with ApsaraVideo VOD](/intl.en-US/Quick Start/Get started with ApsaraVideo VOD.md).
 -   Account preparation
 
     An AccessKey pair is created to access ApsaraVideo VOD. For more information, see [Overview](/intl.en-US/Developer Guide/Access authorization/Overview.md).
