@@ -37,7 +37,7 @@ SDK下载
 
 **说明**
 
-针对大文件、多批量的上传场景，建议运营人员使用PC客户端上传，请参见[媒资上传](https://help.aliyun.com/document_detail/86058.html)。
+针对大文件、多批量的上传场景，建议运营人员使用PC客户端上传，请参见[媒资上传](/cn.zh-CN/控制台指南/媒资库/媒资上传.md)。
 
 Web端SDK下载 
 ------------------------------
@@ -46,7 +46,7 @@ Web端SDK下载
 
 |       客户端       |                                        说明文档                                        |                                                                                                                                                                                       下载地址                                                                                                                                                                                       |
 |-----------------|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Web播放器          | [Web播放器使用说明](https://player.alicdn.com/aliplayer/index.html)      | [详见文档引入即可](https://help.aliyun.com/document_detail/125570.html#topic5790)                                                                                                                                                                                                                                                                                       |
+| Web播放器          | [Web播放器使用说明](https://player.alicdn.com/aliplayer/index.html)      | [详情见集成文档引入](/cn.zh-CN/播放器SDK/Web播放器/集成文档.md)                                                                                                                                                                                                                                                                                                                     |
 | JavaScript上传SDK | [JavaScript上传SDK使用说明](/cn.zh-CN/上传SDK/客户端上传/使用JavaScript上传SDK.md) | * [JavaScript上传SDK 1.5.2](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/upload/JS/aliyun-upload-sdk-1.5.2.zip)   * [示例代码（jquery和Vue）](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/upload/JS/aliyun-upload-sdk-1.5.2demo.zip)    |
 
 
