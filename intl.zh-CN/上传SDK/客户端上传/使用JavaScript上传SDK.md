@@ -203,7 +203,9 @@
          uploader.addFile(event.target.files[i], null, null, null, paramData);
         ```
 
-        STS方式上传时，可以选择是否启用水印和优先级，paramData是一个json对象字符串，第一级的Vod是必须的，Vod下面添加属性，paramData支持的属性请参见视频点播服务的接口[createUploadVideo](https://help.aliyun.com/document_detail/55407.html?spm=a2c4g.11186623.6.680.7dda6bd1kRRwXO)，接口示例如下：
+        STS方式上传时，可以选择是否启用水印和优先级，paramData是一个json对象字符串，第一级的Vod是必须的，Vod下面添加属性，paramData支持的属性。更多信息，请参见[获取视频上传地址和凭证](/intl.zh-CN/服务端API/媒体上传/获取视频上传地址和凭证.md)。
+
+        接口示例如下：
 
         ```
          var paramData = '{"Vod":{"Title":"test","CateId":"234"}"}';
