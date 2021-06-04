@@ -12,7 +12,7 @@
 
     添加framework有以下两种方式：
 
-    -   下载[RTS SDK](https://help.aliyun.com/document_detail/177373.html)，将RtsSDK.framework文件和和artcSource.framework 添加到General里的Embedded Binaries栏目。
+    -   下载[RTS SDK](/cn.zh-CN/低延时直播/SDK下载.md)，将RtsSDK.framework文件和和artcSource.framework 添加到General里的Embedded Binaries栏目。
     -   支持pod导入，动态将framework导入的方式。新增的artcSource.framework和RtsSDK.framework用以支持RTS。
 2.  设置播放器最大缓冲延迟等
 
