@@ -26,7 +26,6 @@ The following table describes the event types for which event notifications are 
 | LiveRecordVideoComposeStart | [LiveRecordVideoComposeStart](/intl.en-US/Developer Guide/Event notification/Events/LiveRecordVideoComposeStart.md) |
 | UploadByURLComplete         | [UploadByURLComplete](/intl.en-US/Developer Guide/Event notification/Events/UploadByURLComplete.md)                 |
 | CreateAuditComplete         | [CreateAuditComplete](/intl.en-US/Developer Guide/Event notification/Events/CreateAuditComplete.md)                 |
-| AIMediaAuditComplete        | [AIMediaAuditComplete](/intl.en-US/Developer Guide/Event notification/Events/AIMediaAuditComplete.md)               |
 | VideoAnalysisComplete       | [VideoAnalysisComplete](/intl.en-US/Developer Guide/Event notification/Events/VideoAnalysisComplete.md)             |
 | AttachedMediaUploadComplete | [AttachedMediaUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/AttachedMediaUploadComplete.md) |
 | ProduceMediaComplete        | [ProduceMediaComplete](/intl.en-US/Developer Guide/Event notification/Events/ProduceMediaComplete.md)               |
@@ -153,4 +152,4 @@ When a callback fails, ApsaraVideo VOD retries the callback every **1 second** .
 FAQ 
 ------------------------
 
-If you encounter any problems when you use the event notification feature, see [FAQ about event notification](/intl.en-US/FAQ/Event notification.md).
+If you encounter any problems when you use the event notification feature, see [FAQ about event notification](/intl.en-US/FAQ/FAQ about event notifications.md).
