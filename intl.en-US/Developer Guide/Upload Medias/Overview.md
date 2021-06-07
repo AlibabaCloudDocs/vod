@@ -68,7 +68,7 @@ The following table describes the methods that you can use to upload media files
     -   Video processing method: After a video is uploaded, ApsaraVideo VOD takes thumbnail snapshots of the video and processes the video by using a specified processing method.
         -   You can specify a transcoding template group by setting the `TemplateGroupId` parameter to enable video transcoding. You can also specify not to transcode the video \(the `no transcoding` template is used\). If you do not specify a transcoding template group, the global transcoding settings are used by default.
         -   You can also specify the WorkFlowId parameter to process the video by using the specified workflow. After a video is uploaded, the specified workflow is executed.
-    **Note:** For more information about parameters for the preceding additional settings, see the "Media upload" section in [List of operations by function](/intl.en-US/API Reference/API overview.md).
+    **Note:** For more information about parameters for the preceding additional settings, see the "Media upload" section in [List of operations by function](/intl.en-US/API Reference/List of operations by function.md).
 
 -   **Acceleration**
 
@@ -82,7 +82,7 @@ The following table describes the methods that you can use to upload media files
 
     -   Examples: `{"Type":"oss","Domain":"https://oss-accelerate.aliyuncs.com"}`
         -   Type: the acceleration mode. Set it to oss.
-        -   Domain: the accelerated domain name, which corresponds to the [accelerate endpoints](https://help.aliyun.com/document_detail/31837.html#concept-zt4-cvy-5db) in OSS. The default value is https.
+        -   Domain: the accelerated domain name, which corresponds to the [accelerate endpoints](/intl.en-US/Developer Guide/Endpoint/Regions and endpoints.md) in OSS. The default value is https.
     -   The following example shows how to set the preceding upload acceleration parameters:
 
         ```
@@ -126,15 +126,15 @@ After media files are uploaded, you can receive real-time event notifications, p
     You can manage uploaded media files such as source video files, transcoded stream files, and image files in ApsaraVideo VOD. You can manage media resources by using one of the following methods:
 
     -   Manage media resources in the ApsaraVideo VOD console. For more information, see [Media management](/intl.en-US/User Guide/Media library/Manage media assets.md).
-    -   Call media management API operations. For more information, see the "Media management" section in [List of operations by function](/intl.en-US/API Reference/API overview.md).
+    -   Call media management API operations. For more information, see the "Media management" section in [List of operations by function](/intl.en-US/API Reference/List of operations by function.md).
     **Note:** For more information about media management, see [Overview](/intl.en-US/Developer Guide/Media asset management/Overview.md) \(this topic describes how to query, search for, and update information about media resources\), [Download media files](/intl.en-US/Developer Guide/Media asset management/Download media files.md), and [Delete media files](/intl.en-US/Developer Guide/Media asset management/Delete media files.md).
 
 -   **Playback**
 
     When a video is uploaded, it is not immediately ready for playback. ApsaraVideo VOD needs to confirm that the video has been received. You can determine whether the video is ready for playback based on `event notifications`.
 
-    -   For a video \(or audio\) that does not need to be transcoded, you can play it after you receive the [FileUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/FileUploadComplete.md) event notification. You can call the [GetPlayInfo](/intl.en-US/API Reference/Video playback/GetPlayInfo.md) operation to obtain the playback URL.
+    -   For a video \(or audio\) that does not need to be transcoded, you can play it after you receive the [FileUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/FileUploadComplete.md) event notification. You can call the [GetPlayInfo](/intl.en-US/API Reference/Audio and video playback/GetPlayInfo.md) operation to obtain the playback URL.
     -   For a transcoded video, you can play it after you receive the [StreamTranscodeComplete](/intl.en-US/Developer Guide/Event notification/Events/StreamTranscodeComplete.md) event notification. To ensure that streams in all definitions can be obtained, we recommend that you play the video after you receive the [TranscodeComplete](/intl.en-US/Developer Guide/Event notification/Events/TranscodeComplete.md) event notification.
-    You can also use the No Transcoding template to upload videos so that they are not transcoded. After you receive the [FileUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/FileUploadComplete.md) event notification, you can call the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitTranscodeJobs.md), [SubmitSnapshotJob](/intl.en-US/API Reference/Media processing/Initiate Process/SubmitSnapshotJob.md), or [SubmitAIMediaAuditJob]() operation to process the uploaded videos.
+    You can also use the No Transcoding template to upload videos so that they are not transcoded. After you receive the [FileUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/FileUploadComplete.md) event notification, you can call the [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitTranscodeJobs.md), or [SubmitSnapshotJob](/intl.en-US/API Reference/Media processing/Process initiation/SubmitSnapshotJob.md) operation to process the uploaded videos.
 
 
