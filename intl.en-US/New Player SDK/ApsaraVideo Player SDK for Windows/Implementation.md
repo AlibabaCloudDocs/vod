@@ -49,7 +49,6 @@ This section describes how to use ApsaraVideo Player SDK for Windows to play vid
     mPlayerPtr->prepare();
     ```
 
-    -   For more information about playback in ApsaraVideo for Media Processing, see [Play videos]().
     -   For more information about playback based on a playback credential, see [Use playback credentials to play videos](/intl.en-US/Developer Guide/Video play/Use playback credentials to play videos.md).
     -   For more information about access regions, see [VOD centers and endpoints](/intl.en-US/Developer Guide/VOD centers and endpoints.md).
 4.  Set the UI view. Sample code:
