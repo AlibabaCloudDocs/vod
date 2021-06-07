@@ -23,7 +23,7 @@ To use the online editing service, you must use Google Chrome. The following tab
 
 The following figure shows the graphical user interface \(GUI\) for online editing.
 
-![Overview](../images/p240210.jpg)
+![Overview](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1086503261/p240210.jpg)
 
 -   Material area \(1 in the preceding figure\)
 -   Video preview area \(2 in the preceding figure\)
