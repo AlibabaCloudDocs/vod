@@ -21,7 +21,7 @@ The following figure shows the process to upload from clients.
 
 ## Prerequisites
 
--   An Alibaba Cloud account is created on the [Create Your Alibaba Cloud Account](https://account.aliyun.com/register/register.htm?oauth_callback=https://vod.console.aliyun.com/&lang=zh) page, [real-name verification](https://help.aliyun.com/knowledge_list/37170.html) is completed, and [ApsaraVideo VOD](https://www.aliyun.com/product/vod) is activated.
+-   An Alibaba Cloud account is created on the [Create Your Alibaba Cloud Account](https://account.aliyun.com/register/register.htm?oauth_callback=https://vod.console.aliyun.com/&lang=zh) page, real-name verification is completed, and [ApsaraVideo VOD](https://www.aliyun.com/product/vod) is activated.
 -   An AccessKey pair is obtained to access ApsaraVideo VOD. You can create an AccessKey pair for your Alibaba Cloud account on the [AccessKey Management](https://ak-console.aliyun.com/?spm=5176.doc57741.2.8.uLYY2M#/accesskey) page in the Alibaba Cloud Management Console. Alternatively, you can create a RAM user in the [RAM console](https://ram.console.aliyun.com/?spm=5176.doc57741.2.2.fQnI2T#/user/list) and grant the user the permission \(such as `AliyunVODFullAccess`\) to access ApsaraVideo VOD. For more information, see [Create and grant permissions to a RAM user](/intl.en-US/Developer Guide/Access authorization/Create and grant permissions to a RAM user.md).
 
 ## Authorizations
@@ -30,8 +30,8 @@ When medial files are uploaded from clients, the files are directly uploaded to 
 
 Client upload SDKs support the following authorization methods:
 
--   [Use upload URLs and credentials](/intl.en-US/Upload SDK/Client upload/Use the upload URL and credential.md)
--   [Use STS](/intl.en-US/Upload SDK/Client upload/Use STS.md)
+-   [Use upload URLs and credentials](/intl.en-US/Upload SDK/Upload from clients/Use upload URLs and credentials to upload media files.md)
+-   [Use STS](/intl.en-US/Upload SDK/Upload from clients/Use STS tokens to upload media files.md)
 
 **Note:** **By default, ApsaraVideo VOD uses upload URLs and credentials for uploads.** This method is more advantageous over STS. For a comparison between the two methods, see [Comparison between credentials and STS](/intl.en-US/Developer Guide/Access authorization/Comparison between credentials and STS.md).
 
@@ -39,7 +39,7 @@ Client upload SDKs support the following authorization methods:
 
 ApsaraVideo VOD provides three client upload SDKs. For more information, see the following topics:
 
--   Upload SDK for Android: [Upload files](/intl.en-US/Upload SDK/Client upload/Android upload SDK/Multipart upload.md).
--   Upload SDK for iOS: [Upload files](/intl.en-US/Upload SDK/Client upload/iOS upload SDK/Multipart upload.md).
--   Web upload SDK: [Use the upload SDK for JavaScript](/intl.en-US/Upload SDK/Client upload/JavaScript upload SDK.md).
+-   Upload SDK for Android: [Upload files](/intl.en-US/Upload SDK/Upload from clients/Upload SDK for Android/Upload a file.md).
+-   Upload SDK for iOS: [Upload files](/intl.en-US/Upload SDK/Upload from clients/Upload SDK for iOS/Upload a file.md).
+-   Web upload SDK: [Use the upload SDK for JavaScript](/intl.en-US/Upload SDK/Upload from clients/Use the upload SDK for JavaScript.md).
 
