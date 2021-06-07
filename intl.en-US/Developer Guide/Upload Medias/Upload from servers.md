@@ -21,7 +21,7 @@ The following figure shows the process of uploading files from servers.
 
 ## Prerequisites
 
--   An Alibaba Cloud account is created on the [Create Your Alibaba Cloud Account](https://account.aliyun.com/register/register.htm?oauth_callback=https://vod.console.aliyun.com/&lang=zh) page, [real-name verification](https://help.aliyun.com/knowledge_list/37170.html) is completed, and [ApsaraVideo VOD](https://www.aliyun.com/product/vod) is activated.
+-   An Alibaba Cloud account is created on the [Create Your Alibaba Cloud Account](https://account.aliyun.com/register/register.htm?oauth_callback=https://vod.console.aliyun.com/&lang=zh) page, real-name verification is completed, and [ApsaraVideo VOD](https://www.aliyun.com/product/vod) is activated.
 -   An AccessKey pair to access ApsaraVideo VOD is obtained. You can create an AccessKey pair for your Alibaba Cloud account on the [AccessKey Management](https://ak-console.aliyun.com/?spm=5176.doc57741.2.8.uLYY2M#/accesskey) page in the Alibaba Cloud Management Console. Alternatively, you can create a RAM user in the [RAM console](https://ram.console.aliyun.com/?spm=5176.doc57741.2.2.fQnI2T#/user/list) and grant the user the permission \(such as `AliyunVODFullAccess`\) to access ApsaraVideo VOD. For more information, see [Create and grant permissions to a RAM user](/intl.en-US/Developer Guide/Access authorization/Create and grant permissions to a RAM user.md).
 
 ## Upload methods
