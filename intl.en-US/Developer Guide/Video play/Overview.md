@@ -38,11 +38,11 @@ You can use the one of the following methods to play audio and video files:
 
 You can use one of the following methods to obtain the playback URLs:
 
-* Directly obtain playback URLs: View the event notification after transcoding is complete or call the [GetPlayInfo](/intl.en-US/API Reference/Video playback/GetPlayInfo.md) operation.
+* Directly obtain playback URLs: View the event notification after transcoding is complete or call the [GetPlayInfo](/intl.en-US/API Reference/Audio and video playback/GetPlayInfo.md) operation.
 
   
 
-* Automatically obtain playback URLs based on playback credentials: Use ApsaraVideo Player SDK by calling the [GetVideoPlayAuth](/intl.en-US/API Reference/Video playback/GetVideoPlayAuth.md) operation to obtain playback credentials. ApsaraVideo Player SDK can automatically obtain playback URLs based on playback credentials.
+* Automatically obtain playback URLs based on playback credentials: Use ApsaraVideo Player SDK by calling the [GetVideoPlayAuth](/intl.en-US/API Reference/Audio and video playback/GetVideoPlayAuth.md) operation to obtain playback credentials. ApsaraVideo Player SDK can automatically obtain playback URLs based on playback credentials.
 
   
 
@@ -85,7 +85,7 @@ Prerequisites
 
     
   
-  * Videos whose `Status` is **Checking** or **Blocked** can be played only in the ApsaraVideo VOD console or from IP addresses that have been added to review security groups. You can add IP addresses to [review security groups](/intl.en-US/Developer Guide/Media review/Review security IP address.md) by using the API or SDK.
+  * Videos whose `Status` is **Checking** or **Blocked** can be played only in the ApsaraVideo VOD console or from IP addresses that have been added to review security groups. You can add IP addresses to [review security groups](/intl.en-US/Developer Guide/Media review/Security IP address preview.md) by using the API or SDK.
 
     
   
@@ -95,7 +95,7 @@ Prerequisites
 * **Judgment methods** 
 
   After you upload a video, the video is not immediately ready for playback. ApsaraVideo VOD must confirm that the video is completely received. You can determine whether videos are ready for playback based on **event notifications** .
-  * You can play a video or audio that does not need to be transcoded when you receive a [FileUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/FileUploadComplete.md) event notification. You can call the [GetPlayInfo](/intl.en-US/API Reference/Video playback/GetPlayInfo.md) operation to obtain the playback URL.
+  * You can play a video or audio that does not need to be transcoded when you receive a [FileUploadComplete](/intl.en-US/Developer Guide/Event notification/Events/FileUploadComplete.md) event notification. You can call the [GetPlayInfo](/intl.en-US/API Reference/Audio and video playback/GetPlayInfo.md) operation to obtain the playback URL.
 
     
   
@@ -114,7 +114,7 @@ Playback mode
 
 * Use the ApsaraVideo VOD console to preview videos
 
-  * You can preview a video after you choose **[Video](https://vod.console.aliyun.com/#/media/video/list)** **[and Audio](https://vod.console.aliyun.com/#/media/video/list)** in the ApsaraVideo VOD console. An encrypted stream of the video is preferentially played.
+  * You can preview a video after you choose [Video](https://vod.console.aliyun.com/#/media/video/list)[and Audio](https://vod.console.aliyun.com/#/media/video/list) in the ApsaraVideo VOD console. An encrypted stream of the video is preferentially played.
 
     
   
@@ -132,11 +132,11 @@ Playback mode
 
 * Integrate ApsaraVideo Player SDK
 
-  * You can obtain and transmit the playback credential of a video from the ApsaraVideo VOD server to your player. This method provides higher security. For more information, see [Use playback credentials for playback](/intl.en-US/Developer Guide/Video play/Use playback credentials.md).
+  * You can obtain and transmit the playback credential of a video from the ApsaraVideo VOD server to your player. This method provides higher security. For more information, see [Use playback credentials for playback](/intl.en-US/Developer Guide/Video play/Use playback credentials to play videos.md).
 
     
   
-  * ApsaraVideo Player can play a video from a playback URL. Therefore, you can send the obtained playback URL to ApsaraVideo Player for playback. For more information, see [Use playback credentials for playback](/intl.en-US/Developer Guide/Video play/Use playback URLs.md).
+  * ApsaraVideo Player can play a video from a playback URL. Therefore, you can send the obtained playback URL to ApsaraVideo Player for playback. For more information, see [Use playback credentials for playback](/intl.en-US/Developer Guide/Video play/Obtain playback URLs to play videos.md).
 
     
   
@@ -150,7 +150,7 @@ Playback mode
 
 * Integrate third-party players
 
-  * You can integrate a third-party player to [obtain playback URLs](/intl.en-US/Developer Guide/Video play/Use playback URLs.md) for playback.
+  * You can integrate a third-party player to [obtain playback URLs](/intl.en-US/Developer Guide/Video play/Obtain playback URLs to play videos.md) for playback.
 
     
   
@@ -169,7 +169,7 @@ Playback URLs
 
 * Configure a domain name for CDN
 
-  If a domain name for CDN is configured in the ApsaraVideo VOD console, playback URLs are file URLs of CDN. You can view playback URLs on the **Video and Audio** page in the ApsaraVideo VOD console. after you click Manage in the Actions column and click the Video URL tab. Playback URLs are classified into fixed URLs and dynamic URLs, which is based on whether URL authentication is enabled. For more information about how to enable and configure URL authentication, see [URL authentication](/intl.en-US/Developer Guide/Video security/URL signing.md).
+  If a domain name for CDN is configured in the ApsaraVideo VOD console, playback URLs are file URLs of CDN. You can view playback URLs on the Video and Audio page in the ApsaraVideo VOD console. after you click Manage in the Actions column and click the Video URL tab. Playback URLs are classified into fixed URLs and dynamic URLs, which is based on whether URL authentication is enabled. For more information about how to enable and configure URL authentication, see [URL authentication](/intl.en-US/Developer Guide/Video security/URL authentication.md).
   * Fixed URLs
 
     are URLs that do not contain authentication information (`auth_key`). They are generated when URL authentication is disabled. Fixed URLs are permanently valid and are suitable for scenarios that have low security requirements. By default, URL authentication is disabled for a domain name when URL authentication is configured in the ApsaraVideo VOD console.
@@ -177,7 +177,7 @@ Playback URLs
   
   * Dynamic URLs
 
-    are dynamically generated and expire after a specific period of time. They are suitable for scenarios that have high security requirements. The default validity period of a dynamic URL is determined by the `Default Validity Period` parameter that you set when you enable URL authentication. You can set the validity period when the [playback URL is generated](/intl.en-US/Developer Guide/Video security/URL signing.md) or [playback URL is obtained](/intl.en-US/API Reference/Video playback/GetPlayInfo.md). When you access a playback URL after the URL expires, CDN returns an `HTTP 403` status code.
+    are dynamically generated and expire after a specific period of time. They are suitable for scenarios that have high security requirements. The default validity period of a dynamic URL is determined by the `Default Validity Period` parameter that you set when you enable URL authentication. You can set the validity period when the [playback URL is generated](/intl.en-US/Developer Guide/Video security/URL authentication.md) or [playback URL is obtained](/intl.en-US/API Reference/Audio and video playback/GetPlayInfo.md). When you access a playback URL after the URL expires, CDN returns an `HTTP 403` status code.
 
     Example:
 
@@ -199,7 +199,7 @@ Playback URLs
 
 * No domain name for CDN is configured
 
-  * If no domain name for CDN is configured, playback URLs are object URLs of OSS and URL authentication cannot be used. In this case, OSS authentication information is generated by default. For more information, see [Generate a signed URL](/intl.en-US/API Reference/Access control/Generate a signed URL.md) in the OSS documentation. You can still use the `AuthTimeout` parameter to specify the expiration time of OSS URLs when you call the [GetPlayInfo](/intl.en-US/API Reference/Video playback/GetPlayInfo.md) operation. However, you cannot customize authentication information based on the AccessKey pair.
+  * If no domain name for CDN is configured, playback URLs are object URLs of OSS and URL authentication cannot be used. In this case, OSS authentication information is generated by default. For more information, see [Generate a signed URL](/intl.en-US/API Reference/Access control/Generate a signed URL.md) in the OSS documentation. You can still use the `AuthTimeout` parameter to specify the expiration time of OSS URLs when you call the [GetPlayInfo](/intl.en-US/API Reference/Audio and video playback/GetPlayInfo.md) operation. However, you cannot customize authentication information based on the AccessKey pair.
 
     
   
@@ -220,7 +220,7 @@ Playback security (limits on playback and download)
 
 * Video security
 
-  ApsaraVideo VOD protects your video content by using a variety of measures, which include [access control](/intl.en-US/Developer Guide/Video security/Access control.md), [URL authentication](/intl.en-US/Developer Guide/Video security/URL signing.md), and video encryption. Video encryption includes [Alibaba Cloud video encryption](/intl.en-US/Developer Guide/Video security/Alibaba Cloud video encryption.md) and [HLS Encryption](/intl.en-US/Developer Guide/Video security/Standard HLS encryption.md). For more information, see [Overview](/intl.en-US/Developer Guide/Video security/Overview.md).
+  ApsaraVideo VOD protects your video content by using a variety of measures, which include [access control](/intl.en-US/Developer Guide/Video security/Access control.md), [URL authentication](/intl.en-US/Developer Guide/Video security/URL authentication.md), and video encryption. Video encryption includes [Alibaba Cloud video encryption](/intl.en-US/Developer Guide/Video security/Alibaba Cloud video encryption.md) and [HLS Encryption](/intl.en-US/Developer Guide/Video security/HLS Encryption.md). For more information, see [Overview](/intl.en-US/Developer Guide/Video security/Overview.md).
   
 
 * Account security
