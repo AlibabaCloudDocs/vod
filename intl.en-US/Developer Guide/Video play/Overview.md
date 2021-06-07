@@ -114,7 +114,7 @@ Playback mode
 
 * Use the ApsaraVideo VOD console to preview videos
 
-  * You can preview a video after you choose [Video](https://vod.console.aliyun.com/#/media/video/list)[and Audio](https://vod.console.aliyun.com/#/media/video/list) in the ApsaraVideo VOD console. An encrypted stream of the video is preferentially played.
+  * You can preview a video after you choose [Video and Audio](https://vod.console.aliyun.com/#/media/video/list) in the ApsaraVideo VOD console. An encrypted stream of the video is preferentially played.
 
     
   
