@@ -199,79 +199,79 @@ Sample success responses
 
 访问[错误中心](https://error-center.alibabacloud.com/status/product/vod)查看更多错误码。
 
-## 接口错误码
+## Common errors
 
-下表列举了本接口特有的错误码。
+The following table describes the common errors that this operation can return.
 
-|错误代码
+|Error code
 
-|错误信息
+|Error message
 
-|HTTP 状态码
+|HTTP status code
 
-|说明 |
-|------|------|----------|----|
+|Description |
+|------------|---------------|------------------|-------------|
 |Throttling
 
 |Request was denied due to request throttling.
 
 |503
 
-|请求被流量控制限制。 |
+|The error message returned because the request was denied due to throttling. |
 |OperationDenied
 
 |Your account does not open VOD service yet.
 
 |403
 
-|未开通VOD服务。 |
+|The error message returned because ApsaraVideo VOD has not been activated for your Alibaba Cloud account. |
 |OperationDenied
 
 |Your VOD service is suspended.
 
 |403
 
-|VOD服务已被停止。 |
+|The error message returned because ApsaraVideo VOD has been suspended for your Alibaba Cloud account. |
 |InvalidParameter
 
 |Invalid Parameter.
 
 |400
 
-|参数错误。 |
+|The error message returned because one or more parameters are invalid. |
 |InvalidParameterAliUid
 
 |Invalid Parameter AliUid.
 
 |400
 
-|AliUid参数错误。 |
+|The error message returned because the value of the AliUid parameter is invalid. |
 |InvalidParameterStartTime
 
 |Invalid Parameter StartTime.
 
 |400
 
-|StartTime参数错误。 |
+|The error message returned because the value of the StartTime parameter is invalid. |
 |InvalidParameterEndTime
 
 |Invalid Parameter EndTime.
 
 |400
 
-|EndTime参数错误。 |
+|The error message returned because the value of the EndTime parameter is invalid. |
 |InvalidTimeRange
 
 |StartTime and EndTime range should less than 1 month.
 
 |400
 
-|EndTime和StartTime差值不能超过31天。 |
+|The error message returned because the time range that is specified by the StartTime and EndTime parameters exceeds 31 days. |
 |InvalidParameterRegion
 
 |Invalid Parameter Region.
 
 |400
 
-|Region参数错误。 |
+|The error message returned because the value of the Region parameter is invalid. |
 
