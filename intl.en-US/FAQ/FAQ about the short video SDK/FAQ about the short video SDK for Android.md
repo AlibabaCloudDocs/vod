@@ -10,7 +10,7 @@ In the short video SDK V3.5.0 for Android or earlier, you must call the AliyunIE
 
 In the EffectBean class, the startTime parameter specifies a point in time in the main stream instead of the effect material stream, which is when the specified effect starts working. In the short video SDK V3.6.0 for Android and later, the streamStartTime parameter is added to specify a point in time in the effect material stream, which is when the specified effect starts working. If you use the short video SDK V3.6.0 for Android and later, you can set the streamStartTime parameter to meet your business needs. If you use an earlier version, you must crop the effect material stream to add background music \(BGM\) to a video.
 
-![](../images/p179087.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3130603261/p179087.png)
 
 As shown in the preceding figure, when the main stream reaches the 10-second mark, the BGM starts from the 3-second mark of the effect material stream. When the BGM reaches the 10-second mark of the effect material stream, the BGM starts again from the 3-second mark. When the BGM reaches the 6-second mark of the effect material stream, the main stream reaches the 20-second mark. At this point in time, the BGM ends.
 
