@@ -50,10 +50,11 @@ Every response returns a unique request ID regardless of whether the call is suc
 **XML format** 
 
         <? xml version="1.0" encoding="UTF-8"? >
-        <!-Result root node--> 
-        <Operation name+Response><!-Return request tag-->
+        <!--Result root node--> 
+        <Operation name+Response>
+                <!--Return request tag-->
                 <RequestId>4C467B38-3910-447D-87BC-AC049166F216</RequestId>
-            <!---Return result data--> 
+            <!--Return result data--> 
         </Operation name+Response>
                     
 
