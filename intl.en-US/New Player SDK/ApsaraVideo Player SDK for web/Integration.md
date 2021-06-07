@@ -84,8 +84,8 @@ ApsaraVideo Player SDK for web supports playback in Flash and HTML5 players.
 
     Encrypted playback:
 
-    -   For more information about encrypted playback in ApsaraVideo VOD, see [Alibaba Cloud video encryption](/intl.en-US/Developer Guide/Video security/Alibaba Cloud video encryption.md).
-    -   For more information about encrypted playback in ApsaraVideo for Media Processing, see [Encryption]().
+    For more information about encrypted playback in ApsaraVideo VOD, see [Alibaba Cloud video encryption](/intl.en-US/Developer Guide/Video security/Alibaba Cloud video encryption.md).
+
     **Note:** We recommend that you use Google Chrome to play videos on which Alibaba Cloud proprietary cryptography is performed.
 
 -   Enable anti-debugging for Alibaba Cloud proprietary cryptography
@@ -155,12 +155,7 @@ If you need to use an HTML5 player, reference a .css file with the following con
 
 ## SDK usage
 
-In addition to video playback by using video source files, ApsaraVideo Player SDK can also play videos by ApsaraVideo.
-
--   For more information about ApsaraVideo VOD, see [Use playback credentials to play videos](/intl.en-US/Developer Guide/Video play/Use playback credentials to play videos.md).
--   For more information about ApsaraVideo for Media Processing, see [Play videos]().
-
-The following code provides an example:
+In addition to video playback by using video source files, ApsaraVideo Player SDK can also play videos by ApsaraVideo.For more information about ApsaraVideo VOD, see [Use playback credentials to play videos](/intl.en-US/Developer Guide/Video play/Use playback credentials to play videos.md).The following code provides an example:
 
 ```
 <!DOCTYPE html>
@@ -212,7 +207,6 @@ You can configure the player settings on the [Online Settings](https://player.al
 **Note:**
 
 -   Set the isLive parameter to true for the playback of live streams.
--   For more information about the playback parameters in ApsaraVideo for Media Processing, see [Play videos]().
 -   For more information about the methods in ApsaraVideo VOD, see [Attributes and methods](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Attributes and methods.md).
 
 ## QR code for demos
