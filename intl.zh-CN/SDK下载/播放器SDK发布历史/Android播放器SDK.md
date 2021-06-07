@@ -2,6 +2,18 @@
 
 本文为您介绍了阿里云Android播放器在不同更新时间对应的更新功能。
 
+## 2021-06-07
+
+|日期|版本|修改内容|历史版本|
+|--|--|----|----|
+|2021-06-07|V5.4.1|-   支持音视频播放的数据回调。
+-   优化dash的兼容性。
+-   优化直播多码率切换。
+-   完善媒体信息上报。
+-   支持起播后设置view。
+
+|[Android播放器SDK 5.4.1](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.4.1/ApsaraVideo_videoPlay_v5.4.1_Android_20210607.zip)|
+
 ## 2021-05-14
 
 |日期|版本|修改内容|历史版本|
