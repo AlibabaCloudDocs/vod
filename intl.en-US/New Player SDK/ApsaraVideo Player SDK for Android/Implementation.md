@@ -152,7 +152,7 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
      aliyunVodPlayer.prepare();
     ```
 
-    **Note:** For more information about the video playback process and concepts in ApsaraVideo for Media Processing, see [Video playback]().
+    **Note:**
 
     For more information about the process of using the playback credential for playback, see [Use playback credentials](/intl.en-US/Developer Guide/Video play/Use playback credentials to play videos.md).
 
