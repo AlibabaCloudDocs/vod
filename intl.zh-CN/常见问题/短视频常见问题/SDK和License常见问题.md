@@ -14,5 +14,5 @@
 
 1.  确保已经购买点播套餐或者发送申请试用邮件。
 2.  iOS确保bundleID和申请试用的bundleid是一致的。
-3.  Android确保包名和签名（md5）获取是否一致。这里提供一个[签名获取工具](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/57134/cn_zh/1500877517694/app_signatures%20%281%29.apk)，安装后参考详细步骤。
+3.  Android确保包名和签名（md5）获取是否一致。这里提供一个[签名获取工具](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/57134/cn_zh/1500877517694/app_signatures%20%281%29.apk)，安装后参考详细步骤。
 
