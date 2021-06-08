@@ -12,7 +12,7 @@
 
 ## 如何购买专业版SDK
 
-发送试用邮件之后会有商务经理同您沟通。具体专业版和其他版本的区别参考：[短视频SDK](https://help.aliyun.com/document_detail/53407.html?spm=5176.doc52848.6.665.TuNP1V)。
+发送试用邮件之后会有商务经理同您沟通。具体专业版和其他版本的区别，请参见：[短视频SDK](/cn.zh-CN/短视频SDK/产品介绍.md)。
 
 ## 提示License Failed
 
