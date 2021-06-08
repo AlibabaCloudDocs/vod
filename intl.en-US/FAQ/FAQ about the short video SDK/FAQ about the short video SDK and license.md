@@ -6,13 +6,9 @@ This topic provides answers to some frequently asked questions on the use, free 
 
 To apply for a free trial, send your company name, your application name, the SDK edition that you need, the contact name, the contact number, the application bundle ID, the package name, and the MD5-based signature to videosdk@service.aliyun.com, or contact your business manager. ApsaraVideo VOD provides a one-month free trial by default. To extend the free trial period, you can apply for a new free trial.
 
-## Can I use the short video SDK for free?
-
-Yes, you can use the short video SDK for free if you purchase an ApsaraVideo VOD package. For more information, see [All-in-one solutions](https://www.aliyun.com/solution/media/videopackage?spm=5176.8810273.766245.1.jzTahO).
-
 ## How do I purchase the short video SDK Professional Edition?
 
-Send an email to apply for trial use and wait until a business manager contacts you. For more information about the differences between the Professional Edition and other editions, see [Short video SDK](https://help.aliyun.com/document_detail/53407.html?spm=5176.doc52848.6.665.TuNP1V).
+Send an email to apply for trial use and wait until a business manager contacts you. Detailed information about features, see [Short video SDK](/intl.en-US/Short video SDK/Introduction.md).
 
 ## What can I do if the "License Failed" error is returned?
 
