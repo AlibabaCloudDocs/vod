@@ -30,7 +30,7 @@ The diagnostic information includes the operating system, browser, IP address, a
 
 You need to configure the following items to obtain a more accurate diagnosis result: 
 
-* If Referer-based hotlink protection is enabled for the domain name for playback, add `player.alicdn.com` to the whitelist. For more information, see [IP address](/intl.en-US/User Guide/Domain management/Access control/IP address blacklist or whitelist.md)[blacklist](/intl.en-US/User Guide/Domain management/Access control/IP address blacklist or whitelist.md)[or whitelist](/intl.en-US/User Guide/Domain management/Access control/IP address blacklist or whitelist.md).![Add the domain name for playback to the whitelist](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9601442261/p271381.png)
+* If Referer-based hotlink protection is enabled for the domain name for playback, add `player.alicdn.com` to the whitelist. For more information, see [IP address blacklist or whitelist](/intl.en-US/User Guide/Domain management/Access control/IP address blacklist or whitelist.md).![Add the domain name for playback to the whitelist](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9601442261/p271381.png)
 
   
 
