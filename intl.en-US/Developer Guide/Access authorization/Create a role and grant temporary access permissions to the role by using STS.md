@@ -112,7 +112,7 @@ For how to call API operations, see [What is STS?](/intl.en-US/API Reference/API
                 // Construct a default profile. Leave the region ID unspecified.
                 /*
                 Note: If you set SysEndpoint to sts.aliyuncs.com, the regionId parameter is optional. Otherwise, you must set regionId to the service region in use. Example: cn-shanghai.
-                For more information about the STS endpoints of regions, see Endpoints (https://www.alibabacloud.com/help/doc-detail/66053.htm).
+                For more information about the STS endpoints of regions, see [t12478.dita\#reference\_sdg\_3pv\_xdb](/intl.en-US/API Reference/API Reference (STS)/Endpoints.md).
                  */
                 IClientProfile profile = DefaultProfile.getProfile("", accessKeyId, accessKeySecret);
                 // Use the profile to construct a client.
