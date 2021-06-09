@@ -131,7 +131,7 @@
             //request.setSlowRequestsThreshold(300000L);
             /*是否使用默认水印（可选），指定模板组ID时，根据模板组配置确定是否使用默认水印*/
             //request.setIsShowWaterMark(true);
-            /*自定义消息回调设置（可选），参数说明参考文档 https://help.aliyun.com/document_detail/86952.html#UserData*/
+            /*自定义消息回调设置（可选），请参见[参数说明](参数说明t1235674.dita#topic3527/section_6fg_qll_v3w)
             // request.setUserData("{\"Extend\":{\"test\":\"www\",\"localId\":\"xxxx\"},\"MessageCallback\":{\"CallbackURL\":\"http://test.test.com\"}}");
     
             /*视频分类ID（可选）*/
@@ -169,7 +169,7 @@
     
         /**
          * 图片上传接口，本地文件上传示例
-         * 参数参考文档 https://help.aliyun.com/document_detail/55619.html
+         * 参数说明请参见[t1235495.dita\#doc\_api\_vod\_CreateUploadImage](/cn.zh-CN/服务端API/媒体上传/获取图片上传地址和凭证.md)
          *
          * @param accessKeyId
          * @param accessKeySecret
