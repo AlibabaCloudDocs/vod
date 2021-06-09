@@ -63,7 +63,7 @@ If the URL of the thumbnail and the URL of the video belongs to different domain
 Configure CORS for playing videos that are stored in OSS 
 -----------------------------------------------------------------------------
 
-If you want the player to access the OSS bucket where videos are stored, you need to configure CORS for the OSS bucket. For more information, see [Configure](/intl.en-US/Console User Guide/Manage buckets/Access control/Configure CORS rules.md)[CORS](/intl.en-US/Console User Guide/Manage buckets/Access control/Configure CORS rules.md)[rules](/intl.en-US/Console User Guide/Manage buckets/Access control/Configure CORS rules.md) and [Configure CORS](/intl.en-US/Developer Guide/Buckets/Configure CORS.md). 
+If you want the player to access the OSS bucket where videos are stored, you need to configure CORS for the OSS bucket. For more information, see [Configure CORS rules](/intl.en-US/Console User Guide/Manage buckets/Access control/Configure CORS rules.md) and [Configure CORS](/intl.en-US/Developer Guide/Buckets/Configure CORS.md). 
 
 Set the following parameters to create a CORS rule: 
 
