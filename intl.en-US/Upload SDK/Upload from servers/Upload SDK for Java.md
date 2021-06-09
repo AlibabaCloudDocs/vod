@@ -131,7 +131,7 @@ For more information about the file formats that are supported by ApsaraVideo VO
             //request.setSlowRequestsThreshold(300000L);
             /* Optional. Specify whether to apply the default watermark. You can specify whether to apply the default watermark based on the template group configuration. */
             //request.setIsShowWaterMark(true);
-            /* Optional. Customize the callback configuration for event notifications. For more information about the parameters, see Request parameters at https://help.aliyun.com/document_detail/86952.html#UserData. */
+            /* Optional. Customize the callback configuration for event notifications. For more information about the parameters, see [Request parameters](Request parameterst1235674.dita#topic3527/section_6fg_qll_v3w) */
             // request.setUserData("{\"Extend\":{\"test\":\"www\",\"localId\":\"xxxx\"},\"MessageCallback\":{\"CallbackURL\":\"http://test.test.com\"}}");
     
             /* Optional. Specify the category ID of the video. */
@@ -169,7 +169,7 @@ For more information about the file formats that are supported by ApsaraVideo VO
     
         /**
          * Set the method for uploading on-premises images.
-         * For more information about the parameters, see CreateUploadImage at https://help.aliyun.com/document_detail/55619.html.
+         * For more information about the parameters, see [t1235495.dita\#doc\_api\_vod\_CreateUploadImage](/intl.en-US/API Reference/Media upload/CreateUploadImage.md).
          *
          * @param accessKeyId
          * @param accessKeySecret
