@@ -12,10 +12,11 @@ Submit a transcoding job without encryption {#h2--amp-div-id-submittranscodejobs
 ---------------------------------------------------------------------------------------
 
 You can call the SubmitTranscodeJobs operation to submit a transcoding job without encryption.
+
 For more information about the request and response parameters of this operation, see [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitTranscodeJobs.md). Example:
 **Note**
-The following code provides an example on transcoding without encryption. For more information about video encryption supported by Alibaba Cloud, see [Alibaba Cloud video encryption](/intl.en-US/Developer Guide/Video security/Alibaba Cloud video encryption.md). {#h2--amp-div-id-submittranscodejobs-div-2}
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The following code provides an example on transcoding without encryption. For more information about video encryption supported by Alibaba Cloud, see [Alibaba Cloud video encryption](/intl.en-US/Developer Guide/Video security/Alibaba Cloud video encryption.md).
 
     package main
     
@@ -99,10 +100,11 @@ Submit a transcoding job with HLS encryption enabled {#h2--hls-div-id-submittran
 ------------------------------------------------------------------------------------------------
 
 You can call the SubmitTranscodeJobs operation to submit a transcoding job with HTTP Live Streaming (HLS) encryption enabled.
+
 For more information about the request and response parameters of this operation, see [SubmitTranscodeJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitTranscodeJobs.md). Example:
 **Note**
-The following code provides an example on transcoding with HLS encryption enabled. For more information, see [Standard HLS encryption](/intl.en-US/Developer Guide/Video security/HLS Encryption.md). {#h2--hls-div-id-submittranscodejobs-div-3}
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The following code provides an example on transcoding with HLS encryption enabled. For more information, see [Standard HLS encryption](/intl.en-US/Developer Guide/Video security/HLS Encryption.md).
 
     package main
     
@@ -166,7 +168,7 @@ The following code provides an example on transcoding with HLS encryption enable
     /*
     * Optional. The configurations of HLS encryption. If you do not use HLS encryption, these configurations are not required.
     * HLS encryption configurations depends on KMS. You must install the KMS dependency package aliyun-php-sdk-kms. If you want to call an API operation, you must import related classes.
-    * For more information about the API operation that you can call to generate data keys, see https://help.aliyun.com/document_detail/28948.html.
+    * For more information about the API operation that you can call to generate data keys, see GenerateDataKey.
     */
     // Initialize a KMS client. The initialization method is similar to that of an ApsaraVideo VOD client.
     func InitKmsClient(accessKeyId  string, accessKeySecret string) (client *kms.Client, err error) {
@@ -221,10 +223,11 @@ Submit a snapshot job {#h2--div-id-submitsnapshotjob-div-4}
 -----------------------------------------------------------
 
 You can call the SubmitSnapshotJob operation to submit a snapshot job.
+
 For more information about the request and response parameters of this operation, see [SubmitSnapshotJob](/intl.en-US/API Reference/Media processing/Process initiation/SubmitSnapshotJob.md). Example:
 **Note**
-For more information about how to create a snapshot template, see [Create a snapshot template](/intl.en-US/API Reference/Media processing/Snapshot template/AddVodTemplate.md). {#h2--div-id-submitsnapshotjob-div-4}
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+For more information about how to create a snapshot template, see [Create a snapshot template](/intl.en-US/API Reference/Media processing/Snapshot template/AddVodTemplate.md).
 
     package main
     
@@ -292,8 +295,8 @@ Query snapshot data {#h2--div-id-listsnapshots-div-5}
 -----------------------------------------------------
 
 You can call the ListSnapshots operation to query snapshot data.
-For more information about the request and response parameters of this operation, see [ListSnapshots](/intl.en-US/API Reference/Media asset management/Image management/ListSnapshots.md). Example: 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+For more information about the request and response parameters of this operation, see [ListSnapshots](/intl.en-US/API Reference/Media asset management/Image management/ListSnapshots.md). Example:
 
     package main
     
@@ -343,8 +346,8 @@ Preprocess videos in the production studio {#h2--div-id-submitpreprocessjobs-div
 -----------------------------------------------------------------------------------
 
 You can call the SubmitPreprocessJobs operation to preprocess videos in the production studio.
-For more information about the request and response parameters of this operation, see [SubmitPreprocessJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitPreprocessJobs.md). Example: 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+For more information about the request and response parameters of this operation, see [SubmitPreprocessJobs](/intl.en-US/API Reference/Media processing/Process initiation/SubmitPreprocessJobs.md). Example:
 
     package main
     
