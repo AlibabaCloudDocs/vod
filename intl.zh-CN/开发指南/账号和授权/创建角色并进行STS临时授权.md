@@ -146,7 +146,7 @@ RAM用户的权限是可长期使用的，易导致安全风险。建议您生�
                 //构造default profile（参数留空，无需添加Region ID）
                 /*
                 说明：当设置SysEndpoint为sts.aliyuncs.com时，regionId可填可不填；反之，regionId必填，根据使用的服务区域填写，例如：cn-shanghai
-                详情参考STS各地域的Endpoint，请参见接入地址（https://help.aliyun.com/document_detail/66053.html?spm=a2c4g.11186623.2.16.1db87074dzvl3J#reference-sdg-3pv-xdb）。
+                详情参考STS各地域的Endpoint，请参见[t12478.dita\#reference\_sdg\_3pv\_xdb](/intl.zh-CN/API参考/API 参考（STS）/接入地址.md)。
                  */
                 IClientProfile profile = DefaultProfile.getProfile("", accessKeyId, accessKeySecret);
                 //用profile构造client
