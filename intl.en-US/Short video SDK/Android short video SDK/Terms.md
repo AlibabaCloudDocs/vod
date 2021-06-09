@@ -1,7 +1,5 @@
 # Terms
 
-## Overview
-
 The short video SDK for Android is an open source player component that is developed by Alibaba Cloud. The short video SDK for Android provides powerful features for video playback, including video recording, duet recording, and video merging.
 
 ## Version information
@@ -20,20 +18,20 @@ public class Version {
 
 ## License
 
-You must activate the license of the short video SDK before you use the short video SDK. For more information, see [Introduction](https://www.alibabacloud.com/help/doc-detail/53407.htm).
+You must activate the license of the short video SDK before you use the short video SDK. For more information, see [t1959865.dita\#multiTask7429](/intl.en-US/Short video SDK/Introduction.md).
 
 **Note:** When you activate the license, make sure that the package name that you submit is the same as that configured in Android Studio.
 
 ## Video resolution
 
-The resolution of a video indicates the effective horizontal and vertical pixels of the video. Generally, a higher resolution indicates a clearer video. However, a higher resolution indicates a larger file, which requires a longer processing time. Considering that the performance varies among different mobile devices, we recommend that you use 720p or a lower resolution. The following table describes the common video resolutions.
+The resolution of a video indicates the effective horizontal and vertical pixels of the video. Generally, a higher resolution indicates a clearer video. However, a higher resolution indicates a larger file, which requires a longer processing time. Considering that the performance varies among different mobile devices, we recommend that you use 720P or a lower resolution. The following table describes the common video resolutions.
 
 |Resolution|1:1|3:4|9:16|
 |----------|---|---|----|
-|480p|480\*480|480\*640|480\*848|
-|540p|540\*540|540\*720|540\*960|
-|720p|720\*720|720\*960|720\*1280|
-|1080p|1080\*1080|1080\*1440|1080\*1920|
+|480P|480\*480|480\*640|480\*848|
+|540P|540\*540|540\*720|540\*960|
+|720P|720\*720|720\*960|720\*1280|
+|1080P|1080\*1080|1080\*1440|1080\*1920|
 
 -   **Recording module**
 
@@ -60,10 +58,10 @@ The bitrate of a video indicates the number of bits that are transmitted per sec
 
 |Resolution|Recommended bitrate|
 |----------|-------------------|
-|480P|1000000-2000000|
-|540P|2000000-3000000|
-|720P|2000000-4000000|
-|1080|2000000-6000000|
+|480P|1000000~2000000|
+|540P|2000000~3000000|
+|720P|2000000~4000000|
+|1080P|2000000~6000000|
 
 -   **Recording module**
 
