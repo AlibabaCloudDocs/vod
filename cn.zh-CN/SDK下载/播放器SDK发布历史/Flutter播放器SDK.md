@@ -2,6 +2,16 @@
 
 本文为您介绍了阿里云Flutter播放器在不同更新时间对应的更新功能。
 
+## 2021-06-10
+
+|日期|版本|修改内容|历史版本|
+|--|--|----|----|
+|2021-06-10|V5.4.0|-   支持Flutter SDK 2.0及以上版本。
+-   新增播放器多实例功能。
+-   优化SDK，提高稳定性。
+
+|[Flutter播放器SDK 5.4.0](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.4.0/flutter_aliplayer_5.4.0.zip)|
+
 ## 2021-01-21
 
 |日期|版本|修改内容|历史版本|
