@@ -101,6 +101,7 @@
                         //如果uploadInfo.videoId不存在，调用获取视频上传地址和凭证接口
                   //从视频点播服务获取的uploadAuth、uploadAddress和videoId，设置到SDK里
                      uploader.setUploadAuthAndAddress(uploadInfo, uploadAuth, uploadAddress,videoId);
+                     }
                   },
                   //文件上传成功
                   'onUploadSucceed': function (uploadInfo) {
