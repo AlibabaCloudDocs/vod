@@ -101,6 +101,7 @@ This topic shows you how to install and use the upload SDK for JavaScript.
                         // If the uploadInfo.videoId parameter does not have a value, call the CreateUploadVideo operation.
                   // Specify the values of the uploadAuth, uploadAddress, and videoId parameters obtained from ApsaraVideo VOD in the SDK.
                      uploader.setUploadAuthAndAddress(uploadInfo, uploadAuth, uploadAddress,videoId);
+                     }
                   },
                   // This callback is fired when the upload succeeds.
                   'onUploadSucceed': function (uploadInfo) {
