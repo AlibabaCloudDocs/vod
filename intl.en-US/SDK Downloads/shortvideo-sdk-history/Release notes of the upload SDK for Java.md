@@ -17,37 +17,37 @@ This topic describes the release notes of different versions of the upload SDK f
 
 **Note:** The version of OSS SDKs must be V3.9.0 or later.
 
-|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1600848199952/VODUploadDemo-java-1.4.13.zip)|
+|[Upload SDK for Java and sample code](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1600848199952/VODUploadDemo-java-1.4.13.zip)|
 
 ## 2020-03-16
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2020-03-16|V1.4.12|Automatic resolution to the addresses of media segment files is supported for the upload of m3u8 files. The addresses can be relative paths or absolute paths.|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1584350505412/VODUploadDemo-java-1.4.12.zip)|
+|2020-03-16|V1.4.12|Automatic resolution to the addresses of media segment files is supported for the upload of m3u8 files. The addresses can be relative paths or absolute paths.|[Upload SDK for Java and sample code](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1584350505412/VODUploadDemo-java-1.4.12.zip)|
 
 ## 2019-07-22
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2019-07-22|V1.4.11|Custom on-premises directories are supported for the upload of m3u8 files. The custom on-premises directories are used to temporarily store the downloaded files.|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1563778063998/VODUploadDemo-java-1.4.11.zip)|
+|2019-07-22|V1.4.11|Custom on-premises directories are supported for the upload of m3u8 files. The custom on-premises directories are used to temporarily store the downloaded files.|[Upload SDK for Java and sample code](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1563778063998/VODUploadDemo-java-1.4.11.zip)|
 
 ## 2019-07-12
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2019-07-12|V1.4.10|The issue is fixed where an m3u8 file fails to be uploaded based on the URL that contains authentication information.|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1562903947499/VODUploadDemo-java-1.4.10.zip)|
+|2019-07-12|V1.4.10|The issue is fixed where an m3u8 file fails to be uploaded based on the URL that contains authentication information.|[Upload SDK for Java and sample code](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1562903947499/VODUploadDemo-java-1.4.10.zip)|
 
 ## 2019-06-25
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2019-06-25|V1.4.9|The upload of ultra-large audio and video streams is supported.|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1561708141494/VODUploadDemo-java-1.4.9.zip)|
+|2019-06-25|V1.4.9|The upload of ultra-large audio and video streams is supported.|[Upload SDK for Java and sample code](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1561708141494/VODUploadDemo-java-1.4.9.zip)|
 
 ## 2019-06-06
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2019-06-06|V1.4.8|STS-based upload is supported.|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1559795565842/VODUploadDemo-java-1.4.8.zip)|
+|2019-06-06|V1.4.8|STS-based upload is supported.|[Upload SDK for Java and sample code](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1559795565842/VODUploadDemo-java-1.4.8.zip)|
 
 ## 2019-04-12
 
@@ -56,7 +56,7 @@ This topic describes the release notes of different versions of the upload SDK f
 |2019-04-12|V1.4.7|-   The application ID can be specified when you upload audio and video files, images, and auxiliary media assets.
 -   The type and description can be set when you upload images.
 
-|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1555048043943/VODUploadDemo-java-1.4.7.zip)|
+|[Upload SDK for Java and sample code](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1555048043943/VODUploadDemo-java-1.4.7.zip)|
 
 ## 2019-03-10
 
@@ -65,7 +65,7 @@ This topic describes the release notes of different versions of the upload SDK f
 |2019-03-10|V1.4.6|-   On-premises auxiliary media assets can be uploaded to ApsaraVideo VOD. After you specify the on-premises directory of an auxiliary media asset, the upload SDK automatically uploads the auxiliary media asset to ApsaraVideo VOD.
 -   Online auxiliary media assets can be uploaded to ApsaraVideo VOD. After you specify the URL of an online auxiliary media asset, the upload SDK automatically downloads the auxiliary media asset from the URL and uploads it to ApsaraVideo VOD.
 
-|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1552227669169/VODUploadDemo-java-1.4.6.zip)|
+|[Upload SDK for Java and sample code](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1552227669169/VODUploadDemo-java-1.4.6.zip)|
 
 ## 2019-02-19
 
@@ -77,7 +77,7 @@ This topic describes the release notes of different versions of the upload SDK f
     -   aliyun-java-sdk-vod is updated to V2.15.0.
     -   V2.8.2 and later versions of the com.google.code.gson dependency are added.
 
-|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1550571710324/VODUploadDemo-java-1.4.5.zip)|
+|[Upload SDK for Java and sample code](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/106648/cn_zh/1550571710324/VODUploadDemo-java-1.4.5.zip)|
 
 ## 2019-01-30
 
@@ -89,11 +89,11 @@ This topic describes the release notes of different versions of the upload SDK f
 -   The VOD center and storage region can be specified to facilitate upload outside China. The default VOD center is in the China \(Shanghai\) region.
 -   The issue is fixed where the specified part size does not take effect in multipart upload.
 
-|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1548820581839/VODUploadDemo-java-1.4.4.zip)|
+|[Upload SDK for Java and sample code](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1548820581839/VODUploadDemo-java-1.4.4.zip)|
 
 ## 2018-12-21
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2018-12-21|V1.4.3|The UserData parameter can be set when you upload audio and video files.|[Upload SDK for Java and sample code](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1545382153255/VODUploadDemo-java-1.4.3.zip)|
+|2018-12-21|V1.4.3|The UserData parameter can be set when you upload audio and video files.|[Upload SDK for Java and sample code](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1545382153255/VODUploadDemo-java-1.4.3.zip)|
 
