@@ -242,14 +242,14 @@ This topic shows you how to implement various features of ApsaraVideo Player SDK
     After you set the autoplay feature and prepare the player, videos are automatically played. Sample code:
 
     ```
-    -(void)onPlayerEvent:(AliPlayer*)player eventType:(AVPEventType)eventType {
-        switch (eventType) {
-            case AVPEventPrepareDone: {
-                break;
-            case AVPEventAutoPlayStart:
-                break;
+    aliyunVodPlayer.setOnInfoListener(new IPlayer.OnInfoListener() {
+        @Override
+        public void onInfo(InfoBean infoBean) {
+            if (infoBean.getCode() == InfoCode.AutoPlayStart){
+    
+            }
         }
-    }
+    });
     ```
 
     **Note:** When autoplay starts, the `onInfo` callback instead of the `onPrepared` callback is fired.
