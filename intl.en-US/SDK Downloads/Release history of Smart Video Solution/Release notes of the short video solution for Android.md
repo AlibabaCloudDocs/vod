@@ -2,6 +2,14 @@
 
 This topic describes the release notes of different versions of the short video solution for Android.
 
+## 2021-06-17
+
+|**Release date**|**Version**|**Description**|
+|----------------|-----------|---------------|
+|2021-06-17|V1.4.1|-   ApsaraVideo Player SDK for Android is updated to V5.4.0.
+-   The short video SDK for Android is updated to V3.22.0.
+-   The known issues are fixed to improve stability. |
+
 ## 2020-02-13
 
 |**Release date**|**Version**|**Description**|
