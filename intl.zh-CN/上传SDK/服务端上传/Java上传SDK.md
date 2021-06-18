@@ -1,6 +1,6 @@
 # Java上传SDK
 
-通过视频点播（VOD）上传SDK服务，您可以实现方便、快速的上传媒体文件。本文通过示例为您详细介绍Java上传SDK服务。
+通过视频点播（VOD）上传SDK服务，您可以实现方便、快速地上传媒体文件。本文通过示例为您详细介绍Java上传SDK服务。
 
 ## 功能介绍
 
@@ -27,18 +27,39 @@
 
 上传SDK服务支持的文件格式请参见[媒体上传文件格式](/intl.zh-CN/开发指南/媒体上传/概述.md)。
 
+## 前提条件
+
+-   您已经完成注册阿里云账号，并完成实名认证。
+-   服务端环境需要Java 1.8版本。
+
 ## 安装SDK
 
-1.  下载Java上传SDK及示例代码VODUploadDemo-java-1.4.14.zip，更多下载信息，请参见[服务端上传SDK](/intl.zh-CN/SDK下载/SDK下载.md)。
+**说明：** 本文以Java 1.8版本、Java 上传SDK1.4.14版本举例说明。其他版本请根据实际情况操作。
 
-    **说明：** 此处以Java1.8版本、SDK1.4.14版本举例说明。其他版本请根据实际情况操作。
+1.  下载Java上传SDK及示例代码。下载信息，请参见[服务端上传SDK](/intl.zh-CN/SDK下载/SDK下载.md)。
 
-2.  解压VODUploadDemo-java-1.4.14.zip，将lib目录下的所有jar文件复制到您的项目中。
+2.  解压Java上传SDK及示例代码文件（VODUploadDemo-java-1.4.14.zip）。
 
-    **说明：** 以下列举出部分依赖jar包的版本，您可直接在您的项目中添加maven依赖，也可以将VODUploadDemo-java-1.4.14.zip包中的所有jar包引入您的项目中使用。同时，请确保部分jar包符合以下要求：
+    文件介绍：
+
+    -   lib：存放Java上传SDK所需要的jar包。
+    -   sample：存放Java上传SDK的示例代码。
+3.  引入jar包。
+
+    以Eclipse和IntelliJ IDEA为例介绍引入操作。
+
+    -   在Eclipse中右击您的工程，选择**Properties** \> **Java Build Path** \> **Add JARs**。
+    -   在IntelliJ IDEA中打开您的工程，选择**File** \> **Project Structure** \> **Modules**，单击右侧**Dependencies**，然后单击**+**，再单击**JARs or directories**。
+    找到解压后的VODUploadDemo-java-1.4.14文件，并将lib目录下的所有jar文件添加到您的项目中。
+
+4.  配置依赖。
+
+    **说明：** 请确保部分jar包符合以下要求：
 
     -   使用上传SDK aliyun-java-vod-upload-1.4.14.jar时，需保证aliyun-sdk-oss的版本号不小于3.9.0。
     -   目前视频点播已在国内发布的区域有上海、深圳、北京，使用上传SDK上传到深圳、北京区域，需保证aliyun-java-sdk-vod版本号不低于2.15.11、aliyun-java-sdk-core版本号不小于4.4.5。
+    您需要添加以下Maven依赖。
+
     ```
        <dependency>
             <groupId>com.aliyun</groupId>
@@ -72,41 +93,49 @@
         </dependency>
     ```
 
-3.  使用IDE开发时引用的jar包，此处以Eclipse和IntelliJ IDEA为例进行介绍。
-
-    -   在Eclipse中右击您的工程，选择**Properties** \> **Java Build Path** \> **Add JARs**。
-    -   在IntelliJ IDEA中打开您的工程，选择**File** \> **Project Structure** \> **Modules**，单击右侧**Dependencies**，然后单击**+**，再单击**JARs or directories**。
-4.  选中[步骤2](#step_cmy_ho2_gk9)复制的所有jar文件。
-
-    执行完上述，您就可以在Eclipse或IntelliJ IDEA项目中使用VODUpload Java SDK。
-
 
 ## 示例代码
 
+**说明：** 在使用示例代码时，需要手动引入对应的类。
+
 -   上传SDK示例
 
-    将VODUploadDemo-java-1.4.14.zip开发包解压，sample目录下的UploadVideoDemo.java为文件上传示例代码，如下所示：
+    sample目录下的`UploadVideoDemo.java`文件，为上传示例代码。
+
+    部分示例代码展示，如下所示。详细示例代码，请参见`UploadVideoDemo.java`文件。
 
     ```
     public class UploadVideoDemo {
-        //账号AK信息（必选）
-        private static final String accessKeyId = "";
-        //账号AK信息（必选）
-        private static final String accessKeySecret = "";
+    
+        //账号AK信息请填写(必选)
+        private static final String accessKeyId = "<your accessKeyId>";
+        //账号AK信息请填写(必选)
+        private static final String accessKeySecret = "<your accessKeySecret>";
     
         public static void main(String[] args) {
-            //1.音视频上传-本地文件上传
-            //视频标题(必选)
+            // 一、视频文件上传
+            // 视频标题(必选)
             String title = "测试标题";
-            //本地文件上传和文件流上传时，文件名称为上传文件绝对路径，如:/User/sample/文件名称.mp4 (必选)
-            //文件名必须包含扩展名
-            String fileName = "测试文件名称.mp4";
-            //本地文件上传
-            testUploadVideo(accessKeyId, accessKeySecret, title, fileName);
+            // 1.本地文件上传和文件流上传时，文件名称为上传文件绝对路径，如:/User/sample/文件名称.mp4 (必选)
+            // 2.网络流上传时，文件名称为源文件名，如文件名称.mp4(必选)。
+            // 任何上传方式文件名必须包含扩展名
+            String fileName = "/path/文件名.mp4";
+            // 本地文件上传
+            //testUploadVideo(accessKeyId, accessKeySecret, title, fileName);
     
-            //2.图片上传-本地文件上传
-            testUploadImageLocalFile(accessKeyId, accessKeySecret);
+            // 待上传视频的网络流地址
+            String url = "http://xxxx.xxxx.com/xxxx.mp4";
+    
+            // 2.网络流上传
+            // 文件扩展名，当url中不包含扩展名时，需要设置该参数
+            String fileExtension = "mp4";
+            //testUploadURLStream(accessKeyId, accessKeySecret, title, url, fileExtension);
+    
+            // 二、图片上传
+            //testUploadImageLocalFile(accessKeyId, accessKeySecret);
+    
         }
+    
     
         /**
          * 本地文件上传接口
@@ -118,109 +147,180 @@
          */
         private static void testUploadVideo(String accessKeyId, String accessKeySecret, String title, String fileName) {
             UploadVideoRequest request = new UploadVideoRequest(accessKeyId, accessKeySecret, title, fileName);
-            /*可指定分片上传时每个分片的大小，默认为1M字节*/
-            request.setPartSize(1 * 1024 * 1024L);
-            /*可指定分片上传时的并发线程数，默认为1（注：该配置会占用服务器CPU资源，需根据服务器情况指定）*/
+            /* 可指定分片上传时每个分片的大小，默认为2M字节 */
+            request.setPartSize(2 * 1024 * 1024L);
+            /* 可指定分片上传时的并发线程数，默认为1，(注：该配置会占用服务器CPU资源，需根据服务器情况指定）*/
             request.setTaskNum(1);
-            /*是否开启断点续传，默认断点续传功能关闭。当网络不稳定或者程序崩溃时，再次发起相同上传请求，可以继续未完成的上传任务，适用于超时3000秒仍不能上传完成的大文件。
+            /* 是否开启断点续传, 默认断点续传功能关闭。当网络不稳定或者程序崩溃时，再次发起相同上传请求，可以继续未完成的上传任务，适用于超时3000秒仍不能上传完成的大文件。
             注意: 断点续传开启后，会在上传过程中将上传位置写入本地磁盘文件，影响文件上传速度，请您根据实际情况选择是否开启*/
-            request.setEnableCheckpoint(false);
-            /*OSS慢请求日志打印超时时间，是指每个分片上传时间超过该阈值时会打印debug日志，如果想屏蔽此日志，请调整该阈值。单位: 毫秒，默认为300000毫秒*/
+            //request.setEnableCheckpoint(false);
+            /* OSS慢请求日志打印超时时间，是指每个分片上传时间超过该阈值时会打印debug日志，如果想屏蔽此日志，请调整该阈值。单位: 毫秒，默认为300000毫秒*/
             //request.setSlowRequestsThreshold(300000L);
-            /*可指定每个分片慢请求时打印日志的时间阈值，默认为300s*/
+            /* 可指定每个分片慢请求时打印日志的时间阈值，默认为300s*/
             //request.setSlowRequestsThreshold(300000L);
-            /*是否使用默认水印（可选），指定模板组ID时，根据模板组配置确定是否使用默认水印*/
+            /* 是否显示水印(可选)，指定模板组ID时，根据模板组配置确定是否显示水印*/
             //request.setIsShowWaterMark(true);
-            /*自定义消息回调设置（可选），请参见[参数说明](参数说明t1235674.dita#topic3527/section_6fg_qll_v3w)
+            /* 自定义消息回调设置(可选)，参数说明参考文档 https://help.aliyun.com/document_detail/86952.html#UserData */
             // request.setUserData("{\"Extend\":{\"test\":\"www\",\"localId\":\"xxxx\"},\"MessageCallback\":{\"CallbackURL\":\"http://test.test.com\"}}");
-    
-            /*视频分类ID（可选）*/
+            /* 视频分类ID(可选) */
             //request.setCateId(0);
-            /*视频标签,多个用逗号分隔（可选）*/
-            //request.setTags（"标签1,标签2"）;
-            /*视频描述（可选）*/
+            /* 视频标签,多个用逗号分隔(可选) */
+            //request.setTags("标签1,标签2");
+            /* 视频描述(可选) */
             //request.setDescription("视频描述");
-            /*封面图片（可选）*/
+            /* 封面图片(可选) */
             //request.setCoverURL("http://cover.sample.com/sample.jpg");
-            /*模板组ID（可选）*/
-            //request.setTemplateGroupId("8c4792cbc8694*****d5330e56a33d");
-            /*点播服务接入点*/
+            /* 模板组ID(可选) */
+            //request.setTemplateGroupId("8c4792cbc8694e7084fd5330e56a33d");
+            /* 工作流ID(可选) */
+            //request.setWorkflowId("d4430d07361f0*be1339577859b0177b");
+            /* 存储区域(可选) */
+            //request.setStorageLocation("in-201703232118266-5sejdln9o.oss-cn-shanghai.aliyuncs.com");
+            /* 开启默认上传进度回调 */
+            //request.setPrintProgress(false);
+            /* 设置自定义上传进度回调 (必须继承 VoDProgressListener) */
+            //request.setProgressListener(new PutObjectProgressListener());
+            /* 设置您实现的生成STS信息的接口实现类*/
+            // request.setVoDRefreshSTSTokenListener(new RefreshSTSTokenImpl());
+            /* 设置应用ID*/
+            //request.setAppId("app-1000000");
+            /* 点播服务接入点 */
             //request.setApiRegionId("cn-shanghai");
-            /*ECS部署区域，如果与点播存储（OSS）区域相同，则自动使用内网上传文件至存储*/
+            /* ECS部署区域*/
             // request.setEcsRegionId("cn-shanghai");
-            /*存储区域（可选）*/
-            //request.setStorageLocation("in-2017032*****18266-5sejdln9o.oss-cn-shanghai.aliyuncs.com");
-            /*开启默认上传进度回调*/
-            // request.setPrintProgress(true);
-            /*设置自定义上传进度回调（必须继承 ProgressListener）*/
-            // request.setProgressListener(new PutObjectProgressListener());
             UploadVideoImpl uploader = new UploadVideoImpl();
             UploadVideoResponse response = uploader.uploadVideo(request);
-            System.out.print("RequestId="   response.getRequestId()   "\n");  //请求视频点播服务的请求ID
+            System.out.print("RequestId=" + response.getRequestId() + "\n");  //请求视频点播服务的请求ID
             if (response.isSuccess()) {
-                System.out.print("VideoId="   response.getVideoId()   "\n");
+                System.out.print("VideoId=" + response.getVideoId() + "\n");
             } else {
                 /* 如果设置回调URL无效，不影响视频上传，可以返回VideoId同时会返回错误码。其他情况上传失败时，VideoId为空，此时需要根据返回错误码分析具体错误原因 */
-                System.out.print("VideoId="   response.getVideoId()   "\n");
-                System.out.print("ErrorCode="   response.getCode()   "\n");
-                System.out.print("ErrorMessage="   response.getMessage()   "\n");
+                System.out.print("VideoId=" + response.getVideoId() + "\n");
+                System.out.print("ErrorCode=" + response.getCode() + "\n");
+                System.out.print("ErrorMessage=" + response.getMessage() + "\n");
+            }
+        }
+    
+        /**
+         * URL网络流上传。支持断点续传，最大支持48.8TB的单个文件。
+         * 该上传方式需要先将网络文件下载到本地磁盘，再进行上传，所以要保证本地磁盘有充足的空间。
+         * 当您设置的URL中不包括文件扩展名时，需要单独设置fileExtension，表示文件扩展名。
+         * @param accessKeyId
+         * @param accessKeySecret
+         * @param title
+         * @param fileName
+         * @param url
+         */
+        private static void testUploadURLStream(String accessKeyId, String accessKeySecret, String title, String url, String fileExtension) {
+            UploadURLStreamRequest request = new UploadURLStreamRequest(accessKeyId, accessKeySecret, title, url);
+    
+            /* 文件扩展名*/
+            request.setFileExtension(fileExtension);
+            /* 网络文件下载连接超时，单位毫秒，0-表示不限制*/
+            request.setDownloadConnectTimeout(1000);
+            /* 网络文件下载读取超时，单位毫秒，0-表示不限制*/
+            request.setDownloadReadTimeout(0);
+            /* 网络文件下载后保存的本地目录*/
+            request.setLocalDownloadFilePath("/Users/download");
+            /* 是否显示水印(可选)，指定模板组ID时，根据模板组配置确定是否显示水印*/
+            //request.setShowWaterMark(true);
+            /* 自定义消息回调设置(可选)，参数说明参考文档 https://help.aliyun.com/document_detail/86952.html#UserData */
+            // request.setUserData("{\"Extend\":{\"test\":\"www\",\"localId\":\"xxxx\"},\"MessageCallback\":{\"CallbackURL\":\"http://test.test.com\"}}");
+            /* 视频分类ID(可选) */
+            //request.setCateId(0);
+            /* 视频标签,多个用逗号分隔(可选) */
+            //request.setTags("标签1,标签2");
+            /* 视频描述(可选) */
+            //request.setDescription("视频描述");
+            /* 封面图片(可选) */
+            //request.setCoverURL("http://cover.sample.com/sample.jpg");
+            /* 模板组ID(可选) */
+            //request.setTemplateGroupId("8c4792cbc8694e7084fd5330e56a33d");
+            /* 工作流ID(可选) */
+            //request.setWorkflowId("d4430d07361f0*be1339577859b0177b");
+            /* 存储区域(可选) */
+            //request.setStorageLocation("xxxxxx.oss-cn-shanghai.aliyuncs.com");
+            /* 开启默认上传进度回调 */
+            //request.setPrintProgress(true);
+            /* 设置自定义上传进度回调 (必须继承 VoDProgressListener) */
+            //request.setProgressListener(new PutObjectProgressListener());
+            /* 设置应用ID*/
+            //request.setAppId("app-1000000");
+            /* 点播服务接入点 */
+            //request.setApiRegionId("cn-shanghai");
+            /* ECS部署区域*/
+            // request.setEcsRegionId("cn-shanghai");
+            UploadVideoImpl uploader = new UploadVideoImpl();
+            UploadURLStreamResponse response = uploader.uploadURLStream(request);
+            System.out.print("RequestId=" + response.getRequestId() + "\n"); //请求视频点播服务的请求ID
+            if (response.isSuccess()) {
+                System.out.print("VideoId=" + response.getVideoId() + "\n");
+            } else {
+                /* 如果设置回调URL无效，不影响视频上传，可以返回VideoId同时会返回错误码。其他情况上传失败时，VideoId为空，此时需要根据返回错误码分析具体错误原因 */
+                System.out.print("VideoId=" + response.getVideoId() + "\n");
+                System.out.print("ErrorCode=" + response.getCode() + "\n");
+                System.out.print("ErrorMessage=" + response.getMessage() + "\n");
             }
         }
     
         /**
          * 图片上传接口，本地文件上传示例
-         * 参数说明请参见[t1235495.dita\#doc\_api\_vod\_CreateUploadImage](/intl.zh-CN/服务端API/媒体上传/获取图片上传地址和凭证.md)
+         * 参数参考文档 https://help.aliyun.com/document_detail/55619.html
          *
          * @param accessKeyId
          * @param accessKeySecret
          */
         private static void testUploadImageLocalFile(String accessKeyId, String accessKeySecret) {
-            //图片类型（必选）取值范围：default（默认），cover（封面），watermark（水印）
-            String imageType = "cover";
+            /* 图片类型（必选）取值范围：default（默认)，cover（封面），watermark（水印）*/
+            String imageType = "default";
             UploadImageRequest request = new UploadImageRequest(accessKeyId, accessKeySecret, imageType);
-            /*图片文件扩展名（可选）取值范围：png，jpg，jpeg*/
+            request.setImageType("default");
+            /* 图片文件扩展名（可选）取值范围：png，jpg，jpeg */
             //request.setImageExt("png");
-            /*图片标题（可选）长度不超过128个字节，UTF8编码*/
+            /* 图片标题（可选）长度不超过128个字节，UTF8编码 */
             //request.setTitle("图片标题");
-            /*图片标签（可选）单个标签不超过32字节，最多不超过16个标签，多个用逗号分隔，UTF8编码*/
+            /* 图片标签（可选）单个标签不超过32字节，最多不超过16个标签，多个用逗号分隔，UTF8编码 */
             //request.setTags("标签1,标签2");
-            /*存储区域（可选）*/
-            //request.setStorageLocation("out-4f3952f78c021*****013e7.oss-cn-shanghai.aliyuncs.com");
-            /*流式上传时，InputStream为必选，fileName为源文件名称，如:文件名称.png（可选）*/
-            //request.setFileName("测试文件名称.png");
-            /*开启默认上传进度回调*/
-            // request.setPrintProgress(true);
-            /*设置自定义上传进度回调（必须继承 ProgressListener）*/
+            /* 存储区域（可选）*/
+            //request.setStorageLocation("out-4f3952f78c0211e8b3020013e7.oss-cn-shanghai.aliyuncs.com");
+            /* fileName为源文件名称，如:文件名称.png*/
+            String fileName = "/User/sample/文件名称.png";
+            request.setFileName(fileName);
+            /* 开启默认上传进度回调 */
+            //request.setPrintProgress(false);
+            /* 设置自定义上传进度回调 (必须继承 VoDProgressListener) */
             // request.setProgressListener(new PutObjectProgressListener());
-            /*点播服务接入点*/
+            /* 设置应用ID*/
+            //request.setAppId("app-1000000");
+            /* 点播服务接入点 */
             //request.setApiRegionId("cn-shanghai");
-            /*ECS部署区域，如果与点播存储（OSS）区域相同，则自动使用内网上传文件至存储*/
-            // request.setEcsRegionId("cn-shanghai");
-    
             UploadImageImpl uploadImage = new UploadImageImpl();
             UploadImageResponse response = uploadImage.upload(request);
-            System.out.print("RequestId="   response.getRequestId()   "\n");
+            System.out.print("RequestId=" + response.getRequestId() + "\n");
             if (response.isSuccess()) {
-                System.out.print("ImageId="   response.getImageId()   "\n");
-                System.out.print("ImageURL="   response.getImageURL()   "\n");
+                System.out.print("ImageId=" + response.getImageId() + "\n");
+                System.out.print("ImageURL=" + response.getImageURL() + "\n");
             } else {
-                System.out.print("ErrorCode="   response.getCode()   "\n");
-                System.out.print("ErrorMessage="   response.getMessage()   "\n");
+                System.out.print("ErrorCode=" + response.getCode() + "\n");
+                System.out.print("ErrorMessage=" + response.getMessage() + "\n");
             }
-    
-    
         }
-    }
+    }                   
     ```
 
+    AccessKey获取，操作步骤如下所示。
+
+    1.  进入[AccessKey管理](https://ram.console.aliyun.com/manage/ak)页面。
+    2.  选择需要用到的AccessKey ID，单击**查看Secret**，通过手机验证后，即可获取AccessKey Secret。
 -   上传进度条示例
 
-    将VODUploadDemo-java-1.4.14.zip开发包解压，sample目录下的PutObjectProgressListener.java为上传进度回调函数示例程序。该类必须继承VoDProgressListener类，ProgressEvent是通过OSS上传文件时产生的进度回调通知，您可以自定义各个事件通知的业务处理逻辑，示例代码如下所示：
+    sample目录下的`PutObjectProgressListener.java`文件，为上传进度回调函数示例代码。
+
+    该类必须继承VoDProgressListener类，ProgressEvent是通过OSS上传文件时产生的进度回调通知，您可以自定义各个事件通知的业务处理逻辑
+
+    示例代码如下所示。
 
     ```
-    import com.aliyun.oss.event.ProgressEvent;
-    import com.aliyun.oss.event.ProgressEventType;
-    
     /**
      * 上传进度回调方法类
      * 当您开启上传进度回调时该事件回调才会生效。
@@ -258,46 +358,46 @@
                 //开始上传事件
                 case TRANSFER_STARTED_EVENT:
                     if (videoId != null) {
-                        System.out.println("Start to upload videoId "   videoId   "......");
+                        System.out.println("Start to upload videoId "+videoId+"......");
                     }
                     if (imageId != null) {
-                        System.out.println("Start to upload imageId "   imageId   "......");
+                        System.out.println("Start to upload imageId "+imageId+"......");
                     }
                     break;
                 //计算待上传文件总大小事件通知，只有调用本地文件方式上传时支持该事件
                 case REQUEST_CONTENT_LENGTH_EVENT:
                     this.totalBytes = bytes;
-                    System.out.println(this.totalBytes   "bytes in total will be uploaded to OSS.");
+                    System.out.println(this.totalBytes + "bytes in total will be uploaded to OSS.");
                     break;
                 //已经上传成功文件大小事件通知
                 case REQUEST_BYTE_TRANSFER_EVENT:
-                    this.bytesWritten  = bytes;
+                    this.bytesWritten += bytes;
                     if (this.totalBytes != -1) {
                         int percent = (int) (this.bytesWritten * 100.0 / this.totalBytes);
-                        System.out.println(bytes   " bytes have been written at this time, upload progress: "  
-                                percent   "%("   this.bytesWritten   "/"   this.totalBytes   ")");
+                        System.out.println(bytes+" bytes have been written at this time, upload progress: "+
+                                percent +"%(" +  this.bytesWritten +  "/"  + this.totalBytes  + ")");
                     } else {
-                        System.out.println(bytes   " bytes have been written at this time, upload sub total : "  
-                                "("   this.bytesWritten   ")");
+                        System.out.println(bytes + " bytes have been written at this time, upload sub total : " +
+                                "(" + this.bytesWritten + ")");
                     }
                     break;
                 //文件全部上传成功事件通知
                 case TRANSFER_COMPLETED_EVENT:
                     this.succeed = true;
                     if (videoId != null) {
-                        System.out.println("Succeed to upload videoId "   videoId   " , "   this.bytesWritten   " bytes have been transferred in total.");
+                        System.out.println("Succeed to upload videoId "  + videoId  + " , " + this.bytesWritten + " bytes have been transferred in total.");
                     }
                     if (imageId != null) {
-                        System.out.println("Succeed to upload imageId "   imageId   " , "   this.bytesWritten   " bytes have been transferred in total.");
+                        System.out.println("Succeed to upload imageId " + imageId + " , " + this.bytesWritten + " bytes have been transferred in total.");
                     }
                     break;
                 //文件上传失败事件通知
                 case TRANSFER_FAILED_EVENT:
                     if (videoId != null) {
-                        System.out.println("Failed to upload videoId "   videoId   " , "   this.bytesWritten   " bytes have been transferred.");
+                        System.out.println("Failed to upload videoId " + videoId + " , " + this.bytesWritten + " bytes have been transferred.");
                     }
                     if (imageId != null) {
-                        System.out.println("Failed to upload imageId "   imageId   " , "   this.bytesWritten   " bytes have been transferred.");
+                        System.out.println("Failed to upload imageId " + imageId + " , " + this.bytesWritten + " bytes have been transferred.");
                     }
                     break;
     
@@ -334,6 +434,47 @@
             this.imageId = imageId;
         }
     }
+                        
     ```
+
+-   刷新临时Token示例
+
+    sample目录下的`RefreshSTSTokenImpl.java`文件，为刷新临时Token的示例代码。
+
+    示例如下所示。
+
+    ```
+    /**
+     * @author vod
+     * 生成STS信息实现类
+     * @date 2019/6/5
+     */
+    public class RefreshSTSTokenImpl implements VoDRefreshSTSTokenListener {
+    
+        public STSTokenDTO onRefreshSTSToken() {
+            STSTokenDTO stsTokenDTO = new STSTokenDTO();
+            stsTokenDTO.setAccessKeyId("<your sts AccessKeyId>");
+            stsTokenDTO.setAccessKeySecret("<your sts AccessKeySecret>");
+            stsTokenDTO.setSecurityToken("<your sts SecurityToken>");
+            return stsTokenDTO;
+        }
+    
+    }
+    ```
+
+
+## 常见问题
+
+由于开发环境的不同，您可能会遇到找不到类等问题。
+
+此类问题通常是IDEA环境编译问题导致，如果确定已经导入所需的资源包，您可以尝试下面两种办法解决：
+
+-   在Maven项目中，单击右侧**Maven**，单击**m**图标，输入`mvn idea:module`重新加载资源。
+
+    ![module](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2527293261/p284429.png)
+
+-   在上方菜单栏，选择**Build** \> **Rebuild Project**重新编辑您的工程。
+
+    ![Rebuild](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2527293261/p284430.png)
 
 
