@@ -40,19 +40,19 @@ This topic describes the attributes and events of ApsaraVideo Player SDK for web
 -   liveStartTime: the start time of live streaming. It is used to indicate that the live streaming has not started. Example: 2016/08/17 12:00:00.
 -   liveOverTime: the end time of live streaming. It is used to indicate that the live streaming ends. Example: 2016/08/17 14:00:00. |
 |enableSystemMenu|Boolean|Specifies whether to display the shortcut menu upon a right-click. The default value is **false**.|
-|format|Sting|The streaming URL format. This attribute is supported only by VID-based playback. Valid values:-   **mp4**
+|format|String|The streaming URL format. This attribute is supported only by VID-based playback. Valid values:-   **mp4**
 -   **m3u8**
 -   **flv**
 -   **mp3**
 
 By default, this attribute is empty. This attribute is supported only by HTML5 players.|
-|mediaType|Sting|The media type of the returned content. This attribute is supported only by VID-based playback. The default value is **video**. Valid values:-   **video**
+|mediaType|String|The media type of the returned content. This attribute is supported only by VID-based playback. The default value is **video**. Valid values:-   **video**
 -   **audio**: The value is set to audio only if audio files, such as audio files in the MP4 format, are played. This attribute is supported only by HTML5 players. |
-|qualitySort|Sting|The sorting method. This attribute is supported only by playback based on the VID and playAuth. Valid values:-   **desc**: the descending order from higher to lower resolutions.
+|qualitySort|String|The sorting method. This attribute is supported only by playback based on the VID and playAuth. Valid values:-   **desc**: the descending order from higher to lower resolutions.
 -   **asc**: the ascending order from lower to higher resolutions.
 
 The default value is **asc**. This attribute is supported only by HTML5 players.|
-|definition|Sting|The video resolution. Different resolutions are separated by commas \(,\), such as FD,LD. The value is a subset of resolutions of the stream corresponding to the VID. Valid values:-   **FD**: low definition
+|definition|String|The video resolution. Different resolutions are separated by commas \(,\), such as FD,LD. The value is a subset of resolutions of the stream corresponding to the VID. Valid values:-   **FD**: low definition
 -   **LD**: standard definition
 -   **SD**: high definition
 -   **HD**: ultra high definition
@@ -61,7 +61,7 @@ The default value is **asc**. This attribute is supported only by HTML5 players.
 -   **4K**
 
 This attribute is supported only by HTML5 players.|
-|defaultDefinition|Sting|The default video resolution. The value is the resolution of the stream corresponding to the VID. Valid values:-   **FD**: low definition
+|defaultDefinition|String|The default video resolution. The value is the resolution of the stream corresponding to the VID. Valid values:-   **FD**: low definition
 -   **LD**: standard definition
 -   **SD**: high definition
 -   **HD**: ultra high definition
