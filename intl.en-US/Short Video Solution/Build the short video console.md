@@ -110,7 +110,7 @@ The short video console has the following features:
     3.  After you install the required dependencies and modify the required configuration, run the following command:
 
         ```
-        npm run server
+        npm run serve
         ```
 
         **Note:**
