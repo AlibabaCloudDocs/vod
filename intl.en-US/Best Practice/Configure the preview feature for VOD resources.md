@@ -1,7 +1,5 @@
 # Configure the preview feature for VOD resources
 
-## Overview
-
 ApsaraVideo VOD provides a complete preview solution. You can specify whether to allow users to preview a specified duration of a video or view the complete video. ApsaraVideo VOD provides streaming URLs that contain the specified preview duration to limit video playback.
 
 ## Prerequisites
@@ -9,28 +7,32 @@ ApsaraVideo VOD provides a complete preview solution. You can specify whether to
 The preview solution adopts the following basic principle: The Content Delivery Network \(CDN\) URL that is used to play a specific video contains the specified preview duration for the video. When a request to play the video is received, Alibaba Cloud CDN authenticates the request. If the request passes the authentication, Alibaba Cloud CDN returns the specified content for preview. Otherwise, Alibaba Cloud CDN rejects the request and returns status code 403.
 
 -   A domain name for CDN is configured in the ApsaraVideo VOD console. The preview feature is implemented on top of Alibaba Cloud CDN.
--   The authentication type A for URL signing is enabled. To prevent the preview duration from being tampered, the preview duration is included in the calculation result of the auth\_key field.
--   The object chunking and video seeking features are enabled for the domain name. To enable the two features for the domain name, go to the Video Related tab on the configuration page of the domain name in the ApsaraVideo VOD console.
+-   The authentication type A for URL signing is enabled. To prevent the preview duration from being tampered with, the preview duration is included in the calculation result of the auth\_key field.
+-   The object chunking and video seeking features are enabled for the domain name. For more information, see [Configure object chunking](/intl.en-US/User Guide/Domain management/Video-related settings/Configure object chunking.md) and [Video seeking](/intl.en-US/User Guide/Domain management/Video-related settings/Video seeking.md).
 
 ## Procedure
 
-1.  Enable the preview feature for the domain name. For more information, see the "Configuration" section of this topic.
+![Process](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8843815161/p185004.png)
+
+1.  Set the preview feature.
+
+    1.  Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/).
+    2.  In the left-side navigation pane, find **Configuration Management**.
+    3.  Choose **CDN Configuration** \> **Domain Names**. The Domain Names page appears.
+    4.  Find the domain name that you want to configure and click **Configure**.
+    5.  Click **Resource Access Control**.
+    6.  Click the **URL Authentication** tab. On the URL Authentication tab, click **Modify**.
+    7.  In the URL Authentication dialog box, turn on **URL Authentication** and **Support Previewing**, set the parameters as required, and then click **OK**.
+    For more information, see [Configure URL signing](/intl.en-US/User Guide/Domain management/Access control/Configure URL signing.md).
 
     **Note:** If the preview feature is disabled for the domain name, do not include the preview duration in your request for video playback. Otherwise, a streaming URL that you cannot access is returned.
 
-2.  Send a request to ApsaraVideo VOD for video playback. In the request, set the preview duration. For more information, see the "Methods for obtaining preview URLs" section of this topic.
+2.  Send a preview request.
+
+    Send a request to ApsaraVideo VOD for video playback. In the request, set the preview duration. For more information, see the "[Methods for obtaining preview URLs](#section_986_kf2_9ry)" section of this topic.
+
 3.  Obtain the preview URL.
 4.  Use the preview URL to access Alibaba Cloud CDN. Then, Alibaba Cloud CDN returns the specified content for preview.
-
-## Process
-
-![Process](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8843815161/p185004.png)
-
-## Configuration
-
-Log on to the ApsaraVideo VOD console. In the left-side navigation pane, choose Configuration Management \> CDN Configuration \> Domain Names. Click Configure for the domain name that you want to configure. On the configuration page of the domain name, click Resource Access Control. On the page that appears, click the URL Authentication tab. On the URL Authentication tab, enable the authentication type A for URL signing and the preview feature.
-
-![Configuration](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8843815161/p185005.png)
 
 ## Methods for obtaining preview URLs
 
@@ -44,9 +46,7 @@ Log on to the ApsaraVideo VOD console. In the left-side navigation pane, choose 
 -   The preview duration is determined based on keyframes. Therefore, we recommend that you do not apply the preview feature to short videos. For long videos, we recommend that you set the preview duration to at least 30 seconds. The default keyframe interval of transcoded files is 10 seconds. You can modify the keyframe interval in transcoding templates.
 -   The preview granularity of M3U8 files is the duration of each TS segment. If the specified preview duration is not an integral multiple of the TS segment duration, the preview duration is extended. For example, if the TS segment duration is 10 seconds and the preview duration is 15 seconds, Alibaba Cloud CDN returns the specified content of 20 seconds for preview.
 
-You can set the preview duration in the PreviewTime parameter of [PlayConfig](https://help.aliyun.com/document_detail/86952.html?spm=a2c4g.11186623.2.22.59331f40Sgdd2W#PlayConfig) when you call the [GetPlayInfo](https://help.aliyun.com/document_detail/56124.html?spm=a2c4g.11186623.2.21.59331f40Sgdd2W) operation.
-
-The following code provides an example:
+You can set the preview duration in the `PreviewTime` parameter of [PlayConfig](/intl.en-US/API Reference/Appendix/Request parameters.md) when you call the [GetPlayInfo](/intl.en-US/API Reference/Audio and video playback/GetPlayInfo.md) operation. The following code provides an example:
 
 ```
 package com.ali.vod.test;
@@ -119,10 +119,15 @@ public class VodPreviewTest {
                 
 ```
 
-## Manually calculate the preview URL
+## Calculate the preview duration
 
--   If the auth\_key field in the URL of a video contains the preview duration, include the preview duration in the calculation result of the md5hash field for [URL signing](https://help.aliyun.com/document_detail/57007.htm?spm=a2c4g.11186623.2.23.59331f40Sgdd2W). Use the following method to calculate the md5hash field: MD5\(uri-timestamp-rand-uid-auth\_key-preview\_time\).
--   Add &end=\{Preview duration\} to the end of the URL. To allow users to view the complete video, do not set the preview duration and do not include the preview duration in the calculation result of auth\_key.
+Run code to generate the auth\_key field. To calculate the preview duration, perform the following steps:
+
+1.  Add the `previewTime` parameter to calculate the preview duration when you calculate the MD5 hash value for URL signing. To calculate the MD5 hash value, use the `MD5(uri-timestamp-rand-uid-auth_key-preview_time)` method. For more information, see [URL authentication](/intl.en-US/Developer Guide/Video security/URL authentication.md).
+
+    **Note:** To allow users to view the complete video, do not set the previewTime parameter or include the previewTime parameter in the calculation of the auth\_key field.
+
+2.  Append `&end=` + `previewTime` to the calculation result of the auth\_key field at the end.``
 
 The following code provides an example:
 
@@ -141,7 +146,7 @@ The following code provides an example:
         long timestamp = System.currentTimeMillis() / 1000 + (expireTime == null ? 0 : expireTime);
         String authStr = timestamp + "-" + rand + "-" + uid;
         String md5Str = object + "-" + authStr + "-" + privateKey;
-        if(previewTime! =0)
+        if(previewTime!=0)
             md5Str = md5Str + "-" + previewTime;
         String auth_key = authStr + "-" + MD5Util.md5( md5Str);
         return auth_key;
@@ -156,8 +161,8 @@ The following code provides an example:
             Long previewtime = 120L;
             Long expireTime = 1800L;
             String auth_key =genAuthKey(file, key, expireTime, previewtime);
-            fileUrl = fileUrl + "? auth_key=" + auth_key;
-            if(previewtime ! = 0)
+            fileUrl = fileUrl + "?auth_key=" + auth_key;
+            if(previewtime != 0)
                 fileUrl = fileUrl + "&end=" + previewtime;
             System.out.println(fileUrl);
         } catch (Exception e) {
