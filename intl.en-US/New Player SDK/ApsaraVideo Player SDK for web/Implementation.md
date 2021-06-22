@@ -53,7 +53,7 @@ The operations required for autoplay of the next video at the end of the current
         player.on("ended", endedHandle);
         ```
 
-        **Note:** A playback credential is valid for only 100s. When a player calls the `replayByVidAndPlayAuth` method, the player must pass a new playback credential to the method. For more information, see [GetVideoPlayAuth](/intl.en-US/API Reference/Audio and video playback/GetVideoPlayAuth.md).``
+        **Note:** A playback credential is valid only for 100s. When a player calls the `replayByVidAndPlayAuth` method, the player must pass a new playback credential to the method. For more information, see [GetVideoPlayAuth](/intl.en-US/API Reference/Audio and video playback/GetVideoPlayAuth.md).``
 
 -   Playback based on URLs of videos that use different streaming protocols
 
@@ -94,7 +94,7 @@ You can set the qualitySort attribute to list the resolutions in ascending or de
 -   The player remembers the resolution that you select when you change the resolution. The player plays a video in the previously selected resolution. If no resolution was previously selected, the player plays the video in the lowest resolution.
 -   If the video fails to be played in the selected resolution, the player automatically switches to the next lower resolution and displays a message. This feature is supported only by HTML5 players.
 
-## Snapshot
+## Screenshot
 
 ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG format when you play a video. The player returns Base64-encoded and binary data of the snapshots along with the points in time of the snapshots.
 
@@ -140,7 +140,7 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
       }
     ```
 
-    **Note:** When you play FLV videos by using an HTML5 player in Safari, the snapshot feature is not supported. The snapshot button does not appear even if you enable this feature.
+    **Note:** When you play Flash Video \(FLV\) videos by using an HTML5 player in Safari, the snapshot feature is not supported. The snapshot button does not appear even if you enable this feature.
 
 -   Set snapshot size and quality
 
@@ -169,7 +169,7 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
     -   binary: the binary data of the snapshot. The binary data can be used to upload the image.
 -   Add a header that is used to enable CORS for an HTML5 player
 
-    Canvas is the element that enables the snapshot feature for an HTML5 player. You must add a header that is used to enable CORS to the playback domain name. For more information, see [How do I configure CORS?](https://help.aliyun.com/document_detail/62950.html?spm=a2c4g.11186623.2.56.1e606fc59YbZqx)
+    Canvas is the element that enables the snapshot feature for an HTML5 player. You must add a header that is used to enable CORS to the playback domain name. For more information, see [Configure CORS](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure CORS.md).
 
 -   Add text watermarks to snapshots taken in an HTML5 player
 
@@ -204,7 +204,7 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
 ## Time shifting in an HTML5 player
 
 -   Enable time shifting
-    -   You must enable time shifting in ApsaraVideo Live. For more information, see [Time shifting](https://help.aliyun.com/document_detail/65129.html?spm=a2c4g.11186623.2.57.1e606fc5708j5P).
+    -   You must enable time shifting in ApsaraVideo Live. For more information, see [Time shifting](/intl.en-US/API Reference/Time shifting/Time shifting.md).
     -   The following table describes the attributes that you must set to enable time shifting for a player.
 
         |Attribute|Description|
@@ -273,8 +273,8 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
 -   The `videoHeight` and `videoWidth` attributes are used to set the height and width of a video. Typically, the height and width of a video are smaller than those of the container. This prevents the video from overflowing from the parent container during rotation and mirroring. The following code provides an example:
 
     ```
-     width: '100', // The width of the container.
-     height: '100%', // The height of the container.
+     width: 100% ', // The width of the container.
+     height: 100% ', // The height of the container.
      videoHeight:"200px", // The height of the video.
     ```
 
@@ -282,8 +282,8 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
 
 -   Method description
 
-    |Method|Description|
-    |------|-----------|
+    |Parameter|Description|
+    |---------|-----------|
     |setRotate|Sets the rotation angle. A positive value indicates clockwise rotation, whereas a negative value indicates anticlockwise rotation. Example: setRotate\(90\).|
     |getRotate|Obtains the rotation angle.|
     |setImage|Sets the mirroring type. Valid values:    -   **horizon**: horizontal mirroring.
@@ -317,21 +317,21 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
     **Note:** If no text value is predefined for a key, the key is displayed as the text value on the UI.
 
 
-## Considerations
+## Usage notes
 
--   When an HTML5 player plays a video, the message "No 'Access-Control-Allow-Origin' header is present on the requested resource" may be displayed in the web browser console. To resolve this issue, configure CORS. For more information, see [How do I configure CORS?](https://help.aliyun.com/document_detail/62950.html?spm=a2c4g.11186623.2.52.1e606fc53hzRt4)
--   When a Flash player plays a video, a Canonical Name \(CNAME\) or CORS error may occur. To resolve this issue, configure CORS. For more information, see [How do I configure CORS?](https://help.aliyun.com/document_detail/62950.html?spm=a2c4g.11186623.2.52.1e606fc53hzRt4)
--   When you play a video in WeChat or QQ on an Android mobile phone, the Tencent X5 browser hijacks the video tag to automatically play the video in full-screen mode. To resolve this issue, enable the immersive mode for the HTML5 player. For more information, see [How do I enable the immersive mode for the HTML5 player?](https://help.aliyun.com/document_detail/62953.html?spm=a2c4g.11186623.2.54.1a616fc5zJ9Ai1)
+-   When an HTML5 player plays a video, the message "No 'Access-Control-Allow-Origin' header is present on the requested resource" may be displayed in the web browser console. To resolve this issue, configure CORS. For more information, see [Configure CORS](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure CORS.md).``
+-   When a Flash player plays a video, a Canonical Name \(CNAME\) or CORS error may occur. To resolve this issue, configure CORS. For more information, see [Configure CORS](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure CORS.md).
+-   When you play a video in WeChat or QQ on an Android mobile phone, the Tencent X5 browser hijacks the video tag to automatically play the video in full-screen mode. To resolve this issue, enable the immersive mode for the HTML5 player. For more information, see [How do I enable the immersive mode for the HTML5 player?](/intl.en-US/FAQ/How do I enable the immersive mode for the HTML5 player?.md).
 
 ## Other features
 
 -   [Progress bar marking](https://developer.aliyun.com/article/686043)
--   [How do I configure the skin for the player?](https://help.aliyun.com/document_detail/62947.html?spm=a2c4g.11186623.2.62.60ef6fc5ZDqksa)
--   [How do I set the skinLayout attribute?](https://help.aliyun.com/document_detail/62948.html?spm=a2c4g.11186623.2.63.60ef6fc5WM2gri)
--   [How do I configure CORS?](https://help.aliyun.com/document_detail/62950.html?spm=a2c4g.11186623.2.64.60ef6fc5yzOd32)
--   [How do I resume live streaming after an error occurred?](https://help.aliyun.com/document_detail/63067.html?spm=a2c4g.11186623.2.66.60ef6fc5NzCFtM)
--   [How do I use the diagnostics tool?](https://help.aliyun.com/document_detail/63068.html?spm=a2c4g.11186623.2.67.60ef6fc5TW3z5q)
--   [How do I customize the error UI for the HTML5 player?](https://help.aliyun.com/document_detail/63069.html?spm=a2c4g.11186623.2.68.60ef6fc5YO4DaJ)
--   [How do I customize components?](https://help.aliyun.com/document_detail/63207.html?spm=a2c4g.11186623.2.69.60ef6fc5BZZ2Fp)
--   [How do I configure playback delay?](https://help.aliyun.com/document_detail/63198.html?spm=a2c4g.11186623.2.70.60ef6fc5Ldbbb5)
+-   [Customize components](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Customize components.md)
+-   [Use the diagnostic tool](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Use the diagnostic tool.md)
+-   [Configure the playback delay](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure the playback delay.md)
+-   [Customize the error UI for the HTML5 player](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Customize the error UI for the HTML5 player.md)
+-   [Configure CORS](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure CORS.md)
+-   [Handle an error and resume live streaming](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Handle an error and resume live streaming.md)
+-   [Configure the skinLayout attribute](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure the skinLayout attribute.md)
+-   [Configure the player skin](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure the player skin.md)
 
