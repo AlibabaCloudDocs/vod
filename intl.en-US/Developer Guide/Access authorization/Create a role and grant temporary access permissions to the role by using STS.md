@@ -8,13 +8,27 @@ Permissions granted to RAM users can be used for an extended period of time, whi
 
 ## Create a RAM user
 
-1.  Log on to the [RAM console](https://ram.console.aliyun.com/) with an Alibaba Cloud account.
+1.  Log on to the [RAM console](https://ram.console.aliyun.com/overview).
 
-2.  Go back to the Users page. The RAM user you created appears in the user list. When the RAM user is created, it does not have any permissions. Click **Add Permissions** in the Actions column corresponding to the RAM user.
+2.  In the left-side navigation pane, click **Users**. On the Users page, click **Create User**.
+
+    ![Users](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7198039061/p177869.png)
+
+3.  Select **Programmatic Access** and click **OK**.
+
+    ![Create User](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7198039061/p177870.png)
+
+    ![ ](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8046201161/p177876.png)
+
+4.  Click **Copy** in the Actions column corresponding to the RAM user to save the user logon name, logon password, and AccessKey pair.
+
+    **Note:** We recommend that you keep the user information confidential for future access purposes.
+
+5.  Go back to the Users page. The RAM user you created appears in the user list. When the RAM user is created, it does not have any permissions. Click **Add Permissions** in the Actions column corresponding to the RAM user.
 
     ![Add Permissions](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0086201161/p177953.png)
 
-3.  On the Add Permissions page, select the **AliyunSTSAssumeRoleAccess** policy from the list of policies under System Policy, and click **OK**.
+6.  On the Add Permissions page, select the **AliyunSTSAssumeRoleAccess** policy from the list of policies under System Policy, and click **OK**.
 
     ![Select Policy](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0086201161/p177961.png)
 
