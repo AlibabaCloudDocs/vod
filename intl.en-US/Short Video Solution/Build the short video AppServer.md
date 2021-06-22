@@ -18,7 +18,7 @@ The short video AppServer is used to exchange data between the short video appli
 
 3.  Log on to the ECS instance. Then, decompress the source code package.
 
-    cd /root/workapace
+    cd /root/workspace
 
     unzip ApsaraVideo\_QuVideo\_v1.4.0\_Server\_20191226.zip
 
