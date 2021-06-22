@@ -18,7 +18,7 @@
 
     ![生成AK](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1112204061/p177876.png)
 
-4.  单击用户信息右侧的**复制**，保存用户登录名称、登录密码、AK对等用户信息。
+4.  单击用户信息右侧的**复制**，保存用户登录名称、登录密码、AK对（AccessKey ID、AccessKey Secret）等用户信息。
 
     **说明：** 请保存用户信息并妥善保管，用于后续的访问。
 
