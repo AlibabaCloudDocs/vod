@@ -2,10 +2,14 @@
 
 Users of ApsaraVideo VOD may want to migrate many existing videos that are stored on their personal websites or the cloud to ApsaraVideo VOD. This topic describes how to migrate videos to ApsaraVideo VOD.
 
-## Preparations
+## Prerequisites
 
--   [Register](https://account.aliyun.com/register/register.htm?spm=a2c4g.11186623.2.21.1d881e71wvM58e&oauth_callback=https%3A%2F%2Fvod.console.aliyun.com%2F&lang=zh) an Alibaba Cloud account, complete [real-name verification](https://help.aliyun.com/knowledge_list/37170.html?spm=a2c4g.11186623.2.22.1d881e71wvM58e), and activate [ApsaraVideo VOD](https://www.aliyun.com/product/vod?spm=a2c4g.11186623.2.23.1d881e71wvM58e).
--   Obtain an AccessKey to access ApsaraVideo VOD. You can create an AccessKey for your Alibaba Cloud account on the [AccessKey Management](https://ak-console.aliyun.com/?spm=a2c4g.11186623.2.24.1d881e71wvM58e#/accesskey) page in the Alibaba Cloud Management Console. Alternatively, you can create a RAM user in the [Resource Access Management \(RAM\) console](https://ram.console.aliyun.com/?spm=a2c4g.11186623.2.25.1d881e71wvM58e#/user/list) and grant the user the permission to access ApsaraVideo VOD. For more information, see [RAM user access](https://help.aliyun.com/document_detail/57056.html?spm=a2c4g.11186623.2.26.1d881e71wvM58e).
+-   An Alibaba Cloud account is created.
+-   The real-name verification is complete for your Alibaba Cloud account. To perform real-name verification, log on to the [official Alibaba Cloud website](https://account.console.aliyun.com/?spm=a2c4g.11186623.2.11.252241abqbKiGM#/auth/home), click **Real-name Verification**, and then perform operations by following the on-screen instructions.
+-   An AccessKey pair is obtained to access ApsaraVideo VOD. You can obtain your AccessKey pair in the following consoles:
+    -   [User Management console](https://ak-console.aliyun.com/?spm=a2c4g.11186623.2.24.1d881e71wvM58e#/accesskey)
+    -   [RAM console](https://ram.console.aliyun.com/?spm=a2c4g.11186623.2.25.1d881e71wvM58e#/user/list)
+    -   For more information about how to obtain an AccessKey pair in the RAM console, see [Create and grant permissions to a RAM user](https://help.aliyun.com/document_detail/57056.html?spm=a2c4g.11186623.2.26.1d881e71wvM58e).
 
 ## Flowchart of uploading videos by using an upload SDK
 
@@ -18,7 +22,7 @@ Users of ApsaraVideo VOD may want to migrate many existing videos that are store
     ![Upload using ECS](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3823815161/p183911.png)
 
 
-**Note:** If the videos to be migrated are stored in Object Storage Service \(OSS\) or another Alibaba Cloud account in ApsaraVideo VOD and the video mezzanine files use an internal endpoint, you can download the files to Elastic Compute Service \(ECS\) instances by using the internal network. For more information, see the [Migrate videos by using an internal endpoint](https://help.aliyun.com/document_detail/163389.html?spm=a2c4g.11186623.6.1174.76c565ddFJlQvW#section-qhy-12b-f00) section.
+**Note:** If the videos to be migrated are stored in Object Storage Service \(OSS\) or another Alibaba Cloud account in ApsaraVideo VOD and the video mezzanine files use an internal endpoint, you can download the files to Elastic Compute Service \(ECS\) instances by using the internal network. For more information, see [Migrate videos by using an internal endpoint](#section_kjr_j9a_2jy).
 
 ## Procedure
 
@@ -38,9 +42,9 @@ Users of ApsaraVideo VOD may want to migrate many existing videos that are store
 
     1.  \(Recommended\) Method 1: use an upload SDK that is provided by ApsaraVideo VOD to upload videos
 
-        This method does not change the migration process. Videos are uploaded in a synchronous way, ensuring timeliness. When you use the upload SDK, we recommend that you deploy the program on an ECS instance that resides in the same region as the bucket that is allocated by ApsaraVideo VOD. For Chinese domestic users, the default bucket that is allocated by ApsaraVideo VOD resides in the China \(Shanghai\) region. You must prepare the ECS instance in advance. After you specify the regionId parameter in the SDK, videos are automatically uploaded to ApsaraVideo VOD by using the internal network.
+        This method does not change the migration process. Videos are uploaded in a synchronous way, which ensures that videos can be uploaded at a low latency. When you use the upload SDK, we recommend that you deploy the program on an ECS instance that resides in the same region as the bucket that is allocated by ApsaraVideo VOD. For Chinese domestic users, the default bucket that is allocated by ApsaraVideo VOD resides in the China \(Shanghai\) region. You must prepare the ECS instance in advance. After you specify the regionId parameter in the SDK, videos are automatically uploaded to ApsaraVideo VOD by using the internal network.
 
-        For more information about the upload SDK, see [Overview](https://help.aliyun.com/document_detail/52200.html?spm=a2c4g.11186623.2.31.1d881e71wvM58e).
+        For more information about the upload SDK, see [Overview](Overviewt1959809.dita#task_1997557).
 
         ```
         import com.aliyun.vod.upload.impl.UploadVideoImpl;
@@ -115,7 +119,7 @@ Users of ApsaraVideo VOD may want to migrate many existing videos that are store
 
     2.  **\(Not recommended\) Method 2: upload videos by using URLs**
 
-        [UploadMediaByURL](https://help.aliyun.com/document_detail/86311.html?spm=a2c4g.11186623.2.32.1d881e71wvM58e)
+        [t1235497.dita\#doc\_api\_vod\_UploadMediaByURL](/intl.en-US/API Reference/Media upload/UploadMediaByURL.md)
 
         You can refer to the following sample code to pass in the mezzanine file URLs of videos to be migrated one by one, and then submit the upload task. Alternatively, you can pass in the media asset information such as the title, category, and description of each video during the upload based on your business needs. This way, the migration process remains unchanged. However, you must design the specific behavior of the migration step based on your scenario.
 
@@ -144,7 +148,7 @@ Users of ApsaraVideo VOD may want to migrate many existing videos that are store
             }
         
             /**
-             * Upload multiple videos based on mezzanine file URLs.
+             * Upload media files by using a source file URL.
              * @param client The client that sends a request.
              * @return UploadMediaByURLResponse The response to the request for uploading multiple videos based on mezzanine file URLs.
              * @throws Exception
@@ -176,7 +180,7 @@ Users of ApsaraVideo VOD may want to migrate many existing videos that are store
                 return client.getAcsResponse(request);
             }
         
-            // Call example
+            // Sample request
             public static void main(String[] argv) throws ClientException {
                 DefaultAcsClient client = initVodClient("<Your AccessKeyId>", "<Your AccessKeySecret>");
                 UploadMediaByURLResponse response = new UploadMediaByURLResponse();
@@ -209,18 +213,18 @@ If you need to copy your videos in ApsaraVideo VOD to provide services for users
 
 To migrate videos between Alibaba Cloud accounts, perform the following steps:
 
--   Call the [SearchMedia](https://help.aliyun.com/document_detail/86044.html?spm=a2c4g.11186623.2.39.43cb448bfq3s1c) operation of ApsaraVideo VOD to query the IDs of videos to be migrated.
--   Based on the video IDs, call the [GetMezzanineInfo](https://help.aliyun.com/document_detail/59624.html?spm=a2c4g.11186623.6.734.49b46ad8SkcARX) operation of ApsaraVideo VOD to obtain the mezzanine file URLs of videos to be migrated. Then, save the result.
+1.  Call the [t1235508.dita\#doc\_api\_vod\_SearchMedia](/intl.en-US/API Reference/Media asset management/Media asset search/SearchMedia.md) operation of ApsaraVideo VOD to query the IDs of videos to be migrated.
+2.  Call the [t1235518.dita\#doc\_api\_vod\_GetMezzanineInfo](/intl.en-US/API Reference/Media asset management/Audio and video management/GetMezzanineInfo.md) operation of ApsaraVideo VOD based on the video IDs to obtain the mezzanine file URLs of videos to be migrated. Then, save the result.
 
-    **Note:** If the video mezzanine files are transcoded, you can use the [media asset export](https://help.aliyun.com/document_detail/86057.html?spm=5176.11065259.1996646101.searchclickresult.288c1a90mLpVit) feature of ApsaraVideo VOD to obtain the URLs of transcoded video files.
+    **Note:** If the video mezzanine files are transcoded, you can use the media asset export feature of ApsaraVideo VOD to obtain the URLs of transcoded video files. For more information, see [Manage media assets](/intl.en-US/User Guide/Media library/Manage media assets.md).
 
     ![Export media assets](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3823815161/p183918.png)
 
--   Repeat Step 2 to Step 4 in the Procedure section to migrate videos.
+3.  Migrate videos.
 
 ## Migrate videos by using an internal endpoint
 
-If your ECS instance resides in the same region as the video mezzanine files, we recommend that you perform the following operations before you migrate videos: Call the GetMezzanineInfo operation to obtain the OSS endpoints of video files, and manually replace the domain name of the OSS endpoints with the [internal endpoint of OSS](https://help.aliyun.com/document_detail/31834.html?spm=a2c4g.11186623.2.37.58651e71GAQUmW#title-7oh-gcr-v98). For more information, see [Access to OSS resources from ECS instances by using the internal endpoint of OSS](https://help.aliyun.com/knowledge_detail/39584.html?spm=a2c4g.11186623.2.38.58651e71GAQUmW).
+If your ECS instance resides in the same region as the video mezzanine files, we recommend that you perform the following operations before you migrate videos: Call the GetMezzanineInfo operation to obtain the OSS endpoints of video files, and manually replace the domain name of the OSS endpoints with the [internal endpoint of OSS](/intl.en-US/Developer Guide/Endpoint/OSS domain names.md). For more information, see [Access to OSS resources from ECS instances by using the internal endpoint of OSS](/intl.en-US/Developer Guide/Endpoint/Access to OSS resources from ECS instances by using the internal endpoint of OSS.md).
 
 Assume that the OSS endpoint of a video is outin-67870fd5b29\*\*\*\*98a3900163e1c35d5.oss-cn-shanghai.aliyuncs.com/customerTrans/2a13b91506f9158f\*\*\*\*7317f4a9d4c9/30f24681-1718d5c6237-\*\*4bd.mp4.
 
