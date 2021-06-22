@@ -2,7 +2,7 @@
 
 Registers media assets.
 
-You can call this operation to register audio and video files in Object Storage Service \(OSS\) buckets that are used for ApsaraVideo VOD. After a media asset is registered, you can submit a transcoding job, video snapshot job, or AI job based on the media ID. For more information, see [SubmitTranscodeJobs](~~68570~~), [SubmitSnapshotJob](~~72213~~), and [SubmitAIMediaAuditJob](~~89869~~).
+You can call this operation to register audio and video files in Object Storage Service \(OSS\) buckets that are used for ApsaraVideo VOD. After a media asset is registered, you can submit a transcoding job or snapshot job based on the media ID. For more information, see [SubmitTranscodeJobs](~~68570~~) and [SubmitSnapshotJob](~~72213~~).
 
 **Note:**
 
@@ -22,8 +22,8 @@ You can call this operation to register audio and video files in Object Storage 
 |RegisterMetadatas|String|Yes|\[\{"FileURL":"https://bucketName.oss-cn-shanghai.aliyuncs.com/video/test/video.m3u8","Title":"VideoName"\}\]|The metadata of the media asset that you want to register. The value is a JSON string. You can specify the metadata for a maximum of 10 media assets at a time. For more information about the parameter structure, see the RegisterMetadata table. |
 |TemplateGroupId|String|No|ca3a8f6e49c8\*\*\*\*\*7b65806709586|The ID of the transcoding template group. You can obtain the ID by calling the [AddTranscodeTemplateGroup](~~102665~~) operation.
 
- **Note:** If this parameter is specified, the specified template group is used for transcoding. Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.20.68924c07zG2sdx#/settings/transcode/list). On the **Transcode** page, view the ID of the transcoding template group. |
-|UserData|String|No|\{"Extend":\{"localId":"\*\*\*\*","test":"www"\}\}|The custom configurations. The value is a JSON string, which supports the configuration such as callbacks. For more information, see [UserData](~~86952#h2--userdata-div-id-userdata-div-3~~). |
+ **Note:** If this parameter is specified, the specified template group is used for transcoding. Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.20.68924c07zG2sdx#/settings/transcode/list) console. On the **Transcode** page, view the ID of the transcoding template group. |
+|UserData|String|No|\{"Extend":\{"localId":"\*\*\*\*","test":"www"\}\}|The custom configurations. The value is a JSON string, which supports the configuration such as callbacks. For more information, see [UserData](~~86952#section_6fg_qll_v3w~~). |
 |WorkflowId|String|No|637adc2b7ba\*\*\*\*\*51a83d841606f8|The ID of the workflow. |
 
 ## RegisterMetadata
@@ -72,7 +72,7 @@ The following table describes the metadata of the media asset that you want to r
 
 |No
 
-|The URL of the thumbnail. The URL can be up to 1,024 bytes in length. |
+|The URL of the thumbnail. The description can be up to 1,024 bytes in length. |
 |CateId
 
 |Long
