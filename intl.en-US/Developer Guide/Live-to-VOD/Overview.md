@@ -76,11 +76,11 @@ After live streams are recorded into on-demand videos, ApsaraVideo VOD provides 
 
 * View recorded videos in the console
 
-  * On the [Video and Audio](https://vod.console.aliyun.com/?/media/video/list#/media/video/list) page of the ApsaraVideo VOD console, set Source to **ApsaraVideo Live** to view recorded videos, as shown in the following figure.
+  * On the [Video and Audio](https://vod.console.aliyun.com/?/media/video/list#/media/video/list) page of the ApsaraVideo VOD console, set Source to **ApsaraVideo Live** to view recorded videos, as shown in the following figure.![查询列表](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0577244261/p183815.png)
 
     
   
-  * On the [Recording Management](https://live.console.aliyun.com/#/live/record) page of the ApsaraVideo Live console, query recorded videos based on the AppName and StreamName parameters, as shown in the following figure.
+  * On the [Recording Management](https://live.console.aliyun.com/#/live/record) page of the ApsaraVideo Live console, query recorded videos based on the AppName and StreamName parameters, as shown in the following figure.![筛选](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0577244261/p183816.png)
 
     
   
