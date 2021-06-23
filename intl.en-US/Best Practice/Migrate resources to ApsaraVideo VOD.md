@@ -69,7 +69,7 @@ Users of ApsaraVideo VOD may want to migrate many existing videos that are store
             private static void testUploadStream(String accessKeyId, String accessKeySecret, String title, String fileName, InputStream inputStream) {
                 UploadStreamRequest request = new UploadStreamRequest(accessKeyId, accessKeySecret, title, fileName, inputStream);
                 
-                /* Customize the callback configuration for event notifications. For more information about the parameters, see https://help.aliyun.com/document_detail/86952.html#UserData. */
+                /* Customize the callback configuration for event notifications. For more information about the parameters, see [Basic data types](Basic data typest1235673.xdita#topic-1235673) */
                 //request.setUserData(""{\"Extend\":{\"test\":\"www\",\"localId\":\"xxxx\"},\"MessageCallback\":{\"CallbackURL\":\"http://test.test.com\"}}"");
                 /* Optional. Specify the category ID of the video. */
                 //request.setCateId(0);
@@ -137,7 +137,7 @@ Users of ApsaraVideo VOD may want to migrate many existing videos that are store
         /**
          * Asynchronously upload multiple videos based on mezzanine file URLs.
          * Before you call the UploadMediaByURL operation, we recommend that you read the document of the operation to understand its advantages and disadvantages.
-         * https://help.aliyun.com/document_detail/86311.html?spm=a2c4g.11186623.6.714.4d9d3dbdFBPe6k
+         * see [t1235497.dita\#doc\_api\_vod\_UploadMediaByURL](/intl.en-US/API Reference/Media upload/UploadMediaByURL.md).
          */
         public class UploadMediaByURLDemo {
             public static DefaultAcsClient initVodClient(String accessKeyId, String accessKeySecret) throws ClientException {
