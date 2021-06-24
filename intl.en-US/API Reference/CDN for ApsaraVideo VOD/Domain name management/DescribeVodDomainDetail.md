@@ -21,7 +21,7 @@ Queries the basic information about a specified domain name for CDN.
 |---------|----|-------|-----------|
 |DomainDetail|Struct| |The basic information about the domain name for CDN. |
 |CertName|String|\*\*\*\*|The name of the certificate. The value of this parameter is returned if HTTPS is enabled. |
-|Cname|String|www.example.com.alikunlun.net|The canonical domain name that is assigned to the domain name for CDN. You must add the CNAME record at your DNS service provider to map the domain name for CDN to the canonical domain name. |
+|Cname|String|www.example.com.alikunlun.net|The CNAME that is assigned to the domain name for CDN. You must add a CNAME record in the system of your Domain Name System \(DNS\) service provider to map the domain name for CDN to the CNAME. |
 |Description|String|\*\*\*\*|The description of the domain name for CDN. |
 |DomainName|String|www.example.com|The domain name for CDN. |
 |DomainStatus|String|online|The status of the domain name for CDN. Value values:
@@ -57,7 +57,7 @@ Queries the basic information about a specified domain name for CDN.
 
  -   **ipaddr**: a server that you can access by using an IP address.
 -   **domain**: a server that you can access by using a domain name.
--   **oss**: an Object Storage Service \(OSS\) bucket. |
+-   **oss**: the URL of an Object Storage Service \(OSS\) bucket. |
 |Weight|String|1|The weight of the origin server. |
 |RequestId|String|09ABE829-6CD3-4FE0-\*\*\*\*-556113E29727|The ID of the request. |
 
@@ -127,7 +127,7 @@ Sample success responses
 
 For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/vod).
 
-The following table describes the common errors that this operation can return. For more information about errors common to all operations, see [Common errors](https://help.aliyun.com/document_detail/52841.html?spm=a2c4g.11186623.2.17.72657c55cS5tmj).
+The following table describes the common errors that this operation can return. For more information about errors common to all operations, see [Error codes](~52841~).
 
 |Error code
 
@@ -143,7 +143,7 @@ The following table describes the common errors that this operation can return. 
 
 |404
 
-|The error message returned because the domain name does not exist or does not belong to you.
+|The error message returned because the specified domain name does not exist or does not belong to you.
 
 | |
 |ServiceBusy
