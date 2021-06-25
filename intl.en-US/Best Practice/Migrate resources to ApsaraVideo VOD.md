@@ -9,7 +9,7 @@ Users of ApsaraVideo VOD may want to migrate many existing videos that are store
 -   An AccessKey pair is obtained to access ApsaraVideo VOD. You can obtain your AccessKey pair in the following consoles:
     -   [User Management console](https://ak-console.aliyun.com/?spm=a2c4g.11186623.2.24.1d881e71wvM58e#/accesskey)
     -   [RAM console](https://ram.console.aliyun.com/?spm=a2c4g.11186623.2.25.1d881e71wvM58e#/user/list)
-    -   For more information about how to obtain an AccessKey pair in the RAM console, see [Create and grant permissions to a RAM user](https://help.aliyun.com/document_detail/57056.html?spm=a2c4g.11186623.2.26.1d881e71wvM58e).
+    -   For more information about how to obtain an AccessKey pair in the RAM console, see [Create and grant permissions to a RAM user](/intl.en-US/Developer Guide/Access authorization/Create and grant permissions to a RAM user.md).
 
 ## Flowchart of uploading videos by using an upload SDK
 
