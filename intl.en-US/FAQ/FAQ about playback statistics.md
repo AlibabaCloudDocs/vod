@@ -30,3 +30,5 @@ ApsaraVideo VOD collects statistics only on playbacks that use ApsaraVideo Playe
 
 The ApsaraVideo VOD console provides statistics and top rankings only for playbacks performed by ApsaraVideo Player, as shown in the following figure. ApsaraVideo VOD does not collect statistics on URL-based playbacks and playbacks that use player SDKs other than ApsaraVideo Player SDK. The detailed behavior data of such playbacks may not be obtained to ensure accurate statistics. If the number of video views in the ApsaraVideo VOD console is zero, it only indicates that your videos are not played by ApsaraVideo Player. However, your videos may be played in other ways. ApsaraVideo VOD collects statistics on traffic consumed by all playback requests. Therefore, the ApsaraVideo VOD console shows that the number of video views is zero but traffic is consumed.
 
+![vod-qa.jpg ](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1516854261/p179099.jpg)
+
