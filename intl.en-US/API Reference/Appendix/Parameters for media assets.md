@@ -13,7 +13,7 @@ This parameter specifies the output specifications of transcoded audio and video
 
   
 
-* For more information about the parameter values that indicate different levels of video definition, see the "[Definition](#topic3227/section-z5u-6by-yqi)" section of this topic.
+* For more information about the parameter values that indicate different levels of video definition, see the "[Definition](#section-z5u-6by-yqi)" section of this topic.
 
   
 
