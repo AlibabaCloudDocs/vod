@@ -160,7 +160,7 @@
             //request.setSlowRequestsThreshold(300000L);
             /* 是否显示水印(可选)，指定模板组ID时，根据模板组配置确定是否显示水印*/
             //request.setIsShowWaterMark(true);
-            /* 自定义消息回调设置(可选)，参数说明参考文档 https://help.aliyun.com/document_detail/86952.html#UserData */
+            /* 自定义消息回调设置(可选)，参数说明请参见[请求参数说明](/cn.zh-CN/服务端API/附录/请求参数说明.md)。*/
             // request.setUserData("{\"Extend\":{\"test\":\"www\",\"localId\":\"xxxx\"},\"MessageCallback\":{\"CallbackURL\":\"http://test.test.com\"}}");
             /* 视频分类ID(可选) */
             //request.setCateId(0);
@@ -224,7 +224,7 @@
             request.setLocalDownloadFilePath("/Users/download");
             /* 是否显示水印(可选)，指定模板组ID时，根据模板组配置确定是否显示水印*/
             //request.setShowWaterMark(true);
-            /* 自定义消息回调设置(可选)，参数说明参考文档 https://help.aliyun.com/document_detail/86952.html#UserData */
+            /* 自定义消息回调设置(可选)，参数说明请参见[请求参数说明](/cn.zh-CN/服务端API/附录/请求参数说明.md) */
             // request.setUserData("{\"Extend\":{\"test\":\"www\",\"localId\":\"xxxx\"},\"MessageCallback\":{\"CallbackURL\":\"http://test.test.com\"}}");
             /* 视频分类ID(可选) */
             //request.setCateId(0);
@@ -265,7 +265,7 @@
     
         /**
          * 图片上传接口，本地文件上传示例
-         * 参数参考文档 https://help.aliyun.com/document_detail/55619.html
+         * 参数请参见[t1235495.dita\#doc\_api\_vod\_CreateUploadImage](/cn.zh-CN/服务端API/媒体上传/获取图片上传地址和凭证.md)
          *
          * @param accessKeyId
          * @param accessKeySecret
