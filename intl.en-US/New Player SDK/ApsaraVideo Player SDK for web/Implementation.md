@@ -219,7 +219,7 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
 
     The time shifting UI consists of a progress bar, which displays time in the area that supports time shifting.
 
-    ![Time display](../images/p183664.png)
+    ![Time display](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4051584261/p183664.png)
 
     **Note:** The time area displays the current playback time, end time of live streaming, and current live streaming time from left to right.
 
@@ -278,7 +278,7 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
      videoHeight:"200px", // The height of the video.
     ```
 
-    ![Effects](../images/p183673.png)
+    ![Effects](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4051584261/p183673.png)
 
 -   Method description
 
