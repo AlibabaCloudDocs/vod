@@ -64,7 +64,7 @@ import com.aliyuncs.vod.model.v20170321.GetPlayInfoResponse;
  */
 public class VodPreviewTest {
     public static void main(String[] args) {
-        // Select a region of ApsaraVideo VOD. For more information, see [VOD centers and access domains](https://help.aliyun.com/document_detail/98194.html?spm=a2c4g.11186623.6.612.51c6534bqLs9Wd).
+        // Select a region of ApsaraVideo VOD. For more information, see [VOD centers and endpoints](/intl.en-US/Developer Guide/VOD centers and endpoints.md)
         String regionId = "cn-shanghai";
         String accessKeyId = "<your accessKeyId>";
         String accessKeySecret = "<your accessKeySecret>";
