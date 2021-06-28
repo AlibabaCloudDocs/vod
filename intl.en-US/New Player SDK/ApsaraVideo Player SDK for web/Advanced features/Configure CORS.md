@@ -15,7 +15,7 @@ If the following error message is returned, you need to enable CORS for the doma
 
 Add HTTP headers to enable CORS. For more information, see [Configure an HTTP header](/intl.en-US/User Guide/Domain management/Cache configuration/Configure an HTTP header.md). 
 
-* Access-Control-Allow-Origin: specifies the domain name from which cross-origin requests are allowed. Set the value of the HTTP header to the domain name of the website on which videos are played. For example, if videos are played on the https://www.aliyun.com/ website, set the value to https://www.aliyun.com/. The following figure shows how to configure the Access-Control-Allow-Origin header.![Configure the Access-Control-Allow-Origin header](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7132442261/p271224.png)
+* Access-Control-Allow-Origin: specifies the domain name from which cross-origin requests are allowed. Set the value of the HTTP header to the domain name of the website on which videos are played. For example, if videos are played on the [https://www.aliyun.com](https://www.aliyun.com/) website, set the value to [https://www.aliyun.com](https://www.aliyun.com/). The following figure shows how to configure the Access-Control-Allow-Origin header.![Configure the Access-Control-Allow-Origin header](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2364784261/p271224.png)
 
   
 
