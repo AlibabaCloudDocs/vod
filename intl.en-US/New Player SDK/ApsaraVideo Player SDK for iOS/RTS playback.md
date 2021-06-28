@@ -12,7 +12,7 @@ The following part describes how to integrate RTS SDK into ApsaraVideo Player SD
 
     You can add frameworks by using the following methods:
 
-    -   Download [RTS SDK](https://help.aliyun.com/document_detail/177373.html). On the General tab, add the RtsSDK.framework and artcSource.framework files to the Embedded Binaries section.
+    -   Download [RTS SDK](/intl.en-US/Real-Time Streaming/SDK download.md). On the General tab, add the RtsSDK.framework and artcSource.framework files to the Embedded Binaries section.
     -   You can import frameworks by using CocoaPods statements. The newly added artcSource and RtsSDK frameworks are used for RTS playback.
 2.  Set the maximum buffer delay for RTS playback.
 
