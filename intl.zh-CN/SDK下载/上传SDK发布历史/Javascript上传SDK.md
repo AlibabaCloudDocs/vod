@@ -9,9 +9,9 @@
 |2018-07-26|V1.5.0|-   支持多地域。
 -   上传进度到点播服务。
 
-|[JavaScript上传SDK 1.5.0](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/94440/cn_zh/1548408724967/aliyun-upload-sdk-1.5.0.zip)
+|[JavaScript上传SDK 1.5.0](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/94440/cn_zh/1548408724967/aliyun-upload-sdk-1.5.0.zip)
 
-[示例代码](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/94440/cn_zh/1550125960566/aliyun-upload-sdk-1.5.0demo.zip) |
+[示例代码](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/94440/cn_zh/1550125960566/aliyun-upload-sdk-1.5.0demo.zip) |
 
 ## 2018-07-26
 
@@ -20,9 +20,9 @@
 |2018-07-26|V1.4.0|-   支持获取断点续传信息。
 -   优化SDK，提高稳定性。
 
-|[JavaScript上传SDK 1.4.0](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1532598250124/aliyun-upload-sdk-1.4.0.zip)
+|[JavaScript上传SDK 1.4.0](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1532598250124/aliyun-upload-sdk-1.4.0.zip)
 
-[示例代码](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1533611658863/aliyun-upload-sdk-1.4.0demo.zip) |
+[示例代码](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1533611658863/aliyun-upload-sdk-1.4.0demo.zip) |
 
 ## 2018-03-10
 
@@ -32,9 +32,9 @@
 -   完善断点续传。
 -   优化SDK，提高稳定性。
 
-|[JavaScript上传SDK 1.3.1](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/53059/cn_zh/1522379762367/aliyun-upload-sdk-1.3.1.zip)
+|[JavaScript上传SDK 1.3.1](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/53059/cn_zh/1522379762367/aliyun-upload-sdk-1.3.1.zip)
 
-[示例代码](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/53059/cn_zh/1522379787171/aliyun-upload-sdk-demo-1.3.1.zip) |
+[示例代码](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/53059/cn_zh/1522379787171/aliyun-upload-sdk-demo-1.3.1.zip) |
 
 ## 2018-01-18
 
