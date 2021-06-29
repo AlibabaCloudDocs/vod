@@ -15,42 +15,42 @@ Obtains a URL and a credential for uploading a video and generates the video ID.
 |Action|String|Yes|CreateUploadVideo|The operation that you want to perform. Set the value to **CreateUploadVideo**. |
 |FileName|String|Yes|D:\\\*\*\*\*.mp4|The name of the video file that you want to upload.
 
- -   The name must contain a file name extension, which is not case-sensitive.
+-   The name must contain a file name extension, which is not case-sensitive.
 -   For more information about the supported file name extensions, see [Overview](~~55396~~). |
 |Title|String|Yes|UploadTest|The title of the video.
 
- -   The title can be up to 128 characters in length.
+-   The title can be up to 128 characters in length.
 -   The value must be encoded in UTF-8. |
 |CoverURL|String|No|https://\*\*\*\*\*test.cn/image/D22F553\*\*\*\*\*TEST.jpeg|The URL of the custom video thumbnail. |
 |Description|String|No|UploadTest|The description of the video.
 
- -   The description can be up to 1,024 characters in length.
+-   The description can be up to 1,024 characters in length.
 -   The value must be encoded in UTF-8. |
 |FileSize|Long|No|123|The size of the video. Unit: byte. |
 |CateId|Long|No|6771111|The category ID of the video.
 
- Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored). In the left-side navigation pane, choose **Configuration Management** \> **Media Management** \> **Categories**. On the Categories page, you can view the category IDs or modify categories. |
+Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored). In the left-side navigation pane, choose **Configuration Management** \> **Media Management** \> **Categories**. On the Categories page, you can view the category IDs or modify categories. |
 |Tags|String|No|tag1,tag2|The tag of the video.
 
- -   A maximum of 16 tags can be specified.
+-   A maximum of 16 tags can be specified.
 -   Separate multiple tags with commas \(,\).
 -   Each tag can be up to 32 characters in length.
 -   The value must be encoded in UTF-8. |
 |UserData|String|No|\{"MessageCallback":\{"CallbackURL":"http://test.test.com"\},"Extend":\{"localId":"\*\*\*\*\*","test":"www"\}\}|The custom configurations, including callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the "UserData" section of the [Request parameters](~~86952~~) topic.
 
- **Note:**
+**Note:**
 
 -   The callback configurations take effect only when you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console.
 -   To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex). For more information, see [Upload instructions](~~55396~~). |
 |TemplateGroupId|String|No|405477f9e21\*\*\*\*\*d19ea2c7c854|The ID of the transcoding template group.
 
- **Note:** If this parameter is set to a specific value, the specified template group is used for transcoding. Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.16.6948257eaZ4m54#/settings/transcode/list). In the left-side navigation pane, choose **Configuration Management** \> **Media Processing** \> **Transcode**. On the Transcode page, you can view the IDs of transcoding template groups. |
+**Note:** If this parameter is set to a specific value, the specified template group is used for transcoding. Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.16.6948257eaZ4m54#/settings/transcode/list). In the left-side navigation pane, choose **Configuration Management** \> **Media Processing** \> **Transcode**. On the Transcode page, you can view the IDs of transcoding template groups. |
 |WorkflowId|String|No|405477f9e21\*\*\*\*\*d19ea2c7c854|The ID of the workflow.
 
- **Note:** If both the WorkflowId and TemplateGroupId parameters are set, the value of the WorkflowId parameter takes a higher priority. For more information, see [Workflows](~~115347~~). |
+**Note:** If both the WorkflowId and TemplateGroupId parameters are set, the value of the WorkflowId parameter takes a higher priority. For more information, see [Workflows](~~115347~~). |
 |StorageLocation|String|No|out-\*\*\*\*.oss-cn-shanghai.aliyuncs.com|The storage location.
 
- If this parameter is set to a specific value, the video is uploaded to the specified storage location. Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored). In the left-side navigation pane, choose **Configuration Management** \> **Media Management** \> **Storage**. On the Storage page, you can view the storage locations. |
+If this parameter is set to a specific value, the video is uploaded to the specified storage location. Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored). In the left-side navigation pane, choose **Configuration Management** \> **Media Management** \> **Storage**. On the Storage page, you can view the storage locations. |
 |AppId|String|No|app-\*\*\*\*|The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~). |
 
 **Note:**
@@ -77,7 +77,7 @@ Obtains a URL and a credential for uploading a video and generates the video ID.
 Sample requests
 
 ```
-https://vod.aliyuncs.com]/?Action=CreateUploadVideo
+https://vod.aliyuncs.com/?Action=CreateUploadVideo
 &FileName=D:\****.mp4
 &Title=UploadTest
 &<Common request parameters>
