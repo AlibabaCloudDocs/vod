@@ -51,7 +51,7 @@ Under the same CDN domain name of ApsaraVideo Live, live-to-VOD configurations o
 
    
 
-4. On the [Domain Management](https://live.console.aliyun.com//domain/list#/domain/list) page of the ApsaraVideo Live console, specify the live-to-VOD configuration. Select the template that you created earlier as the recording and transcoding template, as shown in the following figure. For more information, see [Store live recordings in ApsaraVideo VOD](/intl.en-US/Console Guide/Domain Names/Recording management/Store live recordings in ApsaraVideo VOD.md).
+4. On the [Domain Management](https://live.console.aliyun.com//domain/list#/domain/list) page of the ApsaraVideo Live console, specify the live-to-VOD configuration. Select the template that you created earlier as the recording and transcoding template. For more information, see [Store live recordings in ApsaraVideo VOD](/intl.en-US/Console Guide/Domain Names/Recording management/Store live recordings in ApsaraVideo VOD.md).
 
    You can also add recording configurations by calling the AddLiveRecordVodConfig operation. For more information, see [AddLiveRecordVodConfig](/intl.en-US/API Reference/Store live recordings to ApsaraVideo VOD/AddLiveRecordVodConfig.md).
    **Note**
