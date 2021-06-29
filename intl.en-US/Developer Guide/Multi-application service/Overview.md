@@ -8,7 +8,7 @@ Introduction
 
 When you use ApsaraVideo VOD, you may need to isolate the resources, configurations, and data of multiple users within the same account. Multiple users include multiple environments, business lines, or channels.
 
-ApsaraVideo VOD provides the multi-application service to implement isolation between multiple users. By default, the multi-application service is disabled. You can apply to activate the service and complete the related configurations. You can also use [Resource Access Management](https://www.aliyun.com/product/ram?spm=a2c4g.11186623.2.17.ddffaa32IhbDVd) to manage permissions. For more information, see [Use the multi-application service]().
+ApsaraVideo VOD provides the multi-application service to implement isolation between multiple users. By default, the multi-application service is disabled. You can apply to activate the service and complete the related configurations. You can also use [Resource Access Management](https://www.aliyun.com/product/ram?spm=a2c4g.11186623.2.17.ddffaa32IhbDVd) to manage permissions. For more information, see [Use the multi-application service](/intl.en-US/Developer Guide/Multi-application service/Use the multi-application service.md).
 
 Scenarios 
 ------------------------------
@@ -38,7 +38,7 @@ Limits
 
   
 
-* Currently, the multi-application service supports only **media upload, audio and video playback, media management, and callbacks** . Other services will be supported in the future.
+* Currently, the multi-application service supports only **media upload, audio and video playback, media management, and callbacks** .
 
   
 
@@ -78,12 +78,12 @@ Application management
   
   **Note**
 
-  You can call the [ListAppInfo]() operation to query the IDs of applications that you are authorized to access.
+  You can call the [ListAppInfo](/intl.en-US/API Reference/Multi-application service/Application management/ListAppInfo.md) operation to query the IDs of applications that you are authorized to access.
   
 
 * Management
 
-  You can call API operations of the multi-application service to create, query, update, and delete applications. For more information, see the "Multi-application service" section in [List of operations by function](/intl.en-US/API Reference/API overview.md). The multi-application service will be available in the ApsaraVideo VOD console.
+  You can call API operations of the multi-application service to create, query, update, and delete applications. For more information, see the "Multi-application service" section in [List of operations by function](/intl.en-US/API Reference/List of operations by function.md). The multi-application service will be available in the ApsaraVideo VOD console.
   
 
 
@@ -152,7 +152,7 @@ Accounts in Alibaba Cloud include Alibaba Cloud accounts, RAM users, and RAM rol
 
 * Authorization method
 
-  You can call API operations to grant permissions on applications to identity entities or revoke the permissions. For more information, see the "Multi-application service" section in [List of operations by function](/intl.en-US/API Reference/API overview.md).
+  You can call API operations to grant permissions on applications to identity entities or revoke the permissions. For more information, see the "Multi-application service" section in [List of operations by function](/intl.en-US/API Reference/List of operations by function.md).
   
 
 
