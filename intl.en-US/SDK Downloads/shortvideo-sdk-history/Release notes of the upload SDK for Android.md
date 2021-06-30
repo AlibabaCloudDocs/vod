@@ -1,6 +1,12 @@
 # Release notes of the upload SDK for Android
 
-This topic describes the release notes of different versions of the upload SDK for Android
+This topic describes the release notes of different versions of the upload SDK for Android.
+
+## 2021-06-03
+
+|Release date|Version|Description|Download link|
+|------------|-------|-----------|-------------|
+|2021-06-03|V1.6.2|The stability of the SDK is improved.|[Upload SDK for Android and sample code](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/upload/1.6.2/ApsaraVideo_Upload_v1.6.2_Android_20210602.zip)|
 
 ## 2020-06-23
 
@@ -19,7 +25,7 @@ This topic describes the release notes of different versions of the upload SDK f
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
 |2019-12-02|V1.5.5|-   The SDK is adapted to Android Q.
--   The issue is fixed where multiple video files fail to be uploaded at the same time by using STS.
+-   The issue is fixed where multiple video files fail to be uploaded at the same time by using Security Token Service \(STS\).
 
 |[Upload SDK for Android and sample code](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/upload/1.5.5/ApsaraVideo_Upload_v1.5.5_Android_20191202.zip)|
 
@@ -27,8 +33,8 @@ This topic describes the release notes of different versions of the upload SDK f
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2019-11-21|V1.5.4|-   Risky code is deleted and the issue is fixed where Google code fails the scanning.
--   The issue is fixed where an unexpected quit occurs when a video file whose file name contains a space is uploaded by using STS.
+|2019-11-21|V1.5.4|-   Risky code is deleted, and the issue is fixed where Google code fails the scanning.
+-   The issue is fixed where an unexpected quit occurs when a video file whose name contains a space is uploaded by using STS.
 
 |[Upload SDK for Android and sample code](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/upload/1.5.4/ApsaraVideo_Upload_v1.5.4_Android_20191122.zip)|
 
@@ -38,7 +44,7 @@ This topic describes the release notes of different versions of the upload SDK f
 |------------|-------|-----------|-------------|
 |2019-06-14|V1.5.3|-   The multi-application capability is added by using the STS-based upload mode.
 -   The capability of setting a workflow is added by using the STS-based upload mode.
--   The demo only demonstrates how to use an upload credential to upload videos. The code that is used to implement STS-based upload is stored in the /old folder. We recommend that you use an upload credential to upload videos.
+-   The demo demonstrates only how to use an upload credential to upload videos. The code that is used to implement STS-based upload is stored in the /old folder. We recommend that you use an upload credential to upload videos.
 -   The issue is fixed where the value of local resumable upload is deleted when a video ID does not exist on the cloud.
 -   The known issues are fixed to improve stability.
 
@@ -50,7 +56,7 @@ This topic describes the release notes of different versions of the upload SDK f
 |------------|-------|-----------|-------------|
 |2018-12-21|V1.5.0|-   A demo is added to demonstrate how to use an upload credential to upload videos to ApsaraVideo VOD.
 -   The region parameter is added.
--   The recordUploadProgress parameter is added. You can set the parameter to specify whether to enable progress recording for resumable upload.
+-   The recordUploadProgress parameter is added. You can set this parameter to specify whether to enable progress recording for resumable upload.
 -   The upload progress can be reported.
 -   The known issues are fixed to improve stability.
 
@@ -60,7 +66,7 @@ This topic describes the release notes of different versions of the upload SDK f
 
 |Release date|Version|Description|Download link|
 |------------|-------|-----------|-------------|
-|2018-08-07|V1.4.0|-   The issue is fixed where the size of a part is smaller than 100 KB in OSS.
+|2018-08-07|V1.4.0|-   The issue is fixed where the size of a part is smaller than 100 KB in Object Storage Service \(OSS\).
 -   The issue is fixed where the upload credential is recreated for resumable upload when the upload to ApsaraVideo VOD is unexpectedly interrupted. This issue leads to playback failures of uploaded files.
 
 |[Upload SDK for Android and sample code](https://vod-download.cn-shanghai.aliyuncs.com/vodupload/1.4/ApsaraVideo_Uplpad_v1.4.0_Android_20180806.zip)|
@@ -78,7 +84,7 @@ This topic describes the release notes of different versions of the upload SDK f
 
 |[Upload SDK V1.3.0 for Android](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1516604091547/VodUploadSDK_1.3.0.zip?spm=5176.doc51992.2.31.JXmtz7&file=VodUploadSDK_1.3.0.zip)
 
-[Upload SDK demo for Android 1.3.0](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1516604049881/VODUploadDemo-android-1.3.0.zip?spm=5176.doc51992.2.32.JXmtz7&file=VODUploadDemo-android-1.3.0.zip) |
+[Upload SDK demo V1.3.0 for Android](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1516604049881/VODUploadDemo-android-1.3.0.zip?spm=5176.doc51992.2.32.JXmtz7&file=VODUploadDemo-android-1.3.0.zip) |
 
 ## 2017-11-24
 
