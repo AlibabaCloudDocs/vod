@@ -22,7 +22,7 @@ Alibaba Cloud CDN hosts more than 2,800 nodes worldwide, covering more than 70 c
 
 ## Node distribution
 
-For information about the geographical distribution of Alibaba Cloud CDN nodes in mainland China, see [Node distribution](https://help.aliyun.com/document_detail/69890.html?spm=a2c4g.11186623.6.550.7e6f28c1UQKQg3#title-p6q-wfh-kfw). The following regions are where Alibaba Cloud CDN nodes reside outside mainland China, including Hong Kong \(China\), Macau \(China\), and Taiwan \(China\):
+For information about the geographical distribution of Alibaba Cloud CDN nodes in mainland China, see [Node distribution](/intl.en-US/Product Introduction/Node distribution.md). The following regions are where Alibaba Cloud CDN nodes reside outside mainland China, including Hong Kong \(China\), Macau \(China\), and Taiwan \(China\):
 
 -   Asia Pacific: Japan \(Tokyo\), Japan \(Osaka\), South Korea \(Seoul\), Hong Kong \(China\), Macau \(China\), and Taiwan \(China\)
 -   India: Kolkata, New Delhi, Mumbai, Hyderabad, Bangalore, and Chennai
