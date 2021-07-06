@@ -144,7 +144,7 @@ Sample success responses
 </DescribeVodTranscodeDataResponse>
 ```
 
-`JSON`格式
+`JSON` format
 
 ```
  {
