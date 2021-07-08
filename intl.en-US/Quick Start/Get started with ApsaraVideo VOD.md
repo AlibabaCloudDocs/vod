@@ -32,10 +32,10 @@ This topic helps you get started with ApsaraVideo VOD.
 
 -   You can manage media files in the ApsaraVideo VOD console. For more information, see [Manage media assets](/intl.en-US/User Guide/Media library/Manage media assets.md).
     1.  In the left-side navigation pane of the ApsaraVideo VOD console, choose **Media Files** \> **Audio/Video**.
+    2.  On the **Video and Audio** page, find the video that you want to manage and click **Manage** in the Actions column to manage the video.
 
         ![Video and Audio page](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2344319061/p184462.png)
 
-    2.  On the **Video and Audio** page, find the video that you want to manage and click **Manage** in the Actions column to manage the video.
 -   You can transcode media files in the ApsaraVideo VOD console. For more information, see [Manage transcoding settings](/intl.en-US/User Guide/Global settings/Manage transcoding settings.md).
     1.  In the left-side navigation pane of the ApsaraVideo VOD console, find **Configuration Management**.
     2.  Choose **Media Processing** \> **Transcode**. The Transcode page appears.![Transcode](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6056348061/p172491.png)
