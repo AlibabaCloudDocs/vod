@@ -32,7 +32,7 @@ skinLayout设置规则
 
   
 
-* skinLayout设置为空集合（\[\]）或falsh时, 则全部隐藏。
+* skinLayout设置为空集合（\[\]）或false时, 则全部隐藏。
 
   
 
