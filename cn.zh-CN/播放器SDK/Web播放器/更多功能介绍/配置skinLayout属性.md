@@ -23,7 +23,7 @@ Aliplayer可以通过skinLayout属性定制以下三个组件是否显示和显�
 
 
 
-您可以通过配置播放器的CSS文件：aliplayer-min.css，修改skinLayout属性。配置方式，请参见[设置播放器皮肤](/cn.zh-CN/播放器SDK/Web播放器/更多功能介绍/如何使用皮肤.md)。
+您可以通过配置播放器的CSS文件：aliplayer-min.css，修改skinLayout属性。配置方式，请参见[设置播放器皮肤](/cn.zh-CN/播放器SDK/Web播放器/更多功能介绍/设置播放器皮肤.md)。
 
 skinLayout设置规则 
 -----------------------------------
@@ -32,7 +32,7 @@ skinLayout设置规则
 
   
 
-* skinLayout设置为空集合（\[\]）或falsh时, 则全部隐藏。
+* skinLayout设置为空集合（\[\]）或false时, 则全部隐藏。
 
   
 
