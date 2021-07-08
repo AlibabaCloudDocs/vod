@@ -50,7 +50,7 @@ Integrate the SDK by using Maven \(Recommended\)
 
     ```
     dependencies{
-        implementation 'com.aliyun.video.android:svideopro:3.21.0' // Required. The short video SDK in Professional Edition.
+        implementation 'com.aliyun.video.android:svideopro:3.22.0' // Required. The short video SDK in Professional Edition.
         implementation 'com.aliyun.video.android:core:1.2.2' // Required. A core library.
         implementation  'com.alivc.conan:AlivcConan:1.0.3' // Required. A core library.
         implementation  'com.aliyun.video.android:AlivcFFmpeg:2.0.0' // Required.
