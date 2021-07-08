@@ -23,7 +23,7 @@ Procedure
 1.  Add dependencies to the Podfile file.
 
     ```
-    pod 'AliyunVideoSDKPro', '3.21.0'
+    pod 'AliyunVideoSDKPro', '3.22.0'
     pod 'QuCore-ThirdParty', '3.15.0'
     pod 'AlivcConan', '1.0.3'
     pod 'VODUpload'
@@ -51,8 +51,8 @@ To manually integrate the SDK, you must download packages of the latest release 
 
 |Name|Type|Description|Download link|
 |----|----|-----------|-------------|
-|AliyunVideoSDKPro|Static framework|Short video SDK|[Professional Edition](https://github.com/aliyunvideo/AliyunVideoSDKPro/releases) [Standard Edition](https://github.com/aliyunvideo/AliyunVideoSDKStd/releases) [Basic Edition](https://github.com/aliyunvideo/AliyunVideoSDKBasic/releases)|
-|AliyunVideoCore|Dynamic framework|Short video SDK|[Professional Edition](https://github.com/aliyunvideo/AliyunVideoSDKPro/releases) [Standard Edition](https://github.com/aliyunvideo/AliyunVideoSDKStd/releases) [Basic Edition](https://github.com/aliyunvideo/AliyunVideoSDKBasic/releases)|
+|AliyunVideoSDKPro|Static framework|Short video SDK|[Professional Edition](https://github.com/aliyunvideo/AliyunVideoSDKPro/releases)|
+|AliyunVideoCore|Dynamic framework|Short video SDK|[Professional Edition](https://github.com/aliyunvideo/AliyunVideoSDKPro/releases)|
 |AliyunVideoSDKPro.bundle|Resource package|Short video SDK|[Resource package that is required only by Professional Edition](https://github.com/aliyunvideo/AliyunVideoSDKPro/releases)|
 |alivcffmpeg|Dynamic framework|FFmpeg framework|[Download link on GitHub](https://github.com/aliyunvideo/QuCore-ThirdParty/releases)|
 |AlivcConan|Dynamic framework|Tool framework|[Download link on GitHub](https://github.com/aliyunvideo/AlivcConanSDK/releases)|
