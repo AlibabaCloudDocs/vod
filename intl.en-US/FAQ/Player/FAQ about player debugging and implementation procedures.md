@@ -18,15 +18,15 @@ ApsaraVideo Player SDK for iOS cannot play videos in the background after you pr
 
 1.  In Xcode, turn on Background Modes and enable the feature of collecting data in the background.
 
-    ![DuCXfvnsZJMUdeDiGjnX.png ](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2554695161/p179092.png)
+    ![DuCXfvnsZJMUdeDiGjnX.png ](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7751185261/p179092.png)
 
 2.  Open the `AliyunPlayerVodPlayViewController.m` file in the vod folder.
 
-    ![JmiOhyxQtRjxCkoopwDY.png ](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3554695161/p179093.png)
+    ![JmiOhyxQtRjxCkoopwDY.png ](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7751185261/p179093.png)
 
 3.  Find the **resignActive** method below the **becomeActive** method. Comment out the **pause** method in the **resignActive** method, as shown in the following figure.
 
-    ![HYpasKrmWAuWslCvcmxd.png ](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3554695161/p179094.png)
+    ![HYpasKrmWAuWslCvcmxd.png ](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7751185261/p179094.png)
 
 
 ## What are the updates in each version of ApsaraVideo VOD?
