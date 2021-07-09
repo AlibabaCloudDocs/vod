@@ -32,7 +32,6 @@ HTTPS安全传输的优势：
 -   HTTPS安全传输，有效防止HTTP明文传输中的窃听、篡改、冒充和劫持风险。
 -   数据传输过程中对您的关键信息进行加密，防止类似Session ID或者Cookie内容被攻击者捕获造成的敏感信息泄露等安全隐患。
 -   数据传输过程中对数据进行完整性校验，防止DNS或内容遭第三方劫持、篡改等中间人攻击（MITM）隐患，详情请参见[使用HTTPS防止流量劫持](http://yq.aliyun.com/articles/2666)。
--   数据传输过程中对数据进行完整性校验，防止DNS或内容遭第三方劫持、篡改等中间人攻击（MITM）隐患。
 -   HTTPS是主流趋势：未来主流浏览器会将HTTP协议标识为不安全，谷歌浏览器Chrome 70以上版本以及Firefox已经在2018年将HTTP网站标识为不安全，若坚持使用HTTP协议，除了安全会埋下隐患外，终端客户在访问网站时出现的不安全标识，也将影响访问。
 -   主流浏览器对HTTPS网站进行搜索加权，主流浏览器均支持HTTP/2，而支持HTTP/2必须支持HTTPS。无论从安全、市场或用户体验来看，普及HTTPS是未来的一个方向，所以强烈建议您将访问协议升级到HTTPS。
 
@@ -50,11 +49,9 @@ HTTPS安全传输的优势：
 
 ## 操作步骤
 
-1.  购买[云盾证书](https://common-buy.aliyun.com/?spm=5176.doc27118.2.9.u2oPum&commodityCode=cas#/buy)[云盾证书](https://common-buy-intl.alibabacloud.com/?spm=5176.14113079.4_1m9mnou.0.6e1a56a7PIYxY6.6e1a56a7PIYxY6&commodityCode=cas_intl)。
+1.  购买[云盾证书](https://common-buy.aliyun.com/?spm=5176.doc27118.2.9.u2oPum&commodityCode=cas#/buy)。
 
     开启HTTPS安全加速需具备匹配加速域名的证书。您可在 **云盾证书服务** 中，根据业务需要快速申请免费证书或购买高级证书。![免费证书](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8631106061/p172540.png)
-
-    ![价格](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6557319061/p203399.jpg)
 
 2.  配置HTTPS证书。
 
@@ -85,8 +82,6 @@ HTTPS安全传输的优势：
         |**证书类型**|        -   **云盾**
 
 您可以在[SSL证书服务控制台](https://yundun.console.aliyun.com/?spm=5176.8232292.domaindetail.24.9498142fSMfoJd&p=cas#/cas/home)快速申请各种品牌及各种类型证书。
-
-您可以快速申请各种品牌及各种类型证书。
 
 当您申请完云盾免费证书之后，**证书类型**可选择**云盾**，选择您申请的免费证书。
 
