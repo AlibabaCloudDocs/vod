@@ -2,6 +2,8 @@
 
 您在视频点播中添加自己的域名后，会自动生成有效的CNAME地址。如果您想启用视频点播加速服务，您需在自己域名所在的DNS服务商处，为域名添加CNAME记录，访问加速域名的请求才能转发到CDN节点上，达到加速效果。本文以新网为例，为您介绍CNAME的配置流程。
 
+## 操作步骤
+
 1.  获取加速域名的CNAME地址。
 
     1.  登录[视频点播控制台](https://vod.console.aliyun.com/)。
@@ -49,6 +51,6 @@
 
     2.  在命令行中ping加速域名，如果返回的解析结果和CDN控制台上该加速域名的CNAME值一致，则表示CDN加速已经生效。
 
-        ![CNAME生效验证](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6423839951/p66693.png)
+        ![CNAME生效验证](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9618134161/p66693.png)
 
 
