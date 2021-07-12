@@ -170,49 +170,45 @@ If you want to merge multiple videos generated in the recording period and then 
   **The following figure shows the procedure.** 
 
   ![Practice 4](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5755401161/p183865.png)
-  1.
+  1. A user starts stream ingest.
 
      
   
-  2. A user starts stream ingest.
-
-     
-  
-  3. 
+  2. 
 
      When the stream ingest reaches a recording period, the recorded file is automatically added to ApsaraVideo VOD.
      
   
-  4. 
+  3. 
 
      After the VOD is recorded, a unique video ID is generated in ApsaraVideo VOD. The video information is sent to the user by using the AddLiveRecordVideoComplete callback event that contains live streaming-related parameters such as DomainName, AppName, and StreamName. After the user receives the callback event, the user records the video information and uses the video ID as an index to update the subsequent video status.
      
   
-  5. The streaming interruption duration reaches the timeout duration, or the user proactively interrupts the streaming.
+  4. The streaming interruption duration reaches the timeout duration, or the user proactively interrupts the streaming.
 
      
   
-  6. ApsaraVideo VOD receives a message from ApsaraVideo Live which indicates that the live stream has ended.
+  5. ApsaraVideo VOD receives a message from ApsaraVideo Live which indicates that the live stream has ended.
 
      
   
-  7. ApsaraVideo VOD detects the production configuration in the live-to-VOD configuration specified by the user and determines whether it is necessary to trigger automatic production. If it is necessary, production and transcoding are performed based on the production and transcoding template group in the live-to-VOD configuration. Because the production only template group is configured in this scenario, ApsaraVideo VOD does not automatically trigger transcoding.
+  6. ApsaraVideo VOD detects the production configuration in the live-to-VOD configuration specified by the user and determines whether it is necessary to trigger automatic production. If it is necessary, production and transcoding are performed based on the production and transcoding template group in the live-to-VOD configuration. Because the production only template group is configured in this scenario, ApsaraVideo VOD does not automatically trigger transcoding.
 
      
   
-  8. The video production starts and a unique video ID is generated in ApsaraVideo VOD for the produced video. The video information is sent to the user by using the LiveRecordVideoComposeStart callback event that contains live streaming-related parameters such as DomainName, AppName, and StreamName. After the user receives the callback event, the user records the video information and uses the video ID as an index to update the subsequent video status.
+  7. The video production starts and a unique video ID is generated in ApsaraVideo VOD for the produced video. The video information is sent to the user by using the LiveRecordVideoComposeStart callback event that contains live streaming-related parameters such as DomainName, AppName, and StreamName. After the user receives the callback event, the user records the video information and uses the video ID as an index to update the subsequent video status.
 
      
   
-  9. After video production is completed based on the mezzanine files, ApsaraVideo VOD sends the FileUploadComplete callback event to notify the user of the status. In this case, the mezzanine files involved in this production task are ready. The user can perform subsequent operations on the video, such as triggering transcoding.
+  8. After video production is completed based on the mezzanine files, ApsaraVideo VOD sends the FileUploadComplete callback event to notify the user of the status. In this case, the mezzanine files involved in this production task are ready. The user can perform subsequent operations on the video, such as triggering transcoding.
 
      
   
-  10. The user manually triggers transcoding by calling the transcoding task operation for the video. Before that, operations such as online editing can be performed.
+  9. The user manually triggers transcoding by calling the transcoding task operation for the video. Before that, operations such as online editing can be performed.
 
-      
+     
   
-  11. 
+  10. 
 
       After a snapshot is taken and all code streams are transcoded, callback events are sent to the user without a time sequence. The user must update the video status based on the video ID in the callback events. After transcoding, the stream can be played. The transcoding callback message contains the stream playback URL. Alternatively, the stream playback URL can be obtained based on the video ID returned by the GetPlayInfo operation. The stream playback URL is CDN accelerated.
       
