@@ -97,7 +97,7 @@ After the SDK is integrated, open the project and modify the configuration.
 
 2.  Choose **Build Setting** \> **Build Options** and set the **Enable Bitcde** parameter to NO.
 
-3.  Open the info.Plist file of the project and add the following permissions:
+3.  Open the info. Plist file of the project and add the following permissions:
 
     ```
     Privacy - Camera Usage Description
