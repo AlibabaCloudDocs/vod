@@ -2,6 +2,18 @@
 
 本文为您介绍了阿里云Javascript上传SDK在不同更新时间对应的更新功能。
 
+## 2021-03-02
+
+|日期|版本|修改内容|下载地址|
+|--|--|----|----|
+|2021-03-02|V1.5.2|-   兼容OSS SDK 6.0及以上版本。
+-   STS上传方式支持设置WorkflowId和AppId。
+-   优化SDK，提高稳定性。
+
+|[JavaScript上传SDK 1.5.2](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/upload/JS/aliyun-upload-sdk-1.5.2.zip)
+
+[示例代码](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/upload/JS/aliyun-upload-sdk-1.5.2demo.zip) |
+
 ## 2018-07-26
 
 |日期|版本|修改内容|下载地址|
