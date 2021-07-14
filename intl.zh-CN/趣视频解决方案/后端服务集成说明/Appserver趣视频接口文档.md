@@ -61,7 +61,7 @@
     |--|--|----|--|
     |token|string|是|趣视频客户系统的Token验证，用户可以替换为自己的系统验证方式|
     |title|string|是|视频标题，长度不超过128个字节，UTF8编码|
-    |fileName|string|是|视频源文件名， 必须带扩展名，且扩展名不区分大小写， 支持的扩展名参见上传概述的限制部分|
+    |fileName|string|是|视频源文件名，必须带扩展名，且扩展名不区分大小写，支持的扩展名参见上传概述的限制部分|
     |fileSize|string|否|视频文件大小，单位：字节|
     |description|string|否|视频描述|
     |coverURL|string|否|自定义视频封面URL地址|
@@ -207,7 +207,7 @@
     |名称|类型|是否必填|描述|
     |--|--|----|--|
     |title|string|是|视频标题，长度不超过128个字节，UTF8编码|
-    |fileName|string|是|视频源文件名， 必须带扩展名，且扩展名不区分大小写， 支持的扩展名参见上传概述的限制部分|
+    |fileName|string|是|视频源文件名，必须带扩展名，且扩展名不区分大小写，支持的扩展名参见上传概述的限制部分|
     |fileSize|string|否|视频文件大小，单位：字节|
     |description|string|否|视频描述|
     |coverURL|string|否|自定义视频封面URL地址|
@@ -512,7 +512,7 @@
     |名称|类型|描述|
     |--|--|--|
     |total|string|视频总条数|
-    |videoList|List<[Video]()\>|视频信息列表|
+    |videoList|List<[Video](/intl.zh-CN/趣视频解决方案/后端服务集成说明/数据类型.md)\>|视频信息列表|
 
     返回示例
 
@@ -589,7 +589,7 @@
     |名称|类型|是否必填|描述|
     |--|--|----|--|
     |token|string|是|趣视频客户系统的Token验证，用户可以替换为自己的系统验证方式|
-    |pageIndex|int|是|起始页 （从1开始）|
+    |pageIndex|int|是|起始页（从1开始）|
     |pageSize|int|是|每页条数|
 
     返回参数
@@ -597,7 +597,7 @@
     |名称|类型|描述|
     |--|--|--|
     |total|string|视频总条数|
-    |videoList|List<[Video]()\>|个人中心视频信息列表|
+    |videoList|List<[Video](/intl.zh-CN/趣视频解决方案/后端服务集成说明/数据类型.md)\>|个人中心视频信息列表|
 
     返回示例
 
@@ -752,7 +752,7 @@
     }
     ```
 
--   getPlayPath：根据音乐id查询播放地址。
+-   getPlayPath：根据音乐ID查询播放地址。
 
     get url：/music/getPlayPath
 
