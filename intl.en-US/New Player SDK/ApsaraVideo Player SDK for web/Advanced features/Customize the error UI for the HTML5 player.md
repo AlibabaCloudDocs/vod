@@ -6,7 +6,7 @@ You can customize the error user interface (UI) for the HTML5 player by using on
 Default error UI 
 -------------------------------------
 
-The following figure shows the default error UI of ApsaraVideo Player. ![ui](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3211442261/p269995.png) **Enable the displayError UI component** 
+The following figure shows the default error UI of ApsaraVideo Player. ![ui](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8702526261/p269995.png) **Enable the displayError UI component** 
 
 If you use the skinLayout attribute to customize the player skin in ApsaraVideo Player V2.1.0 or later, you need to enable the displayError UI component in the skinLayout attribute, as shown in the following code: For more information about the skinLayout attribute, see [Configure the skinLayout attribute](/intl.en-US/New Player SDK/ApsaraVideo Player SDK for web/Advanced features/Configure the skinLayout attribute.md). 
 
