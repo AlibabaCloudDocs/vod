@@ -48,7 +48,7 @@ after you create a player class and before you call the prepare method. // For e
 
 Log on to the ApsaraVideo VOD console and click Refresh and Push. Set the Operation parameter to Push and enter the URL of the video that you want to prefetch.
 
-![Prefetch](../images/p184118.jpg)
+![Prefetch](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2853426261/p184118.jpg)
 
 **Note:** The refresh and prefetch feature charges you a fee. You can prefetch videos to Alibaba Cloud Content Delivery Network \(CDN\) nodes based on video popularity.
 
