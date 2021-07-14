@@ -8,7 +8,7 @@ Open the diagnostic tool
 
 You can open the diagnostic tool that is provided by ApsaraVideo Player by using one of the following methods: 
 
-* Click **Diagnosis** when a video fails to be played.![Error](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9601442261/p269989.png)
+* Click **Diagnosis** when a video fails to be played.![Error](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4942526261/p269989.png)
 
   
 
@@ -24,7 +24,7 @@ Use the diagnostic tool
 
 **View the diagnostic information** 
 
-The diagnostic information includes the operating system, browser, IP address, and operator.![Basic diagnosis](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9601442261/p271371.png)
+The diagnostic information includes the operating system, browser, IP address, and operator.![Basic diagnosis](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5942526261/p271371.png)
 
 **Configure the domain name for playback before video diagnosis** 
 
@@ -67,7 +67,7 @@ The Source parameter has the highest priority.
 
 You can view the playback log after the diagnostics start. 
 
-![Diagnose a video](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9601442261/p271399.png)
+![Diagnose a video](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/5942526261/p271399.png)
 
 
 
