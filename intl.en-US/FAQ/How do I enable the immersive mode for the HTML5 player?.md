@@ -27,7 +27,7 @@ If the immersive mode is disabled in Android-based WeChat, videos are played in 
 
     For more information, download the [HTML5 demo](https://github.com/alilmq/h5demo).
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0400677161/p190051.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3967426261/p190051.png)
 
 -   Configure the immersive mode for video playback in full-screen mode
 
@@ -43,7 +43,7 @@ If the immersive mode is disabled in Android-based WeChat, videos are played in 
 
     For more information, download the [HTML5 live demo](https://github.com/alilmq/h5livedemo).
 
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0400677161/p190052.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3967426261/p190052.png)
 
 
 Suggestions for configuring the immersive mode
