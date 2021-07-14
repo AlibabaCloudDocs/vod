@@ -278,7 +278,7 @@ ApsaraVideo Player SDK V2.1.0 and later allow you to take snapshots in the JPEG 
      videoHeight:"200px", // The height of the video.
     ```
 
-    ![Effects](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4051584261/p183673.png)
+    ![Effects](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2432526261/p183673.png)
 
 -   Method description
 
