@@ -8,8 +8,8 @@ ApsaraVideo Player SDK provides a player framework to meet different user needs 
 
 |Feature|Description|
 |-------|-----------|
-|Format and codec|ApsaraVideo Player SDK supports video files in the MP4, M3U8, Flash Video \(FLV\), and Matroska Video \(MKV\) formats, and audio files in the MP3 format. ApsaraVideo Player SDK supports the H.264 and H.265 video codecs, and the Advanced Audio Coding \(AAC\) audio codec. ApsaraVideo Player SDK for iOS supports Audio Codec 3 \(AC3\).|
-|Complete UI|ApsaraVideo Player SDK provides complete source code for multiple user interfaces \(UIs\). You can integrate the UI source code based on your application style.|
+|Format and codec|ApsaraVideo Player SDK supports video files in the MP4, HTTP Live Streaming \(HLS\), Flash Video \(FLV\), Matroska Video \(MKV\), Dynamic Adaptive Streaming over HTTP \(DASH\), and Real-Time Messaging Protocol \(RTMP\) formats, and audio files in the MP3 format. ApsaraVideo Player SDK supports the H.264 and H.265 video codecs, and the Advanced Audio Coding \(AAC\) audio codec. ApsaraVideo Player SDK for iOS supports Audio Codec 3 \(AC3\) and subtitle files in the SubRip Text \(SRT\) and Web Video Text Tracks \(WebVTT\) formats.|
+|Complete user interface \(UI\)|ApsaraVideo Player SDK provides complete source code for multiple UIs. You can integrate the UI source code based on your application style.|
 |Playback control|ApsaraVideo Player SDK supports multiple playback control features, such as start, stop, pause, resume, replay, and loop playback.|
 |List playback|ApsaraVideo Player SDK allows you to play videos in a list. This increases the video loading speed.|
 |Scaling mode|ApsaraVideo Player SDK supports image padding and cropping.|
@@ -18,16 +18,16 @@ ApsaraVideo Player SDK provides a player framework to meet different user needs 
 |Brightness adjustment|ApsaraVideo Player SDK allows you to adjust the system brightness. You can use gestures to adjust the brightness on the UI.|
 |Audio-only playback|ApsaraVideo Player SDK allows you to play MP3 audio files that are encoded by using the AAC codec.|
 |Multi-player playback|ApsaraVideo Player SDK allows you to add multiple players on one UI to simultaneously play videos.|
-|VOD playback or live video playback|ApsaraVideo Player SDK supports the playback feature of ApsaraVideo VOD and ApsaraVideo Live.|
+|Video-on-demand \(VOD\) playback or live video playback|ApsaraVideo Player SDK supports the playback feature of ApsaraVideo VOD and ApsaraVideo Live.|
 |URL-based playback|ApsaraVideo Player SDK allows you to play on-premises videos and online videos based on their URLs.|
-|VID-based playback|ApsaraVideo Player SDK supports the video playback in ApsaraVideo VOD.|
+|Video ID \(VID\)-based playback|ApsaraVideo Player SDK supports the video playback in ApsaraVideo VOD.|
 |Autoplay|ApsaraVideo Player SDK supports autoplay of a video after the video is prepared.|
 |Seek|ApsaraVideo Player SDK allows you to drag the slider on the progress bar to the specified point in time. You can use gestures to control the slider on the UI.|
 |Screen lock|ApsaraVideo Player SDK supports the screen lock feature, which allows you to lock the screen orientation and hide UI elements. You can use the screen lock feature on the UI.|
 |Resolution switching|ApsaraVideo Player SDK allows you to switch between multiple resolutions for VOD and transcoded streams.|
 |Encrypted playback|ApsaraVideo Player SDK allows you to play VOD and transcoded streams that are encrypted.|
 |Secure download|ApsaraVideo Player SDK allows you to use the specified application to download and encrypt videos.|
-|Time shifting during live streaming|ApsaraVideo Player SDK allows you to play live streams in time shifting mode. You can set the start, stop, and current playback time and seek to the specified point in time.|
+|Time shifting|ApsaraVideo Player SDK allows you to play live streams in time shifting mode. You can set the start, stop, and current playback time and seek to the specified point in time.|
 |Play-and-cache|ApsaraVideo Player SDK supports the play-and-cache feature for loop playback of short videos.|
 |Playback speed adjustment|ApsaraVideo Player SDK allows you to adjust the playback speed from 0.5x to 2x speed. The audio pitch remains unchanged at different playback speeds.|
 |Background playback|ApsaraVideo Player SDK allows you to continue playing audio streams when the application is switched from the UI to the background.|
@@ -35,14 +35,25 @@ ApsaraVideo Player SDK provides a player framework to meet different user needs 
 |Dynamic frame synchronization|ApsaraVideo Player SDK supports dynamic frame synchronization for live streaming to reduce latency.|
 |Automatic reconnection|ApsaraVideo Player SDK supports automatic reconnection during live streaming.|
 |Video snapshot|ApsaraVideo Player SDK allows you to capture a frame of a playback image.|
-|In-cache seeking|ApsaraVideo Player SDK allows you to retain the cached video content during seeking without clearing it to accelerate the seeking speed.|
+|In-buffer seeking|ApsaraVideo Player SDK allows you to retain the cached video content during seeking without clearing it to accelerate the seeking speed.|
 |Rendering angle|ApsaraVideo Player SDK supports the following rendering angles of video images: 0°, 90°, 180°, and 270°.|
 |Image rendering|ApsaraVideo Player SDK supports the following image rendering modes: no image, horizontal image, and vertical image.|
-|Multi-bitrate switching|ApsaraVideo Player SDK supports seamless multi-bitrate switching of HTTP Live Streaming \(HLS\) Encryption-based live streams.|
+|Multi-bitrate switching|ApsaraVideo Player SDK supports seamless multi-bitrate switching of live streams in the HLS and DASH formats.|
 |Preview|ApsaraVideo Player SDK supports the preview feature of ApsaraVideo VOD.|
 |Hardware decoding|ApsaraVideo Player SDK supports H.264 and H.265 hardware decoding and allows you to switch between H.264 and H.265 hardware decoding.|
-|Decoding blacklist|ApsaraVideo Player SDK allows you to set a blacklist for hardware decoding.|
+|Decoding blacklist|ApsaraVideo Player SDK allows you to configure a blacklist for hardware decoding.|
 |HTTP header|ApsaraVideo Player SDK supports custom HTTP request headers.|
+|Adaptive bitrate streaming|ApsaraVideo Player SDK supports HLS- and DASH-based adaptive bitrate streaming for VOD and live streaming.|
+|Low-latency live streaming|ApsaraVideo Player SDK supports low-latency streaming based on Low-latency HLS \(LHLS\) and DASH.|
+|Real-Time Streaming \(RTS\)|ApsaraVideo Player SDK supports RTS.|
+|Digital rights management \(DRM\)|ApsaraVideo Player SDK supports Widevine and FairPlay DRM.|
+|High dynamic range \(HDR\) video|ApsaraVideo Player SDK allows you to record HDR10 and hybrid log-gamma \(HLG\) videos.|
+|Loop playback|ApsaraVideo Player SDK supports in-buffer loop playback.|
+|HTTPDNS|ApsaraVideo Player SDK seamlessly integrates with the HTTPDNS SDK.|
+|Volume adjustment|ApsaraVideo Player SDK allows you to adjust the volume of a player from 0 to 200%.|
+|Fast reuse|ApsaraVideo Player SDK allows you to efficiently switch between different video sources by using a single player.|
+|Data output during audio and video rendering|ApsaraVideo Player SDK supports the output of pulse-code modulation \(PCM\) and YUV data during rendering.|
+|Network speed display|ApsaraVideo Player SDK supports the feature of reporting the network speed of a player in real time.|
 
 ## Feature highlights
 
@@ -67,7 +78,7 @@ ApsaraVideo Player SDK provides a player framework to meet different user needs 
 
 -   Cloud and client integration
 
-    Video streams are encrypted in the cloud and decrypted on the clients to ensure video security. Data is collected on the clients and analyzed in the cloud. This facilitates business operations.
+    Video streams are encrypted on the cloud and decrypted on the clients to ensure video security. Data is collected on the clients and analyzed on the cloud. This facilitates business operations.
 
 -   Multiple security protection features
 
@@ -78,7 +89,7 @@ ApsaraVideo Player SDK provides a player framework to meet different user needs 
 
 -   Sliding and loop playback of short videos
 
-    ApsaraVideo Player SDK allows you to customize the view size to play videos in full screen. It also supports multi-player playback, autoplay, and pre-loading. These features allow you to watch multiple videos in full-screen sliding mode. To reduce traffic consumption and ensure seamless loop playback, ApsaraVideo Player SDK provides the play-and-cache and loop playback operations. You can configure these operations with several simple steps to meet business demands.
+    ApsaraVideo Player SDK allows you to customize the view size to play videos in full screen. It also supports multi-player playback, autoplay, and pre-loading. These features allow you to watch multiple videos in full-screen sliding mode. To reduce traffic consumption and ensure seamless loop playback, ApsaraVideo Player SDK provides the play-and-cache and loop playback operations. You can configure these operations with simple steps to meet business demands.
 
 -   Video copyright protection
 
