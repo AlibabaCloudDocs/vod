@@ -2,6 +2,18 @@
 
 This topic describes the release notes of different versions of ApsaraVideo Player SDK for Windows.
 
+## 2021-06-10
+
+|**Release date**|**Version**|**Description**|**Download link**|
+|----------------|-----------|---------------|-----------------|
+|2021-06-10|V5.4.1|-   A callback for statistics during audio and video playback is added.
+-   The compatibility with Dynamic Adaptive Streaming over HTTP \(DASH\) is optimized.
+-   Multi-bitrate switching of live streams is optimized.
+-   The reporting of media information is optimized.
+-   The playback of ARTC videos is supported.
+
+|[ApsaraVideo Player SDK V5.4.1 for Windows](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.4.1/ApsaraVideo_videoPlay_v5.4.1_Windows_20210610.zip)|
+
 ## 2021-03-08
 
 |**Release date**|**Version**|**Description**|**Download link**|
@@ -41,11 +53,11 @@ This topic describes the release notes of different versions of ApsaraVideo Play
 
 |**Release date**|**Version**|**Description**|**Download link**|
 |----------------|-----------|---------------|-----------------|
-|2020-07-17|V5.2.0|ApsaraVideo Player SDK for Windows is released for the first time with the following features:-   Multiple playback modes, including URL-based playback, video ID \(VID\)-based playback, and the playback of on-premises videos.
--   Playback control features, including start, pause, resume, stop, imprecise seeking, and precise seeking.
--   Basic player features, including multi-bitrate switching, autoplay, loop playback, mute mode and volume control \(0 to 200%\), playback speed control, play-and-cache, preview, snapshot capture, video image rotation, padding, and mirroring.
--   Download features, including secure download and regular download.
--   Player settings, including the referer, user agent, network timeout period and retry times, buffer and delay, and HTTP headers.
+|2020-07-17|V5.2.0|ApsaraVideo Player SDK for Windows is released for the first time with the following features:-   Multiple playback modes, including URL-based playback, video ID \(VID\)-based playback, and the playback of on-premises videos
+-   Playback control features, including start, pause, resume, stop, imprecise seeking, and precise seeking
+-   Basic player features, including multi-bitrate switching, autoplay, loop playback, mute mode and volume control \(0 to 200%\), playback speed control, play-and-cache, preview, snapshot capture, video image rotation, padding, and mirroring
+-   Download features, including secure download and regular download
+-   Player settings, including the referer, user agent, network timeout period and retry times, buffer and delay, and HTTP headers
 
 |[ApsaraVideo Player SDK V5.2.0 for Windows](https://alivc-demo-cms.alicdn.com/versionProduct/sourceCode/playVideo/5.2.0/ApsaraVideo_videoPlay_v5.2.0_Windows_20200717.zip)|
 
