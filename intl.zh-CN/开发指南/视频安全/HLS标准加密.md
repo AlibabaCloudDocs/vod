@@ -30,16 +30,16 @@ HLS标准加密需要配合密钥管理服务和令牌服务使用，本文为�
 1.  [开通KMS服务](https://common-buy.aliyun.com/?spm=a2c4g.11186623.2.3.bhZoMo&commodityCode=kms#/open)。
 2.  提交[工单](https://ticket-intl.console.aliyun.com/#/ticket/createIndex)申请创建Service Key。Service Key与视频存储的源站区域必须一致，例如：视频存储在华东2，则Service Key必须是华东2。
 
-    **说明：** Service Key是秘钥管理服务的一种加密主Key，接入标准加密的秘钥必须要使用该Service Key生成。视频点播控制台暂不支持用户自主创建Service Key。
+    **说明：** Service Key是密钥管理服务的一种加密主Key，接入标准加密的密钥必须要使用该Service Key生成。视频点播控制台暂不支持用户自主创建Service Key。
 
-3.  搭建密钥管理服务，封装阿里云秘钥管理服务（KMS），调用[GenerateDataKey](/intl.zh-CN/API参考/密钥/GenerateDataKey.md)接口生成一个AES\_128密钥。
+3.  搭建密钥管理服务，封装阿里云密钥管理服务（KMS），调用[GenerateDataKey](/intl.zh-CN/API参考/密钥/GenerateDataKey.md)接口生成一个AES\_128密钥。
 
     **说明：** GenerateDataKey接口只需要传KeyId（上述中的Service Key）和KeySpec（固定为：AES\_128）即可，其他参数不用传，否则可能加密失败。
 
 4.  搭建令牌颁发服务，生成MtsHlsUriToken。
 5.  解密密钥EDK（密文密钥），调用[Decrypt](/intl.zh-CN/API参考/密钥/Decrypt.md)接口进行解密。如果业务方需要对解密接口进行安全验证，则需要提供令牌生成服务，生成的令牌能够在解密服务中被解析验证。
 
-    **说明：** 解密接口返回的数据，是[GenerateDataKey](/intl.zh-CN/API参考/密钥/GenerateDataKey.md)生成的两种秘钥中的明文秘钥（PlainText）经过base64decode之后的数据。
+    **说明：** 解密接口返回的数据，是[GenerateDataKey](/intl.zh-CN/API参考/密钥/GenerateDataKey.md)生成的两种密钥中的明文密钥（PlainText）经过base64decode之后的数据。
 
 
 ## 接入流程
@@ -54,7 +54,7 @@ HLS标准加密需要配合密钥管理服务和令牌服务使用，本文为�
 
         ![加密模板](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6231389061/p183774.png)
 
-        **说明：** 该模板在调用[提交媒体转码作业](/intl.zh-CN/服务端API/媒体处理/发起处理/提交媒体转码作业.md)接口时，通过TemplateGroupId参数传递，如此视频点播将按照设置的模板和传递的秘钥信息进行标准加密转码。
+        **说明：** 该模板在调用[提交媒体转码作业](/intl.zh-CN/服务端API/媒体处理/发起处理/提交媒体转码作业.md)接口时，通过TemplateGroupId参数传递，如此视频点播将按照设置的模板和传递的密钥信息进行标准加密转码。
 
     -   不转码模板
 
@@ -64,7 +64,7 @@ HLS标准加密需要配合密钥管理服务和令牌服务使用，本文为�
 
 2.  RAM授权
 
-    使用RAM服务给视频点播授权访问业务方秘钥管理服务\(KMS\)的权限，请参见[RAM授权](https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22%3A%20%7B%22request1%22%3A%20%7B%22RoleName%22%3A%20%22AliyunVODDefaultRole%22%2C%20%22TemplateId%22%3A%20%22DefaultRole%22%7D%7D%2C%20%22ReturnUrl%22%3A%20%22https%3A//vod.console.aliyun.com/%22%2C%20%22Service%22%3A%20%22VOD%22%7D)给视频点播授权。
+    使用RAM服务给视频点播授权访问业务方密钥管理服务（KMS）的权限，请参见[RAM授权](https://ram.console.aliyun.com/#/role/authorize?request=%7B%22Requests%22%3A%20%7B%22request1%22%3A%20%7B%22RoleName%22%3A%20%22AliyunVODDefaultRole%22%2C%20%22TemplateId%22%3A%20%22DefaultRole%22%7D%7D%2C%20%22ReturnUrl%22%3A%20%22https%3A//vod.console.aliyun.com/%22%2C%20%22Service%22%3A%20%22VOD%22%7D)给视频点播授权。
 
     ![授权页面](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0579475061/p183776.png)
 
@@ -93,17 +93,17 @@ HLS标准加密需要配合密钥管理服务和令牌服务使用，本文为�
 
 8.  传入认证信息
 
-    获取m3u8文件地址后，播放器会解析m3u8文件中的EXT-X-KEY标签中的URI并访问，从而获取到带密文秘钥的解密接口URI，此URI为您发起标准加密时传递的[加密配置 EncryptConfig](/intl.zh-CN/服务端API/附录/请求参数说明.md)中的`DecryptKeyUri`参数值。
+    获取m3u8文件地址后，播放器会解析m3u8文件中的EXT-X-KEY标签中的URI并访问，从而获取到带密文密钥的解密接口URI，此URI为您发起标准加密时传递的[加密配置 EncryptConfig](/intl.zh-CN/服务端API/附录/请求参数说明.md)中的`DecryptKeyUri`参数值。
 
-    若只允许合法用户才可以访问，那么需要播放器在获取解密秘钥时携带您承认的认证信息，认证信息可以通过MtsHlsUriToken参数传入。
+    若只允许合法用户才可以访问，那么需要播放器在获取解密密钥时携带您承认的认证信息，认证信息可以通过MtsHlsUriToken参数传入。
 
     示例：
 
     -   视频的播放地址为：`https://vod.demo.com/encrypt-stream-hd.m3u8`，则请求时需要携带`MtsHlsUriToken`参数传入。
     -   最终请求地址为：`https://vod.demo.com/encrypt-stream-hd.m3u8?MtsHlsUriToken=<令牌>`
     -   解密地址为：`https://vod.decrypt.com?Ciphertext=ZjJmZGViNzUtZWY1Mi00Y2RlLTk3MTMtOTYyOT`
-    -   最终解密请求地址为：`https://vod.decrypt.com?Ciphertext=ZjJmZGViNzUtZWY1Mi00Y2RlLTk3MTMtOTYyOT&MtsHlsUriToken=<颁发的令牌>` 。
-9.  播放器在解析到解密地址URI时会自动请求解密接口获取解密秘钥，拿到解密秘钥去解密加密过的ts文件进行播放。
+    -   最终解密请求地址为：`https://vod.decrypt.com?Ciphertext=ZjJmZGViNzUtZWY1Mi00Y2RlLTk3MTMtOTYyOT&MtsHlsUriToken=<颁发的令牌>`。
+9.  播放器在解析到解密地址URI时会自动请求解密接口获取解密密钥，拿到解密密钥去解密加密过的ts文件进行播放。
 
 
 ## 解密播放最佳实践
@@ -114,23 +114,23 @@ HLS标准加密需要配合密钥管理服务和令牌服务使用，本文为�
 
 -   如何查看Service Key？
 
-    Service Key 可在业务方自己的秘钥管理服务控制台可看到描述为vod的加密主Key。如下图所示：
+    Service Key 可在业务方自己的密钥管理服务控制台可看到描述为vod的加密主Key。如下图所示：
 
     ![查看Service Key](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9930326061/p178340.png)![查看Service Key详情](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9930326061/p178341.png)
 
--   如何使用Service Key生成秘钥？
+-   如何使用Service Key生成密钥？
 
-    调用秘钥管理服务\(KMS\)的[GenerateDataKey](/intl.zh-CN/API参考/密钥/GenerateDataKey.md) 接口，通过Service Key生成AES\_128密钥。
+    调用密钥管理服务（KMS）的[GenerateDataKey](/intl.zh-CN/API参考/密钥/GenerateDataKey.md)接口，通过Service Key生成AES\_128密钥。
 
     **说明：** GenerateDataKey接口只需要传KeyId（上述中的Service Key）和KeySpec（固定为：AES\_128）即可，其他参数不用传，否则可能加密失败。
 
--   如何使用生成的秘钥？
+-   如何使用生成的密钥？
 
-    GenerateDataKey接口会返回两种秘钥：一种是密文秘钥（CipherText），另一种是明文秘钥（PlainText）。用户只需要将密文秘钥传递给视频点播服务即可，具体参数传递请参见[提交媒体转码作业](/intl.zh-CN/服务端API/媒体处理/发起处理/提交媒体转码作业.md)中的[加密配置 EncryptConfig](/intl.zh-CN/服务端API/附录/请求参数说明.md)参数。
+    GenerateDataKey接口会返回两种密钥：一种是密文密钥（CipherText），另一种是明文密钥（PlainText）。用户只需要将密文密钥传递给视频点播服务即可，具体参数传递请参见[提交媒体转码作业](/intl.zh-CN/服务端API/媒体处理/发起处理/提交媒体转码作业.md)中的[加密配置 EncryptConfig](/intl.zh-CN/服务端API/附录/请求参数说明.md)参数。
 
     **说明：**
 
-    -   强烈推荐业务方对生成的密文秘钥和明文秘钥进行缓存。
+    -   强烈推荐业务方对生成的密文密钥和明文密钥进行缓存。
     -   创建的Service Key不可删除、不可更新，只用于生成加密密钥。
     -   关于密钥相关费用，参见[密钥管理服务-计费方式-API调用费用](/intl.zh-CN/产品计费/计费说明.md)。
 -   生成的令牌如何传递到解密接口？
@@ -148,16 +148,16 @@ HLS标准加密需要配合密钥管理服务和令牌服务使用，本文为�
     标准加密视频对于支持HLS协议播放的播放器都可以解密播放，播放器解密标准加密的大致步骤如下：
 
     1.  通过[获取视频播放地址](/intl.zh-CN/服务端API/音视频播放/获取视频播放地址.md)和[获取视频播放凭证](/intl.zh-CN/服务端API/音视频播放/获取视频播放凭证.md)接口获取视频的播放地址和凭证。
-    2.  获取m3u8文件地址后，播放器会解析m3u8文件中的EXT-X-KEY标签中的URI并访问，从而获取到带密文秘钥的解密接口URI，此URI为您发起标准加密时传递的[加密配置 EncryptConfig](/intl.zh-CN/服务端API/附录/请求参数说明.md)中的DecryptKeyUri参数值。若只允许合法用户才可以访问，那么需要播放器在获取解密秘钥时携带您承认的认证信息，认证信息可以通过MtsHlsUriToken参数传入。
+    2.  获取m3u8文件地址后，播放器会解析m3u8文件中的EXT-X-KEY标签中的URI并访问，从而获取到带密文密钥的解密接口URI，此URI为您发起标准加密时传递的[加密配置 EncryptConfig](/intl.zh-CN/服务端API/附录/请求参数说明.md)中的DecryptKeyUri参数值。若只允许合法用户才可以访问，那么需要播放器在获取解密密钥时携带您承认的认证信息，认证信息可以通过MtsHlsUriToken参数传入。
 
         例如：
 
-        -   视频的播放地址为：`https://vod.demo.com/encrypt-stream-hd.m3u8` ，则请求时需要携带`MtsHlsUriToken`参数传入。
-        -   最终请求地址为：`https://vod.demo.com/encrypt-stream-hd.m3u8?MtsHlsUriToken=令牌` ，播放时播放器会向阿里CDN请求该地址，当解析到m3u8中的解密URI时，阿里CDN会自动将解密URI拼接`MtsHlsUriToken`参数。
+        -   视频的播放地址为：`https://vod.demo.com/encrypt-stream-hd.m3u8`，则请求时需要携带`MtsHlsUriToken`参数传入。
+        -   最终请求地址为：`https://vod.demo.com/encrypt-stream-hd.m3u8?MtsHlsUriToken=令牌`，播放时播放器会向阿里CDN请求该地址，当解析到m3u8中的解密URI时，阿里CDN会自动将解密URI拼接`MtsHlsUriToken`参数。
         -   解密地址为：`https://vod.decrypt.com?Ciphertext=ZjJmZGViNzUtZWY1Mi00Y2RlLTk3MTMtOTYyOT`。
         -   最终解密请求地址为：`https://vod.decrypt.com?Ciphertext=ZjJmZGViNzUtZWY1Mi00Y2RlLTk3MTMtOTYyOT&MtsHlsUriToken=颁发的令牌`。
-    3.  播放器在解析到解密地址URI时会自动请求解密接口获取解密秘钥。
-    4.  拿到解密秘钥去解密加密过的ts文件进行播放。
+    3.  播放器在解析到解密地址URI时会自动请求解密接口获取解密密钥。
+    4.  拿到解密密钥去解密加密过的ts文件进行播放。
 -   如何快速验证加密播放？
 
     可以通过阿里云播放器诊断平台播放对标准加密的m3u8地址快速验证播放是否正常，拷贝m3u8文件地址（如有MtsHlsUriToken参数一并拷贝）到[阿里云播放器诊断平台](http://player.alicdn.com/detection.html)尝试标准加密的解密播放。
