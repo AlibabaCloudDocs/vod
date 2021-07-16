@@ -1,6 +1,6 @@
 # Javascript上传SDK
 
-本文为您介绍了阿里云Javascript上传SDK在不同更新时间对应的更新功能。
+本文为您介绍了阿里云JavaScript上传SDK在不同更新时间对应的更新功能。
 
 ## 2021-03-02
 
