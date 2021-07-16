@@ -79,7 +79,7 @@
 -   Demo模式区分。
 -   分片大小、网络超时、重传次数可自定义。
 -   使用OSS断点续传接口。
--   STS调用Open API Demo实现。
+-   STS调用OpenAPI Demo实现。
 -   短视频内部调用OSS接口不在调用多文件上传接口，且替换为断点续传方式。
 
 |[Android上传SDK 1.3.0](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/51992/cn_zh/1516604091547/VodUploadSDK_1.3.0.zip?spm=5176.doc51992.2.31.JXmtz7&file=VodUploadSDK_1.3.0.zip)
