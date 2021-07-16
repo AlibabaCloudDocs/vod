@@ -28,7 +28,7 @@ Aliplayer2.0.1起支持了在PC端的chrome、firefox等浏览器上使用H5播�
 
   
 
-* Safari for Mac 8+ (beta)
+* Safari for Mac 8+（beta）
 
   
 
