@@ -96,7 +96,7 @@ We recommend that you use the PC client to upload large files or upload multiple
 
 Download the PC client of an appropriate application version.
 
-|Operating system|Windows|MacOS|
+|Operating system|Windows|macOS|
 |----------------|-------|-----|
 |Application version|[V1.0.0](https://alivc-demo-cms.alicdn.com/versionProduct/installPackage/upload/ApsaraVideo_vodClient_v1.0.0_Windows_20201023.zip)|[V1.3.2](https://player.alicdn.com/download/aliyun_video_client_1.3.2_1024.dmg)|
 
