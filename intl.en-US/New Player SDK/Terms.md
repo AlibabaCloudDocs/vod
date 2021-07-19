@@ -22,7 +22,7 @@ This topic describes the general terms that are used in the ApsaraVideo VOD cons
 
 -   Hotlink protection
 
-    ApsaraVideo VOD checks the referer in the header of a request to determine whether the request is originated from the on-premises site and whether the requested video can be played.You can set the referer in the ApsaraVideo VOD or Alibaba Cloud CDN console. For more information, see [Hotlink protection](/intl.en-US/User Guide/Domain management/Access control/Hotlink protection.md).
+    ApsaraVideo VOD checks the referer in the header of a request to determine whether the request is originated from the on-premises site and whether the requested video can be played. You can set the referer in the ApsaraVideo VOD or Alibaba Cloud CDN console. For more information, see [Hotlink protection](/intl.en-US/User Guide/Domain management/Access control/Hotlink protection.md).
 
 -   Secure download
 
