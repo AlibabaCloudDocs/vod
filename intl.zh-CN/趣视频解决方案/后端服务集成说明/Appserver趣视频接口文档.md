@@ -838,7 +838,7 @@
     }
     ```
 
--   getPasterList：根据动图类别id查找动图包信息。
+-   getPasterList：根据动图类别ID查找动图包信息。
 
     get url：/resource/getPasterList
 
