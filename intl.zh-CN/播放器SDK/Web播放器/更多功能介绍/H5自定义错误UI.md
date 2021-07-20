@@ -45,34 +45,38 @@ Aliplayer默认的错误UI如下图所示。![ui](https://static-aliyun-doc.oss-
 
 <!-- -->
 
-* **重写UI** 
-
-  1. 需要订阅错误事件，代码如下所示。
-
-         player.on('error',function(e){
-               //隐藏
-               $('.prism-ErrorMessage').hide();
-               //解析
-               var errorData = e.paramData;
-               console.dir(errorData);
-             });
-
-     
-  
-  2. 隐藏Aliplayer的错误UI。
-
-     
-  
-  3. 解析paramData里面的错误。错误事件参数包含的错误字段，如下图所示。![错误字段](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2107869161/p269996.png)
-
-     
-  
-  4. 赋值给UI控件。
-
-     
-  
+* **重写UI**
 
   
+
+
+
+
+重写UI需要订阅错误事件，代码如下所示。
+
+    player.on('error',function(e){
+          //隐藏
+          $('.prism-ErrorMessage').hide();
+          //解析
+          var errorData = e.paramData;
+          console.dir(errorData);
+        });
+
+
+
+重写UI流程如下所示：
+
+1. 隐藏：需要订阅错误事件，如上述代码所示，隐藏Aliplayer原本的错误UI。
+
+   
+
+2. 解析：需要订阅错误事件，如上述代码所示，解析paramData里面的错误。错误事件参数包含的错误字段，如下图所示。![错误字段](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2107869161/p269996.png)
+
+   
+
+3. 在完成上述两个步骤之后，得到具体的错误码，可以自定义赋值给UI控件。
+
+   
 
 
 
