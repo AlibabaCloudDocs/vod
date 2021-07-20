@@ -18,7 +18,7 @@ public class Version {
 
 ## License
 
-You must activate the license of the short video SDK before you use the short video SDK. For more information, see [t1959865.dita\#multiTask7429](/intl.en-US/Short video SDK/Introduction.md).
+You must activate the license of the short video SDK before you use the short video SDK. For more information, see [Obtain and use a license for the short video SDK](/intl.en-US/Short video SDK/Obtain and use a license for the short video SDK.md).
 
 **Note:** When you activate the license, make sure that the package name that you submit is the same as that configured in Android Studio.
 
