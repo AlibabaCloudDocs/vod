@@ -31,7 +31,7 @@ The short video SDK provides the AliyunVideoSDKInfo class that is used to obtain
 
 ## License
 
-You need a license to use the short video SDK. For more information about how to apply for a license, see [Introduction](/intl.en-US/Short video SDK/Introduction.md).
+You need a license to use the short video SDK. For more information about how to apply for a license, see [Obtain and use a license for the short video SDK](/intl.en-US/Short video SDK/Obtain and use a license for the short video SDK.md).
 
 **Note:** After you apply for a license, make sure that the bundle ID that you submit is the same as that configured in Xcode.
 
